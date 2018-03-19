@@ -1,0 +1,253 @@
+{\rtf1\ansi\ansicpg1251\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red217\green234\blue202;\red0\green0\blue0;\red254\green232\blue203;
+\red255\green255\blue255;\red28\green0\blue207;\red255\green255\blue255;\red236\green186\blue254;\red0\green0\blue0;
+\red217\green11\blue5;\red128\green128\blue128;\red255\green255\blue51;\red252\green112\blue56;\red217\green11\blue5;
+\red128\green128\blue128;\red254\green219\blue205;\red230\green230\blue230;\red170\green13\blue145;\red205\green205\blue205;
+\red254\green209\blue207;\red196\green26\blue22;}
+{\*\expandedcolortbl;;\cssrgb\c87817\c93001\c83061;\csgenericrgb\c0\c0\c0;\cssrgb\c100000\c92644\c83367;
+\csgray\c100000;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c100000\c100000\c100000;\cssrgb\c94438\c78969\c99727;\csgray\c0;
+\cssrgb\c88946\c14202\c0;\csgray\c57415;\cssrgb\c99946\c98636\c25320;\cssrgb\c100000\c52407\c27938;\cssrgb\c88946\c14202\c0;
+\csgray\c57415;\cssrgb\c100000\c88718\c84032;\csgray\c92143;\csgenericrgb\c66500\c5200\c56900;\csgray\c84070;
+\cssrgb\c100000\c85667\c84695;\csgenericrgb\c77000\c10200\c8600;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16620\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 electrum -> lib/daemon.py -> \
+\cb2 \uc0\u1074 \u1099 \u1087 \u1086 \u1083 \u1085 \u1103 \u1077 \u1090  \u1089 \u1090 \u1088 \u1086 \u1082 \u1091   
+\f1 \cf3 self.gui = gui.ElectrumGui(config, self, plugins),\
+\uc0\u1075 \u1076 \u1077  ElectrumGui \u1077 \u1089 \u1090 \u1100  \u1082 \u1083 \u1072 \u1089 \u1089 , \u1074  \u1082 \u1086 \u1090 \u1086 \u1088 \u1086 \u1084  \u1074 \u1099 \u1087 \u1086 \u1083 \u1085 \u1103 \u1077 \u1090 \u1089 \u1103  \u1084 \u1077 \u1090 \u1086 \u1076  main()
+\f0 \cf0 \
+\cb1 gui/qt/__init__.py ->\
+gui/qt/installwizard.py\
+// \uc0\u1079 \u1076 \u1077 \u1089 \u1100  \u1089 \u1086 \u1079 \u1076 \u1072 \u1077 \u1090 \u1089 \u1103  \u1101 \u1082 \u1088 \u1072 \u1085  \u1086 \u1090 \u1086 \u1073 \u1088 \u1072 \u1078 \u1077 \u1085 \u1080 \u1103  \u1087 \u1088 \u1080 \u1074 \u1077 \u1090 \u1089 \u1090 \u1074 \u1077 \u1085 \u1085 \u1086 \u1075 \u1086  \u1074 \u1080 \u1079 \u1072 \u1088 \u1076 \u1072  \u1085 \u1072  \u1089 \u1083 \u1091 \u1095 \u1072 \u1081  \u1077 \u1089 \u1083 \u1080  \u1077 \u1097 \u1077  \u1085 \u1080 \u1082 \u1072 \u1082 \u1086 \u1081  \u1082 \u1086 \u1096 \u1077 \u1083 \u1077 \u1082  \u1085 \u1077  \u1089 \u1086 \u1079 \u1076 \u1072 \u1085  (\u1072  \u1086 \u1085  \u1080  \u1085 \u1077  \u1089 \u1086 \u1079 \u1076 \u1072 \u1085 )\
+\
+[Install Wizard]\
+Electrum wallet\
+Wallet: %default_wallet2% *Choose...*\
+This file is encrypted with a password.\
+Enter your password or choose another file.\
+Password: %%\
+*Cancel*   *Next*\
+\
+\uc0\u1042 \u1085 \u1072 \u1095 \u1072 \u1083 \u1077  \u1074 \u1099 \u1087 \u1086 \u1083 \u1085 \u1103 \u1077 \u1090 \u1089 \u1103  \cb4 self.init_network()\
+\cb5 \uc0\u1047 \u1072 \u1090 \u1077 \u1084  
+\f1 \cf3 \cb4 self.start_new_window(path, self.config.get(\cf6 'url'\cf3 )):
+\f0 \cf0 \cb1 \
+\
+gui.qt.__init__ \uc0\u1095 \u1077 \u1088 \u1077 \u1079  \u1091 \u1082 \u1072 \u1079 \u1072 \u1090 \u1077 \u1083 \u1100  \u1085 \u1072  daemon, \u1087 \u1077 \u1088 \u1077 \u1076 \u1072 \u1102 \u1097 \u1080 \u1081 \u1089 \u1103  \u1080 \u1079  daemon.py \u1074 \u1099 \u1075 \u1088 \u1077 \u1073 \u1072 \u1077 \u1090  \u1082 \u1086 \u1096 \u1077 \u1083 \u1100 \u1082 \u1080 .\
+gui \uc0\u1074 \u1099 \u1075 \u1088 \u1077 \u1073 \u1072 \u1077 \u1090  \u1082 \u1086 \u1096 \u1077 \u1083 \u1100 \u1082 \u1080  \u1080 \u1079  daemon.load_walleet(path, None) - path \u1087 \u1077 \u1088 \u1077 \u1076 \u1072 \u1077 \u1090 \u1089 \u1103  \u1087 \u1072 \u1088 \u1072 \u1084 \u1077 \u1090 \u1088 \u1086 \u1084  \u1080 \u1079  \u1084 \u1077 \u1090 \u1086 \u1076 \u1072  gui.qt.__init__.main()\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \cb7 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3 \cb8         self.timer.start()
+\f0 \cf0 \
+
+\f1 \cf3         self.config.open_last_wallet()
+\f0 \cf0 \
+
+\f1 \cf3         path = self.config.get_wallet_path()\
+\cf5 \cb9 lib/simple_config.py\
+\cf0 \cb5 \
+\uc0\u1044 \u1077 \u1083 \u1072 \u1090 \u1100  \u1083 \u1080  \u1088 \u1077 \u1092 \u1072 \u1082 \u1090 \u1086 \u1088 \u1080 \u1085 \u1075  \cf10 \cb11 \uc0\u1053 \u1045 \u1058 \cf0 \cb5 , \uc0\u1080 \u1083 \u1080  \u1087 \u1077 \u1088 \u1077 \u1080 \u1089 \u1087 \u1086 \u1083 \u1100 \u1079 \u1086 \u1074 \u1072 \u1090 \u1100  \u1082 \u1086 \u1076  \cf12 \cb13 \uc0\u1044 \u1040 \cf0 \cb5 , \uc0\u1089 \u1090 \u1072 \u1088 \u1072 \u1103 \u1089 \u1100  \u1089 \u1086 \u1093 \u1088 \u1072 \u1085 \u1080 \u1090 \u1100  \u1086 \u1088 \u1080 \u1075 \u1080 \u1085 \u1072 \u1083 \u1100 \u1085 \u1091 \u1102  \u1089 \u1090 \u1088 \u1091 \u1082 \u1090 \u1091 \u1088 \u1091  \u1092 \u1072 \u1081 \u1083 \u1086 \u1074  \cf14 \cb15 \uc0\u1053 \u1045 \u1058 \cf0 \cb5 ..\
+\
+\uc0\u1044 \u1072 \u1083 \u1077 \u1077 , \u1077 \u1089 \u1083 \u1080  \u1087 \u1088 \u1080  \u1086 \u1090 \u1086 \u1073 \u1088 \u1072 \u1078 \u1077 \u1085 \u1080 \u1080  InstallWizard \u1073 \u1099 \u1083  \u1086 \u1073 \u1085 \u1072 \u1088 \u1091 \u1078 \u1077 \u1085  \u1082 \u1086 \u1096 \u1077 \u1083 \u1077 \u1082 , \u1086 \u1090 \u1086 \u1073 \u1088 \u1072 \u1078 \u1072 \u1077 \u1084  \cb16 InstallWizard\cb5 , \uc0\u1077 \u1089 \u1083 \u1080  \u1073 \u1099 \u1083  \u1086 \u1073 \u1085 \u1072 \u1088 \u1091 \u1078 \u1077 \u1085  - \u1086 \u1090 \u1086 \u1073 \u1088 \u1072 \u1078 \u1072 \u1077 \u1084  \u1101 \u1082 \u1088 \u1072 \u1085  \u1076 \u1083 \u1103  \u1082 \u1086 \u1096 \u1077 \u1083 \u1100 \u1082 \u1072 , \cf3 \cb2 self.create_window_for_wallet(wallet)\
+\cf0 \cb5 \
+\uc0\u1042 \u1099 \u1093 \u1086 \u1076  \u1080 \u1079  \u1082 \u1086 \u1096 \u1077 \u1083 \u1100 \u1082 \u1086 \u1074  \u1089 \u1083 \u1077 \u1076 \u1091 \u1102 \u1097 \u1080 \u1081 :
+\f0 \cb7 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3 \cb17         self.rejected.connect(\cf18 lambda\cf3 : self.loop.exit(\cf6 0\cf3 ))
+\f0 \cf0 \
+
+\f1 \cf3         self.back_button.clicked.connect(\cf18 lambda\cf3 : self.loop.exit(\cf6 1\cf3 ))
+\f0 \cf0 \
+
+\f1 \cf3         self.next_button.clicked.connect(\cf18 lambda\cf3 : self.loop.exit(\cf6 2\cf3 ))\
+\cb5 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \cb7 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3         \cf18 \cb7 def\cf3 \cb7  on_choose(): - \uc0\u1086 \u1073 \u1088 \u1072 \u1073 \u1086 \u1090 \u1095 \u1080 \u1082  \u1082 \u1085 \u1086 \u1087 \u1082 \u1080  Choose\
+\
+\uc0\u1057 \u1083 \u1077 \u1076 \u1091 \u1102 \u1097 \u1080 \u1084  \u1101 \u1082 \u1088 \u1072 \u1085 \u1086 \u1084  \u1080 \u1076 \u1077 \u1090  base_wizard.py\
+base_wizard.py:BaseWizard \uc0\u1101 \u1090 \u1086  \u1073 \u1072 \u1079 \u1086 \u1074 \u1099 \u1081  \u1082 \u1083 \u1072 \u1089 \u1089  \u1091  InstallWizard, \u1089 \u1083 \u1077 \u1076 \u1086 \u1074 \u1072 \u1090 \u1077 \u1083 \u1100 \u1085 \u1086  \u1089 \u1090 \u1088 \u1086 \u1082 \u1086 \u1081  \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3             self.run(action), \uc0\u1075 \u1076 \u1077  action == "new"\
+\
+\uc0\u1087 \u1077 \u1088 \u1077 \u1076 \u1072 \u1077 \u1090 \u1089 \u1103  \u1091 \u1087 \u1088 \u1072 \u1074 \u1083 \u1077 \u1085 \u1080 \u1077  \u1074  BaseWizard \u1080  \u1074 \u1099 \u1087 \u1086 \u1083 \u1085 \u1103 \u1077 \u1090 \u1089 \u1103  \u1084 \u1077 \u1090 \u1086 \u1076  \cb16 def new(self)\cb5 \
+\cb7 \uc0\u1075 \u1076 \u1077  \u1074 \u1099 \u1087 \u1086 \u1083 \u1085 \u1103 \u1077 \u1090 \u1089 \u1103  \u1082 \u1086 \u1076 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3         \cb19 self.choice_dialog(title=title, message=message, choices=choices, run_next=self.on_wallet_type)\cb7 \
+\
+\uc0\u1074  \u1088 \u1077 \u1079 \u1091 \u1083 \u1100 \u1090 \u1072 \u1090 \u1077  \
+
+\f0 \cf0 \
+
+\f1 \cf3             action = \cf6 \cb7 'choose_keystore'
+\f0 \cf0 \cb7 \
+
+\f1 \cf3             action = \cf6 \cb7 'choose_multisig'
+\f0 \cf0 \cb7 \
+
+\f1 \cf3             action = \cf6 \cb7 'import_addresses_or_keys'\
+\uc0\u1080 \u1083 \u1080 
+\f0 \cf0 \cb7 \
+
+\f1 \cf3             self.load_2fa()
+\f0 \cf0 \
+
+\f1 \cf3             action = self.storage.get_action()\
+\
+\uc0\u1080  \u1085 \u1072 \u1087 \u1088 \u1080 \u1084 \u1077 \u1088  \u1074 \u1099 \u1087 \u1086 \u1083 \u1085 \u1103 \u1077 \u1084  'choose_keystore' - \u1089 \u1085 \u1086 \u1074 \u1072  \u1074 \u1099 \u1087 \u1086 \u1083 \u1085 \u1103 \u1077 \u1090 \u1089 \u1103 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3         \cb2 self.choice_dialog(title=title, message=message, choices=choices, run_next=self.run)\cb7 \
+\
+\uc0\u1048 , \u1077 \u1089 \u1083 \u1080  \u1094 \u1077 \u1083 \u1100  - \u1089 \u1086 \u1079 \u1076 \u1072 \u1090 \u1100  \u1085 \u1086 \u1074 \u1099 \u1081  \u1082 \u1086 \u1096 \u1077 \u1083 \u1077 \u1082 , \u1074  \u1101 \u1090 \u1086 \u1084  \u1089 \u1083 \u1091 \u1095 \u1072 \u1077  \u1074 \u1099 \u1087 \u1086 \u1083 \u1085 \u1103 \u1077 \u1084 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3     \cf18 \cb20 def\cf3  create_segwit_seed(self): self.create_seed(\cf6 'segwit'\cf3 )
+\f0 \cf0 \cb7 \
+
+\f1 \cf3     \cf18 \cb2 def\cf3  create_standard_seed(self): self.create_seed(\cf6 'standard'\cf3 )
+\f0 \cf0 \cb7 \
+\
+
+\f1 \cf3     \cf18 \cb7 def\cf3 \cb7  create_seed(self, seed_type):
+\f0 \cf0 \
+
+\f1 \cf3         \cf18 \cb7 from\cf3 \cb7  . \cf18 \cb7 import\cf3 \cb7  mnemonic
+\f0 \cf0 \
+
+\f1 \cf3         self.seed_type = seed_type
+\f0 \cf0 \
+
+\f1 \cf3         seed = mnemonic.Mnemonic(\cf6 \cb7 'en'\cf3 \cb7 ).make_seed(self.seed_type)
+\f0 \cf0 \
+
+\f1 \cf3         self.opt_bip39 = False
+\f0 \cf0 \
+
+\f1 \cf3         f = \cf18 \cb7 lambda\cf3 \cb7  x: self.request_passphrase(seed, x)
+\f0 \cf0 \
+
+\f1 \cf3         self.show_seed_dialog(run_next=f, seed_text=seed)\
+\
+\uc0\u1091 \u1087 \u1088 \u1072 \u1074 \u1083 \u1077 \u1085 \u1080 \u1077  \u1074 \u1086 \u1079 \u1074 \u1088 \u1072 \u1097 \u1072 \u1077 \u1090 \u1089 \u1103  \u1074  InstallWizard.py:\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3     @wizard_dialog
+\f0 \cf0 \
+
+\f1 \cf3     \cf18 \cb7 def\cf3 \cb7  show_seed_dialog(self, run_next, seed_text):
+\f0 \cf0 \
+
+\f1 \cf3         title =  _(\cf21 \cb7 "Your wallet generation seed is:"\cf3 \cb7 )
+\f0 \cf0 \
+
+\f1 \cf3         slayout = SeedLayout(seed=seed_text, title=title, msg=True, options=[\cf6 \cb7 'ext'\cf3 \cb7 ])
+\f0 \cf0 \
+
+\f1 \cf3         self.exec_layout(slayout)
+\f0 \cf0 \
+
+\f1 \cf3         \cf18 \cb7 return\cf3 \cb7  slayout.is_ext\
+\
+\uc0\u1074 \u1080 \u1076 \u1085 \u1086 , \u1095 \u1090 \u1086  run_next=f, \u1075 \u1076 \u1077  f = lambda \u1085 \u1072  request_passphrase.\
+
+\f0 \cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf18 \cb7 from\cf3 \cb7  .seed_dialog \cf18 \cb7 import\cf3 \cb7  SeedLayout, KeysLayout
+\f0 \cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf5 \cb9 class SeedLayout(QVBoxLayout):\
+\cf3 \cb7 \
+\uc0\u1042  \u1088 \u1077 \u1079 \u1091 \u1083 \u1100 \u1090 \u1072 \u1090 \u1077  request_passphrase \u1074 \u1099 \u1087 \u1086 \u1083 \u1085 \u1103 \u1077 \u1090 \u1089 \u1103  \cf6 \cb7 confirm_seed\cf3 \cb7 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3     \cf18 \cb7 def\cf3 \cb7  seed_input(self, title, message, is_seed, options):
+\f0 \cf0 \
+
+\f1 \cf3         slayout = SeedLayout(title=message, is_seed=is_seed, options=options, parent=self)
+\f0 \cf0 \
+
+\f1 \cf3         self.exec_layout(slayout, title, next_enabled=False)
+\f0 \cf0 \
+
+\f1 \cf3         \cf18 \cb7 return\cf3 \cb7  slayout.get_seed(), slayout.is_bip39, slayout.is_ext\
+\
+\uc0\u1047 \u1072 \u1090 \u1077 \u1084  \u1087 \u1086 \u1103 \u1074 \u1083 \u1103 \u1077 \u1090 \u1089 \u1103  \u1089 \u1086 \u1086 \u1073 \u1097 \u1077 \u1085 \u1080 \u1077  \u1086 \u1073  \u1086 \u1078 \u1080 \u1076 \u1072 \u1085 \u1080 \u1080  \u1080  \u1087 \u1086 \u1103 \u1074 \u1083 \u1103 \u1077 \u1090 \u1089 \u1103  \u1089 \u1083 \u1080 \u1076 \u1091 \u1102 \u1097 \u1080 \u1081  \u1076 \u1080 \u1072 \u1083 \u1086 \u1075 \
+\
+Choose a password to encrypt your wallet keys.\
+Leave this field empty if you want to disable encryption.\
+\
+\uc0\u1048  \u1079 \u1072 \u1090 \u1077 \u1084 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3     \cf18 \cb7 def\cf3 \cb7  create_addresses(self):
+\f0 \cf0 \
+
+\f1 \cf3         \cf18 \cb7 def\cf3 \cb7  task():
+\f0 \cf0 \
+
+\f1 \cf3             self.wallet.synchronize()
+\f0 \cf0 \
+
+\f1 \cf3             self.wallet.storage.write()
+\f0 \cf0 \
+
+\f1 \cf3             self.terminate()
+\f0 \cf0 \
+
+\f1 \cf3         msg = _(\cf21 \cb7 "Electrum is generating your addresses, please wait..."\cf3 \cb7 )
+\f0 \cf0 \
+
+\f1 \cf3         self.waiting_dialog(task, msg)\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0 \cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3     \cf18 \cb7 def\cf3 \cb7  terminate(self):
+\f0 \cf0 \
+
+\f1 \cf3         self.accept_signal.emit()\
+\uc0\u1075 \u1076 \u1077 
+\f0 \cf0 \
+
+\f1 \cf3         self.accept_signal.connect(self.accept)}
