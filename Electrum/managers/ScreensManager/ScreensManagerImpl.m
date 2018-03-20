@@ -11,33 +11,25 @@
 #import "AppDelegate.h"
 
 @implementation ScreensManagerImpl {
-    RunLoop *_runLoop;
 }
 
 @synthesize window;
 
 #pragma mark - Initialization
-- (id)initWithRunLoop:(RunLoop *)runLoop {
-    NSCParameterAssert(runLoop);
-    if (self = [super init]) {
-        _runLoop = runLoop;
-    }
-    return self;
-}
 
 #pragma mark - Overriden Methods - ScreensManager
 - (void)showCreateWalletViewController {
     [self createWindowIfNeeded];
 }
 
-- (void)showEnterOrCreateWalletViewController {
+- (void)showEnterOrCreateWalletViewController:(id)handler {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self createWindowIfNeeded];
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"EnterOrCreateWalletViewController"
                                                              bundle:nil];
         UINavigationController *navigationController = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
         EnterOrCreateWalletViewController *viewController = (EnterOrCreateWalletViewController *)navigationController.topViewController;
-        viewController.runLoop = _runLoop;
+        viewController.handler = (id<EnterOrCreateWalletHandlerProtocol>)handler;
         self.window.rootViewController = navigationController;
     });
 }

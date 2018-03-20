@@ -3,7 +3,7 @@ import os
 import sys
 import threading
 import traceback
-from rubicon.objc import ObjCClass
+from rubicon.objc import ObjCClass, NSObject, objc_method
 
 from electrum import Wallet, WalletStorage
 from electrum.util import UserCancelled, InvalidPassword
@@ -16,6 +16,16 @@ from .network_dialog import NetworkChoiceLayout
 from .util import *
 from .password_dialog import PasswordLayout, PasswordLayoutForHW, PW_NEW
 '''
+
+class EnterOrCreateWalletHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+    
+    @objc_method
+    def createWalletTapped_(self):
+        print("create wallet handled in python")
+
 
 class GoBack(Exception):
     pass
@@ -32,7 +42,8 @@ class InstallWizard:
         self.storage = storage
     
     def run_and_get_wallet(self):
-        self.screensManager.showEnterOrCreateWalletViewController()
+        handler = EnterOrCreateWalletHandler.alloc().init()
+        self.screensManager.showEnterOrCreateWalletViewController(handler)
         result = self.runLoop.exec()
         print('Show EnterOrCreateWalletViewController result: ' + str(result));
     def terminate(self):

@@ -8,6 +8,7 @@
 
 #import "EnterOrCreateWalletViewController.h"
 #import "ButtonCell.h"
+#import <objc/runtime.h>
 
 typedef NS_ENUM(NSInteger, Rows) {
     AddWalletRow,
@@ -21,7 +22,7 @@ typedef NS_ENUM(NSInteger, Rows) {
 @implementation EnterOrCreateWalletViewController
 
 - (void)viewDidLoad {
-    NSCParameterAssert(_runLoop);
+    NSCParameterAssert(_handler);
     [super viewDidLoad];
     self.tableView.rowHeight = 50.f;
     self.tableView.estimatedRowHeight = 100.f;
@@ -63,7 +64,9 @@ typedef NS_ENUM(NSInteger, Rows) {
 
 #pragma mark - Private Methods
 - (void)createNewWalletTapped {
-    [_runLoop exit:@(0)];
+    if ([_handler respondsToSelector:@selector(createWalletTapped:)]) {
+        [_handler createWalletTapped:_handler];
+    }
 }
 
 @end

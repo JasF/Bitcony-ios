@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "RunLoop.h"
 
+@protocol EnterOrCreateWalletHandlerProtocol <NSObject>
+- (void)createWalletTapped:(id)aSelf;
+@end
+
 @interface EnterOrCreateWalletViewController : UITableViewController
-@property (strong, nonatomic) RunLoop *runLoop;
+@property (strong, nonatomic) id<EnterOrCreateWalletHandlerProtocol> handler;
 @end

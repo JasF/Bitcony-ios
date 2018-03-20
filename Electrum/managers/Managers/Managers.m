@@ -26,7 +26,7 @@
     static ScreensManagerImpl *shared = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        shared = [[ScreensManagerImpl alloc] initWithRunLoop:[RunLoop shared]];
+        shared = [[ScreensManagerImpl alloc] init];
     });
     return shared;
 }

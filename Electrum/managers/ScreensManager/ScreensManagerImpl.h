@@ -11,7 +11,5 @@
 #import "RunLoop.h"
 
 @interface ScreensManagerImpl : NSObject <ScreensManager>
-- (id)init NS_UNAVAILABLE;
 + (id)new NS_UNAVAILABLE;
-- (id)initWithRunLoop:(RunLoop *)runLoop;
 @end
