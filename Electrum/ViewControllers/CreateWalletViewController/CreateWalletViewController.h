@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateWalletViewController : UIViewController
+@protocol CreateWalletHandlerProtocol <NSObject>
+- (void)createNewSeedTapped:(id)aSelf;
+- (void)haveASeedTapped:(id)aSelf;
+@end
 
+@interface CreateWalletViewController : UIViewController
+@property (strong, nonatomic) id<CreateWalletHandlerProtocol> handler;
 @end

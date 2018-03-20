@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="BL8-gq-0ID">
             <objects>
-                <navigationController id="WIh-pc-TaD" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" id="WIh-pc-TaD" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ixx-QX-IfW">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -26,21 +26,59 @@
             </objects>
             <point key="canvasLocation" x="-903" y="-222"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Wallet View Controller-->
         <scene sceneID="6gB-Lh-Q1w">
             <objects>
-                <viewController id="42r-13-QhJ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="42r-13-QhJ" customClass="CreateWalletViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GfX-0n-Rnp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="keystore_description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFI-1K-n9j">
+                                <rect key="frame" x="50" y="152" width="187" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5S3-Um-frd">
+                                <rect key="frame" x="119" y="215" width="152" height="30"/>
+                                <state key="normal" title="create_new_seed">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="createNewSeedTapped:" destination="42r-13-QhJ" eventType="touchUpInside" id="iS0-gA-ZVy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNy-jl-grO">
+                                <rect key="frame" x="125" y="268" width="146" height="30"/>
+                                <state key="normal" title="have_a_seed">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="haveASeedTapped:" destination="42r-13-QhJ" eventType="touchUpInside" id="81k-FP-Vq5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WNy-jl-grO" firstAttribute="centerX" secondItem="Gm5-yY-M3v" secondAttribute="centerX" id="3Cn-1I-j5Z"/>
+                            <constraint firstItem="5S3-Um-frd" firstAttribute="top" secondItem="Gm5-yY-M3v" secondAttribute="top" constant="151" id="bsf-kh-tMn"/>
+                            <constraint firstItem="5S3-Um-frd" firstAttribute="centerX" secondItem="Gm5-yY-M3v" secondAttribute="centerX" id="kc4-6B-8Bi"/>
+                            <constraint firstItem="WNy-jl-grO" firstAttribute="top" secondItem="Gm5-yY-M3v" secondAttribute="top" constant="204" id="r33-kP-fsP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gm5-yY-M3v"/>
                     </view>
                     <navigationItem key="navigationItem" id="nja-IE-i11"/>
+                    <connections>
+                        <outlet property="createNewSeedButton" destination="5S3-Um-frd" id="EkN-9o-BeG"/>
+                        <outlet property="descriptionLabel" destination="WFI-1K-n9j" id="hY7-pe-9bj"/>
+                        <outlet property="haveASeedButton" destination="WNy-jl-grO" id="fVK-0r-Qo4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CIB-QQ-LR1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="89" y="-222"/>
+            <point key="canvasLocation" x="88.799999999999997" y="-222.63868065967017"/>
         </scene>
     </scenes>
 </document>

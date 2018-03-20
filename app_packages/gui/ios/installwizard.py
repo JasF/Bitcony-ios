@@ -17,6 +17,21 @@ from .util import *
 from .password_dialog import PasswordLayout, PasswordLayoutForHW, PW_NEW
 '''
 
+class CreateWalletHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+
+    @objc_method
+    def createNewSeedTapped_(self):
+        #self.installWizard.screensManager.showCreateWalletViewController()
+        print("create new seed handled in python")
+
+    @objc_method
+    def haveASeedTapped_(self):
+        #self.installWizard.screensManager.showCreateWalletViewController()
+        print("have a seed handled in python")
+
 class EnterOrCreateWalletHandler(NSObject):
     @objc_method
     def init_(self):
@@ -24,7 +39,9 @@ class EnterOrCreateWalletHandler(NSObject):
     
     @objc_method
     def createWalletTapped_(self):
-        print("create wallet handled in python")
+        handler = CreateWalletHandler.alloc().init()
+        handler.installWizard = self.installWizard
+        self.installWizard.screensManager.showCreateWalletViewController(handler)
 
 
 class GoBack(Exception):
@@ -43,6 +60,7 @@ class InstallWizard:
     
     def run_and_get_wallet(self):
         handler = EnterOrCreateWalletHandler.alloc().init()
+        handler.installWizard = self
         self.screensManager.showEnterOrCreateWalletViewController(handler)
         result = self.runLoop.exec()
         print('Show EnterOrCreateWalletViewController result: ' + str(result));

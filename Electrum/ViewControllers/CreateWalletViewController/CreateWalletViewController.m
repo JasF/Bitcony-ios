@@ -9,7 +9,9 @@
 #import "CreateWalletViewController.h"
 
 @interface CreateWalletViewController ()
-
+@property (strong, nonatomic) IBOutlet UIButton *createNewSeedButton;
+@property (strong, nonatomic) IBOutlet UIButton *haveASeedButton;
+@property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;
 @end
 
 @implementation CreateWalletViewController
@@ -33,5 +35,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)createNewSeedTapped:(id)sender {
+    if ([_handler respondsToSelector:@selector(createNewSeedTapped:)]) {
+        [_handler createNewSeedTapped:_handler];
+    }
+}
+
+- (IBAction)haveASeedTapped:(id)sender {
+    if ([_handler respondsToSelector:@selector(haveASeedTapped:)]) {
+        [_handler haveASeedTapped:_handler];
+    }
+}
 
 @end

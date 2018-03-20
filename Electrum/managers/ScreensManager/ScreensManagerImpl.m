@@ -8,6 +8,7 @@
 
 #import "ScreensManagerImpl.h"
 #import "EnterOrCreateWalletViewController.h"
+#import "CreateWalletViewController.h"
 #import "AppDelegate.h"
 
 @implementation ScreensManagerImpl {
@@ -18,8 +19,15 @@
 #pragma mark - Initialization
 
 #pragma mark - Overriden Methods - ScreensManager
-- (void)showCreateWalletViewController {
-    [self createWindowIfNeeded];
+- (void)showCreateWalletViewController:(id)handler {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CreateWalletViewController"
+                                                             bundle:nil];
+        CreateWalletViewController *viewController = (CreateWalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        viewController.handler = (id<CreateWalletHandlerProtocol>)handler;
+        [navigationController pushViewController:viewController animated:YES];
+    });
 }
 
 - (void)showEnterOrCreateWalletViewController:(id)handler {
