@@ -920,6 +920,8 @@
 		C39FE9412060E3DC00756807 /* blockfeeder.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "blockfeeder.cpython-36.pyc"; sourceTree = "<group>"; };
 		C39FE9422060E3DC00756807 /* aes.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "aes.cpython-36.pyc"; sourceTree = "<group>"; };
 		C39FE9432060E3DC00756807 /* __init__.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "__init__.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE9452060E58400756807 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		C39FE9462060E5A800756807 /* installwizard.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = installwizard.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2811,6 +2813,7 @@
 		C39FE8282060E3DB00756807 /* gui */ = {
 			isa = PBXGroup;
 			children = (
+				C39FE9442060E51E00756807 /* ios */,
 				C39FE8502060E3DB00756807 /* qt */,
 				C39FE8802060E3DB00756807 /* __init__.py */,
 				C39FE8812060E3DB00756807 /* __pycache__ */,
@@ -3279,6 +3282,15 @@
 				C39FE9432060E3DC00756807 /* __init__.cpython-36.pyc */,
 			);
 			path = __pycache__;
+			sourceTree = "<group>";
+		};
+		C39FE9442060E51E00756807 /* ios */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE9462060E5A800756807 /* installwizard.py */,
+				C39FE9452060E58400756807 /* __init__.py */,
+			);
+			path = ios;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

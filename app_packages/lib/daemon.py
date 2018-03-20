@@ -299,10 +299,9 @@ class Daemon(DaemonThread):
     def init_gui(self, config, plugins):
         print('config is: ')
         print(config)
-        gui_name = config.get('gui', 'qt')
+        gui_name = config.get('gui', 'ios')
         if gui_name in ['lite', 'classic']:
             gui_name = 'qt'
-        print('gui_name: ' + gui_name)
         gui = __import__('electrum_gui.' + gui_name, fromlist=['electrum_gui'])
         self.gui = gui.ElectrumGui(config, self, plugins)
         try:
