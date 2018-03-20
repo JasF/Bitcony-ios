@@ -25,6 +25,7 @@ class InstallWizard:
     def __init__(self, config, plugins, storage):
         print('Hello InstallWizard')
         Managers = ObjCClass("Managers")
+        self.runLoop = ObjCClass("RunLoop").shared();
         self.screensManager = Managers.shared().screensManager()
         self.config = config
         self.plugins = plugins
@@ -32,8 +33,8 @@ class InstallWizard:
     
     def run_and_get_wallet(self):
         self.screensManager.showEnterOrCreateWalletViewController()
-        self.screensManager.loopExec()
-        print('Show EnterOrCreateWalletViewController');
+        result = self.runLoop.exec()
+        print('Show EnterOrCreateWalletViewController result: ' + str(result));
     def terminate(self):
         print('InstallWizard terminate')
     def init_network(self, network):

@@ -21,6 +21,7 @@ typedef NS_ENUM(NSInteger, Rows) {
 @implementation EnterOrCreateWalletViewController
 
 - (void)viewDidLoad {
+    NSCParameterAssert(_runLoop);
     [super viewDidLoad];
     self.tableView.rowHeight = 50.f;
     self.tableView.estimatedRowHeight = 100.f;
@@ -44,6 +45,11 @@ typedef NS_ENUM(NSInteger, Rows) {
     switch (indexPath.row) {
         case AddWalletRow: {
             ButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
+            @weakify(self);
+            cell.tappedHandler = ^{
+                @strongify(self);
+                [self createNewWalletTapped];
+            };
             [cell setTitle:L(@"create_cell")];
             return cell;
         }
@@ -53,6 +59,11 @@ typedef NS_ENUM(NSInteger, Rows) {
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return RowsCount;
+}
+
+#pragma mark - Private Methods
+- (void)createNewWalletTapped {
+    [_runLoop exit:@(0)];
 }
 
 @end

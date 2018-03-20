@@ -30,4 +30,11 @@
     [_button setTitle:title forState:UIControlStateNormal];
 }
 
+#pragma mark - Private Methods
+- (IBAction)tapped:(id)sender {
+    if (_tappedHandler) {
+        _tappedHandler();
+    }
+}
+
 @end

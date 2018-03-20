@@ -98,7 +98,7 @@ class ElectrumGui:
                 print_error('[start_new_window] Exception caught (GoBack)', e)
             wizard.terminate()
             if not wallet:
-                print('wallet not created. return')
+                print('wallet not created. return ')
                 return
             wallet.start_threads(self.daemon.network)
             self.daemon.add_wallet(wallet)

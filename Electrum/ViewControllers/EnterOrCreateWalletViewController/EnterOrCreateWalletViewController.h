@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RunLoop.h"
 
 @interface EnterOrCreateWalletViewController : UITableViewController
-
+@property (strong, nonatomic) RunLoop *runLoop;
 @end

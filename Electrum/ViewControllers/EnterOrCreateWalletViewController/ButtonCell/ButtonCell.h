@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface ButtonCell : UITableViewCell
+@property (copy, nonatomic) dispatch_block_t tappedHandler;
 - (void)setTitle:(NSString *)title;
 @end
