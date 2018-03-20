@@ -504,6 +504,8 @@ class BaseWizard(object):
             self.run('confirm_seed', seed, '')
 
     def confirm_seed(self, seed, passphrase):
+        self.seedText = seed
+        print('seedText: ' + self.seedText);
         f = lambda x: self.confirm_passphrase(seed, passphrase)
         self.confirm_seed_dialog(run_next=f, test=lambda x: x==seed)
 

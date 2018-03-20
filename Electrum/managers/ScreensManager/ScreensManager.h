@@ -12,5 +12,9 @@
 @property (strong, nonatomic) UIWindow *window;
 - (void)showCreateWalletViewController:(id)handler;
 - (void)showEnterOrCreateWalletViewController:(id)handler;
+- (void)showCreateNewSeedViewController:(id)handler;
+- (void)showHaveASeedViewController:(id)handler;
+- (void)showConfirmSeedViewController:(id)handler;
+- (void)showEnterWalletPasswordViewController:(id)handler;
 - (void)createWindowIfNeeded;
 @end

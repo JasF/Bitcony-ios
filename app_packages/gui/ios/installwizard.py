@@ -17,6 +17,57 @@ from .util import *
 from .password_dialog import PasswordLayout, PasswordLayoutForHW, PW_NEW
 '''
 
+class EnterWalletPasswordHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+
+    @objc_method
+    def continueTapped_(self, password):
+        print('password is: ' + password)
+
+class ConfirmSeedHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+
+    @objc_method
+    def continueTapped_(self):
+        handler = EnterWalletPasswordHandler.alloc().init()
+        handler.installWizard = self.installWizard
+        self.installWizard.screensManager.showEnterWalletPasswordViewController(handler)
+
+    @objc_method
+    def generatedSeed_(self):
+        return self.installWizard.seedText
+
+class HaveASeedHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+
+    @objc_method
+    def createNewSeedTapped_(self):
+        pass
+
+class CreateNewSeedHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+
+    @objc_method
+    def continueTapped_(self, newSeed):
+        print('newSeed is: ' + newSeed)
+        handler = ConfirmSeedHandler.alloc().init()
+        handler.installWizard = self.installWizard
+        self.installWizard.seedText = newSeed
+        self.installWizard.screensManager.showConfirmSeedViewController(handler)
+        pass
+
+    @objc_method
+    def generatedSeed_(self):
+        return 'hello seed';
+
 class CreateWalletHandler(NSObject):
     @objc_method
     def init_(self):
@@ -24,12 +75,16 @@ class CreateWalletHandler(NSObject):
 
     @objc_method
     def createNewSeedTapped_(self):
-        #self.installWizard.screensManager.showCreateWalletViewController()
+        handler = CreateNewSeedHandler.alloc().init()
+        handler.installWizard = self.installWizard
+        self.installWizard.screensManager.showCreateNewSeedViewController(handler)
         print("create new seed handled in python")
 
     @objc_method
     def haveASeedTapped_(self):
-        #self.installWizard.screensManager.showCreateWalletViewController()
+        handler = HaveASeedHandler.alloc().init()
+        handler.installWizard = self.installWizard
+        self.installWizard.screensManager.showHaveASeedViewController(handler)
         print("have a seed handled in python")
 
 class EnterOrCreateWalletHandler(NSObject):

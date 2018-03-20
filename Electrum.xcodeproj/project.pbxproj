@@ -44,6 +44,14 @@
 		C39FE96A206103C400756807 /* EXTSafeCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE95B206103C400756807 /* EXTSafeCategory.m */; };
 		C39FE96B206103C400756807 /* NSMethodSignature+EXT.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE95D206103C400756807 /* NSMethodSignature+EXT.m */; };
 		C39FE96C206103C400756807 /* EXTNil.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE961206103C400756807 /* EXTNil.m */; };
+		C39FE971206115A700756807 /* CreateNewSeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE970206115A700756807 /* CreateNewSeedViewController.m */; };
+		C39FE974206115B000756807 /* HaveASeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE973206115B000756807 /* HaveASeedViewController.m */; };
+		C39FE976206115C500756807 /* HaveASeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FE975206115C500756807 /* HaveASeedViewController.storyboard */; };
+		C39FE978206115CF00756807 /* CreateNewSeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FE977206115CF00756807 /* CreateNewSeedViewController.storyboard */; };
+		C39FE97C206117A100756807 /* ConfirmSeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE97B206117A100756807 /* ConfirmSeedViewController.m */; };
+		C39FE97E206117B100756807 /* ConfirmSeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FE97D206117B100756807 /* ConfirmSeedViewController.storyboard */; };
+		C39FE982206125DB00756807 /* EnterWalletPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE981206125DB00756807 /* EnterWalletPasswordViewController.m */; };
+		C39FE984206125E400756807 /* EnterWalletPasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FE983206125E400756807 /* EnterWalletPasswordViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -958,6 +966,18 @@
 		C39FE961206103C400756807 /* EXTNil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTNil.m; sourceTree = "<group>"; };
 		C39FE962206103C400756807 /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
 		C39FE963206103C400756807 /* EXTCoroutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTCoroutine.h; sourceTree = "<group>"; };
+		C39FE96F206115A700756807 /* CreateNewSeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateNewSeedViewController.h; sourceTree = "<group>"; };
+		C39FE970206115A700756807 /* CreateNewSeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateNewSeedViewController.m; sourceTree = "<group>"; };
+		C39FE972206115B000756807 /* HaveASeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HaveASeedViewController.h; sourceTree = "<group>"; };
+		C39FE973206115B000756807 /* HaveASeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HaveASeedViewController.m; sourceTree = "<group>"; };
+		C39FE975206115C500756807 /* HaveASeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HaveASeedViewController.storyboard; sourceTree = "<group>"; };
+		C39FE977206115CF00756807 /* CreateNewSeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CreateNewSeedViewController.storyboard; sourceTree = "<group>"; };
+		C39FE97A206117A100756807 /* ConfirmSeedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConfirmSeedViewController.h; sourceTree = "<group>"; };
+		C39FE97B206117A100756807 /* ConfirmSeedViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmSeedViewController.m; sourceTree = "<group>"; };
+		C39FE97D206117B100756807 /* ConfirmSeedViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConfirmSeedViewController.storyboard; sourceTree = "<group>"; };
+		C39FE980206125DB00756807 /* EnterWalletPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterWalletPasswordViewController.h; sourceTree = "<group>"; };
+		C39FE981206125DB00756807 /* EnterWalletPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterWalletPasswordViewController.m; sourceTree = "<group>"; };
+		C39FE983206125E400756807 /* EnterWalletPasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnterWalletPasswordViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1113,6 +1133,10 @@
 		C39FE462205FE72F00756807 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C39FE97F206125CF00756807 /* EnterWalletPasswordViewController */,
+				C39FE9792061179100756807 /* ConfirmSeedViewController */,
+				C39FE96E2061159400756807 /* HaveASeedViewController */,
+				C39FE96D2061158800756807 /* CreateNewSeedViewController */,
 				C39FE476205FE95800756807 /* EnterOrCreateWalletViewController */,
 				C39FE470205FE86500756807 /* CreateWalletViewController */,
 			);
@@ -3372,6 +3396,46 @@
 			path = Frameworks/extobjc;
 			sourceTree = "<group>";
 		};
+		C39FE96D2061158800756807 /* CreateNewSeedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE96F206115A700756807 /* CreateNewSeedViewController.h */,
+				C39FE970206115A700756807 /* CreateNewSeedViewController.m */,
+				C39FE977206115CF00756807 /* CreateNewSeedViewController.storyboard */,
+			);
+			path = CreateNewSeedViewController;
+			sourceTree = "<group>";
+		};
+		C39FE96E2061159400756807 /* HaveASeedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE972206115B000756807 /* HaveASeedViewController.h */,
+				C39FE973206115B000756807 /* HaveASeedViewController.m */,
+				C39FE975206115C500756807 /* HaveASeedViewController.storyboard */,
+			);
+			path = HaveASeedViewController;
+			sourceTree = "<group>";
+		};
+		C39FE9792061179100756807 /* ConfirmSeedViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE97A206117A100756807 /* ConfirmSeedViewController.h */,
+				C39FE97B206117A100756807 /* ConfirmSeedViewController.m */,
+				C39FE97D206117B100756807 /* ConfirmSeedViewController.storyboard */,
+			);
+			path = ConfirmSeedViewController;
+			sourceTree = "<group>";
+		};
+		C39FE97F206125CF00756807 /* EnterWalletPasswordViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE980206125DB00756807 /* EnterWalletPasswordViewController.h */,
+				C39FE981206125DB00756807 /* EnterWalletPasswordViewController.m */,
+				C39FE983206125E400756807 /* EnterWalletPasswordViewController.storyboard */,
+			);
+			path = EnterWalletPasswordViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3429,14 +3493,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C39FE984206125E400756807 /* EnterWalletPasswordViewController.storyboard in Resources */,
 				C39FE47B205FE98200756807 /* EnterOrCreateWalletViewController.storyboard in Resources */,
 				C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */,
 				C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */,
 				C39FE4932060E03B00756807 /* __main__.py in Resources */,
 				C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */,
+				C39FE978206115CF00756807 /* CreateNewSeedViewController.storyboard in Resources */,
 				C39FE482205FEC1D00756807 /* ButtonCell.xib in Resources */,
 				C39FE475205FE8CA00756807 /* CreateWalletViewController.storyboard in Resources */,
+				C39FE97E206117B100756807 /* ConfirmSeedViewController.storyboard in Resources */,
 				C39FDFD9205F9FF300756807 /* __main__-.py in Resources */,
+				C39FE976206115C500756807 /* HaveASeedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3472,10 +3540,14 @@
 				C39FE965206103C400756807 /* EXTConcreteProtocol.m in Sources */,
 				C39FE473205FE8A700756807 /* CreateWalletViewController.m in Sources */,
 				C39FE968206103C400756807 /* EXTADT.m in Sources */,
+				C39FE971206115A700756807 /* CreateNewSeedViewController.m in Sources */,
+				C39FE97C206117A100756807 /* ConfirmSeedViewController.m in Sources */,
 				C39FE969206103C400756807 /* NSInvocation+EXT.m in Sources */,
 				C39FE96B206103C400756807 /* NSMethodSignature+EXT.m in Sources */,
 				C39FE481205FEC1D00756807 /* ButtonCell.m in Sources */,
 				C39FE96C206103C400756807 /* EXTNil.m in Sources */,
+				C39FE974206115B000756807 /* HaveASeedViewController.m in Sources */,
+				C39FE982206125DB00756807 /* EnterWalletPasswordViewController.m in Sources */,
 				C39FE96A206103C400756807 /* EXTSafeCategory.m in Sources */,
 				C39FDFE7205FA8EE00756807 /* HelloRubicon.m in Sources */,
 				C39FE964206103C400756807 /* EXTSelectorChecking.m in Sources */,

@@ -17,6 +17,7 @@
 @implementation CreateWalletViewController
 
 - (void)viewDidLoad {
+    NSCParameterAssert(_handler);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }

@@ -364,8 +364,8 @@ class InstallWizard(QDialog, MessageBoxMixin, BaseWizard):
         self.exec_layout(slayout, title, next_enabled=False)
         return slayout.get_text()
 
-    def seed_input(self, title, message, is_seed, options):
-        slayout = SeedLayout(title=message, is_seed=is_seed, options=options, parent=self)
+    def seed_input(self, title, message, is_seed, options seedText=seedText):
+        slayout = SeedLayout(seed=seedText title=message, is_seed=is_seed, options=options, parent=self)
         self.exec_layout(slayout, title, next_enabled=False)
         return slayout.get_seed(), slayout.is_bip39, slayout.is_ext
 
@@ -402,11 +402,13 @@ class InstallWizard(QDialog, MessageBoxMixin, BaseWizard):
             _('If you lose your seed, your money will be permanently lost.'),
             _('To make sure that you have properly saved your seed, please retype it here.')
         ])
-        seed, is_bip39, is_ext = self.seed_input(title, message, test, None)
+        seed, is_bip39, is_ext = self.seed_input(title, message, test, None, seedText=self.seedText)
         return seed
 
     @wizard_dialog
     def show_seed_dialog(self, run_next, seed_text):
+        self.seedText = seed_text
+        print('seed_text is: ' + seed_text)
         title =  _("Your wallet generation seed is:")
         slayout = SeedLayout(seed=seed_text, title=title, msg=True, options=['ext'])
         self.exec_layout(slayout)
