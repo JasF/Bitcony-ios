@@ -34,7 +34,7 @@
 }
 
 #pragma mark - Public Methods
-- (NSNumber *)exec {
+- (NSInteger)exec {
     _groupIndex++;
     dispatch_group_t group = dispatch_group_create();
     @synchronized(self) {
@@ -48,14 +48,14 @@
         resultCode = _resultCodes.firstObject;
         [_resultCodes removeObjectAtIndex:0];
     }
-    return resultCode;
+    return [resultCode integerValue];
 }
 
-- (void)exit:(NSNumber *)resultCode {
+- (void)exit:(NSInteger)resultCode {
     NSValue *value = nil;
     @synchronized(self) {
         NSCAssert(_groups.count, @"object in _groups must be exists");
-        [_resultCodes addObject:resultCode];
+        [_resultCodes addObject:@(resultCode)];
         value = _groups.firstObject;
         [_groups removeObjectAtIndex:0];
     }

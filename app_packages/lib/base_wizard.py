@@ -428,13 +428,7 @@ class BaseWizard(object):
                     encrypt_keystore=False))
         else:
             # prompt the user to set an arbitrary password
-            self.request_password(
-                run_next=lambda password, encrypt_storage: self.on_password(
-                    password,
-                    encrypt_storage=encrypt_storage,
-                    storage_enc_version=STO_EV_USER_PW,
-                    encrypt_keystore=encrypt_keystore),
-                force_disable_encrypt_cb=not encrypt_keystore)
+            self.request_password()
 
     def on_password(self, password, *, encrypt_storage,
                     storage_enc_version=STO_EV_USER_PW, encrypt_keystore):
@@ -447,6 +441,7 @@ class BaseWizard(object):
         if self.wallet_type == 'standard':
             self.storage.put('seed_type', self.seed_type)
             keys = self.keystores[0].dump()
+            print('keys dump:' + str(keys))
             self.storage.put('keystore', keys)
             self.wallet = Standard_Wallet(self.storage)
             self.run('create_addresses')
@@ -514,6 +509,17 @@ class BaseWizard(object):
         f = lambda x: self.confirm_passphrase(seed, passphrase)
         self.confirm_seed_dialog(run_next=f, test=lambda x: x==seed)
 
+    def processSeed(self, seed):
+        self.wallet_type = 'standard'
+        self.confirm_passphrase(seed, "")
+
+    def processPassword(self, password):
+        self.wallet_type = 'standard'
+        self.on_password(password,
+                         encrypt_storage=True,
+                         storage_enc_version=STO_EV_USER_PW,
+                         encrypt_keystore=False)
+
     def confirm_passphrase(self, seed, passphrase):
         f = lambda x: self.run('create_keystore', seed, x)
         if passphrase:
@@ -531,5 +537,6 @@ class BaseWizard(object):
             self.wallet.synchronize()
             self.wallet.storage.write()
             self.terminate()
+            self.runLoop.exit(0)
         msg = _("Electrum is generating your addresses, please wait...")
         self.waiting_dialog(task, msg)

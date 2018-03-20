@@ -42,7 +42,7 @@ from . import bitcoin
 # seed_version is now used for the version of the wallet file
 
 OLD_SEED_VERSION = 4        # electrum versions < 2.0
-NEW_SEED_VERSION = 11       # electrum versions >= 2.0
+NEW_SEED_VERSION = 16       # electrum versions >= 2.0
 FINAL_SEED_VERSION = 16     # electrum >= 2.7 will set this to prevent
                             # old versions from overwriting new format
 
@@ -324,6 +324,7 @@ class WalletStorage(PrintError):
         return result
 
     def requires_upgrade(self):
+        print('seed version: ' + str(self.get_seed_version()) + ' but FINAL_SEED_VERSION: ' + str(FINAL_SEED_VERSION));
         return self.file_exists() and self.get_seed_version() < FINAL_SEED_VERSION
 
     def upgrade(self):

@@ -221,21 +221,27 @@ class Daemon(DaemonThread):
 
     def load_wallet(self, path, password):
         # wizard will be launched if we return
+        print('wallets: ' + str(self.wallets))
         if path in self.wallets:
             wallet = self.wallets[path]
             return wallet
         storage = WalletStorage(path, manual_upgrades=True)
         if not storage.file_exists():
+            print('file not exists: ' + path);
             return
         if storage.is_encrypted():
+            print('storage is encrypted')
             if not password:
                 return
             storage.decrypt(password)
         if storage.requires_split():
+            print('requires_split')
             return
         if storage.requires_upgrade():
+            print('requires_upgrade')
             return
         if storage.get_action():
+            print('get_action')
             return
         wallet = Wallet(storage)
         wallet.start_threads(self.network)
