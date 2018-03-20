@@ -21,7 +21,7 @@
 		C39FDFD2205F9ED100756807 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFCE205F9ED000756807 /* Python.framework */; };
 		C39FDFD4205F9F3400756807 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFD3205F9F3300756807 /* libsqlite3.tbd */; };
 		C39FDFD6205F9F5C00756807 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFD5205F9F5C00756807 /* libz.tbd */; };
-		C39FDFD9205F9FF300756807 /* __main__.py in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFD8205F9FCB00756807 /* __main__.py */; };
+		C39FDFD9205F9FF300756807 /* __main__-.py in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFD8205F9FCB00756807 /* __main__-.py */; };
 		C39FDFDE205FA06300756807 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFDD205FA06300756807 /* AppDelegate.m */; };
 		C39FDFE0205FA0D300756807 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFDF205FA0D200756807 /* CocoaLumberjack.framework */; };
 		C39FDFE7205FA8EE00756807 /* HelloRubicon.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFE6205FA8EE00756807 /* HelloRubicon.m */; };
@@ -33,8 +33,7 @@
 		C39FE47B205FE98200756807 /* EnterOrCreateWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FE47A205FE98200756807 /* EnterOrCreateWalletViewController.storyboard */; };
 		C39FE481205FEC1D00756807 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE47F205FEC1D00756807 /* ButtonCell.m */; };
 		C39FE482205FEC1D00756807 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FE480205FEC1D00756807 /* ButtonCell.xib */; };
-		C39FE487205FF9B800756807 /* daemon.py in Resources */ = {isa = PBXBuildFile; fileRef = C39FE483205FF3FC00756807 /* daemon.py */; };
-		C39FE488205FF9B800756807 /* util.py in Resources */ = {isa = PBXBuildFile; fileRef = C39FE484205FF43200756807 /* util.py */; };
+		C39FE4932060E03B00756807 /* __main__.py in Resources */ = {isa = PBXBuildFile; fileRef = C39FE4922060DDBF00756807 /* __main__.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +53,7 @@
 		C39FDFCE205F9ED000756807 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = Frameworks/Python.framework; sourceTree = "<group>"; };
 		C39FDFD3205F9F3300756807 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		C39FDFD5205F9F5C00756807 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		C39FDFD8205F9FCB00756807 /* __main__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __main__.py; sourceTree = "<group>"; };
+		C39FDFD8205F9FCB00756807 /* __main__-.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "__main__-.py"; sourceTree = "<group>"; };
 		C39FDFDC205FA06300756807 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C39FDFDD205FA06300756807 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C39FDFDF205FA0D200756807 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Frameworks/CocoaLumberjack.framework; sourceTree = "<group>"; };
@@ -1038,9 +1037,151 @@
 		C39FE47E205FEC1D00756807 /* ButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
 		C39FE47F205FEC1D00756807 /* ButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
 		C39FE480205FEC1D00756807 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
-		C39FE483205FF3FC00756807 /* daemon.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = daemon.py; sourceTree = "<group>"; };
-		C39FE484205FF43200756807 /* util.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = util.py; sourceTree = "<group>"; };
 		C39FE485205FF88200756807 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		C39FE4922060DDBF00756807 /* __main__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __main__.py; sourceTree = "<group>"; };
+		C39FE4952060E09600756807 /* update.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = update.py; sourceTree = "<group>"; };
+		C39FE4962060E09600756807 /* reversename.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = reversename.py; sourceTree = "<group>"; };
+		C39FE4982060E09600756807 /* txtbase.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = txtbase.py; sourceTree = "<group>"; };
+		C39FE4992060E09600756807 /* nsbase.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = nsbase.py; sourceTree = "<group>"; };
+		C39FE49A2060E09600756807 /* dnskeybase.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = dnskeybase.py; sourceTree = "<group>"; };
+		C39FE49C2060E09600756807 /* DHCID.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = DHCID.py; sourceTree = "<group>"; };
+		C39FE49D2060E09600756807 /* SRV.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = SRV.py; sourceTree = "<group>"; };
+		C39FE49E2060E09600756807 /* NAPTR.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = NAPTR.py; sourceTree = "<group>"; };
+		C39FE49F2060E09600756807 /* KX.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = KX.py; sourceTree = "<group>"; };
+		C39FE4A02060E09600756807 /* IPSECKEY.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = IPSECKEY.py; sourceTree = "<group>"; };
+		C39FE4A12060E09600756807 /* A.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = A.py; sourceTree = "<group>"; };
+		C39FE4A22060E09600756807 /* WKS.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = WKS.py; sourceTree = "<group>"; };
+		C39FE4A32060E09600756807 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		C39FE4A52060E09600756807 /* AAAA.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AAAA.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4A62060E09600756807 /* A.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "A.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4A72060E09600756807 /* __init__.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "__init__.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4A82060E09600756807 /* NSAP_PTR.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = NSAP_PTR.py; sourceTree = "<group>"; };
+		C39FE4A92060E09600756807 /* AAAA.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = AAAA.py; sourceTree = "<group>"; };
+		C39FE4AA2060E09600756807 /* APL.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = APL.py; sourceTree = "<group>"; };
+		C39FE4AB2060E09600756807 /* PX.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PX.py; sourceTree = "<group>"; };
+		C39FE4AC2060E09600756807 /* NSAP.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = NSAP.py; sourceTree = "<group>"; };
+		C39FE4AD2060E09600756807 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		C39FE4AE2060E09600756807 /* dsbase.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = dsbase.py; sourceTree = "<group>"; };
+		C39FE4B02060E09600756807 /* nsbase.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "nsbase.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4B12060E09600756807 /* dsbase.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dsbase.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4B22060E09600756807 /* txtbase.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "txtbase.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4B32060E09600756807 /* __init__.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "__init__.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4B42060E09600756807 /* dnskeybase.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dnskeybase.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4B62060E09600756807 /* DLV.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = DLV.py; sourceTree = "<group>"; };
+		C39FE4B72060E09600756807 /* MX.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = MX.py; sourceTree = "<group>"; };
+		C39FE4B82060E09600756807 /* DNSKEY.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = DNSKEY.py; sourceTree = "<group>"; };
+		C39FE4B92060E09600756807 /* CDNSKEY.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = CDNSKEY.py; sourceTree = "<group>"; };
+		C39FE4BA2060E09600756807 /* RRSIG.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = RRSIG.py; sourceTree = "<group>"; };
+		C39FE4BB2060E09600756807 /* LOC.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = LOC.py; sourceTree = "<group>"; };
+		C39FE4BC2060E09600756807 /* CNAME.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = CNAME.py; sourceTree = "<group>"; };
+		C39FE4BD2060E09600756807 /* RT.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = RT.py; sourceTree = "<group>"; };
+		C39FE4BE2060E09600756807 /* NSEC3PARAM.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = NSEC3PARAM.py; sourceTree = "<group>"; };
+		C39FE4BF2060E09600756807 /* RP.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = RP.py; sourceTree = "<group>"; };
+		C39FE4C02060E09600756807 /* EUI48.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = EUI48.py; sourceTree = "<group>"; };
+		C39FE4C12060E09600756807 /* TXT.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = TXT.py; sourceTree = "<group>"; };
+		C39FE4C22060E09600756807 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		C39FE4C32060E09600756807 /* NS.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = NS.py; sourceTree = "<group>"; };
+		C39FE4C42060E09600756807 /* ISDN.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = ISDN.py; sourceTree = "<group>"; };
+		C39FE4C62060E09600756807 /* NS.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NS.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4C72060E09600756807 /* RRSIG.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RRSIG.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4C82060E09600756807 /* CNAME.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "CNAME.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4C92060E09600756807 /* TXT.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TXT.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4CA2060E09600756807 /* NSEC3PARAM.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NSEC3PARAM.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4CB2060E09600756807 /* NSEC.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NSEC.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4CC2060E09600756807 /* DLV.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DLV.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4CD2060E09600756807 /* DNSKEY.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DNSKEY.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4CE2060E09600756807 /* SOA.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SOA.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4CF2060E09600756807 /* __init__.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "__init__.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4D02060E09600756807 /* NSEC3.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NSEC3.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4D12060E09600756807 /* DS.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DS.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4D22060E09600756807 /* TLSA.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = TLSA.py; sourceTree = "<group>"; };
+		C39FE4D32060E09600756807 /* CERT.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = CERT.py; sourceTree = "<group>"; };
+		C39FE4D42060E09600756807 /* CDS.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = CDS.py; sourceTree = "<group>"; };
+		C39FE4D52060E09600756807 /* SPF.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = SPF.py; sourceTree = "<group>"; };
+		C39FE4D62060E09600756807 /* AFSDB.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = AFSDB.py; sourceTree = "<group>"; };
+		C39FE4D72060E09600756807 /* GPOS.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = GPOS.py; sourceTree = "<group>"; };
+		C39FE4D82060E09600756807 /* URI.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = URI.py; sourceTree = "<group>"; };
+		C39FE4D92060E09600756807 /* SOA.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = SOA.py; sourceTree = "<group>"; };
+		C39FE4DA2060E09600756807 /* SSHFP.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = SSHFP.py; sourceTree = "<group>"; };
+		C39FE4DB2060E09600756807 /* NSEC.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = NSEC.py; sourceTree = "<group>"; };
+		C39FE4DC2060E09600756807 /* DS.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = DS.py; sourceTree = "<group>"; };
+		C39FE4DD2060E09600756807 /* PTR.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = PTR.py; sourceTree = "<group>"; };
+		C39FE4DE2060E09600756807 /* EUI64.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = EUI64.py; sourceTree = "<group>"; };
+		C39FE4DF2060E09600756807 /* NSEC3.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = NSEC3.py; sourceTree = "<group>"; };
+		C39FE4E02060E09600756807 /* HINFO.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = HINFO.py; sourceTree = "<group>"; };
+		C39FE4E12060E09600756807 /* HIP.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = HIP.py; sourceTree = "<group>"; };
+		C39FE4E22060E09600756807 /* AVC.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = AVC.py; sourceTree = "<group>"; };
+		C39FE4E32060E09600756807 /* DNAME.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = DNAME.py; sourceTree = "<group>"; };
+		C39FE4E42060E09600756807 /* CAA.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = CAA.py; sourceTree = "<group>"; };
+		C39FE4E52060E09600756807 /* X25.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = X25.py; sourceTree = "<group>"; };
+		C39FE4E62060E09600756807 /* CSYNC.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = CSYNC.py; sourceTree = "<group>"; };
+		C39FE4E72060E09600756807 /* mxbase.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = mxbase.py; sourceTree = "<group>"; };
+		C39FE4E82060E09600756807 /* euibase.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = euibase.py; sourceTree = "<group>"; };
+		C39FE4E92060E09600756807 /* wiredata.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = wiredata.py; sourceTree = "<group>"; };
+		C39FE4EA2060E09600756807 /* ipv4.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = ipv4.py; sourceTree = "<group>"; };
+		C39FE4EB2060E09600756807 /* tsig.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = tsig.py; sourceTree = "<group>"; };
+		C39FE4EC2060E09600756807 /* e164.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = e164.py; sourceTree = "<group>"; };
+		C39FE4ED2060E09600756807 /* exception.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = exception.py; sourceTree = "<group>"; };
+		C39FE4EE2060E09600756807 /* grange.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = grange.py; sourceTree = "<group>"; };
+		C39FE4EF2060E09600756807 /* inet.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = inet.py; sourceTree = "<group>"; };
+		C39FE4F02060E09600756807 /* rdataclass.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = rdataclass.py; sourceTree = "<group>"; };
+		C39FE4F12060E09600756807 /* version.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = version.py; sourceTree = "<group>"; };
+		C39FE4F22060E09600756807 /* query.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = query.py; sourceTree = "<group>"; };
+		C39FE4F32060E09600756807 /* opcode.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = opcode.py; sourceTree = "<group>"; };
+		C39FE4F42060E09600756807 /* tsigkeyring.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = tsigkeyring.py; sourceTree = "<group>"; };
+		C39FE4F52060E09600756807 /* renderer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = renderer.py; sourceTree = "<group>"; };
+		C39FE4F62060E09600756807 /* flags.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = flags.py; sourceTree = "<group>"; };
+		C39FE4F72060E09600756807 /* rdataset.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = rdataset.py; sourceTree = "<group>"; };
+		C39FE4F82060E09600756807 /* rcode.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = rcode.py; sourceTree = "<group>"; };
+		C39FE4F92060E09600756807 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
+		C39FE4FA2060E09600756807 /* message.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = message.py; sourceTree = "<group>"; };
+		C39FE4FC2060E09600756807 /* renderer.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "renderer.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4FD2060E09600756807 /* wiredata.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "wiredata.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4FE2060E09600756807 /* edns.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "edns.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE4FF2060E09600756807 /* flags.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "flags.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5002060E09600756807 /* ipv4.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ipv4.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5012060E09600756807 /* query.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "query.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5022060E09600756807 /* inet.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "inet.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5032060E09600756807 /* rdata.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rdata.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5042060E09600756807 /* ipv6.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ipv6.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5052060E09600756807 /* entropy.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "entropy.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5062060E09600756807 /* ttl.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ttl.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5072060E09600756807 /* message.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "message.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5082060E09600756807 /* dnssec.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "dnssec.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5092060E09600756807 /* hash.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "hash.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE50A2060E09600756807 /* rrset.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rrset.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE50B2060E09600756807 /* rdataclass.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rdataclass.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE50C2060E09600756807 /* set.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "set.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE50D2060E09600756807 /* tsig.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tsig.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE50E2060E09600756807 /* _compat.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "_compat.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE50F2060E09600756807 /* opcode.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "opcode.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5102060E09600756807 /* resolver.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "resolver.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5112060E09600756807 /* exception.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "exception.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5122060E09600756807 /* rcode.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rcode.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5132060E09600756807 /* rdatatype.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rdatatype.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5142060E09600756807 /* tokenizer.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "tokenizer.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5152060E09600756807 /* reversename.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "reversename.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5162060E09600756807 /* node.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "node.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5172060E09600756807 /* __init__.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "__init__.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5182060E09600756807 /* rdataset.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rdataset.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE5192060E09600756807 /* name.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "name.cpython-36.pyc"; sourceTree = "<group>"; };
+		C39FE51A2060E09600756807 /* namedict.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = namedict.py; sourceTree = "<group>"; };
+		C39FE51B2060E09600756807 /* hash.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = hash.py; sourceTree = "<group>"; };
+		C39FE51C2060E09600756807 /* tokenizer.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = tokenizer.py; sourceTree = "<group>"; };
+		C39FE51D2060E09600756807 /* ttl.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = ttl.py; sourceTree = "<group>"; };
+		C39FE51E2060E09600756807 /* rrset.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = rrset.py; sourceTree = "<group>"; };
+		C39FE51F2060E09600756807 /* resolver.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = resolver.py; sourceTree = "<group>"; };
+		C39FE5202060E09600756807 /* zone.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = zone.py; sourceTree = "<group>"; };
+		C39FE5212060E09600756807 /* edns.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = edns.py; sourceTree = "<group>"; };
+		C39FE5222060E09600756807 /* rdatatype.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = rdatatype.py; sourceTree = "<group>"; };
+		C39FE5232060E09600756807 /* node.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = node.py; sourceTree = "<group>"; };
+		C39FE5242060E09600756807 /* _compat.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = _compat.py; sourceTree = "<group>"; };
+		C39FE5252060E09600756807 /* name.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = name.py; sourceTree = "<group>"; };
+		C39FE5262060E09600756807 /* set.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = set.py; sourceTree = "<group>"; };
+		C39FE5272060E09600756807 /* ipv6.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = ipv6.py; sourceTree = "<group>"; };
+		C39FE5282060E09600756807 /* dnssec.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = dnssec.py; sourceTree = "<group>"; };
+		C39FE5292060E09600756807 /* entropy.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = entropy.py; sourceTree = "<group>"; };
+		C39FE52A2060E09600756807 /* rdata.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = rdata.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1121,10 +1262,8 @@
 		C39FDFD7205F9FB700756807 /* python */ = {
 			isa = PBXGroup;
 			children = (
-				C39FE483205FF3FC00756807 /* daemon.py */,
-				C39FE484205FF43200756807 /* util.py */,
-				C39FE456205FBED900756807 /* gui */,
-				C39FDFD8205F9FCB00756807 /* __main__.py */,
+				C39FE4922060DDBF00756807 /* __main__.py */,
+				C39FDFD8205F9FCB00756807 /* __main__-.py */,
 			);
 			path = python;
 			sourceTree = "<group>";
@@ -1151,6 +1290,7 @@
 		C39FDFE1205FA86800756807 /* app_packages */ = {
 			isa = PBXGroup;
 			children = (
+				C39FE4942060E09600756807 /* dns */,
 				C39FE457205FE6FC00756807 /* lib */,
 				C39FE458205FE70C00756807 /* rubicon */,
 				C39FDFE2205FA86800756807 /* README */,
@@ -3537,13 +3677,6 @@
 			path = __pycache__;
 			sourceTree = "<group>";
 		};
-		C39FE456205FBED900756807 /* gui */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = gui;
-			sourceTree = "<group>";
-		};
 		C39FE457205FE6FC00756807 /* lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -3651,6 +3784,212 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		C39FE4942060E09600756807 /* dns */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE4952060E09600756807 /* update.py */,
+				C39FE4962060E09600756807 /* reversename.py */,
+				C39FE4972060E09600756807 /* rdtypes */,
+				C39FE4E92060E09600756807 /* wiredata.py */,
+				C39FE4EA2060E09600756807 /* ipv4.py */,
+				C39FE4EB2060E09600756807 /* tsig.py */,
+				C39FE4EC2060E09600756807 /* e164.py */,
+				C39FE4ED2060E09600756807 /* exception.py */,
+				C39FE4EE2060E09600756807 /* grange.py */,
+				C39FE4EF2060E09600756807 /* inet.py */,
+				C39FE4F02060E09600756807 /* rdataclass.py */,
+				C39FE4F12060E09600756807 /* version.py */,
+				C39FE4F22060E09600756807 /* query.py */,
+				C39FE4F32060E09600756807 /* opcode.py */,
+				C39FE4F42060E09600756807 /* tsigkeyring.py */,
+				C39FE4F52060E09600756807 /* renderer.py */,
+				C39FE4F62060E09600756807 /* flags.py */,
+				C39FE4F72060E09600756807 /* rdataset.py */,
+				C39FE4F82060E09600756807 /* rcode.py */,
+				C39FE4F92060E09600756807 /* __init__.py */,
+				C39FE4FA2060E09600756807 /* message.py */,
+				C39FE4FB2060E09600756807 /* __pycache__ */,
+				C39FE51A2060E09600756807 /* namedict.py */,
+				C39FE51B2060E09600756807 /* hash.py */,
+				C39FE51C2060E09600756807 /* tokenizer.py */,
+				C39FE51D2060E09600756807 /* ttl.py */,
+				C39FE51E2060E09600756807 /* rrset.py */,
+				C39FE51F2060E09600756807 /* resolver.py */,
+				C39FE5202060E09600756807 /* zone.py */,
+				C39FE5212060E09600756807 /* edns.py */,
+				C39FE5222060E09600756807 /* rdatatype.py */,
+				C39FE5232060E09600756807 /* node.py */,
+				C39FE5242060E09600756807 /* _compat.py */,
+				C39FE5252060E09600756807 /* name.py */,
+				C39FE5262060E09600756807 /* set.py */,
+				C39FE5272060E09600756807 /* ipv6.py */,
+				C39FE5282060E09600756807 /* dnssec.py */,
+				C39FE5292060E09600756807 /* entropy.py */,
+				C39FE52A2060E09600756807 /* rdata.py */,
+			);
+			path = dns;
+			sourceTree = "<group>";
+		};
+		C39FE4972060E09600756807 /* rdtypes */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE4982060E09600756807 /* txtbase.py */,
+				C39FE4992060E09600756807 /* nsbase.py */,
+				C39FE49A2060E09600756807 /* dnskeybase.py */,
+				C39FE49B2060E09600756807 /* IN */,
+				C39FE4AD2060E09600756807 /* __init__.py */,
+				C39FE4AE2060E09600756807 /* dsbase.py */,
+				C39FE4AF2060E09600756807 /* __pycache__ */,
+				C39FE4B52060E09600756807 /* ANY */,
+				C39FE4E72060E09600756807 /* mxbase.py */,
+				C39FE4E82060E09600756807 /* euibase.py */,
+			);
+			path = rdtypes;
+			sourceTree = "<group>";
+		};
+		C39FE49B2060E09600756807 /* IN */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE49C2060E09600756807 /* DHCID.py */,
+				C39FE49D2060E09600756807 /* SRV.py */,
+				C39FE49E2060E09600756807 /* NAPTR.py */,
+				C39FE49F2060E09600756807 /* KX.py */,
+				C39FE4A02060E09600756807 /* IPSECKEY.py */,
+				C39FE4A12060E09600756807 /* A.py */,
+				C39FE4A22060E09600756807 /* WKS.py */,
+				C39FE4A32060E09600756807 /* __init__.py */,
+				C39FE4A42060E09600756807 /* __pycache__ */,
+				C39FE4A82060E09600756807 /* NSAP_PTR.py */,
+				C39FE4A92060E09600756807 /* AAAA.py */,
+				C39FE4AA2060E09600756807 /* APL.py */,
+				C39FE4AB2060E09600756807 /* PX.py */,
+				C39FE4AC2060E09600756807 /* NSAP.py */,
+			);
+			path = IN;
+			sourceTree = "<group>";
+		};
+		C39FE4A42060E09600756807 /* __pycache__ */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE4A52060E09600756807 /* AAAA.cpython-36.pyc */,
+				C39FE4A62060E09600756807 /* A.cpython-36.pyc */,
+				C39FE4A72060E09600756807 /* __init__.cpython-36.pyc */,
+			);
+			path = __pycache__;
+			sourceTree = "<group>";
+		};
+		C39FE4AF2060E09600756807 /* __pycache__ */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE4B02060E09600756807 /* nsbase.cpython-36.pyc */,
+				C39FE4B12060E09600756807 /* dsbase.cpython-36.pyc */,
+				C39FE4B22060E09600756807 /* txtbase.cpython-36.pyc */,
+				C39FE4B32060E09600756807 /* __init__.cpython-36.pyc */,
+				C39FE4B42060E09600756807 /* dnskeybase.cpython-36.pyc */,
+			);
+			path = __pycache__;
+			sourceTree = "<group>";
+		};
+		C39FE4B52060E09600756807 /* ANY */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE4B62060E09600756807 /* DLV.py */,
+				C39FE4B72060E09600756807 /* MX.py */,
+				C39FE4B82060E09600756807 /* DNSKEY.py */,
+				C39FE4B92060E09600756807 /* CDNSKEY.py */,
+				C39FE4BA2060E09600756807 /* RRSIG.py */,
+				C39FE4BB2060E09600756807 /* LOC.py */,
+				C39FE4BC2060E09600756807 /* CNAME.py */,
+				C39FE4BD2060E09600756807 /* RT.py */,
+				C39FE4BE2060E09600756807 /* NSEC3PARAM.py */,
+				C39FE4BF2060E09600756807 /* RP.py */,
+				C39FE4C02060E09600756807 /* EUI48.py */,
+				C39FE4C12060E09600756807 /* TXT.py */,
+				C39FE4C22060E09600756807 /* __init__.py */,
+				C39FE4C32060E09600756807 /* NS.py */,
+				C39FE4C42060E09600756807 /* ISDN.py */,
+				C39FE4C52060E09600756807 /* __pycache__ */,
+				C39FE4D22060E09600756807 /* TLSA.py */,
+				C39FE4D32060E09600756807 /* CERT.py */,
+				C39FE4D42060E09600756807 /* CDS.py */,
+				C39FE4D52060E09600756807 /* SPF.py */,
+				C39FE4D62060E09600756807 /* AFSDB.py */,
+				C39FE4D72060E09600756807 /* GPOS.py */,
+				C39FE4D82060E09600756807 /* URI.py */,
+				C39FE4D92060E09600756807 /* SOA.py */,
+				C39FE4DA2060E09600756807 /* SSHFP.py */,
+				C39FE4DB2060E09600756807 /* NSEC.py */,
+				C39FE4DC2060E09600756807 /* DS.py */,
+				C39FE4DD2060E09600756807 /* PTR.py */,
+				C39FE4DE2060E09600756807 /* EUI64.py */,
+				C39FE4DF2060E09600756807 /* NSEC3.py */,
+				C39FE4E02060E09600756807 /* HINFO.py */,
+				C39FE4E12060E09600756807 /* HIP.py */,
+				C39FE4E22060E09600756807 /* AVC.py */,
+				C39FE4E32060E09600756807 /* DNAME.py */,
+				C39FE4E42060E09600756807 /* CAA.py */,
+				C39FE4E52060E09600756807 /* X25.py */,
+				C39FE4E62060E09600756807 /* CSYNC.py */,
+			);
+			path = ANY;
+			sourceTree = "<group>";
+		};
+		C39FE4C52060E09600756807 /* __pycache__ */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE4C62060E09600756807 /* NS.cpython-36.pyc */,
+				C39FE4C72060E09600756807 /* RRSIG.cpython-36.pyc */,
+				C39FE4C82060E09600756807 /* CNAME.cpython-36.pyc */,
+				C39FE4C92060E09600756807 /* TXT.cpython-36.pyc */,
+				C39FE4CA2060E09600756807 /* NSEC3PARAM.cpython-36.pyc */,
+				C39FE4CB2060E09600756807 /* NSEC.cpython-36.pyc */,
+				C39FE4CC2060E09600756807 /* DLV.cpython-36.pyc */,
+				C39FE4CD2060E09600756807 /* DNSKEY.cpython-36.pyc */,
+				C39FE4CE2060E09600756807 /* SOA.cpython-36.pyc */,
+				C39FE4CF2060E09600756807 /* __init__.cpython-36.pyc */,
+				C39FE4D02060E09600756807 /* NSEC3.cpython-36.pyc */,
+				C39FE4D12060E09600756807 /* DS.cpython-36.pyc */,
+			);
+			path = __pycache__;
+			sourceTree = "<group>";
+		};
+		C39FE4FB2060E09600756807 /* __pycache__ */ = {
+			isa = PBXGroup;
+			children = (
+				C39FE4FC2060E09600756807 /* renderer.cpython-36.pyc */,
+				C39FE4FD2060E09600756807 /* wiredata.cpython-36.pyc */,
+				C39FE4FE2060E09600756807 /* edns.cpython-36.pyc */,
+				C39FE4FF2060E09600756807 /* flags.cpython-36.pyc */,
+				C39FE5002060E09600756807 /* ipv4.cpython-36.pyc */,
+				C39FE5012060E09600756807 /* query.cpython-36.pyc */,
+				C39FE5022060E09600756807 /* inet.cpython-36.pyc */,
+				C39FE5032060E09600756807 /* rdata.cpython-36.pyc */,
+				C39FE5042060E09600756807 /* ipv6.cpython-36.pyc */,
+				C39FE5052060E09600756807 /* entropy.cpython-36.pyc */,
+				C39FE5062060E09600756807 /* ttl.cpython-36.pyc */,
+				C39FE5072060E09600756807 /* message.cpython-36.pyc */,
+				C39FE5082060E09600756807 /* dnssec.cpython-36.pyc */,
+				C39FE5092060E09600756807 /* hash.cpython-36.pyc */,
+				C39FE50A2060E09600756807 /* rrset.cpython-36.pyc */,
+				C39FE50B2060E09600756807 /* rdataclass.cpython-36.pyc */,
+				C39FE50C2060E09600756807 /* set.cpython-36.pyc */,
+				C39FE50D2060E09600756807 /* tsig.cpython-36.pyc */,
+				C39FE50E2060E09600756807 /* _compat.cpython-36.pyc */,
+				C39FE50F2060E09600756807 /* opcode.cpython-36.pyc */,
+				C39FE5102060E09600756807 /* resolver.cpython-36.pyc */,
+				C39FE5112060E09600756807 /* exception.cpython-36.pyc */,
+				C39FE5122060E09600756807 /* rcode.cpython-36.pyc */,
+				C39FE5132060E09600756807 /* rdatatype.cpython-36.pyc */,
+				C39FE5142060E09600756807 /* tokenizer.cpython-36.pyc */,
+				C39FE5152060E09600756807 /* reversename.cpython-36.pyc */,
+				C39FE5162060E09600756807 /* node.cpython-36.pyc */,
+				C39FE5172060E09600756807 /* __init__.cpython-36.pyc */,
+				C39FE5182060E09600756807 /* rdataset.cpython-36.pyc */,
+				C39FE5192060E09600756807 /* name.cpython-36.pyc */,
+			);
+			path = __pycache__;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3711,12 +4050,11 @@
 				C39FE47B205FE98200756807 /* EnterOrCreateWalletViewController.storyboard in Resources */,
 				C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */,
 				C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */,
+				C39FE4932060E03B00756807 /* __main__.py in Resources */,
 				C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */,
-				C39FE487205FF9B800756807 /* daemon.py in Resources */,
 				C39FE482205FEC1D00756807 /* ButtonCell.xib in Resources */,
-				C39FE488205FF9B800756807 /* util.py in Resources */,
 				C39FE475205FE8CA00756807 /* CreateWalletViewController.storyboard in Resources */,
-				C39FDFD9205F9FF300756807 /* __main__.py in Resources */,
+				C39FDFD9205F9FF300756807 /* __main__-.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3735,7 +4073,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/Frameworks/Python.framework\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app_packages\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/python/lib\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/python/gui\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\n";
+			shellScript = "mkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/Frameworks/Python.framework\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app_packages\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/python/lib\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/python/gui\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/python\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

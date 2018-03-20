@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
         Py_SetPythonHome(wpython_home);
         
         // Set the PYTHONPATH
-        python_path = [NSString stringWithFormat:@"PYTHONPATH=%@/Library/Application Support/com.example.hellobee.HelloBee/app:%@/Library/Application Support/com.example.hellobee.HelloBee/app_packages", resourcePath, resourcePath, nil];
+        python_path = [NSString stringWithFormat:@"PYTHONPATH=%@/Library/Application Support/by.bitcoin.electrum/app:%@/Library/Application Support/by.bitcoin.electrum/app_packages", resourcePath, resourcePath, nil];
         NSLog(@"PYTHONPATH is: %@", python_path);
         putenv((char *)[python_path UTF8String]);
         
