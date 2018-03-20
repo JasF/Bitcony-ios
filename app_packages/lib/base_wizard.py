@@ -488,6 +488,11 @@ class BaseWizard(object):
     def create_segwit_seed(self): self.create_seed('segwit')
     def create_standard_seed(self): self.create_seed('standard')
 
+    def createSeed(self):
+        from . import mnemonic
+        seed = mnemonic.Mnemonic('en').make_seed('standard')
+        return seed
+
     def create_seed(self, seed_type):
         from . import mnemonic
         self.seed_type = seed_type

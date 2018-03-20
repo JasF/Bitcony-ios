@@ -66,7 +66,8 @@ class CreateNewSeedHandler(NSObject):
 
     @objc_method
     def generatedSeed_(self):
-        return 'hello seed';
+        seed = self.installWizard.createSeed()
+        return seed
 
 class CreateWalletHandler(NSObject):
     @objc_method
@@ -102,9 +103,10 @@ class EnterOrCreateWalletHandler(NSObject):
 class GoBack(Exception):
     pass
 
-class InstallWizard:
+class InstallWizard(BaseWizard):
     pass
     def __init__(self, config, plugins, storage):
+        BaseWizard.__init__(self, config, storage)
         print('Hello InstallWizard')
         Managers = ObjCClass("Managers")
         self.runLoop = ObjCClass("RunLoop").shared();

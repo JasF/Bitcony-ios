@@ -28,6 +28,13 @@
                      forState:UIControlStateNormal];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+#if AUTO_FORWARD == 1
+    [self continueTapped:nil];
+#endif
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

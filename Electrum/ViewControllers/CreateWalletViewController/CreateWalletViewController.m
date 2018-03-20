@@ -27,6 +27,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+#if AUTO_FORWARD == 1
+    [self createNewSeedTapped:nil];
+#endif
+}
 /*
 #pragma mark - Navigation
 
