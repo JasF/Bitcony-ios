@@ -19,6 +19,8 @@
     fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
     [DDLog addLogger:fileLogger];
     
+    [[Managers shared].screensManager createWindowIfNeeded];
+    
     return YES;
 }
 

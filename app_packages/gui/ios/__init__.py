@@ -75,13 +75,40 @@ class ElectrumGui:
         # Show network dialog if config does not exist
         if self.daemon.network:
             if self.config.get('auto_connect') is None:
-                wizard = InstallWizard()
+                wizard = InstallWizard(self.config, self.plugins, None)
                 wizard.init_network(self.daemon.network)
-                #wizard.terminate()
+                wizard.terminate()
 
 
     def start_new_window(self, path, uri):
-        print('Hello start_new_window ios!')
+        try:
+            wallet = self.daemon.load_wallet(path, None)
+        except BaseException as e:
+            traceback.print_exc(file=sys.stdout)
+            print('Cannot load wallet: ' + str(e))
+            return
+        if not wallet:
+            storage = WalletStorage(path, manual_upgrades=True)
+            wizard = InstallWizard(self.config, self.plugins, storage)
+            try:
+                wallet = wizard.run_and_get_wallet()
+            except UserCancelled:
+                pass
+            except GoBack as e:
+                print_error('[start_new_window] Exception caught (GoBack)', e)
+            wizard.terminate()
+            if not wallet:
+                print('wallet not created. return')
+                return
+            wallet.start_threads(self.daemon.network)
+            self.daemon.add_wallet(wallet)
+        try:
+            w = self.create_window_for_wallet(wallet)
+        except BaseException as e:
+            traceback.print_exc(file=sys.stdout)
+            print('Cannot create window for wallet:' + str(e))
+            d.exec_()
+            return
         #Raises the window for the wallet if it is open.  Otherwise opens the wallet and creates a new window for it.
         '''
         for w in self.windows:
@@ -144,7 +171,7 @@ class ElectrumGui:
         path = self.config.get_wallet_path()
         if not self.start_new_window(path, self.config.get('url')):
             return
-        signal.signal(signal.SIGINT, lambda *args: self.app.quit())
+#signal.signal(signal.SIGINT, lambda *args: self.app.quit()) // AV: Не останавливаем выполнение скрипта
 #signal.signal(signal.SIGINT, lambda *args: self.app.quit())
 
 '''

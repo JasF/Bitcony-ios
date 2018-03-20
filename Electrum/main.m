@@ -8,7 +8,25 @@
 #include <Python/Python.h>
 #include <dlfcn.h>
 
+
+int initializePython(int argc, char *argv[]);
 int main(int argc, char *argv[]) {
+    __block int ret = 0;
+    dispatch_queue_t queue = dispatch_queue_create("queue.async.main", DISPATCH_QUEUE_SERIAL);
+    
+    
+    dispatch_async(queue, ^{
+        ret = initializePython(argc, argv);
+    });
+    UIApplicationMain(argc, argv, nil, @"AppDelegate");
+    dispatch_sync(queue, ^{
+        NSLog(@"python finished");
+    });
+    exit(ret);
+    return ret;
+}
+
+int initializePython(int argc, char *argv[]) {
     int ret = 0;
     unsigned int i;
     NSString *tmp_path;
@@ -92,8 +110,6 @@ int main(int argc, char *argv[]) {
                     // [1] http://pybee.org/rubicon
                     // [2] http://pyobjus.readthedocs.org/
                     // [3] https://pythonhosted.org/pyobjc/
-                    
-                    UIApplicationMain(argc, argv, nil, @"AppDelegate");
                 }
             }
         }
@@ -114,7 +130,6 @@ int main(int argc, char *argv[]) {
         NSLog(@"Leaving");
     }
     
-    exit(ret);
     return ret;
 }
 

@@ -306,6 +306,7 @@ class Daemon(DaemonThread):
         self.gui = gui.ElectrumGui(config, self, plugins)
         try:
             self.gui.main()
+            print('daemon.py: exiting from gui.main')
         except BaseException as e:
             traceback.print_exc(file=sys.stdout)
             # app will exit now

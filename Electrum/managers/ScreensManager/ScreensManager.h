@@ -13,4 +13,6 @@
 
 - (void)showCreateWalletViewController;
 - (void)showEnterOrCreateWalletViewController;
+- (void)createWindowIfNeeded;
+- (void)loopExec;
 @end

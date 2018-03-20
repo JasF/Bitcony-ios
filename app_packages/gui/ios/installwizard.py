@@ -3,6 +3,7 @@ import os
 import sys
 import threading
 import traceback
+from rubicon.objc import ObjCClass
 
 from electrum import Wallet, WalletStorage
 from electrum.util import UserCancelled, InvalidPassword
@@ -21,6 +22,20 @@ class GoBack(Exception):
 
 class InstallWizard:
     pass
+    def __init__(self, config, plugins, storage):
+        print('Hello InstallWizard')
+        Managers = ObjCClass("Managers")
+        self.screensManager = Managers.shared().screensManager()
+        self.config = config
+        self.plugins = plugins
+        self.storage = storage
+    
+    def run_and_get_wallet(self):
+        self.screensManager.showEnterOrCreateWalletViewController()
+        self.screensManager.loopExec()
+        print('Show EnterOrCreateWalletViewController');
+    def terminate(self):
+        print('InstallWizard terminate')
     def init_network(self, network):
         '''
         message = _("Electrum communicates with remote servers to get "
