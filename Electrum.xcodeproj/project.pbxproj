@@ -746,52 +746,6 @@
 		C39FE8252060E3DB00756807 /* charsetgroupprober.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = charsetgroupprober.py; sourceTree = "<group>"; };
 		C39FE8262060E3DB00756807 /* sbcsgroupprober.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = sbcsgroupprober.py; sourceTree = "<group>"; };
 		C39FE8272060E3DB00756807 /* jpcntx.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = jpcntx.py; sourceTree = "<group>"; };
-		C39FE8512060E3DB00756807 /* invoice_list.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = invoice_list.py; sourceTree = "<group>"; };
-		C39FE8522060E3DB00756807 /* main_window.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main_window.py; sourceTree = "<group>"; };
-		C39FE8532060E3DB00756807 /* exception_window.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = exception_window.py; sourceTree = "<group>"; };
-		C39FE8542060E3DB00756807 /* console.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = console.py; sourceTree = "<group>"; };
-		C39FE8552060E3DB00756807 /* history_list.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = history_list.py; sourceTree = "<group>"; };
-		C39FE8562060E3DB00756807 /* request_list.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = request_list.py; sourceTree = "<group>"; };
-		C39FE8572060E3DB00756807 /* util.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = util.py; sourceTree = "<group>"; };
-		C39FE8582060E3DB00756807 /* address_list.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = address_list.py; sourceTree = "<group>"; };
-		C39FE8592060E3DB00756807 /* icons_rc.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = icons_rc.py; sourceTree = "<group>"; };
-		C39FE85A2060E3DB00756807 /* qrcodewidget.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = qrcodewidget.py; sourceTree = "<group>"; };
-		C39FE85B2060E3DB00756807 /* fee_slider.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = fee_slider.py; sourceTree = "<group>"; };
-		C39FE85C2060E3DB00756807 /* paytoedit.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = paytoedit.py; sourceTree = "<group>"; };
-		C39FE85D2060E3DB00756807 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
-		C39FE85E2060E3DB00756807 /* amountedit.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = amountedit.py; sourceTree = "<group>"; };
-		C39FE8602060E3DB00756807 /* exception_window.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "exception_window.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8612060E3DB00756807 /* qrcodewidget.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "qrcodewidget.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8622060E3DB00756807 /* util.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "util.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8632060E3DB00756807 /* installwizard.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "installwizard.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8642060E3DB00756807 /* console.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "console.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8652060E3DB00756807 /* network_dialog.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "network_dialog.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8662060E3DB00756807 /* amountedit.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "amountedit.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8672060E3DB00756807 /* fee_slider.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fee_slider.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8682060E3DB00756807 /* qrtextedit.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "qrtextedit.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8692060E3DB00756807 /* seed_dialog.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "seed_dialog.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE86A2060E3DB00756807 /* paytoedit.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "paytoedit.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE86B2060E3DB00756807 /* icons_rc.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "icons_rc.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE86C2060E3DB00756807 /* request_list.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "request_list.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE86D2060E3DB00756807 /* address_list.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "address_list.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE86E2060E3DB00756807 /* contact_list.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "contact_list.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE86F2060E3DB00756807 /* password_dialog.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "password_dialog.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8702060E3DB00756807 /* utxo_list.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "utxo_list.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8712060E3DB00756807 /* __init__.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "__init__.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8722060E3DB00756807 /* invoice_list.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "invoice_list.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8732060E3DB00756807 /* main_window.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "main_window.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8742060E3DB00756807 /* transaction_dialog.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "transaction_dialog.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8752060E3DB00756807 /* history_list.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "history_list.cpython-36.pyc"; sourceTree = "<group>"; };
-		C39FE8762060E3DB00756807 /* address_dialog.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = address_dialog.py; sourceTree = "<group>"; };
-		C39FE8772060E3DB00756807 /* seed_dialog.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = seed_dialog.py; sourceTree = "<group>"; };
-		C39FE8782060E3DB00756807 /* password_dialog.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = password_dialog.py; sourceTree = "<group>"; };
-		C39FE8792060E3DB00756807 /* utxo_list.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = utxo_list.py; sourceTree = "<group>"; };
-		C39FE87A2060E3DB00756807 /* network_dialog.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = network_dialog.py; sourceTree = "<group>"; };
-		C39FE87B2060E3DB00756807 /* contact_list.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = contact_list.py; sourceTree = "<group>"; };
-		C39FE87C2060E3DB00756807 /* installwizard.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = installwizard.py; sourceTree = "<group>"; };
-		C39FE87D2060E3DB00756807 /* transaction_dialog.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = transaction_dialog.py; sourceTree = "<group>"; };
-		C39FE87E2060E3DB00756807 /* qrwindow.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = qrwindow.py; sourceTree = "<group>"; };
-		C39FE87F2060E3DB00756807 /* qrtextedit.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = qrtextedit.py; sourceTree = "<group>"; };
 		C39FE8802060E3DB00756807 /* __init__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __init__.py; sourceTree = "<group>"; };
 		C39FE8822060E3DB00756807 /* __init__.cpython-36.pyc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "__init__.cpython-36.pyc"; sourceTree = "<group>"; };
 		C39FE8832060E3DB00756807 /* text.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = text.py; sourceTree = "<group>"; };
@@ -2936,74 +2890,12 @@
 			isa = PBXGroup;
 			children = (
 				C39FE9442060E51E00756807 /* ios */,
-				C39FE8502060E3DB00756807 /* qt */,
 				C39FE8802060E3DB00756807 /* __init__.py */,
 				C39FE8812060E3DB00756807 /* __pycache__ */,
 				C39FE8832060E3DB00756807 /* text.py */,
 				C39FE8842060E3DB00756807 /* stdio.py */,
 			);
 			path = gui;
-			sourceTree = "<group>";
-		};
-		C39FE8502060E3DB00756807 /* qt */ = {
-			isa = PBXGroup;
-			children = (
-				C39FE8512060E3DB00756807 /* invoice_list.py */,
-				C39FE8522060E3DB00756807 /* main_window.py */,
-				C39FE8532060E3DB00756807 /* exception_window.py */,
-				C39FE8542060E3DB00756807 /* console.py */,
-				C39FE8552060E3DB00756807 /* history_list.py */,
-				C39FE8562060E3DB00756807 /* request_list.py */,
-				C39FE8572060E3DB00756807 /* util.py */,
-				C39FE8582060E3DB00756807 /* address_list.py */,
-				C39FE8592060E3DB00756807 /* icons_rc.py */,
-				C39FE85A2060E3DB00756807 /* qrcodewidget.py */,
-				C39FE85B2060E3DB00756807 /* fee_slider.py */,
-				C39FE85C2060E3DB00756807 /* paytoedit.py */,
-				C39FE85D2060E3DB00756807 /* __init__.py */,
-				C39FE85E2060E3DB00756807 /* amountedit.py */,
-				C39FE85F2060E3DB00756807 /* __pycache__ */,
-				C39FE8762060E3DB00756807 /* address_dialog.py */,
-				C39FE8772060E3DB00756807 /* seed_dialog.py */,
-				C39FE8782060E3DB00756807 /* password_dialog.py */,
-				C39FE8792060E3DB00756807 /* utxo_list.py */,
-				C39FE87A2060E3DB00756807 /* network_dialog.py */,
-				C39FE87B2060E3DB00756807 /* contact_list.py */,
-				C39FE87C2060E3DB00756807 /* installwizard.py */,
-				C39FE87D2060E3DB00756807 /* transaction_dialog.py */,
-				C39FE87E2060E3DB00756807 /* qrwindow.py */,
-				C39FE87F2060E3DB00756807 /* qrtextedit.py */,
-			);
-			path = qt;
-			sourceTree = "<group>";
-		};
-		C39FE85F2060E3DB00756807 /* __pycache__ */ = {
-			isa = PBXGroup;
-			children = (
-				C39FE8602060E3DB00756807 /* exception_window.cpython-36.pyc */,
-				C39FE8612060E3DB00756807 /* qrcodewidget.cpython-36.pyc */,
-				C39FE8622060E3DB00756807 /* util.cpython-36.pyc */,
-				C39FE8632060E3DB00756807 /* installwizard.cpython-36.pyc */,
-				C39FE8642060E3DB00756807 /* console.cpython-36.pyc */,
-				C39FE8652060E3DB00756807 /* network_dialog.cpython-36.pyc */,
-				C39FE8662060E3DB00756807 /* amountedit.cpython-36.pyc */,
-				C39FE8672060E3DB00756807 /* fee_slider.cpython-36.pyc */,
-				C39FE8682060E3DB00756807 /* qrtextedit.cpython-36.pyc */,
-				C39FE8692060E3DB00756807 /* seed_dialog.cpython-36.pyc */,
-				C39FE86A2060E3DB00756807 /* paytoedit.cpython-36.pyc */,
-				C39FE86B2060E3DB00756807 /* icons_rc.cpython-36.pyc */,
-				C39FE86C2060E3DB00756807 /* request_list.cpython-36.pyc */,
-				C39FE86D2060E3DB00756807 /* address_list.cpython-36.pyc */,
-				C39FE86E2060E3DB00756807 /* contact_list.cpython-36.pyc */,
-				C39FE86F2060E3DB00756807 /* password_dialog.cpython-36.pyc */,
-				C39FE8702060E3DB00756807 /* utxo_list.cpython-36.pyc */,
-				C39FE8712060E3DB00756807 /* __init__.cpython-36.pyc */,
-				C39FE8722060E3DB00756807 /* invoice_list.cpython-36.pyc */,
-				C39FE8732060E3DB00756807 /* main_window.cpython-36.pyc */,
-				C39FE8742060E3DB00756807 /* transaction_dialog.cpython-36.pyc */,
-				C39FE8752060E3DB00756807 /* history_list.cpython-36.pyc */,
-			);
-			path = __pycache__;
 			sourceTree = "<group>";
 		};
 		C39FE8812060E3DB00756807 /* __pycache__ */ = {
