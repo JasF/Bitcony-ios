@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *balance;
 @property (nonatomic, strong) NSString *amount;
 @property (nonatomic, assign) NSInteger status;
-@property (nonatomic, strong) NSString *date;
+@property (nonatomic, strong) NSString *dateString;
+@property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSString *txHash;
 @end

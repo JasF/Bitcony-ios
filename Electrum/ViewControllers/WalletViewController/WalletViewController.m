@@ -56,7 +56,7 @@ static NSTimeInterval kActionTimeInterval = 0.8f;
     NSCAssert(indexPath.row < _transactions.count, @"indexPath.row must be less than number of transactions in array");
     Transaction *transaction = _transactions[indexPath.row];
     TransactionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TransactionCell"];
-    [cell setStatusImage:nil date:transaction.date amount:transaction.amount balance:transaction.balance];
+    [cell setStatusImage:nil date:transaction.dateString amount:transaction.amount balance:transaction.balance];
     return cell;
 }
 
@@ -82,6 +82,7 @@ static NSTimeInterval kActionTimeInterval = 0.8f;
         NSArray *transactionsRepresentation = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         NSArray *transactions = [EKMapper arrayOfObjectsFromExternalRepresentation:transactionsRepresentation
                                                                        withMapping:[Transaction objectMapping]];
+        transactions = [transactions sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]]];
         dispatch_async(dispatch_get_main_queue(), ^{
             self.transactions = transactions;
             [self.tableView reloadData];
