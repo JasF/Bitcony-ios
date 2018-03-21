@@ -25,9 +25,17 @@ class EnterWalletPasswordHandler(NSObject):
     @objc_method
     def continueTapped_(self, password):
         self.installWizard.processPassword(password)
-
 '''
     
+        if self.installWizard.haveASeed == True:
+            self.installWizard.password = password;
+            seed = self.installWizard.seedText
+            print('seed: ' + seed + '; pass: ' + password)
+            self.installWizard.wallet_type = 'standard'
+            self.installWizard.create_keystore(seed, password)
+        else:
+            self.installWizard.processPassword(password)
+
     '''
 
 class ConfirmSeedHandler(NSObject):
@@ -49,7 +57,11 @@ class HaveASeedHandler(NSObject):
         return self
 
     @objc_method
-    def createNewSeedTapped_(self):
+    def continueTapped_(self, seed):
+        self.installWizard.seedText = seed
+        self.installWizard.seed_type = 'standard'
+        self.installWizard.haveASeed = True
+        self.installWizard.processSeed(seed)
         pass
 
 class CreateNewSeedHandler(NSObject):
@@ -78,6 +90,7 @@ class CreateWalletHandler(NSObject):
 
     @objc_method
     def createNewSeedTapped_(self):
+        self.haveASeed = False
         handler = CreateNewSeedHandler.alloc().init()
         handler.installWizard = self.installWizard
         self.installWizard.screensManager.showCreateNewSeedViewController(handler)

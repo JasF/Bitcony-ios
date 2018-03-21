@@ -10,4 +10,4 @@
 
 #define DLog(fmt, ...) DDLogInfo((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 
-#define AUTO_FORWARD 1
+#define AUTO_FORWARD 2

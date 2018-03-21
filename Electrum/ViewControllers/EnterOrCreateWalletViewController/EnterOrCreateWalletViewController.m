@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, Rows) {
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-#if AUTO_FORWARD == 1
+#ifdef AUTO_FORWARD
     [self createNewWalletTapped];
 #endif
 }

@@ -9,6 +9,8 @@
 #import "HaveASeedViewController.h"
 
 @interface HaveASeedViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *continueButton;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -17,6 +19,12 @@
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
     [super viewDidLoad];
+    
+#ifdef DEBUG
+    NSData *data = [NSData dataWithContentsOfFile:@"/Users/jasf/Desktop/seed.h"];
+    NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    _textView.text = string;
+#endif
     // Do any additional setup after loading the view.
 }
 
@@ -34,5 +42,10 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (IBAction)continueButtonTapped:(id)sender {
+    if ([_handler respondsToSelector:@selector(continueTapped:)]) {
+        [_handler continueTapped:self.textView.text];
+    }
+}
 
 @end

@@ -995,6 +995,8 @@
 		C39FEE6F20626F7D00756807 /* EasyMapping.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyMapping.framework; path = Frameworks/EasyMapping.framework; sourceTree = "<group>"; };
 		C39FEE7320626FA200756807 /* Transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
 		C39FEE7420626FA200756807 /* Transaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
+		C39FEE79206276F600756807 /* seed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = seed.h; path = ../../../../Desktop/seed.h; sourceTree = "<group>"; };
+		C39FEE7A206276FA00756807 /* seed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1023,6 +1025,7 @@
 		60796ED919190F4100A9926B = {
 			isa = PBXGroup;
 			children = (
+				C39FEE7A206276FA00756807 /* seed.h */,
 				C39FDFE1205FA86800756807 /* app_packages */,
 				C39FDFD7205F9FB700756807 /* python */,
 				C39FDFB3205F9E9600756807 /* Electrum */,
@@ -3379,6 +3382,7 @@
 			children = (
 				C39FE972206115B000756807 /* HaveASeedViewController.h */,
 				C39FE973206115B000756807 /* HaveASeedViewController.m */,
+				C39FEE79206276F600756807 /* seed.h */,
 				C39FE975206115C500756807 /* HaveASeedViewController.storyboard */,
 			);
 			path = HaveASeedViewController;

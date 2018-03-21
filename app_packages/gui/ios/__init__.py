@@ -58,7 +58,7 @@ class ElectrumGui:
     def start_new_window(self, path, uri):
         traceback.print_stack()
         try:
-            wallet = self.daemon.load_wallet(path, "om universe bodhisattva")
+            wallet = self.daemon.load_wallet(path, "1")#"om universe bodhisattva")
             print('wallet is: ')
             print(wallet)
         except BaseException as e:

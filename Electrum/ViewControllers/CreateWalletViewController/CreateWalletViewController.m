@@ -32,6 +32,8 @@
     [super viewDidAppear:animated];
 #if AUTO_FORWARD == 1
     [self createNewSeedTapped:nil];
+#elif AUTO_FORWARD == 2
+    [self haveASeedTapped:nil];
 #endif
 }
 /*

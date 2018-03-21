@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 @protocol HaveASeedHandlerProtocol <NSObject>
+- (void)continueTapped:(NSString *)seed;
 @end
 
 @interface HaveASeedViewController : UIViewController
