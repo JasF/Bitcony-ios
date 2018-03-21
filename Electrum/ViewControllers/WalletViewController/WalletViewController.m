@@ -63,6 +63,15 @@ static NSTimeInterval kActionTimeInterval = 0.8f;
 
 #pragma mark - WalletHandlerProtocolDelegate
 - (void)updateAndReloadData {
+    NSString *dataString = nil;
+    if ([_handler respondsToSelector:@selector(transactionsData:)]) {
+        dataString = [_handler transactionsData:nil];
+    }
+    dataString = [dataString stringByReplacingOccurrencesOfString:@"'" withString:@"\""];
+    NSData *data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+    NSArray *dictionariesArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    // easyMapper
+    
     [self.tableView reloadData];
 }
 

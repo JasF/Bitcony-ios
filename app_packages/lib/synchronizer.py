@@ -53,7 +53,6 @@ class Synchronizer(ThreadJob):
         self.initialize()
 
     def parse_response(self, response):
-        print('parse_response: ' + str(response))
         if response.get('error'):
             self.print_error("response error:", response)
             return None, None

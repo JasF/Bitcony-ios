@@ -89,10 +89,8 @@ class HistoryList:
             start_date = self.transactions[0].get('date') or date.today()
             end_date = self.transactions[-1].get('date') or date.today()
             self.years = [str(i) for i in range(start_date.year, end_date.year + 1)]
-            self.period_combo.insertItems(1, self.years)
-        item = self.currentItem()
-        current_tx = item.data(0, Qt.UserRole) if item else None
         self.clear()
+        entries = list()
         if fx: fx.history_used_spot = False
         for tx_item in self.transactions:
             tx_hash = tx_item['txid']
@@ -104,10 +102,11 @@ class HistoryList:
             label = tx_item['label']
             status, status_str = self.wallet.get_tx_status(tx_hash, height, conf, timestamp)
             has_invoice = self.wallet.invoices.paid.get(tx_hash)
-            icon = QIcon(":icons/" + TX_ICONS[status])
             v_str = self.parent.format_amount(value, True, whitespaces=True)
             balance_str = self.parent.format_amount(balance, whitespaces=True)
             entry = ['', tx_hash, status_str, label, v_str, balance_str]
+            dict = {'tx_hash': tx_hash, 'date': status_str, 'amount': v_str, 'balance': balance_str, 'status': status}
+            entries.append(dict)
             fiat_value = None
             if value is not None and fx and fx.show_history():
                 fiat_value = tx_item['fiat_value'].value
@@ -117,29 +116,7 @@ class HistoryList:
                 if value < 0:
                     entry.append(fx.format_fiat(tx_item['acquisition_price'].value))
                     entry.append(fx.format_fiat(tx_item['capital_gain'].value))
-            '''
-            item = SortableTreeWidgetItem(entry)
-            item.setIcon(0, icon)
-            item.setToolTip(0, str(conf) + " confirmation" + ("s" if conf != 1 else ""))
-            item.setData(0, SortableTreeWidgetItem.DataRole, (status, conf))
-            if has_invoice:
-                item.setIcon(3, QIcon(":icons/seal"))
-            for i in range(len(entry)):
-                if i>3:
-                    item.setTextAlignment(i, Qt.AlignRight | Qt.AlignVCenter)
-                if i!=2:
-                    item.setFont(i, QFont(MONOSPACE_FONT))
-            if value and value < 0:
-                item.setForeground(3, QBrush(QColor("#BC1E1E")))
-                item.setForeground(4, QBrush(QColor("#BC1E1E")))
-            if fiat_value and not tx_item['fiat_default']:
-                item.setForeground(6, QBrush(QColor("#1E1EFF")))
-            if tx_hash:
-                item.setData(0, Qt.UserRole, tx_hash)
-            self.insertTopLevelItem(0, item)
-            if current_tx == tx_hash:
-                self.setCurrentItem(item)
-                '''
+        return entries;
     def clear(self):
         pass
     

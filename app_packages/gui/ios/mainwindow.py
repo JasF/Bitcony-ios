@@ -4,6 +4,7 @@ import threading
 import traceback
 from rubicon.objc import ObjCClass, NSObject, objc_method
 
+from electrum import util, bitcoin, commands, coinchooser
 from electrum import Wallet, WalletStorage
 from electrum.util import UserCancelled, InvalidPassword
 from electrum.base_wizard import BaseWizard, HWD_SETUP_DECRYPT_WALLET
@@ -26,22 +27,19 @@ class WalletHandler(NSObject):
             self.electrumWindow.need_update.clear()
             self.electrumWindow.update_wallet()
 
+    @objc_method
     def transactionsData_(self):
         listOfItems = self.electrumWindow.historyList.on_update()
-        print('listOfItems: ' + str(listOfItems))
         return str(listOfItems)
-    '''
-    @objc_method
-    def createWalletTapped_(self):
-        handler = CreateWalletHandler.alloc().init()
-        handler.installWizard = self.installWizard
-        self.installWizard.screensManager.showCreateWalletViewController(handler)
-'''
+
 class ElectrumWindow:
     def __init__(self, gui_object, wallet):
+        self.num_zeros = 2
+        self.decimal_point = 8
         self.wallet = wallet
-        self.history_list = HistoryList(self)
+        self.historyList = HistoryList(self)
         self.network = gui_object.daemon.network
+        self.fx = gui_object.daemon.fx
         Managers = ObjCClass("Managers")
         self.runLoop = ObjCClass("RunLoop").shared();
         self.screensManager = Managers.shared().screensManager()
@@ -167,3 +165,17 @@ class ElectrumWindow:
         if self.fx.history_used_spot:
         self.history_list.update()
             '''
+
+    def format_amount(self, x, is_diff=False, whitespaces=False):
+        return util.format_satoshis(x, is_diff, self.num_zeros, self.decimal_point, whitespaces)
+
+    def format_amount_and_units(self, amount):
+        text = self.format_amount(amount) + ' '+ self.base_unit()
+        x = self.fx.format_amount_and_units(amount) if self.fx else None
+        if text and x:
+            text += ' (%s)'%x
+        return text
+
+    def format_fee_rate(self, fee_rate):
+        return util.format_satoshis(fee_rate/1000, False, self.num_zeros, 0, False)  + ' sat/byte'
+
