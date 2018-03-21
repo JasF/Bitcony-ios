@@ -71,6 +71,10 @@
 		C39FEE64206244F700756807 /* WalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE63206244F700756807 /* WalletViewController.storyboard */; };
 		C39FEE66206247FF00756807 /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE65206247FF00756807 /* Common.xcassets */; };
 		C39FEE6820625DC400756807 /* history_list.py in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE6720625DC400756807 /* history_list.py */; };
+		C39FEE6D20626CAA00756807 /* TransactionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE6B20626CAA00756807 /* TransactionCell.m */; };
+		C39FEE6E20626CAA00756807 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE6C20626CAA00756807 /* TransactionCell.xib */; };
+		C39FEE7020626F7D00756807 /* EasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FEE6F20626F7D00756807 /* EasyMapping.framework */; };
+		C39FEE7520626FA200756807 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE7420626FA200756807 /* Transaction.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -985,6 +989,12 @@
 		C39FEE63206244F700756807 /* WalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletViewController.storyboard; sourceTree = "<group>"; };
 		C39FEE65206247FF00756807 /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Common.xcassets; sourceTree = "<group>"; };
 		C39FEE6720625DC400756807 /* history_list.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = history_list.py; sourceTree = "<group>"; };
+		C39FEE6A20626CAA00756807 /* TransactionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionCell.h; sourceTree = "<group>"; };
+		C39FEE6B20626CAA00756807 /* TransactionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionCell.m; sourceTree = "<group>"; };
+		C39FEE6C20626CAA00756807 /* TransactionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCell.xib; sourceTree = "<group>"; };
+		C39FEE6F20626F7D00756807 /* EasyMapping.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EasyMapping.framework; path = Frameworks/EasyMapping.framework; sourceTree = "<group>"; };
+		C39FEE7320626FA200756807 /* Transaction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Transaction.h; sourceTree = "<group>"; };
+		C39FEE7420626FA200756807 /* Transaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -995,6 +1005,7 @@
 				C39FDFD6205F9F5C00756807 /* libz.tbd in Frameworks */,
 				C39FDFD4205F9F3400756807 /* libsqlite3.tbd in Frameworks */,
 				C39FDFD2205F9ED100756807 /* Python.framework in Frameworks */,
+				C39FEE7020626F7D00756807 /* EasyMapping.framework in Frameworks */,
 				C39FDFD1205F9ED100756807 /* XZ.framework in Frameworks */,
 				60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */,
 				C39FDFE0205FA0D300756807 /* CocoaLumberjack.framework in Frameworks */,
@@ -1031,6 +1042,7 @@
 		60796EE419190F4100A9926B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C39FEE6F20626F7D00756807 /* EasyMapping.framework */,
 				C39FE94B206103C400756807 /* extobjc */,
 				C39FDFDF205FA0D200756807 /* CocoaLumberjack.framework */,
 				C39FDFD5205F9F5C00756807 /* libz.tbd */,
@@ -1050,6 +1062,7 @@
 		C39FDFB3205F9E9600756807 /* Electrum */ = {
 			isa = PBXGroup;
 			children = (
+				C39FEE7120626F8A00756807 /* models */,
 				C39FE462205FE72F00756807 /* ViewControllers */,
 				C39FE463205FE73500756807 /* managers */,
 				C39FDFDA205FA03000756807 /* src */,
@@ -1075,6 +1088,7 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C39FEE6920626C8600756807 /* TransactionCell */,
 				C39FE9472060FFD700756807 /* RunLoop */,
 				C39FDFEA205FBE4800756807 /* Logs */,
 				C39FDFE4205FA8B800756807 /* HelloRubicon */,
@@ -3463,6 +3477,33 @@
 			path = WalletViewController;
 			sourceTree = "<group>";
 		};
+		C39FEE6920626C8600756807 /* TransactionCell */ = {
+			isa = PBXGroup;
+			children = (
+				C39FEE6A20626CAA00756807 /* TransactionCell.h */,
+				C39FEE6B20626CAA00756807 /* TransactionCell.m */,
+				C39FEE6C20626CAA00756807 /* TransactionCell.xib */,
+			);
+			path = TransactionCell;
+			sourceTree = "<group>";
+		};
+		C39FEE7120626F8A00756807 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				C39FEE7220626F9000756807 /* Transation */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		C39FEE7220626F9000756807 /* Transation */ = {
+			isa = PBXGroup;
+			children = (
+				C39FEE7320626FA200756807 /* Transaction.h */,
+				C39FEE7420626FA200756807 /* Transaction.m */,
+			);
+			path = Transation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3522,6 +3563,7 @@
 			files = (
 				C39FE984206125E400756807 /* EnterWalletPasswordViewController.storyboard in Resources */,
 				C39FE47B205FE98200756807 /* EnterOrCreateWalletViewController.storyboard in Resources */,
+				C39FEE6E20626CAA00756807 /* TransactionCell.xib in Resources */,
 				C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */,
 				C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */,
 				C39FEE66206247FF00756807 /* Common.xcassets in Resources */,
@@ -3576,6 +3618,7 @@
 				C39FDFDE205FA06300756807 /* AppDelegate.m in Sources */,
 				C39FE965206103C400756807 /* EXTConcreteProtocol.m in Sources */,
 				C39FE473205FE8A700756807 /* CreateWalletViewController.m in Sources */,
+				C39FEE6D20626CAA00756807 /* TransactionCell.m in Sources */,
 				C39FE968206103C400756807 /* EXTADT.m in Sources */,
 				C39FE971206115A700756807 /* CreateNewSeedViewController.m in Sources */,
 				C39FE97C206117A100756807 /* ConfirmSeedViewController.m in Sources */,
@@ -3587,6 +3630,7 @@
 				C39FEE4D2062361D00756807 /* LGSideMenuController.m in Sources */,
 				C39FEE62206244EE00756807 /* WalletViewController.m in Sources */,
 				C39FEE4A2062361D00756807 /* LGSideMenuHelper.m in Sources */,
+				C39FEE7520626FA200756807 /* Transaction.m in Sources */,
 				C39FE481205FEC1D00756807 /* ButtonCell.m in Sources */,
 				C39FE96C206103C400756807 /* EXTNil.m in Sources */,
 				C39FEE3A206235AA00756807 /* LeftViewController.m in Sources */,
