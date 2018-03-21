@@ -8,6 +8,8 @@ from electrum import Wallet, WalletStorage
 from electrum.util import UserCancelled, InvalidPassword
 from electrum.base_wizard import BaseWizard, HWD_SETUP_DECRYPT_WALLET
 from electrum.i18n import _
+    
+from .history_list import HistoryList
 
 class WalletHandler(NSObject):
     @objc_method
@@ -23,6 +25,11 @@ class WalletHandler(NSObject):
         if self.electrumWindow.need_update.is_set():
             self.electrumWindow.need_update.clear()
             self.electrumWindow.update_wallet()
+
+    def transactionsData_(self):
+        listOfItems = self.electrumWindow.historyList.on_update()
+        print('listOfItems: ' + str(listOfItems))
+        return str(listOfItems)
     '''
     @objc_method
     def createWalletTapped_(self):
@@ -32,8 +39,9 @@ class WalletHandler(NSObject):
 '''
 class ElectrumWindow:
     def __init__(self, gui_object, wallet):
-        self.network = gui_object.daemon.network
         self.wallet = wallet
+        self.history_list = HistoryList(self)
+        self.network = gui_object.daemon.network
         Managers = ObjCClass("Managers")
         self.runLoop = ObjCClass("RunLoop").shared();
         self.screensManager = Managers.shared().screensManager()
@@ -53,9 +61,9 @@ class ElectrumWindow:
 
     def exec(self):
         self.screensManager.showMainViewController(None)
-        handler = WalletHandler.alloc().init();
-        handler.electrumWindow = self
-        self.screensManager.showWalletViewController(handler)
+        self.handler = WalletHandler.alloc().init();
+        self.handler.electrumWindow = self
+        self.screensManager.showWalletViewController(self.handler)
         self.runLoop.exec()
 
     def on_network(self, event, *args):
@@ -119,6 +127,7 @@ class ElectrumWindow:
     
     def update_tabs(self):
         print('broadcast to gui update_tabs [reload_data]')
+        self.handler.viewController.updateAndReloadData()
         '''
         self.history_list.update()
         self.request_list.update()

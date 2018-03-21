@@ -70,6 +70,7 @@
 		C39FEE62206244EE00756807 /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE61206244EE00756807 /* WalletViewController.m */; };
 		C39FEE64206244F700756807 /* WalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE63206244F700756807 /* WalletViewController.storyboard */; };
 		C39FEE66206247FF00756807 /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE65206247FF00756807 /* Common.xcassets */; };
+		C39FEE6820625DC400756807 /* history_list.py in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE6720625DC400756807 /* history_list.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1029,6 +1030,7 @@
 		C39FEE61206244EE00756807 /* WalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletViewController.m; sourceTree = "<group>"; };
 		C39FEE63206244F700756807 /* WalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletViewController.storyboard; sourceTree = "<group>"; };
 		C39FEE65206247FF00756807 /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Common.xcassets; sourceTree = "<group>"; };
+		C39FEE6720625DC400756807 /* history_list.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = history_list.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3407,6 +3409,7 @@
 		C39FE9442060E51E00756807 /* ios */ = {
 			isa = PBXGroup;
 			children = (
+				C39FEE6720625DC400756807 /* history_list.py */,
 				C39FE9462060E5A800756807 /* installwizard.py */,
 				C39FE9452060E58400756807 /* __init__.py */,
 				C39FEE2E20622F0400756807 /* mainwindow.py */,
@@ -3630,6 +3633,7 @@
 				C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */,
 				C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */,
 				C39FEE66206247FF00756807 /* Common.xcassets in Resources */,
+				C39FEE6820625DC400756807 /* history_list.py in Resources */,
 				C39FE4932060E03B00756807 /* __main__.py in Resources */,
 				C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */,
 				C39FE978206115CF00756807 /* CreateNewSeedViewController.storyboard in Resources */,

@@ -61,4 +61,9 @@ static NSTimeInterval kActionTimeInterval = 0.8f;
     [_screensManager showMenuViewController];
 }
 
+#pragma mark - WalletHandlerProtocolDelegate
+- (void)updateAndReloadData {
+    [self.tableView reloadData];
+}
+
 @end

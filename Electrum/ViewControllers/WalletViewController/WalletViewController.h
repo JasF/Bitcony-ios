@@ -14,9 +14,14 @@
 @protocol WalletHandlerProtocol <NSObject>
 - (void)viewDidLoad:(WalletViewController *)viewController;
 - (void)timerAction:(id)object;
+- (NSString *)transactionsData:(id)object;
 @end
 
-@interface WalletViewController : UITableViewController
+@protocol WalletHandlerProtocolDelegate <NSObject>
+- (void)updateAndReloadData;
+@end
+
+@interface WalletViewController : UITableViewController <WalletHandlerProtocolDelegate>
 @property (strong, nonatomic) id<ScreensManager> screensManager;
 @property (strong, nonatomic) id<WalletHandlerProtocol> handler;
 @end
