@@ -978,6 +978,7 @@
 		C39FE980206125DB00756807 /* EnterWalletPasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterWalletPasswordViewController.h; sourceTree = "<group>"; };
 		C39FE981206125DB00756807 /* EnterWalletPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterWalletPasswordViewController.m; sourceTree = "<group>"; };
 		C39FE983206125E400756807 /* EnterWalletPasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnterWalletPasswordViewController.storyboard; sourceTree = "<group>"; };
+		C39FEE2E20622F0400756807 /* mainwindow.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = mainwindow.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -3351,6 +3352,7 @@
 			children = (
 				C39FE9462060E5A800756807 /* installwizard.py */,
 				C39FE9452060E58400756807 /* __init__.py */,
+				C39FEE2E20622F0400756807 /* mainwindow.py */,
 			);
 			path = ios;
 			sourceTree = "<group>";

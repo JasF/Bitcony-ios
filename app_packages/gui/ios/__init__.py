@@ -37,33 +37,8 @@ from electrum.util import UserCancelled, print_error
 # from electrum.wallet import Abstract_Wallet
 
 from .installwizard import InstallWizard, GoBack
+from .mainwindow import ElectrumWindow
 from rubicon.objc import ObjCClass, NSObject, objc_method
-
-'''
-from .util import *   # * needed for plugins
-from .main_window import ElectrumWindow
-from .network_dialog import NetworkDialog
-
-class OpenFileEventFilter(QObject):
-    def __init__(self, windows):
-        self.windows = windows
-        super(OpenFileEventFilter, self).__init__()
-
-    def eventFilter(self, obj, event):
-        if event.type() == QtCore.QEvent.FileOpen:
-            if len(self.windows) >= 1:
-                self.windows[0].pay_to_URI(event.url().toEncoded())
-                return True
-        return False
-
-
-class QElectrumApplication(QApplication):
-    new_window_signal = pyqtSignal(str, object)
-
-
-class QNetworkUpdatedSignalObject(QObject):
-    network_updated_signal = pyqtSignal(str, object)
-'''
 
 class ElectrumGui:
     def __init__(self, config, daemon, plugins):
@@ -80,6 +55,10 @@ class ElectrumGui:
                 wizard.init_network(self.daemon.network)
                 wizard.terminate()
 
+    def create_window_for_wallet(self, wallet):
+        self.wallet = wallet
+        electrumWindow = ElectrumWindow(self.wallet)
+        electrumWindow.exec()
 
     def start_new_window(self, path, uri):
         traceback.print_stack()

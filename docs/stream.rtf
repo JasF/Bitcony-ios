@@ -5,12 +5,14 @@
 \red255\green255\blue255;\red28\green0\blue207;\red255\green255\blue255;\red236\green186\blue254;\red0\green0\blue0;
 \red217\green11\blue5;\red128\green128\blue128;\red255\green255\blue51;\red252\green112\blue56;\red254\green219\blue205;
 \red230\green230\blue230;\red170\green13\blue145;\red205\green205\blue205;\red254\green209\blue207;\red196\green26\blue22;
-\red163\green217\blue121;\red0\green0\blue0;\red0\green116\blue0;}
+\red163\green217\blue121;\red0\green0\blue0;\red0\green116\blue0;\red236\green186\blue254;\red202\green219\blue254;
+\red202\green219\blue254;\red192\green237\blue254;\red230\green230\blue230;}
 {\*\expandedcolortbl;;\cssrgb\c87817\c93001\c83061;\csgenericrgb\c0\c0\c0;\cssrgb\c100000\c92644\c83367;
 \csgray\c100000;\csgenericrgb\c11000\c0\c81000;\csgenericrgb\c100000\c100000\c100000;\cssrgb\c94438\c78969\c99727;\csgray\c0;
 \cssrgb\c88946\c14202\c0;\csgray\c57415;\cssrgb\c99946\c98636\c25320;\cssrgb\c100000\c52407\c27938;\cssrgb\c100000\c88718\c84032;
 \csgray\c92143;\csgenericrgb\c66500\c5200\c56900;\csgray\c84070;\cssrgb\c100000\c85667\c84695;\csgenericrgb\c77000\c10200\c8600;
-\cssrgb\c69337\c86836\c54718;\cssrgb\c0\c0\c0;\csgenericrgb\c0\c45600\c0;}
+\cssrgb\c69337\c86836\c54718;\cssrgb\c0\c0\c0;\csgenericrgb\c0\c45600\c0;\cssrgb\c94438\c78969\c99727;\cssrgb\c82956\c88909\c99731;
+\cssrgb\c82956\c88909\c99731;\cssrgb\c79369\c94291\c99728;\csgray\c92143;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww17320\viewh8400\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
@@ -424,5 +426,69 @@ qt/main_window.py\
 - \uc0\u1044 \u1091 \u1084 \u1072 \u1077 \u1090 \u1089 \u1103  \u1084 \u1085 \u1077 , \u1074 \u1085 \u1072 \u1095 \u1072 \u1083 \u1077  \u1083 \u1091 \u1095 \u1096 \u1077  \u1089 \u1076 \u1077 \u1083 \u1072 \u1090 \u1100  \u1074 \u1086 \u1089 \u1089 \u1090 \u1072 \u1085 \u1086 \u1074 \u1083 \u1077 \u1085 \u1080 \u1077  \u1087 \u1086  seed, \u1080 \u1083 \u1080  \u1087 \u1088 \u1086 \u1089 \u1090 \u1086  \u1089 \u1082 \u1086 \u1087 \u1080 \u1088 \u1086 \u1074 \u1072 \u1090 \u1100  \u1092 \u1072 \u1081 \u1083  \u1082 \u1086 \u1096 \u1077 \u1083 \u1100 \u1082 \u1072  =)\
 \
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
-\cf3 \
+\cf3 history_list.py - \uc0\u1089 \u1087 \u1080 \u1089 \u1086 \u1082  \u1090 \u1088 \u1072 \u1085 \u1079 \u1072 \u1082 \u1094 \u1080 \u1081 \
+\
+\uc0\u1055 \u1077 \u1088 \u1074 \u1099 \u1081  \u1074 \u1099 \u1079 \u1086 \u1074  \u1086 \u1073 \u1085 \u1086 \u1074 \u1083 \u1077 \u1085 \u1080 \u1103  \u1080 \u1089 \u1090 \u1086 \u1088 \u1080 \u1080  \u1090 \u1088 \u1072 \u1085 \u1079 \u1072 \u1082 \u1094 \u1080 \u1081 :\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs22 \cf9 \cb23 \CocoaLigature0   File "/Users/jasf/Electrum-3.1.1/gui/qt/__init__.py", line 217, in start_new_window\
+    w = self.create_window_for_wallet(wallet)\
+  File "/Users/jasf/Electrum-3.1.1/gui/qt/__init__.py", line 179, in create_window_for_wallet\
+    w = ElectrumWindow(self, wallet)\
+  File "/Users/jasf/Electrum-3.1.1/gui/qt/main_window.py", line 201, in __init__\
+    self.load_wallet(wallet)\
+  File "/Users/jasf/Electrum-3.1.1/lib/util.py", line 288, in <lambda>\
+    return lambda *args, **kw_args: do_profile(func, args, kw_args)\
+  File "/Users/jasf/Electrum-3.1.1/lib/util.py", line 284, in do_profile\
+    o = func(*args, **kw_args)\
+  File "/Users/jasf/Electrum-3.1.1/gui/qt/main_window.py", line 344, in load_wallet\
+    self.history_list.update()\
+  File "/Users/jasf/Electrum-3.1.1/gui/qt/util.py", line 499, in update\
+    self.on_update()\cf9 \cb24  <---- 
+\fs24 \cf3 \cb7 \CocoaLigature1 MyTreeWidget
+\fs22 \cf9 \cb23 \CocoaLigature0 \
+  File "/Users/jasf/Electrum-3.1.1/lib/util.py", line 288, in <lambda>\
+    return lambda *args, **kw_args: do_profile(func, args, kw_args)\
+  File "/Users/jasf/Electrum-3.1.1/lib/util.py", line 284, in do_profile\
+    o = func(*args, **kw_args)\
+  File "/Users/jasf/Electrum-3.1.1/gui/qt/history_list.py", line 218, in on_update\
+\cb5 \
+\uc0\u1042 \u1090 \u1086 \u1088 \u1086 \u1081  \u1074 \u1099 \u1079 \u1086 \u1074  \u1086 \u1073 \u1085 \u1086 \u1074 \u1083 \u1077 \u1085 \u1080 \u1103  \u1080 \u1089 \u1090 \u1086 \u1088 \u1080 \u1080  \u1090 \u1088 \u1072 \u1085 \u1079 \u1072 \u1082 \u1094 \u1080 \u1081 :\
+\cb25   File "/Users/jasf/Electrum-3.1.1/gui/qt/main_window.py", line 625, in timer_actions\
+    self.update_wallet()\
+  File "/Users/jasf/Electrum-3.1.1/gui/qt/main_window.py", line 745, in update_wallet\
+    self.update_tabs()\
+  File "/Users/jasf/Electrum-3.1.1/gui/qt/main_window.py", line 748, in update_tabs\
+    self.history_list.update()\
+  File "/Users/jasf/Electrum-3.1.1/gui/qt/util.py", line 499, in update\
+    self.on_update() <---- 
+\fs24 \cf3 \cb7 \CocoaLigature1 MyTreeWidget
+\fs22 \cf9 \cb25 \CocoaLigature0 \
+  File "/Users/jasf/Electrum-3.1.1/lib/util.py", line 288, in <lambda>\
+    return lambda *args, **kw_args: do_profile(func, args, kw_args)\
+  File "/Users/jasf/Electrum-3.1.1/lib/util.py", line 284, in do_profile\
+    o = func(*args, **kw_args)\
+  File "/Users/jasf/Electrum-3.1.1/gui/qt/history_list.py", line 218, in on_update
+\fs24 \cf3 \CocoaLigature1 \
+
+\fs22 \cf9 \cb5 \CocoaLigature0 \
+\uc0\u1058 \u1088 \u1077 \u1090 \u1080 \u1081  \u1074 \u1099 \u1079 \u1086 \u1074  \u1086 \u1073 \u1085 \u1086 \u1074 \u1083 \u1077 \u1085 \u1080 \u1103  \u1080 \u1089 \u1090 \u1086 \u1088 \u1080 \u1080  \u1090 \u1088 \u1072 \u1085 \u1079 \u1072 \u1082 \u1094 \u1080 \u1081 :\
+\cb26   File "/Users/jasf/Electrum-3.1.1/gui/qt/main_window.py", line 625, in timer_actions\
+\cb5 ...\
+\uc0\u1063 \u1077 \u1090 \u1074 \u1077 \u1088 \u1090 \u1099 \u1081  \u1074 \u1099 \u1079 \u1086 \u1074  \u1086 \u1073 \u1085 \u1086 \u1074 \u1083 \u1077 \u1085 \u1080 \u1103  \u1080 \u1089 \u1090 \u1086 \u1088 \u1080 \u1080  \u1090 \u1088 \u1072 \u1085 \u1079 \u1072 \u1082 \u1094 \u1080 \u1081 :\
+\cb26   File "/Users/jasf/Electrum-3.1.1/gui/qt/main_window.py", line 625, in timer_actions\
+\cb5 ...\
+\
+history_list.py / def on_update(self) - \uc0\u1079 \u1072 \u1087 \u1088 \u1072 \u1096 \u1080 \u1074 \u1072 \u1077 \u1090  \u1089 \u1087 \u1080 \u1089 \u1086 \u1082  \u1090 \u1088 \u1072 \u1085 \u1079 \u1072 \u1082 \u1094 \u1080 \u1081  \u1080 \u1079  \u1084 \u1077 \u1090 \u1086 \u1076 \u1072  get_full_history\
+\
+lib/synchronizer.py \uc0\u1079 \u1072 \u1087 \u1091 \u1089 \u1082 \u1072 \u1077 \u1090 \u1089 \u1103  \u1074  wallet.py - start_threads.\
+\
+\uc0\u1044 \u1083 \u1103  \u1087 \u1086 \u1083 \u1091 \u1095 \u1077 \u1085 \u1080 \u1103  \u1080 \u1089 \u1090 \u1086 \u1088 \u1080 \u1095 \u1077 \u1089 \u1082 \u1080 \u1093  \u1076 \u1072 \u1085 \u1085 \u1099 \u1093  \u1080 \u1079  \u1082 \u1086 \u1096 \u1077 \u1083 \u1100 \u1082 \u1072  \u1089 \u1083 \u1091 \u1078 \u1080 \u1090  \u1084 \u1077 \u1090 \u1086 \u1076  wallet.py: 
+\f0\fs24 \cf0 \cb7 \CocoaLigature1 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3 \cb27     \cf16 def\cf3  get_full_history(self, domain=\cf16 None\cf3 , from_timestamp=\cf16 None\cf3 , to_timestamp=\cf16 None\cf3 , fx=\cf16 None\cf3 , show_addresses=False):\
+
+\fs22 \cf9 \cb5 \CocoaLigature0 \
+\
 }
