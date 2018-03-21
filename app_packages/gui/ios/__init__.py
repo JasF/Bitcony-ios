@@ -30,11 +30,7 @@ import traceback
 from electrum.i18n import _, set_language
 from electrum.plugins import run_hook
 from electrum import WalletStorage
-# from electrum.synchronizer import Synchronizer
-# from electrum.verifier import SPV
-# from electrum.util import DebugMem
 from electrum.util import UserCancelled, print_error
-# from electrum.wallet import Abstract_Wallet
 
 from .installwizard import InstallWizard, GoBack
 from .mainwindow import ElectrumWindow
@@ -48,7 +44,6 @@ class ElectrumGui:
         self.plugins = plugins
         pass
     def init_network(self):
-        # Show network dialog if config does not exist
         if self.daemon.network:
             if self.config.get('auto_connect') is None:
                 wizard = InstallWizard(self.config, self.plugins, None)
@@ -57,7 +52,7 @@ class ElectrumGui:
 
     def create_window_for_wallet(self, wallet):
         self.wallet = wallet
-        electrumWindow = ElectrumWindow(self.wallet)
+        electrumWindow = ElectrumWindow(self, self.wallet)
         electrumWindow.exec()
 
     def start_new_window(self, path, uri):
@@ -90,54 +85,7 @@ class ElectrumGui:
         except BaseException as e:
             traceback.print_exc(file=sys.stdout)
             print('Cannot create window for wallet:' + str(e))
-            #d.exec_()
             return
-        #Raises the window for the wallet if it is open.  Otherwise opens the wallet and creates a new window for it.
-        '''
-        for w in self.windows:
-            if w.wallet.storage.path == path:
-                w.bring_to_top()
-                break
-        else:
-            try:
-                wallet = self.daemon.load_wallet(path, None)
-            except BaseException as e:
-                traceback.print_exc(file=sys.stdout)
-                d = QMessageBox(QMessageBox.Warning, _('Error'),
-                                _('Cannot load wallet:') + '\n' + str(e))
-                d.exec_()
-                return
-            if not wallet:
-                storage = WalletStorage(path, manual_upgrades=True)
-                wizard = InstallWizard(self.config, self.app, self.plugins, storage)
-                try:
-                    wallet = wizard.run_and_get_wallet()
-                except UserCancelled:
-                    pass
-                except GoBack as e:
-                    print_error('[start_new_window] Exception caught (GoBack)', e)
-                wizard.terminate()
-                if not wallet:
-                    return
-                wallet.start_threads(self.daemon.network)
-                self.daemon.add_wallet(wallet)
-            try:
-                w = self.create_window_for_wallet(wallet)
-            except BaseException as e:
-                traceback.print_exc(file=sys.stdout)
-                d = QMessageBox(QMessageBox.Warning, _('Error'),
-                                _('Cannot create window for wallet:') + '\n' + str(e))
-                d.exec_()
-                return
-        if uri:
-            w.pay_to_URI(uri)
-        w.bring_to_top()
-        w.setWindowState(w.windowState() & ~QtCore.Qt.WindowMinimized | QtCore.Qt.WindowActive)
-
-        # this will activate the window
-        w.activateWindow()
-        return w
-        '''
 
     def main(self):
         try:
@@ -149,13 +97,9 @@ class ElectrumGui:
         except BaseException as e:
             traceback.print_exc(file=sys.stdout)
             return
-        #self.timer.start()
         self.config.open_last_wallet()
         path = self.config.get_wallet_path()
-        print('wallet path: ' + path)
         if not self.start_new_window(path, self.config.get('url')):
             return
-#signal.signal(signal.SIGINT, lambda *args: self.app.quit()) // AV: Не останавливаем выполнение скрипта
-#signal.signal(signal.SIGINT, lambda *args: self.app.quit())
 
 

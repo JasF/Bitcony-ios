@@ -52,6 +52,24 @@
 		C39FE97E206117B100756807 /* ConfirmSeedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FE97D206117B100756807 /* ConfirmSeedViewController.storyboard */; };
 		C39FE982206125DB00756807 /* EnterWalletPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE981206125DB00756807 /* EnterWalletPasswordViewController.m */; };
 		C39FE984206125E400756807 /* EnterWalletPasswordViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FE983206125E400756807 /* EnterWalletPasswordViewController.storyboard */; };
+		C39FEE37206235AA00756807 /* LeftViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE31206235AA00756807 /* LeftViewCell.m */; };
+		C39FEE38206235AA00756807 /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE32206235AA00756807 /* MainViewController.mm */; };
+		C39FEE39206235AA00756807 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE33206235AA00756807 /* Main.storyboard */; };
+		C39FEE3A206235AA00756807 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE35206235AA00756807 /* LeftViewController.m */; };
+		C39FEE4A2062361D00756807 /* LGSideMenuHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE412062361D00756807 /* LGSideMenuHelper.m */; };
+		C39FEE4B2062361D00756807 /* LGSideMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE432062361D00756807 /* LGSideMenuView.m */; };
+		C39FEE4C2062361D00756807 /* LGSideMenuSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE442062361D00756807 /* LGSideMenuSegue.m */; };
+		C39FEE4D2062361D00756807 /* LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE452062361D00756807 /* LGSideMenuController.m */; };
+		C39FEE4E2062361D00756807 /* LGSideMenuGesturesHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE462062361D00756807 /* LGSideMenuGesturesHandler.m */; };
+		C39FEE4F2062361D00756807 /* UIViewController+LGSideMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE472062361D00756807 /* UIViewController+LGSideMenuController.m */; };
+		C39FEE502062361D00756807 /* LGSideMenuBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE492062361D00756807 /* LGSideMenuBorderView.m */; };
+		C39FEE552062375800756807 /* MenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE522062375700756807 /* MenuViewController.storyboard */; };
+		C39FEE562062375800756807 /* MenuViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE542062375700756807 /* MenuViewController.mm */; };
+		C39FEE5A206238A800756807 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE59206238A800756807 /* ViewController.m */; };
+		C39FEE5E2062444C00756807 /* BaseNavigationController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE5C2062444C00756807 /* BaseNavigationController.mm */; };
+		C39FEE62206244EE00756807 /* WalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE61206244EE00756807 /* WalletViewController.m */; };
+		C39FEE64206244F700756807 /* WalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE63206244F700756807 /* WalletViewController.storyboard */; };
+		C39FEE66206247FF00756807 /* Common.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE65206247FF00756807 /* Common.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -979,6 +997,38 @@
 		C39FE981206125DB00756807 /* EnterWalletPasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterWalletPasswordViewController.m; sourceTree = "<group>"; };
 		C39FE983206125E400756807 /* EnterWalletPasswordViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnterWalletPasswordViewController.storyboard; sourceTree = "<group>"; };
 		C39FEE2E20622F0400756807 /* mainwindow.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = mainwindow.py; sourceTree = "<group>"; };
+		C39FEE30206235AA00756807 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		C39FEE31206235AA00756807 /* LeftViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewCell.m; sourceTree = "<group>"; };
+		C39FEE32206235AA00756807 /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
+		C39FEE33206235AA00756807 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C39FEE34206235AA00756807 /* LeftViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewCell.h; sourceTree = "<group>"; };
+		C39FEE35206235AA00756807 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		C39FEE36206235AA00756807 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		C39FEE3C2062361D00756807 /* LGSideMenuSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuSegue.h; sourceTree = "<group>"; };
+		C39FEE3D2062361D00756807 /* LGSideMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuView.h; sourceTree = "<group>"; };
+		C39FEE3E2062361D00756807 /* LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuController.h; sourceTree = "<group>"; };
+		C39FEE3F2062361D00756807 /* LGSideMenuGesturesHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuGesturesHandler.h; sourceTree = "<group>"; };
+		C39FEE402062361D00756807 /* LGSideMenuBorderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuBorderView.h; sourceTree = "<group>"; };
+		C39FEE412062361D00756807 /* LGSideMenuHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuHelper.m; sourceTree = "<group>"; };
+		C39FEE422062361D00756807 /* UIViewController+LGSideMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LGSideMenuController.h"; sourceTree = "<group>"; };
+		C39FEE432062361D00756807 /* LGSideMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuView.m; sourceTree = "<group>"; };
+		C39FEE442062361D00756807 /* LGSideMenuSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuSegue.m; sourceTree = "<group>"; };
+		C39FEE452062361D00756807 /* LGSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuController.m; sourceTree = "<group>"; };
+		C39FEE462062361D00756807 /* LGSideMenuGesturesHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuGesturesHandler.m; sourceTree = "<group>"; };
+		C39FEE472062361D00756807 /* UIViewController+LGSideMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LGSideMenuController.m"; sourceTree = "<group>"; };
+		C39FEE482062361D00756807 /* LGSideMenuHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LGSideMenuHelper.h; sourceTree = "<group>"; };
+		C39FEE492062361D00756807 /* LGSideMenuBorderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LGSideMenuBorderView.m; sourceTree = "<group>"; };
+		C39FEE522062375700756807 /* MenuViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MenuViewController.storyboard; sourceTree = "<group>"; };
+		C39FEE532062375700756807 /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		C39FEE542062375700756807 /* MenuViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MenuViewController.mm; sourceTree = "<group>"; };
+		C39FEE58206238A800756807 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C39FEE59206238A800756807 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C39FEE5C2062444C00756807 /* BaseNavigationController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BaseNavigationController.mm; sourceTree = "<group>"; };
+		C39FEE5D2062444C00756807 /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		C39FEE60206244EE00756807 /* WalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WalletViewController.h; sourceTree = "<group>"; };
+		C39FEE61206244EE00756807 /* WalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WalletViewController.m; sourceTree = "<group>"; };
+		C39FEE63206244F700756807 /* WalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WalletViewController.storyboard; sourceTree = "<group>"; };
+		C39FEE65206247FF00756807 /* Common.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Common.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1052,6 +1102,7 @@
 				C39FDFB9205F9E9600756807 /* main.m */,
 				C39FDFBA205F9E9600756807 /* Images.xcassets */,
 				C39FDFBB205F9E9600756807 /* Electrum-Prefix.pch */,
+				C39FEE65206247FF00756807 /* Common.xcassets */,
 			);
 			path = Electrum;
 			sourceTree = "<group>";
@@ -1134,6 +1185,12 @@
 		C39FE462205FE72F00756807 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C39FEE5F206244E100756807 /* WalletViewController */,
+				C39FEE5B2062443700756807 /* BaseNavigationController */,
+				C39FEE572062389800756807 /* ViewController */,
+				C39FEE512062375700756807 /* MenuViewController */,
+				C39FEE3B2062361D00756807 /* LGSideMenuController */,
+				C39FEE2F206235AA00756807 /* MainViewController */,
 				C39FE97F206125CF00756807 /* EnterWalletPasswordViewController */,
 				C39FE9792061179100756807 /* ConfirmSeedViewController */,
 				C39FE96E2061159400756807 /* HaveASeedViewController */,
@@ -3438,6 +3495,79 @@
 			path = EnterWalletPasswordViewController;
 			sourceTree = "<group>";
 		};
+		C39FEE2F206235AA00756807 /* MainViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C39FEE30206235AA00756807 /* LeftViewController.h */,
+				C39FEE31206235AA00756807 /* LeftViewCell.m */,
+				C39FEE32206235AA00756807 /* MainViewController.mm */,
+				C39FEE33206235AA00756807 /* Main.storyboard */,
+				C39FEE34206235AA00756807 /* LeftViewCell.h */,
+				C39FEE35206235AA00756807 /* LeftViewController.m */,
+				C39FEE36206235AA00756807 /* MainViewController.h */,
+			);
+			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		C39FEE3B2062361D00756807 /* LGSideMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				C39FEE3C2062361D00756807 /* LGSideMenuSegue.h */,
+				C39FEE3D2062361D00756807 /* LGSideMenuView.h */,
+				C39FEE3E2062361D00756807 /* LGSideMenuController.h */,
+				C39FEE3F2062361D00756807 /* LGSideMenuGesturesHandler.h */,
+				C39FEE402062361D00756807 /* LGSideMenuBorderView.h */,
+				C39FEE412062361D00756807 /* LGSideMenuHelper.m */,
+				C39FEE422062361D00756807 /* UIViewController+LGSideMenuController.h */,
+				C39FEE432062361D00756807 /* LGSideMenuView.m */,
+				C39FEE442062361D00756807 /* LGSideMenuSegue.m */,
+				C39FEE452062361D00756807 /* LGSideMenuController.m */,
+				C39FEE462062361D00756807 /* LGSideMenuGesturesHandler.m */,
+				C39FEE472062361D00756807 /* UIViewController+LGSideMenuController.m */,
+				C39FEE482062361D00756807 /* LGSideMenuHelper.h */,
+				C39FEE492062361D00756807 /* LGSideMenuBorderView.m */,
+			);
+			path = LGSideMenuController;
+			sourceTree = "<group>";
+		};
+		C39FEE512062375700756807 /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C39FEE522062375700756807 /* MenuViewController.storyboard */,
+				C39FEE532062375700756807 /* MenuViewController.h */,
+				C39FEE542062375700756807 /* MenuViewController.mm */,
+			);
+			path = MenuViewController;
+			sourceTree = "<group>";
+		};
+		C39FEE572062389800756807 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C39FEE58206238A800756807 /* ViewController.h */,
+				C39FEE59206238A800756807 /* ViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C39FEE5B2062443700756807 /* BaseNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				C39FEE5D2062444C00756807 /* BaseNavigationController.h */,
+				C39FEE5C2062444C00756807 /* BaseNavigationController.mm */,
+			);
+			path = BaseNavigationController;
+			sourceTree = "<group>";
+		};
+		C39FEE5F206244E100756807 /* WalletViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C39FEE60206244EE00756807 /* WalletViewController.h */,
+				C39FEE61206244EE00756807 /* WalletViewController.m */,
+				C39FEE63206244F700756807 /* WalletViewController.storyboard */,
+			);
+			path = WalletViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3499,9 +3629,13 @@
 				C39FE47B205FE98200756807 /* EnterOrCreateWalletViewController.storyboard in Resources */,
 				C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */,
 				C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */,
+				C39FEE66206247FF00756807 /* Common.xcassets in Resources */,
 				C39FE4932060E03B00756807 /* __main__.py in Resources */,
 				C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */,
 				C39FE978206115CF00756807 /* CreateNewSeedViewController.storyboard in Resources */,
+				C39FEE39206235AA00756807 /* Main.storyboard in Resources */,
+				C39FEE552062375800756807 /* MenuViewController.storyboard in Resources */,
+				C39FEE64206244F700756807 /* WalletViewController.storyboard in Resources */,
 				C39FE482205FEC1D00756807 /* ButtonCell.xib in Resources */,
 				C39FE475205FE8CA00756807 /* CreateWalletViewController.storyboard in Resources */,
 				C39FE97E206117B100756807 /* ConfirmSeedViewController.storyboard in Resources */,
@@ -3534,24 +3668,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C39FEE5A206238A800756807 /* ViewController.m in Sources */,
 				C39FE966206103C400756807 /* EXTScope.m in Sources */,
+				C39FEE38206235AA00756807 /* MainViewController.mm in Sources */,
 				C39FE967206103C400756807 /* EXTRuntimeExtensions.m in Sources */,
 				C39FE479205FE97100756807 /* EnterOrCreateWalletViewController.m in Sources */,
+				C39FEE37206235AA00756807 /* LeftViewCell.m in Sources */,
 				C39FE94A2060FFEB00756807 /* RunLoop.m in Sources */,
+				C39FEE5E2062444C00756807 /* BaseNavigationController.mm in Sources */,
+				C39FEE4C2062361D00756807 /* LGSideMenuSegue.m in Sources */,
 				C39FDFDE205FA06300756807 /* AppDelegate.m in Sources */,
 				C39FE965206103C400756807 /* EXTConcreteProtocol.m in Sources */,
 				C39FE473205FE8A700756807 /* CreateWalletViewController.m in Sources */,
 				C39FE968206103C400756807 /* EXTADT.m in Sources */,
 				C39FE971206115A700756807 /* CreateNewSeedViewController.m in Sources */,
 				C39FE97C206117A100756807 /* ConfirmSeedViewController.m in Sources */,
+				C39FEE562062375800756807 /* MenuViewController.mm in Sources */,
 				C39FE969206103C400756807 /* NSInvocation+EXT.m in Sources */,
 				C39FE96B206103C400756807 /* NSMethodSignature+EXT.m in Sources */,
+				C39FEE4E2062361D00756807 /* LGSideMenuGesturesHandler.m in Sources */,
+				C39FEE4B2062361D00756807 /* LGSideMenuView.m in Sources */,
+				C39FEE4D2062361D00756807 /* LGSideMenuController.m in Sources */,
+				C39FEE62206244EE00756807 /* WalletViewController.m in Sources */,
+				C39FEE4A2062361D00756807 /* LGSideMenuHelper.m in Sources */,
 				C39FE481205FEC1D00756807 /* ButtonCell.m in Sources */,
 				C39FE96C206103C400756807 /* EXTNil.m in Sources */,
+				C39FEE3A206235AA00756807 /* LeftViewController.m in Sources */,
 				C39FE974206115B000756807 /* HaveASeedViewController.m in Sources */,
+				C39FEE502062361D00756807 /* LGSideMenuBorderView.m in Sources */,
 				C39FE982206125DB00756807 /* EnterWalletPasswordViewController.m in Sources */,
 				C39FE96A206103C400756807 /* EXTSafeCategory.m in Sources */,
 				C39FDFE7205FA8EE00756807 /* HelloRubicon.m in Sources */,
+				C39FEE4F2062361D00756807 /* UIViewController+LGSideMenuController.m in Sources */,
 				C39FE964206103C400756807 /* EXTSelectorChecking.m in Sources */,
 				C39FE46F205FE7DC00756807 /* ScreensManagerImpl.m in Sources */,
 				C39FDFC5205F9E9600756807 /* main.m in Sources */,

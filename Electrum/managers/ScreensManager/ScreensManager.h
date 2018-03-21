@@ -16,5 +16,8 @@
 - (void)showHaveASeedViewController:(id)handler;
 - (void)showConfirmSeedViewController:(id)handler;
 - (void)showEnterWalletPasswordViewController:(id)handler;
+- (void)showMainViewController:(id)handler;
+- (void)showWalletViewController:(id)handler;
+- (void)showMenuViewController;
 - (void)createWindowIfNeeded;
 @end

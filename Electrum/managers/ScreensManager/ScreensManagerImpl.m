@@ -11,12 +11,24 @@
 #import "CreateNewSeedViewController.h"
 #import "CreateWalletViewController.h"
 #import "ConfirmSeedViewController.h"
+#import "BaseNavigationController.h"
 #import "HaveASeedViewController.h"
+#import "WalletViewController.h"
+#import "MainViewController.h"
 #import "ScreensManagerImpl.h"
+#import "ViewController.h"
 #import "AppDelegate.h"
 
-@implementation ScreensManagerImpl {
-}
+static NSInteger const kSlideMenuActivationMode = 8;
+static NSString *kStoryboardName = @"Main";
+
+@interface ScreensManagerImpl ()
+@property (nonatomic, strong) BaseNavigationController *navigationController;
+@property (strong, nonatomic) MainViewController *mainViewController;
+@property (nonatomic, strong) UIStoryboard *storyboard;
+@end
+
+@implementation ScreensManagerImpl
 
 @synthesize window;
 
@@ -90,7 +102,75 @@
     });
 }
 
+- (void)showMainViewController:(id)handler {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.window.rootViewController = [self mainViewController];
+    });
+}
+
+- (void)showWalletViewController:(id)handler {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NSCAssert([self.window.rootViewController isEqual:[self mainViewController]], @"Excpected mainViewController as rootViewController");
+        if (![self.window.rootViewController isEqual:_mainViewController]) {
+            return;
+        }
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"WalletViewController"
+                                                             bundle:nil];
+        WalletViewController *viewController = (WalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        viewController.handler = (id<WalletHandlerProtocol>)handler;
+        viewController.screensManager = self;
+        [self pushViewController:viewController];
+    });
+}
+
+- (void)showMenuViewController {
+    [self.mainViewController showLeftViewAnimated:YES completionHandler:^{}];
+}
+
 #pragma mark - Private Methods
+- (BOOL)allowReplaceWithViewController:(UIViewController *)viewController {
+    if (!self.navigationController.viewControllers.count) {
+        return YES;
+    }
+    if (self.navigationController.viewControllers.count == 1 &&
+        [self.navigationController.viewControllers.firstObject isKindOfClass:[ViewController class]]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)pushViewController:(UIViewController *)viewController {
+    if ([self allowReplaceWithViewController:viewController]) {
+        self.navigationController.viewControllers = @[viewController];
+    }
+    else {
+        [self.navigationController pushViewController:viewController animated:YES completion:^{
+            if (self.navigationController.viewControllers.count > 1) {
+                self.navigationController.viewControllers = @[viewController];
+            }
+        }];
+    }
+}
+
+- (MainViewController *)mainViewController {
+    if (!_mainViewController) {
+        BaseNavigationController *navigationController =(BaseNavigationController *)[self.storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
+        _navigationController = navigationController;
+        [navigationController setViewControllers:@[[self.storyboard instantiateViewControllerWithIdentifier:@"ViewController"]]];
+        _mainViewController = [_storyboard instantiateInitialViewController];
+        _mainViewController.rootViewController = navigationController;
+        [_mainViewController setupWithType:kSlideMenuActivationMode];
+    }
+    return _mainViewController;
+}
+
+- (UIStoryboard *)storyboard {
+    if (!_storyboard) {
+        _storyboard = [UIStoryboard storyboardWithName:kStoryboardName bundle:nil];
+    }
+    return _storyboard;
+}
+
 - (void)createWindowIfNeeded {
     if (self.window) {
         return;
