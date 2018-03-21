@@ -27,7 +27,7 @@ from functools import partial
 from threading import Thread
 import re
 from decimal import Decimal
-
+'''
 from PyQt5.QtGui import *
 from PyQt5.QtCore import *
 
@@ -35,14 +35,11 @@ from electrum_gui.qt.util import *
 from electrum_gui.qt.qrcodewidget import QRCodeWidget
 from electrum_gui.qt.amountedit import AmountEdit
 from electrum_gui.qt.main_window import StatusBarButton
+'''
 from electrum.i18n import _
 from electrum.plugins import hook
 from .trustedcoin import TrustedCoinPlugin, server
 
-
-class TOS(QTextEdit):
-    tos_signal = pyqtSignal()
-    error_signal = pyqtSignal(object)
 
 
 class Plugin(TrustedCoinPlugin):
@@ -52,6 +49,7 @@ class Plugin(TrustedCoinPlugin):
 
     @hook
     def on_new_window(self, window):
+        '''
         wallet = window.wallet
         if not isinstance(wallet, self.wallet_class):
             return
@@ -67,8 +65,9 @@ class Plugin(TrustedCoinPlugin):
                                  _("TrustedCoin"), action)
         window.statusBar().addPermanentWidget(button)
         self.start_request_thread(window.wallet)
-
+        '''
     def auth_dialog(self, window):
+        '''
         d = WindowModalDialog(window, _("Authorization"))
         vbox = QVBoxLayout(d)
         pw = AmountEdit(None, is_int = True)
@@ -87,9 +86,12 @@ class Plugin(TrustedCoinPlugin):
         if not d.exec_():
             return
         return pw.get_amount()
+        '''
+        return 0
 
     @hook
     def sign_tx(self, window, tx):
+        '''
         wallet = window.wallet
         if not isinstance(wallet, self.wallet_class):
             return
@@ -101,14 +103,16 @@ class Plugin(TrustedCoinPlugin):
             else:
                 self.print_error("twofactor: xpub3 not needed")
             window.wallet.auth_code = auth_code
-
+'''
     def waiting_dialog(self, window, on_finished=None):
+        '''
         task = partial(self.request_billing_info, window.wallet)
         return WaitingDialog(window, 'Getting billing information...', task,
                              on_finished)
-
+'''
     @hook
     def abort_send(self, window):
+        '''
         wallet = window.wallet
         if not isinstance(wallet, self.wallet_class):
             return
@@ -117,12 +121,15 @@ class Plugin(TrustedCoinPlugin):
         if wallet.billing_info is None:
             return True
         return False
-
+'''
+        return False
 
     def settings_dialog(self, window):
-        self.waiting_dialog(window, partial(self.show_settings_dialog, window))
+        pass
+    #self.waiting_dialog(window, partial(self.show_settings_dialog, window))
 
     def show_settings_dialog(self, window, success):
+        '''
         if not success:
             window.show_message(_('Server not reachable.'))
             return
@@ -176,8 +183,9 @@ class Plugin(TrustedCoinPlugin):
         grid.addWidget(QLabel(_("Your wallet has {} prepaid transactions.").format(n)), i, 0)
         vbox.addLayout(Buttons(CloseButton(d)))
         d.exec_()
-
+'''
     def on_buy(self, window, k, v, d):
+        '''
         d.close()
         if window.pluginsdialog:
             window.pluginsdialog.close()
@@ -188,8 +196,10 @@ class Plugin(TrustedCoinPlugin):
         window.payto_e.setFrozen(True)
         window.message_e.setFrozen(True)
         window.amount_e.setFrozen(True)
+        '''
 
     def accept_terms_of_use(self, window):
+        '''
         vbox = QVBoxLayout()
         vbox.addWidget(QLabel(_("Terms of Service")))
 
@@ -245,8 +255,11 @@ class Plugin(TrustedCoinPlugin):
         window.exec_layout(vbox, next_enabled=False)
         next_button.setText(prior_button_text)
         return str(email_e.text())
+        '''
+        return ""
 
     def request_otp_dialog(self, window, _id, otp_secret):
+        '''
         vbox = QVBoxLayout()
         if otp_secret is not None:
             uri = "otpauth://totp/%s?secret=%s"%('trustedcoin.com', otp_secret)
@@ -288,5 +301,6 @@ class Plugin(TrustedCoinPlugin):
         window.exec_layout(vbox, next_enabled=False,
                                raise_on_cancel=False)
         return pw.get_amount(), cb_lost.isChecked()
-
+'''
+        return 0
 
