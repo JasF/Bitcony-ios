@@ -13,6 +13,7 @@ typedef NS_ENUM(NSInteger, Rows) {
     TransactionIDRowValue,
     StatusRow,
     DateRow,
+    AmountRow,
     RowsCount
 };
 
@@ -65,6 +66,34 @@ static CGFloat const kRowHeight = 44.f;
                 value = [_handler date:nil];
             }
             cell.textLabel.text = [NSString stringWithFormat:L(@"Date: %@"), value];
+            break;
+        }
+        case AmountRow: {
+            NSInteger amount = 0;
+            if ([_handler respondsToSelector:@selector(amount:)]) {
+                amount = [_handler amount:nil];
+            }
+            NSString *formattedAmount = nil;
+            if ([_handler respondsToSelector:@selector(formattedAmount:)]) {
+                formattedAmount = [_handler formattedAmount:nil];
+            }
+            
+            NSString *baseUnit = nil;
+            if ([_handler respondsToSelector:@selector(baseUnit:)]) {
+                baseUnit = [_handler baseUnit:nil];
+            }
+            
+            NSString *text = nil;
+            if (IsEqualFloat(amount, 0.f)) {
+                text = L(@"Transaction unrelated to your wallet");
+            }
+            else if (amount > 0.f) {
+                text = [NSString stringWithFormat:@"%@ %@ %@", L(@"Amount received:"), formattedAmount, baseUnit];
+            }
+            else {
+                text = [NSString stringWithFormat:@"%@ %@ %@", L(@"Amount sent:"), formattedAmount, baseUnit];
+            }
+            cell.textLabel.text = text;
             break;
         }
     }

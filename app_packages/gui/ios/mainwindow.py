@@ -132,6 +132,15 @@ class ElectrumWindow:
         else:
             self.print_error("unexpected network message:", event, args)
 
+    def base_unit(self):
+        assert self.decimal_point in [2, 5, 8]
+        if self.decimal_point == 2:
+            return 'bits'
+        if self.decimal_point == 5:
+            return 'mBTC'
+        if self.decimal_point == 8:
+            return 'BTC'
+        raise Exception('Unknown base unit')
 
     def update_status(self):
         print('broadcast to gui network status! [connected, connecting, disconnected, uninitialized]')

@@ -12,6 +12,9 @@
 - (NSString *)transactionID:(id)object;
 - (NSString *)status:(id)object;
 - (NSString *)date:(id)object;
+- (NSInteger)amount:(id)object;
+- (NSString *)formattedAmount:(id)object;
+- (NSString *)baseUnit:(id)object;
 @end
 
 @interface TransactionDetailViewController : UITableViewController

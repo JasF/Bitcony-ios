@@ -31,6 +31,22 @@ class TransactionDetailHandler(NSObject):
     def date_(self):
         time_str = datetime.datetime.fromtimestamp(self.timestamp).isoformat(' ')[:-3]
         return time_str
+    
+    @objc_method
+    def amount_(self):
+        print('amount is ' + self.amount);
+        return self.amount
+
+    @objc_method
+    def formattedAmount_(self):
+        if self.amount > 0:
+            return self.electrumWindow.format_amount(self.amount, whitespaces = True)
+        else:
+            return self.electrumWindow.format_amount(-self.amount, whitespaces = True)
+
+    @objc_method
+    def baseUnit_(self):
+        return self.electrumWindow.base_unit()
 
 
 def show_transaction(tx, parent, desc=None, prompt_if_unsaved=False):
