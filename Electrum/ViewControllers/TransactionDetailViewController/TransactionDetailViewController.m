@@ -14,6 +14,8 @@ typedef NS_ENUM(NSInteger, Rows) {
     StatusRow,
     DateRow,
     AmountRow,
+    SizeRow,
+    FeeRow,
     RowsCount
 };
 
@@ -69,7 +71,7 @@ static CGFloat const kRowHeight = 44.f;
             break;
         }
         case AmountRow: {
-            NSInteger amount = 0;
+            NSNumber *amount = 0;
             if ([_handler respondsToSelector:@selector(amount:)]) {
                 amount = [_handler amount:nil];
             }
@@ -77,6 +79,7 @@ static CGFloat const kRowHeight = 44.f;
             if ([_handler respondsToSelector:@selector(formattedAmount:)]) {
                 formattedAmount = [_handler formattedAmount:nil];
             }
+            formattedAmount = [formattedAmount stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
             
             NSString *baseUnit = nil;
             if ([_handler respondsToSelector:@selector(baseUnit:)]) {
@@ -84,10 +87,10 @@ static CGFloat const kRowHeight = 44.f;
             }
             
             NSString *text = nil;
-            if (IsEqualFloat(amount, 0.f)) {
+            if (amount.integerValue == 0) {
                 text = L(@"Transaction unrelated to your wallet");
             }
-            else if (amount > 0.f) {
+            else if (amount.integerValue > 0.f) {
                 text = [NSString stringWithFormat:@"%@ %@ %@", L(@"Amount received:"), formattedAmount, baseUnit];
             }
             else {
@@ -96,6 +99,29 @@ static CGFloat const kRowHeight = 44.f;
             cell.textLabel.text = text;
             break;
         }
+        case SizeRow: {
+            NSNumber *size = 0;
+            if ([_handler respondsToSelector:@selector(size:)]) {
+                size = [_handler size:nil];
+            }
+            cell.textLabel.text = [NSString stringWithFormat:L(@"%@ %@ bytes"), L(@"Size:"), size];
+            break;
+        }
+        case FeeRow: {
+            NSNumber *fee = 0;
+            if ([_handler respondsToSelector:@selector(fee:)]) {
+                fee = [_handler fee:nil];
+            }
+            NSString *formattedFee = nil;
+            if ([_handler respondsToSelector:@selector(formattedFee:)]) {
+                formattedFee = [_handler formattedFee:nil];
+            }
+            NSString *text = [NSString stringWithFormat:@"%@: %@", L(@"Fee"), (fee.integerValue == 0) ? L(@"unknown") : formattedFee];
+            cell.textLabel.text = text;
+            break;
+        }
+        default:
+            break;
     }
     return cell;
 }

@@ -34,7 +34,6 @@ class TransactionDetailHandler(NSObject):
     
     @objc_method
     def amount_(self):
-        print('amount is ' + self.amount);
         return self.amount
 
     @objc_method
@@ -47,7 +46,20 @@ class TransactionDetailHandler(NSObject):
     @objc_method
     def baseUnit_(self):
         return self.electrumWindow.base_unit()
+    
+    @objc_method
+    def size_(self):
+        size = self.dialog.tx.estimated_size()
+        print('size is ' + str(size))
+        return size
 
+    @objc_method
+    def fee_(self):
+        return self.fee
+    
+    @objc_method
+    def formattedFee_(self):
+        return self.electrumWindow.format_amount(self.fee, whitespaces = True)
 
 def show_transaction(tx, parent, desc=None, prompt_if_unsaved=False):
     try:
