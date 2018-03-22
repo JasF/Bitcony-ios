@@ -11,6 +11,7 @@
 @interface TextFieldCell ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *rightLabel;
 @end
 
 @implementation TextFieldCell
@@ -29,6 +30,18 @@
 #pragma mark - Public Methods
 - (void)setAttributedString:(NSAttributedString *)string {
     _textField.attributedText = string;
+}
+
+- (void)setString:(NSString *)string {
+    _textField.attributedText = [[NSAttributedString alloc] initWithString:string];
+}
+
+- (NSString *)string {
+    return _textField.attributedText.string;
+}
+
+- (void)setRightLabelText:(NSString *)text {
+    _rightLabel.text = text;
 }
 
 #pragma mark - Layouting

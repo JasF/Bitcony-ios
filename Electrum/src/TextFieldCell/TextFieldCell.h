@@ -10,4 +10,7 @@
 
 @interface TextFieldCell : UITableViewCell
 - (void)setAttributedString:(NSAttributedString *)string;
+- (void)setString:(NSString *)string;
+- (void)setRightLabelText:(NSString *)text;
+- (NSString *)string;
 @end

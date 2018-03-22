@@ -10,6 +10,7 @@
 #import "ScreensManager.h"
 
 @protocol ReceiveHandlerProtocol <NSObject>
+- (NSString *)receivingAddress:(id)object;
 @end
 
 @interface ReceiveViewController : UITableViewController

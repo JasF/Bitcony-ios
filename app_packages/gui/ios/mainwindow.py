@@ -44,6 +44,11 @@ class ReceiveHandler(NSObject):
     def init_(self):
         return self
 
+    @objc_method
+    def receivingAddress_(self):
+        return self.addr
+
+
 class SendHandler(NSObject):
     @objc_method
     def init_(self):
@@ -66,7 +71,9 @@ class MenuHandler(NSObject):
 
     @objc_method
     def receiveTapped_(self):
+        addr = self.electrumWindow.wallet.get_unused_address()
         handler = ReceiveHandler.alloc().init()
+        handler.addr = addr
         handler.electrumWindow = self.electrumWindow
         self.electrumWindow.screensManager.showReceiveViewController(handler)
         pass
