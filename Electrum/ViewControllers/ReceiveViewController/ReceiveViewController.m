@@ -26,6 +26,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Observers
+- (IBAction)menuTapped:(id)sender {
+    [_screensManager showMenuViewController];
+}
+
 /*
 #pragma mark - Navigation
 

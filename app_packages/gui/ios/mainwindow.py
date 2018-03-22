@@ -12,6 +12,11 @@ from electrum.i18n import _
     
 from .history_list import HistoryList
 
+class TransactionDetailHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+
 class WalletHandler(NSObject):
     @objc_method
     def init_(self):
@@ -31,6 +36,14 @@ class WalletHandler(NSObject):
     def transactionsData_(self):
         listOfItems = self.electrumWindow.historyList.on_update()
         return str(listOfItems)
+
+    @objc_method
+    def transactionTapped_(self, txHash):
+        print('txHash: ' + txHash)
+        handler = TransactionDetailHandler.alloc().init()
+        handler.electrumWindow = self.electrumWindow
+        handler.txHash = txHash
+        self.electrumWindow.screensManager.showTransactionDetailViewController(handler)
 
 class ReceiveHandler(NSObject):
     @objc_method
@@ -60,21 +73,21 @@ class MenuHandler(NSObject):
     @objc_method
     def receiveTapped_(self):
         handler = ReceiveHandler.alloc().init()
-        handler.electrumWindow = electrumWindow
+        handler.electrumWindow = self.electrumWindow
         self.electrumWindow.screensManager.showReceiveViewController(handler)
         pass
 
     @objc_method
     def sendTapped_(self):
         handler = SendHandler.alloc().init()
-        handler.electrumWindow = electrumWindow
+        handler.electrumWindow = self.electrumWindow
         self.electrumWindow.screensManager.showSendViewController(handler)
         pass
 
     @objc_method
     def settingsTapped_(self):
         handler = SettingsHandler.alloc().init()
-        handler.electrumWindow = electrumWindow
+        handler.electrumWindow = self.electrumWindow
         self.electrumWindow.screensManager.showSettingsViewController(handler)
         pass
 

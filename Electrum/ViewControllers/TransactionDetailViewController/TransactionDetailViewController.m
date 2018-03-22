@@ -1,22 +1,21 @@
 //
-//  SettingsViewController.m
+//  TransactionDetailViewController.m
 //  Electrum
 //
 //  Created by Jasf on 22.03.2018.
 //  Copyright © 2018 Freedom. All rights reserved.
 //
 
-#import "SettingsViewController.h"
+#import "TransactionDetailViewController.h"
 
-@interface SettingsViewController ()
+@interface TransactionDetailViewController ()
 
 @end
 
-@implementation SettingsViewController
+@implementation TransactionDetailViewController
 
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
-    NSCParameterAssert(_screensManager);
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
@@ -24,11 +23,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Observers
-- (IBAction)menuTapped:(id)sender {
-    [_screensManager showMenuViewController];
 }
 
 /*

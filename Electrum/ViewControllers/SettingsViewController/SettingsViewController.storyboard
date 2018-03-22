@@ -10,33 +10,63 @@
     </dependencies>
     <scenes>
         <!--Root View Controller-->
-        <scene sceneID="VHW-r4-Ipr">
+        <scene sceneID="aVX-yI-ORG">
             <objects>
-                <tableViewController id="QSh-zg-u4k" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="tXn-bQ-vWh">
+                <tableViewController storyboardIdentifier="ViewController" id="EJD-VP-hBd" customClass="SendViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Rv1-Me-FVJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="r7M-7m-7Sy">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="af5-eW-p4W">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r7M-7m-7Sy" id="ggX-6m-Fse">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="af5-eW-p4W" id="4FK-3t-InC">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="QSh-zg-u4k" id="dUG-pt-NE7"/>
-                            <outlet property="delegate" destination="QSh-zg-u4k" id="qc3-EZ-qLO"/>
+                            <outlet property="dataSource" destination="EJD-VP-hBd" id="VjN-DX-ki4"/>
+                            <outlet property="delegate" destination="EJD-VP-hBd" id="dEB-M0-YBQ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Rcx-KR-vFv"/>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="SP9-po-hSf">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="iqr-VQ-rvn">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="m74-mY-wdS">
+                                <rect key="frame" x="16" y="11" width="77" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="menuIcon"/>
+                                <connections>
+                                    <action selector="menuTapped:" destination="EJD-VP-hBd" eventType="touchUpInside" id="QaP-e6-Woe"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IQc-Rk-8HO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Bc-7K-XBs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-742" y="144"/>
+            <point key="canvasLocation" x="-280" y="72"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jHs-eF-c1Z">
+            <objects>
+                <navigationController id="BDd-I4-Odt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PWS-GE-2qb">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="EJD-VP-hBd" kind="relationship" relationship="rootViewController" id="8kt-bS-5iz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZ6-W0-Wa2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1232" y="72"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="menuIcon" width="23" height="19"/>
+    </resources>
 </document>

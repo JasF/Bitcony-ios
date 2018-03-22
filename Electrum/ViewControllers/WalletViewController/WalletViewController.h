@@ -15,6 +15,7 @@
 - (void)viewDidLoad:(WalletViewController *)viewController;
 - (void)timerAction:(id)object;
 - (NSString *)transactionsData:(id)object;
+- (void)transactionTapped:(NSString *)txHash;
 @end
 
 @protocol WalletHandlerProtocolDelegate <NSObject>

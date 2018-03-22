@@ -82,6 +82,8 @@
 		C3B75F5320636DB00030BC81 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F5220636DB00030BC81 /* SettingsViewController.storyboard */; };
 		C3B75F5620636DBA0030BC81 /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F5520636DBA0030BC81 /* SendViewController.m */; };
 		C3B75F5920636DCA0030BC81 /* ReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F5820636DCA0030BC81 /* ReceiveViewController.m */; };
+		C3B75F5D206376650030BC81 /* TransactionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F5C206376650030BC81 /* TransactionDetailViewController.m */; };
+		C3B75F5F2063766D0030BC81 /* TransactionDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F5E2063766D0030BC81 /* TransactionDetailViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1014,6 +1016,9 @@
 		C3B75F5520636DBA0030BC81 /* SendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendViewController.m; sourceTree = "<group>"; };
 		C3B75F5720636DCA0030BC81 /* ReceiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiveViewController.h; sourceTree = "<group>"; };
 		C3B75F5820636DCA0030BC81 /* ReceiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiveViewController.m; sourceTree = "<group>"; };
+		C3B75F5B206376650030BC81 /* TransactionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionDetailViewController.h; sourceTree = "<group>"; };
+		C3B75F5C206376650030BC81 /* TransactionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionDetailViewController.m; sourceTree = "<group>"; };
+		C3B75F5E2063766D0030BC81 /* TransactionDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionDetailViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1176,6 +1181,7 @@
 		C39FE462205FE72F00756807 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3B75F5A206376540030BC81 /* TransactionDetailViewController */,
 				C3B75F4420636D530030BC81 /* SettingsViewController */,
 				C3B75F4320636D4E0030BC81 /* SendViewController */,
 				C3B75F4220636D470030BC81 /* ReceiveViewController */,
@@ -3567,6 +3573,16 @@
 			path = SettingsViewController;
 			sourceTree = "<group>";
 		};
+		C3B75F5A206376540030BC81 /* TransactionDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3B75F5B206376650030BC81 /* TransactionDetailViewController.h */,
+				C3B75F5C206376650030BC81 /* TransactionDetailViewController.m */,
+				C3B75F5E2063766D0030BC81 /* TransactionDetailViewController.storyboard */,
+			);
+			path = TransactionDetailViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3629,6 +3645,7 @@
 				C39FE47B205FE98200756807 /* EnterOrCreateWalletViewController.storyboard in Resources */,
 				C3B75F4920636D700030BC81 /* ReceiveViewController.storyboard in Resources */,
 				C3B75F4120636A140030BC81 /* MenuCell.xib in Resources */,
+				C3B75F5F2063766D0030BC81 /* TransactionDetailViewController.storyboard in Resources */,
 				C39FEE6E20626CAA00756807 /* TransactionCell.xib in Resources */,
 				C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */,
 				C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */,
@@ -3707,6 +3724,7 @@
 				C39FE974206115B000756807 /* HaveASeedViewController.m in Sources */,
 				C39FEE502062361D00756807 /* LGSideMenuBorderView.m in Sources */,
 				C39FE982206125DB00756807 /* EnterWalletPasswordViewController.m in Sources */,
+				C3B75F5D206376650030BC81 /* TransactionDetailViewController.m in Sources */,
 				C39FE96A206103C400756807 /* EXTSafeCategory.m in Sources */,
 				C39FDFE7205FA8EE00756807 /* HelloRubicon.m in Sources */,
 				C39FEE4F2062361D00756807 /* UIViewController+LGSideMenuController.m in Sources */,

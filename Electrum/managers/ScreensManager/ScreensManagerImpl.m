@@ -8,6 +8,7 @@
 
 #import "EnterOrCreateWalletViewController.h"
 #import "EnterWalletPasswordViewController.h"
+#import "TransactionDetailViewController.h"
 #import "CreateNewSeedViewController.h"
 #import "CreateWalletViewController.h"
 #import "ConfirmSeedViewController.h"
@@ -16,6 +17,7 @@
 #import "SettingsViewController.h"
 #import "ReceiveViewController.h"
 #import "WalletViewController.h"
+#import "MenuViewController.h"
 #import "SendViewController.h"
 #import "MainViewController.h"
 #import "ScreensManagerImpl.h"
@@ -29,9 +31,13 @@ static NSString *kStoryboardName = @"Main";
 @property (nonatomic, strong) BaseNavigationController *navigationController;
 @property (strong, nonatomic) MainViewController *mainViewController;
 @property (nonatomic, strong) UIStoryboard *storyboard;
+
+@property (strong, nonatomic) WalletViewController *walletViewController;
 @end
 
-@implementation ScreensManagerImpl
+@implementation ScreensManagerImpl {
+    id _menuHandler;
+}
 
 @synthesize window;
 
@@ -106,6 +112,7 @@ static NSString *kStoryboardName = @"Main";
 }
 
 - (void)showMainViewController:(id)handler {
+    _menuHandler = handler;
     dispatch_async(dispatch_get_main_queue(), ^{
         self.window.rootViewController = [self mainViewController];
     });
@@ -121,21 +128,29 @@ static NSString *kStoryboardName = @"Main";
         if ([self canIgnorePushingViewController:[WalletViewController class]]) {
             return;
         }
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"WalletViewController"
-                                                             bundle:nil];
-        WalletViewController *viewController = (WalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        viewController.handler = (id<WalletHandlerProtocol>)handler;
-        viewController.screensManager = self;
+        WalletViewController *viewController = self.walletViewController;
+        if (!viewController) {
+            UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"WalletViewController"
+                                                                 bundle:nil];
+            viewController = (WalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+            viewController.handler = (id<WalletHandlerProtocol>)handler;
+            viewController.screensManager = self;
+            _walletViewController = viewController;
+        }
         [self pushViewController:viewController];
     });
 }
 
 - (void)showReceiveViewController:(id)handler {
     dispatch_async(dispatch_get_main_queue(), ^{
+        [self closeMenu];
+        if ([self canIgnorePushingViewController:[ReceiveViewController class]]) {
+            return;
+        }
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReceiveViewController"
                                                              bundle:nil];
-        WalletViewController *viewController = (WalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        viewController.handler = (id<WalletHandlerProtocol>)handler;
+        ReceiveViewController *viewController = (ReceiveViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        viewController.handler = (id<ReceiveHandlerProtocol>)handler;
         viewController.screensManager = self;
         [self pushViewController:viewController];
     });
@@ -143,6 +158,10 @@ static NSString *kStoryboardName = @"Main";
 
 - (void)showSendViewController:(id)handler {
     dispatch_async(dispatch_get_main_queue(), ^{
+        [self closeMenu];
+        if ([self canIgnorePushingViewController:[SendViewController class]]) {
+            return;
+        }
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SendViewController"
                                                              bundle:nil];
         SendViewController *viewController = (SendViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
@@ -154,6 +173,10 @@ static NSString *kStoryboardName = @"Main";
 
 - (void)showSettingsViewController:(id)handler {
     dispatch_async(dispatch_get_main_queue(), ^{
+        [self closeMenu];
+        if ([self canIgnorePushingViewController:[SettingsViewController class]]) {
+            return;
+        }
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SettingsViewController"
                                                              bundle:nil];
         SettingsViewController *viewController = (SettingsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
@@ -163,7 +186,19 @@ static NSString *kStoryboardName = @"Main";
     });
 }
 
+- (void)showTransactionDetailViewController:(id)handler {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"TransactionDetailViewController"
+                                                             bundle:nil];
+        TransactionDetailViewController *viewController = (TransactionDetailViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        viewController.handler = (id<TransactionDetailHandlerProtocol>)handler;
+        [self pushViewController:viewController clean:NO];
+    });
+}
+
 - (void)showMenuViewController {
+    MenuViewController *viewController = (MenuViewController *)self.mainViewController.leftViewController;
+    viewController.handler = _menuHandler;
     [self.mainViewController showLeftViewAnimated:YES completionHandler:^{}];
 }
 
@@ -193,12 +228,16 @@ static NSString *kStoryboardName = @"Main";
 }
 
 - (void)pushViewController:(UIViewController *)viewController {
+    [self pushViewController:viewController clean:YES];
+}
+
+- (void)pushViewController:(UIViewController *)viewController clean:(BOOL)clean {
     if ([self allowReplaceWithViewController:viewController]) {
         self.navigationController.viewControllers = @[viewController];
     }
     else {
         [self.navigationController pushViewController:viewController animated:YES completion:^{
-            if (self.navigationController.viewControllers.count > 1) {
+            if (clean && self.navigationController.viewControllers.count > 1) {
                 self.navigationController.viewControllers = @[viewController];
             }
         }];

@@ -21,6 +21,7 @@
 - (void)showReceiveViewController:(id)handler;
 - (void)showSendViewController:(id)handler;
 - (void)showSettingsViewController:(id)handler;
+- (void)showTransactionDetailViewController:(id)handler;
 - (void)showMenuViewController;
 - (void)createWindowIfNeeded;
 @end

@@ -65,6 +65,14 @@ static NSTimeInterval kActionTimeInterval = 0.8f;
     return UITableViewAutomaticDimension;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSCAssert(indexPath.row < _transactions.count, @"indexPath.row must be less than number of transactions in array");
+    Transaction *transaction = _transactions[indexPath.row];
+    if ([_handler respondsToSelector:@selector(transactionTapped:)]) {
+        [_handler transactionTapped:transaction.txHash];
+    }
+}
+
 #pragma mark - Observers
 - (IBAction)menuTapped:(id)sender {
     [_screensManager showMenuViewController];
