@@ -32,6 +32,52 @@ class WalletHandler(NSObject):
         listOfItems = self.electrumWindow.historyList.on_update()
         return str(listOfItems)
 
+class ReceiveHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+
+class SendHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+
+class SettingsHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+
+class MenuHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+
+    @objc_method
+    def walletTapped_(self):
+        self.electrumWindow.showWalletViewController()
+        pass
+
+    @objc_method
+    def receiveTapped_(self):
+        handler = ReceiveHandler.alloc().init()
+        handler.electrumWindow = electrumWindow
+        self.electrumWindow.screensManager.showReceiveViewController(handler)
+        pass
+
+    @objc_method
+    def sendTapped_(self):
+        handler = SendHandler.alloc().init()
+        handler.electrumWindow = electrumWindow
+        self.electrumWindow.screensManager.showSendViewController(handler)
+        pass
+
+    @objc_method
+    def settingsTapped_(self):
+        handler = SettingsHandler.alloc().init()
+        handler.electrumWindow = electrumWindow
+        self.electrumWindow.screensManager.showSettingsViewController(handler)
+        pass
+
 class ElectrumWindow:
     def __init__(self, gui_object, wallet):
         self.num_zeros = 2
@@ -58,11 +104,16 @@ class ElectrumWindow:
         self.need_update = threading.Event()
 
     def exec(self):
-        self.screensManager.showMainViewController(None)
+        handler = MenuHandler.alloc().init()
+        handler.electrumWindow = self
+        self.screensManager.showMainViewController(handler)
+        self.showWalletViewController()
+        self.runLoop.exec()
+    
+    def showWalletViewController(self):
         self.handler = WalletHandler.alloc().init();
         self.handler.electrumWindow = self
         self.screensManager.showWalletViewController(self.handler)
-        self.runLoop.exec()
 
     def on_network(self, event, *args):
         if event == 'updated':

@@ -10,7 +10,10 @@
 #import "MenuViewController.h"
 
 typedef NS_ENUM(NSInteger, MenuRows) {
-    SimpleRow,
+    HistoryRow,
+    ReceiveRow,
+    SendRow,
+    SettingsRow,
     RowsCount
 };
 
@@ -32,9 +35,11 @@ static CGFloat const kSeparatorAlpha = 0.25f;
 }
 
 - (void)viewDidLoad {
+    NSCParameterAssert(_handler);
     [super viewDidLoad];
     self.tableView.separatorColor = [[UIColor whiteColor] colorWithAlphaComponent:kSeparatorAlpha];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuDidHide:) name:LGSideMenuDidHideLeftViewNotification object:nil];
+    [self.tableView registerNib:[UINib nibWithNibName:@"MenuCell" bundle:nil] forCellReuseIdentifier:@"MenuCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -61,8 +66,13 @@ static CGFloat const kSeparatorAlpha = 0.25f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"default"];
-    cell.textLabel.text = @"Simple label";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuCell"];
+    switch (indexPath.row) {
+        case HistoryRow: cell.textLabel.text = L(@"wallet"); break;
+        case ReceiveRow: cell.textLabel.text = L(@"receive"); break;
+        case SendRow: cell.textLabel.text = L(@"send"); break;
+        case SettingsRow: cell.textLabel.text = L(@"settings"); break;
+    }
     return cell;
     /*
     MenuSimpleCell *cell = nil;
@@ -117,6 +127,32 @@ static CGFloat const kSeparatorAlpha = 0.25f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case HistoryRow: {
+            if ([_handler respondsToSelector:@selector(walletTapped:)]) {
+                [_handler walletTapped:nil];
+            }
+            break;
+        }
+        case ReceiveRow: {
+            if ([_handler respondsToSelector:@selector(receiveTapped:)]) {
+                [_handler receiveTapped:nil];
+            }
+            break;
+        }
+        case SendRow: {
+            if ([_handler respondsToSelector:@selector(sendTapped:)]) {
+                [_handler sendTapped:nil];
+            }
+            break;
+        }
+        case SettingsRow: {
+            if ([_handler respondsToSelector:@selector(settingsTapped:)]) {
+                [_handler settingsTapped:nil];
+            }
+            break;
+        }
+    }
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {

@@ -18,6 +18,9 @@
 - (void)showEnterWalletPasswordViewController:(id)handler;
 - (void)showMainViewController:(id)handler;
 - (void)showWalletViewController:(id)handler;
+- (void)showReceiveViewController:(id)handler;
+- (void)showSendViewController:(id)handler;
+- (void)showSettingsViewController:(id)handler;
 - (void)showMenuViewController;
 - (void)createWindowIfNeeded;
 @end

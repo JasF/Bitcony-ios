@@ -75,6 +75,13 @@
 		C39FEE6E20626CAA00756807 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE6C20626CAA00756807 /* TransactionCell.xib */; };
 		C39FEE7020626F7D00756807 /* EasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FEE6F20626F7D00756807 /* EasyMapping.framework */; };
 		C39FEE7520626FA200756807 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE7420626FA200756807 /* Transaction.m */; };
+		C3B75F4120636A140030BC81 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F4020636A140030BC81 /* MenuCell.xib */; };
+		C3B75F4920636D700030BC81 /* ReceiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F4820636D700030BC81 /* ReceiveViewController.storyboard */; };
+		C3B75F4E20636D810030BC81 /* SendViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F4D20636D810030BC81 /* SendViewController.storyboard */; };
+		C3B75F5120636DA50030BC81 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F5020636DA50030BC81 /* SettingsViewController.m */; };
+		C3B75F5320636DB00030BC81 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F5220636DB00030BC81 /* SettingsViewController.storyboard */; };
+		C3B75F5620636DBA0030BC81 /* SendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F5520636DBA0030BC81 /* SendViewController.m */; };
+		C3B75F5920636DCA0030BC81 /* ReceiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F5820636DCA0030BC81 /* ReceiveViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -997,6 +1004,16 @@
 		C39FEE7420626FA200756807 /* Transaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		C39FEE79206276F600756807 /* seed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = seed.h; path = ../../../../Desktop/seed.h; sourceTree = "<group>"; };
 		C39FEE7A206276FA00756807 /* seed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
+		C3B75F4020636A140030BC81 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		C3B75F4820636D700030BC81 /* ReceiveViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReceiveViewController.storyboard; sourceTree = "<group>"; };
+		C3B75F4D20636D810030BC81 /* SendViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendViewController.storyboard; sourceTree = "<group>"; };
+		C3B75F4F20636DA50030BC81 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		C3B75F5020636DA50030BC81 /* SettingsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		C3B75F5220636DB00030BC81 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		C3B75F5420636DBA0030BC81 /* SendViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendViewController.h; sourceTree = "<group>"; };
+		C3B75F5520636DBA0030BC81 /* SendViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendViewController.m; sourceTree = "<group>"; };
+		C3B75F5720636DCA0030BC81 /* ReceiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReceiveViewController.h; sourceTree = "<group>"; };
+		C3B75F5820636DCA0030BC81 /* ReceiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReceiveViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1091,6 +1108,7 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C3B75F3F20636A050030BC81 /* MenuCell */,
 				C39FEE6920626C8600756807 /* TransactionCell */,
 				C39FE9472060FFD700756807 /* RunLoop */,
 				C39FDFEA205FBE4800756807 /* Logs */,
@@ -1158,6 +1176,9 @@
 		C39FE462205FE72F00756807 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3B75F4420636D530030BC81 /* SettingsViewController */,
+				C3B75F4320636D4E0030BC81 /* SendViewController */,
+				C3B75F4220636D470030BC81 /* ReceiveViewController */,
 				C39FEE5F206244E100756807 /* WalletViewController */,
 				C39FEE5B2062443700756807 /* BaseNavigationController */,
 				C39FEE572062389800756807 /* ViewController */,
@@ -3508,6 +3529,44 @@
 			path = Transation;
 			sourceTree = "<group>";
 		};
+		C3B75F3F20636A050030BC81 /* MenuCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3B75F4020636A140030BC81 /* MenuCell.xib */,
+			);
+			path = MenuCell;
+			sourceTree = "<group>";
+		};
+		C3B75F4220636D470030BC81 /* ReceiveViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3B75F5720636DCA0030BC81 /* ReceiveViewController.h */,
+				C3B75F5820636DCA0030BC81 /* ReceiveViewController.m */,
+				C3B75F4820636D700030BC81 /* ReceiveViewController.storyboard */,
+			);
+			path = ReceiveViewController;
+			sourceTree = "<group>";
+		};
+		C3B75F4320636D4E0030BC81 /* SendViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3B75F5420636DBA0030BC81 /* SendViewController.h */,
+				C3B75F5520636DBA0030BC81 /* SendViewController.m */,
+				C3B75F4D20636D810030BC81 /* SendViewController.storyboard */,
+			);
+			path = SendViewController;
+			sourceTree = "<group>";
+		};
+		C3B75F4420636D530030BC81 /* SettingsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3B75F4F20636DA50030BC81 /* SettingsViewController.h */,
+				C3B75F5020636DA50030BC81 /* SettingsViewController.m */,
+				C3B75F5220636DB00030BC81 /* SettingsViewController.storyboard */,
+			);
+			path = SettingsViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3566,7 +3625,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C39FE984206125E400756807 /* EnterWalletPasswordViewController.storyboard in Resources */,
+				C3B75F4E20636D810030BC81 /* SendViewController.storyboard in Resources */,
 				C39FE47B205FE98200756807 /* EnterOrCreateWalletViewController.storyboard in Resources */,
+				C3B75F4920636D700030BC81 /* ReceiveViewController.storyboard in Resources */,
+				C3B75F4120636A140030BC81 /* MenuCell.xib in Resources */,
 				C39FEE6E20626CAA00756807 /* TransactionCell.xib in Resources */,
 				C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */,
 				C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */,
@@ -3574,6 +3636,7 @@
 				C39FEE6820625DC400756807 /* history_list.py in Resources */,
 				C39FE4932060E03B00756807 /* __main__.py in Resources */,
 				C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */,
+				C3B75F5320636DB00030BC81 /* SettingsViewController.storyboard in Resources */,
 				C39FE978206115CF00756807 /* CreateNewSeedViewController.storyboard in Resources */,
 				C39FEE39206235AA00756807 /* Main.storyboard in Resources */,
 				C39FEE552062375800756807 /* MenuViewController.storyboard in Resources */,
@@ -3622,9 +3685,12 @@
 				C39FDFDE205FA06300756807 /* AppDelegate.m in Sources */,
 				C39FE965206103C400756807 /* EXTConcreteProtocol.m in Sources */,
 				C39FE473205FE8A700756807 /* CreateWalletViewController.m in Sources */,
+				C3B75F5120636DA50030BC81 /* SettingsViewController.m in Sources */,
+				C3B75F5920636DCA0030BC81 /* ReceiveViewController.m in Sources */,
 				C39FEE6D20626CAA00756807 /* TransactionCell.m in Sources */,
 				C39FE968206103C400756807 /* EXTADT.m in Sources */,
 				C39FE971206115A700756807 /* CreateNewSeedViewController.m in Sources */,
+				C3B75F5620636DBA0030BC81 /* SendViewController.m in Sources */,
 				C39FE97C206117A100756807 /* ConfirmSeedViewController.m in Sources */,
 				C39FEE562062375800756807 /* MenuViewController.mm in Sources */,
 				C39FE969206103C400756807 /* NSInvocation+EXT.m in Sources */,

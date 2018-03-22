@@ -13,7 +13,10 @@
 #import "ConfirmSeedViewController.h"
 #import "BaseNavigationController.h"
 #import "HaveASeedViewController.h"
+#import "SettingsViewController.h"
+#import "ReceiveViewController.h"
 #import "WalletViewController.h"
+#import "SendViewController.h"
 #import "MainViewController.h"
 #import "ScreensManagerImpl.h"
 #import "ViewController.h"
@@ -114,10 +117,47 @@ static NSString *kStoryboardName = @"Main";
         if (![self.window.rootViewController isEqual:_mainViewController]) {
             return;
         }
+        [self closeMenu];
+        if ([self canIgnorePushingViewController:[WalletViewController class]]) {
+            return;
+        }
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"WalletViewController"
                                                              bundle:nil];
         WalletViewController *viewController = (WalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
         viewController.handler = (id<WalletHandlerProtocol>)handler;
+        viewController.screensManager = self;
+        [self pushViewController:viewController];
+    });
+}
+
+- (void)showReceiveViewController:(id)handler {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReceiveViewController"
+                                                             bundle:nil];
+        WalletViewController *viewController = (WalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        viewController.handler = (id<WalletHandlerProtocol>)handler;
+        viewController.screensManager = self;
+        [self pushViewController:viewController];
+    });
+}
+
+- (void)showSendViewController:(id)handler {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SendViewController"
+                                                             bundle:nil];
+        SendViewController *viewController = (SendViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        viewController.handler = (id<SendHandlerProtocol>)handler;
+        viewController.screensManager = self;
+        [self pushViewController:viewController];
+    });
+}
+
+- (void)showSettingsViewController:(id)handler {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SettingsViewController"
+                                                             bundle:nil];
+        SettingsViewController *viewController = (SettingsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        viewController.handler = (id<SettingsHandlerProtocol>)handler;
         viewController.screensManager = self;
         [self pushViewController:viewController];
     });
@@ -128,6 +168,19 @@ static NSString *kStoryboardName = @"Main";
 }
 
 #pragma mark - Private Methods
+- (BOOL)canIgnorePushingViewController:(Class)cls {
+    if ([[self.navigationController.topViewController class] isEqual:cls]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (void)closeMenu {
+    if (![self.mainViewController isLeftViewHidden]) {
+        [self.mainViewController hideLeftViewAnimated];
+    }
+}
+
 - (BOOL)allowReplaceWithViewController:(UIViewController *)viewController {
     if (!self.navigationController.viewControllers.count) {
         return YES;

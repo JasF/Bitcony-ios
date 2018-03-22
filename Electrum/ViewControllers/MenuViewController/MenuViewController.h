@@ -8,5 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MenuViewController : UIViewController
+@protocol MenuHandlerProtocol <NSObject>
+- (void)walletTapped:(id)object;
+- (void)receiveTapped:(id)object;
+- (void)sendTapped:(id)object;
+- (void)settingsTapped:(id)object;
+@end
+
+@interface MenuViewController : UIViewController;
+@property (strong, nonatomic) id<MenuHandlerProtocol> handler;
 @end
