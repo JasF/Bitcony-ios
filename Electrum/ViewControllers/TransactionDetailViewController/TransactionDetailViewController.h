@@ -18,6 +18,8 @@
 - (NSNumber *)size:(id)object;
 - (NSNumber *)fee:(id)object;
 - (NSString *)formattedFee:(id)object;
+- (NSString *)inputsJson:(id)object;
+- (NSString *)outputsJson:(id)object;
 @end
 
 @interface TransactionDetailViewController : UITableViewController

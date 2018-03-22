@@ -7,6 +7,14 @@
 //
 
 #import "TransactionDetailViewController.h"
+#import "TextFieldCell.h"
+
+typedef NS_ENUM(NSInteger, Sections) {
+    InformationSection,
+    InputsSection,
+    OutputsSection,
+    SectionsCount
+};
 
 typedef NS_ENUM(NSInteger, Rows) {
     TransactionIDRow,
@@ -22,7 +30,8 @@ typedef NS_ENUM(NSInteger, Rows) {
 static CGFloat const kRowHeight = 44.f;
 
 @interface TransactionDetailViewController () <UITableViewDelegate, UITableViewDataSource>
-
+@property (strong, nonatomic) NSArray *inputs;
+@property (strong, nonatomic) NSArray *outputs;
 @end
 
 @implementation TransactionDetailViewController
@@ -31,6 +40,10 @@ static CGFloat const kRowHeight = 44.f;
     NSCParameterAssert(_handler);
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"SimpleCell" bundle:nil] forCellReuseIdentifier:@"SimpleCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TextFieldCell" bundle:nil] forCellReuseIdentifier:@"TextFieldCell"];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = kRowHeight;
+    [self updateInputsOutputs];
     // Do any additional setup after loading the view.
 }
 
@@ -41,6 +54,29 @@ static CGFloat const kRowHeight = 44.f;
 
 #pragma mark - UITableViewDataSource
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == InformationSection) {
+        return [self tableView:tableView informationCellForRowAtIndexPath:indexPath];
+    }
+    else if (indexPath.section == InputsSection || indexPath.section == OutputsSection) {
+        if (!indexPath.row) {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleCell"];
+            NSInteger count = (indexPath.section == InputsSection) ? _inputs.count : _outputs.count;
+            cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", (indexPath.section == InputsSection) ? L(@"Inputs") : L(@"Outputs"), @(count)];
+            return cell;
+        }
+        NSInteger index = indexPath.row-1;
+        NSArray *stringsArray = (indexPath.section == InputsSection) ? _inputs : _outputs;
+        NSCAssert(stringsArray.count > index, @"index %@ out of bounds in %@", @(index), stringsArray);
+        NSAttributedString *string = stringsArray[index];
+        TextFieldCell *cell =(TextFieldCell *)[tableView dequeueReusableCellWithIdentifier:@"TextFieldCell"];
+        [cell setAttributedString:string];
+        return cell;
+    }
+    NSCAssert(false, @"Unknown section");
+    return [UITableViewCell new];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView informationCellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleCell"];
     switch (indexPath.row) {
         case TransactionIDRow:
@@ -126,13 +162,85 @@ static CGFloat const kRowHeight = 44.f;
     return cell;
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return SectionsCount;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return RowsCount;
+    switch (section) {
+        case InformationSection:
+            return RowsCount;
+        case InputsSection:
+            return _inputs.count + 1;
+        case OutputsSection:
+            return _outputs.count + 1;
+        default:
+            return 0;
+    }
 }
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return kRowHeight;
+}
+
+#pragma mark - Private Methods
+- (void)updateInputsOutputs {
+    NSString *inputsString = nil;
+    NSString *outputsString = nil;
+    if ([_handler respondsToSelector:@selector(inputsJson:)]) {
+        inputsString = [_handler inputsJson:nil];
+    }
+    inputsString = [inputsString stringByReplacingOccurrencesOfString:@"'" withString:@"\""];
+    if ([_handler respondsToSelector:@selector(outputsJson:)]) {
+        outputsString = [_handler outputsJson:nil];
+    }
+    outputsString = [outputsString stringByReplacingOccurrencesOfString:@"'" withString:@"\""];
+    
+    NSArray *inputsSource = [NSJSONSerialization JSONObjectWithData:[inputsString dataUsingEncoding:NSUTF8StringEncoding]
+                                                            options:0
+                                                              error:nil];
+    NSArray *outputsSource = [NSJSONSerialization JSONObjectWithData:[outputsString dataUsingEncoding:NSUTF8StringEncoding]
+                                                             options:0
+                                                               error:nil];
+    
+    NSMutableArray *inputs = [NSMutableArray new];
+    NSMutableArray *outputs = [NSMutableArray new];
+    
+    NSDictionary *colorAttributes = @{@"green":@{NSBackgroundColorAttributeName:[UIColor greenColor]}, @"yellow":@{NSBackgroundColorAttributeName:[UIColor yellowColor]}};
+    
+    for (NSDictionary *dictionary in inputsSource) {
+        NSString *left = [dictionary[@"left"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        NSString *rightColor = dictionary[@"color"];
+        NSString *right = [dictionary[@"right"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        
+        NSAttributedString *leftString = [[NSAttributedString alloc] initWithString:left attributes:nil];
+        NSAttributedString *rightString = [[NSAttributedString alloc] initWithString:right attributes:colorAttributes[rightColor]];
+        NSMutableAttributedString *string = [NSMutableAttributedString new];
+        [string appendAttributedString:leftString];
+        [string appendAttributedString:[[NSAttributedString alloc] initWithString:@"    "]];
+        [string appendAttributedString:rightString];
+        
+        [inputs addObject:[string copy]];
+    }
+    
+    for (NSDictionary *dictionary in outputsSource) {
+        NSString *left = [dictionary[@"left"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        NSString *leftColor = dictionary[@"color"];
+        NSString *right = [dictionary[@"right"] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        
+        NSAttributedString *leftString = [[NSAttributedString alloc] initWithString:left attributes:colorAttributes[leftColor]];
+        NSAttributedString *rightString = [[NSAttributedString alloc] initWithString:right attributes:nil];
+        NSMutableAttributedString *string = [NSMutableAttributedString new];
+        [string appendAttributedString:leftString];
+        [string appendAttributedString:[[NSAttributedString alloc] initWithString:@"    "]];
+        [string appendAttributedString:rightString];
+        
+        [outputs addObject:[string copy]];
+    }
+    
+    _inputs = [inputs copy];
+    _outputs = [outputs copy];
 }
 /*
 #pragma mark - Navigation

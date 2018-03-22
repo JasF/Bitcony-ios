@@ -61,6 +61,46 @@ class TransactionDetailHandler(NSObject):
     def formattedFee_(self):
         return self.electrumWindow.format_amount(self.fee, whitespaces = True)
 
+    @objc_method
+    def inputsJson_(self):
+        list = []
+        for x in self.dialog.tx.inputs():
+            dict = {}
+            if x['type'] == 'coinbase':
+                dict['left'] = 'coinbase'
+            else:
+                prevout_hash = x.get('prevout_hash')
+                prevout_n = x.get('prevout_n')
+                leftString = prevout_hash[0:8] + '...'
+                leftString = leftString + (prevout_hash[-8:] + ":%-4d " % prevout_n)
+                dict['left'] = leftString
+                addr = x.get('address')
+                if addr == "(pubkey)":
+                    _addr = self.dialog.wallet.find_pay_to_pubkey_address(prevout_hash, prevout_n)
+                    if _addr:
+                        addr = _addr
+                if addr is None:
+                    addr = _('unknown')
+                dict['right'] = addr
+                dict['color'] = self.dialog.text_format(addr)
+                if x.get('value'):
+                    dict['value'] = self.dialog.format_amount(x['value'])
+            list.append(dict)
+        return str(list)
+    
+    @objc_method
+    def outputsJson_(self):
+        list = []
+        for addr, v in self.dialog.tx.get_outputs():
+            dict = {}
+            dict['left'] = addr
+            dict['color'] = self.dialog.text_format(addr)
+            if v is not None:
+                dict['right'] = self.dialog.format_amount(v)
+            list.append(dict)
+        return str(list)
+
+
 def show_transaction(tx, parent, desc=None, prompt_if_unsaved=False):
     try:
         d = TxDialog(tx, parent, desc, prompt_if_unsaved)
@@ -106,3 +146,11 @@ class TxDialog:
         
         self.main_window.screensManager.showTransactionDetailViewController(handler)
 
+
+    def text_format(self, addr):
+        if self.wallet.is_mine(addr):
+            return "yellow" if self.wallet.is_change(addr) else "green"
+        return "clear"
+        
+    def format_amount(self, amt):
+        return self.main_window.format_amount(amt, whitespaces = True)
