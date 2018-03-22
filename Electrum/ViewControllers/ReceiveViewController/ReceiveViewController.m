@@ -57,6 +57,7 @@ static CGFloat const kRowHeight = 44.f;
     }
     else if ([textFieldCells containsObject:@(indexPath.row)]) {
         textFieldCell = [tableView dequeueReusableCellWithIdentifier:@"TextFieldCell"];
+        [textFieldCell setRightLabelText:nil];
         cell = textFieldCell;
     }
     

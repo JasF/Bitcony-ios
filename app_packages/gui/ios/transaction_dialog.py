@@ -100,6 +100,11 @@ class TransactionDetailHandler(NSObject):
             list.append(dict)
         return str(list)
 
+    @objc_method
+    def lockTime_(self):
+        return self.dialog.tx.locktime
+
+
 
 def show_transaction(tx, parent, desc=None, prompt_if_unsaved=False):
     try:

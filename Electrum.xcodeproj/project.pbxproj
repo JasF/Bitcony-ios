@@ -87,6 +87,10 @@
 		C3B75F8E2063A15B0030BC81 /* TextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F8C2063A15B0030BC81 /* TextFieldCell.m */; };
 		C3B75F8F2063A15B0030BC81 /* TextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F8D2063A15B0030BC81 /* TextFieldCell.xib */; };
 		C3B75F942063A2820030BC81 /* UIView+TKGeometry.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F932063A2820030BC81 /* UIView+TKGeometry.m */; };
+		C3B75F982063D5460030BC81 /* TableButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F972063D5460030BC81 /* TableButtonCell.xib */; };
+		C3B75F9B2063D5630030BC81 /* TableButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F9A2063D5630030BC81 /* TableButtonCell.m */; };
+		C3B75FA02063D6240030BC81 /* FeeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F9E2063D6240030BC81 /* FeeCell.m */; };
+		C3B75FA12063D6240030BC81 /* FeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F9F2063D6240030BC81 /* FeeCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1028,6 +1032,12 @@
 		C3B75F8D2063A15B0030BC81 /* TextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextFieldCell.xib; sourceTree = "<group>"; };
 		C3B75F922063A2820030BC81 /* UIView+TKGeometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+TKGeometry.h"; sourceTree = "<group>"; };
 		C3B75F932063A2820030BC81 /* UIView+TKGeometry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+TKGeometry.m"; sourceTree = "<group>"; };
+		C3B75F972063D5460030BC81 /* TableButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableButtonCell.xib; sourceTree = "<group>"; };
+		C3B75F992063D5630030BC81 /* TableButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableButtonCell.h; sourceTree = "<group>"; };
+		C3B75F9A2063D5630030BC81 /* TableButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableButtonCell.m; sourceTree = "<group>"; };
+		C3B75F9D2063D6240030BC81 /* FeeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeeCell.h; sourceTree = "<group>"; };
+		C3B75F9E2063D6240030BC81 /* FeeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeeCell.m; sourceTree = "<group>"; };
+		C3B75F9F2063D6240030BC81 /* FeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1123,6 +1133,8 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C3B75F9C2063D60F0030BC81 /* FeeCell */,
+				C3B75F962063D5370030BC81 /* ButtonCell */,
 				C3B75F8A2063A1450030BC81 /* TextFieldCell */,
 				C3B75F3F20636A050030BC81 /* SimpleCell */,
 				C39FEE6920626C8600756807 /* TransactionCell */,
@@ -3622,6 +3634,26 @@
 			path = "UIView+TKGeometry";
 			sourceTree = "<group>";
 		};
+		C3B75F962063D5370030BC81 /* ButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3B75F972063D5460030BC81 /* TableButtonCell.xib */,
+				C3B75F992063D5630030BC81 /* TableButtonCell.h */,
+				C3B75F9A2063D5630030BC81 /* TableButtonCell.m */,
+			);
+			path = ButtonCell;
+			sourceTree = "<group>";
+		};
+		C3B75F9C2063D60F0030BC81 /* FeeCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3B75F9D2063D6240030BC81 /* FeeCell.h */,
+				C3B75F9E2063D6240030BC81 /* FeeCell.m */,
+				C3B75F9F2063D6240030BC81 /* FeeCell.xib */,
+			);
+			path = FeeCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -3691,6 +3723,7 @@
 				C39FEE66206247FF00756807 /* Common.xcassets in Resources */,
 				C39FEE6820625DC400756807 /* history_list.py in Resources */,
 				C3B75F8F2063A15B0030BC81 /* TextFieldCell.xib in Resources */,
+				C3B75FA12063D6240030BC81 /* FeeCell.xib in Resources */,
 				C39FE4932060E03B00756807 /* __main__.py in Resources */,
 				C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */,
 				C3B75F5320636DB00030BC81 /* SettingsViewController.storyboard in Resources */,
@@ -3701,6 +3734,7 @@
 				C39FE482205FEC1D00756807 /* ButtonCell.xib in Resources */,
 				C39FE475205FE8CA00756807 /* CreateWalletViewController.storyboard in Resources */,
 				C39FE97E206117B100756807 /* ConfirmSeedViewController.storyboard in Resources */,
+				C3B75F982063D5460030BC81 /* TableButtonCell.xib in Resources */,
 				C39FDFD9205F9FF300756807 /* __main__-.py in Resources */,
 				C39FE976206115C500756807 /* HaveASeedViewController.storyboard in Resources */,
 			);
@@ -3736,10 +3770,12 @@
 				C39FE967206103C400756807 /* EXTRuntimeExtensions.m in Sources */,
 				C39FE479205FE97100756807 /* EnterOrCreateWalletViewController.m in Sources */,
 				C39FEE37206235AA00756807 /* LeftViewCell.m in Sources */,
+				C3B75FA02063D6240030BC81 /* FeeCell.m in Sources */,
 				C39FE94A2060FFEB00756807 /* RunLoop.m in Sources */,
 				C39FEE5E2062444C00756807 /* BaseNavigationController.mm in Sources */,
 				C39FEE4C2062361D00756807 /* LGSideMenuSegue.m in Sources */,
 				C39FDFDE205FA06300756807 /* AppDelegate.m in Sources */,
+				C3B75F9B2063D5630030BC81 /* TableButtonCell.m in Sources */,
 				C39FE965206103C400756807 /* EXTConcreteProtocol.m in Sources */,
 				C39FE473205FE8A700756807 /* CreateWalletViewController.m in Sources */,
 				C3B75F5120636DA50030BC81 /* SettingsViewController.m in Sources */,

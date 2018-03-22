@@ -20,6 +20,7 @@
 - (NSString *)formattedFee:(id)object;
 - (NSString *)inputsJson:(id)object;
 - (NSString *)outputsJson:(id)object;
+- (NSNumber *)lockTime:(id)object;
 @end
 
 @interface TransactionDetailViewController : UITableViewController

@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, Rows) {
     AmountRow,
     SizeRow,
     FeeRow,
+    LockTimeRow,
     RowsCount
 };
 
@@ -155,6 +156,14 @@ static CGFloat const kRowHeight = 44.f;
             NSString *text = [NSString stringWithFormat:@"%@: %@", L(@"Fee"), (fee.integerValue == 0) ? L(@"unknown") : formattedFee];
             cell.textLabel.text = text;
             break;
+        }
+        case LockTimeRow: {
+            NSNumber *lockTime = nil;
+            if ([_handler respondsToSelector:@selector(lockTime:)]) {
+                lockTime = [_handler lockTime:nil];
+            }
+            NSString *text = [NSString stringWithFormat:@"%@: %@", L(@"LockTime"), lockTime];
+            cell.textLabel.text = text;
         }
         default:
             break;
