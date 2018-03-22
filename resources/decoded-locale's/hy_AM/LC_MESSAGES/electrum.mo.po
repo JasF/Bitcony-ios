@@ -1,0 +1,757 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2018-03-02 11:37-0500\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Armenian\n"
+"Language: hy_AM\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: hy-AM\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr " Այս պարամետրերը ազդում են Ուղարկել դաշտի բաժնում"
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr ""
+"%(txs)s ստացվել են նոր գործարքներ։ Ստացված նոր գործարքների ընդհանուր գումարը "
+"%(amount)s"
+
+msgid "&About"
+msgstr "&Մասին"
+
+msgid "&Addresses"
+msgstr "Հասցեներ"
+
+msgid "&Documentation"
+msgstr "&Փաստաթղթեր"
+
+msgid "&Donate to server"
+msgstr "&Նվիրաբերել սերվերի"
+
+msgid "&Encrypt/decrypt message"
+msgstr "&Ծածկագրել/վերծանել հաղորդագրություն"
+
+msgid "&Export"
+msgstr "&Արտահանում"
+
+msgid "&File"
+msgstr "&Ֆայլ"
+
+msgid "&From QR code"
+msgstr "&QR կոդից"
+
+msgid "&From file"
+msgstr "&Ֆայլից"
+
+msgid "&From text"
+msgstr "&տեքստից"
+
+msgid "&From the blockchain"
+msgstr "&blockchain ֊ից"
+
+msgid "&Help"
+msgstr "&Օգնություն"
+
+msgid "&History"
+msgstr "&Պատմություն"
+
+msgid "&Import"
+msgstr "&Ներմուծում"
+
+msgid "&Labels"
+msgstr "&Պիտակներ"
+
+msgid "&Load transaction"
+msgstr "&Գործարքի բեռը"
+
+msgid "&Master Public Keys"
+msgstr "&Հանրային Բանալիների Վարպետ"
+
+msgid "&Network"
+msgstr "&Ցանց"
+
+msgid "&New"
+msgstr "&Նոր"
+
+msgid "&New/Restore"
+msgstr "&Նոր/Վերականգնում"
+
+msgid "&Official website"
+msgstr "&Պաշտոնական կայք"
+
+msgid "&Open"
+msgstr "&Բացել"
+
+msgid "&Password"
+msgstr "&Գաղտնաբառ"
+
+msgid "&Pay to many"
+msgstr "&Վճարել շատ"
+
+msgid "&Plugins"
+msgstr "&Փլագիններ"
+
+msgid "&Private keys"
+msgstr "&Մասնավոր բանալիներ"
+
+msgid "&Quit"
+msgstr "&Փակել"
+
+msgid "&Recently open"
+msgstr "&Վերջերս բաց"
+
+msgid "&Report Bug"
+msgstr "&Հաշվետվություն Սխալի Մասին"
+
+msgid "&Save Copy"
+msgstr "&Պահպանել Պատճենը"
+
+msgid "&Seed"
+msgstr "&Սերմեր"
+
+msgid "&Sign/verify message"
+msgstr "&ստորագրել/ստուգել հաղորդագրությունը"
+
+msgid "&Sweep"
+msgstr "&Հավաքել"
+
+msgid "&Tools"
+msgstr "&Գործիքներ"
+
+msgid "&View"
+msgstr "&Դիտել"
+
+msgid "&Wallet"
+msgstr "&Դրամապանակ"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "1 օր"
+
+msgid "1 hour"
+msgstr "1 ժամ"
+
+msgid "1 week"
+msgstr "1 շաբաթ"
+
+msgid "A copy of your wallet file was created in"
+msgstr "Ձեր դրամապանակի ֆայլի պատճենը ստեղծվել է"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"Առաջարկվող վճարների չափը ավտոմատ ավելացվում է այս դաշտում։ Դուք կարող եք "
+"նրան վերանշանակել։ Նա մեծանում է գործարքի հետ միասին։"
+
+msgid "Add Cosigner"
+msgstr "Ավելացնել Երաշխավորի"
+
+msgid "Additional fees"
+msgstr "Լրացուցիչ վճարներ"
+
+msgid "Address"
+msgstr "Հասցե"
+
+msgid "Address:"
+msgstr "Հասցե․"
+
+msgid "Always"
+msgstr "Միշտ"
+
+msgid "Amount"
+msgstr "Գումարի չափը"
+
+msgid "Amount received:"
+msgstr "Ստացած գումարները․"
+
+msgid "Amount sent:"
+msgstr "Օգտագործած գումարը․"
+
+msgid "Amount to be sent"
+msgstr "Վճարման գումարի չափը"
+
+msgid "Amount to be sent."
+msgstr "Վճարման գումարի չափը։"
+
+msgid "Appearance"
+msgstr "Հիմնական"
+
+msgid "Auto connect"
+msgstr "Ավտոմատ միացում"
+
+msgid "BIP39 seed"
+msgstr "BIP39 սերմ"
+
+msgid "Back"
+msgstr "Հետ"
+
+msgid "Balance"
+msgstr "Հաշվեկշիռ"
+
+msgid "Base unit"
+msgstr "Արժույթ"
+
+msgid "Base unit of your wallet."
+msgstr "Ձեր դրամապանակի արժույթը։"
+
+msgid ""
+"Before reporting a bug, upgrade to the most recent version of Electrum "
+"(latest release or git HEAD), and include the version number in your report."
+msgstr ""
+"Նախքան հայտնելը բագի մասին, թարմացրեք Electrum ֊ի վերջին տարբերակը (վերջին "
+"թողարկման կամ git HEAD), և ներառեք տարբերակի համարը հաշվետվության մեջ։"
+
+msgid "Bitcoin Address is None"
+msgstr "Բիթքոյն հասցեն որոշված չէ"
+
+msgid ""
+"Bitcoin address where the payment should be received. Note that each payment "
+"request uses a different Bitcoin address."
+msgstr ""
+"Սա Բիթքոյն հասցեն է, որի վրա պիտի ստանաք վճարում։ ՈՒշադրություն դարձրեք "
+"յուրաքանչյուր վճարման հարցում օգտագործում է մեկ այլ Բիթքոյն հասցեից:"
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"Բիթքոյն Գործարքները սովորաբար անվճար չեն։ Հավելավճարները գործարքների համար "
+"վճարում է նա ով վերավճարում է միջոցները:"
+
+msgid "Blockchain"
+msgstr "Բլոկչայն"
+
+msgid "Broadcast"
+msgstr "Ուղարկել"
+
+msgid "Broadcasting transaction..."
+msgstr "Գործարքի Լրատու..."
+
+msgid "Bump Fee"
+msgstr "Հարված վճարին"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Մերժում"
+
+msgid "Cannot broadcast transaction"
+msgstr "Անհնար է ուղարկել գործարքը"
+
+msgid "Cannot read file"
+msgstr "Չի կարող կարդալ ֆայլը"
+
+msgid "Change Password"
+msgstr "Փոխել Գաղտնաբառը"
+
+msgid "Changing PIN code."
+msgstr " PIN-կոդի Փոփոխություն։"
+
+msgid "Child Pays for Parent"
+msgstr "Հետնորդը Վճարում է Ծնողի համար"
+
+msgid "Child pays for parent"
+msgstr "Հետնորդը վճարում է Ծնողի համար"
+
+msgid "Choose a password to encrypt your wallet keys."
+msgstr "Ընտրել գաղտնաբառ ձեր դրամապանակի բանալիները ծածկագրելու համար։"
+
+msgid "Choose a server"
+msgstr "Ընտրել սերվեր"
+
+msgid ""
+"Choose coin (UTXO) selection method.  The following are available:\n"
+"\n"
+msgstr ""
+"Ընտրել մեթող կոպեկ հավաքելու համար(UTXO)։ Հասանելի են հետևյալները:\n"
+"\n"
+
+msgid "Choose the number of signatures needed to unlock funds in your wallet:"
+msgstr ""
+"Ընտրել թվով ստորագրություններ, որոնք անհրաժեշտ են Ձեր դրամապանակի միջոցների "
+"բացելու համար։"
+
+msgid ""
+"Choose which online block explorer to use for functions that open a web "
+"browser"
+msgstr ""
+"Ընտրեք ինչպիսի առցանց միավոր է օգտագործվում գործառույթներում, որոնք բացում "
+"են վեբ֊դիտարկիչ"
+
+msgid "Choose..."
+msgstr "Ընտրել..."
+
+msgid "Clear"
+msgstr "Հասկանալի է"
+
+msgid "Close"
+msgstr "Փակել"
+
+msgid "Coin selection"
+msgstr "Քոին Ընտրություն"
+
+msgid "Confirm Passphrase:"
+msgstr "Հաստատել Գաղտնաբառը."
+
+msgid "Confirm Password:"
+msgstr "Գաղտնաբառի Հաստատում."
+
+msgid "Confirm Seed"
+msgstr "Հաստատել Սերմերը"
+
+msgid "Confirm new PIN"
+msgstr "Հաստատել նոր PIN-կոդ"
+
+msgid "Contacts"
+msgstr "Հետադարձ կապ"
+
+msgid "Copy"
+msgstr "Պատճեն"
+
+msgid "Copy %s"
+msgstr "Պատճեն %s"
+
+msgid "Copy URI"
+msgstr "Պատճեն URI"
+
+msgid "Copy and Close"
+msgstr "Պատճենել և փակել"
+
+msgid "Copy to clipboard"
+msgstr "Պատճենել հիշողության մեջ"
+
+msgid "Could not start Barcode Scanner."
+msgstr "Չի հաջողվում գործարկել շտրիխը։"
+
+msgid "Critical Error"
+msgstr "Կրիտիկական Սխալ"
+
+msgid "Current Password:"
+msgstr "Ընթացիկ Գաղտնաբառ․"
+
+msgid "Current fee"
+msgstr "Ընթացիկ վճար"
+
+msgid "Dark/Light"
+msgstr "Մութ/Բաց"
+
+msgid "Date"
+msgstr "Ամսաթիվ"
+
+msgid "Date: %s"
+msgstr "Ամսաթիվ․ %s"
+
+msgid "Decrypt"
+msgstr "Վերծանել"
+
+msgid "Default Servers"
+msgstr "Լռելյայն Սերվեր"
+
+msgid "Delete"
+msgstr "Ջնջել"
+
+msgid "Delete invoice?"
+msgstr "Հեռացնե՞լ ապրանքագիրը"
+
+msgid "Delete wallet?"
+msgstr "Ջնջե՞լ դրամապանակը"
+
+msgid "Denomination"
+msgstr "Անվանում"
+
+msgid "Description"
+msgstr "Նկարագրություն"
+
+msgid "Details"
+msgstr "Մանրամասներ"
+
+msgid "Edit %s"
+msgstr "Փոփոխել %s"
+
+msgid "Electrum App"
+msgstr "Electrum Ծրագիր"
+
+msgid "Electrum Plugins"
+msgstr "Electrum Փլագին"
+
+msgid "Electrum wallet"
+msgstr "Electrum դրամապանակ"
+
+msgid "Encrypt"
+msgstr "Ծածկագրել"
+
+msgid "Encrypt wallet file"
+msgstr "Ծածկագրել դրամապանակի ֆայլը"
+
+msgid "Encrypt/decrypt Message"
+msgstr "Ծածկագրել/վերծանել հաղորդագրությունը"
+
+msgid "Encrypted"
+msgstr "Ծածկագրված"
+
+msgid "Enter Passphrase"
+msgstr "Մուտքագրեք Գաղտնաբառ"
+
+msgid "Enter Password"
+msgstr "Մուտքագրեք Գաղտնաբառ"
+
+msgid "Enter Seed"
+msgstr "Մուտքագրել Սերմերը"
+
+msgid "Enter a filename for the copy of your wallet"
+msgstr "Մուտքագրել ֆայլանունը Ձեր դրամապանակի պատճենից"
+
+msgid "Enter addresses"
+msgstr "Մուտքագրել հասցեները"
+
+msgid "Enter description"
+msgstr "Մուտքագրել նկարագրություն"
+
+msgid "Enter new PIN"
+msgstr "Մուտքագրեք նոր PIN"
+
+msgid "Enter private keys"
+msgstr "Մուտքագրել անձնական բանալիները"
+
+msgid "Enter private keys:"
+msgstr "Մուտքագրել անձնական բանալիներ."
+
+msgid "Enter wallet name"
+msgstr "Մուտքագրել դրամապանակի անունը"
+
+msgid "Enter your current PIN:"
+msgstr "Մուտքագրեք ձեր ընթացիկ pin-կոդը:"
+
+msgid "Error"
+msgstr "Սխալ"
+
+msgid "Exit Electrum"
+msgstr "Ելք Electrum -ից"
+
+msgid "Expired"
+msgstr "Լրացել է"
+
+msgid "Expires"
+msgstr "Լրանում է"
+
+msgid "Export"
+msgstr "Արտահանում"
+
+msgid "Export History"
+msgstr "Արտահանման Պատմություն"
+
+msgid "Failed to update password"
+msgstr "Չհաջողվեց թարմացնել գաղտնաբառը"
+
+msgid "Fee"
+msgstr "Վճար"
+
+msgid "Fees"
+msgstr "Վճարներ"
+
+msgid "Fiat"
+msgstr "Ֆիատ"
+
+msgid "Fiat currency"
+msgstr "Ֆիատ գումար"
+
+msgid "File"
+msgstr "Ֆայլ"
+
+msgid "Final"
+msgstr "Եզրափակիչ"
+
+msgid "Find"
+msgstr "Գտնել"
+
+msgid "Format"
+msgstr "Ձեաչափ"
+
+msgid "Format: address, amount"
+msgstr "Ձևաչափ․ հասցե, քանակ"
+
+msgid "From"
+msgstr "Համար"
+
+msgid "Height"
+msgstr "Բարձրություն"
+
+msgid "Hello World"
+msgstr "Բարև Աշխարհ"
+
+msgid "Hide"
+msgstr "Թաքցնել"
+
+msgid "History"
+msgstr "Պատմություն"
+
+msgid "Identity"
+msgstr "Ինքնությունը"
+
+msgid "Import"
+msgstr "Ներմուծել"
+
+msgid "Import addresses"
+msgstr "Ներմուծում հասցեներ"
+
+msgid "Import file"
+msgstr "Ներմուծում ֆայլ"
+
+msgid "Import private keys"
+msgstr "Անձնական բանալիների ներմուծում "
+
+msgid "Increase fee"
+msgstr "Բարձրացնել վճարը"
+
+msgid "Information"
+msgstr "Տեղեկատվություն"
+
+msgid "Inputs"
+msgstr "Մուտքագրումներ"
+
+msgid "Invoice"
+msgstr "Հաշիվ-ֆակտուրա"
+
+msgid "Invoices"
+msgstr "Հաշիվ-ֆակտուրաներ"
+
+msgid "Language"
+msgstr "Լեզու"
+
+msgid "Message"
+msgstr "Հաղորդագրություն"
+
+msgid "Name"
+msgstr "Անուն"
+
+msgid "Network"
+msgstr "Ցանց"
+
+msgid "Never"
+msgstr "Երբեք"
+
+msgid "New"
+msgstr "Նոր"
+
+msgid "New Contact"
+msgstr "Նոր Կոնտակտ"
+
+msgid "New Password:"
+msgstr "Նոր գաղտնաբառ․"
+
+msgid "New contact"
+msgstr "Նոր կոնտակտ"
+
+msgid "Next"
+msgstr "Հաջորդը"
+
+msgid "No Wallet"
+msgstr "Ոչ նոր Դրամապանակ"
+
+msgid "None"
+msgstr "Ոչ մեկ"
+
+msgid "OK"
+msgstr "Լավ"
+
+msgid "Offline"
+msgstr "Անցանց"
+
+msgid "Options"
+msgstr "Օպցիաներ"
+
+msgid "Outputs"
+msgstr "Արդյունքներ"
+
+msgid "Paid"
+msgstr "Վճարված"
+
+msgid "Passphrase"
+msgstr "Գաղտնաբառ"
+
+msgid "Passphrase:"
+msgstr "Գաղտնաբառ․"
+
+msgid "Password"
+msgstr "Գաղտնաբառ"
+
+msgid "Password:"
+msgstr "Գաղտնաբառ․"
+
+msgid "Pay Now"
+msgstr "Վճարել հիմա"
+
+msgid "Pay to"
+msgstr "Վճարել"
+
+msgid "Pay to many"
+msgstr "&Վճարել շատ"
+
+msgid "Pending"
+msgstr "Սպասում"
+
+msgid "Please wait"
+msgstr "Խնդրում ենք սպասել"
+
+msgid "Please wait..."
+msgstr "Խնդրում ենք սպասել..."
+
+msgid "Preferences"
+msgstr "Կարգավորումներ"
+
+msgid "Preview"
+msgstr "Նախադիտում"
+
+msgid "Private key"
+msgstr "Մասնավոր բանալի"
+
+msgid "Private keys"
+msgstr "Մասնավոր բանալիներ"
+
+msgid "Proxy user"
+msgstr "Պրոքսի օգտատեր"
+
+msgid "Public key"
+msgstr "Բաց բանալի"
+
+msgid "QR code"
+msgstr "QR Կոդ"
+
+msgid "Read QR code"
+msgstr "Կարդալ QR կոդ"
+
+msgid "Read file"
+msgstr "Կարդալ ֆայլը"
+
+msgid "Remove"
+msgstr "Ջնջել"
+
+msgid "SSL certificate"
+msgstr "SSL վկայական"
+
+msgid "Save"
+msgstr "Պահպանել"
+
+msgid "Save as BIP70 file"
+msgstr "Պահպանել BIP70 ֆայլը"
+
+msgid "Seed"
+msgstr "Սերմեր"
+
+msgid "Seed Type"
+msgstr "Սերմերի Տեսակը"
+
+msgid "Send"
+msgstr "Ուղարկել"
+
+msgid "Server"
+msgstr "Սերվեր"
+
+msgid "Settings"
+msgstr "Կարգավորումներ"
+
+msgid "Show"
+msgstr "Ցույց տալ"
+
+msgid "Show/Hide"
+msgstr "Ցույց Տալ/Թաքցնել"
+
+msgid "Sign"
+msgstr "Նշան"
+
+msgid "Size:"
+msgstr "Չափ․"
+
+msgid "Source"
+msgstr "Աղբյուր"
+
+msgid "Status"
+msgstr "Կարգավիճակ"
+
+msgid "Status:"
+msgstr "Կարգավիճակ․"
+
+msgid "Success"
+msgstr "Հաջողություն"
+
+msgid "Sweep"
+msgstr "Հավաքել"
+
+msgid "Total size"
+msgstr "Ընդհանուր չափը"
+
+msgid "Transaction"
+msgstr "Գործարք"
+
+msgid "Transaction ID"
+msgstr "Փոխանցման ID"
+
+msgid "Transaction ID:"
+msgstr "Փոխանցման ID․"
+
+msgid "Transaction saved successfully"
+msgstr "Գործարքը հաջողությամբ կատարվեց"
+
+msgid "Transactions"
+msgstr "Գործարքներ"
+
+msgid "Unknown"
+msgstr "Անհայտ"
+
+msgid "Use SSL"
+msgstr "Օգտագործել SSL"
+
+msgid "Use Tor Proxy"
+msgstr "Օգտագործել Tor Պրոքսի"
+
+msgid "Verify"
+msgstr "Ստուգել"
+
+msgid "Version"
+msgstr "Տարբերակ"
+
+msgid "Video Device"
+msgstr "Սարքի Տեսանյութ"
+
+msgid "WARNING"
+msgstr "ԶԳՈՒՇԱՑՈՒՄ"
+
+msgid "Wallet"
+msgstr "Դրամապանակ"
+
+msgid "Warning"
+msgstr "Զգուշացում"
+
+msgid "low fee"
+msgstr "ցածր վճար"
+
+msgid "please wait..."
+msgstr "խնդրում ենք սպասել..."
+
+msgid "unconfirmed"
+msgstr "չփարատված"
+
+msgid "unknown"
+msgstr "անհայտ"
+
+msgid "unknown (low fee)"
+msgstr "անհայտ (ցածր վճար)"
+
+msgid "unverified"
+msgstr "չճշտված"
+
+msgid "watching only"
+msgstr "միայն դիտել"

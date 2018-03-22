@@ -1,0 +1,109 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-08-25 05:31-0400\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Slovenian\n"
+"Language: sl_SI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: sl\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid "&Documentation"
+msgstr "Dokumentacija"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "1 dan"
+
+msgid "1 hour"
+msgstr "1 ura"
+
+msgid "1 week"
+msgstr "1 teden"
+
+msgid "Address"
+msgstr "Naslov"
+
+msgid "Address:"
+msgstr "Naslov:"
+
+msgid "Amount"
+msgstr "Znesek"
+
+msgid "Balance"
+msgstr "Stanje"
+
+msgid "Description"
+msgstr "Opis"
+
+msgid "Error"
+msgstr "Napaka"
+
+msgid "Fee"
+msgstr "Provizija"
+
+msgid "History"
+msgstr "Zgodovina"
+
+msgid "Invalid Address"
+msgstr "Neveljaven naslov"
+
+msgid "Invalid Amount"
+msgstr "Neveljaven znesek"
+
+msgid "Invalid Bitcoin Address"
+msgstr "Neveljaven Bitcoin naslov"
+
+msgid "Message"
+msgstr "Sporočilo"
+
+msgid "New Contact"
+msgstr "Nov kontakt"
+
+msgid "Not connected"
+msgstr "Niste povezani"
+
+msgid "Not enough funds"
+msgstr "Premalo sredstev"
+
+msgid ""
+"Number of zeros displayed after the decimal point. For example, if this is "
+"set to 2, \"1.\" will be displayed as \"1.00\""
+msgstr "Število decimalk"
+
+msgid "OK"
+msgstr "V redu"
+
+msgid "Password"
+msgstr "Geslo"
+
+msgid "Pay to"
+msgstr "Prejemnik"
+
+msgid "Payment sent."
+msgstr "Nakazilo je poslano."
+
+msgid "Please enter your password"
+msgstr "Prosim vnesite geslo"
+
+msgid "Receive"
+msgstr "Prejmi"
+
+msgid "Save"
+msgstr "Shrani"
+
+msgid "Send"
+msgstr "Pošlji"
+
+msgid "Synchronizing..."
+msgstr "Sinhroniziram..."

@@ -1,0 +1,286 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-08-25 05:30-0400\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Kyrgyz\n"
+"Language: ky_KG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: ky\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid "&About"
+msgstr "Electrum &тууралуу"
+
+msgid "&Documentation"
+msgstr "&Документация"
+
+msgid "&Export"
+msgstr "&Экспорттоо"
+
+msgid "&File"
+msgstr "&Файл"
+
+msgid "&From QR code"
+msgstr "QR-&коддон"
+
+msgid "&From file"
+msgstr "&Файлдан"
+
+msgid "&From text"
+msgstr "&Тексттен"
+
+msgid "&Help"
+msgstr "&Жардам"
+
+msgid "&Import"
+msgstr "&Импорттоо"
+
+msgid "&Load transaction"
+msgstr "Транзакцияны &жүктөө"
+
+msgid "&Open"
+msgstr "&Ачуу"
+
+msgid "&Pay to many"
+msgstr "&Көп адамдарга төлөө"
+
+msgid "&Quit"
+msgstr "&Чыгуу"
+
+msgid "&Report Bug"
+msgstr "Катаны маалымдоо"
+
+msgid "&Tools"
+msgstr "&Аспаптар"
+
+msgid "&Wallet"
+msgstr "&Капчык"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "1 күн"
+
+msgid "1 hour"
+msgstr "1 саат"
+
+msgid "1 week"
+msgstr "1 жума"
+
+msgid "Address"
+msgstr "Дарек"
+
+msgid "Address:"
+msgstr "Дарек:"
+
+msgid "Amount"
+msgstr "Сумма"
+
+msgid "Amount to be sent."
+msgstr "Жөнөтүлө турган сумма."
+
+msgid "Back"
+msgstr "Артка"
+
+msgid "Balance"
+msgstr "Баланс"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Жокко чыгаруу"
+
+msgid "Clear"
+msgstr "Тазалоо"
+
+msgid "Close"
+msgstr "Жабуу"
+
+msgid "Confirm Password:"
+msgstr "Сыр сөздү кайталаңыз:"
+
+msgid "Contacts"
+msgstr "Байланыштар"
+
+msgid "Copy"
+msgstr "Көчүрүү"
+
+msgid "Copy and Close"
+msgstr "Көчүрүп жабуу"
+
+msgid "Current Password:"
+msgstr "Кезектеги пароль:"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Date: %s"
+msgstr "Дата: %s"
+
+msgid "Default Servers"
+msgstr "Жарыяланбас серверлери"
+
+msgid "Delete"
+msgstr "Өчүрүү"
+
+msgid "Description"
+msgstr "Баяндамасы"
+
+msgid "Enter Password"
+msgstr "Пароль киргизиңиз"
+
+msgid "Error"
+msgstr "Ката"
+
+msgid "Exit Electrum"
+msgstr "Electrum-дан чыгуу"
+
+msgid "History"
+msgstr "Тарых"
+
+msgid "Import"
+msgstr "Импорттоо"
+
+msgid "Inputs"
+msgstr "Кириштер"
+
+msgid "Invalid Address"
+msgstr "Дареги туура эмес"
+
+msgid "Language"
+msgstr "Тил"
+
+msgid "Load transaction"
+msgstr "Транзакцияны жүктөө"
+
+msgid "Message"
+msgstr "Билдирүү"
+
+msgid "Network"
+msgstr "Тармак"
+
+msgid "New"
+msgstr "Жаңы"
+
+msgid "Next"
+msgstr "Кийинки"
+
+msgid "No Wallet"
+msgstr "Капчык жок"
+
+msgid "OK"
+msgstr "Жарайт"
+
+msgid "Outputs"
+msgstr "Чыгыштар"
+
+msgid "Password"
+msgstr "Сырсөзү"
+
+msgid "Preferences"
+msgstr "Касиеттери"
+
+msgid "Private key"
+msgstr "Жеке ачкыч"
+
+msgid "Proceed?"
+msgstr "Улантуу?"
+
+msgid "QR code"
+msgstr "QR-код"
+
+msgid "Remove"
+msgstr "Өчүрүү"
+
+msgid "Reporting Bugs"
+msgstr "Каталарды маалымдоо"
+
+msgid "SSL certificate"
+msgstr "SSL сертификаты"
+
+msgid "Save"
+msgstr "Сактоо"
+
+msgid "Seed"
+msgstr "Seed"
+
+msgid "Seed Type"
+msgstr "Seed түрү"
+
+msgid "Select server automatically"
+msgstr "Серверди автоматтуу түрдө тандоо"
+
+msgid "Select server manually"
+msgstr "Серверди колго тандоо"
+
+msgid "Select your transaction file"
+msgstr "Транзакция файлыңызды тандаңыз"
+
+msgid "Send"
+msgstr "Жөнөтүү"
+
+msgid "Sending"
+msgstr "Жөнөтүлүүдө"
+
+msgid "Server"
+msgstr "Сервери"
+
+msgid "Settings"
+msgstr "Ырастоолор"
+
+msgid "Show/Hide"
+msgstr "Көрсөтүү/Жашыруу"
+
+msgid "Success"
+msgstr "Ийгиликтүү"
+
+msgid "Synchronizing..."
+msgstr "Синхрондоштурууда..."
+
+msgid "Transaction"
+msgstr "Транзакция"
+
+msgid "Transaction:"
+msgstr "Транзакция:"
+
+msgid "Transactions"
+msgstr "Транзакциялар"
+
+msgid "Use SSL"
+msgstr "SSL колдонуу"
+
+msgid "Verify"
+msgstr "Текшерүү"
+
+msgid "Version"
+msgstr "Версия"
+
+msgid "Video Device"
+msgstr "Видео түзмөк"
+
+msgid "WARNING"
+msgstr "ЭСКЕРТҮҮ"
+
+msgid "Warning"
+msgstr "Эскертүү"
+
+msgid "from your wallet?"
+msgstr "сиздин капчыктан?"
+
+msgid "json"
+msgstr "json"
+
+msgid "please wait..."
+msgstr "күтө туруңуз..."
+
+msgid "unverified"
+msgstr "текшериле элек"

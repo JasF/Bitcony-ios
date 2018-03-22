@@ -1,0 +1,90 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2018-01-11 19:18-0500\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Thai\n"
+"Language: th_TH\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: th\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr " เมสเชนเจอพอย"
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr " %(txs)s %(amount)s"
+
+msgid "&About"
+msgstr "About"
+
+msgid "&Documentation"
+msgstr "Ion"
+
+msgid "&Donate to server"
+msgstr "Dfu"
+
+msgid "&Encrypt/decrypt message"
+msgstr "Fot"
+
+msgid "&Export"
+msgstr "Tam"
+
+msgid "&File"
+msgstr "Fil"
+
+msgid "&From QR code"
+msgstr "Qr"
+
+msgid "&From file"
+msgstr "From fil"
+
+msgid "&From text"
+msgstr "F. T"
+
+msgid "&From the blockchain"
+msgstr "F. Ba"
+
+msgid "&Help"
+msgstr "Sh"
+
+msgid "&Import"
+msgstr "Im"
+
+msgid "&Labels"
+msgstr "La"
+
+msgid "&Load transaction"
+msgstr "Lo"
+
+msgid "&Master Public Keys"
+msgstr "Ma"
+
+msgid "&Network"
+msgstr "Net"
+
+msgid "&New/Restore"
+msgstr "Rest"
+
+msgid "&Official website"
+msgstr "Ww"
+
+msgid "&Open"
+msgstr "&เปิด"
+
+msgid "&Password"
+msgstr "Snu all"
+
+msgid "&Pay to many"
+msgstr "Pay"
+
+msgid "&Plugins"
+msgstr "Piu"

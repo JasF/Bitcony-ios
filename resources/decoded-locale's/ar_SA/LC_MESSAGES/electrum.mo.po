@@ -1,0 +1,1026 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2018-02-19 06:45-0500\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Arabic\n"
+"Language: ar_SA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: ar\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr " هذه الإعدادات تؤثر على الحقول في التبويب \"إرسال\""
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr ""
+"؜\n"
+"%(txs)sتم استلام اجراءات جديدة، اجمالي ما تم استلامه في الإجراءات الجديدة هو"
+"%(amount)s"
+
+msgid "&About"
+msgstr "&حَوْل"
+
+msgid "&Addresses"
+msgstr "و عناوين"
+
+msgid "&Documentation"
+msgstr "&التوثيق"
+
+msgid "&Donate to server"
+msgstr "و التبرع للخادم"
+
+msgid "&Encrypt/decrypt message"
+msgstr "&تشفير/فك تشفير رسالة"
+
+msgid "&Export"
+msgstr "&تصدير"
+
+msgid "&File"
+msgstr "&ملف"
+
+msgid "&From QR code"
+msgstr "&من رمز QR"
+
+msgid "&From file"
+msgstr "&من ملف"
+
+msgid "&From text"
+msgstr "&من نص"
+
+msgid "&From the blockchain"
+msgstr "&من blockchain"
+
+msgid "&Help"
+msgstr "&مساعدة"
+
+msgid "&History"
+msgstr "و الأرشيف"
+
+msgid "&Import"
+msgstr "&استيراد"
+
+msgid "&Labels"
+msgstr "و تسميات"
+
+msgid "&Load transaction"
+msgstr "&حمل الحوالة"
+
+msgid "&Master Public Keys"
+msgstr "&المفاتيح العامة الرئيسية"
+
+msgid "&Network"
+msgstr "&شبكة"
+
+msgid "&New"
+msgstr "و جديد"
+
+msgid "&New/Restore"
+msgstr "&جديد/استعادة"
+
+msgid "&Official website"
+msgstr "&الموقع الرسمي"
+
+msgid "&Open"
+msgstr "&فتح"
+
+msgid "&Password"
+msgstr "&كلمة المرور"
+
+msgid "&Pay to many"
+msgstr "و الدفع للعديدين"
+
+msgid "&Plugins"
+msgstr "إضافات"
+
+msgid "&Private keys"
+msgstr "&مفاتيح خاصة"
+
+msgid "&Quit"
+msgstr "&خروج"
+
+msgid "&Recently open"
+msgstr "ومفتوح مؤخرا"
+
+msgid "&Report Bug"
+msgstr "&تبليغ عن علة"
+
+msgid "&Save Copy"
+msgstr "&حفظ نسخة"
+
+msgid "&Seed"
+msgstr "&بذرة"
+
+msgid "&Sign/verify message"
+msgstr "&توقيع/توثيق رسالة"
+
+msgid "&Sweep"
+msgstr "و مسح"
+
+msgid "&Tools"
+msgstr "&أدوات"
+
+msgid "&View"
+msgstr "و المشاهدة"
+
+msgid "&Wallet"
+msgstr "&محفظة"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "١يوم"
+
+msgid "1 hour"
+msgstr "١ساعة"
+
+msgid "1 week"
+msgstr "١أسبوع"
+
+msgid "A copy of your wallet file was created in"
+msgstr "نسخة من ملف محفظتك أنشئ في"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"يتم إضافة رسوم للحوالة تلقائياً. تستطيع تغييرها. الرسوم المضافة تزيد حسب حجم "
+"الحوالة"
+
+msgid "Add Cosigner"
+msgstr "اضافة مساعد موقع"
+
+msgid "Additional fees"
+msgstr "رسوم اضافية"
+
+msgid "Address"
+msgstr "عنوان"
+
+msgid "Address:"
+msgstr "العنوان:"
+
+msgid "Always"
+msgstr "دائما"
+
+msgid "Amount"
+msgstr "القيمة"
+
+msgid "Amount received:"
+msgstr "القيمة المستقبلة:"
+
+msgid "Amount sent:"
+msgstr "القيمة المرسلة:"
+
+msgid "Amount to be sent"
+msgstr "القيمة المراد ارسالها"
+
+msgid "Amount to be sent."
+msgstr "القيمة لتُرسل."
+
+msgid "Appearance"
+msgstr "المظهر"
+
+msgid "Auto connect"
+msgstr "اتصال تلقائي"
+
+msgid "BIP39 seed"
+msgstr "BIP39 جزء"
+
+msgid ""
+"BIP39 seeds can be imported in Electrum so that users can access funds "
+"locked in other wallets."
+msgstr ""
+"BIP39 جزء يمكن استيراده في اليكتروم للسماح للمستخدمين بالولوج الى الأموال "
+"المحتجزة داخل محافظهم."
+
+msgid "Back"
+msgstr "بالرجوع"
+
+msgid "Balance"
+msgstr "الرصيد"
+
+msgid "Base unit"
+msgstr "وحدة القاعدة"
+
+msgid "Base unit of your wallet."
+msgstr "جزء اساسي من محفظتك."
+
+msgid ""
+"Before reporting a bug, upgrade to the most recent version of Electrum "
+"(latest release or git HEAD), and include the version number in your report."
+msgstr ""
+"قبل الإبلاغ عن الفايروس، قم بتحديث اليكتروم الى النسخة الأحدث (الصادرة "
+"مؤخراً)، واحرص على ذكر رقم النسخة في تقريرك."
+
+msgid "Bitcoin Address is None"
+msgstr "عنوان بيتكوين غير موجود"
+
+msgid ""
+"Bitcoin address where the payment should be received. Note that each payment "
+"request uses a different Bitcoin address."
+msgstr ""
+"عنوان بيت كوين حيث يتم استلام المدفوعات. لاحظ أن كل طلب دفع يستخدم عنوان بيت "
+"كوين مختلف."
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"حوالة بتكوين غير مجانية بشكل عام. هناك رسوم للحوالة يتم دفعها من قبل المرسل"
+
+msgid "Blockchain"
+msgstr "Blockchain"
+
+msgid "Broadcast"
+msgstr "بث"
+
+msgid "Broadcasting transaction..."
+msgstr "بث الإجراء..."
+
+msgid "Bump Fee"
+msgstr "رسوم اضافية"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "Cannot broadcast transaction"
+msgstr "لا يمكن عرض الإجراء"
+
+msgid "Cannot read file"
+msgstr "تعذر قراءة الملف"
+
+msgid "Chain split detected at block %d"
+msgstr "اكتشاف تصدع في السلسلة عند حدود%d"
+
+msgid "Change Password"
+msgstr "تعديل كلمة المرور"
+
+msgid "Changing PIN code."
+msgstr "تغيير رمز PIN."
+
+msgid "Child Pays for Parent"
+msgstr "يدفع الطفل للوالدة أو الوالدة"
+
+msgid "Child pays for parent"
+msgstr "يدفع الطفل للوالد"
+
+msgid "Choose a password to encrypt your wallet keys."
+msgstr "قم بإختيار كلمة مرور لتشفير مفاتيح محفظتك."
+
+msgid "Choose a server"
+msgstr "اختيار خادم"
+
+msgid ""
+"Choose coin (UTXO) selection method.  The following are available:\n"
+"\n"
+msgstr ""
+"اختر اسلوب (UTXO). الأمور التالية متاحة:\n"
+"\n"
+
+msgid "Choose the number of signatures needed to unlock funds in your wallet:"
+msgstr "اختر عدد التواقيع المطلوبة لفك قفل الأموال في محفظتك:"
+
+msgid ""
+"Choose which online block explorer to use for functions that open a web "
+"browser"
+msgstr ""
+"اختر أي مستكشف إغلاق عبر الانترنت لإستخدامه في الوظائف التي تفتح متصفح شبكة"
+
+msgid "Choose your chain"
+msgstr "اختر سلسلتك"
+
+msgid "Choose..."
+msgstr "اختر..."
+
+msgid "Clear"
+msgstr "مسح"
+
+msgid "Close"
+msgstr "إغلاق"
+
+msgid "Co&ins"
+msgstr "عدا ونقدا"
+
+msgid "Coin selection"
+msgstr "اخيار العملة"
+
+msgid "Con&sole"
+msgstr "Con&sole"
+
+msgid "Con&tacts"
+msgstr "Con&tacts"
+
+msgid "Confirm Passphrase:"
+msgstr "تأكيد عبارة المرور:"
+
+msgid "Confirm Password:"
+msgstr "تأكيد كلمة السر:"
+
+msgid "Confirm Seed"
+msgstr "تأكيد المذكرات"
+
+msgid "Confirm new PIN"
+msgstr "‏تأكيد رمز PIN الجديد"
+
+msgid "Connected to %d nodes."
+msgstr "الإتصال ب%d نقاط."
+
+msgid "Contacts"
+msgstr "قائمة العناوين"
+
+msgid "Copy"
+msgstr "نسخ"
+
+msgid "Copy %s"
+msgstr "نسخ %s"
+
+msgid "Copy URI"
+msgstr "نسخ عنوان URL"
+
+msgid "Copy and Close"
+msgstr "نسخ واغلاق"
+
+msgid "Copy to clipboard"
+msgstr "نسخ"
+
+msgid "Could not start Barcode Scanner."
+msgstr "لا يمكن بدء ماسح الرموز."
+
+msgid "Critical Error"
+msgstr "خطأ"
+
+msgid "Current Password:"
+msgstr "كلمة المرور الحالية:"
+
+msgid "Current fee"
+msgstr "الرسوم الحالية"
+
+msgid "Dark/Light"
+msgstr "داكن/فاتح"
+
+msgid "Date"
+msgstr "تاريخ"
+
+msgid "Date: %s"
+msgstr "التاريخ: %s"
+
+msgid "Decrypt"
+msgstr "فك التشفير"
+
+msgid "Default Servers"
+msgstr "الخوادم الأساسية"
+
+msgid "Delete"
+msgstr "حذف"
+
+msgid "Delete invoice?"
+msgstr "حذف الصوت؟"
+
+msgid "Delete wallet?"
+msgstr "حذف المحفظة؟"
+
+msgid "Denomination"
+msgstr "المستثنى"
+
+msgid "Description"
+msgstr "وصف"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "وصف للحوالة - ليس بخياري"
+
+msgid "Details"
+msgstr "تفاصيل"
+
+msgid "Disconnected"
+msgstr "تم قطع الإتصال"
+
+msgid "Display the details of your transactions before signing it."
+msgstr "قم بإلغاء التفاصيل من إجراءاتك قبل تسجيل الدخول اليها."
+
+msgid "Do not store it electronically."
+msgstr "لا تخزنها الكترونياً."
+
+msgid "Do you want to delete '%s'?"
+msgstr "هل تريد حذف\"%s\"؟"
+
+msgid "Do you want to delete the old file"
+msgstr "هل تريد حذف الملف القَديم"
+
+msgid "Do you want to remove"
+msgstr "هل تريد إزالة"
+
+msgid "Do you wish to continue?"
+msgstr "هل تريد المتابعة؟"
+
+msgid "Edit %s"
+msgstr "تحرير %s"
+
+msgid "Edit fees manually"
+msgstr "تحرير الرسوم يدوياً"
+
+msgid "Electrum App"
+msgstr "تطبيق اليكتروم"
+
+msgid "Electrum Plugins"
+msgstr "إضافات إلكتروم"
+
+msgid ""
+"Electrum communicates with remote servers to get information about your "
+"transactions and addresses. The servers all fulfil the same purpose only "
+"differing in hardware. In most cases you simply want to let Electrum pick "
+"one at random.  However if you prefer feel free to select a server manually."
+msgstr ""
+"يتواصل اليكتروم مع مزودين عن بعد للحصول على معلومات عن إجراءاتك وعناوينك، "
+"ينجز جميع المزودين نفس الهدف ولكن بمعدات مختلفة، وفي معظم الحالات كل ما "
+"تحتاجه هو أن تدع اليكتروم يختار واحد من مزودينا عشوائيا، على كل حال يمكنك ان "
+"أردت أن تختار مزودك يدوياً."
+
+msgid ""
+"Electrum connects to several nodes in order to download block headers and "
+"find out the longest blockchain."
+msgstr ""
+"يتواصل اليكتروم مع نقاط التقاء مختلفة من أجل تحميل المواقع وايجاد السلسلة "
+"الأطول للإتصال."
+
+msgid "Electrum is generating your addresses, please wait..."
+msgstr "يقوم اليكتروم بانشاء عناوينك، الرجاء الإنتظار..."
+
+msgid "Electrum preferences"
+msgstr "خيارات إلكتروم"
+
+msgid ""
+"Electrum sends your wallet addresses to a single server, in order to receive "
+"your transaction history."
+msgstr ""
+"يقوم اليكتروم بإرسال عناوين محفظتك لخادم، من إجل استلام أرشيف إجراءاتك."
+
+msgid "Electrum wallet"
+msgstr "محفظة اليكتروم"
+
+msgid "Electrum was unable to copy your wallet file to the specified location."
+msgstr "لم يتمكن اليكتروم من نسخ ملف محفظتك للموقع المحدد."
+
+msgid "Electrum was unable to export your labels."
+msgstr "لم يتمكن اليكتروم من اصدار عناوينك."
+
+msgid "Electrum was unable to import your labels."
+msgstr "لم يتمكن اليكتروم من استيراد عناوينك."
+
+msgid "Electrum was unable to open your transaction file"
+msgstr "لم يتمكن اليكتروم من فتح ملف اجراءاتك"
+
+msgid "Electrum was unable to parse your transaction"
+msgstr "لم يتمكن اليكتروم من تحليل اجراءاتك"
+
+msgid "Electrum was unable to produce a private key-export."
+msgstr "لم يتمكن اليكتروم من اصدار مفتاح تصدير خاص."
+
+msgid "Electrum was unable to produce a transaction export."
+msgstr "لم يتمكن اليكتروم من اصدار مفتاح تصدير خاص."
+
+msgid ""
+"Electrum's focus is speed, with low resource usage and simplifying Bitcoin. "
+"You do not need to perform regular backups, because your wallet can be "
+"recovered from a secret phrase that you can memorize or write on paper. "
+"Startup times are instant because it operates in conjunction with high-"
+"performance servers that handle the most complicated parts of the Bitcoin "
+"system.\n"
+"\n"
+msgstr ""
+"يركز اليكتروم على السرعة، مع استخدام منخفض للمصدر وتبسيط للبيت كوين، لن "
+"تحتاج الى القيام بتحديث منتظم لأنك سوف تتمكن من استرداد محفظتك عن طريق كلمة "
+"سرية تقوم بحفظها أو كتابتها، أوقات إعادة البدء ثابتة لأنها تعمل بتناغم مع "
+"خادمين بأداء عالي حيث يقومون بالأجزاء المعقدة من نظام البيت كوين.\n"
+"\n"
+
+msgid "Encrypt"
+msgstr "تشفير"
+
+msgid "Encrypt wallet file"
+msgstr "تشفير ملف المحفظة"
+
+msgid "Encrypt/decrypt Message"
+msgstr "تشفير/فك تشفير رسالة"
+
+msgid "Encrypted"
+msgstr "مشفَّر"
+
+msgid "Enter Passphrase"
+msgstr "ادخل العبارة السرية"
+
+msgid "Enter Password"
+msgstr "أدخل كلمة المرور"
+
+msgid "Enter Seed"
+msgstr "أدخل الكلمات المفتاحية"
+
+msgid "Enter a filename for the copy of your wallet"
+msgstr "أدخل اسم ملف من أجل نسخة من محفظتك"
+
+msgid "Enter a list of outputs in the 'Pay to' field."
+msgstr "ادخل قائمة بالمخرجات في حقل ال(دفع الى)."
+
+msgid "Enter addresses"
+msgstr "أدخل عناوين"
+
+msgid "Enter description"
+msgstr "قم بإدخال وصف"
+
+msgid "Enter new PIN"
+msgstr "أدخل رقم الشخصي PIN الجديد"
+
+msgid "Enter private keys"
+msgstr "أدخل المفاتيح الخاصة"
+
+msgid "Enter private keys:"
+msgstr "أدخل المفاتيح الخاصة:"
+
+msgid ""
+"Enter their master private key (xprv) if you want to be able to sign for "
+"them."
+msgstr "أدخل المفتاح الخاص الرئيسي (xprv) اذا أردت أن تسجل عنهم."
+
+msgid "Enter wallet name"
+msgstr "أدخل اسم المحفظة"
+
+msgid "Enter your PIN code in order to decrypt your seed"
+msgstr "أدخل رمز PIN لتشفير الكلمات المفتاحية"
+
+msgid "Enter your PIN code to confirm deletion of %s"
+msgstr "أدخل رمز PIN لتأكيد الحذف %s"
+
+msgid "Enter your current PIN:"
+msgstr "أدخل رمز PIN الحالي:"
+
+msgid "Enter your password or choose another file."
+msgstr "أدخل كلمة المرور أو إختر ملف أخر."
+
+msgid "Enter your password to proceed"
+msgstr "الرجاء إدخال كلمة المرور للإستمرار"
+
+msgid "Error"
+msgstr "خطأ"
+
+msgid "Exit Electrum"
+msgstr "مغادرة اليكتروم"
+
+msgid "Expected confirmation time"
+msgstr "وقت التأكيد المتوقع"
+
+msgid "Expiration date of your request."
+msgstr "تاريخ انتهاء طلبك."
+
+msgid "Expired"
+msgstr "انتهاء"
+
+msgid ""
+"Expired requests have to be deleted manually from your list, in order to "
+"free the corresponding Bitcoin addresses."
+msgstr ""
+"الطلبات المنتهية يتم حذفها يدويا من قائمتك من أجل اتاحة اامجال لعناوين "
+"بيتكوين المماثلة."
+
+msgid "Expires"
+msgstr "ينتهي"
+
+msgid "Export"
+msgstr "تصدير"
+
+msgid "Export History"
+msgstr "تصدير السجلات/التواريخ"
+
+msgid "Exposing a single private key can compromise your entire wallet!"
+msgstr "الكشف عن مفتاح واحد يمكن أن يهدد محفظتك كاملة!"
+
+msgid "Extend this seed with custom words"
+msgstr "قم بإطالة هذه الكلمات المفتاحية مع كلمات معتادة"
+
+msgid "Failed to update password"
+msgstr "فشل تحديث كلمة المرور"
+
+msgid "Fee"
+msgstr "رسوم"
+
+msgid "Fee:"
+msgstr "رسوم:"
+
+msgid "Fees"
+msgstr "الرسوم"
+
+msgid "Fiat"
+msgstr "أمر"
+
+msgid "Fiat currency"
+msgstr "النقود"
+
+msgid "File"
+msgstr "ملف"
+
+msgid "Final"
+msgstr "النهائي"
+
+msgid "Find"
+msgstr "البحث"
+
+msgid "Follow this branch"
+msgstr "اتبع الفرع"
+
+msgid "Format"
+msgstr "شكل"
+
+msgid "Format: address, amount"
+msgstr "الشكل: العنوان، الكمية"
+
+msgid "From"
+msgstr "من"
+
+msgid "From %d cosigners"
+msgstr "From %d cosigners"
+
+msgid "Height"
+msgstr "الارتفاع"
+
+msgid "Hello World"
+msgstr "مرحبا بالعالم"
+
+msgid "Here is your master public key."
+msgstr "هذا هو مفتاحك العام الرئيسي"
+
+msgid "Hide"
+msgstr "إخفاء"
+
+msgid "History"
+msgstr "تاريخ"
+
+msgid "Host"
+msgstr "المضيف"
+
+msgid "How do you want to connect to a server? "
+msgstr "كيف تريد أن تتصل مع خادم؟"
+
+msgid ""
+"However, BIP39 seeds do not include a version number, which compromises "
+"compatibility with future wallet software."
+msgstr ""
+"على كل حال، الكلمات المفتاحية الخاصة بBIP39 لا تتضمن نسخة ارقام، والذي يضمن "
+"التوافق مع البرمجيات المستقبلية للمحفظة."
+
+msgid "Identity"
+msgstr "هوية"
+
+msgid ""
+"If auto-connect is enabled, Electrum will always use a server that is on the "
+"longest blockchain."
+msgstr ""
+"اذا لم يتم تمكين الاتصال التلقائي سيقوم اليكتروم دوما باستخدام خادم باتصال "
+"طويل المدى."
+
+msgid ""
+"If it is disabled, you have to choose a server you want to use. Electrum "
+"will warn you if your server is lagging."
+msgstr ""
+"اذا لم يتم تمكينه، عليك اختيار الخادم المراد، سيقوم اليكتروم بتحذيرك اذا "
+"تأخر الخادم."
+
+msgid "If the fee is low"
+msgstr "اذا كانت الرسوم متدنية"
+
+msgid "Import"
+msgstr "إستيراد"
+
+msgid "Import private keys"
+msgstr "إستيراد المفاتيح الخاصة"
+
+msgid "Information"
+msgstr "معلومات"
+
+msgid "Input raw transaction"
+msgstr "أدخل حوالة خامة"
+
+msgid "Inputs"
+msgstr "المدخلات"
+
+msgid "Invalid Address"
+msgstr "عنوان غير مقبول"
+
+msgid "Invalid Amount"
+msgstr "مبلغ غير صالح"
+
+msgid "Invalid Bitcoin Address"
+msgstr "عنوان بتكوين غير مقبول"
+
+msgid "Invalid bitcoin URI:"
+msgstr "URI بت كوين غير صالح:"
+
+msgid "Language"
+msgstr "اللغة"
+
+msgid "Load transaction"
+msgstr "حمل الحوالة"
+
+msgid "Master Public Keys"
+msgstr "المفاتيح العامة الرئيسية"
+
+msgid "Memo"
+msgstr "مذكرة"
+
+msgid "Message"
+msgstr "رسالة"
+
+msgid "Name"
+msgstr "إسم"
+
+msgid "Network"
+msgstr "شبكة"
+
+msgid "New"
+msgstr "جديد"
+
+msgid "New Contact"
+msgstr "عنوان جديد"
+
+msgid "New contact"
+msgstr "جهة اتصال جديدة"
+
+msgid "Next"
+msgstr "التالي"
+
+msgid "No message or amount"
+msgstr "لا رسالة أو قيمة"
+
+msgid "No outputs"
+msgstr "لا مخرجات"
+
+msgid "No transactions found for this seed"
+msgstr "لم توجد أي حوالات لهذه البذرة"
+
+msgid "Not connected"
+msgstr "عير متصل"
+
+msgid "Not enough funds"
+msgstr "رصيد غير كافي"
+
+msgid ""
+"Number of zeros displayed after the decimal point. For example, if this is "
+"set to 2, \"1.\" will be displayed as \"1.00\""
+msgstr ""
+"عدد الأصفار الظاهرة بعد الفاصلة. كمثال إذا وضع هذا لـ 2, \".1\" سوف تعرض كـ "
+"\"1.00\""
+
+msgid "OK"
+msgstr "قبول"
+
+msgid "Offline"
+msgstr "غير متصل"
+
+msgid "Online Block Explorer"
+msgstr "متصفح الكتل الأونلاين"
+
+msgid "Open labels file"
+msgstr "فتح ملف مسميات العناوين"
+
+msgid "Outputs"
+msgstr "المخرجات"
+
+msgid "Paid"
+msgstr "مدفوع"
+
+msgid "Password"
+msgstr "كلمة المرور"
+
+msgid "Password was updated successfully"
+msgstr "كلمة المرور حدثت بنجاح"
+
+msgid "Pay Now"
+msgstr "إدفع الآن"
+
+msgid "Pay to"
+msgstr "دفع لــ"
+
+msgid "Payment sent."
+msgstr "تم إرسال الحوالة."
+
+msgid "Please enter your password"
+msgstr "الرجاء إدخال كلمة المرور"
+
+msgid "Preferences"
+msgstr "تفضيلات"
+
+msgid "Private key"
+msgstr "مفتاح خاص"
+
+msgid "Private keys"
+msgstr "مفاتيح خاصة"
+
+msgid "Private keys exported."
+msgstr "تم تصدير المفاتيح الخاصة."
+
+msgid "Public key"
+msgstr "مفتاح عام"
+
+msgid "QR code"
+msgstr "QR رمز"
+
+msgid "Receive"
+msgstr "استقبال"
+
+msgid "Receiving address"
+msgstr "إستقبال عناوين"
+
+msgid "Recipient of the funds."
+msgstr "مستقبِل الحوالة."
+
+msgid "Recovery successful"
+msgstr "الاستعادة نجحت"
+
+msgid "Remove"
+msgstr "إزالة"
+
+msgid "Reporting Bugs"
+msgstr "تبليغ عن علل"
+
+msgid "Requested amount"
+msgstr "القيمة المطلوبة"
+
+msgid "Requestor"
+msgstr "الطالب"
+
+msgid "Save"
+msgstr "حفظ"
+
+msgid "Seed"
+msgstr "بذرة"
+
+msgid "Select file to export your private keys to"
+msgstr "اختر ملفاً لتصدير مفاتيحك الخاصة له"
+
+msgid "Select file to export your wallet transactions to"
+msgstr "حدد ملف لتصدير حوالات محفظتك له"
+
+msgid "Select file to save your labels"
+msgstr "حدد ملف لحفظ مسميات عناوينك"
+
+msgid "Select server manually"
+msgstr "تحديد خادم يدويا"
+
+msgid "Select where to save your signed transaction"
+msgstr "حدد أين تحفظ حوالاتك الموقعة"
+
+msgid "Select which language is used in the GUI (after restart)."
+msgstr "حدد أي لغة ستستخدم في الواجهة الرسومية (بعد إعادة التشغيل)."
+
+msgid "Select your transaction file"
+msgstr "حدد ملف حوالاتك"
+
+msgid "Send"
+msgstr "أرسل"
+
+msgid "Server"
+msgstr "خادم"
+
+msgid "Settings"
+msgstr "إعدادات"
+
+msgid "Sign"
+msgstr "بتوقيع"
+
+msgid "Sign/verify Message"
+msgstr "توقيع/توثيق رسالة"
+
+msgid "Signature"
+msgstr "ختم التوقيع"
+
+msgid "Signature verified"
+msgstr "التوقيع متحقق منه"
+
+msgid "Status"
+msgstr "الحالة"
+
+msgid "Success"
+msgstr "نجح"
+
+msgid "Synchronizing..."
+msgstr "جاري المزامنة..."
+
+msgid ""
+"The amount of fee can be decided freely by the sender. However, transactions "
+"with low fees take more time to be processed."
+msgstr ""
+"يمكن تحديد مقدار الرسوم من قبل المرسل، ولكن الحوالات المرفق بها رسوم أدنى قد "
+"تستغرق وقتاً أطول للإتمام"
+
+msgid ""
+"The description is not sent to the recipient of the funds. It is stored in "
+"your wallet file, and displayed in the 'History' tab."
+msgstr ""
+"وصف الحوالة لا يتم إرساله إلى مستقبل الحوالة، بل يظل محفوظاً في ملف محفظتك "
+"ويعرض في ثسم تاريخ الحوالات"
+
+msgid "The following addresses were added"
+msgstr "تم إضافة العناوين التالية"
+
+msgid "The following inputs could not be imported"
+msgstr "فشل تحميل المدخلات التالية"
+
+msgid ""
+"This seed will allow you to recover your wallet in case of computer failure."
+msgstr "هذه البذرة ستمكنك من استعادة محفظتك في حالة تعطل حاسوبك."
+
+msgid "This wallet has no seed"
+msgstr "المحفظة ليس لها بذرة"
+
+msgid "Transaction"
+msgstr "حوالة"
+
+msgid "Transaction ID"
+msgstr "رقم تعريف الحوالة"
+
+msgid "Transaction ID:"
+msgstr "رقم تعريف الحوالة:"
+
+msgid "Transaction saved successfully"
+msgstr "الحوالة حفظت بنجاح"
+
+msgid "Transaction:"
+msgstr "حوالة:"
+
+msgid "Unable to create csv"
+msgstr "غير ممكن إنشاء CSV"
+
+msgid "Unable to export history"
+msgstr "غير ممكن تصدير التواريخ"
+
+msgid "Use change addresses"
+msgstr "أستخدم ميزة عناوين عوائد الحوالة"
+
+msgid "Verify"
+msgstr "تأكيد"
+
+msgid "Version"
+msgstr "رقم الإصدار"
+
+msgid "View on block explorer"
+msgstr "رؤية من متصفح الكتل"
+
+msgid "WARNING"
+msgstr "تحذير"
+
+msgid "WARNING: ALL your private keys are secret."
+msgstr "تحذير: كل مفاتيحك الخاصة سرية."
+
+msgid "Warning"
+msgstr "تحذير"
+
+msgid ""
+"You may enter a Bitcoin address, a label from your list of contacts (a list "
+"of completions will be proposed), or an alias (email-like address that "
+"forwards to a Bitcoin address)"
+msgstr ""
+"تستطيع إدخال عنوان بتكوين، أو وسم من قائمة عناوينك، أو إسماً مستعاراً يؤول "
+"لعنوان بتكوين"
+
+msgid "Your labels were imported from"
+msgstr "مكان استيراد مسمياتك"
+
+msgid "Your seed is important!"
+msgstr "بذرتك مهمة!"
+
+msgid "Your wallet history has been successfully exported."
+msgstr "تاريخ محفظتك تم تصديره بنجاح."
+
+msgid "are frozen"
+msgstr "هي مجمدة"
+
+msgid "from your wallet?"
+msgstr "من محفظتك؟"
+
+msgid "json"
+msgstr "json"
+
+msgid "please wait..."
+msgstr "الرجاء الإنتظار..."
+
+msgid "unknown"
+msgstr "غير معروف"
+
+msgid "unknown (low fee)"
+msgstr "غير معلوم"
+
+msgid "unverified"
+msgstr "لم يتم التحقق منه"
+
+msgid "watching only"
+msgstr "مشاهدة فقط"

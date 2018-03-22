@@ -1,0 +1,1760 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-09-03 00:27-0400\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Latvian\n"
+"Language: lv_LV\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==0 ? 0 : n%10==1 && n%100!=11 ? 1 : 2);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: lv\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr "Šie iestatījumi iespaido lauciņus sūtīšanas cilnē."
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr ""
+"Saņemtas %(txs)s jaunas transakcijas. Kopējā saņemtā summa jaunajās "
+"transakcijās %(amount)s"
+
+msgid "&About"
+msgstr "&Par"
+
+msgid "&Addresses"
+msgstr "&Adreses"
+
+msgid "&Documentation"
+msgstr "&Dokumentācija"
+
+msgid "&Donate to server"
+msgstr "Zie&dot serverim"
+
+msgid "&Encrypt/decrypt message"
+msgstr "&Šifrēt/atšifrēt ziņojumu"
+
+msgid "&Export"
+msgstr "&Eksportēt"
+
+msgid "&File"
+msgstr "&Fails"
+
+msgid "&From QR code"
+msgstr "No &QR koda"
+
+msgid "&From file"
+msgstr "No &faila"
+
+msgid "&From text"
+msgstr "No &teksta"
+
+msgid "&From the blockchain"
+msgstr "No &blokķēdes"
+
+msgid "&Help"
+msgstr "&Palīdzība"
+
+msgid "&History"
+msgstr "&Vēsture"
+
+msgid "&Import"
+msgstr "&Importēt"
+
+msgid "&Labels"
+msgstr "&Etiķetes"
+
+msgid "&Load transaction"
+msgstr "&Ielādēt transakciju"
+
+msgid "&Master Public Keys"
+msgstr "&Galvenās publiskās atslēgas"
+
+msgid "&Network"
+msgstr "&Tīkls"
+
+msgid "&New"
+msgstr "&Jauns"
+
+msgid "&New/Restore"
+msgstr "&Jauns/atjaunot"
+
+msgid "&Official website"
+msgstr "&Oficiālā tīmekļa vietne"
+
+msgid "&Open"
+msgstr "&Atvērt"
+
+msgid "&Password"
+msgstr "&Parole"
+
+msgid "&Pay to many"
+msgstr "&Maksāt vairākiem"
+
+msgid "&Plugins"
+msgstr "&Spraudņi"
+
+msgid "&Private keys"
+msgstr "&Privātās atslēgas"
+
+msgid "&Quit"
+msgstr "&Iziet"
+
+msgid "&Recently open"
+msgstr "&Nesen atvērtie"
+
+msgid "&Report Bug"
+msgstr "&Ziņot par kļūdu"
+
+msgid "&Save Copy"
+msgstr "&Saglabāt kopiju"
+
+msgid "&Seed"
+msgstr "&Sēkla"
+
+msgid "&Sign/verify message"
+msgstr "&Parakstīt/pārbaudīt ziņojumu"
+
+msgid "&Sweep"
+msgstr "&Izslaucīt"
+
+msgid "&Tools"
+msgstr "&Rīki"
+
+msgid "&View"
+msgstr "Skats"
+
+msgid "&Wallet"
+msgstr "&Maciņš"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "1 diena"
+
+msgid "1 hour"
+msgstr "1 stunda"
+
+msgid "1 week"
+msgstr "1 nedēļa"
+
+msgid "A copy of your wallet file was created in"
+msgstr "Maciņa kopija tika izveidota"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"Ieteicamā transakcijas komisijas maksa tiek automātiski pievienota šajā "
+"lauciņā, jūs varat to pārrakstīt. Ieteicamā komisijas maksa palielinās līdz "
+"ar transakcijas izmēru."
+
+msgid "Add Cosigner"
+msgstr "Pievienot papildparakstītāju"
+
+msgid "Additional fees"
+msgstr "Papildu komisijas maksas"
+
+msgid "Address"
+msgstr "Adrese"
+
+msgid "Address:"
+msgstr "Adrese:"
+
+msgid "Always"
+msgstr "Vienmēr"
+
+msgid "Amount"
+msgstr "Summa"
+
+msgid "Amount received:"
+msgstr "Saņemtā summa:"
+
+msgid "Amount sent:"
+msgstr "Nosūtītā summa:"
+
+msgid "Amount to be sent"
+msgstr "Summa nosūtīšanai"
+
+msgid "Amount to be sent."
+msgstr "Summa, cik nosūtīt."
+
+msgid "Appearance"
+msgstr "Izskats"
+
+msgid "Auto connect"
+msgstr "Savienoties automātiski"
+
+msgid "BIP39 seed"
+msgstr "BIP39 sēkla"
+
+msgid ""
+"BIP39 seeds can be imported in Electrum so that users can access funds "
+"locked in other wallets."
+msgstr ""
+"Electrum var importēt BIP39 sēklas, lai lietotāji varētu piekļūt citos "
+"maciņos piesaistītajiem līdzekļiem."
+
+msgid "Back"
+msgstr "Atpakaļ"
+
+msgid "Balance"
+msgstr "Bilance"
+
+msgid "Base unit"
+msgstr "Pamata vienība"
+
+msgid "Base unit of your wallet."
+msgstr "Maciņa pamata vienība."
+
+msgid ""
+"Before reporting a bug, upgrade to the most recent version of Electrum "
+"(latest release or git HEAD), and include the version number in your report."
+msgstr ""
+"Pirms ziņot par problēmu, pārliecinieties vai izmantojat jaunāko Electrum "
+"versiju (jaunāko laidienu vai git HEAD), un iekļaujiet versijas numuru jūsu "
+"ziņojumā."
+
+msgid "Bitcoin Address is None"
+msgstr "Bitcoin adrese ir Nekas"
+
+msgid ""
+"Bitcoin address where the payment should be received. Note that each payment "
+"request uses a different Bitcoin address."
+msgstr ""
+"Bitcoin adrese kurā ir jāsaņem maksājums. Piezīme, katrs maksājuma "
+"pieprasījums izmanto jaunu Bitcoin adresi."
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"Bitcoin transakcijas nav bezmaksas. Transakcijas komisijas maksu maksā "
+"līdzekļu nosūtītājs."
+
+msgid "Blockchain"
+msgstr "Blokķēde"
+
+msgid "Broadcast"
+msgstr "Apraide"
+
+msgid "Broadcasting transaction..."
+msgstr "Apraida transakciju..."
+
+msgid "Bump Fee"
+msgstr "Palielināt komisijas maksu"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Atcelt"
+
+msgid "Cannot broadcast transaction"
+msgstr "Neizdevās apraidīt transakciju"
+
+msgid "Cannot read file"
+msgstr "Nevar nolasīt failu"
+
+msgid "Chain split detected at block %d"
+msgstr "Atklāta ķēdes sadalīšanās blokā %d"
+
+msgid "Change Password"
+msgstr "Mainīt paroli"
+
+msgid "Changing PIN code."
+msgstr "Maina PIN kodu."
+
+msgid "Child Pays for Parent"
+msgstr "Bērns maksā par vecākiem"
+
+msgid "Child pays for parent"
+msgstr "Bērns maksā par vecākiem"
+
+msgid "Choose a password to encrypt your wallet keys."
+msgstr "Izvēlieties paroli, lai šifrētu maciņa atslēgas."
+
+msgid "Choose a server"
+msgstr "Izvēlieties serveri"
+
+msgid ""
+"Choose coin (UTXO) selection method.  The following are available:\n"
+"\n"
+msgstr ""
+"Izvēlieties monētu (UTXO) atlases metodi.  Šādas ir pieejamas:\n"
+"\n"
+
+msgid "Choose the number of signatures needed to unlock funds in your wallet:"
+msgstr ""
+"Izvēlieties, cik pakrasti nepieciešami, lai atbrīvotu līdzekļus jūsu maciņā:"
+
+msgid ""
+"Choose which online block explorer to use for functions that open a web "
+"browser"
+msgstr "Izvēlieties blokķēdes pārlūku, kuru atvērt tīmekļa pārlūkprogrammā"
+
+msgid "Choose your chain"
+msgstr "Izvēlieties savu ķēdi"
+
+msgid "Choose..."
+msgstr "Izvēlēties..."
+
+msgid "Clear"
+msgstr "Notīrīt"
+
+msgid "Close"
+msgstr "Aizvērt"
+
+msgid "Co&ins"
+msgstr "&Monētas"
+
+msgid "Coin selection"
+msgstr "Monētu izvēle"
+
+msgid "Con&sole"
+msgstr "Kon&sole"
+
+msgid "Con&tacts"
+msgstr "Kon&takti"
+
+msgid "Confirm Passphrase:"
+msgstr "Apstiprināt paroles frāzi:"
+
+msgid "Confirm Password:"
+msgstr "Apstipriniet paroli:"
+
+msgid "Confirm Seed"
+msgstr "Apstipriniet sēklu"
+
+msgid "Confirm new PIN"
+msgstr "Apstipriniet jauno PIN"
+
+msgid "Connected to %d nodes."
+msgstr "Savienots ar %d mezgliem."
+
+msgid "Contacts"
+msgstr "Kontakti"
+
+msgid "Copy"
+msgstr "Kopēt"
+
+msgid "Copy %s"
+msgstr "Kopēt \"%s\""
+
+msgid "Copy URI"
+msgstr "Kopēt vietrādi"
+
+msgid "Copy and Close"
+msgstr "Kopēt un aizvērt"
+
+msgid "Copy to clipboard"
+msgstr "Kopēt uz starpliktuvi"
+
+msgid "Could not start Barcode Scanner."
+msgstr "Neizdevās palaist svītru koda skeneri."
+
+msgid "Critical Error"
+msgstr "Kritiska kļūda"
+
+msgid "Current Password:"
+msgstr "Pašreizējā parole:"
+
+msgid "Current fee"
+msgstr "Pašreizējā komisijas maksa"
+
+msgid "Dark/Light"
+msgstr "Tumšs/gaišs"
+
+msgid "Date"
+msgstr "Datums"
+
+msgid "Date: %s"
+msgstr "Datums: %s"
+
+msgid "Decrypt"
+msgstr "Atšifrēt"
+
+msgid "Default Servers"
+msgstr "Noklusējuma serveri"
+
+msgid "Delete"
+msgstr "Dzēst"
+
+msgid "Delete invoice?"
+msgstr "Dzēst rēķinu?"
+
+msgid "Delete wallet?"
+msgstr "Dzēst maciņu?"
+
+msgid "Denomination"
+msgstr "Apzīmējums"
+
+msgid "Description"
+msgstr "Apraksts"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "Transakcijas apraksts (nav obligāts)."
+
+msgid "Details"
+msgstr "Sīkāka informācija"
+
+msgid "Disconnected"
+msgstr "Atvienots"
+
+msgid "Display the details of your transactions before signing it."
+msgstr "Rādīt papildu informāciju par transakcijām pirms to parakstīšanas."
+
+msgid "Do not store it electronically."
+msgstr "Nesaglabājiet to elektroniski."
+
+msgid "Do you want to delete '%s'?"
+msgstr "Vai vēlaties dzēst '%s'?"
+
+msgid "Do you want to delete the old file"
+msgstr "Vai vēlaties dzēst veco failu"
+
+msgid "Do you want to remove"
+msgstr "Vai vēlaties izņemt"
+
+msgid "Do you wish to continue?"
+msgstr "Vai vēlaties turpināt?"
+
+msgid "Edit %s"
+msgstr "Rediģēt \"%s\""
+
+msgid "Edit fees manually"
+msgstr "Rediģēt komisijas maksu manuāli"
+
+msgid "Electrum App"
+msgstr "Electrum lietotne"
+
+msgid "Electrum Plugins"
+msgstr "Electrum spraudņi"
+
+msgid ""
+"Electrum communicates with remote servers to get information about your "
+"transactions and addresses. The servers all fulfil the same purpose only "
+"differing in hardware. In most cases you simply want to let Electrum pick "
+"one at random.  However if you prefer feel free to select a server manually."
+msgstr ""
+"Electrum komunicē ar attālinātiem serveriem, lai saņemtu informāciju par "
+"transakcijām un adresēm. Visi serveri pilda vienu un to pašu funkciju, "
+"atšķiras tikai to aparatūra. Vairumā gadījumu pietiek ar automātisko nejauša "
+"servera izvēli, bet, ja vēlaties varat izvēlēties kādu noteiktu serveri arī "
+"manuāli."
+
+msgid ""
+"Electrum connects to several nodes in order to download block headers and "
+"find out the longest blockchain."
+msgstr ""
+"Lai lejupielādētu bloku galvenes un atrastu garāko blokķēdi, Electrum "
+"savienojas ar vairākiem mezgliem."
+
+msgid "Electrum is generating your addresses, please wait..."
+msgstr "Electrum ģenerē adreses, lūdzu, uzgaidiet..."
+
+msgid "Electrum preferences"
+msgstr "Electrum iestatījumi"
+
+msgid ""
+"Electrum sends your wallet addresses to a single server, in order to receive "
+"your transaction history."
+msgstr ""
+"Electrum nosūta jūsu maciņa adreses vienam serverim, lai saņemtu transakciju "
+"vēsturi."
+
+msgid "Electrum wallet"
+msgstr "Electrum maciņš"
+
+msgid "Electrum was unable to copy your wallet file to the specified location."
+msgstr "Electrum neizdevās iekopēt maciņa failu norādītajā atrašanās vietā."
+
+msgid "Electrum was unable to export your labels."
+msgstr "Electrum neizdevās eksportēt etiķetes."
+
+msgid "Electrum was unable to import your labels."
+msgstr "Electrum neizdevās importēt etiķetes."
+
+msgid "Electrum was unable to open your transaction file"
+msgstr "Electrum neizdevās atvērt transakcijas failu"
+
+msgid "Electrum was unable to parse your transaction"
+msgstr "Electrum neizdevās izparsēt transakciju"
+
+msgid "Electrum was unable to produce a private key-export."
+msgstr "Electrum neizdevās izveidot privātās atslēgas eksportu."
+
+msgid "Electrum was unable to produce a transaction export."
+msgstr "Electrum neizdevās izveidot transakcijas eksportu."
+
+msgid ""
+"Electrum's focus is speed, with low resource usage and simplifying Bitcoin. "
+"You do not need to perform regular backups, because your wallet can be "
+"recovered from a secret phrase that you can memorize or write on paper. "
+"Startup times are instant because it operates in conjunction with high-"
+"performance servers that handle the most complicated parts of the Bitcoin "
+"system.\n"
+"\n"
+msgstr ""
+"Electrum priekšrocība ir ātrums un neliels resursu patēriņš, tas padara "
+"Bitcoin lietošanu vienkāršu, jums vairs nav jāveic regulāra rezerves kopiju "
+"veidošana. Maciņu var vienkārši atjaunot no slepenas frāzes, kuru var "
+"iegaumēt vai pierakstīt uz papīra. Programmas palaišana ir tūlītēja, jo "
+"Electrum strādā savienojumā ar augstas veiktspējas serveriem kuri paveic "
+"komplicētākās Bitcoin sistēmas darbības.\n"
+"\n"
+
+msgid "Encrypt"
+msgstr "Šifrēt"
+
+msgid "Encrypt wallet file"
+msgstr "Šifrēt maciņa failu"
+
+msgid "Encrypt/decrypt Message"
+msgstr "Šifrēt/atšifrēt ziņojumu"
+
+msgid "Encrypted"
+msgstr "Šifrēts"
+
+msgid "Enter Passphrase"
+msgstr "Ievadiet paroles frāzi"
+
+msgid "Enter Password"
+msgstr "Ievadiet paroli"
+
+msgid "Enter Seed"
+msgstr "Ievadiet sēklu"
+
+msgid "Enter a filename for the copy of your wallet"
+msgstr "Ievadiet faila nosaukumu, lai kopētu maciņu"
+
+msgid "Enter a list of outputs in the 'Pay to' field."
+msgstr "Ievadiet izvadu sarakstu 'Maksāt uz' laukā."
+
+msgid "Enter addresses"
+msgstr "Ievadiet adreses"
+
+msgid "Enter description"
+msgstr "Ievadiet aprakstu"
+
+msgid "Enter new PIN"
+msgstr "Ievadiet jauno PIN"
+
+msgid "Enter private keys"
+msgstr "Ievadiet privātās atslēgas"
+
+msgid "Enter private keys:"
+msgstr "Ievadiet privātās atslēgas:"
+
+msgid ""
+"Enter their master private key (xprv) if you want to be able to sign for "
+"them."
+msgstr ""
+"Ievadiet galveno privāto atslēgu (xprv), ja vēlaties parakstīt to vietā."
+
+msgid "Enter wallet name"
+msgstr "Ievadiet maciņa nosaukumu"
+
+msgid "Enter your PIN code in order to decrypt your seed"
+msgstr "Ievadiet PIN kodu, lai atšifrētu sēklu"
+
+msgid "Enter your PIN code to confirm deletion of %s"
+msgstr "Ievadiet pin kodu, lai apstiprinātu %s dzēšanu"
+
+msgid "Enter your current PIN:"
+msgstr "Ievadiet pašreizējo PIN:"
+
+msgid "Enter your password or choose another file."
+msgstr "Ievadiet paroli vai izvēlieties citu failu."
+
+msgid "Enter your password to proceed"
+msgstr "Ievadiet paroli, lai turpinātu"
+
+msgid "Error"
+msgstr "Kļūda"
+
+msgid "Exit Electrum"
+msgstr "Iziet no Electrum"
+
+msgid "Expected confirmation time"
+msgstr "Aptuvenais apstiprinājuma laiks"
+
+msgid "Expiration date of your request."
+msgstr "Pieprasījuma derīguma termiņš."
+
+msgid "Expired"
+msgstr "Izbeidzies"
+
+msgid ""
+"Expired requests have to be deleted manually from your list, in order to "
+"free the corresponding Bitcoin addresses."
+msgstr ""
+"Pieprasījumi ar beigušos derīguma termiņu ir jāizdzēš pašrocīgi, lai "
+"atbrīvotu saistītās Bitcoin adreses."
+
+msgid "Expires"
+msgstr "Beidzas"
+
+msgid "Export"
+msgstr "Eksportēt"
+
+msgid "Export History"
+msgstr "Eksportēt vēsturi"
+
+msgid "Exposing a single private key can compromise your entire wallet!"
+msgstr "Vienas privātās atslēgas atklāšana var apdraudēt visa maciņa drošību!"
+
+msgid "Extend this seed with custom words"
+msgstr "Pagarināt šo sēklu ar papildu vārdiem"
+
+msgid "Failed to update password"
+msgstr "Neizdevās atjaunot paroli"
+
+msgid "Fee"
+msgstr "Komisija"
+
+msgid "Fee:"
+msgstr "Komisija:"
+
+msgid "Fees"
+msgstr "Komisijas maksa"
+
+msgid "Fiat"
+msgstr "Valsts nauda"
+
+msgid "Fiat currency"
+msgstr "Valsts nauda"
+
+msgid "File"
+msgstr "Fails"
+
+msgid "Final"
+msgstr "Fināla"
+
+msgid "Find"
+msgstr "Meklēt"
+
+msgid "Follow this branch"
+msgstr "Sekot šim zaram"
+
+msgid "Format"
+msgstr "Formāts"
+
+msgid "Format: address, amount"
+msgstr "Formāts: adrese, summa"
+
+msgid "From"
+msgstr "No"
+
+msgid "From %d cosigners"
+msgstr "No %d papildparakstītājiem"
+
+msgid "Height"
+msgstr "Augstums"
+
+msgid "Hello World"
+msgstr "Sveika, pasaule"
+
+msgid "Here is your master public key."
+msgstr "Šī ir jūsu galvenā publiskā atslēga."
+
+msgid "Hide"
+msgstr "Slēpt"
+
+msgid "History"
+msgstr "Vēsture"
+
+msgid "Host"
+msgstr "Saimnieks"
+
+msgid "How do you want to connect to a server? "
+msgstr "Kā jūs vēlaties savienoties ar serveri? "
+
+msgid ""
+"However, BIP39 seeds do not include a version number, which compromises "
+"compatibility with future wallet software."
+msgstr ""
+"Kā arī, BIP39 sēklas neiekļauj versijas numuru, tas var nākotnē traucēt "
+"saderībai ar maciņu programmatūru."
+
+msgid "Identity"
+msgstr "Identitāte"
+
+msgid ""
+"If auto-connect is enabled, Electrum will always use a server that is on the "
+"longest blockchain."
+msgstr ""
+"Ja automātiskā savienošanās ir aktivizēta, Electrum vienmēr izmantos garāko "
+"blokķēdi."
+
+msgid ""
+"If it is disabled, you have to choose a server you want to use. Electrum "
+"will warn you if your server is lagging."
+msgstr ""
+"Ja atslēgts, jums ir jāizvēlas serveris kuru vēlaties izmantot. Electrum "
+"brīdinās, ja jūsu serveris atpaliek."
+
+msgid "If the fee is low"
+msgstr "Ja zema komisijas maksa"
+
+msgid "If you check this box, your transaction will be marked as non-final,"
+msgstr "Ja atzīmēsiet šo rūtiņu, transakcija tiks atzīmēta kā nefinalizēta,"
+
+msgid ""
+"If you forget your PIN or lose your device, your seed phrase will be the "
+"only way to recover your funds."
+msgstr ""
+"Ja aizmirsīsiet PIN vai pazaudēsiet ierīci, sēklas frāze būs vienīgais veids "
+"kā atgūt līdzekļus."
+
+msgid "If you lose your seed, your money will be permanently lost."
+msgstr "Ja pazaudēsiet sēklu, jūsu nauda tiks neatgriezeniski zaudēta."
+
+msgid ""
+"If you want to create new addresses, use a deterministic wallet instead."
+msgstr "Ja vēlaties izveidot jaunu adresi, izmantojiet deterministisko maciņu."
+
+msgid "Import"
+msgstr "Importēt"
+
+msgid "Import addresses"
+msgstr "Importēt adreses"
+
+msgid "Import file"
+msgstr "Importēt failu"
+
+msgid "Import private keys"
+msgstr "Importēt privātās atslēgas"
+
+msgid ""
+"In addition, Electrum does not verify the checksum of BIP39 seeds; make sure "
+"you type your seed correctly."
+msgstr ""
+"Turklāt, Electrum nepārbauda BIP39 sēklu kontrolsummu; pārliecinieties, ka "
+"ierakstāt savu sēklu pareizi."
+
+msgid ""
+"In particular, DO NOT use 'redeem private key' services proposed by third "
+"parties."
+msgstr ""
+"Jo īpaši, neievadiet privāto atslēgu trešo pušu piedāvātajos pakalpojumus."
+
+msgid ""
+"In some cases, use up to 3 change addresses in order to break up large coin "
+"amounts and obfuscate the recipient address."
+msgstr ""
+"Dažos gadījumos, tiks izmantots līdz pat 3 atlikuma adresēm, lai sadalītu "
+"lielāku summu un slēptu saņēmēja adresi."
+
+msgid "Increase fee"
+msgstr "Paaugstināt komisijas maksu"
+
+msgid "Information"
+msgstr "Informācija"
+
+msgid "Input amount"
+msgstr "Ievada summa"
+
+msgid "Input raw transaction"
+msgstr "Ievadiet jēlu transakciju"
+
+msgid "Inputs"
+msgstr "Ievadi"
+
+msgid "Install Wizard"
+msgstr "Instalācijas vednis"
+
+msgid "Install the zbar package to enable this."
+msgstr "Instalējiet zbar pakotni, lai aktivizētu šo funkciju."
+
+msgid "Insufficient funds"
+msgstr "Nav pietiekoši daudz līdzekļu"
+
+msgid "Invalid Address"
+msgstr "Nederīga adrese"
+
+msgid "Invalid Amount"
+msgstr "Nederīga summa"
+
+msgid "Invalid Bitcoin Address"
+msgstr "Nederīga Bitcoin adrese"
+
+msgid "Invalid Lines found:"
+msgstr "Atrastas nederīgas līnijas:"
+
+msgid "Invalid PIN"
+msgstr "Nederīgs PIN"
+
+msgid "Invalid bitcoin URI:"
+msgstr "Nederīgs Bitcoin vietrādis:"
+
+msgid "Invoice"
+msgstr "Rēķins"
+
+msgid "Invoice saved as "
+msgstr "Rēķins saglabāts kā "
+
+msgid "Invoices"
+msgstr "Rēķini"
+
+msgid "Keyboard shortcut: type \"!\" to send all your coins."
+msgstr "Tastatūras saīsne: \"!\", lai nosūtītu visu summu."
+
+msgid "Label Settings"
+msgstr "Etiķešu iestatījumi"
+
+msgid "Language"
+msgstr "Valoda"
+
+msgid "Leave this field empty if you want to disable encryption."
+msgstr "Atstājiet šo lauciņu tukšu, ja vēlaties atslēgt šifrēšanu."
+
+msgid "Line #"
+msgstr "Līnija #"
+
+msgid "Load transaction"
+msgstr "Ielādēt transakciju"
+
+msgid "Lookup transaction"
+msgstr "Apsekot transakciju"
+
+msgid ""
+"Make sure you own the seed phrase or the private keys, before you request "
+"Bitcoins to be sent to this wallet."
+msgstr ""
+"Pārliecinieties, ka esat sēklas frāzes vai privātās atslēgas īpašnieks, "
+"pirms pieprasāt Bitcoin uz šo maciņu."
+
+msgid "Master Public Key"
+msgstr "Galvenā publiskā atslēga"
+
+msgid "Master Public Keys"
+msgstr "Galvenās publiskās atslēgas"
+
+msgid "Max"
+msgstr "Maks."
+
+msgid "Max fee exceeded"
+msgstr "Ir pārsniegta maksimālā komisijas maksa"
+
+msgid "Max static fee"
+msgstr "Maksimālā statiskā komisijas maksa"
+
+msgid "Max value of the static fee slider"
+msgstr "Maksimālā statiskās komisijas maksas slīdņa vērtība"
+
+msgid "Memo"
+msgstr "Atgādne"
+
+msgid "Message"
+msgstr "Ziņojums"
+
+msgid "Mining fee"
+msgstr "Komisijas maksa"
+
+msgid "Multi-Signature Wallet"
+msgstr "Daudzparakstu maciņš"
+
+msgid "Name"
+msgstr "Nosaukums"
+
+msgid "Network"
+msgstr "Tīkls"
+
+msgid "Never"
+msgstr "Nekad"
+
+msgid "Never disclose your seed."
+msgstr "Nekad neizpaudiet sēklu."
+
+msgid "Never type it on a website."
+msgstr "Nekad neievadiet to tīmekļa vietnēs."
+
+msgid "New"
+msgstr "Jauns"
+
+msgid "New Contact"
+msgstr "Jauns kontakts"
+
+msgid "New Password:"
+msgstr "Jaunā parole:"
+
+msgid "New contact"
+msgstr "Jauns kontakts"
+
+msgid "New fee:"
+msgstr "Jaunā komisijas maksa:"
+
+msgid "New transaction received. %(amount)s"
+msgstr "Saņemta jauna transakcija. %(amount)s"
+
+msgid "Next"
+msgstr "Nākamais"
+
+msgid "No Wallet"
+msgstr "Nav maciņa"
+
+msgid "No donation address for this server"
+msgstr "Šim serverim nav ziedojumu adreses"
+
+msgid "No message or amount"
+msgstr "Nav ziņojuma vai summas"
+
+msgid "No more addresses in your wallet."
+msgstr "Maciņā vairs nav adrešu."
+
+msgid "No outputs"
+msgstr "Nav izvadu"
+
+msgid "No transactions found for this seed"
+msgstr "Šai sēklai nav atrasta neviena transakcija"
+
+msgid "Node"
+msgstr "Mezgls"
+
+msgid "None"
+msgstr "Nekas"
+
+msgid "Not connected"
+msgstr "Nav savienots"
+
+msgid "Not enough funds"
+msgstr "Nav pietiekami daudz līdzekļu"
+
+msgid ""
+"Note that if you have frozen some of your addresses, the available funds "
+"will be lower than your total balance."
+msgstr ""
+"Ievērojiet, ja ir iesaldētas kādas adreses, pieejamo līdzekļu būs mazāk nekā "
+"kopējā bilance."
+
+msgid ""
+"Note that some merchants do not accept non-final transactions until they are "
+"confirmed."
+msgstr ""
+"Piezīme, daži komersanti nepieņem nefinalizētās transakcijas līdz tās ir "
+"apstiprinātas."
+
+msgid "Nothing set !"
+msgstr "Nekas nav iestatīts !"
+
+msgid ""
+"Number of zeros displayed after the decimal point. For example, if this is "
+"set to 2, \"1.\" will be displayed as \"1.00\""
+msgstr ""
+"Nulles pēc decimālā atdalītāja. Piemēram, ja šis iestatījums ir 2, \"1.\" "
+"tiks attēlots kā \"1.00\""
+
+msgid "OK"
+msgstr "Labi"
+
+msgid "Offline"
+msgstr "Nesaistē"
+
+msgid "One output per line."
+msgstr "Viens izvads katrā līnijā."
+
+msgid "Online Block Explorer"
+msgstr "Tiešsaites blokķēdes pārlūks"
+
+msgid "Open labels file"
+msgstr "Atvērt etiķešu failu"
+
+msgid "OpenAlias"
+msgstr "OpenAlias"
+
+msgid "OpenAlias record, used to receive coins and to sign payment requests."
+msgstr ""
+"OpenAlias ieraksts, izmantots, lai saņemtu monētas un, lai parakstītu "
+"maksājumu pieprasījumus."
+
+msgid "Options"
+msgstr "Opcijas"
+
+msgid "Output amount"
+msgstr "Izvada summa"
+
+msgid "Outputs"
+msgstr "Izvadi"
+
+msgid "Overview"
+msgstr "Pārskats"
+
+msgid "PIN mismatch"
+msgstr "PIN neatbilstība"
+
+msgid "Paid"
+msgstr "Samaksāts"
+
+msgid "Passphrase"
+msgstr "Paroles frāze"
+
+msgid "Passphrase:"
+msgstr "Paroles frāze:"
+
+msgid "Password"
+msgstr "Parole"
+
+msgid "Password Strength"
+msgstr "Paroles stiprums"
+
+msgid "Password is disabled, this wallet is not protected"
+msgstr "Parole ir atslēgta, šis maciņš nav aizsargāts"
+
+msgid "Password was updated successfully"
+msgstr "Parole veiksmīgi atjaunināta"
+
+msgid "Password:"
+msgstr "Parole:"
+
+msgid "Pay Now"
+msgstr "Maksāt tagad"
+
+msgid "Pay to"
+msgstr "Maksāt uz"
+
+msgid "Pay to many"
+msgstr "Maksāt vairākiem"
+
+msgid "Payment Request"
+msgstr "Maksājuma pieprasījums"
+
+msgid "Payment request has expired"
+msgstr "Maksājuma pieprasījums ir izbeidzies"
+
+msgid "Payment sent."
+msgstr "Maksājums nosūtīts."
+
+msgid "Pending"
+msgstr "Gaida"
+
+msgid "Please enter a seed phrase or a master key (xpub or xprv):"
+msgstr "Lūdzu, ievadiet sēklas frāzi vai galveno atslēgu (xpub vai xprv):"
+
+msgid ""
+"Please enter a seed phrase, a master key, a list of Bitcoin addresses, or a "
+"list of private keys"
+msgstr ""
+"Lūdzu, ievadiet sēklas frāzi, galveno atslēgu, Bitcoin adrešu vai privāto "
+"atslēgu sarakstu"
+
+msgid "Please enter the master public key (xpub) of your cosigner."
+msgstr "Lūdzu, ievadiet līdzparakstītāja publisko atslēgu (xpub)."
+
+msgid "Please enter the master public key of cosigner #%d:"
+msgstr "Lūdzu, ievadiet papildparakstītāja #%d galveno publisko atslēgu:"
+
+msgid "Please enter your password"
+msgstr "Lūdzu, ievadiet paroli"
+
+msgid ""
+"Please enter your seed derivation passphrase. Note: this is NOT your "
+"encryption password. Leave this field empty if you did not use one or are "
+"unsure."
+msgstr ""
+"Lūdzu, ievadiet sēklas iegūšanas paroles frāzi. Piezīme: šī NAV jūsu "
+"šifrēšanas parole. Atstājiet šo lauku tukšu, ja to neizmantojāt vai neesat "
+"pārliecināti."
+
+msgid "Please enter your seed phrase in order to restore your wallet."
+msgstr "Lūdzu, ievadiet sēklas frāzi, lai atjaunotu maciņu."
+
+msgid "Please install the Barcode Scanner app from ZXing"
+msgstr "Lūdzu, instalējiet svītru koda skenera aplikāciju no ZXing"
+
+msgid ""
+"Please paste your cosigners master public key, or scan it using the camera "
+"button."
+msgstr ""
+"Lūdzu, ielīmējiet papildparakstītāja galveno publisko atslēgu, vai "
+"noskenējiet to izmantojot kameras pogu."
+
+msgid "Please report any bugs as issues on github:<br/>"
+msgstr "Lūdzu, ziņojiet par kļūdām uz github:<br/>"
+
+msgid "Please restart Electrum to activate the new GUI settings"
+msgstr ""
+"Lūdzu, pārstartējiet Electrum, lai aktivizētu jaunos saskarnes iestatījumus"
+
+msgid "Please retype your seed phrase, to confirm that you properly saved it"
+msgstr ""
+"Lūdzu, atkārtoti ierakstiet sēklas frāzi, lai apstiprinātu, ka tā ir pareizi "
+"pierakstīta"
+
+msgid "Please save these %d words on paper (order is important). "
+msgstr "Lūdzu, pierakstiet šos %d vārdus uz papīra (kārtība ir svarīga). "
+
+msgid "Please share it with your cosigners."
+msgstr "Lūdzu, dalieties ar šo ar jūsu papildparakstītājiem."
+
+msgid "Please type your seed phrase using the virtual keyboard."
+msgstr "Lūdzu, izmantojiet virtuālo tastatūru, lai ievadītu sēklas frāzi."
+
+msgid "Please wait"
+msgstr "Lūdzu, uzgaidiet"
+
+msgid "Please wait..."
+msgstr "Lūdzu, uzgaidiet..."
+
+msgid "Port"
+msgstr "Ports"
+
+msgid "Preferences"
+msgstr "Iestatījumi"
+
+msgid "Press 'Next' to create this wallet, or choose another file."
+msgstr ""
+"Nospiediet 'Nākamais', lai izveidotu šo maciņu vai izvēlētos citu failu."
+
+msgid "Press 'Next' to open this wallet."
+msgstr "Nospiediet 'Nākamais', lai atvērtu šo maciņu."
+
+msgid "Press again to exit"
+msgstr "Lai izietu, nospiediet vēlreiz"
+
+msgid "Preview"
+msgstr "Priekšskatīt"
+
+msgid "Private key"
+msgstr "Privātā atslēga"
+
+msgid "Private keys"
+msgstr "Privātās atslēgas"
+
+msgid "Private keys exported."
+msgstr "Privātās atslēgas eksportētas."
+
+msgid "Proceed?"
+msgstr "Turpināt?"
+
+msgid "Propose Replace-By-Fee"
+msgstr "Ierosināt komisijas maksas aizvietošanu"
+
+msgid "Proxy"
+msgstr "Starpnieks"
+
+msgid "Proxy user"
+msgstr "Starpniekservera lietotājs"
+
+msgid "Public key"
+msgstr "Publiskā atslēga"
+
+msgid "Public keys"
+msgstr "Publiskās atslēgas"
+
+msgid "QR code"
+msgstr "QR kods"
+
+msgid "QR code copied to clipboard"
+msgstr "QR kods iekopēts starpliktuvē"
+
+msgid "QR code saved to file"
+msgstr "QR kods saglabāts failā"
+
+msgid "Read QR code"
+msgstr "Lasīt QR kodu"
+
+msgid "Read file"
+msgstr "Lasīt failu"
+
+msgid "Receive"
+msgstr "Saņemt"
+
+msgid "Receiving address"
+msgstr "Saņemšanas adrese"
+
+msgid "Recipient of the funds."
+msgstr "Līdzekļu saņēmējs."
+
+msgid "Recovery successful"
+msgstr "Atjaunošana veiksmīga"
+
+msgid "Redeem Script"
+msgstr "Izpirkšanas skripts"
+
+msgid "Remove"
+msgstr "Izņemt"
+
+msgid "Remove %s from your list of contacts?"
+msgstr "Izņemt %s no kontaktu saraksta?"
+
+msgid "Replaceable"
+msgstr "Aizvietojams"
+
+msgid "Reporting Bugs"
+msgstr "Ziņot kļūdas"
+
+msgid "Request expires"
+msgstr "Pieprasījums beidzas"
+
+msgid "Request saved successfully"
+msgstr "Pieprasījums ir veiksmīgi saglabāts"
+
+msgid "Requested amount"
+msgstr "Pieprasītā summa"
+
+msgid "Requestor"
+msgstr "Pieprasītājs"
+
+msgid "Requests"
+msgstr "Pieprasījumi"
+
+msgid "Require %d signatures"
+msgstr "Pieprasa %d parakstus"
+
+msgid "Requires"
+msgstr "Pieprasa"
+
+msgid "SSL certificate"
+msgstr "SSL sertifikāts"
+
+msgid "SSL certificate used to sign payment requests."
+msgstr ""
+"SSL sertifikāts tiek izmantots, lai parakstītu maksājumu pieprasījumus."
+
+msgid "Save"
+msgstr "Saglabāt"
+
+msgid "Save as BIP70 file"
+msgstr "Saglabāt BIP70 failu"
+
+msgid "Save invoice to file"
+msgstr "Saglabāt rēķinu failā"
+
+msgid "Seed"
+msgstr "Sēkla"
+
+msgid "Seed Type"
+msgstr "Sēklas tips"
+
+msgid "Select file to export your private keys to"
+msgstr "Izvēlieties failu, lai eksportētu privātās atslēgas"
+
+msgid "Select file to export your wallet transactions to"
+msgstr "Izvēlieties failu, lai eksportētu maciņa transakcijas"
+
+msgid "Select file to save your labels"
+msgstr "Izvēlieties failu, lai saglabātu etiķetes"
+
+msgid "Select server automatically"
+msgstr "Izvēlēties serveri automātiski"
+
+msgid "Select server manually"
+msgstr "Izvēlēties serveri manuāli"
+
+msgid "Select where to save your payment request"
+msgstr "Izvēlieties vietu kur saglabāt maksājuma pieprasījumu"
+
+msgid "Select where to save your signed transaction"
+msgstr "Izvēlieties kur saglabāt parakstīto transakciju"
+
+msgid "Select which language is used in the GUI (after restart)."
+msgstr ""
+"Izvēlieties, kura valoda tiek izmantota saskarnei (pēc pārstartēšanas)."
+
+msgid "Select your transaction file"
+msgstr "Izvēlieties transakcijas failu"
+
+msgid "Send"
+msgstr "Sūtīt"
+
+msgid "Sending"
+msgstr "Sūta"
+
+msgid "Server"
+msgstr "Serveris"
+
+msgid "Server is lagging (%d blocks)"
+msgstr "Serveris atpaliek (%d blokus)"
+
+msgid "Server lagging (%d blocks)"
+msgstr "Serveris atpaliek (%d blokus)"
+
+msgid "Server peers"
+msgstr "Servera dalībnieki"
+
+msgid "Settings"
+msgstr "Iestatījumi"
+
+msgid "Show"
+msgstr "Rādīt"
+
+msgid "Show QR Code"
+msgstr "Rādīt QR kodu"
+
+msgid "Show as QR code"
+msgstr "Rādīt kā QR kodu"
+
+msgid "Show fee edit box in send tab."
+msgstr "Rādīt komisijas maksas rediģēšanas lauku sūtīšanas cilnē."
+
+msgid "Show history rates"
+msgstr "Rādīt vēsturiskās cenas"
+
+msgid "Show/Hide"
+msgstr "Rādīt/slēpt"
+
+msgid "Sign"
+msgstr "Parakstīt"
+
+msgid "Sign/verify Message"
+msgstr "Parakstīt/pārbaudīt ziņojumu"
+
+msgid "Signature"
+msgstr "Paraksts"
+
+msgid "Signature verified"
+msgstr "Paraksts pārbaudīts"
+
+msgid "Signing transaction..."
+msgstr "Paraksta transakciju..."
+
+msgid "Size:"
+msgstr "Izmērs:"
+
+msgid "Source"
+msgstr "Avots"
+
+msgid "Spend only confirmed coins"
+msgstr "Tērēt tikai apstiprinātās monētas"
+
+msgid "Spend only confirmed inputs."
+msgstr "Tērēt tikai apstiprinātos ievadus."
+
+msgid "Status"
+msgstr "Statuss"
+
+msgid "Status:"
+msgstr "Statuss:"
+
+msgid "Success"
+msgstr "Veiksme"
+
+msgid "Sweep"
+msgstr "Izslaucīt"
+
+msgid "Sweep private keys"
+msgstr "Izslaucīt privātās atslēgas"
+
+msgid "Synchronizing..."
+msgstr "Sinhronizējas..."
+
+msgid ""
+"Text copied to clipboard.\n"
+"Tap again to display it as QR code."
+msgstr ""
+"Teksts ir iekopēts starpliktuvē.\n"
+"Nospiediet vēlreiz, lai redzētu to kā QR kodu."
+
+msgid ""
+"The amount of fee can be decided freely by the sender. However, transactions "
+"with low fees take more time to be processed."
+msgstr ""
+"Komisijas maksas lielumu var brīvi izvēlēties pats sūtītājs. Tomēr ir jāņem "
+"vērā tas, ka transakcijas ar zemu komisijas maksu var tikt apstrādātas daudz "
+"ilgāk."
+
+msgid ""
+"The amount will be displayed in red if you do not have enough funds in your "
+"wallet."
+msgstr ""
+"Ja maciņā nav pietiekami daudz līdzekļu, summa tiks rādīta sarkanā krāsā."
+
+msgid ""
+"The bitcoin address never expires and will always be part of this electrum "
+"wallet."
+msgstr ""
+"Bitcoin adresei nav derīguma termiņa, tā vienmēr būs daļa no šī Electrum "
+"maciņa."
+
+msgid ""
+"The description is not sent to the recipient of the funds. It is stored in "
+"your wallet file, and displayed in the 'History' tab."
+msgstr ""
+"Apraksts netiks nosūtīts līdzekļu saņēmējam. Tas tiks saglabāts maciņa failā "
+"un parādīts cilnē 'Vēsture'."
+
+msgid "The fee for this transaction seems unusually high."
+msgstr "Šīs transakcijas komisijas maksa šķiet neparasti augsta."
+
+msgid ""
+"The file '%s' contains an incompletely created wallet.\n"
+"Do you want to complete its creation now?"
+msgstr ""
+"Šis fails '%s' satur nepilnīgi izveidotu maciņu.\n"
+"Vai vēlaties pabeigt tā izveidi tagad?"
+
+msgid "The file was removed"
+msgstr "Fails tika izņemts"
+
+msgid "The following addresses were added"
+msgstr "Šādas adreses tika pievienotas"
+
+msgid "The following alias providers are available:"
+msgstr "Ir pieejami šādi aizstājvārdu nodrošinātāji:"
+
+msgid "The following inputs could not be imported"
+msgstr "Šādus ievadus neizdevās importēt"
+
+msgid ""
+"The format of your wallet '%s' must be upgraded for Electrum. This change "
+"will not be backward compatible"
+msgstr ""
+"Ir nepieciešams atjaunināt maciņa '%s' formātu. Šīs izmaiņa nebūs atpakaļ "
+"saderīga"
+
+msgid ""
+"The wallet '%s' contains multiple accounts, which are no longer supported in "
+"Electrum 2.7.\n"
+"\n"
+"Do you want to split your wallet into multiple files?"
+msgstr ""
+"Maciņš '%s' satur vairākus kontus, kuri netiek atbalstīti Electrum 2.7 "
+"versijā.\n"
+"\n"
+"Vai vēlaties sadalīt maciņu vairākos failos?"
+
+msgid ""
+"This blockchain is used to verify the transactions sent by your transaction "
+"server."
+msgstr ""
+"Šī blokķēde tiek izmantota, lai pārbaudītu transakcijas, kuras nosūta "
+"transakciju serveris."
+
+msgid "This file does not exist."
+msgstr "Šis fails neeksistē."
+
+msgid "This file is encrypted."
+msgstr "Šis fails ir šifrēts."
+
+msgid ""
+"This information is seen by the recipient if you send them a signed payment "
+"request."
+msgstr ""
+"Ja nosūtīsiet parakstītu maksājuma pieprasījumu, šī informācija būs redzama "
+"saņēmējam."
+
+msgid "This is a watching-only wallet"
+msgstr "Šis maciņš ir tikai skatīšanai"
+
+msgid "This is the height of your local copy of the blockchain."
+msgstr "Šis ir lokālās blokķēdes kopijas augstums."
+
+msgid "This may result in higher transactions fees."
+msgstr "Šī opcija var palielināt transakciju komisijas maksu."
+
+msgid "This means you will not be able to spend Bitcoins with it."
+msgstr "Šis nozīmē, ka nevarēsiet iztērēt Bitcoin ar to."
+
+msgid "This payment request will be signed."
+msgstr "Tiks parakstīts šis maksājuma pieprasījums."
+
+msgid ""
+"This seed will allow you to recover your wallet in case of computer failure."
+msgstr "Ar šo sēklu ir iespējams atjaunot maciņu, datora bojājuma gadījumā."
+
+msgid "This transaction is not saved. Close anyway?"
+msgstr "Šī transakcija nav saglabāta. Aizvērt tik un tā?"
+
+msgid ""
+"This transaction requires a higher fee, or it will not be propagated by the "
+"network"
+msgstr ""
+"Šai transakcijai ir nepieciešama lielāka komisijas maksa vai arī tīkls to "
+"nepārraidīs"
+
+msgid "This wallet has no seed"
+msgstr "Maciņam nav sēklas"
+
+msgid "This wallet is watching-only."
+msgstr "Šis maciņš ir tikai skatīšanai."
+
+msgid ""
+"This wallet was restored offline. It may contain more addresses than "
+"displayed."
+msgstr ""
+"Šis maciņš tika atjaunots nesaistē. Tas var saturēt vairāk adreses, kā tiek "
+"attēlots."
+
+msgid ""
+"To make sure that you have properly saved your seed, please retype it here."
+msgstr ""
+"Lai pārliecinātos, ka sēkla ir pareizi saglabāta, lūdzu, ierakstiet to "
+"atkārtoti."
+
+msgid "Total size"
+msgstr "Kopējais izmērs"
+
+msgid "Transaction"
+msgstr "Transakcija"
+
+msgid "Transaction ID"
+msgstr "Transakcijas ID"
+
+msgid "Transaction ID:"
+msgstr "Transakcijas ID:"
+
+msgid "Transaction saved successfully"
+msgstr "Transakcija veiksmīgi saglabāta"
+
+msgid "Transaction unrelated to your wallet"
+msgstr "Transakcija nesaistīta ar jūsu maciņu"
+
+msgid "Transaction:"
+msgstr "Transakcija:"
+
+msgid "Transactions"
+msgstr "Transakcijas"
+
+msgid "Try to explain not only what the bug is, but how it occurs."
+msgstr "Mēģiniet paskaidrot, kad notiek kļūda un kā to iespējams atkārtot."
+
+msgid "Unable to create backup"
+msgstr "Neizdevās izveidot rezerves kopiju"
+
+msgid "Unable to create csv"
+msgstr "Neizdevās izveidot csv"
+
+msgid "Unable to export history"
+msgstr "Vēstures eksportēšana neizdevās"
+
+msgid "Unable to read file or no transaction found"
+msgstr "Neizdevās nolasīt failu vai arī netika atrasta neviena transakcija"
+
+msgid "Unknown"
+msgstr "Nezināms"
+
+msgid "Use SSL"
+msgstr "Lietot SSL"
+
+msgid "Use Tor Proxy"
+msgstr "Izmantot Tor starpnieku"
+
+msgid "Use as server"
+msgstr "Izmantot kā serveri"
+
+msgid "Use change addresses"
+msgstr "Izmantot atlikuma adreses"
+
+msgid "Use dynamic fees"
+msgstr "Izmantot dinamisko komisijas maksu"
+
+msgid "Use fees recommended by the server."
+msgstr "Izmantot servera ieteikto komisijas maksu."
+
+msgid "Use multiple change addresses"
+msgstr "Izmantot vairākas atlikuma adreses"
+
+msgid "Use setconfig to set ssl_chain and ssl_privkey."
+msgstr "Izmantojiet setconfig, lai iestatītu ssl_chain un ssl_privkey."
+
+msgid "Use the camera button to scan a QR code."
+msgstr "Lai noskanētu QR kodu, izmantojiet kameras pogu."
+
+msgid "Use this dialog to add a password to your wallet."
+msgstr "Izmantojiet šo dialoglodziņu, lai pievienotu paroli savam maciņam."
+
+msgid "Use this dialog to change your password."
+msgstr "Izmantojiet šo dialoglodziņu, lai mainītu savu paroli."
+
+msgid "Uses icons from the Icons8 icon pack (icons8.com)."
+msgstr "Izmanto ikonas no Icons8 pakas (icons8.com)."
+
+msgid ""
+"Using change addresses makes it more difficult for other people to track "
+"your transactions."
+msgstr ""
+"Izmantojot atlikuma adreses, citiem cilvēkiem ir grūtāk izsekot jūsu "
+"transakcijas."
+
+msgid "Verify"
+msgstr "Pārbaudīt"
+
+msgid "Version"
+msgstr "Versija"
+
+msgid "Video Device"
+msgstr "Video ierīce"
+
+msgid "View invoice"
+msgstr "Skatīt rēķinu"
+
+msgid "View on block explorer"
+msgstr "Skatīt blokķēdes pārlūkā"
+
+msgid "WARNING"
+msgstr "BRĪDINĀJUMS"
+
+msgid "WARNING: ALL your private keys are secret."
+msgstr "BRĪDINĀJUMS: VISAS privātās atslēgas ir slepenas."
+
+msgid ""
+"WARNING: the alias \"%s\" could not be validated via an additional security "
+"check, DNSSEC, and thus may not be correct."
+msgstr ""
+"BRĪDINĀJUMS: aizstājējvārda \"%s\" pārbaude neizdevās izmantojot papildu "
+"drošības pārbaudes, DNSSEC, un iespējams, aizstājējvārds nav pareizs."
+
+msgid "Waiting for fee estimates..."
+msgstr "Gaida aptuveno komisijas maksu..."
+
+msgid "Wallet"
+msgstr "Maciņš"
+
+msgid "Wallet backup created"
+msgstr "Izveidota maciņa kopija"
+
+msgid "Wallet change address"
+msgstr "Maciņa atlikuma adrese"
+
+msgid "Wallet receive address"
+msgstr "Maciņa saņemšanas adrese"
+
+msgid "Warning"
+msgstr "Brīdinājums"
+
+msgid ""
+"Warning: The next address will not be recovered automatically if you restore "
+"your wallet from seed; you may need to add it manually.\n"
+"\n"
+"This occurs because you have too many unused addresses in your wallet. To "
+"avoid this situation, use the existing addresses first.\n"
+"\n"
+"Create anyway?"
+msgstr ""
+"Brīdinājums: Nākamā adrese netiks atgūta automātiski, ja atjaunosiet maciņu "
+"no sēklas. Jums tā būs jāpievieno manuāli.\n"
+"\n"
+"Tas notiek tāpēc, ka maciņā ir pārāk daudz neizmantotas adreses. Lai "
+"izvairītos no šādas situācijas, vispirms izmantot jau esošos adreses.\n"
+"\n"
+"Izveidot tik un tā?"
+
+msgid ""
+"We do not guarantee that BIP39 imports will always be supported in Electrum."
+msgstr "Mēs negarantējam, ka Electrum vienmēr atbalstīs BIP39."
+
+msgid "Wrong signature"
+msgstr "Nepareizs paraksts"
+
+msgid "You are following branch"
+msgstr "Jūs sekojat zaram"
+
+msgid ""
+"You are using Electrum in offline mode; restart Electrum if you want to get "
+"connected"
+msgstr ""
+"Jūs izmantojat Electrum nesaistē; pārstartējiet Electrum, ja vēlaties "
+"savienoties"
+
+msgid ""
+"You are using a non-deterministic wallet, which cannot create new addresses."
+msgstr ""
+"Jūs izmantojat maciņu kurš nav deterministisks un nevar izveidot jaunas "
+"adreses."
+
+msgid ""
+"You may enter a Bitcoin address, a label from your list of contacts (a list "
+"of completions will be proposed), or an alias (email-like address that "
+"forwards to a Bitcoin address)"
+msgstr ""
+"Jūs varat ievadīt Bitcoin adresi, etiķeti no kontaktu saraksta (sarakstu "
+"piedāvās automātiski pabeigt) vai aizstājvārdu (e-pastam līdzīgu adresi, kas "
+"pārsūtīs uz Bitcoin adresi)."
+
+msgid "You may load a CSV file using the file icon."
+msgstr "Varat izmantot faila ikonu, lai ielādētu CSV failu."
+
+msgid "Your accounts have been moved to"
+msgstr "Jūsu konti tika pārvietoti uz"
+
+msgid ""
+"Your bitcoins are password protected. However, your wallet file is not "
+"encrypted."
+msgstr "Jūsu Bitcoin ir aizsargāti ar paroli. Tomēr, jūsu maciņš nav šifrēts."
+
+msgid "Your labels have been synchronised."
+msgstr "Etiķetes ir sinhronizētas."
+
+msgid "Your labels were exported to"
+msgstr "Etiķetes eksportētas uz"
+
+msgid "Your labels were imported from"
+msgstr "Etiķetes tika importētas no"
+
+msgid "Your seed extension is"
+msgstr "Jūsu sēklas pagarinājums ir"
+
+msgid "Your seed is important!"
+msgstr "Sēkla ir svarīga!"
+
+msgid "Your server is on branch"
+msgstr "Jūsu serveris ir uz zara"
+
+msgid "Your wallet generation seed is:"
+msgstr "Maciņa atjaunošanas sēkla ir:"
+
+msgid "Your wallet history has been successfully exported."
+msgstr "Maciņa vēsture ir veiksmīgi eksportēta."
+
+msgid "Your wallet is not protected."
+msgstr "Jūsu maciņš nav aizsargāts."
+
+msgid "Your wallet is password protected and encrypted."
+msgstr "Jūsu maciņš ir aizsargāts ar paroli un šifrēts."
+
+msgid "Your wallet was upgraded successfully"
+msgstr "Maciņš tika veiksmīgi atjaunināts"
+
+msgid "Zeros after decimal point"
+msgstr "Nulles pēc decimālā atdalītāja"
+
+msgid ""
+"and you will have the possiblity, while it is unconfirmed, to replace it "
+"with a transaction that pays a higher fee."
+msgstr ""
+"un jums būs iespēja, kamēr transakcija nav apstiprināta, aizvietot to ar "
+"transakciju kurai ir augstāka komisijas maksa."
+
+msgid "are frozen"
+msgstr "ir iesaldēti"
+
+msgid "blocks"
+msgstr "bloki"
+
+msgid "cosigner"
+msgstr "papildparakstītājs"
+
+msgid "from your wallet?"
+msgstr "no jūsu maciņa?"
+
+msgid "json"
+msgstr "json"
+
+msgid "low fee"
+msgstr "zema komisijas maksa"
+
+msgid "please wait..."
+msgstr "lūdzu, uzgaidiet..."
+
+msgid "unconfirmed"
+msgstr "neapstiprināts"
+
+msgid "unknown"
+msgstr "nezināms"
+
+msgid "unknown (low fee)"
+msgstr "nezināms (zema komisijas maksa)"
+
+msgid "unverified"
+msgstr "nepārbaudīts"
+
+msgid "watching only"
+msgstr "tikai skatīšanai"

@@ -1,0 +1,1677 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-12-20 06:39-0500\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Chinese Traditional\n"
+"Language: zh_TW\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: zh-TW\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr " 這些設定會影響「發送」分頁中的欄位"
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr "已收到 %(txs)s 道交易處理。新交易的接收總量 %(amount)s"
+
+msgid "&About"
+msgstr "關於(&A)"
+
+msgid "&Addresses"
+msgstr "位址(&A)"
+
+msgid "&Documentation"
+msgstr "文件(&D)"
+
+msgid "&Donate to server"
+msgstr "贊助伺服器(&D)"
+
+msgid "&Encrypt/decrypt message"
+msgstr "加密/解密訊息(&E)"
+
+msgid "&Export"
+msgstr "匯出(&E)"
+
+msgid "&File"
+msgstr "檔案(&F)"
+
+msgid "&From QR code"
+msgstr "讀取 QR 碼(&F)"
+
+msgid "&From file"
+msgstr "讀取檔案(&F)"
+
+msgid "&From text"
+msgstr "讀取文字(&F)"
+
+msgid "&From the blockchain"
+msgstr "讀取區塊鏈(&F)"
+
+msgid "&Help"
+msgstr "求助(&H)"
+
+msgid "&History"
+msgstr "歷史(&H)"
+
+msgid "&Import"
+msgstr "匯入(&I)"
+
+msgid "&Labels"
+msgstr "標籤(&L)"
+
+msgid "&Load transaction"
+msgstr "載入交易事項(&)"
+
+msgid "&Master Public Keys"
+msgstr "主要公鑰(&M)"
+
+msgid "&Network"
+msgstr "網路(&N)"
+
+msgid "&New"
+msgstr "新增(&N)"
+
+msgid "&New/Restore"
+msgstr "新增/還原(&N)"
+
+msgid "&Official website"
+msgstr "官方網站(&O)"
+
+msgid "&Open"
+msgstr "開啟(&O)"
+
+msgid "&Password"
+msgstr "密碼(&P)"
+
+msgid "&Pay to many"
+msgstr "支付給多方(&)"
+
+msgid "&Plugins"
+msgstr "插件(&P)"
+
+msgid "&Private keys"
+msgstr "私鑰(&P)"
+
+msgid "&Quit"
+msgstr "退出(&Q)"
+
+msgid "&Recently open"
+msgstr "最近開啟(&R)"
+
+msgid "&Report Bug"
+msgstr "回報臭蟲(&R)"
+
+msgid "&Save Copy"
+msgstr "儲存副本(&S)"
+
+msgid "&Seed"
+msgstr "種苗(&S)"
+
+msgid "&Sign/verify message"
+msgstr "簽章/驗證訊息(&S)"
+
+msgid "&Sweep"
+msgstr "清掃(&S)"
+
+msgid "&Tools"
+msgstr "工具(&T)"
+
+msgid "&View"
+msgstr "檢視(&V)"
+
+msgid "&Wallet"
+msgstr "錢包(&W)"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "1 天"
+
+msgid "1 hour"
+msgstr "1 小時"
+
+msgid "1 week"
+msgstr "1 週"
+
+msgid "A copy of your wallet file was created in"
+msgstr "您的錢包檔案副本已建立於"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"建議的手續費會自動加入到此欄位中。您可以手動蓋過這個數值。建議的手續費會隨著"
+"交易的大小而增加。"
+
+msgid "Add Cosigner"
+msgstr "加入共同簽署者"
+
+msgid "Additional fees"
+msgstr "額外手續費"
+
+msgid "Address"
+msgstr "位址"
+
+msgid "Address:"
+msgstr "位址："
+
+msgid "Always"
+msgstr "總是"
+
+msgid "Amount"
+msgstr "金額"
+
+msgid "Amount received:"
+msgstr "接收的金額："
+
+msgid "Amount sent:"
+msgstr "發送的金額："
+
+msgid "Amount to be sent"
+msgstr "要發送的金額"
+
+msgid "Amount to be sent."
+msgstr "要發送的金額。"
+
+msgid "Appearance"
+msgstr "外觀"
+
+msgid "Auto connect"
+msgstr "自動連接"
+
+msgid "BIP39 seed"
+msgstr "BIP39 種苗"
+
+msgid ""
+"BIP39 seeds can be imported in Electrum so that users can access funds "
+"locked in other wallets."
+msgstr ""
+"BIP39 種苗可以在 Electrum 中匯入，如此使用者就能存取鎖在其他錢包中的資金。"
+
+msgid "Back"
+msgstr "返回"
+
+msgid "Balance"
+msgstr "存額"
+
+msgid "Base unit"
+msgstr "基本單位"
+
+msgid "Base unit of your wallet."
+msgstr "您錢包的基礎單位。"
+
+msgid ""
+"Before reporting a bug, upgrade to the most recent version of Electrum "
+"(latest release or git HEAD), and include the version number in your report."
+msgstr ""
+"在回報臭蟲之前，請先升級至最新版的 Electrum（最近發行版或 git HEAD），再將軟"
+"體版本號納入您的回報中。"
+
+msgid "Bitcoin Address is None"
+msgstr "比特幣位址空白"
+
+msgid ""
+"Bitcoin address where the payment should be received. Note that each payment "
+"request uses a different Bitcoin address."
+msgstr "應該收到款項的比特幣位址。請注意，每個支付請求都會用不同的比特幣位址。"
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr "比特幣的交易動作一般來說並非免費。交易手續費是由資金的送出者支付。"
+
+msgid "Blockchain"
+msgstr "區塊鏈"
+
+msgid "Broadcast"
+msgstr "廣播"
+
+msgid "Broadcasting transaction..."
+msgstr "正在廣播交易動作..."
+
+msgid "Bump Fee"
+msgstr "補進費"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "取消"
+
+msgid "Cannot broadcast transaction"
+msgstr "無法廣播交易"
+
+msgid "Cannot read file"
+msgstr "無法讀取檔案"
+
+msgid "Chain split detected at block %d"
+msgstr "偵測到區塊 %d 有鏈分裂"
+
+msgid "Change Password"
+msgstr "更換密碼"
+
+msgid "Changing PIN code."
+msgstr "更換 PIN 碼。"
+
+msgid "Child Pays for Parent"
+msgstr "子代親支付"
+
+msgid "Child pays for parent"
+msgstr "子代親支付"
+
+msgid "Choose a password to encrypt your wallet keys."
+msgstr "請想定一道加密您錢包金鑰的密碼。"
+
+msgid "Choose a server"
+msgstr "選擇伺服器"
+
+msgid ""
+"Choose coin (UTXO) selection method.  The following are available:\n"
+"\n"
+msgstr "選擇錢幣 (UTXO) 選取方法。下列方法可用：\n"
+
+msgid "Choose the number of signatures needed to unlock funds in your wallet:"
+msgstr "選擇解開錢包中資金所需要的簽章數："
+
+msgid ""
+"Choose which online block explorer to use for functions that open a web "
+"browser"
+msgstr "選擇開啟網頁瀏覽器時所要使用的線上區塊探索器"
+
+msgid "Choose your chain"
+msgstr "選擇您的鏈"
+
+msgid "Choose..."
+msgstr "選擇..."
+
+msgid "Clear"
+msgstr "清除"
+
+msgid "Close"
+msgstr "關閉"
+
+msgid "Co&ins"
+msgstr "錢幣(&I)"
+
+msgid "Coin selection"
+msgstr "錢幣選取"
+
+msgid "Con&sole"
+msgstr "主控臺(&S)"
+
+msgid "Con&tacts"
+msgstr "聯絡人(&T)"
+
+msgid "Confirm Passphrase:"
+msgstr "確認密語："
+
+msgid "Confirm Password:"
+msgstr "確認密碼："
+
+msgid "Confirm Seed"
+msgstr "確認種苗"
+
+msgid "Confirm new PIN"
+msgstr "確認新 PIN"
+
+msgid "Connected to %d nodes."
+msgstr "已連接 %d 個節點。"
+
+msgid "Contacts"
+msgstr "聯絡人"
+
+msgid "Copy"
+msgstr "複製"
+
+msgid "Copy %s"
+msgstr "複製 %s"
+
+msgid "Copy URI"
+msgstr "複製 URI"
+
+msgid "Copy and Close"
+msgstr "複製並關閉"
+
+msgid "Copy to clipboard"
+msgstr "複製到剪貼簿"
+
+msgid "Could not start Barcode Scanner."
+msgstr "無法啓動「條碼掃描器」。"
+
+msgid "Critical Error"
+msgstr "重大錯誤"
+
+msgid "Current Password:"
+msgstr "目前密碼："
+
+msgid "Current fee"
+msgstr "目前手續費"
+
+msgid "Dark/Light"
+msgstr "暗/亮"
+
+msgid "Date"
+msgstr "日期"
+
+msgid "Date: %s"
+msgstr "日期：%s"
+
+msgid "Decrypt"
+msgstr "解密"
+
+msgid "Default Servers"
+msgstr "預設伺服器"
+
+msgid "Delete"
+msgstr "刪除"
+
+msgid "Delete invoice?"
+msgstr "刪除收據？"
+
+msgid "Delete wallet?"
+msgstr "刪除錢包？"
+
+msgid "Denomination"
+msgstr "面額"
+
+msgid "Description"
+msgstr "描述說明"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "交易事項的描述說明（非強制）。"
+
+msgid "Details"
+msgstr "細節"
+
+msgid "Disconnected"
+msgstr "已中斷連結"
+
+msgid "Display the details of your transactions before signing it."
+msgstr "在簽署之前先顯示您的交易細節。"
+
+msgid "Do not store it electronically."
+msgstr "請不要以電子方式儲存。"
+
+msgid "Do you want to delete '%s'?"
+msgstr "您是否要刪除「%s」？"
+
+msgid "Do you want to delete the old file"
+msgstr "您是否要刪除舊檔案"
+
+msgid "Do you want to remove"
+msgstr "您是否要移除"
+
+msgid "Do you wish to continue?"
+msgstr "您是否打算繼續？"
+
+msgid "Edit %s"
+msgstr "編輯 %s"
+
+msgid "Edit fees manually"
+msgstr "手動編輯手續費"
+
+msgid "Electrum App"
+msgstr "Electrum App"
+
+msgid "Electrum Plugins"
+msgstr "Electrum 插件"
+
+msgid ""
+"Electrum communicates with remote servers to get information about your "
+"transactions and addresses. The servers all fulfil the same purpose only "
+"differing in hardware. In most cases you simply want to let Electrum pick "
+"one at random.  However if you prefer feel free to select a server manually."
+msgstr ""
+"Electrum 會與遠端伺服器溝通以取得您的交易與相關位址的資訊。所有伺服器的用途都"
+"相同，僅有硬體有所差異。大多數情況下，您會單純希望讓 Electrum 隨機挑選。然"
+"而，若您有所偏好，請自由手動選取伺服器。"
+
+msgid ""
+"Electrum connects to several nodes in order to download block headers and "
+"find out the longest blockchain."
+msgstr "Electrum 連接到許多節點以下載區塊標頭並找出最長的區塊鏈。"
+
+msgid "Electrum is generating your addresses, please wait..."
+msgstr "Electrum 正在生成您的位址，請稍候…"
+
+msgid "Electrum preferences"
+msgstr "Electrum 偏好設定"
+
+msgid ""
+"Electrum sends your wallet addresses to a single server, in order to receive "
+"your transaction history."
+msgstr "Electrum 會將您的錢包位址發送給單一伺服器以接收您的交易歷史。"
+
+msgid "Electrum wallet"
+msgstr "Electrum 錢包"
+
+msgid "Electrum was unable to copy your wallet file to the specified location."
+msgstr "Electrum 無法複製您的錢包檔案到指定位置。"
+
+msgid "Electrum was unable to export your labels."
+msgstr "Electrum 無法匯出您的標籤。"
+
+msgid "Electrum was unable to import your labels."
+msgstr "Electrum 無法匯入您的標籤。"
+
+msgid "Electrum was unable to open your transaction file"
+msgstr "Electrum 無法開啟您的交易檔案"
+
+msgid "Electrum was unable to parse your transaction"
+msgstr "Electrum 無法解析您的交易資訊"
+
+msgid "Electrum was unable to produce a private key-export."
+msgstr "Electrum 無法產生私鑰匯出。"
+
+msgid "Electrum was unable to produce a transaction export."
+msgstr "Electrum 無法產生交易資訊匯出。"
+
+msgid ""
+"Electrum's focus is speed, with low resource usage and simplifying Bitcoin. "
+"You do not need to perform regular backups, because your wallet can be "
+"recovered from a secret phrase that you can memorize or write on paper. "
+"Startup times are instant because it operates in conjunction with high-"
+"performance servers that handle the most complicated parts of the Bitcoin "
+"system.\n"
+"\n"
+msgstr ""
+"Electrum 著重於速度，執行時僅使用少量資源，並簡化比特幣的運用。您不需要經常執"
+"行備份，因為您的錢包可以根據您有辦法記憶或寫在紙上的祕密暗語還原。程式啟動時"
+"幾乎能立即反應，因為它所連結的是能處理比特幣系統最複雜部分的高效伺服器。\n"
+
+msgid "Encrypt"
+msgstr "加密"
+
+msgid "Encrypt wallet file"
+msgstr "加密錢包檔案"
+
+msgid "Encrypt/decrypt Message"
+msgstr "加密/解密訊息"
+
+msgid "Encrypted"
+msgstr "已加密"
+
+msgid "Enter Passphrase"
+msgstr "輸入密語"
+
+msgid "Enter Password"
+msgstr "輸入密碼"
+
+msgid "Enter Seed"
+msgstr "輸入種苗"
+
+msgid "Enter a filename for the copy of your wallet"
+msgstr "輸入您的錢包副本檔名"
+
+msgid "Enter a list of outputs in the 'Pay to' field."
+msgstr "請在「支付給」欄位中輸入輸出清單。"
+
+msgid "Enter addresses"
+msgstr "輸入位址"
+
+msgid "Enter description"
+msgstr "輸入描述說明"
+
+msgid "Enter new PIN"
+msgstr "輸入新 PIN"
+
+msgid "Enter private keys"
+msgstr "輸入私鑰"
+
+msgid "Enter private keys:"
+msgstr "輸入私鑰："
+
+msgid ""
+"Enter their master private key (xprv) if you want to be able to sign for "
+"them."
+msgstr "若您希望可以為之簽署，請輸入它們的主要私鑰 (xprv)。"
+
+msgid "Enter wallet name"
+msgstr "輸入錢包名稱"
+
+msgid "Enter your PIN code in order to decrypt your seed"
+msgstr "輸入您的 PIN 碼以解密您的種苗"
+
+msgid "Enter your PIN code to confirm deletion of %s"
+msgstr "輸入您的 PIN 碼以確認 %s 刪除"
+
+msgid "Enter your current PIN:"
+msgstr "輸入您的目前 PIN 碼："
+
+msgid "Enter your password or choose another file."
+msgstr "輸入您的密碼或選擇其他檔案。"
+
+msgid "Enter your password to proceed"
+msgstr "輸入您的密碼以繼續"
+
+msgid "Error"
+msgstr "錯誤"
+
+msgid "Exit Electrum"
+msgstr "離開 Electrum"
+
+msgid "Expected confirmation time"
+msgstr "預期的確認時間"
+
+msgid "Expiration date of your request."
+msgstr "您請求的過期日。"
+
+msgid "Expired"
+msgstr "已過期"
+
+msgid ""
+"Expired requests have to be deleted manually from your list, in order to "
+"free the corresponding Bitcoin addresses."
+msgstr "過期的請求必須手動從您的清單中刪除，才能釋放對應的比特幣位址。"
+
+msgid "Expires"
+msgstr "過期"
+
+msgid "Export"
+msgstr "匯出"
+
+msgid "Export History"
+msgstr "匯出歷史紀錄"
+
+msgid "Exposing a single private key can compromise your entire wallet!"
+msgstr "匯出一私鑰可能會危害到您整個錢包！"
+
+msgid "Extend this seed with custom words"
+msgstr "以自訂字詞擴展此種苗"
+
+msgid "Failed to update password"
+msgstr "無法更新密碼"
+
+msgid "Fee"
+msgstr "手續費"
+
+msgid "Fee:"
+msgstr "手續費："
+
+msgid "Fees"
+msgstr "手續費"
+
+msgid "Fiat"
+msgstr "法幣"
+
+msgid "Fiat currency"
+msgstr "法定貨幣"
+
+msgid "File"
+msgstr "檔案"
+
+msgid "Final"
+msgstr "最終"
+
+msgid "Find"
+msgstr "尋找"
+
+msgid "Follow this branch"
+msgstr "依循此分支"
+
+msgid "Format"
+msgstr "格式"
+
+msgid "Format: address, amount"
+msgstr "格式：位址, 金額"
+
+msgid "From"
+msgstr "從"
+
+msgid "From %d cosigners"
+msgstr "從 %d 位共同簽署者"
+
+msgid "Height"
+msgstr "高度"
+
+msgid "Hello World"
+msgstr "世界好"
+
+msgid "Here is your master public key."
+msgstr "這是您的主要公鑰。"
+
+msgid "Hide"
+msgstr "隱藏"
+
+msgid "History"
+msgstr "歷史"
+
+msgid "Host"
+msgstr "主機"
+
+msgid "How do you want to connect to a server? "
+msgstr "您希望如何連接到伺服器？"
+
+msgid ""
+"However, BIP39 seeds do not include a version number, which compromises "
+"compatibility with future wallet software."
+msgstr "然而，BIP39 種苗不包含版號，這會危害到未來錢包軟體的相容性。"
+
+msgid "Identity"
+msgstr "識別身份"
+
+msgid ""
+"If auto-connect is enabled, Electrum will always use a server that is on the "
+"longest blockchain."
+msgstr "若有啟用自動連接，Electrum 總是會使用最長區塊鏈上的伺服器。"
+
+msgid ""
+"If it is disabled, you have to choose a server you want to use. Electrum "
+"will warn you if your server is lagging."
+msgstr ""
+"若停用，則您必須選擇您打算使用的伺服器。若您的伺服器有落後狀況，Electrum 會警"
+"示您。"
+
+msgid "If the fee is low"
+msgstr "若手續費低"
+
+msgid "If you check this box, your transaction will be marked as non-final,"
+msgstr "若您勾選此方框，您的交易將標記為非完全狀態，"
+
+msgid ""
+"If you forget your PIN or lose your device, your seed phrase will be the "
+"only way to recover your funds."
+msgstr ""
+"若您忘記您的 PIN 碼或遺失您的裝置，您的種苗詞彙將是還原資金的唯一方式。"
+
+msgid "If you lose your seed, your money will be permanently lost."
+msgstr "若您失去您的種苗，您的金錢將永遠消失。"
+
+msgid ""
+"If you want to create new addresses, use a deterministic wallet instead."
+msgstr "若您想要建立新位址，請改為使用決定型錢包。"
+
+msgid "Import"
+msgstr "匯入"
+
+msgid "Import addresses"
+msgstr "匯入位址"
+
+msgid "Import file"
+msgstr "匯入檔案"
+
+msgid "Import private keys"
+msgstr "匯入私鑰"
+
+msgid ""
+"In addition, Electrum does not verify the checksum of BIP39 seeds; make sure "
+"you type your seed correctly."
+msgstr ""
+"此外，Electrum 不會驗證 BIP39 種苗的校驗計算碼；請確認您有正確輸入種苗。"
+
+msgid ""
+"In particular, DO NOT use 'redeem private key' services proposed by third "
+"parties."
+msgstr "強調一點，「請不要」使用第三方提供的「換回私鑰」服務。"
+
+msgid ""
+"In some cases, use up to 3 change addresses in order to break up large coin "
+"amounts and obfuscate the recipient address."
+msgstr ""
+"在某些情況下，可藉由多達 3 個變換位址以拆分大筆金額，並模糊接收用位址。"
+
+msgid "Increase fee"
+msgstr "請提高手續費"
+
+msgid "Information"
+msgstr "資訊"
+
+msgid "Input amount"
+msgstr "輸入金額"
+
+msgid "Input raw transaction"
+msgstr "輸入原生交易"
+
+msgid "Inputs"
+msgstr "輸入"
+
+msgid "Install Wizard"
+msgstr "安裝精靈"
+
+msgid "Install the zbar package to enable this."
+msgstr "請安裝 zbar 軟體包啟用此功能。"
+
+msgid "Insufficient funds"
+msgstr "餘額不足"
+
+msgid "Invalid Address"
+msgstr "無效位址"
+
+msgid "Invalid Amount"
+msgstr "無效的金額"
+
+msgid "Invalid Bitcoin Address"
+msgstr "無效的比特幣位址"
+
+msgid "Invalid Lines found:"
+msgstr "找到無效的列："
+
+msgid "Invalid PIN"
+msgstr "無效 PIN"
+
+msgid "Invalid bitcoin URI:"
+msgstr "無效的比特幣 URI："
+
+msgid "Invoice"
+msgstr "發票"
+
+msgid "Invoice saved as "
+msgstr "發票儲存為 "
+
+msgid "Invoices"
+msgstr "發票"
+
+msgid "Keyboard shortcut: type \"!\" to send all your coins."
+msgstr "鍵盤快捷鍵：輸入「!」發送您所有錢幣。"
+
+msgid "Label Settings"
+msgstr "標籤設定"
+
+msgid "Language"
+msgstr "語言"
+
+msgid "Leave this field empty if you want to disable encryption."
+msgstr "若您想要停用加密功能，則請將此欄留空。"
+
+msgid "Line #"
+msgstr "列 #"
+
+msgid "Load transaction"
+msgstr "載入交易"
+
+msgid "Lookup transaction"
+msgstr "查找交易"
+
+msgid ""
+"Make sure you own the seed phrase or the private keys, before you request "
+"Bitcoins to be sent to this wallet."
+msgstr "在您請求比特幣發送到此錢包之前，請確認您擁有的種苗詞彙或私鑰。"
+
+msgid "Master Public Key"
+msgstr "主要公鑰"
+
+msgid "Master Public Keys"
+msgstr "主要公鑰"
+
+msgid "Max"
+msgstr "最大"
+
+msgid "Max fee exceeded"
+msgstr "已達最高額手續費"
+
+msgid "Max static fee"
+msgstr "最大靜態手續費"
+
+msgid "Max value of the static fee slider"
+msgstr "靜態手續費滑動桿最大值"
+
+msgid "Memo"
+msgstr "備忘錄"
+
+msgid "Message"
+msgstr "訊息"
+
+msgid "Mining fee"
+msgstr "挖礦手續費"
+
+msgid "Multi-Signature Wallet"
+msgstr "多重簽章錢包"
+
+msgid "Name"
+msgstr "名稱"
+
+msgid "Network"
+msgstr "網路"
+
+msgid "Never"
+msgstr "不要"
+
+msgid "Never disclose your seed."
+msgstr "永不揭露您的種苗。"
+
+msgid "Never type it on a website."
+msgstr "永不在網站上輸入這些內容。"
+
+msgid "New"
+msgstr "新增"
+
+msgid "New Contact"
+msgstr "新聯絡人"
+
+msgid "New Password:"
+msgstr "新密碼："
+
+msgid "New contact"
+msgstr "新聯絡人"
+
+msgid "New fee:"
+msgstr "新手續費："
+
+msgid "New transaction received. %(amount)s"
+msgstr "接收到新交易。%(amount)s"
+
+msgid "Next"
+msgstr "下一個"
+
+msgid "No Wallet"
+msgstr "無錢包"
+
+msgid "No donation address for this server"
+msgstr "此伺服器無捐款位址"
+
+msgid "No message or amount"
+msgstr "無訊息或金額"
+
+msgid "No more addresses in your wallet."
+msgstr "您的錢包中沒有其他位址。"
+
+msgid "No outputs"
+msgstr "無輸出"
+
+msgid "No transactions found for this seed"
+msgstr "此種苗找不到交易資訊"
+
+msgid "Node"
+msgstr "節點"
+
+msgid "None"
+msgstr "無"
+
+msgid "Not connected"
+msgstr "未連接"
+
+msgid "Not enough funds"
+msgstr "餘額不足"
+
+msgid ""
+"Note that if you have frozen some of your addresses, the available funds "
+"will be lower than your total balance."
+msgstr "請注意，若您已凍結某些位址，可用餘額會少於您的總存額。"
+
+msgid ""
+"Note that some merchants do not accept non-final transactions until they are "
+"confirmed."
+msgstr "注意，有些交易商在交易確認之前不會接受非完全交易。"
+
+msgid "Nothing set !"
+msgstr "沒有設定任何項目！"
+
+msgid ""
+"Number of zeros displayed after the decimal point. For example, if this is "
+"set to 2, \"1.\" will be displayed as \"1.00\""
+msgstr "小數點後方的顯示位數。舉例而言，若設定為 2，「1.」會顯示為「1.00」。"
+
+msgid "OK"
+msgstr "確定"
+
+msgid "Offline"
+msgstr "離線"
+
+msgid "One output per line."
+msgstr "每列一則輸出。"
+
+msgid "Online Block Explorer"
+msgstr "線上區塊探索器"
+
+msgid "Open labels file"
+msgstr "開啟標籤檔案"
+
+msgid "OpenAlias"
+msgstr "OpenAlias"
+
+msgid "OpenAlias record, used to receive coins and to sign payment requests."
+msgstr "OpenAlias 記錄，用於接收錢幣並簽署支付請求。"
+
+msgid "Options"
+msgstr "選項"
+
+msgid "Output amount"
+msgstr "輸出金額"
+
+msgid "Outputs"
+msgstr "輸出"
+
+msgid "Overview"
+msgstr "概覽"
+
+msgid "PIN mismatch"
+msgstr "PIN 碼不符"
+
+msgid "Paid"
+msgstr "已支付"
+
+msgid "Passphrase"
+msgstr "密語"
+
+msgid "Passphrase:"
+msgstr "密語："
+
+msgid "Password"
+msgstr "密碼"
+
+msgid "Password Strength"
+msgstr "密碼強度"
+
+msgid "Password is disabled, this wallet is not protected"
+msgstr "密碼已停用，此錢包尚未受到保護"
+
+msgid "Password was updated successfully"
+msgstr "密碼已成功供新"
+
+msgid "Password:"
+msgstr "密碼："
+
+msgid "Pay Now"
+msgstr "立刻支付"
+
+msgid "Pay to"
+msgstr "支付給"
+
+msgid "Pay to many"
+msgstr "支付給多方"
+
+msgid "Payment Request"
+msgstr "支付請求"
+
+msgid "Payment request has expired"
+msgstr "支付請求已過期"
+
+msgid "Payment sent."
+msgstr "支付已送出。"
+
+msgid "Pending"
+msgstr "擱置中"
+
+msgid "Please enter a seed phrase or a master key (xpub or xprv):"
+msgstr "請輸入種苗詞彙或主金鑰 (xpub 或 xprv)："
+
+msgid ""
+"Please enter a seed phrase, a master key, a list of Bitcoin addresses, or a "
+"list of private keys"
+msgstr "請輸入種苗詞彙、主金鑰、比特幣位址列表、或私鑰列表"
+
+msgid "Please enter the master public key (xpub) of your cosigner."
+msgstr "請輸入您共同簽署者的主要公鑰 (xpub)。"
+
+msgid "Please enter the master public key of cosigner #%d:"
+msgstr "請輸入共同簽署者 #%d 的主要公鑰："
+
+msgid "Please enter your password"
+msgstr "請輸入您的密碼"
+
+msgid ""
+"Please enter your seed derivation passphrase. Note: this is NOT your "
+"encryption password. Leave this field empty if you did not use one or are "
+"unsure."
+msgstr ""
+"請輸入您的種苗衍生密語。注意：這「不是」指您的加密密碼。若您沒有使用過，或不"
+"確定，請將此欄位留空。"
+
+msgid "Please enter your seed phrase in order to restore your wallet."
+msgstr "請輸入您的種苗詞彙以還原您的錢包。"
+
+msgid "Please install the Barcode Scanner app from ZXing"
+msgstr "請安裝 ZXing 的 Barcode Scanner app"
+
+msgid ""
+"Please paste your cosigners master public key, or scan it using the camera "
+"button."
+msgstr "請貼上您的共同簽署者主要公鑰，或例用相機按鈕掃描。"
+
+msgid "Please report any bugs as issues on github:<br/>"
+msgstr "請前往 github 將臭蟲以議題回報：<br/>"
+
+msgid "Please restart Electrum to activate the new GUI settings"
+msgstr "請重新啟動 Electrum 以啟動新 GUI 設定"
+
+msgid "Please retype your seed phrase, to confirm that you properly saved it"
+msgstr "請重新輸入您的種苗詞彙，方便確認您有正確儲存"
+
+msgid "Please save these %d words on paper (order is important). "
+msgstr "請在紙上寫下這 %d 個單字（順序很重要）。"
+
+msgid "Please share it with your cosigners."
+msgstr "請和您的共同簽署者分享。"
+
+msgid "Please type your seed phrase using the virtual keyboard."
+msgstr "請使用虛擬鍵盤輸入您的種苗詞彙。"
+
+msgid "Please wait"
+msgstr "請稍候"
+
+msgid "Please wait..."
+msgstr "請稍候..."
+
+msgid "Port"
+msgstr "連接埠"
+
+msgid "Preferences"
+msgstr "偏好設定"
+
+msgid "Press 'Next' to create this wallet, or choose another file."
+msgstr "請按「下一步」建立此錢包，或是選擇其他檔案。"
+
+msgid "Press 'Next' to open this wallet."
+msgstr "請按「下一步」開啟此錢包。"
+
+msgid "Press again to exit"
+msgstr "再按一次離開"
+
+msgid "Preview"
+msgstr "預覽"
+
+msgid "Private key"
+msgstr "私鑰"
+
+msgid "Private keys"
+msgstr "私鑰"
+
+msgid "Private keys exported."
+msgstr "私鑰已匯出。"
+
+msgid "Proceed?"
+msgstr "繼續？"
+
+msgid "Propose Replace-By-Fee"
+msgstr "提出取代手續費"
+
+msgid "Proxy"
+msgstr "代理"
+
+msgid "Proxy user"
+msgstr "代理使用者"
+
+msgid "Public key"
+msgstr "公鑰"
+
+msgid "Public keys"
+msgstr "公鑰"
+
+msgid "QR code"
+msgstr "QR 碼"
+
+msgid "QR code copied to clipboard"
+msgstr "QR 碼已複製到剪貼簿"
+
+msgid "QR code saved to file"
+msgstr "QR 碼已儲存至檔案中"
+
+msgid "Read QR code"
+msgstr "讀取 QR 碼"
+
+msgid "Read file"
+msgstr "讀取檔案"
+
+msgid "Receive"
+msgstr "接收"
+
+msgid "Receiving address"
+msgstr "接收用位址"
+
+msgid "Recipient of the funds."
+msgstr "資金的收受人。"
+
+msgid "Recovery successful"
+msgstr "復原成功"
+
+msgid "Redeem Script"
+msgstr "換回指令稿"
+
+msgid "Remove"
+msgstr "移除"
+
+msgid "Remove %s from your list of contacts?"
+msgstr "要從您的聯絡人清單中移除 %s？"
+
+msgid "Replaceable"
+msgstr "可取代"
+
+msgid "Reporting Bugs"
+msgstr "回報臭蟲"
+
+msgid "Request expires"
+msgstr "請求已過期"
+
+msgid "Request saved successfully"
+msgstr "請求已成功儲存"
+
+msgid "Requested amount"
+msgstr "請求的金額"
+
+msgid "Requestor"
+msgstr "請求者"
+
+msgid "Requests"
+msgstr "請求"
+
+msgid "Require %d signatures"
+msgstr "要求有 %d 個簽章"
+
+msgid "Requires"
+msgstr "要求"
+
+msgid "SSL certificate"
+msgstr "SSL 憑證"
+
+msgid "SSL certificate used to sign payment requests."
+msgstr "用來簽署支付請求的 SSL 憑證。"
+
+msgid "Save"
+msgstr "儲存"
+
+msgid "Save as BIP70 file"
+msgstr "另存為 BIP70 檔案"
+
+msgid "Save invoice to file"
+msgstr "將發票儲存為檔案"
+
+msgid "Seed"
+msgstr "種苗"
+
+msgid "Seed Type"
+msgstr "種苗類型"
+
+msgid "Select file to export your private keys to"
+msgstr "請選取要匯出您的私鑰到何檔案"
+
+msgid "Select file to export your wallet transactions to"
+msgstr "選取您要將錢包交易事項匯出到何檔案"
+
+msgid "Select file to save your labels"
+msgstr "選取要儲存您標籤的檔案"
+
+msgid "Select server automatically"
+msgstr "自動選取伺服器"
+
+msgid "Select server manually"
+msgstr "手動選取伺服器"
+
+msgid "Select where to save your payment request"
+msgstr "選取要在何處儲存您的支付請求"
+
+msgid "Select where to save your signed transaction"
+msgstr "選取要在何處儲存您簽署的交易事項"
+
+msgid "Select which language is used in the GUI (after restart)."
+msgstr "選取圖形界面中要使用何種語言（重新啟動後生效）。"
+
+msgid "Select your transaction file"
+msgstr "選取您的交易檔案"
+
+msgid "Send"
+msgstr "發送"
+
+msgid "Sending"
+msgstr "發送中"
+
+msgid "Server"
+msgstr "伺服器"
+
+msgid "Server is lagging (%d blocks)"
+msgstr "伺服器落後（%d 個區塊）"
+
+msgid "Server lagging (%d blocks)"
+msgstr "伺服器落後（%d 區塊）"
+
+msgid "Server peers"
+msgstr "伺服器同儕"
+
+msgid "Settings"
+msgstr "設定值"
+
+msgid "Show"
+msgstr "顯示"
+
+msgid "Show QR Code"
+msgstr "顯示 QR 碼"
+
+msgid "Show as QR code"
+msgstr "顯示為 QR 碼"
+
+msgid "Show fee edit box in send tab."
+msgstr "在發送分頁中顯示手續費編輯方塊。"
+
+msgid "Show history rates"
+msgstr "顯示歷史費率"
+
+msgid "Show/Hide"
+msgstr "顯示/隱藏"
+
+msgid "Sign"
+msgstr "簽署"
+
+msgid "Sign/verify Message"
+msgstr "簽署/驗證訊息"
+
+msgid "Signature"
+msgstr "簽章"
+
+msgid "Signature verified"
+msgstr "簽章已過驗證"
+
+msgid "Signing transaction..."
+msgstr "正在簽署交易..."
+
+msgid "Size:"
+msgstr "大小："
+
+msgid "Source"
+msgstr "來源"
+
+msgid "Spend only confirmed coins"
+msgstr "僅花費確認過的錢幣"
+
+msgid "Spend only confirmed inputs."
+msgstr "僅花費確認過的輸入。"
+
+msgid "Status"
+msgstr "狀態"
+
+msgid "Status:"
+msgstr "狀態："
+
+msgid "Success"
+msgstr "成功"
+
+msgid "Sweep"
+msgstr "清掃"
+
+msgid "Sweep private keys"
+msgstr "清掃私鑰"
+
+msgid "Synchronizing..."
+msgstr "同步中…"
+
+msgid ""
+"Text copied to clipboard.\n"
+"Tap again to display it as QR code."
+msgstr ""
+"文字已複製到剪貼簿中。\n"
+"再按一下顯示為 QR 碼。"
+
+msgid ""
+"The amount of fee can be decided freely by the sender. However, transactions "
+"with low fees take more time to be processed."
+msgstr ""
+"手續費的金額可以由發送者自由決定。然而，低手續費的交易需要花上更久的時間才能"
+"處理。"
+
+msgid ""
+"The amount will be displayed in red if you do not have enough funds in your "
+"wallet."
+msgstr "若您錢包中的資金不足時金額將以紅色顯示。"
+
+msgid ""
+"The bitcoin address never expires and will always be part of this electrum "
+"wallet."
+msgstr "該特幣位址永遠不會過期，且總是此 electrum 錢包的一部分。"
+
+msgid ""
+"The description is not sent to the recipient of the funds. It is stored in "
+"your wallet file, and displayed in the 'History' tab."
+msgstr ""
+"描述說明不會發送到資金接收人手中。它儲存在您的錢包檔案中，並且顯示在「歷史」"
+"分頁裡。"
+
+msgid "The fee for this transaction seems unusually high."
+msgstr "此交易的手續費似乎非比尋常地高。"
+
+msgid ""
+"The file '%s' contains an incompletely created wallet.\n"
+"Do you want to complete its creation now?"
+msgstr ""
+"「%s」檔案包含不完整建立的錢包。\n"
+"您現在是否要完成建立手續？"
+
+msgid "The file was removed"
+msgstr "檔案已移除"
+
+msgid "The following addresses were added"
+msgstr "已加入下列位址"
+
+msgid "The following alias providers are available:"
+msgstr "有下列別名供應商可用："
+
+msgid "The following inputs could not be imported"
+msgstr "下列輸入無法匯入"
+
+msgid ""
+"The format of your wallet '%s' must be upgraded for Electrum. This change "
+"will not be backward compatible"
+msgstr "您「%s」錢包的格式必須為 Electrum 升級。這個改變將無法向後相容"
+
+msgid ""
+"The wallet '%s' contains multiple accounts, which are no longer supported in "
+"Electrum 2.7.\n"
+"\n"
+"Do you want to split your wallet into multiple files?"
+msgstr ""
+"「%s」錢包有多個帳號，但 Electrum 2.7 已不再支援。\n"
+"\n"
+"您是否希望將您的錢包切分成多份檔案？"
+
+msgid ""
+"This blockchain is used to verify the transactions sent by your transaction "
+"server."
+msgstr "此區塊鏈用來驗證您交易伺服器送出的交易內容。"
+
+msgid "This file does not exist."
+msgstr "此檔案不存在。"
+
+msgid "This file is encrypted."
+msgstr "此檔案已加密。"
+
+msgid ""
+"This information is seen by the recipient if you send them a signed payment "
+"request."
+msgstr "若您以簽署的支付請求發送，則此資訊會被收件人看到。"
+
+msgid "This is a watching-only wallet"
+msgstr "這是僅限觀看錢包"
+
+msgid "This is the height of your local copy of the blockchain."
+msgstr "這是您區塊鏈的本機副本高度。"
+
+msgid "This may result in higher transactions fees."
+msgstr "這可能導致更高的交易手續費。"
+
+msgid "This means you will not be able to spend Bitcoins with it."
+msgstr "這代表您無法花費錢包裡的比特幣。"
+
+msgid "This payment request will be signed."
+msgstr "此支付請求會被簽署。"
+
+msgid ""
+"This seed will allow you to recover your wallet in case of computer failure."
+msgstr "這種苗能讓您在電腦損壞情況中還原您的錢包。"
+
+msgid "This transaction is not saved. Close anyway?"
+msgstr "此交易沒有儲存。無論如何都要關閉嗎？"
+
+msgid ""
+"This transaction requires a higher fee, or it will not be propagated by the "
+"network"
+msgstr "此交易需要較高的手續費，否則它不會透過網路傳遞出去"
+
+msgid "This wallet has no seed"
+msgstr "此錢包沒有種苗"
+
+msgid "This wallet is watching-only."
+msgstr "此錢包僅限觀看。"
+
+msgid ""
+"This wallet was restored offline. It may contain more addresses than "
+"displayed."
+msgstr "這個錢包已在離線狀態下還原。它可能有比顯示出來更多數目的位址。"
+
+msgid ""
+"To make sure that you have properly saved your seed, please retype it here."
+msgstr "為了確認您已正確儲存種苗，請於此處再次輸入。"
+
+msgid "Total size"
+msgstr "總大小"
+
+msgid "Transaction"
+msgstr "交易"
+
+msgid "Transaction ID"
+msgstr "交易 ID"
+
+msgid "Transaction ID:"
+msgstr "交易 ID："
+
+msgid "Transaction saved successfully"
+msgstr "交易已成功儲存"
+
+msgid "Transaction unrelated to your wallet"
+msgstr "交易與您的錢包無關"
+
+msgid "Transaction:"
+msgstr "交易："
+
+msgid "Transactions"
+msgstr "交易"
+
+msgid "Try to explain not only what the bug is, but how it occurs."
+msgstr "請試著解釋這是怎樣的臭蟲，以及它是如何發生的。"
+
+msgid "Unable to create backup"
+msgstr "無法製作備份"
+
+msgid "Unable to create csv"
+msgstr "無法建立 csv"
+
+msgid "Unable to export history"
+msgstr "無法匯出歷史"
+
+msgid "Unable to read file or no transaction found"
+msgstr "無法讀取檔案或找不到交易"
+
+msgid "Unknown"
+msgstr "未知"
+
+msgid "Use SSL"
+msgstr "使用 SSL"
+
+msgid "Use Tor Proxy"
+msgstr "使用 Tor 代理"
+
+msgid "Use as server"
+msgstr "用為伺服器"
+
+msgid "Use change addresses"
+msgstr "使用變換位址"
+
+msgid "Use dynamic fees"
+msgstr "使用動態手續費"
+
+msgid "Use fees recommended by the server."
+msgstr "使用伺服器建議的手續費。"
+
+msgid "Use multiple change addresses"
+msgstr "使用多重變換位址"
+
+msgid "Use setconfig to set ssl_chain and ssl_privkey."
+msgstr "使用 setconfig 設定 ssl_chain 和 ssl_privkey。"
+
+msgid "Use the camera button to scan a QR code."
+msgstr "使用照相機按鈕掃描 QR 碼。"
+
+msgid "Use this dialog to add a password to your wallet."
+msgstr "使用此對話方塊將密碼加到您的錢包。"
+
+msgid "Use this dialog to change your password."
+msgstr "使用此對話方塊來更改您的密碼。"
+
+msgid "Uses icons from the Icons8 icon pack (icons8.com)."
+msgstr "使用 Icons8 圖示包中的圖示 (icons8.com)。"
+
+msgid ""
+"Using change addresses makes it more difficult for other people to track "
+"your transactions."
+msgstr "使用變換位址可以讓其他人更難追蹤您的交易資訊。"
+
+msgid "Verify"
+msgstr "驗證"
+
+msgid "Version"
+msgstr "版本"
+
+msgid "Video Device"
+msgstr "視訊裝置"
+
+msgid "View invoice"
+msgstr "檢視收據"
+
+msgid "View on block explorer"
+msgstr "在區塊探查器上檢視"
+
+msgid "WARNING"
+msgstr "警告"
+
+msgid "WARNING: ALL your private keys are secret."
+msgstr "警告：您的「所有」私鑰都是祕密。"
+
+msgid ""
+"WARNING: the alias \"%s\" could not be validated via an additional security "
+"check, DNSSEC, and thus may not be correct."
+msgstr "警告：「%s」別名無法通過額外安全性檢查 DNSSEC 的驗證，因此可能不正確。"
+
+msgid "Waiting for fee estimates..."
+msgstr "正在等待手續費估價..."
+
+msgid "Wallet"
+msgstr "錢包"
+
+msgid "Wallet backup created"
+msgstr "錢包備份已製作"
+
+msgid "Wallet change address"
+msgstr "錢包變換位址"
+
+msgid "Wallet receive address"
+msgstr "錢包接收位址"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid ""
+"Warning: The next address will not be recovered automatically if you restore "
+"your wallet from seed; you may need to add it manually.\n"
+"\n"
+"This occurs because you have too many unused addresses in your wallet. To "
+"avoid this situation, use the existing addresses first.\n"
+"\n"
+"Create anyway?"
+msgstr ""
+"警告：若您從種苗還原您的錢包，則下個位址不會自動還原；您可能需要手動加入。\n"
+"\n"
+"這之所以發生，可能是您錢包中有太多沒有使用的位址。若要避免此情形，請先使用既"
+"有位址。\n"
+"\n"
+"無論如何都要建立嗎？"
+
+msgid ""
+"We do not guarantee that BIP39 imports will always be supported in Electrum."
+msgstr "我們無法保證 BIP39 匯入總是可被 Electrum 支援。"
+
+msgid "Wrong signature"
+msgstr "錯誤簽章"
+
+msgid "You are following branch"
+msgstr "您正依循分支"
+
+msgid ""
+"You are using Electrum in offline mode; restart Electrum if you want to get "
+"connected"
+msgstr "您正以離線模式使用 Electrum；若您希望連線則請重新啟動 Electrum"
+
+msgid ""
+"You are using a non-deterministic wallet, which cannot create new addresses."
+msgstr "您正在使用非決定型錢包，所以無法建立新位址。"
+
+msgid ""
+"You may enter a Bitcoin address, a label from your list of contacts (a list "
+"of completions will be proposed), or an alias (email-like address that "
+"forwards to a Bitcoin address)"
+msgstr ""
+"您可以輸入比特幣位址、您聯絡人清單（會提示名稱補完的清單）的標籤、或是別名"
+"（類似電子郵件的位址，可以轉送到某一比特幣位址）"
+
+msgid "You may load a CSV file using the file icon."
+msgstr "您可使用檔案圖示載入 CSV 檔案。"
+
+msgid "Your accounts have been moved to"
+msgstr "您的帳號已移動到"
+
+msgid ""
+"Your bitcoins are password protected. However, your wallet file is not "
+"encrypted."
+msgstr "您的比特幣已受密碼保護。然而，您的錢包檔案尚未加密。"
+
+msgid "Your labels have been synchronised."
+msgstr "您的標籤已經同步。"
+
+msgid "Your labels were exported to"
+msgstr "您的標籤已匯出到"
+
+msgid "Your labels were imported from"
+msgstr "您的標籤已匯入，取自"
+
+msgid "Your seed extension is"
+msgstr "您的種苗擴展為"
+
+msgid "Your seed is important!"
+msgstr "您的種苗至關重要！"
+
+msgid "Your server is on branch"
+msgstr "您的伺服器位在分支"
+
+msgid "Your wallet generation seed is:"
+msgstr "您的錢包生成種苗為："
+
+msgid "Your wallet history has been successfully exported."
+msgstr "您的錢包歷史記錄已經成功匯入。"
+
+msgid "Your wallet is not protected."
+msgstr "您的錢包尚未受到保護。"
+
+msgid "Your wallet is password protected and encrypted."
+msgstr "您的錢包已由密碼保護並加密。"
+
+msgid "Your wallet was upgraded successfully"
+msgstr "您的錢包已成功升級"
+
+msgid "Zeros after decimal point"
+msgstr "小數點後位數"
+
+msgid ""
+"and you will have the possiblity, while it is unconfirmed, to replace it "
+"with a transaction that pays a higher fee."
+msgstr "而您將有機會，在它尚未被確認之時，改為支付更高的交易手續費。"
+
+msgid "are frozen"
+msgstr "已凍結"
+
+msgid "blocks"
+msgstr "區塊"
+
+msgid "cosigner"
+msgstr "共同簽署者"
+
+msgid "from your wallet?"
+msgstr "從您的錢包？"
+
+msgid "json"
+msgstr "json"
+
+msgid "low fee"
+msgstr "低手續費"
+
+msgid "please wait..."
+msgstr "請稍候..."
+
+msgid "unconfirmed"
+msgstr "未確認"
+
+msgid "unknown"
+msgstr "未知"
+
+msgid "unknown (low fee)"
+msgstr "未知（低手續費）"
+
+msgid "unverified"
+msgstr "未驗證"
+
+msgid "watching only"
+msgstr "僅關注"

@@ -1,0 +1,1754 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-12-04 12:08-0500\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Japanese\n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: ja\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr "この設定は送金タブの項目に影響します。"
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr ""
+"%(txs)s 件のトランザクションを受信しました。受け取った合計額は %(amount)s で"
+"す。"
+
+msgid "&About"
+msgstr "Electrumについて"
+
+msgid "&Addresses"
+msgstr "アドレス"
+
+msgid "&Documentation"
+msgstr "説明"
+
+msgid "&Donate to server"
+msgstr "サーバーへ寄付"
+
+msgid "&Encrypt/decrypt message"
+msgstr "メッセージの暗号化・解読"
+
+msgid "&Export"
+msgstr "エクスポート"
+
+msgid "&File"
+msgstr "ファイル"
+
+msgid "&From QR code"
+msgstr "QRコードから"
+
+msgid "&From file"
+msgstr "ファイルから"
+
+msgid "&From text"
+msgstr "テキストから"
+
+msgid "&From the blockchain"
+msgstr "ブロックチェーンから"
+
+msgid "&Help"
+msgstr "ヘルプ"
+
+msgid "&History"
+msgstr "履歴"
+
+msgid "&Import"
+msgstr "インポート"
+
+msgid "&Labels"
+msgstr "ラベル"
+
+msgid "&Load transaction"
+msgstr "取引情報を読み込む"
+
+msgid "&Master Public Keys"
+msgstr "マスター公開鍵"
+
+msgid "&Network"
+msgstr "ネットワーク"
+
+msgid "&New"
+msgstr "新規"
+
+msgid "&New/Restore"
+msgstr "新規・復元"
+
+msgid "&Official website"
+msgstr "公式サイト"
+
+msgid "&Open"
+msgstr "開く"
+
+msgid "&Password"
+msgstr "パスワード"
+
+msgid "&Pay to many"
+msgstr "複数送金"
+
+msgid "&Plugins"
+msgstr "プラグイン"
+
+msgid "&Private keys"
+msgstr "秘密鍵"
+
+msgid "&Quit"
+msgstr "終了"
+
+msgid "&Recently open"
+msgstr "最近開いたウォレット"
+
+msgid "&Report Bug"
+msgstr "バグを報告"
+
+msgid "&Save Copy"
+msgstr "ウォレットのコピーを別名で保存"
+
+msgid "&Seed"
+msgstr "シード"
+
+msgid "&Sign/verify message"
+msgstr "メッセージの署名・署名確認"
+
+msgid "&Sweep"
+msgstr "スイープ"
+
+msgid "&Tools"
+msgstr "ツール"
+
+msgid "&View"
+msgstr "表示"
+
+msgid "&Wallet"
+msgstr "ウォレット"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "1日"
+
+msgid "1 hour"
+msgstr "1 時間"
+
+msgid "1 week"
+msgstr "1 週間"
+
+msgid "A copy of your wallet file was created in"
+msgstr "ウォレットファイルをコピーしました:"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"手数料の欄には取引情報のデータサイズに応じておすすめの値が表示されますが、手"
+"動で指定することもできます。"
+
+msgid "Add Cosigner"
+msgstr "共同署名者を追加する"
+
+msgid "Additional fees"
+msgstr "追加手数料"
+
+msgid "Address"
+msgstr "アドレス"
+
+msgid "Address:"
+msgstr "アドレス:"
+
+msgid "Always"
+msgstr "常に行う"
+
+msgid "Amount"
+msgstr "金額"
+
+msgid "Amount received:"
+msgstr "受け取った合計額:"
+
+msgid "Amount sent:"
+msgstr "送った合計額:"
+
+msgid "Amount to be sent"
+msgstr "送金額"
+
+msgid "Amount to be sent."
+msgstr "送金する金額の設定です。"
+
+msgid "Appearance"
+msgstr "表示"
+
+msgid "Auto connect"
+msgstr "自動接続"
+
+msgid "BIP39 seed"
+msgstr "BIP39シード"
+
+msgid ""
+"BIP39 seeds can be imported in Electrum so that users can access funds "
+"locked in other wallets."
+msgstr ""
+"ElectrumはBIP39（+BIP44）対応ウォレットのシードをインポートすることが可能で"
+"す。"
+
+msgid "Back"
+msgstr "戻る"
+
+msgid "Balance"
+msgstr "残高"
+
+msgid "Base unit"
+msgstr "基本単位"
+
+msgid "Base unit of your wallet."
+msgstr "金額表示の単位を設定します。(円と銭のようなものです)"
+
+msgid ""
+"Before reporting a bug, upgrade to the most recent version of Electrum "
+"(latest release or git HEAD), and include the version number in your report."
+msgstr ""
+"バグを報告する前に、最新版のElectrum(最新リリースもしくはgit HEAD版) を実行し"
+"ているか確認して下さい。報告の際は、Electrumのバージョン番号も記入して下さ"
+"い。"
+
+msgid "Bitcoin Address is None"
+msgstr "ビットコインアドレスがありません"
+
+msgid ""
+"Bitcoin address where the payment should be received. Note that each payment "
+"request uses a different Bitcoin address."
+msgstr ""
+"送金したビットコインを受け取るアドレスです。支払いリクエストではアドレスが毎"
+"回異なることに注意して下さい。"
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"一般的にビットコインの取引は無料ではありません。送信側に手数料がかかります。"
+
+msgid "Blockchain"
+msgstr "ブロックチェーン"
+
+msgid "Broadcast"
+msgstr "発信"
+
+msgid "Broadcasting transaction..."
+msgstr "取引をブロードキャストしています..."
+
+msgid "Bump Fee"
+msgstr "手数料を増額する"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "キャンセル"
+
+msgid "Cannot broadcast transaction"
+msgstr "取引をブロードキャストできません"
+
+msgid "Cannot read file"
+msgstr "ファイルを読み込めません"
+
+msgid "Chain split detected at block %d"
+msgstr "ブロック %d でチェーンの分岐を検出しました"
+
+msgid "Change Password"
+msgstr "パスワードの変更"
+
+msgid "Changing PIN code."
+msgstr "PINコードを変更中"
+
+msgid "Child Pays for Parent"
+msgstr ""
+"スタックしている親（取引情報）に対して子（受取アドレス、釣銭アドレス）の手数"
+"料を支払う"
+
+msgid "Child pays for parent"
+msgstr ""
+"スタックしている親（取引情報）に対して子（受取アドレス、釣銭アドレス）の手数"
+"料を支払う"
+
+msgid "Choose a password to encrypt your wallet keys."
+msgstr "ウォレットの鍵を暗号化するパスワードを入力して下さい。"
+
+msgid "Choose a server"
+msgstr "サーバー選択"
+
+msgid ""
+"Choose coin (UTXO) selection method.  The following are available:\n"
+"\n"
+msgstr ""
+"コイン (UTXO) の選択方法を選んで下さい。以下のものが使用可能です：\n"
+"\n"
+
+msgid "Choose the number of signatures needed to unlock funds in your wallet:"
+msgstr "ウォレットの資金を利用するのに必要な署名の数を選んで下さい:"
+
+msgid ""
+"Choose which online block explorer to use for functions that open a web "
+"browser"
+msgstr "取引を調べるためのブロックチェーンサイトをお選び下さい。"
+
+msgid "Choose your chain"
+msgstr "チェーンを選択してください"
+
+msgid "Choose..."
+msgstr "開く..."
+
+msgid "Clear"
+msgstr "クリア"
+
+msgid "Close"
+msgstr "閉じる"
+
+msgid "Co&ins"
+msgstr "コイン"
+
+msgid "Coin selection"
+msgstr "コイン選択"
+
+msgid "Con&sole"
+msgstr "コンソール"
+
+msgid "Con&tacts"
+msgstr "アドレス帳"
+
+msgid "Confirm Passphrase:"
+msgstr "パスフレーズを確認:"
+
+msgid "Confirm Password:"
+msgstr "新しいパスワードをもう一度:"
+
+msgid "Confirm Seed"
+msgstr "シードの確認"
+
+msgid "Confirm new PIN"
+msgstr "新しいPINの確認"
+
+msgid "Connected to %d nodes."
+msgstr "%d 個のノードに接続しました。"
+
+msgid "Contacts"
+msgstr "アドレス帳"
+
+msgid "Copy"
+msgstr "コピー"
+
+msgid "Copy %s"
+msgstr "「%s」をコピー"
+
+msgid "Copy URI"
+msgstr "URIをコピー"
+
+msgid "Copy and Close"
+msgstr "コピーして閉じる"
+
+msgid "Copy to clipboard"
+msgstr "アドレスをコピー"
+
+msgid "Could not start Barcode Scanner."
+msgstr "バーコードスキャナを起動できませんでした。"
+
+msgid "Critical Error"
+msgstr "重大なエラー"
+
+msgid "Current Password:"
+msgstr "現在のパスワード:"
+
+msgid "Current fee"
+msgstr "設定済み手数料"
+
+msgid "Dark/Light"
+msgstr "暗い/明るい"
+
+msgid "Date"
+msgstr "日付"
+
+msgid "Date: %s"
+msgstr "日付: %s"
+
+msgid "Decrypt"
+msgstr "解読する"
+
+msgid "Default Servers"
+msgstr "デフォルトサーバ"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "Delete invoice?"
+msgstr "請求を削除しますか?"
+
+msgid "Delete wallet?"
+msgstr "ウォレットを削除しますか?"
+
+msgid "Denomination"
+msgstr "デノミネーション"
+
+msgid "Description"
+msgstr "備考"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "取引の備考 (空欄可)"
+
+msgid "Details"
+msgstr "詳細"
+
+msgid "Disconnected"
+msgstr "切断されました"
+
+msgid "Display the details of your transactions before signing it."
+msgstr "署名する前に、取引の詳細を表示します。"
+
+msgid "Do not store it electronically."
+msgstr "電子機器などに保存しないで下さい。"
+
+msgid "Do you want to delete '%s'?"
+msgstr "'%s'を削除しますか？"
+
+msgid "Do you want to delete the old file"
+msgstr "次の古いファイルを削除しますか？"
+
+msgid "Do you want to remove"
+msgstr "アドレス"
+
+msgid "Do you wish to continue?"
+msgstr "続けますか？"
+
+msgid "Edit %s"
+msgstr "「%s」を編集"
+
+msgid "Edit fees manually"
+msgstr "手数料を手動で編集"
+
+msgid "Electrum App"
+msgstr "Electrum App"
+
+msgid "Electrum Plugins"
+msgstr "Electurm プラグイン"
+
+msgid ""
+"Electrum communicates with remote servers to get information about your "
+"transactions and addresses. The servers all fulfil the same purpose only "
+"differing in hardware. In most cases you simply want to let Electrum pick "
+"one at random.  However if you prefer feel free to select a server manually."
+msgstr ""
+"Electrumはサーバからあなたの取引情報とアドレス情報を取得します。自分で好みの"
+"サーバーを選択することもできますが、どのサーバも特に機能に違いはありませんの"
+"で、Electrumの選択に任せることをおすすめします。"
+
+msgid ""
+"Electrum connects to several nodes in order to download block headers and "
+"find out the longest blockchain."
+msgstr ""
+"Electrumは最も長いブロックチェーンを選択するために、複数のノードに接続してブ"
+"ロックヘッダを取得します。"
+
+msgid "Electrum is generating your addresses, please wait..."
+msgstr "Electrumはアドレスを生成しています、しばらくお待ちください..."
+
+msgid "Electrum preferences"
+msgstr "Electrum設定"
+
+msgid ""
+"Electrum sends your wallet addresses to a single server, in order to receive "
+"your transaction history."
+msgstr ""
+"取引情報を取得するため、Electrumはサーバにあなたのアドレスを送信します。"
+
+msgid "Electrum wallet"
+msgstr "Electrumウォレット"
+
+msgid "Electrum was unable to copy your wallet file to the specified location."
+msgstr "ウォレットファイルを保存出来ませんでした。"
+
+msgid "Electrum was unable to export your labels."
+msgstr "ラベルをエクスポートできませんでした。"
+
+msgid "Electrum was unable to import your labels."
+msgstr "ラベルをインポートできませんでした。"
+
+msgid "Electrum was unable to open your transaction file"
+msgstr "取引情報ファイルを開けませんでした"
+
+msgid "Electrum was unable to parse your transaction"
+msgstr "取引情報を読み取れませんでした"
+
+msgid "Electrum was unable to produce a private key-export."
+msgstr "秘密鍵のエクスポートができませんでした"
+
+msgid "Electrum was unable to produce a transaction export."
+msgstr "エクスポートできませんでした。"
+
+msgid ""
+"Electrum's focus is speed, with low resource usage and simplifying Bitcoin. "
+"You do not need to perform regular backups, because your wallet can be "
+"recovered from a secret phrase that you can memorize or write on paper. "
+"Startup times are instant because it operates in conjunction with high-"
+"performance servers that handle the most complicated parts of the Bitcoin "
+"system.\n"
+"\n"
+msgstr ""
+"Electrumの主眼はスピードと省リソースとBitcoinの取り扱いをシンプルにすることで"
+"す。ウォレットファイルのバックアップを定期的に取る必要はありません。ウォレッ"
+"トは暗記したり紙に書きやすい英単語の列からいつでも復元できます。Bitcoinネット"
+"ワークの複雑な部分は高性能なサーバに任せてあるので、計算やデータの読み込み時"
+"間がなく、即座に起動できます。\n"
+"\n"
+
+msgid "Encrypt"
+msgstr "暗号化する"
+
+msgid "Encrypt wallet file"
+msgstr "ウォレットの暗号化"
+
+msgid "Encrypt/decrypt Message"
+msgstr "メッセージの暗号化・解読"
+
+msgid "Encrypted"
+msgstr "暗号文"
+
+msgid "Enter Passphrase"
+msgstr "パスフレーズ入力"
+
+msgid "Enter Password"
+msgstr "パスワードを入力してください"
+
+msgid "Enter Seed"
+msgstr "シードを入力"
+
+msgid "Enter a filename for the copy of your wallet"
+msgstr "ウォレットコピーのファイル名を入力"
+
+msgid "Enter a list of outputs in the 'Pay to' field."
+msgstr "「送信先」にアドレスのリストを入力して下さい。"
+
+msgid "Enter addresses"
+msgstr "アドレスを入力"
+
+msgid "Enter description"
+msgstr "説明を入力"
+
+msgid "Enter new PIN"
+msgstr "新しいPINを入力"
+
+msgid "Enter private keys"
+msgstr "秘密鍵を入力"
+
+msgid "Enter private keys:"
+msgstr "秘密鍵を入力："
+
+msgid ""
+"Enter their master private key (xprv) if you want to be able to sign for "
+"them."
+msgstr "共同署名が必要な場合、要求元のマスター秘密鍵(xprv) を入力して下さい。"
+
+msgid "Enter wallet name"
+msgstr "ウォレット名を入力"
+
+msgid "Enter your PIN code in order to decrypt your seed"
+msgstr "あなたのシードを複合するためのPINコードを入力"
+
+msgid "Enter your PIN code to confirm deletion of %s"
+msgstr "%s を削除するにはPINコードを入力してください。"
+
+msgid "Enter your current PIN:"
+msgstr "あなたの現在のPINを入力:"
+
+msgid "Enter your password or choose another file."
+msgstr "パスワードを入力して下さい。"
+
+msgid "Enter your password to proceed"
+msgstr "続行するにはパスワードを入力してください"
+
+msgid "Error"
+msgstr "エラー"
+
+msgid "Exit Electrum"
+msgstr "Electrumを終了"
+
+msgid "Expected confirmation time"
+msgstr "予想される承認までの時間"
+
+msgid "Expiration date of your request."
+msgstr "あなたの請求の期限日です。"
+
+msgid "Expired"
+msgstr "期限切れ"
+
+msgid ""
+"Expired requests have to be deleted manually from your list, in order to "
+"free the corresponding Bitcoin addresses."
+msgstr ""
+"請求に紐付けられたアドレスを開放するために、期限切れの請求は手動でリストから"
+"削除する必要があります。"
+
+msgid "Expires"
+msgstr "有効期限"
+
+msgid "Export"
+msgstr "エクスポート"
+
+msgid "Export History"
+msgstr "履歴をエクスポート"
+
+msgid "Exposing a single private key can compromise your entire wallet!"
+msgstr ""
+"どのアドレスの秘密鍵でもどれかひとつが漏洩すると、ウォレットにある他のアドレ"
+"ス全てが危険に晒されます。くれぐれもご注意ください！"
+
+msgid "Extend this seed with custom words"
+msgstr "単語を追加してシードを補強する"
+
+msgid "Failed to update password"
+msgstr "パスワードを変更できませんでした"
+
+msgid "Fee"
+msgstr "手数料"
+
+msgid "Fee:"
+msgstr "手数料:"
+
+msgid "Fees"
+msgstr "手数料"
+
+msgid "Fiat"
+msgstr "通貨"
+
+msgid "Fiat currency"
+msgstr "法定通貨"
+
+msgid "File"
+msgstr "ファイル"
+
+msgid "Final"
+msgstr "最終"
+
+msgid "Find"
+msgstr "検索"
+
+msgid "Follow this branch"
+msgstr "この分岐を選択する"
+
+msgid "Format"
+msgstr "フォーマット："
+
+msgid "Format: address, amount"
+msgstr "形式: アドレス, 金額"
+
+msgid "From"
+msgstr "送金元"
+
+msgid "From %d cosigners"
+msgstr "%d 人の共同署名者から"
+
+msgid "Height"
+msgstr "ブロック高"
+
+msgid "Hello World"
+msgstr "ようこそ"
+
+msgid "Here is your master public key."
+msgstr "以下がマスター公開鍵です。"
+
+msgid "Hide"
+msgstr "隠す"
+
+msgid "History"
+msgstr "履歴"
+
+msgid "Host"
+msgstr "ホスト"
+
+msgid "How do you want to connect to a server? "
+msgstr "どのようにサーバーに接続しますか？ "
+
+msgid ""
+"However, BIP39 seeds do not include a version number, which compromises "
+"compatibility with future wallet software."
+msgstr ""
+"ただし、BIP39のシードにはバージョン番号が含まれていないため、将来のウォレット"
+"ソフトウェアとの互換性が損なわれます。"
+
+msgid "Identity"
+msgstr "ID"
+
+msgid ""
+"If auto-connect is enabled, Electrum will always use a server that is on the "
+"longest blockchain."
+msgstr ""
+"自動接続を有効にした場合、ブロックチェーンが最も長いサーバに接続します。"
+
+msgid ""
+"If it is disabled, you have to choose a server you want to use. Electrum "
+"will warn you if your server is lagging."
+msgstr ""
+"もし無効化されている場合、あなたがどのサーバーに接続するかを選ぶ必要がありま"
+"す。Electrumはサーバーのブロック情報が古い場合、警告を出します。"
+
+msgid "If the fee is low"
+msgstr "手数料が低い場合のみ"
+
+msgid "If you check this box, your transaction will be marked as non-final,"
+msgstr "このボックスをチェックすると取引情報に「最終ではない」と記述されます。"
+
+msgid ""
+"If you forget your PIN or lose your device, your seed phrase will be the "
+"only way to recover your funds."
+msgstr ""
+"PINを忘れるか、この機器を失くした場合、シード以外であなたの資金を復活させるこ"
+"とはできません。"
+
+msgid "If you lose your seed, your money will be permanently lost."
+msgstr ""
+"シードを紛失してしまうと、何らかの理由でウォレットが使えなくなった場合に、資"
+"金を復活させることができなくなります。"
+
+msgid ""
+"If you want to create new addresses, use a deterministic wallet instead."
+msgstr "新しいアドレスを作る場合はHDウォレットを使用して下さい。"
+
+msgid "Import"
+msgstr "インポート"
+
+msgid "Import addresses"
+msgstr "アドレスをインポート"
+
+msgid "Import file"
+msgstr "ファイルからインポート"
+
+msgid "Import private keys"
+msgstr "秘密鍵をインポート"
+
+msgid ""
+"In addition, Electrum does not verify the checksum of BIP39 seeds; make sure "
+"you type your seed correctly."
+msgstr ""
+"また、ElectrumはBIP39シードのチェックサムを検証しません。シードは正確にイン"
+"プットして下さい。"
+
+msgid ""
+"In particular, DO NOT use 'redeem private key' services proposed by third "
+"parties."
+msgstr ""
+"特に、外部サービスで「秘密鍵をインポート」のような機能は使わないほうがよいで"
+"しょう。"
+
+msgid ""
+"In some cases, use up to 3 change addresses in order to break up large coin "
+"amounts and obfuscate the recipient address."
+msgstr ""
+"場合によっては最大3つの釣銭用アドレスを使用して大きな金額を分割します。これに"
+"よって送金先アドレスを複雑化します。"
+
+msgid "Increase fee"
+msgstr "手数料を増やす"
+
+msgid "Information"
+msgstr "情報"
+
+msgid "Input amount"
+msgstr "入力値"
+
+msgid "Input raw transaction"
+msgstr "RAW形式の取引情報を読み込む"
+
+msgid "Inputs"
+msgstr "送り手"
+
+msgid "Install Wizard"
+msgstr "インストールウィザード"
+
+msgid "Install the zbar package to enable this."
+msgstr "この機能には、zbarパッケージが必要です。"
+
+msgid "Insufficient funds"
+msgstr "残高不足"
+
+msgid "Invalid Address"
+msgstr "アドレスが正しくありません"
+
+msgid "Invalid Amount"
+msgstr "金額が正しくありません"
+
+msgid "Invalid Bitcoin Address"
+msgstr "Bitcoinアドレスが正しくありません"
+
+msgid "Invalid Lines found:"
+msgstr "不正なエントリーが見つかりました："
+
+msgid "Invalid PIN"
+msgstr "PINが間違っています"
+
+msgid "Invalid bitcoin URI:"
+msgstr "無効なビットコインURI："
+
+msgid "Invoice"
+msgstr "請求"
+
+msgid "Invoice saved as "
+msgstr "請求は次の名前で保存されました: "
+
+msgid "Invoices"
+msgstr "請求記録"
+
+msgid "Keyboard shortcut: type \"!\" to send all your coins."
+msgstr "\"!\" と打つと、現在の全残高を送ることができます。"
+
+msgid "Label Settings"
+msgstr "ラベル設定"
+
+msgid "Language"
+msgstr "言語"
+
+msgid "Leave this field empty if you want to disable encryption."
+msgstr "暗号化が必要でない場合は、テキストボックスを空のままにして下さい。"
+
+msgid "Line #"
+msgstr "行番 #"
+
+msgid "Load transaction"
+msgstr "取引情報を読み込む"
+
+msgid "Lookup transaction"
+msgstr "取引を参照"
+
+msgid ""
+"Make sure you own the seed phrase or the private keys, before you request "
+"Bitcoins to be sent to this wallet."
+msgstr ""
+"このウォレットへのビットコインの送金を請求する場合は、あなたがシードや秘密鍵"
+"を持っているか確認して下さい。"
+
+msgid "Master Public Key"
+msgstr "マスター公開鍵"
+
+msgid "Master Public Keys"
+msgstr "マスター公開鍵"
+
+msgid "Max"
+msgstr "最大"
+
+msgid "Max fee exceeded"
+msgstr "最高手数料に達した"
+
+msgid "Max static fee"
+msgstr "最高固定手数料"
+
+msgid "Max value of the static fee slider"
+msgstr "手数料スライダーの最大値"
+
+msgid "Memo"
+msgstr "メモ"
+
+msgid "Message"
+msgstr "メッセージ"
+
+msgid "Mining fee"
+msgstr "採掘手数料"
+
+msgid "Multi-Signature Wallet"
+msgstr "マルチシグネチャウォレット（複数署名）"
+
+msgid "Name"
+msgstr "名前"
+
+msgid "Network"
+msgstr "ネットワーク"
+
+msgid "Never"
+msgstr "今後しない"
+
+msgid "Never disclose your seed."
+msgstr "絶対にシードを開示しないでください。"
+
+msgid "Never type it on a website."
+msgstr "Webサイトで入力したりしないで下さい。"
+
+msgid "New"
+msgstr "新規"
+
+msgid "New Contact"
+msgstr "新規連絡先"
+
+msgid "New Password:"
+msgstr "新しいパスワード:"
+
+msgid "New contact"
+msgstr "新規連絡先"
+
+msgid "New fee:"
+msgstr "新しい手数料:"
+
+msgid "New transaction received. %(amount)s"
+msgstr "新しい取引情報を受信しました：%(amount)s"
+
+msgid "Next"
+msgstr "次へ"
+
+msgid "No Wallet"
+msgstr "ウォレットがありません"
+
+msgid "No donation address for this server"
+msgstr "このサーバーは寄付するためのアドレスを公開していません"
+
+msgid "No message or amount"
+msgstr "メッセージ及び金額がありません"
+
+msgid "No more addresses in your wallet."
+msgstr "ウォレットにはこれ以上アドレスがありません。"
+
+msgid "No outputs"
+msgstr "出力がありません(残高不足)"
+
+msgid "No transactions found for this seed"
+msgstr "このシードに対する取引が見つかりませんでした"
+
+msgid "Node"
+msgstr "ノード"
+
+msgid "None"
+msgstr "なし"
+
+msgid "Not connected"
+msgstr "未接続"
+
+msgid "Not enough funds"
+msgstr "残高が不足"
+
+msgid ""
+"Note that if you have frozen some of your addresses, the available funds "
+"will be lower than your total balance."
+msgstr "凍結されたアドレスがある場合、送金可能な金額は全残高を下回ります。"
+
+msgid ""
+"Note that some merchants do not accept non-final transactions until they are "
+"confirmed."
+msgstr ""
+"業者によっては、”最終”でない取引情報は”確認”されるまで受付けないので注意して"
+"下さい。"
+
+msgid "Nothing set !"
+msgstr "何もセットされていません！"
+
+msgid ""
+"Number of zeros displayed after the decimal point. For example, if this is "
+"set to 2, \"1.\" will be displayed as \"1.00\""
+msgstr ""
+"数字で小数点以下に表示するゼロの数を設定します。例えば2にした場合、\"1.\" の"
+"代わりに \"1.00\" と表示されます。"
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Offline"
+msgstr "オフライン"
+
+msgid "One output per line."
+msgstr "1行につき1つ送金先を入力して下さい。"
+
+msgid "Online Block Explorer"
+msgstr "ブロックエクスプローラー"
+
+msgid "Open labels file"
+msgstr "ラベルファイルを開く"
+
+msgid "OpenAlias"
+msgstr "OpenAlias"
+
+msgid "OpenAlias record, used to receive coins and to sign payment requests."
+msgstr "OpenAliasは記録・コインの受取・送金の共同署名などを行います。"
+
+msgid "Options"
+msgstr "オプション"
+
+msgid "Output amount"
+msgstr "出力値"
+
+msgid "Outputs"
+msgstr "受け手"
+
+msgid "Overview"
+msgstr "概要"
+
+msgid "PIN mismatch"
+msgstr "PINコードが一致しません"
+
+msgid "Paid"
+msgstr "支払い済み"
+
+msgid "Passphrase"
+msgstr "パスフレーズ"
+
+msgid "Passphrase:"
+msgstr "パスフレーズ："
+
+msgid "Password"
+msgstr "パスワード"
+
+msgid "Password Strength"
+msgstr "パスワードの強度"
+
+msgid "Password is disabled, this wallet is not protected"
+msgstr "パスワードは無効化されており、ウォレットは保護されていません"
+
+msgid "Password was updated successfully"
+msgstr "パスワードを変更しました"
+
+msgid "Password:"
+msgstr "パスワード:"
+
+msgid "Pay Now"
+msgstr "今すぐ支払う"
+
+msgid "Pay to"
+msgstr "送信先"
+
+msgid "Pay to many"
+msgstr "一括送金"
+
+msgid "Payment Request"
+msgstr "支払い請求"
+
+msgid "Payment request has expired"
+msgstr "支払請求の期限が切れています"
+
+msgid "Payment sent."
+msgstr "取引情報を送信しました。"
+
+msgid "Pending"
+msgstr "承認待ち"
+
+msgid "Please enter a seed phrase or a master key (xpub or xprv):"
+msgstr "シードまたはマスター鍵(xpubもしくはxprv) を入力して下さい:"
+
+msgid ""
+"Please enter a seed phrase, a master key, a list of Bitcoin addresses, or a "
+"list of private keys"
+msgstr ""
+"シード、または、マスター鍵、ビットコインアドレスのリスト、もしくは秘密鍵のリ"
+"ストを入力して下さい"
+
+msgid "Please enter the master public key (xpub) of your cosigner."
+msgstr "共同署名者のマスター公開鍵(xpub) を入力して下さい。"
+
+msgid "Please enter the master public key of cosigner #%d:"
+msgstr "共同署名者 #%d のマスター公開鍵を入力して下さい:"
+
+msgid "Please enter your password"
+msgstr "パスワードを入力して下さい。"
+
+msgid ""
+"Please enter your seed derivation passphrase. Note: this is NOT your "
+"encryption password. Leave this field empty if you did not use one or are "
+"unsure."
+msgstr ""
+"お手持ちのシードを入力して下さい。注意: これは暗号化の際のパスワードとは異な"
+"ります。もし、過去にシードを生成していなかったり、どうだったか覚えていない場"
+"合は、テキストボックスを空のままにして下さい。"
+
+msgid "Please enter your seed phrase in order to restore your wallet."
+msgstr "ウォレットを復元するため、お手持ちのシードを入力して下さい。"
+
+msgid "Please install the Barcode Scanner app from ZXing"
+msgstr "ZXing からバーコードスキャナアプリをインストールしてください"
+
+msgid ""
+"Please paste your cosigners master public key, or scan it using the camera "
+"button."
+msgstr ""
+"共同署名者のマスター公開鍵を記入するか、カメラボタンを使ってスキャンして下さ"
+"い。"
+
+msgid "Please report any bugs as issues on github:<br/>"
+msgstr "バグがありましたら、Githubにてissueとしてご報告下さい:<br/>"
+
+msgid "Please restart Electrum to activate the new GUI settings"
+msgstr "GUIの設定の変更は、次回の起動時に反映されます。"
+
+msgid "Please retype your seed phrase, to confirm that you properly saved it"
+msgstr ""
+"シードを確実に保存したことを確認するために、シードを再入力してください。"
+
+msgid "Please save these %d words on paper (order is important). "
+msgstr ""
+"この %d つの単語を紙に書き留めて大事に保管して下さい。(単語の順番にも依存する"
+"のでご注意下さい。) "
+
+msgid "Please share it with your cosigners."
+msgstr "これは、共同署名者で共有して下さい。"
+
+msgid "Please type your seed phrase using the virtual keyboard."
+msgstr "シードをバーチャルキーボードで入力してください"
+
+msgid "Please wait"
+msgstr "少々お待ちください"
+
+msgid "Please wait..."
+msgstr "少々お待ち下さい..."
+
+msgid "Port"
+msgstr "ポート"
+
+msgid "Preferences"
+msgstr "設定"
+
+msgid "Press 'Next' to create this wallet, or choose another file."
+msgstr ""
+"”Next”をクリックしてこのウォレットを作るか、別のファイルを選んで下さい。"
+
+msgid "Press 'Next' to open this wallet."
+msgstr "「次へ」をクリックすると選択されたウォレットを開きます。"
+
+msgid "Press again to exit"
+msgstr "もう一度押して終了"
+
+msgid "Preview"
+msgstr "プレビュー"
+
+msgid "Private key"
+msgstr "秘密鍵"
+
+msgid "Private keys"
+msgstr "秘密鍵"
+
+msgid "Private keys exported."
+msgstr "秘密鍵をエクスポートしました。"
+
+msgid "Proceed?"
+msgstr "続行しますか？"
+
+msgid "Propose Replace-By-Fee"
+msgstr "Replace-By-Feeを提案"
+
+msgid "Proxy"
+msgstr "プロキシ"
+
+msgid "Proxy user"
+msgstr "プロキシ ユーザー名"
+
+msgid "Public key"
+msgstr "公開鍵"
+
+msgid "Public keys"
+msgstr "公開鍵"
+
+msgid "QR code"
+msgstr "QR コード"
+
+msgid "QR code copied to clipboard"
+msgstr "QRコードをコピーしました"
+
+msgid "QR code saved to file"
+msgstr "QRコードをファイルに保存しました"
+
+msgid "Read QR code"
+msgstr "QRコードの読み取り"
+
+msgid "Read file"
+msgstr "ファイルから読み込む"
+
+msgid "Receive"
+msgstr "請求"
+
+msgid "Receiving address"
+msgstr "入金アドレス"
+
+msgid "Recipient of the funds."
+msgstr "Bitcoinの送信先のアドレスです。"
+
+msgid "Recovery successful"
+msgstr "復元完了"
+
+msgid "Redeem Script"
+msgstr "文字列に変換"
+
+msgid "Remove"
+msgstr "消去"
+
+msgid "Remove %s from your list of contacts?"
+msgstr "%s を連絡先から削除します。よろしいですか？"
+
+msgid "Replaceable"
+msgstr "置換可能"
+
+msgid "Reporting Bugs"
+msgstr "バグ報告"
+
+msgid "Request expires"
+msgstr "請求の有効期限"
+
+msgid "Request saved successfully"
+msgstr "請求情報を保存しました"
+
+msgid "Requested amount"
+msgstr "請求金額"
+
+msgid "Requestor"
+msgstr "請求者"
+
+msgid "Requests"
+msgstr "リクエスト"
+
+msgid "Require %d signatures"
+msgstr "%d つの署名が必要です"
+
+msgid "Requires"
+msgstr "必要事項"
+
+msgid "SSL certificate"
+msgstr "SSL証明書"
+
+msgid "SSL certificate used to sign payment requests."
+msgstr "SSL証明書は支払いリクエストを署名するために使われます。"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Save as BIP70 file"
+msgstr "BIP70 ファイルとして保存"
+
+msgid "Save invoice to file"
+msgstr "請求をファイルへ保存"
+
+msgid "Seed"
+msgstr "シード"
+
+msgid "Seed Type"
+msgstr "シードタイプ"
+
+msgid "Select file to export your private keys to"
+msgstr "プライベートキーのエクスポート先ファイルを選択"
+
+msgid "Select file to export your wallet transactions to"
+msgstr "取引履歴をエクスポートするファイルを選択"
+
+msgid "Select file to save your labels"
+msgstr "ラベルの保存先ファイルを選択"
+
+msgid "Select server automatically"
+msgstr "サーバーを自動的に選択する"
+
+msgid "Select server manually"
+msgstr "サーバを手動で選択する"
+
+msgid "Select where to save your payment request"
+msgstr "支払請求の保存先を選択"
+
+msgid "Select where to save your signed transaction"
+msgstr "署名済み取引情報の保存先を選択"
+
+msgid "Select which language is used in the GUI (after restart)."
+msgstr "GUIに使う言語を設定します(再起動が必要)。"
+
+msgid "Select your transaction file"
+msgstr "取引情報の保存先を選択"
+
+msgid "Send"
+msgstr "送信"
+
+msgid "Sending"
+msgstr "送信中"
+
+msgid "Server"
+msgstr "サーバ"
+
+msgid "Server is lagging (%d blocks)"
+msgstr "サーバのブロック情報が古いです (%d ブロック分の遅れ)"
+
+msgid "Server lagging (%d blocks)"
+msgstr "サーバのブロック情報が古いです (%d ブロック)"
+
+msgid "Server peers"
+msgstr "サーバーのリスト"
+
+msgid "Settings"
+msgstr "設定"
+
+msgid "Show"
+msgstr "表示"
+
+msgid "Show QR Code"
+msgstr "QRコードを表示"
+
+msgid "Show as QR code"
+msgstr "QRコードの表示"
+
+msgid "Show fee edit box in send tab."
+msgstr "送信タブに手数料編集ボックスを表示する。"
+
+msgid "Show history rates"
+msgstr "レートの履歴を見る"
+
+msgid "Show/Hide"
+msgstr "表示/非表示"
+
+msgid "Sign"
+msgstr "署名"
+
+msgid "Sign/verify Message"
+msgstr "メッセージの署名・署名確認"
+
+msgid "Signature"
+msgstr "署名"
+
+msgid "Signature verified"
+msgstr "署名認証完了"
+
+msgid "Signing transaction..."
+msgstr "取引の署名中..."
+
+msgid "Size:"
+msgstr "サイズ:"
+
+msgid "Source"
+msgstr "ソース"
+
+msgid "Spend only confirmed coins"
+msgstr "承認されたコインだけ消費"
+
+msgid "Spend only confirmed inputs."
+msgstr "承認された入力だけ使用"
+
+msgid "Status"
+msgstr "状態"
+
+msgid "Status:"
+msgstr "状態 :"
+
+msgid "Success"
+msgstr "成功"
+
+msgid "Sweep"
+msgstr "スイープ"
+
+msgid "Sweep private keys"
+msgstr "秘密鍵のスイープ"
+
+msgid "Synchronizing..."
+msgstr "同期中..."
+
+msgid ""
+"Text copied to clipboard.\n"
+"Tap again to display it as QR code."
+msgstr ""
+"テキストはクリップボードにコピーされました。\n"
+"再度タップしてQRコードを表示してください。"
+
+msgid ""
+"The amount of fee can be decided freely by the sender. However, transactions "
+"with low fees take more time to be processed."
+msgstr ""
+"手数料は送信者が決めることができますが、手数料の少ない取引情報は確定まで時間"
+"がかかることがあります。"
+
+msgid ""
+"The amount will be displayed in red if you do not have enough funds in your "
+"wallet."
+msgstr "残高不足の場合、数字が赤字として表示されます。"
+
+msgid ""
+"The bitcoin address never expires and will always be part of this electrum "
+"wallet."
+msgstr ""
+"アドレス自体は永久にElectrumウォレットと共にあるので、期限切れとなることはあ"
+"りません。"
+
+msgid ""
+"The description is not sent to the recipient of the funds. It is stored in "
+"your wallet file, and displayed in the 'History' tab."
+msgstr ""
+"備考欄は受信者には送られることはありません。ウォレットファイルに保存されて、"
+"後で「履歴」タブで確認することができます。"
+
+msgid "The fee for this transaction seems unusually high."
+msgstr "取引手数料が一般より高く設定されているようです。"
+
+msgid ""
+"The file '%s' contains an incompletely created wallet.\n"
+"Do you want to complete its creation now?"
+msgstr ""
+"ファイル'%s'は作成作業が途中のウォレットを含んでいます。\n"
+"ウォレットの作成を再開しますか？"
+
+msgid "The file was removed"
+msgstr "ファイルは削除されました"
+
+msgid "The following addresses were added"
+msgstr "以下のアドレスが追加されました"
+
+msgid "The following alias providers are available:"
+msgstr "下記のエイリアスプロバイダーが利用可能："
+
+msgid "The following inputs could not be imported"
+msgstr "以下の入力はインポートできませんでした"
+
+msgid ""
+"The format of your wallet '%s' must be upgraded for Electrum. This change "
+"will not be backward compatible"
+msgstr ""
+"ウォレット'%s'は形式が異なり、Electrum用にアップグレードする必要があります。"
+"この変更は、逆行できません。"
+
+msgid ""
+"The wallet '%s' contains multiple accounts, which are no longer supported in "
+"Electrum 2.7.\n"
+"\n"
+"Do you want to split your wallet into multiple files?"
+msgstr ""
+"ウォレット'%s'は複数のアカウントが含まれていますが、Electrum 2.7でそれは廃止"
+"されサポートされなくなりました。\n"
+"\n"
+"このウォレットを複数のファイルに分割しますか？"
+
+msgid ""
+"This blockchain is used to verify the transactions sent by your transaction "
+"server."
+msgstr "ブロックチェーンは、サーバから受信した取引情報の検証に使われます。"
+
+msgid "This file does not exist."
+msgstr "このファイルは存在しません。"
+
+msgid "This file is encrypted."
+msgstr "このファイルは暗号化されています。"
+
+msgid ""
+"This information is seen by the recipient if you send them a signed payment "
+"request."
+msgstr "署名された支払請求を送ると、この内容は受け取り側にも表示されます。"
+
+msgid "This is a watching-only wallet"
+msgstr "このウォレットは読み取り専用です。"
+
+msgid "This is the height of your local copy of the blockchain."
+msgstr "これはブロックチェーンのローカルコピーのブロック高です。"
+
+msgid "This may result in higher transactions fees."
+msgstr "高額な送金手数料となるかもしれません"
+
+msgid "This means you will not be able to spend Bitcoins with it."
+msgstr ""
+"このことは、このウォレットのビットコインを使用することが出来ないことを意味し"
+"ます。"
+
+msgid "This payment request will be signed."
+msgstr "この支払請求は署名されるでしょう。"
+
+msgid ""
+"This seed will allow you to recover your wallet in case of computer failure."
+msgstr ""
+"このシードで、コンピュータの故障などの場合にウォレットを復活させることができ"
+"ます。"
+
+msgid "This transaction is not saved. Close anyway?"
+msgstr "この取引の情報は保存されていません。本当に閉じても良いですか？"
+
+msgid ""
+"This transaction requires a higher fee, or it will not be propagated by the "
+"network"
+msgstr ""
+"手数料の設定が低すぎます。優先順位が低く、Bitcoinネットワーク上に伝播されない"
+"ため、取引が承認されない恐れがあります。"
+
+msgid "This wallet has no seed"
+msgstr "このウォレットはシードがありません。"
+
+msgid "This wallet is watching-only."
+msgstr "このウォレットは閲覧専用です。"
+
+msgid ""
+"This wallet was restored offline. It may contain more addresses than "
+"displayed."
+msgstr ""
+"このウォレットはオフラインにて復元されました。表示されるアドレスより多くのア"
+"ドレスが含まれている可能性があります。"
+
+msgid ""
+"To make sure that you have properly saved your seed, please retype it here."
+msgstr ""
+"シードはメモをとってバックアップしましたか？確認のためここに再度入力をお願い"
+"します。"
+
+msgid "Total size"
+msgstr "合計サイズ"
+
+msgid "Transaction"
+msgstr "取引"
+
+msgid "Transaction ID"
+msgstr "取引ID"
+
+msgid "Transaction ID:"
+msgstr "取引ID:"
+
+msgid "Transaction saved successfully"
+msgstr "取引情報を保存しました"
+
+msgid "Transaction unrelated to your wallet"
+msgstr "このウォレットと関係ない取引情報です"
+
+msgid "Transaction:"
+msgstr "取引:"
+
+msgid "Transactions"
+msgstr "取引"
+
+msgid "Try to explain not only what the bug is, but how it occurs."
+msgstr "どんなバグかだけでなく、どうすると起こるのか、過程も説明して下さい。"
+
+msgid "Unable to create backup"
+msgstr "バックアップを作成できませんでした"
+
+msgid "Unable to create csv"
+msgstr "CSVの作成ができませんでした"
+
+msgid "Unable to export history"
+msgstr "履歴エクスポートに失敗しました"
+
+msgid "Unable to read file or no transaction found"
+msgstr "ファイルを読み込めないか空でした"
+
+msgid "Unknown"
+msgstr "不明"
+
+msgid "Use SSL"
+msgstr "SSLを使用する"
+
+msgid "Use Tor Proxy"
+msgstr "Torプロキシを使用する"
+
+msgid "Use as server"
+msgstr "サーバとして使う"
+
+msgid "Use change addresses"
+msgstr "お釣りアドレスを使う"
+
+msgid "Use dynamic fees"
+msgstr "ダイナミックフィーを使う"
+
+msgid "Use fees recommended by the server."
+msgstr "サーバーが推奨する手数料を設定します。"
+
+msgid "Use multiple change addresses"
+msgstr "複数のお釣りアドレスを使う"
+
+msgid "Use setconfig to set ssl_chain and ssl_privkey."
+msgstr "ssl_chainとssl_privkeyをセットするにはsetconfigを使用して下さい。"
+
+msgid "Use the camera button to scan a QR code."
+msgstr "QR コードのスキャンするためにカメラボタンを使ってください。"
+
+msgid "Use this dialog to add a password to your wallet."
+msgstr "この入力画面では、ウォレットにパスワードを追加できます。"
+
+msgid "Use this dialog to change your password."
+msgstr "この入力画面では、パスワードを変更できます。"
+
+msgid "Uses icons from the Icons8 icon pack (icons8.com)."
+msgstr "Icons8 アイコンパック (icons8.com) のアイコンを使っています。"
+
+msgid ""
+"Using change addresses makes it more difficult for other people to track "
+"your transactions."
+msgstr ""
+"お釣りアドレスを使うと、他人があなたの取引履歴を追跡しにくくなります。\n"
+"送信時にアドレスの残高を使い切り、新たなアドレスに残りを移し替えるようにしま"
+"す。"
+
+msgid "Verify"
+msgstr "検証"
+
+msgid "Version"
+msgstr "バージョン"
+
+msgid "Video Device"
+msgstr "ビデオデバイス"
+
+msgid "View invoice"
+msgstr "請求を見る"
+
+msgid "View on block explorer"
+msgstr "ブロックエクスプローラーで閲覧"
+
+msgid "WARNING"
+msgstr "警告"
+
+msgid "WARNING: ALL your private keys are secret."
+msgstr "警告：全ての秘密鍵は絶対に公開しないで下さい。"
+
+msgid ""
+"WARNING: the alias \"%s\" could not be validated via an additional security "
+"check, DNSSEC, and thus may not be correct."
+msgstr ""
+"警告：エイリアス \"%s\" は追加のセキュリティーチェック（DNSSEC）で検証できな"
+"かったので、正しくないようです。"
+
+msgid "Waiting for fee estimates..."
+msgstr "取引手数料の推奨値を待っています..."
+
+msgid "Wallet"
+msgstr "ウォレット"
+
+msgid "Wallet backup created"
+msgstr "ウォレットのバックアップが作成されました"
+
+msgid "Wallet change address"
+msgstr "お釣りアドレス"
+
+msgid "Wallet receive address"
+msgstr "ウォレット受け取りアドレス"
+
+msgid "Warning"
+msgstr "警告"
+
+msgid ""
+"Warning: The next address will not be recovered automatically if you restore "
+"your wallet from seed; you may need to add it manually.\n"
+"\n"
+"This occurs because you have too many unused addresses in your wallet. To "
+"avoid this situation, use the existing addresses first.\n"
+"\n"
+"Create anyway?"
+msgstr ""
+"警告：次のアドレスはシードを使ってウォレットを復元する時に自動的には復元され"
+"ません。手動で追加する必要があります。\n"
+"\n"
+"この原因は未使用のアドレスを一定数以上生成したことです。こうした事態を避ける"
+"ため、既存のアドレスを先に使って下さい。\n"
+"\n"
+"それでもアドレスを生成しますか？"
+
+msgid ""
+"We do not guarantee that BIP39 imports will always be supported in Electrum."
+msgstr "Electrum が常に BIP39 インポートをサポートする保証はありません。"
+
+msgid "Wrong signature"
+msgstr "署名が間違っています"
+
+msgid "You are following branch"
+msgstr "あなたは分岐したブロックチェーンを参照しています"
+
+msgid ""
+"You are using Electrum in offline mode; restart Electrum if you want to get "
+"connected"
+msgstr ""
+"Electrumは今オフラインモードです。\n"
+"オンラインモードで使うには、Electrumを再起動する必要があります。"
+
+msgid ""
+"You are using a non-deterministic wallet, which cannot create new addresses."
+msgstr ""
+"現在非HDウォレットを使用しています。このウォレットは新しいアドレスを生成ませ"
+"ん。"
+
+msgid ""
+"You may enter a Bitcoin address, a label from your list of contacts (a list "
+"of completions will be proposed), or an alias (email-like address that "
+"forwards to a Bitcoin address)"
+msgstr ""
+"入力形式には、Bitcoinアドレス、アドレス帳のラベル(候補が表示されます)、エイリ"
+"アス(メールアドレスのような形式のBitcoinアドレス)が使えます。"
+
+msgid "You may load a CSV file using the file icon."
+msgstr "ファイルのアイコンからCSV形式のファイルを読み込む事もできます。"
+
+msgid "Your accounts have been moved to"
+msgstr "あなたのアカウントは次の場所に移動しました"
+
+msgid ""
+"Your bitcoins are password protected. However, your wallet file is not "
+"encrypted."
+msgstr ""
+"あなたのビットコインはパスワードで保護されていますが、ウォレットファイルは暗"
+"号化されていません。"
+
+msgid "Your labels have been synchronised."
+msgstr "ラベルを同期しました。"
+
+msgid "Your labels were exported to"
+msgstr "ラベルをエクスポートしました:"
+
+msgid "Your labels were imported from"
+msgstr "ラベルを以下からインポートしました:"
+
+msgid "Your seed extension is"
+msgstr "シードの拡張部分："
+
+msgid "Your seed is important!"
+msgstr "シードは大事に扱ってください！"
+
+msgid "Your server is on branch"
+msgstr "接続しているサーバーは分岐したブロックチェーン上にいます"
+
+msgid "Your wallet generation seed is:"
+msgstr "ウォレットの再生用シードです:"
+
+msgid "Your wallet history has been successfully exported."
+msgstr "ウォレットの履歴が正常にエクスポートされました。"
+
+msgid "Your wallet is not protected."
+msgstr "ウォレットは保護されていません。"
+
+msgid "Your wallet is password protected and encrypted."
+msgstr "あなたのウォレットはパスワードで暗号化され、保護されています。"
+
+msgid "Your wallet was upgraded successfully"
+msgstr "ウォレットは正常にアップグレードされました"
+
+msgid "Zeros after decimal point"
+msgstr "小数点以降のゼロの数"
+
+msgid ""
+"and you will have the possiblity, while it is unconfirmed, to replace it "
+"with a transaction that pays a higher fee."
+msgstr ""
+"そして、取引が”未確認”状態の間はより高い手数料の取引情報で置き換えることがで"
+"きます。"
+
+msgid "are frozen"
+msgstr "凍結"
+
+msgid "blocks"
+msgstr "ブロック"
+
+msgid "cosigner"
+msgstr "共同署名者"
+
+msgid "from your wallet?"
+msgstr "をウォレットから削除しますか？"
+
+msgid "json"
+msgstr "json"
+
+msgid "low fee"
+msgstr "低手数料"
+
+msgid "please wait..."
+msgstr "しばらくお待ちください..."
+
+msgid "unconfirmed"
+msgstr "未承認"
+
+msgid "unknown"
+msgstr "不明"
+
+msgid "unknown (low fee)"
+msgstr "不明 ( 低 手数料 )"
+
+msgid "unverified"
+msgstr "未認証"
+
+msgid "watching only"
+msgstr "読み取り専用"

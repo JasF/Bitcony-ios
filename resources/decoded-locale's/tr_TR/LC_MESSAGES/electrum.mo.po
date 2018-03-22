@@ -1,0 +1,1754 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2018-03-09 18:09-0500\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Turkish\n"
+"Language: tr_TR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: tr\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr "Bu ayarlar Gönder sekmesindeki alanları etkiler"
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr ""
+"%(txs)s yeni ödeme alındı. Yeni ödemelerden toplam kazanılan %(amount)s"
+
+msgid "&About"
+msgstr "&Hakkında"
+
+msgid "&Addresses"
+msgstr "&Adresler"
+
+msgid "&Documentation"
+msgstr "belgeleme"
+
+msgid "&Donate to server"
+msgstr "&Sunucuya bağış yap"
+
+msgid "&Encrypt/decrypt message"
+msgstr "&Mesajı Şifrele/Şifresi Çöz"
+
+msgid "&Export"
+msgstr "&Dışa Aktar"
+
+msgid "&File"
+msgstr "&Dosya"
+
+msgid "&From QR code"
+msgstr "&QR Kodu"
+
+msgid "&From file"
+msgstr "&Dosya"
+
+msgid "&From text"
+msgstr "&Metin"
+
+msgid "&From the blockchain"
+msgstr "&Blockchain zinciri"
+
+msgid "&Help"
+msgstr "&Yardım"
+
+msgid "&History"
+msgstr "Ve geçmiş"
+
+msgid "&Import"
+msgstr "&İçe Aktar"
+
+msgid "&Labels"
+msgstr "&Etiket"
+
+msgid "&Load transaction"
+msgstr "&Yükleme işlemi"
+
+msgid "&Master Public Keys"
+msgstr "&Açık anahtarı yönet"
+
+msgid "&Network"
+msgstr "&Ağ"
+
+msgid "&New"
+msgstr "&Yeni"
+
+msgid "&New/Restore"
+msgstr "&Yeni/Onar"
+
+msgid "&Official website"
+msgstr "&Resmi web sitesi"
+
+msgid "&Open"
+msgstr "&Aç"
+
+msgid "&Password"
+msgstr "&Şifre"
+
+msgid "&Pay to many"
+msgstr "&Gönderilecek tutar"
+
+msgid "&Plugins"
+msgstr "&Eklentiler"
+
+msgid "&Private keys"
+msgstr "&Gizli anahtar"
+
+msgid "&Quit"
+msgstr "&Çıkış"
+
+msgid "&Recently open"
+msgstr "&Yakın zamanda açılanlar"
+
+msgid "&Report Bug"
+msgstr "&Hata bildir"
+
+msgid "&Save Copy"
+msgstr "&Kopyasını kaydet"
+
+msgid "&Seed"
+msgstr "&Seed"
+
+msgid "&Sign/verify message"
+msgstr "&Mesajı imzala/İmzayı doğrula"
+
+msgid "&Sweep"
+msgstr "&Süpür"
+
+msgid "&Tools"
+msgstr "&Araçlar"
+
+msgid "&View"
+msgstr "&Görüntüle"
+
+msgid "&Wallet"
+msgstr "&Cüzdan"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "1 Gün"
+
+msgid "1 hour"
+msgstr "1 Saat"
+
+msgid "1 week"
+msgstr "1 Hafta"
+
+msgid "A copy of your wallet file was created in"
+msgstr "Cüzdanın bir kopyası oluşturulmuş"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"Önerilen ücret otomatik olarak bu alana eklenir. İşlem geçersiz kılınabilir. "
+"Önerilen ücret işlem büyüklüğünü artırır."
+
+msgid "Add Cosigner"
+msgstr "İmzalayıcı Ekle"
+
+msgid "Additional fees"
+msgstr "Ek ücretler"
+
+msgid "Address"
+msgstr "Adres"
+
+msgid "Address:"
+msgstr "Adres:"
+
+msgid "Always"
+msgstr "Her zaman"
+
+msgid "Amount"
+msgstr "Miktar"
+
+msgid "Amount received:"
+msgstr "Alınan tutar:"
+
+msgid "Amount sent:"
+msgstr "Gönderilecek miktar"
+
+msgid "Amount to be sent"
+msgstr "Gönderilecek tutar"
+
+msgid "Amount to be sent."
+msgstr "Göndilmek üzere olan tutar."
+
+msgid "Appearance"
+msgstr "Görünüş"
+
+msgid "Auto connect"
+msgstr "Otomatik bağlantı"
+
+msgid "BIP39 seed"
+msgstr "BIP39 çekirdeği"
+
+msgid ""
+"BIP39 seeds can be imported in Electrum so that users can access funds "
+"locked in other wallets."
+msgstr ""
+"BIP39 çekirdekleri Electrum'a yerleştirilebilir, böylece kullanıcılar diğer "
+"cüzdanlardaki kaynaklara erişebilirler."
+
+msgid "Back"
+msgstr "Geri"
+
+msgid "Balance"
+msgstr "Miktar"
+
+msgid "Base unit"
+msgstr "Ana ünite"
+
+msgid "Base unit of your wallet."
+msgstr "Cüzdanınızın temel birimi."
+
+msgid ""
+"Before reporting a bug, upgrade to the most recent version of Electrum "
+"(latest release or git HEAD), and include the version number in your report."
+msgstr ""
+"Hata bildirmeden önce, Electrum'u en yeni sürüme güncelleyin (son çıkış veya "
+"git HEAD) ve hata bildirinizde sürüm numaranızı da gösterin."
+
+msgid "Bitcoin Address is None"
+msgstr "Bitcoin adresi yok"
+
+msgid ""
+"Bitcoin address where the payment should be received. Note that each payment "
+"request uses a different Bitcoin address."
+msgstr ""
+"Bitcoin adresi, ödemenin gelmesi gereken adrestir. Lütfen her ödeme "
+"isteğinin ayrı bir Bitcoin adresi kullanması gerektiğini unutmayın."
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"Bitcoin işlemleri genel olarak serbest değildir. İşlem ücreti gönderen "
+"tarafından karşılanır."
+
+msgid "Blockchain"
+msgstr "Blockchain"
+
+msgid "Broadcast"
+msgstr "Yayınla"
+
+msgid "Broadcasting transaction..."
+msgstr "Ödeme yayınlanıyor..."
+
+msgid "Bump Fee"
+msgstr "İşlem ücretini artır"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "İptal"
+
+msgid "Cannot broadcast transaction"
+msgstr "Ödeme yayınlanamıyor"
+
+msgid "Cannot read file"
+msgstr "Dosya okunamıyor"
+
+msgid "Chain split detected at block %d"
+msgstr "%d'inci blokta zincir bölünmesi tespit edildi"
+
+msgid "Change Password"
+msgstr "Parolayı Değiştir"
+
+msgid "Changing PIN code."
+msgstr "PIN kodunu değiştirmek."
+
+msgid "Child Pays for Parent"
+msgstr "Ebeveyn için Çocuk Ödeme"
+
+msgid "Child pays for parent"
+msgstr "Ebeveyn için çocuk ödeme"
+
+msgid "Choose a password to encrypt your wallet keys."
+msgstr "Cüzdan anahtarlarınızı şifrelemek için bir parola seçin."
+
+msgid "Choose a server"
+msgstr "Sunucu seçiniz"
+
+msgid ""
+"Choose coin (UTXO) selection method.  The following are available:\n"
+"\n"
+msgstr ""
+"Lütfen para (UTXO) seçim yöntemini belirleyin.  Şunlar mevcuttur:\n"
+"\n"
+
+msgid "Choose the number of signatures needed to unlock funds in your wallet:"
+msgstr ""
+"Cüzdanınızdaki parayı kullanabilmek için gereken imza sayısını belirleyin:"
+
+msgid ""
+"Choose which online block explorer to use for functions that open a web "
+"browser"
+msgstr ""
+"İnternet tarayıcı açıldığında hangi blok bulucusunun kullanılacağını seçin"
+
+msgid "Choose your chain"
+msgstr "Zincirinizi seçiniz"
+
+msgid "Choose..."
+msgstr "Seçiniz..."
+
+msgid "Clear"
+msgstr "Temizle"
+
+msgid "Close"
+msgstr "Kapat"
+
+msgid "Co&ins"
+msgstr "Pa&ralar"
+
+msgid "Coin selection"
+msgstr "Para seçimi"
+
+msgid "Con&sole"
+msgstr "Kon&sol"
+
+msgid "Con&tacts"
+msgstr "Kiş&iler"
+
+msgid "Confirm Passphrase:"
+msgstr "Parolayı Onaylayın:"
+
+msgid "Confirm Password:"
+msgstr "Parolayı Onaylayın:"
+
+msgid "Confirm Seed"
+msgstr "Tohum Kodu'nu onaylayın"
+
+msgid "Confirm new PIN"
+msgstr "Yeni PIN kodunu doğrula"
+
+msgid "Connected to %d nodes."
+msgstr "%d düğüme bağlanıldı."
+
+msgid "Contacts"
+msgstr "Kişiler"
+
+msgid "Copy"
+msgstr "Kopyala"
+
+msgid "Copy %s"
+msgstr "Kopyala: '%s"
+
+msgid "Copy URI"
+msgstr "Linki kopyala"
+
+msgid "Copy and Close"
+msgstr "Kopyala ve Kapat"
+
+msgid "Copy to clipboard"
+msgstr "Panoya kopyala"
+
+msgid "Could not start Barcode Scanner."
+msgstr "Barkod Okuyucu başlatılamadı."
+
+msgid "Critical Error"
+msgstr "Önemli Hata"
+
+msgid "Current Password:"
+msgstr "Geçerli Şifre:"
+
+msgid "Current fee"
+msgstr "Geçerli işlem ücreti"
+
+msgid "Dark/Light"
+msgstr "Koyu/Açık"
+
+msgid "Date"
+msgstr "Tarih:"
+
+msgid "Date: %s"
+msgstr "Tarih: %s"
+
+msgid "Decrypt"
+msgstr "Şifresini çöz"
+
+msgid "Default Servers"
+msgstr "Varsayılan sunucu"
+
+msgid "Delete"
+msgstr "Sil"
+
+msgid "Delete invoice?"
+msgstr "Fatura silinsin mi?"
+
+msgid "Delete wallet?"
+msgstr "Cüzdanı sil?"
+
+msgid "Denomination"
+msgstr "Tür"
+
+msgid "Description"
+msgstr "Açıklama"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "İşlem açıklaması (Zorunlu değil)."
+
+msgid "Details"
+msgstr "Ayrıntılar"
+
+msgid "Disconnected"
+msgstr "Bağlantı koptu"
+
+msgid "Display the details of your transactions before signing it."
+msgstr "Ödemeyi imzalamadan önce ayrıntıları göster."
+
+msgid "Do not store it electronically."
+msgstr "Elektronik ortamda saklamayın."
+
+msgid "Do you want to delete '%s'?"
+msgstr "Silmek istiyor musunuz: '%s'?"
+
+msgid "Do you want to delete the old file"
+msgstr "Eski dosyayı silmek istiyor musunuz"
+
+msgid "Do you want to remove"
+msgstr "Kaldırmak istiyor musunuz?"
+
+msgid "Do you wish to continue?"
+msgstr "Devam etmek istiyor musunuz?"
+
+msgid "Edit %s"
+msgstr "Düzenle: '%s'"
+
+msgid "Edit fees manually"
+msgstr "Komisyonu elle düzenle"
+
+msgid "Electrum App"
+msgstr "Electrum Uygulaması"
+
+msgid "Electrum Plugins"
+msgstr "Electrum eklentileri"
+
+msgid ""
+"Electrum communicates with remote servers to get information about your "
+"transactions and addresses. The servers all fulfil the same purpose only "
+"differing in hardware. In most cases you simply want to let Electrum pick "
+"one at random.  However if you prefer feel free to select a server manually."
+msgstr ""
+"Electrum, sunucularla ödemeleriniz ve adreslerinizle ilgili bilgi almak için "
+"bağlantı kurar. Bu sunucuların hepsi donanım farkı dışında aynıdır. "
+"Genellike Electrum'un rastgele seçmesine izin vermelisiniz. Ancak isterseniz "
+"kendiniz seçebilirsiniz."
+
+msgid ""
+"Electrum connects to several nodes in order to download block headers and "
+"find out the longest blockchain."
+msgstr ""
+"Ayrıca Electrum, blok başlıklarını indirmek ve en uzun blok zincirini bulmak "
+"için birkaç ağ düğümüne bağlanır."
+
+msgid "Electrum is generating your addresses, please wait..."
+msgstr "Electrum adresinizi yaratıyor, lütfen bekleyin..."
+
+msgid "Electrum preferences"
+msgstr "Electrum ayarları"
+
+msgid ""
+"Electrum sends your wallet addresses to a single server, in order to receive "
+"your transaction history."
+msgstr ""
+"Electrum cüzdan adreslerinizi, ödeme geçmişimizi gösterebilmek amacıyla bir "
+"sunucuya gönderir."
+
+msgid "Electrum wallet"
+msgstr "Electrum cüzdanı"
+
+msgid "Electrum was unable to copy your wallet file to the specified location."
+msgstr "Electrum, cüzdanınızı belirlenen konuma kaydedemedi."
+
+msgid "Electrum was unable to export your labels."
+msgstr "Electrum etiketleri dışa aktaramadı."
+
+msgid "Electrum was unable to import your labels."
+msgstr "Electrum etiketleri içe aktaramadı."
+
+msgid "Electrum was unable to open your transaction file"
+msgstr "Electrum işlem dosyasını açamadı."
+
+msgid "Electrum was unable to parse your transaction"
+msgstr "Electrum işleminizi ayrıştıramadı"
+
+msgid "Electrum was unable to produce a private key-export."
+msgstr "Electrum gizli anahtarınızı dışa aktaramadı."
+
+msgid "Electrum was unable to produce a transaction export."
+msgstr "Electrum işlem dosyanızı dışa aktaramadı."
+
+msgid ""
+"Electrum's focus is speed, with low resource usage and simplifying Bitcoin. "
+"You do not need to perform regular backups, because your wallet can be "
+"recovered from a secret phrase that you can memorize or write on paper. "
+"Startup times are instant because it operates in conjunction with high-"
+"performance servers that handle the most complicated parts of the Bitcoin "
+"system.\n"
+"\n"
+msgstr ""
+"Electrum'un odağı hızdır, ve az kaynak kullanarak Bitcoin'i "
+"basitleştirmektir. Düzenli yedekleme yapmanız gerekmez, çünkü cüzdanınız "
+"aklınızda tutabileceğiniz veya kağıda yazabileceğiniz bir gizli ifade ile "
+"geri getirilebilir. Anında açılır, çünkü Bitcoin'in en gelişmiş parçalarını "
+"işleyen yüksek hızlı sunucularla birlikte çalışır\n"
+"\n"
+
+msgid "Encrypt"
+msgstr "Şifrele"
+
+msgid "Encrypt wallet file"
+msgstr "Cüzdan dosyasını şifrele"
+
+msgid "Encrypt/decrypt Message"
+msgstr "Mesajı şifrele/Şifresini çöz"
+
+msgid "Encrypted"
+msgstr "Şifrele"
+
+msgid "Enter Passphrase"
+msgstr "Parolayı Girin"
+
+msgid "Enter Password"
+msgstr "Şifrenizi giriniz"
+
+msgid "Enter Seed"
+msgstr "Tohum Kodu'nu girin"
+
+msgid "Enter a filename for the copy of your wallet"
+msgstr "Cüzdanınızın kopyası için bir dosya adı girin"
+
+msgid "Enter a list of outputs in the 'Pay to' field."
+msgstr "Çıktıların listesini 'Şuraya öde' alanına gir."
+
+msgid "Enter addresses"
+msgstr "Adresleri giriniz"
+
+msgid "Enter description"
+msgstr "Açıklama girin"
+
+msgid "Enter new PIN"
+msgstr "Yeni PIN girin"
+
+msgid "Enter private keys"
+msgstr "Gizli anahtarı giriniz"
+
+msgid "Enter private keys:"
+msgstr "Özel anahtarları girin:"
+
+msgid ""
+"Enter their master private key (xprv) if you want to be able to sign for "
+"them."
+msgstr "Onları imzalamak istiyorsanız ana özel anahtarlarını (xprv) giriniz."
+
+msgid "Enter wallet name"
+msgstr "Cüzdan adı girin"
+
+msgid "Enter your PIN code in order to decrypt your seed"
+msgstr "Tohum Kodu'nun şifresini çözmek için PIN kodunu girin"
+
+msgid "Enter your PIN code to confirm deletion of %s"
+msgstr "Eğer şunun silinmesini onaylıyorsanız PIN kodunu girin: %s"
+
+msgid "Enter your current PIN:"
+msgstr "Geçerli PIN kodunuzu girin:"
+
+msgid "Enter your password or choose another file."
+msgstr "Parolanızı giriniz ya da başka bir dosya seçiniz."
+
+msgid "Enter your password to proceed"
+msgstr "Devam etmek için parolanızı girin"
+
+msgid "Error"
+msgstr "Hata"
+
+msgid "Exit Electrum"
+msgstr "Electrum'dan çık"
+
+msgid "Expected confirmation time"
+msgstr "Tahmin edilen doğrulama zamanı"
+
+msgid "Expiration date of your request."
+msgstr "İsteğinizin son kullanma tarihi."
+
+msgid "Expired"
+msgstr "Süresi dolmuş"
+
+msgid ""
+"Expired requests have to be deleted manually from your list, in order to "
+"free the corresponding Bitcoin addresses."
+msgstr ""
+"Bitcoin adreslerinin serbest bırakılması için, son kullanma tarihi geçmiş "
+"isteklerim listenizden sizin tarafınızdan silinmesi gerekmektedir."
+
+msgid "Expires"
+msgstr "Sona eriyor"
+
+msgid "Export"
+msgstr "Dışa aktar"
+
+msgid "Export History"
+msgstr "Dışa aktarma geçmişi"
+
+msgid "Exposing a single private key can compromise your entire wallet!"
+msgstr "Tek bir özel anahtar tüm cihazınızı tehlikeye sokabilir!"
+
+msgid "Extend this seed with custom words"
+msgstr "İstediğiniz kelimelerle bu tohumu genişletin"
+
+msgid "Failed to update password"
+msgstr "Şifre güncellenemedi"
+
+msgid "Fee"
+msgstr "İşlem ücreti"
+
+msgid "Fee:"
+msgstr "Komisyon:"
+
+msgid "Fees"
+msgstr "Ücretler"
+
+msgid "Fiat"
+msgstr "Resmi Para"
+
+msgid "Fiat currency"
+msgstr "Fiat Para Birimi"
+
+msgid "File"
+msgstr "Dosya"
+
+msgid "Final"
+msgstr "Son"
+
+msgid "Find"
+msgstr "Bul"
+
+msgid "Follow this branch"
+msgstr "Bu dalı takip et"
+
+msgid "Format"
+msgstr "Format"
+
+msgid "Format: address, amount"
+msgstr "Biçim: adres, tutar"
+
+msgid "From"
+msgstr "Kime"
+
+msgid "From %d cosigners"
+msgstr "%d imzalayıcıdan"
+
+msgid "Height"
+msgstr "Yükseklik"
+
+msgid "Hello World"
+msgstr "Merhaba Dünya"
+
+msgid "Here is your master public key."
+msgstr "Bu sizin ana açık anahtarınız."
+
+msgid "Hide"
+msgstr "Gizle"
+
+msgid "History"
+msgstr "Geçmiş"
+
+msgid "Host"
+msgstr "Sunucu"
+
+msgid "How do you want to connect to a server? "
+msgstr "Sunucuya nasıl bağlanmak istiyorsunuz? "
+
+msgid ""
+"However, BIP39 seeds do not include a version number, which compromises "
+"compatibility with future wallet software."
+msgstr ""
+"Bununla birlikte, BIP39 tohumları (seeds) gelecekteki cüzdan yazılımıyla "
+"uyumluluğu tehlikeye atan bir sürüm numarası içermemektedir."
+
+msgid "Identity"
+msgstr "Kimlik"
+
+msgid ""
+"If auto-connect is enabled, Electrum will always use a server that is on the "
+"longest blockchain."
+msgstr ""
+"Eğer otomatik bağlanma açıksa, Electrum her zaman en uzun blok zincirindeki "
+"sunucuya bağlanacaktır."
+
+msgid ""
+"If it is disabled, you have to choose a server you want to use. Electrum "
+"will warn you if your server is lagging."
+msgstr ""
+"Eğer devre dışıysa, kullanmak istediğiniz sunucuyu seçmeniz gerekiyor. "
+"Electrum eğer sunucu gecikme yaşıyorsa sizi uyaracak."
+
+msgid "If the fee is low"
+msgstr "Eğer komisyon düşükse"
+
+msgid "If you check this box, your transaction will be marked as non-final,"
+msgstr "Bu kutuyu işaretlerseniz, ödemeniz bitmemiş olarak işaretlenecek,"
+
+msgid ""
+"If you forget your PIN or lose your device, your seed phrase will be the "
+"only way to recover your funds."
+msgstr ""
+"Eğer PIN kodunuzu unutur veya cihazınızı kaybederseniz, Çekirdek Kodunuz, "
+"paranızı kurtarabilmenizin tek yolu olacak."
+
+msgid "If you lose your seed, your money will be permanently lost."
+msgstr ""
+"Eğer tohumlarınızı kaybederseniz, paranız sonsuza kadar kaybolmuş olacak."
+
+msgid ""
+"If you want to create new addresses, use a deterministic wallet instead."
+msgstr ""
+"Yeni bir adres oluşturmak istiyorsanız, Rastgele olmayan bir cüzdan seçiniz."
+
+msgid "Import"
+msgstr "Dışa aktar"
+
+msgid "Import addresses"
+msgstr "Adresleri içeri aktar"
+
+msgid "Import file"
+msgstr "Dosyayı içeri aktar"
+
+msgid "Import private keys"
+msgstr "Gizli anahtarı dışa aktar"
+
+msgid ""
+"In addition, Electrum does not verify the checksum of BIP39 seeds; make sure "
+"you type your seed correctly."
+msgstr ""
+"Buna ek olarak, Electrum, BIP39 seed'lerinin sağlama toplamını doğrulamaz; "
+"seed'inizi doğru yazdığınızdan emin olun."
+
+msgid ""
+"In particular, DO NOT use 'redeem private key' services proposed by third "
+"parties."
+msgstr ""
+"Özellikle, üçüncü partiler tarafından sunulan 'özel anahtarı kullan' "
+"sevislerini KESİNLİKLE KULLANMAYIN."
+
+msgid ""
+"In some cases, use up to 3 change addresses in order to break up large coin "
+"amounts and obfuscate the recipient address."
+msgstr ""
+"Bazı durumlarda, büyük ödemeler almak ve gönderilen adresini gizlemek için "
+"3'e varan değişim adresi kullanın."
+
+msgid "Increase fee"
+msgstr "İşlem ücretini artır"
+
+msgid "Information"
+msgstr "Bilgi"
+
+msgid "Input amount"
+msgstr "Girdi miktarı"
+
+msgid "Input raw transaction"
+msgstr "Ham işlemi girin"
+
+msgid "Inputs"
+msgstr "Girişler"
+
+msgid "Install Wizard"
+msgstr "Büyücü'yü yükle"
+
+msgid "Install the zbar package to enable this."
+msgstr "Bunu aktif etmek için zbar paketini kurunuz."
+
+msgid "Insufficient funds"
+msgstr "Yetersiz bakiye"
+
+msgid "Invalid Address"
+msgstr "Geçersiz adres"
+
+msgid "Invalid Amount"
+msgstr "Geçersiz miktar"
+
+msgid "Invalid Bitcoin Address"
+msgstr "Geçersiz Bitcoin adresi"
+
+msgid "Invalid Lines found:"
+msgstr "Geçersiz satır bulundu:"
+
+msgid "Invalid PIN"
+msgstr "Geçersiz PIN"
+
+msgid "Invalid bitcoin URI:"
+msgstr "Geçersiz bitcoin adresi:"
+
+msgid "Invoice"
+msgstr "Fatura"
+
+msgid "Invoice saved as "
+msgstr "Fatura bu ad ile kaydedildi "
+
+msgid "Invoices"
+msgstr "Faturalar"
+
+msgid "Keyboard shortcut: type \"!\" to send all your coins."
+msgstr "Klavye kısayolu: Tüm paraları göndermek için \"!\""
+
+msgid "Label Settings"
+msgstr "Etiket Ayarları"
+
+msgid "Language"
+msgstr "Dil"
+
+msgid "Leave this field empty if you want to disable encryption."
+msgstr "Şifrelemeyi devre dışı bırakmak istiyorsanız bu kutuyu boş bırakın."
+
+msgid "Line #"
+msgstr "Satır #"
+
+msgid "Load transaction"
+msgstr "İşlem yükü"
+
+msgid "Lookup transaction"
+msgstr "İşlemi ara"
+
+msgid ""
+"Make sure you own the seed phrase or the private keys, before you request "
+"Bitcoins to be sent to this wallet."
+msgstr ""
+"Bitcoinlerin bu cüzdana gelmesini istemekten önce, Tohum Kodu'na veya özel "
+"anahtarlara sahip olduğunuzdan emin olun."
+
+msgid "Master Public Key"
+msgstr "Ana Açık Anahtar"
+
+msgid "Master Public Keys"
+msgstr "Açık anahtarları yönet"
+
+msgid "Max"
+msgstr "Maksimum"
+
+msgid "Max fee exceeded"
+msgstr "Maks komisyon aşıldı"
+
+msgid "Max static fee"
+msgstr "Maks sabit komisyon"
+
+msgid "Max value of the static fee slider"
+msgstr "Sabit komisyon slaydının maks değeri"
+
+msgid "Memo"
+msgstr "Not"
+
+msgid "Message"
+msgstr "Mesaj"
+
+msgid "Mining fee"
+msgstr "Madencilik ücreti"
+
+msgid "Multi-Signature Wallet"
+msgstr "Birden fazla imzalı cüzdan"
+
+msgid "Name"
+msgstr "İsim"
+
+msgid "Network"
+msgstr "Ağ"
+
+msgid "Never"
+msgstr "Asla"
+
+msgid "Never disclose your seed."
+msgstr "Tohum Kodu'nu kimseye göstermeyin."
+
+msgid "Never type it on a website."
+msgstr "Onu asla bir internet sitesinde yazmayın."
+
+msgid "New"
+msgstr "Yeni"
+
+msgid "New Contact"
+msgstr "Yeni kişi"
+
+msgid "New Password:"
+msgstr "Yeni Parola:"
+
+msgid "New contact"
+msgstr "Yeni kişi"
+
+msgid "New fee:"
+msgstr "Yeni Komisyon:"
+
+msgid "New transaction received. %(amount)s"
+msgstr "Yeni ödemeler alındı. %(amount)s"
+
+msgid "Next"
+msgstr "Sonraki"
+
+msgid "No Wallet"
+msgstr "Cüzdan yok"
+
+msgid "No donation address for this server"
+msgstr "Bu sunucu için bağış adresi yok"
+
+msgid "No message or amount"
+msgstr "Mesaj veya miktar yok"
+
+msgid "No more addresses in your wallet."
+msgstr "Cüzdanınızda daha fazla adres yok."
+
+msgid "No outputs"
+msgstr "Çıkışlar yok"
+
+msgid "No transactions found for this seed"
+msgstr "Bu Tohum Kodu için bir ödeme bulunamadı"
+
+msgid "Node"
+msgstr "Devre"
+
+msgid "None"
+msgstr "Hiç"
+
+msgid "Not connected"
+msgstr "Bağlanamadı"
+
+msgid "Not enough funds"
+msgstr "Yetersiz fon"
+
+msgid ""
+"Note that if you have frozen some of your addresses, the available funds "
+"will be lower than your total balance."
+msgstr ""
+"Unutmayın ki eğer adreslerinizden bazılarınızı dondurursanız, kullanılabilir "
+"bakiyeleriniz toplam bakiyenizden düşük olacak."
+
+msgid ""
+"Note that some merchants do not accept non-final transactions until they are "
+"confirmed."
+msgstr ""
+"Unutmayın ki bazı tüccarlar sonuçlanmayan işlemleri onaylanıncaya kadar "
+"kabul etmezler."
+
+msgid "Nothing set !"
+msgstr "Hiçbir şey belirtilmemiş !"
+
+msgid ""
+"Number of zeros displayed after the decimal point. For example, if this is "
+"set to 2, \"1.\" will be displayed as \"1.00\""
+msgstr ""
+"Ondalık noktadan sonra ayarlanan sayı kadar sıfır görüntülenir. Örneğin, "
+"eğer bu sayı 2'ye ayarlanmış ise \"1.\" sayısı \"1.00\" olarak "
+"görüntülenecektir"
+
+msgid "OK"
+msgstr "Tamam"
+
+msgid "Offline"
+msgstr "Çevrimdışı"
+
+msgid "One output per line."
+msgstr "Her satıra bir çıktı."
+
+msgid "Online Block Explorer"
+msgstr "Çevrimiçi blok zinciri"
+
+msgid "Open labels file"
+msgstr "Etiket dosyasını aç"
+
+msgid "OpenAlias"
+msgstr "AçıkLakap"
+
+msgid "OpenAlias record, used to receive coins and to sign payment requests."
+msgstr ""
+"AçıkLakap kaydı, ödeme kabul etmek ve ödeme isteklerini imzalamak için "
+"kullanılır."
+
+msgid "Options"
+msgstr "Seçenekler"
+
+msgid "Output amount"
+msgstr "Çıktı miktarı"
+
+msgid "Outputs"
+msgstr "Çıkışlar"
+
+msgid "Overview"
+msgstr "Genel Bakış"
+
+msgid "PIN mismatch"
+msgstr "PIN uyuşmazlığı"
+
+msgid "Paid"
+msgstr "Ödenmiş"
+
+msgid "Passphrase"
+msgstr "Parola-şifre"
+
+msgid "Passphrase:"
+msgstr "Parola:"
+
+msgid "Password"
+msgstr "Şifre"
+
+msgid "Password Strength"
+msgstr "Şifre dayanıklılığı"
+
+msgid "Password is disabled, this wallet is not protected"
+msgstr "Parola devre-dışı, bu cüzdan korumasız"
+
+msgid "Password was updated successfully"
+msgstr "Şifre başarıyla güncellendi"
+
+msgid "Password:"
+msgstr "Şifre:"
+
+msgid "Pay Now"
+msgstr "Şimdi öde"
+
+msgid "Pay to"
+msgstr "Kime"
+
+msgid "Pay to many"
+msgstr "Çoklu Öde"
+
+msgid "Payment Request"
+msgstr "Ödeme Talebi"
+
+msgid "Payment request has expired"
+msgstr "Ödeme isteğinin süresi dolmuş"
+
+msgid "Payment sent."
+msgstr "Ödeme gönderildi."
+
+msgid "Pending"
+msgstr "Bekleyen"
+
+msgid "Please enter a seed phrase or a master key (xpub or xprv):"
+msgstr ""
+"Lütfen bir tohum parçası ya da bir ana anahtar (xpub ya da xprv) giriniz:"
+
+msgid ""
+"Please enter a seed phrase, a master key, a list of Bitcoin addresses, or a "
+"list of private keys"
+msgstr ""
+"Lütfen bir tohum parçası, bir ana anahtar, bir Bitcoin adresler listesi, ya "
+"da bir özel anahtarlar listesi giriniz"
+
+msgid "Please enter the master public key (xpub) of your cosigner."
+msgstr "Lütfen ortak imzalayıcınızın ana açık anahtarını (xpub) giriniz."
+
+msgid "Please enter the master public key of cosigner #%d:"
+msgstr "Lütfen ortak imzalayıcı #%d\\'nın ana açık anahatarını giriniz:"
+
+msgid "Please enter your password"
+msgstr "Lütfen şifrenizi giriniz"
+
+msgid ""
+"Please enter your seed derivation passphrase. Note: this is NOT your "
+"encryption password. Leave this field empty if you did not use one or are "
+"unsure."
+msgstr ""
+"Lütfen tohum türeme parola-şifrenizi giriniz. Not: bu sizin şifreleme "
+"parolanız değildir. Eğer bir tane kullanmadıysanız ya da emin değilseniz bu "
+"alanı boş bırakınız."
+
+msgid "Please enter your seed phrase in order to restore your wallet."
+msgstr "Lütfen cüzdanınızı geri yüklemek için tohum parçacığını giriniz."
+
+msgid "Please install the Barcode Scanner app from ZXing"
+msgstr "Lütfen ZXing'den Barkod Tarayıcısı kurunuz"
+
+msgid ""
+"Please paste your cosigners master public key, or scan it using the camera "
+"button."
+msgstr ""
+"Lütfen ortak imzalayıcı ana açık anahtarınızı giriniz, ya da kamera butonunu "
+"kullanarak tarayınız."
+
+msgid "Please report any bugs as issues on github:<br/>"
+msgstr "Lütfen github'da hataları raporlayın:<br/>"
+
+msgid "Please restart Electrum to activate the new GUI settings"
+msgstr "Yeni arabirim ayarları için Electrum'u lütfen yeniden başlatın"
+
+msgid "Please retype your seed phrase, to confirm that you properly saved it"
+msgstr ""
+"Doğru bir şekilde kayıt ettiğinizden emin olmak için, Lütfen tohum cümlenizi "
+"tekrardan giriniz"
+
+msgid "Please save these %d words on paper (order is important). "
+msgstr "%d kelimeleri kağıda kaydediniz (sırası önemlidir). "
+
+msgid "Please share it with your cosigners."
+msgstr "Arkadaşlarınızla paylaşınız."
+
+msgid "Please type your seed phrase using the virtual keyboard."
+msgstr "Lütfen sanal klavyeyi kullanarak tohum cümlenizi giriniz."
+
+msgid "Please wait"
+msgstr "Lütfen bekleyin"
+
+msgid "Please wait..."
+msgstr "Lütfen bekleyin..."
+
+msgid "Port"
+msgstr "Bağlantı noktası"
+
+msgid "Preferences"
+msgstr "Ayarlar"
+
+msgid "Press 'Next' to create this wallet, or choose another file."
+msgstr ""
+"Cüzdanı oluşturmak için 'ileri' tuşuna basın veya başka bir klasör seçin."
+
+msgid "Press 'Next' to open this wallet."
+msgstr "Cüzdanı açmak için 'ileri' tuşuna basın."
+
+msgid "Press again to exit"
+msgstr "Çıkmak için tekrar basın"
+
+msgid "Preview"
+msgstr "Önizle"
+
+msgid "Private key"
+msgstr "Gizli anahtar"
+
+msgid "Private keys"
+msgstr "Gizli anahtarlar"
+
+msgid "Private keys exported."
+msgstr "Gizli anahtarlar dışa aktarıldı."
+
+msgid "Proceed?"
+msgstr "Devam et?"
+
+msgid "Propose Replace-By-Fee"
+msgstr "Ücretli bir değişiklik önerin"
+
+msgid "Proxy"
+msgstr "Vekil sunucu"
+
+msgid "Proxy user"
+msgstr "Proxy kullanıcı"
+
+msgid "Public key"
+msgstr "Açık anahtar"
+
+msgid "Public keys"
+msgstr "Ortak Anahtar"
+
+msgid "QR code"
+msgstr "QR kodu"
+
+msgid "QR code copied to clipboard"
+msgstr "QR kodu panoya kopyalandı"
+
+msgid "QR code saved to file"
+msgstr "QR kodu dosyaya kaydedildi"
+
+msgid "Read QR code"
+msgstr "QR kodunu oku"
+
+msgid "Read file"
+msgstr "Dosyayı oku"
+
+msgid "Receive"
+msgstr "Ödeme istekleri"
+
+msgid "Receiving address"
+msgstr "Ödeme istenilen adres"
+
+msgid "Recipient of the funds."
+msgstr "Alıcı fonları."
+
+msgid "Recovery successful"
+msgstr "Kurtarma başarılı."
+
+msgid "Redeem Script"
+msgstr "Script Kullanın"
+
+msgid "Remove"
+msgstr "Temizle"
+
+msgid "Remove %s from your list of contacts?"
+msgstr "Bu kişiyi listeden sil %s ?"
+
+msgid "Replaceable"
+msgstr "Değiştirilebilir"
+
+msgid "Reporting Bugs"
+msgstr "Hatayı bildir"
+
+msgid "Request expires"
+msgstr "Istek süresi bitti"
+
+msgid "Request saved successfully"
+msgstr "İstek başarıyla kaydedildi"
+
+msgid "Requested amount"
+msgstr "İstenilen miktar"
+
+msgid "Requestor"
+msgstr "Talep"
+
+msgid "Requests"
+msgstr "İstekler"
+
+msgid "Require %d signatures"
+msgstr "%d imza gerekli"
+
+msgid "Requires"
+msgstr "Gerektiriyor"
+
+msgid "SSL certificate"
+msgstr "SSL Sertifikası"
+
+msgid "SSL certificate used to sign payment requests."
+msgstr "Ödeme taleplerini imzalamak için kullanılan SSL sertifikası."
+
+msgid "Save"
+msgstr "Kayıt"
+
+msgid "Save as BIP70 file"
+msgstr "BIP70 dosyası kaydedildi"
+
+msgid "Save invoice to file"
+msgstr "Faturayı dosyaya kaydet"
+
+msgid "Seed"
+msgstr "Tohum(Seed)"
+
+msgid "Seed Type"
+msgstr "tohum tipi"
+
+msgid "Select file to export your private keys to"
+msgstr "Dışa aktarılacak gizli anahtar dosyasını seçin"
+
+msgid "Select file to export your wallet transactions to"
+msgstr "Cüzdanınızdaki işlemleri dışa aktarmak için dosya seçiniz"
+
+msgid "Select file to save your labels"
+msgstr "Etiketlerini kaydetmek için bir dosya seç"
+
+msgid "Select server automatically"
+msgstr "Server'i otomatik olarak seç"
+
+msgid "Select server manually"
+msgstr "Sunucuyu elle seç"
+
+msgid "Select where to save your payment request"
+msgstr "Ödeme isteğini nereye kaydetmek istediğini seç"
+
+msgid "Select where to save your signed transaction"
+msgstr "İmzalı işleminizin nereye kaydedileceğini seçiniz"
+
+msgid "Select which language is used in the GUI (after restart)."
+msgstr "Hangi dili kullanmak istediğini seç (Yeniden başlattıktan sonra)."
+
+msgid "Select your transaction file"
+msgstr "İşlem dosyanı seç"
+
+msgid "Send"
+msgstr "Gönder"
+
+msgid "Sending"
+msgstr "Gönderiliyor"
+
+msgid "Server"
+msgstr "Sunucu"
+
+msgid "Server is lagging (%d blocks)"
+msgstr "Server biraz yavaşlamakta (%d blok)"
+
+msgid "Server lagging (%d blocks)"
+msgstr "Sunucuda gecikme (% d blocs)"
+
+msgid "Server peers"
+msgstr "Sunucu çiftleri"
+
+msgid "Settings"
+msgstr "Ayarlar"
+
+msgid "Show"
+msgstr "Göster"
+
+msgid "Show QR Code"
+msgstr "Barkod göster"
+
+msgid "Show as QR code"
+msgstr "QR kodu göster"
+
+msgid "Show fee edit box in send tab."
+msgstr "Gönder sekmesinde ücret düzenleyi göster."
+
+msgid "Show history rates"
+msgstr "geçmiş oranını göster"
+
+msgid "Show/Hide"
+msgstr "Göster/Gizle"
+
+msgid "Sign"
+msgstr "İmza"
+
+msgid "Sign/verify Message"
+msgstr "Mesajı imzala/doğrula"
+
+msgid "Signature"
+msgstr "İmza"
+
+msgid "Signature verified"
+msgstr "İmza doğrulandı"
+
+msgid "Signing transaction..."
+msgstr "İşlem imzalanıyor..."
+
+msgid "Size:"
+msgstr "Boyut:"
+
+msgid "Source"
+msgstr "Kaynak"
+
+msgid "Spend only confirmed coins"
+msgstr "Sadece onaylanan madeni paraları harca"
+
+msgid "Spend only confirmed inputs."
+msgstr "Sadece onaylanan girişleri harca."
+
+msgid "Status"
+msgstr "Durum"
+
+msgid "Status:"
+msgstr "Durum:"
+
+msgid "Success"
+msgstr "Başarılı"
+
+msgid "Sweep"
+msgstr "Temizle"
+
+msgid "Sweep private keys"
+msgstr "Gizli anahtarı temizle"
+
+msgid "Synchronizing..."
+msgstr "Senkronize ediliyor.."
+
+msgid ""
+"Text copied to clipboard.\n"
+"Tap again to display it as QR code."
+msgstr ""
+"Yazı panoya kopyalandı.\n"
+"QR kod'u görmek için bir daha basın."
+
+msgid ""
+"The amount of fee can be decided freely by the sender. However, transactions "
+"with low fees take more time to be processed."
+msgstr ""
+"İşlem ücretinin miktarı gönderici tarafından serbestçe ayarlanabilir. Fakat, "
+"düşük ücretli işlemler işlemek için daha fazla zaman gerektiriyor."
+
+msgid ""
+"The amount will be displayed in red if you do not have enough funds in your "
+"wallet."
+msgstr "Cüzdanınızda yeterli miktarda para yok ise, miktar kırmızı görünür."
+
+msgid ""
+"The bitcoin address never expires and will always be part of this electrum "
+"wallet."
+msgstr ""
+"Bitcoin adresi hiçbir zaman sona ermez ve her zaman electrum cüzdanının bir "
+"parçası olacak."
+
+msgid ""
+"The description is not sent to the recipient of the funds. It is stored in "
+"your wallet file, and displayed in the 'History' tab."
+msgstr ""
+"Fonlar başkasına gönderilemez. Cüzdanına yüklenir. Geçmiş kısmından "
+"görebilirsiniz."
+
+msgid "The fee for this transaction seems unusually high."
+msgstr "İzin verilen miktardan fazla ücret gönderilemez."
+
+msgid ""
+"The file '%s' contains an incompletely created wallet.\n"
+"Do you want to complete its creation now?"
+msgstr ""
+"Bu dosya '%s' eksik olduğundan cüzdanın \n"
+"Do oluşturulmasını şimdi tamamlamak isteğin durumu."
+
+msgid "The file was removed"
+msgstr "Dosya silindi."
+
+msgid "The following addresses were added"
+msgstr "Adresler eklendi."
+
+msgid "The following alias providers are available:"
+msgstr "Önerilen takma adları kullanabilirsiniz."
+
+msgid "The following inputs could not be imported"
+msgstr "Girdileriniz içeri aktarılamadı."
+
+msgid ""
+"The format of your wallet '%s' must be upgraded for Electrum. This change "
+"will not be backward compatible"
+msgstr ""
+"Electrum için cüzdan ' % s ' formatını güncellemelisiniz. Bu değişiklik "
+"geriye dönük olarak uyumlu olmayacak"
+
+msgid ""
+"The wallet '%s' contains multiple accounts, which are no longer supported in "
+"Electrum 2.7.\n"
+"\n"
+"Do you want to split your wallet into multiple files?"
+msgstr ""
+"Cüzdan ' % s ' artık elektron 2.7 desteklenen birden fazla hesap içerir. \\ "
+"n \\ n Cüzdanı birden çok dosyaya ayırmak istiyor musunuz?"
+
+msgid ""
+"This blockchain is used to verify the transactions sent by your transaction "
+"server."
+msgstr ""
+"Bu blockchain sizin serverdan yapılmış işlemleri doğrulamak için "
+"kullanılmaktadır."
+
+msgid "This file does not exist."
+msgstr "Bu dosya mevcut değil."
+
+msgid "This file is encrypted."
+msgstr "Bu dosya şifrelenmiş."
+
+msgid ""
+"This information is seen by the recipient if you send them a signed payment "
+"request."
+msgstr ""
+"Eğer onlara imzalanmış bir ödeme isteği gönderirseniz, Bu bilgi alıcı "
+"tarafından görünecektir."
+
+msgid "This is a watching-only wallet"
+msgstr "Bu sadece-izle olan bir cüzdandır"
+
+msgid "This is the height of your local copy of the blockchain."
+msgstr "Bu, blokçunun yerel kopyasının yüksekliğidir."
+
+msgid "This may result in higher transactions fees."
+msgstr "Bundan dolayı yüksek transfer ücreti ödemek durumunda kalabilirsiniz."
+
+msgid "This means you will not be able to spend Bitcoins with it."
+msgstr "Bu Bitcoin'lerinizi harcamayacağınız anlamına gelmektedir."
+
+msgid "This payment request will be signed."
+msgstr "Bu ödeme isteği imzalanacak."
+
+msgid ""
+"This seed will allow you to recover your wallet in case of computer failure."
+msgstr ""
+"Bu tohum, bilgisayar arızası durumunda cüzdanınızı kurtarmanıza izin verir."
+
+msgid "This transaction is not saved. Close anyway?"
+msgstr "Bu işlem kaydedilmedi. Hâlâ kapatılsın mı?"
+
+msgid ""
+"This transaction requires a higher fee, or it will not be propagated by the "
+"network"
+msgstr ""
+"Bunun gibi işlemler daha yüksek bir transfer ücreti gerektirmektedir, diğer "
+"türlü işlem gerçekleşmez"
+
+msgid "This wallet has no seed"
+msgstr "Cüzdan hiçbir tohuma sahip değil"
+
+msgid "This wallet is watching-only."
+msgstr "Bu cüzdanı sadece izliyorsunuz."
+
+msgid ""
+"This wallet was restored offline. It may contain more addresses than "
+"displayed."
+msgstr ""
+"Bu cüzdan çevrimdışı olarak restore edildi. Gösterilenlerden daha fazla "
+"adres içerebilir."
+
+msgid ""
+"To make sure that you have properly saved your seed, please retype it here."
+msgstr ""
+"Seed'inizi doğru bir şekilde kurtardığınızdan emin olmak için lütfen buraya "
+"tekrar yazın."
+
+msgid "Total size"
+msgstr "Toplam boyut"
+
+msgid "Transaction"
+msgstr "İşlem"
+
+msgid "Transaction ID"
+msgstr "İşlem kimliği"
+
+msgid "Transaction ID:"
+msgstr "İşlem kimliği:"
+
+msgid "Transaction saved successfully"
+msgstr "İşlem başarıyla kaydedildi"
+
+msgid "Transaction unrelated to your wallet"
+msgstr "İşlemin cüzdan ile bir ilgisi yok"
+
+msgid "Transaction:"
+msgstr "İşlem:"
+
+msgid "Transactions"
+msgstr "İşlemler"
+
+msgid "Try to explain not only what the bug is, but how it occurs."
+msgstr ""
+"Sadece hatanın ne olduğunu değil, nasıl olduğunu da açıklamaya çalışın."
+
+msgid "Unable to create backup"
+msgstr "yedekleme oluşturulamıyor"
+
+msgid "Unable to create csv"
+msgstr "Csv oluşturulamıyor"
+
+msgid "Unable to export history"
+msgstr "Kayıtlar dışa aktarılamıyor"
+
+msgid "Unable to read file or no transaction found"
+msgstr "Dosyayı okunmuyor, veya hiç bir işlem bulunmuyor"
+
+msgid "Unknown"
+msgstr "Bilinmeyen"
+
+msgid "Use SSL"
+msgstr "SSL kullan"
+
+msgid "Use Tor Proxy"
+msgstr "Kullanıcı proksi adresini kullan"
+
+msgid "Use as server"
+msgstr "Kendi sunucunu kullan"
+
+msgid "Use change addresses"
+msgstr "Kullanılan adresleri değiştir"
+
+msgid "Use dynamic fees"
+msgstr "Değişken ücret kullan"
+
+msgid "Use fees recommended by the server."
+msgstr "Sunucuda önerilen kullanma ücretlerini kullan"
+
+msgid "Use multiple change addresses"
+msgstr "Birden fazla değişen adres kullan"
+
+msgid "Use setconfig to set ssl_chain and ssl_privkey."
+msgstr "ssl_chain ve ssl_privkey  'i ayarlamak için setconfig kullan."
+
+msgid "Use the camera button to scan a QR code."
+msgstr "QR kodu taratmak için kamera butonunu kullan."
+
+msgid "Use this dialog to add a password to your wallet."
+msgstr "Cüzdanına şifre eklemek için iletişim kutusuna git"
+
+msgid "Use this dialog to change your password."
+msgstr "Parola değiştirmek için lütfen e-mail adresini kontrol et"
+
+msgid "Uses icons from the Icons8 icon pack (icons8.com)."
+msgstr "kullanıcı ikon dosyanı kullanmak için önerilen site"
+
+msgid ""
+"Using change addresses makes it more difficult for other people to track "
+"your transactions."
+msgstr ""
+"Değişiklik adreslerini kullanmak, diğer kişilerin işlemlerinizi izlemesini "
+"zorlaştırıyor."
+
+msgid "Verify"
+msgstr "Doğrulandı"
+
+msgid "Version"
+msgstr "Sürüm"
+
+msgid "Video Device"
+msgstr "Video Aygıtı"
+
+msgid "View invoice"
+msgstr "Faturanızı Görüntüleyin"
+
+msgid "View on block explorer"
+msgstr "Blcok explorer'da görüntüle"
+
+msgid "WARNING"
+msgstr "UYARI"
+
+msgid "WARNING: ALL your private keys are secret."
+msgstr "UYARI: TÜM özel anahtarlar gizlidir."
+
+msgid ""
+"WARNING: the alias \"%s\" could not be validated via an additional security "
+"check, DNSSEC, and thus may not be correct."
+msgstr ""
+"UYARI: \"%s\" takma adı ek bir güvenlik kontrolü olan DNSSEC aracılığıyla "
+"doğrulanamadı ve bu nedenle doğru olmayabilir."
+
+msgid "Waiting for fee estimates..."
+msgstr "Ücret tahminlerini bekliyor..."
+
+msgid "Wallet"
+msgstr "Cüzdan"
+
+msgid "Wallet backup created"
+msgstr "Cüzdan yedekleme oluşturuldu"
+
+msgid "Wallet change address"
+msgstr "Cüzdan değişikliği adresi"
+
+msgid "Wallet receive address"
+msgstr "Cüzdan alıcısı adresi"
+
+msgid "Warning"
+msgstr "Uyarı"
+
+msgid ""
+"Warning: The next address will not be recovered automatically if you restore "
+"your wallet from seed; you may need to add it manually.\n"
+"\n"
+"This occurs because you have too many unused addresses in your wallet. To "
+"avoid this situation, use the existing addresses first.\n"
+"\n"
+"Create anyway?"
+msgstr ""
+"Uyarı: Geri yüklerseniz sonraki adresi otomatik olarak geri alınması mümkün "
+"olmayan cüzdanınıza gelen tohum; manuel olarak eklemeniz gerekebilir. \\ n "
+"\\ n Bunun nedeni, cüzdanınızda çok fazla kullanılmayan adresiniz olmasıdır. "
+"Bu durumu önlemek için önce mevcut adresleri kullanın. \\ n \\ n Yine de "
+"oluşturulsun mu?"
+
+msgid ""
+"We do not guarantee that BIP39 imports will always be supported in Electrum."
+msgstr ""
+"BIP39'un ithalatının daima Electrum'da destekleneceğini garanti etmiyoruz."
+
+msgid "Wrong signature"
+msgstr "Yanlış imza"
+
+msgid "You are following branch"
+msgstr "Şunu takip ediyorsun"
+
+msgid ""
+"You are using Electrum in offline mode; restart Electrum if you want to get "
+"connected"
+msgstr ""
+"Electrum yazılımını çevrimdışı kullanıyorsunuz. Bağlanmak için Electrum'u "
+"tekrar başlatın"
+
+msgid ""
+"You are using a non-deterministic wallet, which cannot create new addresses."
+msgstr ""
+"Yeni adresler oluşturamazsınız, deterministik olmayan bir cüzdan "
+"kullanıyorsunuz."
+
+msgid ""
+"You may enter a Bitcoin address, a label from your list of contacts (a list "
+"of completions will be proposed), or an alias (email-like address that "
+"forwards to a Bitcoin address)"
+msgstr ""
+"Bir Bitcoin adresi, rehber listenizdeki bir etiket (tamamlanma listeleri "
+"önerilir) veya bir takma ad (bir Bitcoin adresine iletilen e-posta benzeri "
+"adres)"
+
+msgid "You may load a CSV file using the file icon."
+msgstr "Dosya simgesini kullanarak bir CSV dosyası yükleyebilirsiniz."
+
+msgid "Your accounts have been moved to"
+msgstr "Hesaplarınız şuraya taşındı"
+
+msgid ""
+"Your bitcoins are password protected. However, your wallet file is not "
+"encrypted."
+msgstr "Bitcoinleriniz şifre korumalıdır. Cüzdan dosyanız şifrelenmemektedir."
+
+msgid "Your labels have been synchronised."
+msgstr "Etiketleriniz senkronize edildi."
+
+msgid "Your labels were exported to"
+msgstr "Etiketiniz dışa aktarıldı"
+
+msgid "Your labels were imported from"
+msgstr "Etiketleriniz,"
+
+msgid "Your seed extension is"
+msgstr "Seed eklentiniz"
+
+msgid "Your seed is important!"
+msgstr "Seed'iniz önemlidir!"
+
+msgid "Your server is on branch"
+msgstr "Sunucunuz şubede"
+
+msgid "Your wallet generation seed is:"
+msgstr "Cüzdan nesil seed'iniz:"
+
+msgid "Your wallet history has been successfully exported."
+msgstr "Cüzdan geçmişiniz başarıyla dışa aktarıldı."
+
+msgid "Your wallet is not protected."
+msgstr "Cüzdanınız korunmamıştır."
+
+msgid "Your wallet is password protected and encrypted."
+msgstr "Cüzdanınız parola korumalı ve şifrelidir."
+
+msgid "Your wallet was upgraded successfully"
+msgstr "Cüzdanınız başarıyla yükseltildi"
+
+msgid "Zeros after decimal point"
+msgstr "Noktadan sonraki ondalık sıfırlar"
+
+msgid ""
+"and you will have the possiblity, while it is unconfirmed, to replace it "
+"with a transaction that pays a higher fee."
+msgstr ""
+"ve siz kabul etmeseniz de daha yüksek bir işlem ücreti ile "
+"karşılaşabilirsiniz."
+
+msgid "are frozen"
+msgstr "Dondurulmuş."
+
+msgid "blocks"
+msgstr "bloklar"
+
+msgid "cosigner"
+msgstr "ortak imzalayan"
+
+msgid "from your wallet?"
+msgstr "Senin cüzdanın mı ?"
+
+msgid "json"
+msgstr "json"
+
+msgid "low fee"
+msgstr "Düşük maliyet"
+
+msgid "please wait..."
+msgstr "Lütfen bekleyin..."
+
+msgid "unconfirmed"
+msgstr "Doğrulanmamış onaylanmamış"
+
+msgid "unknown"
+msgstr "Bilinmiyor"
+
+msgid "unknown (low fee)"
+msgstr "Belirsiz. (Düşük ücret )"
+
+msgid "unverified"
+msgstr "Doğrulanmadı"
+
+msgid "watching only"
+msgstr "görüntüle"

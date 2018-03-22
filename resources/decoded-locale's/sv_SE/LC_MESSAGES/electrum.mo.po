@@ -1,0 +1,620 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-12-09 15:27-0500\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Swedish\n"
+"Language: sv_SE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: sv-SE\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr " Dessa inställningar berör fälten under Skicka-fliken"
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr ""
+"%(txs)s nya transaktioner mottagna. Totalt mottaget %(amount)s i nya "
+"transaktioner"
+
+msgid "&About"
+msgstr "&Om"
+
+msgid "&Addresses"
+msgstr "&Addresser"
+
+msgid "&Documentation"
+msgstr "&Dokumentation"
+
+msgid "&Donate to server"
+msgstr "&Donera till server"
+
+msgid "&Encrypt/decrypt message"
+msgstr "&Kryptera/dekryptera meddelade"
+
+msgid "&Export"
+msgstr "&Exportera"
+
+msgid "&File"
+msgstr "&Arkiv"
+
+msgid "&From QR code"
+msgstr "&Från QR kod"
+
+msgid "&From file"
+msgstr "&Från fil"
+
+msgid "&From text"
+msgstr "&Från text"
+
+msgid "&From the blockchain"
+msgstr "&Från blockkedjan"
+
+msgid "&Help"
+msgstr "&Hjälp"
+
+msgid "&History"
+msgstr "&Historik"
+
+msgid "&Import"
+msgstr "&Importera"
+
+msgid "&Labels"
+msgstr "&Etiketter"
+
+msgid "&Load transaction"
+msgstr "&Läs in transaktion"
+
+msgid "&Master Public Keys"
+msgstr "&Publik huvudnyckel"
+
+msgid "&Network"
+msgstr "&Nätverk"
+
+msgid "&New"
+msgstr "&Ny"
+
+msgid "&New/Restore"
+msgstr "&Ny/Återställ"
+
+msgid "&Official website"
+msgstr "&Officiell hemsida"
+
+msgid "&Open"
+msgstr "&Öppna"
+
+msgid "&Password"
+msgstr "&Lösenord"
+
+msgid "&Pay to many"
+msgstr "&Betala till flera"
+
+msgid "&Plugins"
+msgstr "&Tillägg"
+
+msgid "&Private keys"
+msgstr "&Privata nycklar"
+
+msgid "&Quit"
+msgstr "&Avsluta"
+
+msgid "&Recently open"
+msgstr "&Nyligen öppnade"
+
+msgid "&Report Bug"
+msgstr "&Rapportera bugg"
+
+msgid "&Save Copy"
+msgstr "&Spara kopia"
+
+msgid "&Seed"
+msgstr "&Ordfras"
+
+msgid "&Sign/verify message"
+msgstr "&Signera/verifiera meddelande"
+
+msgid "&Sweep"
+msgstr "&Svep"
+
+msgid "&Tools"
+msgstr "&Verktyg"
+
+msgid "&View"
+msgstr "&Visa"
+
+msgid "&Wallet"
+msgstr "&Plånbok"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "1 dag"
+
+msgid "1 hour"
+msgstr "1 timme"
+
+msgid "1 week"
+msgstr "1 vecka"
+
+msgid "A copy of your wallet file was created in"
+msgstr "En kopia av din plånbok skapades i"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"En föreslagen avgift har automatiskt lagts till till detta fält. Du kan "
+"ändra den. Den föreslagna avgiften ökar ifall transaktions storleken ökar."
+
+msgid "Add Cosigner"
+msgstr "Lägg till medsignerare"
+
+msgid "Additional fees"
+msgstr "Övriga avgifter"
+
+msgid "Address"
+msgstr "Adress"
+
+msgid "Address:"
+msgstr "Adress:"
+
+msgid "Always"
+msgstr "Alltid"
+
+msgid "Amount"
+msgstr "Belopp"
+
+msgid "Amount received:"
+msgstr "Belopp som erhållits:"
+
+msgid "Amount sent:"
+msgstr "Skickat belopp:"
+
+msgid "Amount to be sent"
+msgstr "Belopp att skicka"
+
+msgid "Amount to be sent."
+msgstr "Belopp att skicka."
+
+msgid "Appearance"
+msgstr "Utseende"
+
+msgid "Auto connect"
+msgstr "Anslut automatiskt"
+
+msgid "BIP39 seed"
+msgstr "BIP39 frö"
+
+msgid ""
+"BIP39 seeds can be imported in Electrum so that users can access funds "
+"locked in other wallets."
+msgstr ""
+"BIP39 frön kan importeras till Electrum så att användare kan nå tillgångar "
+"låsta i andra plånböcker."
+
+msgid "Back"
+msgstr "Tillbaka"
+
+msgid "Balance"
+msgstr "Balans"
+
+msgid "Base unit"
+msgstr "Basenhet"
+
+msgid "Base unit of your wallet."
+msgstr "Basenhet för din plånbok."
+
+msgid ""
+"Before reporting a bug, upgrade to the most recent version of Electrum "
+"(latest release or git HEAD), and include the version number in your report."
+msgstr ""
+"Innan du rapporterar ett problem, uppgradera till den senaste versionen av "
+"Electrum (senaste utgåva eller git HEAD), och inkludera versions numret i "
+"din problem rapport."
+
+msgid "Bitcoin Address is None"
+msgstr "Bitcoin Addressen är tom"
+
+msgid ""
+"Bitcoin address where the payment should be received. Note that each payment "
+"request uses a different Bitcoin address."
+msgstr ""
+"Bitcoin address där betalningen ska mottas. Notera att varje betalnings "
+"begäran använder en ny Bitcoin address."
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"Bitcoin transaktioner är i allmänhet inte gratis. En transaktions avgift är "
+"betalad av avsändaren."
+
+msgid "Blockchain"
+msgstr "Blockkedja"
+
+msgid "Broadcast"
+msgstr "Sänd"
+
+msgid "Broadcasting transaction..."
+msgstr "Sänder transaktion..."
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Cannot read file"
+msgstr "Kan inte läsa fil"
+
+msgid "Change Password"
+msgstr "Ändra lösenord"
+
+msgid "Changing PIN code."
+msgstr "Ändra PIN-kod."
+
+msgid "Choose a server"
+msgstr "Välj server"
+
+msgid "Choose your chain"
+msgstr "Välj kedja"
+
+msgid "Choose..."
+msgstr "Välj..."
+
+msgid "Clear"
+msgstr "Rensa"
+
+msgid "Close"
+msgstr "Stäng"
+
+msgid "Con&sole"
+msgstr "Kon&sol"
+
+msgid "Con&tacts"
+msgstr "Kon&takter"
+
+msgid "Current fee"
+msgstr "Aktuell avgift"
+
+msgid "Dark/Light"
+msgstr "Mörk/Ljus"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Date: %s"
+msgstr "Datum: %s"
+
+msgid "Decrypt"
+msgstr "Dekryptera"
+
+msgid "Delete"
+msgstr "Ta bort"
+
+msgid "Delete invoice?"
+msgstr "Ta bort faktura?"
+
+msgid "Delete wallet?"
+msgstr "Ta bort plånbok?"
+
+msgid "Denomination"
+msgstr "Valör"
+
+msgid "Description"
+msgstr "Beskrivning"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "Beskrivning av transaktionen (ej obligatorisk)."
+
+msgid "Details"
+msgstr "Detaljer"
+
+msgid "Disconnected"
+msgstr "Frånkopplad"
+
+msgid "Do not store it electronically."
+msgstr "Spara inte detta elektroniskt."
+
+msgid "Do you want to delete '%s'?"
+msgstr "Vill du ta bort '%s'?"
+
+msgid "Do you want to delete the old file"
+msgstr "Vill du ta bort den gamla filen"
+
+msgid "Do you want to remove"
+msgstr "Vill du ta bort"
+
+msgid "Do you wish to continue?"
+msgstr "Vill du fortsätta?"
+
+msgid "Edit %s"
+msgstr "Ändra %s"
+
+msgid "Edit fees manually"
+msgstr "Ändra avgift manuellt"
+
+msgid "Encrypt"
+msgstr "Kryptera"
+
+msgid "Encrypt wallet file"
+msgstr "Kryptera plånbok"
+
+msgid "Encrypted"
+msgstr "Krypterad"
+
+msgid "Enter Passphrase"
+msgstr "Ange lösenordsfras"
+
+msgid "Enter Password"
+msgstr "Ange lösenord"
+
+msgid "Enter Seed"
+msgstr "Ange ordfras"
+
+msgid "Enter addresses"
+msgstr "Ange adresser"
+
+msgid "Enter description"
+msgstr "Ange beskrivning"
+
+msgid "Enter new PIN"
+msgstr "Ange ny PIN"
+
+msgid "Error"
+msgstr "Fel"
+
+msgid "Exit Electrum"
+msgstr "Avsluta Electrum"
+
+msgid "Expired"
+msgstr "Förfallen"
+
+msgid "Expires"
+msgstr "Förfaller"
+
+msgid "Export"
+msgstr "Exportera"
+
+msgid "Export History"
+msgstr "Exportera historik"
+
+msgid "Failed to update password"
+msgstr "Misslyckades att uppdatera lösenordet"
+
+msgid "Import"
+msgstr "Importera"
+
+msgid "Import addresses"
+msgstr "Importera adresser"
+
+msgid "Import file"
+msgstr "Importera fil"
+
+msgid "Import private keys"
+msgstr "Importera privata nycklar"
+
+msgid "Increase fee"
+msgstr "Öka avgiften"
+
+msgid "Information"
+msgstr "Information"
+
+msgid "Input amount"
+msgstr "Ange belopp"
+
+msgid "Invalid Amount"
+msgstr "Ogiltigt belopp"
+
+msgid "Invalid PIN"
+msgstr "Ogiltig PIN"
+
+msgid "Invoice"
+msgstr "Faktura"
+
+msgid "Invoice saved as "
+msgstr "Faktura sparad som "
+
+msgid "Invoices"
+msgstr "Fakturor"
+
+msgid "Language"
+msgstr "Språk"
+
+msgid "Leave this field empty if you want to disable encryption."
+msgstr "Lämna detta tomt för att inaktivera kryptering."
+
+msgid "Line #"
+msgstr "Rad #"
+
+msgid "Load transaction"
+msgstr "Läs in transaktion"
+
+msgid "Master Public Key"
+msgstr "Publik huvudnyckel"
+
+msgid "Master Public Keys"
+msgstr "Publika huvudnycklar"
+
+msgid "Max"
+msgstr "Max"
+
+msgid "No Wallet"
+msgstr "Ingen plånbok"
+
+msgid "No message or amount"
+msgstr "Inget meddelande eller belopp"
+
+msgid "Node"
+msgstr "Nod"
+
+msgid "None"
+msgstr "Ingen"
+
+msgid "Not connected"
+msgstr "Inte ansluten"
+
+msgid "Offline"
+msgstr "Frånkopplad"
+
+msgid "Options"
+msgstr "Alternativ"
+
+msgid "Overview"
+msgstr "Översikt"
+
+msgid "Paid"
+msgstr "Betald"
+
+msgid "Passphrase"
+msgstr "Lösenordsfras"
+
+msgid "Passphrase:"
+msgstr "Lösenordsfras:"
+
+msgid "Password"
+msgstr "Lösenord"
+
+msgid "Password was updated successfully"
+msgstr "Lösenordet har uppdaterats"
+
+msgid "Password:"
+msgstr "Lösenord:"
+
+msgid "Pay Now"
+msgstr "Betala nu"
+
+msgid "Pay to"
+msgstr "Betala till"
+
+msgid "Pay to many"
+msgstr "Betala till flera"
+
+msgid "Payment sent."
+msgstr "Betalning skickad."
+
+msgid "Pending"
+msgstr "Väntande"
+
+msgid "Proxy"
+msgstr "Proxy"
+
+msgid "Proxy user"
+msgstr "Proxyanvändare"
+
+msgid "Public key"
+msgstr "Publik nyckel"
+
+msgid "Public keys"
+msgstr "Publik nycklar"
+
+msgid "QR code"
+msgstr "QR-kod"
+
+msgid "QR code copied to clipboard"
+msgstr "QR-kod har kopierats till urklipp"
+
+msgid "QR code saved to file"
+msgstr "QR-kod sparad till fil"
+
+msgid "Read QR code"
+msgstr "Läs QR-kod"
+
+msgid "Read file"
+msgstr "Läs fil"
+
+msgid "Receive"
+msgstr "Ta emot"
+
+msgid "Receiving address"
+msgstr "Mottagarens adress"
+
+msgid "Recovery successful"
+msgstr "Återskapning lyckad"
+
+msgid "Remove"
+msgstr "Ta bort"
+
+msgid "Replaceable"
+msgstr "Utbytbar"
+
+msgid "Reporting Bugs"
+msgstr "Rapportera bugg"
+
+msgid "Request expires"
+msgstr "Begäran har löpt ut"
+
+msgid "Request saved successfully"
+msgstr "Begäran sparad"
+
+msgid "Requested amount"
+msgstr "Begärt belopp"
+
+msgid "SSL certificate"
+msgstr "SSL-certifikat"
+
+msgid "Save"
+msgstr "Spara"
+
+msgid "Send"
+msgstr "Skicka"
+
+msgid "Sending"
+msgstr "Skickar"
+
+msgid "Server"
+msgstr "Server"
+
+msgid "Settings"
+msgstr "Inställningar"
+
+msgid "Show"
+msgstr "Visa"
+
+msgid "Show QR Code"
+msgstr "Visa QR-kod"
+
+msgid "This file is encrypted."
+msgstr "Den här filen är krypterad."
+
+msgid "Total size"
+msgstr "Total storlek"
+
+msgid "Transaction"
+msgstr "Transaktion"
+
+msgid "Transaction ID"
+msgstr "Transaktions-ID"
+
+msgid "Transaction ID:"
+msgstr "Transaktions-ID:"
+
+msgid "Transaction:"
+msgstr "Transaktion:"
+
+msgid "Transactions"
+msgstr "Transaktioner"
+
+msgid "Unknown"
+msgstr "Okänd"
+
+msgid "Use SSL"
+msgstr "Använd SSL"
+
+msgid "Use Tor Proxy"
+msgstr "Använd Tor-proxy"
+
+msgid "Verify"
+msgstr "Verifiera"
+
+msgid "Warning"
+msgstr "Varning"

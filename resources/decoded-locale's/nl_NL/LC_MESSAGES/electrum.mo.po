@@ -1,0 +1,1784 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-12-14 22:24-0500\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Dutch\n"
+"Language: nl_NL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: nl\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr ""
+" Deze instellingen hebben invloed op de velden in het Verzenden tabblad"
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr ""
+"%(txs)s nieuwe transacties ontvangen. Totaal bedrag ontvangen in de nieuwe "
+"transacties %(amount)s"
+
+msgid "&About"
+msgstr "&Over"
+
+msgid "&Addresses"
+msgstr "&Adressen"
+
+msgid "&Documentation"
+msgstr "&Documentatie"
+
+msgid "&Donate to server"
+msgstr "&Doneer aan server"
+
+msgid "&Encrypt/decrypt message"
+msgstr "&Versleutel/Ontsleutel bericht"
+
+msgid "&Export"
+msgstr "&Exporteren"
+
+msgid "&File"
+msgstr "&Bestand"
+
+msgid "&From QR code"
+msgstr "&Van QR code"
+
+msgid "&From file"
+msgstr "&Uit bestand"
+
+msgid "&From text"
+msgstr "&Uit tekst"
+
+msgid "&From the blockchain"
+msgstr "&Uit de blokketen"
+
+msgid "&Help"
+msgstr "&Help"
+
+msgid "&History"
+msgstr "&Geschiedenis"
+
+msgid "&Import"
+msgstr "&Importeren"
+
+msgid "&Labels"
+msgstr "&Labels"
+
+msgid "&Load transaction"
+msgstr "&Transactie laden"
+
+msgid "&Master Public Keys"
+msgstr "&Publieke Hoofdsleutels"
+
+msgid "&Network"
+msgstr "&Netwerk"
+
+msgid "&New"
+msgstr "&Nieuw"
+
+msgid "&New/Restore"
+msgstr "&Nieuw/Herstel"
+
+msgid "&Official website"
+msgstr "&Officiële website"
+
+msgid "&Open"
+msgstr "&Openen"
+
+msgid "&Password"
+msgstr "&Wachtwoord"
+
+msgid "&Pay to many"
+msgstr "&Betaal aan meerdere"
+
+msgid "&Plugins"
+msgstr "&Plugins"
+
+msgid "&Private keys"
+msgstr "&Privé Sleutels"
+
+msgid "&Quit"
+msgstr "&Afsluiten"
+
+msgid "&Recently open"
+msgstr "&Onlangs geopend"
+
+msgid "&Report Bug"
+msgstr "&Problemen melden"
+
+msgid "&Save Copy"
+msgstr "&Kopie opslaan"
+
+msgid "&Seed"
+msgstr "&Zaad"
+
+msgid "&Sign/verify message"
+msgstr "&Onderteken/Verifieer bericht"
+
+msgid "&Sweep"
+msgstr "&Leegvegen"
+
+msgid "&Tools"
+msgstr "&Extra"
+
+msgid "&View"
+msgstr "&Bekijken"
+
+msgid "&Wallet"
+msgstr "&Portemonnee"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "1 dag"
+
+msgid "1 hour"
+msgstr "1 uur"
+
+msgid "1 week"
+msgstr "1 week"
+
+msgid "A copy of your wallet file was created in"
+msgstr "Een kopie van uw portemonnee-bestand is gemaakt in"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"Een aanbevolen vergoeding wordt hier automatisch ingevuld. U kunt dit "
+"aanpassen. De vergoeding groeit mee met de grootte van de transactie."
+
+msgid "Add Cosigner"
+msgstr "Voeg een mede ondertekenaar toe"
+
+msgid "Additional fees"
+msgstr "Bijkomende transactiekosten"
+
+msgid "Address"
+msgstr "Adres"
+
+msgid "Address:"
+msgstr "Adres:"
+
+msgid "Always"
+msgstr "Altijd"
+
+msgid "Amount"
+msgstr "Bedrag"
+
+msgid "Amount received:"
+msgstr "Ontvangen bedrag:"
+
+msgid "Amount sent:"
+msgstr "Verzonden bedrag:"
+
+msgid "Amount to be sent"
+msgstr "Te verzenden bedrag"
+
+msgid "Amount to be sent."
+msgstr "Te verzenden bedrag."
+
+msgid "Appearance"
+msgstr "Verschijning"
+
+msgid "Auto connect"
+msgstr "Automatisch verbinding maken"
+
+msgid "BIP39 seed"
+msgstr "BIP39 seed"
+
+msgid ""
+"BIP39 seeds can be imported in Electrum so that users can access funds "
+"locked in other wallets."
+msgstr ""
+"BIP39 seeds kunnen worden geimporteerd in Electrum zodat gebruikers hun "
+"fondsen uit andere wallets kunnen ontsluiten."
+
+msgid "Back"
+msgstr "Terug"
+
+msgid "Balance"
+msgstr "Saldo"
+
+msgid "Base unit"
+msgstr "Basiseenheid"
+
+msgid "Base unit of your wallet."
+msgstr "Basiseenheid van uw portemonnee."
+
+msgid ""
+"Before reporting a bug, upgrade to the most recent version of Electrum "
+"(latest release or git HEAD), and include the version number in your report."
+msgstr ""
+"Voordat je een bug meld, upgrade naar de meest recente versie van Electrum "
+"(laatste versie of git HOOFD), en voeg je versie nummer toe aan het rapport."
+
+msgid "Bitcoin Address is None"
+msgstr "Geen bitcoin adres ingevoerd"
+
+msgid ""
+"Bitcoin address where the payment should be received. Note that each payment "
+"request uses a different Bitcoin address."
+msgstr ""
+"Het bitcoin adres waar de betaling ontvangen zou moeten zijn. Let op dat elk "
+"betalingsverzoek een ander bitcoin adres gebruikt."
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"Bitcoin-transacties zijn meestal niet gratis. De verzendende partij betaalt "
+"de transactiekosten."
+
+msgid "Blockchain"
+msgstr "Blokketen"
+
+msgid "Broadcast"
+msgstr "Uitzenden"
+
+msgid "Broadcasting transaction..."
+msgstr "Broadcasting transactie..."
+
+msgid "Bump Fee"
+msgstr "Bump transactiekosten"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Annuleren"
+
+msgid "Cannot broadcast transaction"
+msgstr "Kan de transactie niet broadcasten"
+
+msgid "Cannot read file"
+msgstr "Kan bestand niet lezen"
+
+msgid "Chain split detected at block %d"
+msgstr "Chain split gedetecteerd bij block %d"
+
+msgid "Change Password"
+msgstr "Verander wachtwoord"
+
+msgid "Changing PIN code."
+msgstr "Wijzig pincode."
+
+msgid "Child Pays for Parent"
+msgstr "Kind betaalt voor ouder"
+
+msgid "Child pays for parent"
+msgstr "Kind betaalt voor ouder"
+
+msgid "Choose a password to encrypt your wallet keys."
+msgstr "Kies een wachtwoord om uw portemonnee mee te versleutelen."
+
+msgid "Choose a server"
+msgstr "Kies een server"
+
+msgid ""
+"Choose coin (UTXO) selection method.  The following are available:\n"
+"\n"
+msgstr ""
+"Kies coin (UTXO) selecteer methode. De volgende zijn beschikbaar:\n"
+"\n"
+
+msgid "Choose the number of signatures needed to unlock funds in your wallet:"
+msgstr ""
+"Kies het aantal handtekeningen dat nodig is om funds beschikbaar te maken:"
+
+msgid ""
+"Choose which online block explorer to use for functions that open a web "
+"browser"
+msgstr ""
+"Kies welke online blokverkenner u wilt gebruiken voor functies die een "
+"webbrowser openen"
+
+msgid "Choose your chain"
+msgstr "Kies een blockchain"
+
+msgid "Choose..."
+msgstr "Kies..."
+
+msgid "Clear"
+msgstr "Wissen"
+
+msgid "Close"
+msgstr "Sluiten"
+
+msgid "Co&ins"
+msgstr "Mun&ten"
+
+msgid "Coin selection"
+msgstr "Muntkeuze"
+
+msgid "Con&sole"
+msgstr "Con&sole"
+
+msgid "Con&tacts"
+msgstr "Con&tacten"
+
+msgid "Confirm Passphrase:"
+msgstr "Bevestig wachtwoord:"
+
+msgid "Confirm Password:"
+msgstr "Bevestig wachtwoord:"
+
+msgid "Confirm Seed"
+msgstr "Bevestig Seed"
+
+msgid "Confirm new PIN"
+msgstr "Bevestig nieuwe pincode"
+
+msgid "Connected to %d nodes."
+msgstr "Met %d knooppunten verbonden."
+
+msgid "Contacts"
+msgstr "Contacten"
+
+msgid "Copy"
+msgstr "Kopiëren"
+
+msgid "Copy %s"
+msgstr "Kopiëren %s"
+
+msgid "Copy URI"
+msgstr "Kopieer URL"
+
+msgid "Copy and Close"
+msgstr "Kopiëren en Sluiten"
+
+msgid "Copy to clipboard"
+msgstr "Naar klembord kopiëren"
+
+msgid "Could not start Barcode Scanner."
+msgstr "Kon Barcode Scanner niet starten."
+
+msgid "Critical Error"
+msgstr "Kritieke fout"
+
+msgid "Current Password:"
+msgstr "Huidige wachtwoord:"
+
+msgid "Current fee"
+msgstr "Huidige transactiekosten"
+
+msgid "Dark/Light"
+msgstr "Donker/licht"
+
+msgid "Date"
+msgstr "Datum"
+
+msgid "Date: %s"
+msgstr "Datum: %s"
+
+msgid "Decrypt"
+msgstr "Ontsleutelen"
+
+msgid "Default Servers"
+msgstr "Standaard servers"
+
+msgid "Delete"
+msgstr "Verwijderen"
+
+msgid "Delete invoice?"
+msgstr "Factuur verwijderen?"
+
+msgid "Delete wallet?"
+msgstr "Verwijderen van de portefeuille?"
+
+msgid "Denomination"
+msgstr "Benaming"
+
+msgid "Description"
+msgstr "Omschrijving"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "Omschrijving van de transactie (optioneel)."
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Disconnected"
+msgstr "Verbinding verbroken"
+
+msgid "Display the details of your transactions before signing it."
+msgstr "Toon de details van transacties voor verzending."
+
+msgid "Do not store it electronically."
+msgstr "Bewaar het niet electronisch."
+
+msgid "Do you want to delete '%s'?"
+msgstr "Wil je '%s' verwijderen?"
+
+msgid "Do you want to delete the old file"
+msgstr "Wil je het oude bestand wissen"
+
+msgid "Do you want to remove"
+msgstr "Wilt u dit verwijderen"
+
+msgid "Do you wish to continue?"
+msgstr "Wilt u doorgaan?"
+
+msgid "Edit %s"
+msgstr "%s wijzigen"
+
+msgid "Edit fees manually"
+msgstr "Fees handmatig aanpassen"
+
+msgid "Electrum App"
+msgstr "Electrum App"
+
+msgid "Electrum Plugins"
+msgstr "Electrum Plugins"
+
+msgid ""
+"Electrum communicates with remote servers to get information about your "
+"transactions and addresses. The servers all fulfil the same purpose only "
+"differing in hardware. In most cases you simply want to let Electrum pick "
+"one at random.  However if you prefer feel free to select a server manually."
+msgstr ""
+"Electrum communiceert met externe servers om informatie over jouw "
+"transacties en adressen te krijgen. Alle servers hebben hetzelfde doel en "
+"verschillen alleen in hardware. In de meeste gevallen wil je gewoon Electrum "
+"willekeurig laten kiezen. Heb je een voorkeur voor een server, voel je dan "
+"vrij om een server handmatig te selecteren."
+
+msgid ""
+"Electrum connects to several nodes in order to download block headers and "
+"find out the longest blockchain."
+msgstr ""
+"Electrum maakt contact met verschillende nodes om de block headers te "
+"downloaden en de langste blockchain te achterhalen"
+
+msgid "Electrum is generating your addresses, please wait..."
+msgstr ""
+"Electrum is bezig met het genereren van uw adressen, gelieve te wachten..."
+
+msgid "Electrum preferences"
+msgstr "Electrum voorkeuren"
+
+msgid ""
+"Electrum sends your wallet addresses to a single server, in order to receive "
+"your transaction history."
+msgstr ""
+"Electrum stuurt uw addressen naar een externe server om uw transactie "
+"geschiedenis op te vragen."
+
+msgid "Electrum wallet"
+msgstr "Electrum portemonnee"
+
+msgid "Electrum was unable to copy your wallet file to the specified location."
+msgstr ""
+"Electrum was niet in staat uw portemonnee-bestand te kopiëren naar de "
+"opgegeven locatie."
+
+msgid "Electrum was unable to export your labels."
+msgstr "Electrum kon uw labels niet exporteren."
+
+msgid "Electrum was unable to import your labels."
+msgstr "Electrum kon uw labels niet importeren."
+
+msgid "Electrum was unable to open your transaction file"
+msgstr "Electrum kon uw transactie bestand niet openen"
+
+msgid "Electrum was unable to parse your transaction"
+msgstr "Electrum kon uw transactie niet lezen"
+
+msgid "Electrum was unable to produce a private key-export."
+msgstr "Electrum kon uw Privé Sleutel niet exporteren."
+
+msgid "Electrum was unable to produce a transaction export."
+msgstr "Electrum kon uw transactie niet exporteren."
+
+msgid ""
+"Electrum's focus is speed, with low resource usage and simplifying Bitcoin. "
+"You do not need to perform regular backups, because your wallet can be "
+"recovered from a secret phrase that you can memorize or write on paper. "
+"Startup times are instant because it operates in conjunction with high-"
+"performance servers that handle the most complicated parts of the Bitcoin "
+"system.\n"
+"\n"
+msgstr ""
+"De focus van Electrum is snelheid, met lage systeemeisen en het "
+"vereenvoudigen van Bitcoin. Het is niet nodig regelmatige backups te maken, "
+"want je portemonnee kan altijd hersteld worden met je wachtwoord. Omdat "
+"Electrum in verbinding staat met de high-performance servers waarop de meest "
+"gecompliceerde onderdelen van het Bitcoin systeem draaien is het opstarten "
+"zonder wachttijd.\n"
+"\n"
+
+msgid "Encrypt"
+msgstr "Versleutelen"
+
+msgid "Encrypt wallet file"
+msgstr "Versleutel portemonnee"
+
+msgid "Encrypt/decrypt Message"
+msgstr "Versleutel/Ontsleutel Bericht"
+
+msgid "Encrypted"
+msgstr "Versleuteld"
+
+msgid "Enter Passphrase"
+msgstr "Vul wachtwoord in"
+
+msgid "Enter Password"
+msgstr "Voer uw wachtwoord in"
+
+msgid "Enter Seed"
+msgstr "Vul seed in"
+
+msgid "Enter a filename for the copy of your wallet"
+msgstr "Geef een bestandsnaam op voor de kopie van uw portemonnee"
+
+msgid "Enter a list of outputs in the 'Pay to' field."
+msgstr "Vul een lijst van outputs in het veld 'betalen aan'"
+
+msgid "Enter addresses"
+msgstr "Voer adres in"
+
+msgid "Enter description"
+msgstr "Omschrijving invoeren"
+
+msgid "Enter new PIN"
+msgstr "Nieuwe pincode invoeren"
+
+msgid "Enter private keys"
+msgstr "Geef privé sleutels op"
+
+msgid "Enter private keys:"
+msgstr "Geef privé sleutels op:"
+
+msgid ""
+"Enter their master private key (xprv) if you want to be able to sign for "
+"them."
+msgstr ""
+"Vul je seed of master privé sleutel in om een transactie te ondertekenen."
+
+msgid "Enter wallet name"
+msgstr "Vul portemonnee naam in"
+
+msgid "Enter your PIN code in order to decrypt your seed"
+msgstr "Vul je pincode in om jouw seed te decoderen"
+
+msgid "Enter your PIN code to confirm deletion of %s"
+msgstr "Vul je pincode in om te verwijdering te bevestigen van %s"
+
+msgid "Enter your current PIN:"
+msgstr "Voer uw huidige pincode in:"
+
+msgid "Enter your password or choose another file."
+msgstr "Voer je wachtwoord in of kies een ander bestand."
+
+msgid "Enter your password to proceed"
+msgstr "Voer je wachtwoord in om verder te gaan"
+
+msgid "Error"
+msgstr "Fout"
+
+msgid "Exit Electrum"
+msgstr "Electrum afsluiten"
+
+msgid "Expected confirmation time"
+msgstr "Verwachte bevestigingstijd"
+
+msgid "Expiration date of your request."
+msgstr "Vervaldatum van je aanvraag."
+
+msgid "Expired"
+msgstr "Verlopen"
+
+msgid ""
+"Expired requests have to be deleted manually from your list, in order to "
+"free the corresponding Bitcoin addresses."
+msgstr ""
+"Verlopen aanvragen moeten handmatig worden verwijderd uit jouw lijst, om de "
+"corresponderende bitcoins adressen vrij te maken."
+
+msgid "Expires"
+msgstr "Vervalt"
+
+msgid "Export"
+msgstr "Exporteren"
+
+msgid "Export History"
+msgstr "Geschiedenis exporteren"
+
+msgid "Exposing a single private key can compromise your entire wallet!"
+msgstr ""
+"Eén enkele Privé Sleutel onthullen kan uw gehele portemonnee in gevaar "
+"brengen!"
+
+msgid "Extend this seed with custom words"
+msgstr "Breid deze seed uit met woorden"
+
+msgid "Failed to update password"
+msgstr "Bijwerken van wachtwoord mislukt"
+
+msgid "Fee"
+msgstr "Transactiekosten"
+
+msgid "Fee:"
+msgstr "Kosten:"
+
+msgid "Fees"
+msgstr "Transactiekosten"
+
+msgid "Fiat"
+msgstr "Fiat"
+
+msgid "Fiat currency"
+msgstr "Fiat geld"
+
+msgid "File"
+msgstr "Bestand"
+
+msgid "Final"
+msgstr "Laatste"
+
+msgid "Find"
+msgstr "Zoek"
+
+msgid "Follow this branch"
+msgstr "Volg deze branch"
+
+msgid "Format"
+msgstr "Formaat"
+
+msgid "Format: address, amount"
+msgstr "Formaat: adres, hoeveelheid"
+
+msgid "From"
+msgstr "Van"
+
+msgid "From %d cosigners"
+msgstr "Van %d medeondertekenaars"
+
+msgid "Height"
+msgstr "Hoogte"
+
+msgid "Hello World"
+msgstr "Hallo Wereld"
+
+msgid "Here is your master public key."
+msgstr "Dit is uw publieke hoofdsleutel."
+
+msgid "Hide"
+msgstr "Verbergen"
+
+msgid "History"
+msgstr "Geschiedenis"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "How do you want to connect to a server? "
+msgstr "Hoe wilt u verbinding maken met een server? "
+
+msgid ""
+"However, BIP39 seeds do not include a version number, which compromises "
+"compatibility with future wallet software."
+msgstr ""
+"BIP39-zaden bevatten echter geen versienummer, wat de compatibiliteit met "
+"toekomstige wallet-software in gevaar brengt."
+
+msgid "Identity"
+msgstr "Identiteit"
+
+msgid ""
+"If auto-connect is enabled, Electrum will always use a server that is on the "
+"longest blockchain."
+msgstr ""
+"Indien automatisch verbinden is geactiveerd, zal Electrum altijd een server "
+"gebruiken die op de langste blokketen zit."
+
+msgid ""
+"If it is disabled, you have to choose a server you want to use. Electrum "
+"will warn you if your server is lagging."
+msgstr ""
+"Als hij gedeactiveerd is, moet je een server kiezen die je wilt gebruiken. "
+"Electrum waarschuwt je als je server achterblijft."
+
+msgid "If the fee is low"
+msgstr "De vergoeding is laag"
+
+msgid "If you check this box, your transaction will be marked as non-final,"
+msgstr ""
+"Als u dit vakje aanvinkt, zal uw transactie als niet-definitief worden "
+"gemarkeerd,"
+
+msgid ""
+"If you forget your PIN or lose your device, your seed phrase will be the "
+"only way to recover your funds."
+msgstr ""
+"Als je jouw pincode vergeet of je apparaat verlies, dan is de seed zin de "
+"enige manier om je funds te recoveren."
+
+msgid "If you lose your seed, your money will be permanently lost."
+msgstr "Als je je seed verliest, is je geld onherroepelijk kwijt."
+
+msgid ""
+"If you want to create new addresses, use a deterministic wallet instead."
+msgstr ""
+"Als je nieuwe adressen wilt aanmaken, kun je beter een deterministic wallet "
+"gebruiken."
+
+msgid "Import"
+msgstr "Importeer"
+
+msgid "Import addresses"
+msgstr "Importeer adressen"
+
+msgid "Import file"
+msgstr "Bestand importeren"
+
+msgid "Import private keys"
+msgstr "Importeer privé sleutels"
+
+msgid ""
+"In addition, Electrum does not verify the checksum of BIP39 seeds; make sure "
+"you type your seed correctly."
+msgstr ""
+"Verder verifieert Electrum niet de checksum van BIP39 seeds; maak geen "
+"fouten bij het intypen van je seed."
+
+msgid ""
+"In particular, DO NOT use 'redeem private key' services proposed by third "
+"parties."
+msgstr ""
+"In het bijzonder, GEBRUIK NOOIT 'inlossen privé sleutel' diensten bij derde "
+"partijen."
+
+msgid ""
+"In some cases, use up to 3 change addresses in order to break up large coin "
+"amounts and obfuscate the recipient address."
+msgstr ""
+"Gebruik in sommige gevallen 3 verschillende adressen om grotere coin "
+"transacties op te delen en het ontvangstadres te verdoezelen."
+
+msgid "Increase fee"
+msgstr "Verhoog transactiekosten"
+
+msgid "Information"
+msgstr "Informatie"
+
+msgid "Input amount"
+msgstr "Voer bedrag in"
+
+msgid "Input raw transaction"
+msgstr "Voeg een rauwe transactie toe"
+
+msgid "Inputs"
+msgstr "Ingangen"
+
+msgid "Install Wizard"
+msgstr "Installeer Wizard"
+
+msgid "Install the zbar package to enable this."
+msgstr "Installeer de zbar package om dit te activeren."
+
+msgid "Insufficient funds"
+msgstr "Saldo niet toereikend"
+
+msgid "Invalid Address"
+msgstr "Ongeldig adres"
+
+msgid "Invalid Amount"
+msgstr "Ongeldig bedrag"
+
+msgid "Invalid Bitcoin Address"
+msgstr "Ongeldig Bitcoin-adres"
+
+msgid "Invalid Lines found:"
+msgstr "Ongeldige rijen gevonden:"
+
+msgid "Invalid PIN"
+msgstr "Ongeldige PIN"
+
+msgid "Invalid bitcoin URI:"
+msgstr "Ongeldig bitcoin URI:"
+
+msgid "Invoice"
+msgstr "Factuur"
+
+msgid "Invoice saved as "
+msgstr "Factuur bewaard als "
+
+msgid "Invoices"
+msgstr "Facturen"
+
+msgid "Keyboard shortcut: type \"!\" to send all your coins."
+msgstr "Sneltoets: voer \"!\" in om alles te verzenden."
+
+msgid "Label Settings"
+msgstr "Labelinstellingen"
+
+msgid "Language"
+msgstr "Taal"
+
+msgid "Leave this field empty if you want to disable encryption."
+msgstr "Laat dit veld leeg als je jouw portemonnee's niet wilt coderen."
+
+msgid "Line #"
+msgstr "Rij #"
+
+msgid "Load transaction"
+msgstr "Laad transactie in"
+
+msgid "Lookup transaction"
+msgstr "Transactie opzoeken"
+
+msgid ""
+"Make sure you own the seed phrase or the private keys, before you request "
+"Bitcoins to be sent to this wallet."
+msgstr ""
+"Zorg ervoor dat jij de eigenaar bent van de seed zin of private keys, "
+"voordat je een verzoek doet bitcoins te sturen naar deze portemonnee."
+
+msgid "Master Public Key"
+msgstr "Publieke Hoofdsleutel"
+
+msgid "Master Public Keys"
+msgstr "&Publieke Hoofdsleutels"
+
+msgid "Max"
+msgstr "Max"
+
+msgid "Max fee exceeded"
+msgstr "Maximale fee overschreden"
+
+msgid "Max static fee"
+msgstr "Maximale statische kosten"
+
+msgid "Max value of the static fee slider"
+msgstr "Maximale waarde van de schuifregelaar voor statische kosten"
+
+msgid "Memo"
+msgstr "Memo"
+
+msgid "Message"
+msgstr "Bericht"
+
+msgid "Mining fee"
+msgstr "Mining vergoeding"
+
+msgid "Multi-Signature Wallet"
+msgstr "Multi-Signature Portemonnee"
+
+msgid "Name"
+msgstr "Naam"
+
+msgid "Network"
+msgstr "Netwerk"
+
+msgid "Never"
+msgstr "Nooit"
+
+msgid "Never disclose your seed."
+msgstr "Geef uw seed zin nooit weg."
+
+msgid "Never type it on a website."
+msgstr "Typ het nooit in op een website."
+
+msgid "New"
+msgstr "Nieuw"
+
+msgid "New Contact"
+msgstr "Nieuw contactpersooon"
+
+msgid "New Password:"
+msgstr "Nieuw wachtwoord:"
+
+msgid "New contact"
+msgstr "Nieuw contactpersoon"
+
+msgid "New fee:"
+msgstr "Nieuwe kosten:"
+
+msgid "New transaction received. %(amount)s"
+msgstr "Nieuwe transactie ontvangen. %(amount)s"
+
+msgid "Next"
+msgstr "Volgende"
+
+msgid "No Wallet"
+msgstr "Geen portemonnee"
+
+msgid "No donation address for this server"
+msgstr "Geen donatie adres voor deze server"
+
+msgid "No message or amount"
+msgstr "Geen bericht of bedrag"
+
+msgid "No more addresses in your wallet."
+msgstr "Geen adressen meer in je portemonnee."
+
+msgid "No outputs"
+msgstr "Geen uitgangen"
+
+msgid "No transactions found for this seed"
+msgstr "Geen transacties gevonden voor dit zaad"
+
+msgid "Node"
+msgstr "Knooppunt"
+
+msgid "None"
+msgstr "Geen"
+
+msgid "Not connected"
+msgstr "Niet verbonden"
+
+msgid "Not enough funds"
+msgstr "Saldo ontoereikend"
+
+msgid ""
+"Note that if you have frozen some of your addresses, the available funds "
+"will be lower than your total balance."
+msgstr ""
+"Houd er rekening mee dat als u enkele adressen hebt bevroren, het "
+"beschikbare saldo lager zal zijn dan uw totale saldo."
+
+msgid ""
+"Note that some merchants do not accept non-final transactions until they are "
+"confirmed."
+msgstr ""
+"Houd er rekening mee dat sommige verkopers geen niet-definitieve transacties "
+"accepteren totdat ze zijn bevestigd."
+
+msgid "Nothing set !"
+msgstr "Niets ingesteld!"
+
+msgid ""
+"Number of zeros displayed after the decimal point. For example, if this is "
+"set to 2, \"1.\" will be displayed as \"1.00\""
+msgstr ""
+"Aantal nullen dat achter het decimaalteken wordt getoond. Bijvoorbeeld: met "
+"de waarde 2, zal \"1. BTC\" worden getoond als \"1.00 BTC\""
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "One output per line."
+msgstr "1 output per regel."
+
+msgid "Online Block Explorer"
+msgstr "Online Blokverkenner"
+
+msgid "Open labels file"
+msgstr "Open labels bestand"
+
+msgid "OpenAlias"
+msgstr "OpenAlias"
+
+msgid "OpenAlias record, used to receive coins and to sign payment requests."
+msgstr ""
+"OpenAlias record, gebruikt om munten te ontvangen en om betalingsverzoeken "
+"te ondertekenen."
+
+msgid "Options"
+msgstr "Opties"
+
+msgid "Output amount"
+msgstr "Opbrengst hoeveelheid"
+
+msgid "Outputs"
+msgstr "Uitgangen"
+
+msgid "Overview"
+msgstr "Overzicht"
+
+msgid "PIN mismatch"
+msgstr "Verkeerde PIN"
+
+msgid "Paid"
+msgstr "Betaald"
+
+msgid "Passphrase"
+msgstr "Wachtwoord"
+
+msgid "Passphrase:"
+msgstr "Wachtwoord:"
+
+msgid "Password"
+msgstr "Wachtwoord"
+
+msgid "Password Strength"
+msgstr "Wachtwoordsterkte"
+
+msgid "Password is disabled, this wallet is not protected"
+msgstr "Wachtwoord inactief, deze portemonnee is niet beveiligd"
+
+msgid "Password was updated successfully"
+msgstr "Wachtwoord succesvol bijgewerkt"
+
+msgid "Password:"
+msgstr "Wachtwoord:"
+
+msgid "Pay Now"
+msgstr "Betaal nu"
+
+msgid "Pay to"
+msgstr "Betaal aan"
+
+msgid "Pay to many"
+msgstr "Betaal aan meerdere"
+
+msgid "Payment Request"
+msgstr "Betalingsverzoek"
+
+msgid "Payment request has expired"
+msgstr "Betalingsaanvraag is verlopen"
+
+msgid "Payment sent."
+msgstr "Betaling verzonden."
+
+msgid "Pending"
+msgstr "In behandeling"
+
+msgid "Please enter a seed phrase or a master key (xpub or xprv):"
+msgstr "Voer een seed-zin in of hoofdsleutel in (xpub of xprv):"
+
+msgid ""
+"Please enter a seed phrase, a master key, a list of Bitcoin addresses, or a "
+"list of private keys"
+msgstr ""
+"Gelieve een portemonnee zaad in te geven, een publieke hoofdsleutel, een "
+"lijst met Bitcoin adressen, of een lijst met privé sleutels"
+
+msgid "Please enter the master public key (xpub) of your cosigner."
+msgstr ""
+"Voer a.u.b. het publieke hoofdsleutel (xpub) in van uw mede ondertekenaar."
+
+msgid "Please enter the master public key of cosigner #%d:"
+msgstr ""
+"Gelieve de publieke hoofdsleutel van uw multi-handtekening portemonnee #%d "
+"in te voeren:"
+
+msgid "Please enter your password"
+msgstr "Gelieve uw wachtwoord in te geven"
+
+msgid ""
+"Please enter your seed derivation passphrase. Note: this is NOT your "
+"encryption password. Leave this field empty if you did not use one or are "
+"unsure."
+msgstr ""
+"Vul a.u.b. uw zaad afgeleide wachtwoordzin in. Opmerking: dit is NIET uw "
+"encryptie wachtwoord. Laat dit veld leeg indien u er geen gebruikte of "
+"onzeker bent."
+
+msgid "Please enter your seed phrase in order to restore your wallet."
+msgstr "Vul a.u.b. uw zaad woorden reeks in om uw portemonnee te herstellen."
+
+msgid "Please install the Barcode Scanner app from ZXing"
+msgstr "Installeer de Barcode Scanner app van ZXing"
+
+msgid ""
+"Please paste your cosigners master public key, or scan it using the camera "
+"button."
+msgstr ""
+"Plak a.u.b. uw mede ondertekenaars publieke hoofdsleutel in, of scan deze "
+"door gebruik te maken van de camera knop."
+
+msgid "Please report any bugs as issues on github:<br/>"
+msgstr "Gelieve problemen te melden op github:"
+
+msgid "Please restart Electrum to activate the new GUI settings"
+msgstr "Herstart Electrum om de wijzigingen door te voeren"
+
+msgid "Please retype your seed phrase, to confirm that you properly saved it"
+msgstr ""
+"Vul a.u.b. opnieuw uw zaad reeks in, om te bevestigen dat u het goed "
+"opgeslagen heeft"
+
+msgid "Please save these %d words on paper (order is important). "
+msgstr ""
+"Gelieve deze %d woorden op papier te bewaren (volgorde is belangrijk). "
+
+msgid "Please share it with your cosigners."
+msgstr "Deel het met je mede-ondertekenaars."
+
+msgid "Please type your seed phrase using the virtual keyboard."
+msgstr ""
+"Vul a.u.b. uw zaad reeks in, door gebruik te maken van het virtueel "
+"toetsenbord."
+
+msgid "Please wait"
+msgstr "Even geduld"
+
+msgid "Please wait..."
+msgstr "Even geduld..."
+
+msgid "Port"
+msgstr "Poort"
+
+msgid "Preferences"
+msgstr "Voorkeuren"
+
+msgid "Press 'Next' to create this wallet, or choose another file."
+msgstr ""
+"Kies 'Next' om deze portemonnee aan te maken, of kies een ander bestand."
+
+msgid "Press 'Next' to open this wallet."
+msgstr "Kies 'Next' om deze portemonnee te openen."
+
+msgid "Press again to exit"
+msgstr "Kies nogmaals om te stoppen"
+
+msgid "Preview"
+msgstr "Voorbeeld"
+
+msgid "Private key"
+msgstr "Privé sleutel"
+
+msgid "Private keys"
+msgstr "Privé sleutels"
+
+msgid "Private keys exported."
+msgstr "Privé sleutels zijn geëxporteerd."
+
+msgid "Proceed?"
+msgstr "Doorgaan?"
+
+msgid "Propose Replace-By-Fee"
+msgstr "Stel 'Replace-By-Fee' voor"
+
+msgid "Proxy"
+msgstr "Proxy"
+
+msgid "Proxy user"
+msgstr "Proxy user"
+
+msgid "Public key"
+msgstr "Publieke sleutel"
+
+msgid "Public keys"
+msgstr "Publieke sleutels"
+
+msgid "QR code"
+msgstr "QR-code"
+
+msgid "QR code copied to clipboard"
+msgstr "QR-code gekopieerd naar klembord"
+
+msgid "QR code saved to file"
+msgstr "QR-code opgeslagen in bestand"
+
+msgid "Read QR code"
+msgstr "QR-code scannen"
+
+msgid "Read file"
+msgstr "Bestand lezen"
+
+msgid "Receive"
+msgstr "Ontvangen"
+
+msgid "Receiving address"
+msgstr "Ontvangstadres"
+
+msgid "Recipient of the funds."
+msgstr "Begunstigde van het overgemaakte bedrag."
+
+msgid "Recovery successful"
+msgstr "Het herstellen is gelukt"
+
+msgid "Redeem Script"
+msgstr "Script inwisselen"
+
+msgid "Remove"
+msgstr "Verwijder"
+
+msgid "Remove %s from your list of contacts?"
+msgstr "Verwijder %s uit je contacten lijst?"
+
+msgid "Replaceable"
+msgstr "Vervangbaar"
+
+msgid "Reporting Bugs"
+msgstr "Problemen melden"
+
+msgid "Request expires"
+msgstr "Verzoek verloopt"
+
+msgid "Request saved successfully"
+msgstr "Bestand succesvol opgeslagen"
+
+msgid "Requested amount"
+msgstr "Gevraagd bedrag"
+
+msgid "Requestor"
+msgstr "Aanvrager"
+
+msgid "Requests"
+msgstr "Aanvragen"
+
+msgid "Require %d signatures"
+msgstr "Verzoek %d handtekeningen"
+
+msgid "Requires"
+msgstr "Vereist"
+
+msgid "SSL certificate"
+msgstr "SSL certificaat"
+
+msgid "SSL certificate used to sign payment requests."
+msgstr "SSL certificated worden gebruikt om betaalverzoeken te ondertekenen."
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "Save as BIP70 file"
+msgstr "Sla bestand op als BIP70"
+
+msgid "Save invoice to file"
+msgstr "Bewaar factuur in bestand"
+
+msgid "Seed"
+msgstr "Seed"
+
+msgid "Seed Type"
+msgstr "Type seed"
+
+msgid "Select file to export your private keys to"
+msgstr "Selecteer een bestand om uw privé sleutels naar te exporteren"
+
+msgid "Select file to export your wallet transactions to"
+msgstr "Selecteer een bestand om uw transactie geschiedenis naar te exporteren"
+
+msgid "Select file to save your labels"
+msgstr "Selecteer een bestand om uw labels in op te slaan"
+
+msgid "Select server automatically"
+msgstr "Kies automatisch een server"
+
+msgid "Select server manually"
+msgstr "Kies manueel een server"
+
+msgid "Select where to save your payment request"
+msgstr "Selecteer waar u uw betalingsverzoek wilt opslaan"
+
+msgid "Select where to save your signed transaction"
+msgstr "Selecteer waar u de ondertekende transactie wilt opslaan"
+
+msgid "Select which language is used in the GUI (after restart)."
+msgstr "Kies welke taal te gebruiken (na herstart)."
+
+msgid "Select your transaction file"
+msgstr "Selecteer uw transactie bestand"
+
+msgid "Send"
+msgstr "Verzenden"
+
+msgid "Sending"
+msgstr "Bezig met verzenden"
+
+msgid "Server"
+msgstr "Server"
+
+msgid "Server is lagging (%d blocks)"
+msgstr "Server loopt achter (%d blokken)"
+
+msgid "Server lagging (%d blocks)"
+msgstr "Server loopt achter (%d blokken)"
+
+msgid "Server peers"
+msgstr "Server peers"
+
+msgid "Settings"
+msgstr "Instellingen"
+
+msgid "Show"
+msgstr "Toon"
+
+msgid "Show QR Code"
+msgstr "Toon QR code"
+
+msgid "Show as QR code"
+msgstr "Toon als QR code"
+
+msgid "Show fee edit box in send tab."
+msgstr "Laat transactiekosten wijzigingsbox zien bij tab Verzenden."
+
+msgid "Show history rates"
+msgstr "Laat tarieven historie zien"
+
+msgid "Show/Hide"
+msgstr "Tonen/Verbergen"
+
+msgid "Sign"
+msgstr "Onderteken"
+
+msgid "Sign/verify Message"
+msgstr "&Onderteken/Verifieer Bericht"
+
+msgid "Signature"
+msgstr "Handtekening"
+
+msgid "Signature verified"
+msgstr "Handtekening geverifiëerd"
+
+msgid "Signing transaction..."
+msgstr "Transactie wordt ondertekend..."
+
+msgid "Size:"
+msgstr "Grootte:"
+
+msgid "Source"
+msgstr "Bron"
+
+msgid "Spend only confirmed coins"
+msgstr "Besteed alleen bevestigde munten"
+
+msgid "Spend only confirmed inputs."
+msgstr "Besteed alleen bevestigde invoer."
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Status:"
+msgstr "Status:"
+
+msgid "Success"
+msgstr "Gelukt"
+
+msgid "Sweep"
+msgstr "Leegvegen"
+
+msgid "Sweep private keys"
+msgstr "Veeg privé sleutels leeg"
+
+msgid "Synchronizing..."
+msgstr "Bezig met synchroniseren..."
+
+msgid ""
+"Text copied to clipboard.\n"
+"Tap again to display it as QR code."
+msgstr ""
+"Tekst is gekopieerd naar klembord.\n"
+"Tik nogmaals om het weer te geven als QR-code."
+
+msgid ""
+"The amount of fee can be decided freely by the sender. However, transactions "
+"with low fees take more time to be processed."
+msgstr ""
+"De transactiekosten kunnen door de verzender vrij gekozen worden. Echter, "
+"transacties met lage kosten zullen minder snel, of niet, verwerkt worden."
+
+msgid ""
+"The amount will be displayed in red if you do not have enough funds in your "
+"wallet."
+msgstr ""
+"De hoeveelheid wordt weergeven in rood, indien u over onvoldoende "
+"geldmiddelen bezit."
+
+msgid ""
+"The bitcoin address never expires and will always be part of this electrum "
+"wallet."
+msgstr ""
+"Het bitcoin adres zal nooit verlopen en zal altijd onderdeel blijven van "
+"deze Electrum portemonnee."
+
+msgid ""
+"The description is not sent to the recipient of the funds. It is stored in "
+"your wallet file, and displayed in the 'History' tab."
+msgstr ""
+"De omschrijving wordt niet naar de begunstigde verzonden, maar opgeslagen in "
+"uw portemonnee en getoond op het tabblad 'Geschiedenis'."
+
+msgid "The fee for this transaction seems unusually high."
+msgstr "De transactiekosten voor deze transactie lijkt ongebruikelijk hoog."
+
+msgid ""
+"The file '%s' contains an incompletely created wallet.\n"
+"Do you want to complete its creation now?"
+msgstr ""
+"Het bestand '%s' bevat een incomplete aangemaakte portemonnee.\n"
+"Wilt u de aanmaken nu compleet maken?"
+
+msgid "The file was removed"
+msgstr "Het bestand is verwijderd"
+
+msgid "The following addresses were added"
+msgstr "De volgende adressen werden toegevoegd"
+
+msgid "The following alias providers are available:"
+msgstr "De volgende alias leveranciers zijn beschikbaar:"
+
+msgid "The following inputs could not be imported"
+msgstr "De volgende ingangen konden niet geïmporteerd worden"
+
+msgid ""
+"The format of your wallet '%s' must be upgraded for Electrum. This change "
+"will not be backward compatible"
+msgstr ""
+"Het formaat van uw portemonnee '%s' moet geüpdatet worden door Electrum. Dit "
+"veranderd niet de achterwaartse compatibiliteit"
+
+msgid ""
+"The wallet '%s' contains multiple accounts, which are no longer supported in "
+"Electrum 2.7.\n"
+"\n"
+"Do you want to split your wallet into multiple files?"
+msgstr ""
+"De portemonnee '%s' bevat meerdere rekeningen, wat niet meer ondersteund "
+"wordt in Electrum 2.7.\n"
+"\n"
+"Wilt u uw portemonnee verdelen over meerdere bestanden?"
+
+msgid ""
+"This blockchain is used to verify the transactions sent by your transaction "
+"server."
+msgstr ""
+"Deze blockchain wordt gebruikt om uw transacties te verifiëren die verzonden "
+"worden door uw transactie server."
+
+msgid "This file does not exist."
+msgstr "Het bestand bestaat niet."
+
+msgid "This file is encrypted."
+msgstr "Dit bestand is versleuteld."
+
+msgid ""
+"This information is seen by the recipient if you send them a signed payment "
+"request."
+msgstr ""
+"Deze informatie wordt getoond aan de ontvanger als je ze een ondertekend "
+"betaalverzoek stuurt."
+
+msgid "This is a watching-only wallet"
+msgstr "Dit is een alleen-kijken portemonnee"
+
+msgid "This is the height of your local copy of the blockchain."
+msgstr "Dit is de hoogte van uw lokale kopie van de blockchain."
+
+msgid "This may result in higher transactions fees."
+msgstr "Dit kan zorgen voor hogere transactiekosten."
+
+msgid "This means you will not be able to spend Bitcoins with it."
+msgstr "Dit betekent dat je hiermee geen Bitcoins kunt uitgeven."
+
+msgid "This payment request will be signed."
+msgstr "Dit betaalverzoek wordt ondertekend."
+
+msgid ""
+"This seed will allow you to recover your wallet in case of computer failure."
+msgstr ""
+"Deze seed kan later je portemonnee herstellen mocht je computer problemen "
+"hebben."
+
+msgid "This transaction is not saved. Close anyway?"
+msgstr "Deze transactie is niet bewaard. Toch sluiten?"
+
+msgid ""
+"This transaction requires a higher fee, or it will not be propagated by the "
+"network"
+msgstr ""
+"De transactie vereist een hogere transactiekosten, of het wordt niet goed "
+"doorgegeven aan het netwerk"
+
+msgid "This wallet has no seed"
+msgstr "Deze portemonnee heeft geen seed"
+
+msgid "This wallet is watching-only."
+msgstr "Deze portemonnee is alleen te bekijken."
+
+msgid ""
+"This wallet was restored offline. It may contain more addresses than "
+"displayed."
+msgstr ""
+"Deze portemonnee werd offline hersteld. Ze bevat wellicht meer adressen dan "
+"nu weergegeven."
+
+msgid ""
+"To make sure that you have properly saved your seed, please retype it here."
+msgstr ""
+"Om zeker te zijn dat u uw zaad goed hebt bewaard, gelieve het nu opnieuw in "
+"te geven."
+
+msgid "Total size"
+msgstr "Totale grootte"
+
+msgid "Transaction"
+msgstr "Transactie"
+
+msgid "Transaction ID"
+msgstr "Transactie ID"
+
+msgid "Transaction ID:"
+msgstr "Transactie ID:"
+
+msgid "Transaction saved successfully"
+msgstr "Transactie met succes opgeslagen"
+
+msgid "Transaction unrelated to your wallet"
+msgstr "Transactie is niet gerelateerd met uw portemonnee"
+
+msgid "Transaction:"
+msgstr "Transactie:"
+
+msgid "Transactions"
+msgstr "Transacties"
+
+msgid "Try to explain not only what the bug is, but how it occurs."
+msgstr ""
+"Probeer niet alleen uit te leggen wat de bug is, maar ook wanneer hij "
+"optreedt."
+
+msgid "Unable to create backup"
+msgstr "Backup aanmaken niet mogelijk"
+
+msgid "Unable to create csv"
+msgstr "CSV bestand kon niet worden aangemaakt"
+
+msgid "Unable to export history"
+msgstr "Geschiedenis kon niet worden geëxporteerd"
+
+msgid "Unable to read file or no transaction found"
+msgstr ""
+"Het bestand kon niet gelezen worden, of er werd geen transactie gevonden"
+
+msgid "Unknown"
+msgstr "Onbekend"
+
+msgid "Use SSL"
+msgstr "Gebruik SSL"
+
+msgid "Use Tor Proxy"
+msgstr "Gebruik Tor Proxy"
+
+msgid "Use as server"
+msgstr "Gebruik als server"
+
+msgid "Use change addresses"
+msgstr "Gebruik wisselgeldadressen"
+
+msgid "Use dynamic fees"
+msgstr "Gebruik variabele kosten"
+
+msgid "Use fees recommended by the server."
+msgstr "Gebruik door server aanbevolen kosten."
+
+msgid "Use multiple change addresses"
+msgstr "Gebruik meerdere veranderbare adressen"
+
+msgid "Use setconfig to set ssl_chain and ssl_privkey."
+msgstr "Gebruik setconfig om de ssl_chain en ssl_privkey op te slaan."
+
+msgid "Use the camera button to scan a QR code."
+msgstr "Gebruik de camera knop om ene QR code te scannen."
+
+msgid "Use this dialog to add a password to your wallet."
+msgstr ""
+"Gebruik deze dialoogbox om een wachtwoord aan je portemonnee toe te voegen."
+
+msgid "Use this dialog to change your password."
+msgstr "Gebruik deze dialoogbox om je wachtwoord te wijzigen."
+
+msgid "Uses icons from the Icons8 icon pack (icons8.com)."
+msgstr "Gebruik iconen van de Icons8 icon pack (icons8.com)."
+
+msgid ""
+"Using change addresses makes it more difficult for other people to track "
+"your transactions."
+msgstr ""
+"Het gebruik van wisselgeldadressen maakt het moeilijker voor derden om uw "
+"transacties te traceren."
+
+msgid "Verify"
+msgstr "Verifieer"
+
+msgid "Version"
+msgstr "Versie"
+
+msgid "Video Device"
+msgstr "Video device"
+
+msgid "View invoice"
+msgstr "Factuur bekijken"
+
+msgid "View on block explorer"
+msgstr "Bekijk op blokverkenner"
+
+msgid "WARNING"
+msgstr "WAARSCHUWING"
+
+msgid "WARNING: ALL your private keys are secret."
+msgstr "WAARSCHUWING: Al uw privé sleutels zijn geheim."
+
+msgid ""
+"WARNING: the alias \"%s\" could not be validated via an additional security "
+"check, DNSSEC, and thus may not be correct."
+msgstr ""
+"WAARSCHUWING: de alias \"%s\" kan niet worden gevalideerd via een extra "
+"beveiligingscontrole, DNSSEC, en is dus mogelijk niet correct."
+
+msgid "Waiting for fee estimates..."
+msgstr "Kosteninschatting ophalen..."
+
+msgid "Wallet"
+msgstr "Portemonnee"
+
+msgid "Wallet backup created"
+msgstr "Wallet backup aangemaakt"
+
+msgid "Wallet change address"
+msgstr "Verander portemonnee adres"
+
+msgid "Wallet receive address"
+msgstr "Portemonnee adres ontvanger"
+
+msgid "Warning"
+msgstr "Waarschuwing"
+
+msgid ""
+"Warning: The next address will not be recovered automatically if you restore "
+"your wallet from seed; you may need to add it manually.\n"
+"\n"
+"This occurs because you have too many unused addresses in your wallet. To "
+"avoid this situation, use the existing addresses first.\n"
+"\n"
+"Create anyway?"
+msgstr ""
+"Waarschuwing: Het volgende adres kan niet automatisch hersteld worden indien "
+"uw portomonee hersteld via beveiligings-zaad; u dient het eventueel "
+"handmatig toe te voegen.\n"
+"\n"
+"Dit komt omdat u te veel ongebruikte adressen in je portemonnee hebt staan. "
+"Om dit te voorkomen, gebruik eerst een bestaand adres.\n"
+"\n"
+"Hoe dan ook aanmaken?"
+
+msgid ""
+"We do not guarantee that BIP39 imports will always be supported in Electrum."
+msgstr ""
+"We kunnen niet garanderen dat BIP39 importeren altijd ondersteund blijft in "
+"Electrum."
+
+msgid "Wrong signature"
+msgstr "Verkeerde handtekening"
+
+msgid "You are following branch"
+msgstr "U volgt aftakking"
+
+msgid ""
+"You are using Electrum in offline mode; restart Electrum if you want to get "
+"connected"
+msgstr ""
+"U gebruik Electrum in offline modus; herstart Electrum indien u connectie "
+"wilt hebben"
+
+msgid ""
+"You are using a non-deterministic wallet, which cannot create new addresses."
+msgstr ""
+"U gebruik een niet-deterministische portemonnee, we kunnen geen nieuw adres "
+"aanmaken."
+
+msgid ""
+"You may enter a Bitcoin address, a label from your list of contacts (a list "
+"of completions will be proposed), or an alias (email-like address that "
+"forwards to a Bitcoin address)"
+msgstr ""
+"U kunt een Bitcoin adres, een label van een contactpersoon of een alias (dat "
+"op een e-mailadres lijkt) invullen"
+
+msgid "You may load a CSV file using the file icon."
+msgstr "U kunt een CSV-bestand laden met behulp van het bestandspictogram."
+
+msgid "Your accounts have been moved to"
+msgstr "Je accounts zijn verplaatst naar"
+
+msgid ""
+"Your bitcoins are password protected. However, your wallet file is not "
+"encrypted."
+msgstr ""
+"Je bitcoins zijn beveiligd met een wachtwoord, maar je portemonnee is niet "
+"versleuteld."
+
+msgid "Your labels have been synchronised."
+msgstr "Uw labels zijn gesynchroniseerd."
+
+msgid "Your labels were exported to"
+msgstr "Uw labels zijn geëxporteerd naar"
+
+msgid "Your labels were imported from"
+msgstr "Uw labels zijn geïmporteerd van"
+
+msgid "Your seed extension is"
+msgstr "Je seed-extensie is"
+
+msgid "Your seed is important!"
+msgstr "Uw seed is belangrijk!"
+
+msgid "Your server is on branch"
+msgstr "Uw server staat op filiaal"
+
+msgid "Your wallet generation seed is:"
+msgstr "Uw portemonnee aanmaak-seed is:"
+
+msgid "Your wallet history has been successfully exported."
+msgstr "Uw portemonnee geschiedenis is met succes geëxporteerd."
+
+msgid "Your wallet is not protected."
+msgstr "Uw portemonnee is niet beschermd."
+
+msgid "Your wallet is password protected and encrypted."
+msgstr "Je portemonnee is versleuteld en beveiligd met een wachtwoord."
+
+msgid "Your wallet was upgraded successfully"
+msgstr "Uw portemonnee is succesvol geupgrade"
+
+msgid "Zeros after decimal point"
+msgstr "Cijfers achter decimaalteken"
+
+msgid ""
+"and you will have the possiblity, while it is unconfirmed, to replace it "
+"with a transaction that pays a higher fee."
+msgstr ""
+"en je hebt de mogelijkheid om, terwijl het onbevestigd is, het te vervangen "
+"door een transactie die een hogere vergoeding vraagt."
+
+msgid "are frozen"
+msgstr "zijn geblokkeerd"
+
+msgid "blocks"
+msgstr "blokken"
+
+msgid "cosigner"
+msgstr "mede-ondertekenaar"
+
+msgid "from your wallet?"
+msgstr "uit uw portemonnee?"
+
+msgid "json"
+msgstr "json"
+
+msgid "low fee"
+msgstr "Lage kosten"
+
+msgid "please wait..."
+msgstr "gelieve te wachten..."
+
+msgid "unconfirmed"
+msgstr "onbevestigd"
+
+msgid "unknown"
+msgstr "onbekend"
+
+msgid "unknown (low fee)"
+msgstr "onbekend (lage transactiekosten)"
+
+msgid "unverified"
+msgstr "niet geverifieerd"
+
+msgid "watching only"
+msgstr "alleen-kijken"

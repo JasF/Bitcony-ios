@@ -1,0 +1,539 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-08-25 05:30-0400\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Hungarian\n"
+"Language: hu_HU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: hu\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr " Ezek a beállítások a Küldés lapon lévő mezőket érintik"
+
+msgid "&About"
+msgstr "&Névjegy"
+
+msgid "&Documentation"
+msgstr "&Dokumentáció"
+
+msgid "&Encrypt/decrypt message"
+msgstr "Üzenet titkosítása/visszafejtése"
+
+msgid "&Export"
+msgstr "&Export"
+
+msgid "&File"
+msgstr "&File"
+
+msgid "&From QR code"
+msgstr "QR kódból"
+
+msgid "&From file"
+msgstr "Állományból"
+
+msgid "&From text"
+msgstr "Szövegből"
+
+msgid "&From the blockchain"
+msgstr "A blokkláncból"
+
+msgid "&Help"
+msgstr "&Segítség"
+
+msgid "&Import"
+msgstr "Importálás"
+
+msgid "&Labels"
+msgstr "Cimkék"
+
+msgid "&Load transaction"
+msgstr "&Tranzakció betöltése"
+
+msgid "&Master Public Keys"
+msgstr "Nyilvános mesterkulcsok"
+
+msgid "&Network"
+msgstr "&Hálózat"
+
+msgid "&New/Restore"
+msgstr "Új/visszaállítás"
+
+msgid "&Official website"
+msgstr "Hivatalos weboldal"
+
+msgid "&Open"
+msgstr "Megnyitás"
+
+msgid "&Password"
+msgstr "Jelszó"
+
+msgid "&Pay to many"
+msgstr "Küldés több címzettnek"
+
+msgid "&Plugins"
+msgstr "Bővítések"
+
+msgid "&Private keys"
+msgstr "Privát kulcsok"
+
+msgid "&Quit"
+msgstr "Kilépés"
+
+msgid "&Report Bug"
+msgstr "&Hibajelentés"
+
+msgid "&Save Copy"
+msgstr "Másolat elmentése"
+
+msgid "&Seed"
+msgstr "Seed (mag)"
+
+msgid "&Sign/verify message"
+msgstr "Üzenet aláírása/aláírás ellenőrzése"
+
+msgid "&Sweep"
+msgstr "Besöprés másik címről"
+
+msgid "&Tools"
+msgstr "Eszközök"
+
+msgid "&Wallet"
+msgstr "Pénztárca"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "1 nap"
+
+msgid "1 hour"
+msgstr "1 óra"
+
+msgid "1 week"
+msgstr "1 hét"
+
+msgid "A copy of your wallet file was created in"
+msgstr "A tárcafájlod másolata létrejött itt"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"Az ajánlott tranzakciós díj automatikusan hozzáadódik ehhez a mezőhöz. "
+"Felülírhatod. A javasolt tranzakciós díj a tranzakció összegével arányosan "
+"növekszik."
+
+msgid "Address"
+msgstr "Cím"
+
+msgid "Amount"
+msgstr "Összeg"
+
+msgid "Amount received:"
+msgstr "Beérkezett összeg:"
+
+msgid "Amount sent:"
+msgstr "Küldött összeg:"
+
+msgid "Amount to be sent."
+msgstr "Küldendő összeg."
+
+msgid "Auto connect"
+msgstr "Automatikus csatlakozás"
+
+msgid "Balance"
+msgstr "Egyenleg"
+
+msgid "Base unit"
+msgstr "Egység"
+
+msgid "Base unit of your wallet."
+msgstr "A pénztárca alapértelmezett egysége."
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"A Bitcoin tranzakciók nem ingyenesek. A tranzakciós díjat a pénz küldője "
+"fizeti ki."
+
+msgid "Blockchain"
+msgstr "Blockchain"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Mégse"
+
+msgid "Clear"
+msgstr "Törlés"
+
+msgid "Close"
+msgstr "Bezárás"
+
+msgid "Contacts"
+msgstr "Partnerek"
+
+msgid "Copy to clipboard"
+msgstr "Másolás vágólapra"
+
+msgid "Date"
+msgstr "Dátum"
+
+msgid "Date: %s"
+msgstr "Dátum: %s"
+
+msgid "Default Servers"
+msgstr "Alapértelmezett szerverek"
+
+msgid "Delete"
+msgstr "Törlés"
+
+msgid "Description"
+msgstr "Megjegyzés"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "Megjegyzés a tranzakcióhoz (opcionális)."
+
+msgid "Details"
+msgstr "Részletek"
+
+msgid "Do you want to remove"
+msgstr "El akarod távolítani"
+
+msgid "Electrum Plugins"
+msgstr "Electrum Pluginek"
+
+msgid "Electrum preferences"
+msgstr "Electrum beállítások"
+
+msgid "Electrum was unable to copy your wallet file to the specified location."
+msgstr "Az Electrum nem tudja másolni a tárcafájlodat a választott helyre."
+
+msgid "Electrum was unable to export your labels."
+msgstr "Az Electrum nem tudja exportálni a címkéket."
+
+msgid "Electrum was unable to import your labels."
+msgstr "Az Electrum nem tudja importálni a címkéket."
+
+msgid "Electrum was unable to open your transaction file"
+msgstr "Az Electrum nem tudja megnyitni a tranzakciós fájlt"
+
+msgid "Electrum was unable to parse your transaction"
+msgstr "Az Electrum nem tudja feldolgozni a tranzakciódat"
+
+msgid "Electrum was unable to produce a private key-export."
+msgstr "Az Electrum nem tudja exportálni a privát kulcsot."
+
+msgid "Electrum was unable to produce a transaction export."
+msgstr "Az Electrum nem tudja exportálni a tranzakciót."
+
+msgid "Encrypt"
+msgstr "Titkosítás"
+
+msgid "Encrypted"
+msgstr "Titkosított"
+
+msgid "Enter Password"
+msgstr "Jelszó megadása"
+
+msgid "Enter a filename for the copy of your wallet"
+msgstr "Adja meg a pénztárcamásolat nevét"
+
+msgid "Enter private keys"
+msgstr "Privát kulcsok beírása"
+
+msgid "Error"
+msgstr "Hiba"
+
+msgid "Expired"
+msgstr "Lejárt"
+
+msgid "Expires"
+msgstr "Lejárat"
+
+msgid "Export"
+msgstr "Exportálás"
+
+msgid "Export History"
+msgstr "Előzmények exportálása"
+
+msgid "Exposing a single private key can compromise your entire wallet!"
+msgstr "A privát kulcsod publikálása az egész tárcád elvesztésével járhat!"
+
+msgid "Failed to update password"
+msgstr "Jelszó frissítése sikertelen"
+
+msgid "Fee"
+msgstr "Tranzakciós díj"
+
+msgid "File"
+msgstr "Fájl"
+
+msgid "Format"
+msgstr "Formátum"
+
+msgid "From"
+msgstr "Feladó"
+
+msgid "History"
+msgstr "Előzmények"
+
+msgid "Import"
+msgstr "Importálás"
+
+msgid "Import private keys"
+msgstr "Privát kulcsok importálása"
+
+msgid ""
+"In particular, DO NOT use 'redeem private key' services proposed by third "
+"parties."
+msgstr ""
+"SOHA NE használd a 'privát kulcs beváltása' szolgáltatást harmadik félnél."
+
+msgid "Information"
+msgstr "Információ"
+
+msgid "Input raw transaction"
+msgstr "Nyers tranzakció bevitel"
+
+msgid "Inputs"
+msgstr "Bevitelek"
+
+msgid "Invalid Address"
+msgstr "Érvénytelen cím"
+
+msgid "Invalid Amount"
+msgstr "Érvénytelen összeg"
+
+msgid "Invalid Bitcoin Address"
+msgstr "Érvénytelen Bitcoin cím"
+
+msgid "Language"
+msgstr "Nyelv"
+
+msgid "Load transaction"
+msgstr "Tranzakció betöltése"
+
+msgid "Message"
+msgstr "Üzenet"
+
+msgid "Name"
+msgstr "Név"
+
+msgid "Network"
+msgstr "Hálózat"
+
+msgid "New Contact"
+msgstr "Új partner"
+
+msgid "Next"
+msgstr "Következő"
+
+msgid "No transactions found for this seed"
+msgstr "Nem található tranzakció ehhez az emlékeztetőhöz"
+
+msgid "Not connected"
+msgstr "Nincs kapcsolat"
+
+msgid "Not enough funds"
+msgstr "Nincs fedezet"
+
+msgid ""
+"Number of zeros displayed after the decimal point. For example, if this is "
+"set to 2, \"1.\" will be displayed as \"1.00\""
+msgstr ""
+"A tizedesjegy után megjelenő nullák száma. Ha a beállított érték 2, az \"1."
+"\" így fog megjelenni: \"1.00\""
+
+msgid "OK"
+msgstr "OK"
+
+msgid "Offline"
+msgstr "Offline"
+
+msgid "Open labels file"
+msgstr "Címkefájl megnyitása"
+
+msgid "Outputs"
+msgstr "Kimenetek"
+
+msgid "Paid"
+msgstr "Fizetve"
+
+msgid "Password"
+msgstr "Jelszó"
+
+msgid "Pay Now"
+msgstr "Fizetés Most"
+
+msgid "Pay to"
+msgstr "Pénzküldés ide"
+
+msgid "Payment sent."
+msgstr "Fizetés elküldve"
+
+msgid "Please enter your password"
+msgstr "Írd be a jelszavadat"
+
+msgid "Please restart Electrum to activate the new GUI settings"
+msgstr "Indítsd újra az Electrumot az új GUI beállítások aktiválásához."
+
+msgid "Preferences"
+msgstr "Tulajdonságok"
+
+msgid "Private key"
+msgstr "Privát kulcs"
+
+msgid "Private keys exported."
+msgstr "Privát kulcsok exportálva."
+
+msgid "QR code"
+msgstr "QR kód"
+
+msgid "Receive"
+msgstr "Fogadás"
+
+msgid "Recipient of the funds."
+msgstr "Pénz címzettje"
+
+msgid "Reporting Bugs"
+msgstr "Hibák jelentése"
+
+msgid "Save"
+msgstr "Mentés"
+
+msgid "Seed"
+msgstr "Emlékeztető"
+
+msgid "Select file to export your private keys to"
+msgstr "Melyik fájlba exportálja a privát kulcsokat"
+
+msgid "Select file to export your wallet transactions to"
+msgstr "Tárca tranzakcióinak exportálása ebbe a fájlba"
+
+msgid "Select file to save your labels"
+msgstr "Melyik fájlba mentse a címkéket"
+
+msgid "Select where to save your signed transaction"
+msgstr "Hova mentse az aláírott tranzakciókat"
+
+msgid "Select which language is used in the GUI (after restart)."
+msgstr "A felhasználói felület nyelve (újraindítás után)."
+
+msgid "Select your transaction file"
+msgstr "Válassz egy tranzakciós fájlt"
+
+msgid "Send"
+msgstr "Küldés"
+
+msgid "Server"
+msgstr "Szerver"
+
+msgid "Settings"
+msgstr "Beállítások"
+
+msgid "Sign"
+msgstr "Aláírás"
+
+msgid "Signature"
+msgstr "Aláírás"
+
+msgid "Success"
+msgstr "Sikeres"
+
+msgid "Synchronizing..."
+msgstr "Szinkronizáció..."
+
+msgid ""
+"The amount of fee can be decided freely by the sender. However, transactions "
+"with low fees take more time to be processed."
+msgstr ""
+"A tranzakciós díj összege a küldő által választható. Minél alacsonyabb, "
+"annál később kerül feldolgozásra a tranzakció."
+
+msgid ""
+"The description is not sent to the recipient of the funds. It is stored in "
+"your wallet file, and displayed in the 'History' tab."
+msgstr ""
+"A megjegyzést nem küldi el a címzett számára. A saját tárcádban fog "
+"tárolódni és az 'Előzmények' fülön jelenik meg."
+
+msgid "The following addresses were added"
+msgstr "A következő címek hozzáadva"
+
+msgid "The following inputs could not be imported"
+msgstr "A következő bemenetek nem lettek importálva"
+
+msgid ""
+"This seed will allow you to recover your wallet in case of computer failure."
+msgstr ""
+"Az elmékeztető lehetővé teszi, hogy adatvesztés esetén is visszaállíthatsd a "
+"tárcádat."
+
+msgid "Transaction"
+msgstr "Tranzakció"
+
+msgid "Transaction ID:"
+msgstr "Tranzakció ID:"
+
+msgid "Transaction saved successfully"
+msgstr "Tranzakció sikeresen mentve"
+
+msgid "Transaction:"
+msgstr "Tranzakció:"
+
+msgid "Unable to create csv"
+msgstr "Nem lehet csv-t létrehozni"
+
+msgid "Use change addresses"
+msgstr "Cserecímek használata"
+
+msgid ""
+"Using change addresses makes it more difficult for other people to track "
+"your transactions."
+msgstr ""
+"Cserecímek használatával nehezebben követhetik le a tranzakcióidat más "
+"emberek."
+
+msgid "Verify"
+msgstr "Megerősítés"
+
+msgid "Version"
+msgstr "Verzió"
+
+msgid "WARNING"
+msgstr "FIGYELEM"
+
+msgid "WARNING: ALL your private keys are secret."
+msgstr "FIGYELEM: Az ÖSSZES privát kulcsod titkos."
+
+msgid "Warning"
+msgstr "Figyelmeztetés"
+
+msgid ""
+"You may enter a Bitcoin address, a label from your list of contacts (a list "
+"of completions will be proposed), or an alias (email-like address that "
+"forwards to a Bitcoin address)"
+msgstr ""
+"Írj be egy Bitcoin címet, egy címkét a partnerlistádról (kitöltést segítő "
+"ajánlások jelennek meg), vagy egy álnevet (e-mailhez hasonló cím, ami "
+"egyenesen az címzett Bitcoin címére továbbít)"
+
+msgid "Your labels were imported from"
+msgstr "A címkéid importálva innen"
+
+msgid "from your wallet?"
+msgstr "a tárcádból?"
+
+msgid "unknown"
+msgstr "ismeretlen"

@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-08-25 05:31-0400\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Tamil\n"
+"Language: ta_IN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: ta\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"இவ்விடத்தில் ஒரு பரிவர்த்தனை கட்டணம் பரிந்துரைக்கப்படும். வேண்டுமெனில் நீங்கள் அதை "
+"மாற்றிகொள்ளலாம். பரிந்துரைக்கபட்ட கட்டணம் பரிவர்த்தனையின் வேகத்தை அதிகரிக்கிறது."
+
+msgid "Address"
+msgstr "முகவரி"
+
+msgid "Amount"
+msgstr "தொகை"
+
+msgid "Amount to be sent."
+msgstr "அனுப்பப்பட வேண்டிய தொகை."
+
+msgid "Balance"
+msgstr "இருப்பு தொகை"
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"Bitcoin பரிவர்த்தனைகள் பொதுவாக இலவசமானவை அல்ல. ஒரு பரிவர்த்தனை கட்டணம் நிதி அனுப்புநர் "
+"மூலம் வழங்கப்படவேண்டும்."
+
+msgid "Cancel"
+msgstr "ரத்து"
+
+msgid "Clear"
+msgstr "அழி"
+
+msgid "Close"
+msgstr "மூடல்"
+
+msgid "Contacts"
+msgstr "தொடர்புகள்"
+
+msgid "Copy to clipboard"
+msgstr "இடைநிலை பலகையில் நகலெடுக்க"
+
+msgid "Date"
+msgstr "தேதி"
+
+msgid "Default Servers"
+msgstr "முன்னிருப்பு சேவையகங்கள்"
+
+msgid "Delete"
+msgstr "நீக்கு"
+
+msgid "Description"
+msgstr "விளக்கம்"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "இந்த பரிவர்த்தனையின் விளக்கம் (கட்டாயமானது அல்ல)."
+
+msgid "Details"
+msgstr "விவரங்கள்"

@@ -1,0 +1,1764 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2018-02-22 07:13-0500\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Romanian\n"
+"Language: ro_RO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100>0 && n"
+"%100<20)) ? 1 : 2);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: ro\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr " Aceste setări afectează câmpurile din fila Trimitere"
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr ""
+"%(txs)s s-au primit tranzacții noi. Valoarea totală primită în tranzacțiile "
+"noi %(amount)s"
+
+msgid "&About"
+msgstr "&Despre"
+
+msgid "&Addresses"
+msgstr "&Adrese"
+
+msgid "&Documentation"
+msgstr "&Documentație"
+
+msgid "&Donate to server"
+msgstr "&Donează serverului"
+
+msgid "&Encrypt/decrypt message"
+msgstr "&Criptează/decriptează mesajul"
+
+msgid "&Export"
+msgstr "&Export"
+
+msgid "&File"
+msgstr "&Fișier"
+
+msgid "&From QR code"
+msgstr "&Din codul QR"
+
+msgid "&From file"
+msgstr "&Din fișier"
+
+msgid "&From text"
+msgstr "&Din text"
+
+msgid "&From the blockchain"
+msgstr "&Din blockchain"
+
+msgid "&Help"
+msgstr "&Ajutor"
+
+msgid "&History"
+msgstr "&Istoric"
+
+msgid "&Import"
+msgstr "&Importă"
+
+msgid "&Labels"
+msgstr "&Etichete"
+
+msgid "&Load transaction"
+msgstr "&Încarcă tranzacția"
+
+msgid "&Master Public Keys"
+msgstr "&Mestru chei publice"
+
+msgid "&Network"
+msgstr "&Rețea"
+
+msgid "&New"
+msgstr "&Nou"
+
+msgid "&New/Restore"
+msgstr "&Nou/Restaurează"
+
+msgid "&Official website"
+msgstr "&Siteul oficial"
+
+msgid "&Open"
+msgstr "&Deschide"
+
+msgid "&Password"
+msgstr "&Parola"
+
+msgid "&Pay to many"
+msgstr "&Plătiţi pentru mai mulţi"
+
+msgid "&Plugins"
+msgstr "&Module"
+
+msgid "&Private keys"
+msgstr "&Chei private"
+
+msgid "&Quit"
+msgstr "&Termină"
+
+msgid "&Recently open"
+msgstr "&Deschis recent"
+
+msgid "&Report Bug"
+msgstr "&Raportare eroare"
+
+msgid "&Save Copy"
+msgstr "&Salvează copia"
+
+msgid "&Seed"
+msgstr "&Semințe"
+
+msgid "&Sign/verify message"
+msgstr "&Semnare/verificare mesaj"
+
+msgid "&Sweep"
+msgstr "&Mătura"
+
+msgid "&Tools"
+msgstr "&Unelte"
+
+msgid "&View"
+msgstr "&Vizualizare"
+
+msgid "&Wallet"
+msgstr "&Portofel"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "o zi"
+
+msgid "1 hour"
+msgstr "o oră"
+
+msgid "1 week"
+msgstr "o săptămână"
+
+msgid "A copy of your wallet file was created in"
+msgstr "O copie a fișierului portofel a fost creată în"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"O taxă a fost adăugată automat la tranzacţie. Tu poţi trece peste. Cu cât "
+"tranzacţia se va mări, taxa va creşte."
+
+msgid "Add Cosigner"
+msgstr "Adăugați Cosemnatar"
+
+msgid "Additional fees"
+msgstr "Costuri suplimentare"
+
+msgid "Address"
+msgstr "Adresă"
+
+msgid "Address:"
+msgstr "Adresa:"
+
+msgid "Always"
+msgstr "Întotdeauna"
+
+msgid "Amount"
+msgstr "Sumă"
+
+msgid "Amount received:"
+msgstr "Sumă acceptată:"
+
+msgid "Amount sent:"
+msgstr "Sumă trimisă:"
+
+msgid "Amount to be sent"
+msgstr "Cantitate de trimis"
+
+msgid "Amount to be sent."
+msgstr "Suma care va fi trimisă."
+
+msgid "Appearance"
+msgstr "Aspect"
+
+msgid "Auto connect"
+msgstr "Conectare automată"
+
+msgid "BIP39 seed"
+msgstr "BIP39 inlantuire"
+
+msgid ""
+"BIP39 seeds can be imported in Electrum so that users can access funds "
+"locked in other wallets."
+msgstr ""
+"Inlantuirile BIP39 pot fi adaugate in Electrum pentru ca utilizatorii sa "
+"poate accesa fondurile blocate in alte portmonee."
+
+msgid "Back"
+msgstr "Inapoi"
+
+msgid "Balance"
+msgstr "Balanţă"
+
+msgid "Base unit"
+msgstr "Unitate de bază"
+
+msgid "Base unit of your wallet."
+msgstr "Unitatea de bază din portofel."
+
+msgid ""
+"Before reporting a bug, upgrade to the most recent version of Electrum "
+"(latest release or git HEAD), and include the version number in your report."
+msgstr ""
+"Inainte de a reporta un bug, upgradeaza ultima versiune a Electrum (ultima "
+"emisa sau git HEAD), si include numarul versiunei respective in raportul "
+"intocmit."
+
+msgid "Bitcoin Address is None"
+msgstr "Adresa de bitcoini nu este precizată"
+
+msgid ""
+"Bitcoin address where the payment should be received. Note that each payment "
+"request uses a different Bitcoin address."
+msgstr ""
+"Adresa Bitcoin unde trebuie primita plata. Luati aminte, fiecare cerere de "
+"plata foloseste o adresa Bitcoin diferita."
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"Tranzacţiile cu bitcoini nu sunt gratuite. Taxa de pe tranzacţie o plăteşte "
+"expeditorul fondurilor."
+
+msgid "Blockchain"
+msgstr "Blockchain"
+
+msgid "Broadcast"
+msgstr "Trimite"
+
+msgid "Broadcasting transaction..."
+msgstr "Tranzactie pe lungime de unda mare..."
+
+msgid "Bump Fee"
+msgstr "Comision de trimitere"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Anulează"
+
+msgid "Cannot broadcast transaction"
+msgstr "Tranzactia nu se poate trimite"
+
+msgid "Cannot read file"
+msgstr "Fișierul nu poate fi citit"
+
+msgid "Chain split detected at block %d"
+msgstr "S-a detectat lanțul rupt la blocul %d"
+
+msgid "Change Password"
+msgstr "Schimbã Parola"
+
+msgid "Changing PIN code."
+msgstr "Se schimbã codul PIN."
+
+msgid "Child Pays for Parent"
+msgstr "Copilul plãtește pentru pãrinte"
+
+msgid "Child pays for parent"
+msgstr "Copilul plãteste pentru pãrinte"
+
+msgid "Choose a password to encrypt your wallet keys."
+msgstr "Alegeți o parolã pentru a cripta cheile portofelului."
+
+msgid "Choose a server"
+msgstr "Alege un server"
+
+msgid ""
+"Choose coin (UTXO) selection method.  The following are available:\n"
+"\n"
+msgstr ""
+"Alege metoda de selecție a monedelor (UTXO). Urmãtoarele sunt disponibile: \n"
+"\n"
+
+msgid "Choose the number of signatures needed to unlock funds in your wallet:"
+msgstr ""
+"Alege numãrul de semnãturi necesare pentru a debloca fondurile din portofel:"
+
+msgid ""
+"Choose which online block explorer to use for functions that open a web "
+"browser"
+msgstr ""
+"Alege ce explorator de blocuri online să fie folosit pentru funcțiile care "
+"se deschid într-un explorator web"
+
+msgid "Choose your chain"
+msgstr "Alege-ti lantul"
+
+msgid "Choose..."
+msgstr "Alege..."
+
+msgid "Clear"
+msgstr "Eliminã"
+
+msgid "Close"
+msgstr "Închide"
+
+msgid "Co&ins"
+msgstr "Monede"
+
+msgid "Coin selection"
+msgstr "Selectie monede"
+
+msgid "Con&sole"
+msgstr "Con&sole"
+
+msgid "Con&tacts"
+msgstr "Con&tacts"
+
+msgid "Confirm Passphrase:"
+msgstr "Confirmă Parola Frază:"
+
+msgid "Confirm Password:"
+msgstr "Conifrma Parola:"
+
+msgid "Confirm Seed"
+msgstr "Confirmã Secret"
+
+msgid "Confirm new PIN"
+msgstr "Confirmã noul PIN"
+
+msgid "Connected to %d nodes."
+msgstr "Conectat la %d noduri."
+
+msgid "Contacts"
+msgstr "Contacte"
+
+msgid "Copy"
+msgstr "Copiazã"
+
+msgid "Copy %s"
+msgstr "Copiazã %s"
+
+msgid "Copy URI"
+msgstr "Copiază URI"
+
+msgid "Copy and Close"
+msgstr "Copiazã si închide"
+
+msgid "Copy to clipboard"
+msgstr "Copiază în clipboard"
+
+msgid "Could not start Barcode Scanner."
+msgstr "Nu s-a putut porni Scanner-ul pentru Codul de Bare."
+
+msgid "Critical Error"
+msgstr "Eroare fatală"
+
+msgid "Current Password:"
+msgstr "Parolã actualã:"
+
+msgid "Current fee"
+msgstr "Comision actual"
+
+msgid "Dark/Light"
+msgstr "Întunecat/Luminat"
+
+msgid "Date"
+msgstr "Dată"
+
+msgid "Date: %s"
+msgstr "Dată: %s"
+
+msgid "Decrypt"
+msgstr "Decriptare"
+
+msgid "Default Servers"
+msgstr "Servere Implicite"
+
+msgid "Delete"
+msgstr "Sterge"
+
+msgid "Delete invoice?"
+msgstr "Sterge factura?"
+
+msgid "Delete wallet?"
+msgstr "Sterge Portofel?"
+
+msgid "Denomination"
+msgstr "Denumire"
+
+msgid "Description"
+msgstr "Descriere"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "Descrierea tranzitiei (nu este obligatorie)."
+
+msgid "Details"
+msgstr "Detalii"
+
+msgid "Disconnected"
+msgstr "Deconectat"
+
+msgid "Display the details of your transactions before signing it."
+msgstr "Înainte de semnare, aratã detalile tranzactiei."
+
+msgid "Do not store it electronically."
+msgstr "Nu o setați în mediul electronic."
+
+msgid "Do you want to delete '%s'?"
+msgstr "Vrei sã stergi '%s'?"
+
+msgid "Do you want to delete the old file"
+msgstr "Vrei sã stergi fisierul vechi"
+
+msgid "Do you want to remove"
+msgstr "Vrei sa elimini"
+
+msgid "Do you wish to continue?"
+msgstr "Vrei sã continui?"
+
+msgid "Edit %s"
+msgstr "Editeazã %s"
+
+msgid "Edit fees manually"
+msgstr "Editeazã comisionale manual"
+
+msgid "Electrum App"
+msgstr "Aplicatia Electrum"
+
+msgid "Electrum Plugins"
+msgstr "Plugin-uri Electrum"
+
+msgid ""
+"Electrum communicates with remote servers to get information about your "
+"transactions and addresses. The servers all fulfil the same purpose only "
+"differing in hardware. In most cases you simply want to let Electrum pick "
+"one at random.  However if you prefer feel free to select a server manually."
+msgstr ""
+"Electrum comunică cu servere aflate la distanță pentru a prelua informații "
+"despre tranzacțiile și adresele tale. Toate serverele îndeplinesc același "
+"scop; singura diferență între ele este la nivelul hardware. În cele mai "
+"multe cazuri vrei ca Electrum să aleagă unul aleatoriu. Însă, dacă preferi, "
+"poți să alegi manual server-ul."
+
+msgid ""
+"Electrum connects to several nodes in order to download block headers and "
+"find out the longest blockchain."
+msgstr ""
+"Electrum se conectează la mai multe noduripentru a descărca hederele "
+"blocurilor și a găsi blockchain-ul cel mai lung."
+
+msgid "Electrum is generating your addresses, please wait..."
+msgstr "Electrum îți generează adresele, te rugăm să aștepți..."
+
+msgid "Electrum preferences"
+msgstr "Preferinţe Electrum"
+
+msgid ""
+"Electrum sends your wallet addresses to a single server, in order to receive "
+"your transaction history."
+msgstr ""
+"Electrum trimite adresele portofelului tău unui singur server, pentru a "
+"putea primi istoricul tău de tranzacţii."
+
+msgid "Electrum wallet"
+msgstr "Portofel Electrum"
+
+msgid "Electrum was unable to copy your wallet file to the specified location."
+msgstr "Electrum nu a putut copia portofelul la locaţia specificată."
+
+msgid "Electrum was unable to export your labels."
+msgstr "Electrum nu a putut exporta etichetele tale."
+
+msgid "Electrum was unable to import your labels."
+msgstr "Electrum nu a putut importa etichetele tale."
+
+msgid "Electrum was unable to open your transaction file"
+msgstr "Electrum nu a putut deschide fişierul tranzacţiei"
+
+msgid "Electrum was unable to parse your transaction"
+msgstr "Electrum nu a putut analiza tranzacţia"
+
+msgid "Electrum was unable to produce a private key-export."
+msgstr "Electrum nu a putut genera o cheie de export privată."
+
+msgid "Electrum was unable to produce a transaction export."
+msgstr "Electrum nu a putut iniţiliza tranzacţia de export."
+
+msgid ""
+"Electrum's focus is speed, with low resource usage and simplifying Bitcoin. "
+"You do not need to perform regular backups, because your wallet can be "
+"recovered from a secret phrase that you can memorize or write on paper. "
+"Startup times are instant because it operates in conjunction with high-"
+"performance servers that handle the most complicated parts of the Bitcoin "
+"system.\n"
+"\n"
+msgstr ""
+"Electrum se concentrează pe viteză, oferind un consum minim și simplificând "
+"Bitcoin. Nu trebuie să îți faci copii de rezervă regulate, deoarece "
+"portofelul tău poate fi recuperat cu ajutorul unei fraze secrete care poate "
+"fi memorată sau scrisă pe o hârtie. Performanța serverelor noastră îți face "
+"toată treaba grea să pară ușoară. \n"
+"\n"
+
+msgid "Encrypt"
+msgstr "Criptează"
+
+msgid "Encrypt wallet file"
+msgstr "Criptează fișierul portofelului"
+
+msgid "Encrypt/decrypt Message"
+msgstr "Criptează/decriptează Mesaj"
+
+msgid "Encrypted"
+msgstr "Criptat"
+
+msgid "Enter Passphrase"
+msgstr "Introduceți Fraza Secretă"
+
+msgid "Enter Password"
+msgstr "Introduceţi parola"
+
+msgid "Enter Seed"
+msgstr "Introduceți Secret"
+
+msgid "Enter a filename for the copy of your wallet"
+msgstr "Introdu un nume pentru copia portofelului tău"
+
+msgid "Enter a list of outputs in the 'Pay to' field."
+msgstr "Introduceți o listă de rezultate în câmpul 'Plătește la'."
+
+msgid "Enter addresses"
+msgstr "Introduceți adresa"
+
+msgid "Enter description"
+msgstr "Introduceți descrierea"
+
+msgid "Enter new PIN"
+msgstr "Introduceți noul PIN"
+
+msgid "Enter private keys"
+msgstr "Introduceți cheile private"
+
+msgid "Enter private keys:"
+msgstr "Introduceți cheile private:"
+
+msgid ""
+"Enter their master private key (xprv) if you want to be able to sign for "
+"them."
+msgstr ""
+"Introduceți cheia master privată (xprv) dacă vrei să poți să semnezi pentru "
+"ele."
+
+msgid "Enter wallet name"
+msgstr "Introduceți numele portofelului"
+
+msgid "Enter your PIN code in order to decrypt your seed"
+msgstr "Introduceți codul PIN pentru a putea decripta Secretul"
+
+msgid "Enter your PIN code to confirm deletion of %s"
+msgstr "Introduceți codul PIN pentru confirmarea ștergerii %s"
+
+msgid "Enter your current PIN:"
+msgstr "Introduceți PIN-ul actual:"
+
+msgid "Enter your password or choose another file."
+msgstr "Introduceți parola sau alegeți alt fișier."
+
+msgid "Enter your password to proceed"
+msgstr "Introduceți parola pentru a continua"
+
+msgid "Error"
+msgstr "Eroare"
+
+msgid "Exit Electrum"
+msgstr "Ieșire Electrum"
+
+msgid "Expected confirmation time"
+msgstr "Timpul confirmării așteptat"
+
+msgid "Expiration date of your request."
+msgstr "Data expirării cererii."
+
+msgid "Expired"
+msgstr "Expirat"
+
+msgid ""
+"Expired requests have to be deleted manually from your list, in order to "
+"free the corresponding Bitcoin addresses."
+msgstr ""
+"Pentru a elibera adresele Bitcoin corespunzătoare, solicitările expirate "
+"trebuie șterse manual din listă."
+
+msgid "Expires"
+msgstr "Expiră"
+
+msgid "Export"
+msgstr "Exporta"
+
+msgid "Export History"
+msgstr "Exporta istoric"
+
+msgid "Exposing a single private key can compromise your entire wallet!"
+msgstr "Expunerea unei chei private poate compromite întregul portofelul!"
+
+msgid "Extend this seed with custom words"
+msgstr "Extinde acest secret cu cuvinte personale"
+
+msgid "Failed to update password"
+msgstr "Eroare la actualizarea parolei"
+
+msgid "Fee"
+msgstr "Comision"
+
+msgid "Fee:"
+msgstr "Comision:"
+
+msgid "Fees"
+msgstr "Comisioane"
+
+msgid "Fiat"
+msgstr "Monedă"
+
+msgid "Fiat currency"
+msgstr "Valută"
+
+msgid "File"
+msgstr "Fişier"
+
+msgid "Final"
+msgstr "Final"
+
+msgid "Find"
+msgstr "Găsește"
+
+msgid "Follow this branch"
+msgstr "Urmărește această ramură"
+
+msgid "Format"
+msgstr "Format"
+
+msgid "Format: address, amount"
+msgstr "Format: adresă, sumă"
+
+msgid "From"
+msgstr "De la"
+
+msgid "From %d cosigners"
+msgstr "De la %d co-semnatari"
+
+msgid "Height"
+msgstr "Înălțime"
+
+msgid "Hello World"
+msgstr "Salut Lume"
+
+msgid "Here is your master public key."
+msgstr "Aceasta este cheia ta publică principală."
+
+msgid "Hide"
+msgstr "Ascunde"
+
+msgid "History"
+msgstr "Istoric"
+
+msgid "Host"
+msgstr "Host"
+
+msgid "How do you want to connect to a server? "
+msgstr "Cum vrei sã te conectezi la server? "
+
+msgid ""
+"However, BIP39 seeds do not include a version number, which compromises "
+"compatibility with future wallet software."
+msgstr ""
+"Însă, Secretele BIP39 nu conțin un număr de versiune și astfel compromit "
+"compabilitatea cu viitoarele software ale portoflelor."
+
+msgid "Identity"
+msgstr "Identitate"
+
+msgid ""
+"If auto-connect is enabled, Electrum will always use a server that is on the "
+"longest blockchain."
+msgstr ""
+"Dacã auto conectatea este activazã, Electrum o sã foloseascã serverul care "
+"este pe cel mai lung blockchain."
+
+msgid ""
+"If it is disabled, you have to choose a server you want to use. Electrum "
+"will warn you if your server is lagging."
+msgstr ""
+"Dacă este dezactivat, va trebui să alegi un server pe care vrei să îl "
+"folosești. Electrum o să te avertizeze dacă serverul are întârzieri."
+
+msgid "If the fee is low"
+msgstr "Dacă comisionul este mic"
+
+msgid "If you check this box, your transaction will be marked as non-final,"
+msgstr ""
+"Dacă bifați această căsuță, tranzacția va fi marcată ca fiind non-finală,"
+
+msgid ""
+"If you forget your PIN or lose your device, your seed phrase will be the "
+"only way to recover your funds."
+msgstr ""
+"Dacă îți uiți PIN-ul sau îți pierzi dispozitivul, fraza secretă va fi "
+"singura metodă prin care îți poți recupera fondurile."
+
+msgid "If you lose your seed, your money will be permanently lost."
+msgstr "Dacă îți pierzi secretul, banii tăi nu o să poată fi recuperați."
+
+msgid ""
+"If you want to create new addresses, use a deterministic wallet instead."
+msgstr "Dacă vrei să creezi noi adrese, folosește un portofel deterministic."
+
+msgid "Import"
+msgstr "Importă"
+
+msgid "Import addresses"
+msgstr "Importă adresele"
+
+msgid "Import file"
+msgstr "Importă fișireul"
+
+msgid "Import private keys"
+msgstr "Importă chei private"
+
+msgid ""
+"In addition, Electrum does not verify the checksum of BIP39 seeds; make sure "
+"you type your seed correctly."
+msgstr ""
+"Electrum nu verifică suma bifatp a Secretelor BIP39; asigură-te că intoduci "
+"corect secretele."
+
+msgid ""
+"In particular, DO NOT use 'redeem private key' services proposed by third "
+"parties."
+msgstr "NU FOLOSI serviciile 'rescumpărarea cheilor private' propuse de terți."
+
+msgid ""
+"In some cases, use up to 3 change addresses in order to break up large coin "
+"amounts and obfuscate the recipient address."
+msgstr ""
+"În unele cazuri, folosiți până la 3 adrese pentru a despărți sume mari și a "
+"acoperii adresa destinatarului."
+
+msgid "Increase fee"
+msgstr "Crește comisionul"
+
+msgid "Information"
+msgstr "Informaţii"
+
+msgid "Input amount"
+msgstr "Introduce Suma"
+
+msgid "Input raw transaction"
+msgstr "Introduceți tranzacția brută"
+
+msgid "Inputs"
+msgstr "Intrări"
+
+msgid "Install Wizard"
+msgstr "Instalează Wizard"
+
+msgid "Install the zbar package to enable this."
+msgstr "Pentru activa acestă funcție, instalați pachetul zbar."
+
+msgid "Insufficient funds"
+msgstr "Fonduri insuficiente"
+
+msgid "Invalid Address"
+msgstr "Adresa invalida"
+
+msgid "Invalid Amount"
+msgstr "Sumă nevalidă"
+
+msgid "Invalid Bitcoin Address"
+msgstr "Adresă Bitcoin invalidă"
+
+msgid "Invalid Lines found:"
+msgstr "Linii nevalite găsite:"
+
+msgid "Invalid PIN"
+msgstr "PIN nevalid"
+
+msgid "Invalid bitcoin URI:"
+msgstr "Bitcoin UTI nevalid:"
+
+msgid "Invoice"
+msgstr "Factură"
+
+msgid "Invoice saved as "
+msgstr "Factură salvată ca "
+
+msgid "Invoices"
+msgstr "Facturi"
+
+msgid "Keyboard shortcut: type \"!\" to send all your coins."
+msgstr ""
+"Comandă rapidă de la tastatură: tip \"!\" pentru a trimite toate monedele "
+"tale."
+
+msgid "Label Settings"
+msgstr "Configurări etichetă"
+
+msgid "Language"
+msgstr "Limbă"
+
+msgid "Leave this field empty if you want to disable encryption."
+msgstr "Lasă acest câmp gol dacă dorești să dezactivezi criptarea."
+
+msgid "Line #"
+msgstr "Linia #"
+
+msgid "Load transaction"
+msgstr "Incarcă tranzacție"
+
+msgid "Lookup transaction"
+msgstr "Caută tranzacție"
+
+msgid ""
+"Make sure you own the seed phrase or the private keys, before you request "
+"Bitcoins to be sent to this wallet."
+msgstr ""
+"Asigură-te fraza ta secretă și cheia privata este în siguranță, înainte de a "
+"trimite Bitcoin către acest portofel."
+
+msgid "Master Public Key"
+msgstr "Cheia publică principală"
+
+msgid "Master Public Keys"
+msgstr "Cheia publică principală"
+
+msgid "Max"
+msgstr "Maxim"
+
+msgid "Max fee exceeded"
+msgstr "Numărul maxim de comisioane depășit"
+
+msgid "Max static fee"
+msgstr "Comision maxim static"
+
+msgid "Max value of the static fee slider"
+msgstr "Valoarea maximă a cursorului pentru comisionul static"
+
+msgid "Memo"
+msgstr "Notă"
+
+msgid "Message"
+msgstr "Mesaj"
+
+msgid "Mining fee"
+msgstr "Comision de minare"
+
+msgid "Multi-Signature Wallet"
+msgstr "Portofel multi-semnătură"
+
+msgid "Name"
+msgstr "Nume"
+
+msgid "Network"
+msgstr "Reţea"
+
+msgid "Never"
+msgstr "Niciodată"
+
+msgid "Never disclose your seed."
+msgstr "Nu divulga niciodată secretul."
+
+msgid "Never type it on a website."
+msgstr "Nu o scrie pe un website."
+
+msgid "New"
+msgstr "Nou"
+
+msgid "New Contact"
+msgstr "Contact nou"
+
+msgid "New Password:"
+msgstr "Parolă Nouă:"
+
+msgid "New contact"
+msgstr "Contact nou"
+
+msgid "New fee:"
+msgstr "Noul Comision:"
+
+msgid "New transaction received. %(amount)s"
+msgstr "O nouă tranzacție primită. %(amount)s"
+
+msgid "Next"
+msgstr "Pasul următor"
+
+msgid "No Wallet"
+msgstr "Nici un portofel"
+
+msgid "No donation address for this server"
+msgstr "Nu există o adresă de donații pentru acest server"
+
+msgid "No message or amount"
+msgstr "Nici un mesaj sau sumă"
+
+msgid "No more addresses in your wallet."
+msgstr "Nu mai sunt adrese în portofelul tău."
+
+msgid "No outputs"
+msgstr "Fără ieșire"
+
+msgid "No transactions found for this seed"
+msgstr "Nu există fonduri pentru acest secret"
+
+msgid "Node"
+msgstr "Nod"
+
+msgid "None"
+msgstr "Nici unul"
+
+msgid "Not connected"
+msgstr "Deconectat"
+
+msgid "Not enough funds"
+msgstr "Fonduri Insuficiene"
+
+msgid ""
+"Note that if you have frozen some of your addresses, the available funds "
+"will be lower than your total balance."
+msgstr ""
+"Reține că dacă ai înghețat o parte din adrese, fonduril dispnibile o să fie "
+"mai mici decât soldul total."
+
+msgid ""
+"Note that some merchants do not accept non-final transactions until they are "
+"confirmed."
+msgstr ""
+"Rețineți că unii comercianți nu acceptă tranzacții nefinale până nu au fost "
+"confirmate."
+
+msgid "Nothing set !"
+msgstr "Nimic setat!"
+
+msgid ""
+"Number of zeros displayed after the decimal point. For example, if this is "
+"set to 2, \"1.\" will be displayed as \"1.00\""
+msgstr ""
+"Numărul de zerouri afișat după punctul decimal. Spre exemplu, dacă este "
+"setat la 2, \"1.\" o să fie afișat ca \"1.00\""
+
+msgid "OK"
+msgstr "Ok"
+
+msgid "Offline"
+msgstr "Deconectat"
+
+msgid "One output per line."
+msgstr "O ieșire pe linie."
+
+msgid "Online Block Explorer"
+msgstr "Explorator de blocuri online"
+
+msgid "Open labels file"
+msgstr "Deschide fișierul etichetelor"
+
+msgid "OpenAlias"
+msgstr "DeschideAlias"
+
+msgid "OpenAlias record, used to receive coins and to sign payment requests."
+msgstr ""
+"Înregistrarea DeschideAlias, utilizată pentru a primi monede și pentru a "
+"semna cererile de plată."
+
+msgid "Options"
+msgstr "Opțiuni"
+
+msgid "Output amount"
+msgstr "Valoarea ieșirilor"
+
+msgid "Outputs"
+msgstr "Ieșiri"
+
+msgid "Overview"
+msgstr "Privire de ansamblu"
+
+msgid "PIN mismatch"
+msgstr "PIN incorect"
+
+msgid "Paid"
+msgstr "Plătit"
+
+msgid "Passphrase"
+msgstr "Frază de acces"
+
+msgid "Passphrase:"
+msgstr "Frază de acces:"
+
+msgid "Password"
+msgstr "Parolă"
+
+msgid "Password Strength"
+msgstr "Puterea Parolei"
+
+msgid "Password is disabled, this wallet is not protected"
+msgstr "Parola este dezactivată, acest portofel nu este protejat"
+
+msgid "Password was updated successfully"
+msgstr "Parola a fost actualizată cu succes"
+
+msgid "Password:"
+msgstr "Parolă:"
+
+msgid "Pay Now"
+msgstr "Plătește acum"
+
+msgid "Pay to"
+msgstr "Plătește către"
+
+msgid "Pay to many"
+msgstr "Plătește către mai mulți"
+
+msgid "Payment Request"
+msgstr "Cerere de plată"
+
+msgid "Payment request has expired"
+msgstr "Crerea de plată a expirat"
+
+msgid "Payment sent."
+msgstr "Plată trimisă."
+
+msgid "Pending"
+msgstr "În Aşteptare"
+
+msgid "Please enter a seed phrase or a master key (xpub or xprv):"
+msgstr ""
+"Vă rugăm introduceți o frază secretă sau cheia principală (xpub sau xprv):"
+
+msgid ""
+"Please enter a seed phrase, a master key, a list of Bitcoin addresses, or a "
+"list of private keys"
+msgstr ""
+"Vă rugăm introduceți o frază secretă, cheia principală, o listă de adrese "
+"Bitcoin sau o listă de chei private"
+
+msgid "Please enter the master public key (xpub) of your cosigner."
+msgstr ""
+"Vă rugăm introduceți cheia publică principală (xpub) a cosemnatarului tău."
+
+msgid "Please enter the master public key of cosigner #%d:"
+msgstr "Vă rugăm introduceți cheia publică principală a cosemnatarului #%d:"
+
+msgid "Please enter your password"
+msgstr "Te rugăm să introduci parola"
+
+msgid ""
+"Please enter your seed derivation passphrase. Note: this is NOT your "
+"encryption password. Leave this field empty if you did not use one or are "
+"unsure."
+msgstr ""
+"Introduceți fraza de acces pentru derivarea secretelor. Rețineți: aceasta nu "
+"este parola duneavoastră de criptare. Lăsați acest câmp gol dacă nu ați "
+"folosit una sau nu sunteți sigur."
+
+msgid "Please enter your seed phrase in order to restore your wallet."
+msgstr "Pentru a vă restabili portofelul, vă rugăm introduceți fraza secretă."
+
+msgid "Please install the Barcode Scanner app from ZXing"
+msgstr "Vă rugăm să instalați Aplicația Barcode Scanner de la ZXing"
+
+msgid ""
+"Please paste your cosigners master public key, or scan it using the camera "
+"button."
+msgstr ""
+"Vă rugăm să introduceți cheia publică principală a cosemnatarilor, sau "
+"scanați0o folosind butonul camerei."
+
+msgid "Please report any bugs as issues on github:<br/>"
+msgstr "Vă rugăm să raportați orice eroare pe github: <br/>"
+
+msgid "Please restart Electrum to activate the new GUI settings"
+msgstr "Te rugăm să restartezi Electrum pentru a activa noile setări GUI"
+
+msgid "Please retype your seed phrase, to confirm that you properly saved it"
+msgstr ""
+"Vă rugăm să reintroduceți fraza secretă, pentru a confirma că ați salvat-o"
+
+msgid "Please save these %d words on paper (order is important). "
+msgstr ""
+"Vă rugăm să salvați aceste %d cuvinte pe o hârtie (ordinea este importantă). "
+
+msgid "Please share it with your cosigners."
+msgstr "Vă rugăm să o împărtășiți cosemnatarilor."
+
+msgid "Please type your seed phrase using the virtual keyboard."
+msgstr "Folosind tastatura virtuală, introduceți fraza secretă."
+
+msgid "Please wait"
+msgstr "Vă rugăm să așteptați"
+
+msgid "Please wait..."
+msgstr "Vă rugăm să așteptați..."
+
+msgid "Port"
+msgstr "Port"
+
+msgid "Preferences"
+msgstr "Setări"
+
+msgid "Press 'Next' to create this wallet, or choose another file."
+msgstr "Apasă 'Următorul' pentru a crea acest portofel, sau alege alt fișier."
+
+msgid "Press 'Next' to open this wallet."
+msgstr "Apasă 'Următorul' pentru a deschide acest portofel."
+
+msgid "Press again to exit"
+msgstr "Apăsați din nou pentru ieșire"
+
+msgid "Preview"
+msgstr "Previzualizare"
+
+msgid "Private key"
+msgstr "Cheie privată"
+
+msgid "Private keys"
+msgstr "Chei private"
+
+msgid "Private keys exported."
+msgstr "Chei private exportate."
+
+msgid "Proceed?"
+msgstr "Continuați?"
+
+msgid "Propose Replace-By-Fee"
+msgstr "Propuneți înlocuirea-cu-comision"
+
+msgid "Proxy"
+msgstr "Proxy"
+
+msgid "Proxy user"
+msgstr "Utilizator Proxy"
+
+msgid "Public key"
+msgstr "Cheie publică"
+
+msgid "Public keys"
+msgstr "Chei publice"
+
+msgid "QR code"
+msgstr "Cod QR"
+
+msgid "QR code copied to clipboard"
+msgstr "Codul QR copiat în clipboard"
+
+msgid "QR code saved to file"
+msgstr "Codul QR salvat în fișier"
+
+msgid "Read QR code"
+msgstr "Citește Codul QR"
+
+msgid "Read file"
+msgstr "Citire fișier"
+
+msgid "Receive"
+msgstr "Primește"
+
+msgid "Receiving address"
+msgstr "Adresa destinatarului"
+
+msgid "Recipient of the funds."
+msgstr "Destinatar fonduri."
+
+msgid "Recovery successful"
+msgstr "Recuperare cu succes"
+
+msgid "Redeem Script"
+msgstr "Răscumpărare script"
+
+msgid "Remove"
+msgstr "Elimină"
+
+msgid "Remove %s from your list of contacts?"
+msgstr "Elimină %s din lista ta de contacte?"
+
+msgid "Replaceable"
+msgstr "Înlocuibil"
+
+msgid "Reporting Bugs"
+msgstr "Raportează erorile"
+
+msgid "Request expires"
+msgstr "Solicitarea a expirat"
+
+msgid "Request saved successfully"
+msgstr "Solcitarea a fost salvată cu succes"
+
+msgid "Requested amount"
+msgstr "Suma solicitată"
+
+msgid "Requestor"
+msgstr "Solicitantul"
+
+msgid "Requests"
+msgstr "Cereri"
+
+msgid "Require %d signatures"
+msgstr "Necesită %d semnături"
+
+msgid "Requires"
+msgstr "Necesită"
+
+msgid "SSL certificate"
+msgstr "Cerificat SSL"
+
+msgid "SSL certificate used to sign payment requests."
+msgstr "Certificat SSL folosit pentru a semna cererile de plată."
+
+msgid "Save"
+msgstr "Salvează"
+
+msgid "Save as BIP70 file"
+msgstr "Salvează ca fişier BIP70"
+
+msgid "Save invoice to file"
+msgstr "Salvează factura în fișier"
+
+msgid "Seed"
+msgstr "Secret"
+
+msgid "Seed Type"
+msgstr "Trimite tip"
+
+msgid "Select file to export your private keys to"
+msgstr "Selectează fișierul pentru a-ți exporta cheile private"
+
+msgid "Select file to export your wallet transactions to"
+msgstr "Selectează fișierul pentru a-ți exporta tranzacțiile din portofel"
+
+msgid "Select file to save your labels"
+msgstr "Selectează fișierul pentru a salva etichetele"
+
+msgid "Select server automatically"
+msgstr "Selectează automat serverul"
+
+msgid "Select server manually"
+msgstr "Selectează server manual"
+
+msgid "Select where to save your payment request"
+msgstr "Selectează unde să îți salvezi cererile de plată"
+
+msgid "Select where to save your signed transaction"
+msgstr "Selectează unde să îți salvezi tranzacțiile semnate"
+
+msgid "Select which language is used in the GUI (after restart)."
+msgstr ""
+"Selectează limba care să fie folosită în interfața grafică (după repornire)."
+
+msgid "Select your transaction file"
+msgstr "Alege fişierul tranzacţiei"
+
+msgid "Send"
+msgstr "Trimite"
+
+msgid "Sending"
+msgstr "Se trimite"
+
+msgid "Server"
+msgstr "Server"
+
+msgid "Server is lagging (%d blocks)"
+msgstr "Serverul are întârziere (%d blocuri)"
+
+msgid "Server lagging (%d blocks)"
+msgstr "Serverul are întârziere (%d blocuri)"
+
+msgid "Server peers"
+msgstr "Colegi de server"
+
+msgid "Settings"
+msgstr "Setări"
+
+msgid "Show"
+msgstr "Arată"
+
+msgid "Show QR Code"
+msgstr "Arată Codul OR"
+
+msgid "Show as QR code"
+msgstr "Arată ca Cod QR"
+
+msgid "Show fee edit box in send tab."
+msgstr "Arată căsuța de editare a comisionului în fila de trimitere."
+
+msgid "Show history rates"
+msgstr "Arată ratele din istoric"
+
+msgid "Show/Hide"
+msgstr "Afișare/Ascundere"
+
+msgid "Sign"
+msgstr "Semnează"
+
+msgid "Sign/verify Message"
+msgstr "Semnează/verifică Mesaj"
+
+msgid "Signature"
+msgstr "Semnătură"
+
+msgid "Signature verified"
+msgstr "Semnătură verificată"
+
+msgid "Signing transaction..."
+msgstr "Se semnează tranzacția..."
+
+msgid "Size:"
+msgstr "Mărime:"
+
+msgid "Source"
+msgstr "Sursă"
+
+msgid "Spend only confirmed coins"
+msgstr "Cheltuiește doar monedele confirmate"
+
+msgid "Spend only confirmed inputs."
+msgstr "Cheltuiește doar monedele intrările."
+
+msgid "Status"
+msgstr "Status"
+
+msgid "Status:"
+msgstr "Status:"
+
+msgid "Success"
+msgstr "Succes"
+
+msgid "Sweep"
+msgstr "Trage"
+
+msgid "Sweep private keys"
+msgstr "Trage cheile private"
+
+msgid "Synchronizing..."
+msgstr "Sincronizare..."
+
+msgid ""
+"Text copied to clipboard.\n"
+"Tap again to display it as QR code."
+msgstr ""
+"Text copiat în clipboard. \n"
+" Apasă din nou pentru afișarea codului QR."
+
+msgid ""
+"The amount of fee can be decided freely by the sender. However, transactions "
+"with low fees take more time to be processed."
+msgstr ""
+"Mărimea taxei poate fi decisă liber de către expeditor. Însă, tranzacţiile "
+"cu taxe scăzute durează mai mult pentru a fi procesate."
+
+msgid ""
+"The amount will be displayed in red if you do not have enough funds in your "
+"wallet."
+msgstr "Suma va fi afişată în roşu dacă nu ai suficiente fonduri în portofel."
+
+msgid ""
+"The bitcoin address never expires and will always be part of this electrum "
+"wallet."
+msgstr ""
+"Adresa bitcoin nu expiră niciodată și va face mereu parte din portofelul "
+"electrum."
+
+msgid ""
+"The description is not sent to the recipient of the funds. It is stored in "
+"your wallet file, and displayed in the 'History' tab."
+msgstr ""
+"Descrierea nu este trimisă destinatarului fondurilor. Aceasta este stocat în "
+"fișierul portofelului dumneavoastră și afișat în fila \"Istoric\"."
+
+msgid "The fee for this transaction seems unusually high."
+msgstr "Comisionul tranzacției pare neobișnuit de mare."
+
+msgid ""
+"The file '%s' contains an incompletely created wallet.\n"
+"Do you want to complete its creation now?"
+msgstr ""
+"Fișierul %s conține un portofel creat incomplet. \n"
+" Vrei ca acesta să se completeze acum?"
+
+msgid "The file was removed"
+msgstr "Fișierul a fost îndepărtat"
+
+msgid "The following addresses were added"
+msgstr "Următoarele adrese au fost adăugate"
+
+msgid "The following alias providers are available:"
+msgstr "Următorii furnizori de alias sunt disponibili:"
+
+msgid "The following inputs could not be imported"
+msgstr "Următoarele intrări nu au fost importate"
+
+msgid ""
+"The format of your wallet '%s' must be upgraded for Electrum. This change "
+"will not be backward compatible"
+msgstr ""
+"Formatul protofelului tău '%s' trebuie să fie actualizate pentru Electrum. "
+"Schimbarea nu va fi compatibilă"
+
+msgid ""
+"The wallet '%s' contains multiple accounts, which are no longer supported in "
+"Electrum 2.7.\n"
+"\n"
+"Do you want to split your wallet into multiple files?"
+msgstr ""
+"Portofelul '%s' contrui multiple, care nu mai sunt suportate de Electrum "
+"2.7.\n"
+"\n"
+"Vreți să împărțiți portofelul în fișiere multiple?"
+
+msgid ""
+"This blockchain is used to verify the transactions sent by your transaction "
+"server."
+msgstr ""
+"Acest blockchain este folosit pentru a verifica tranzacția trimisă de "
+"serverul de tranzacții."
+
+msgid "This file does not exist."
+msgstr "Acest fișier nu există."
+
+msgid "This file is encrypted."
+msgstr "Acest fișier este criptat."
+
+msgid ""
+"This information is seen by the recipient if you send them a signed payment "
+"request."
+msgstr ""
+"Aceste informații sunt văzute de către destinatar dacă le trimiteți o cerere "
+"de plată semnată."
+
+msgid "This is a watching-only wallet"
+msgstr "Acest portofel poate fi doar văzut"
+
+msgid "This is the height of your local copy of the blockchain."
+msgstr "Aceasta este înălțimea copiei tale locale din blockchain."
+
+msgid "This may result in higher transactions fees."
+msgstr "Aceasta ar putea duce la comisioane ridicate ale tranzacției."
+
+msgid "This means you will not be able to spend Bitcoins with it."
+msgstr "Aceasta înseamnă că nu o să puteți cheltui Bitcoin cu el."
+
+msgid "This payment request will be signed."
+msgstr "Cererea de plată o să fie semnată."
+
+msgid ""
+"This seed will allow you to recover your wallet in case of computer failure."
+msgstr ""
+"Aceste cuvinte secrete iţi vor permite să recuperezi portofelul in caz "
+"probleme cu calculatorul."
+
+msgid "This transaction is not saved. Close anyway?"
+msgstr "Această tranzacţie nu este salvată. Închide oricum?"
+
+msgid ""
+"This transaction requires a higher fee, or it will not be propagated by the "
+"network"
+msgstr ""
+"Tranzacția necesită un comision mai mare, sau nu o să fie propagată de rețea"
+
+msgid "This wallet has no seed"
+msgstr "Acest portofel nu are cuvinte secrete"
+
+msgid "This wallet is watching-only."
+msgstr "Acest portofel poate fi doar văzut."
+
+msgid ""
+"This wallet was restored offline. It may contain more addresses than "
+"displayed."
+msgstr ""
+"Acest portofel a fost restaurat offline. Poate conţine mai multe adrese "
+"decât cele afişate."
+
+msgid ""
+"To make sure that you have properly saved your seed, please retype it here."
+msgstr "Pentru a vă asigura că ați salvat secretul, introduceți-l aici."
+
+msgid "Total size"
+msgstr "Mărime totală"
+
+msgid "Transaction"
+msgstr "Tranzactie"
+
+msgid "Transaction ID"
+msgstr "ID-ul tranzacţiei"
+
+msgid "Transaction ID:"
+msgstr "ID-ul tranzacţiei:"
+
+msgid "Transaction saved successfully"
+msgstr "Tranzacţie salvata"
+
+msgid "Transaction unrelated to your wallet"
+msgstr "Tranzacție fără legătură cu portofelul dumneavoastră"
+
+msgid "Transaction:"
+msgstr "Tranzacție:"
+
+msgid "Transactions"
+msgstr "Tranzacții"
+
+msgid "Try to explain not only what the bug is, but how it occurs."
+msgstr "Încearcă să explici ce fel de eroare este și cum apare aceasta."
+
+msgid "Unable to create backup"
+msgstr "Imposibil de creat copia de rezervă"
+
+msgid "Unable to create csv"
+msgstr "Imposibil de creat csv"
+
+msgid "Unable to export history"
+msgstr "Imposibil de exportat istoricul"
+
+msgid "Unable to read file or no transaction found"
+msgstr "Imposibil de citit fișierul sau nici o tranzacție găsită"
+
+msgid "Unknown"
+msgstr "Necunoscut"
+
+msgid "Use SSL"
+msgstr "Folosește SSL"
+
+msgid "Use Tor Proxy"
+msgstr "Folosește Proxy Tor"
+
+msgid "Use as server"
+msgstr "Folosește-l ca și server"
+
+msgid "Use change addresses"
+msgstr "Schimbă adresele"
+
+msgid "Use dynamic fees"
+msgstr "Folosește comisioane dinamice"
+
+msgid "Use fees recommended by the server."
+msgstr "Folosește comisioanele recomandate de server."
+
+msgid "Use multiple change addresses"
+msgstr "Folosește adrese multiple schimbătoare"
+
+msgid "Use setconfig to set ssl_chain and ssl_privkey."
+msgstr ""
+"Folosește configurarea setărilor pentru a seta ssl_chain și ssl_privkey."
+
+msgid "Use the camera button to scan a QR code."
+msgstr "Folosește butonul camerei pentru a scana codul QR."
+
+msgid "Use this dialog to add a password to your wallet."
+msgstr "Folosește această căsuță pentru a adăuga o parolă portofelului tău."
+
+msgid "Use this dialog to change your password."
+msgstr "Folosește această căsuță pentru a-ți schimba parola."
+
+msgid "Uses icons from the Icons8 icon pack (icons8.com)."
+msgstr "Foloșeste iconițele din pactetul de iconițe Icons8 (icons8.com)."
+
+msgid ""
+"Using change addresses makes it more difficult for other people to track "
+"your transactions."
+msgstr ""
+"Folosirea adreselor schimbătoare face mai dificilă urmărirea tranzacțiilor "
+"de către alte persoane."
+
+msgid "Verify"
+msgstr "Verificare"
+
+msgid "Version"
+msgstr "Versiune"
+
+msgid "Video Device"
+msgstr "Dispozitiv video"
+
+msgid "View invoice"
+msgstr "Vizualizare Factură"
+
+msgid "View on block explorer"
+msgstr "Vizualizați pe block explorer"
+
+msgid "WARNING"
+msgstr "AVERTISMENT"
+
+msgid "WARNING: ALL your private keys are secret."
+msgstr "AVERTISMENT: TOATE cheile private sunt secrete."
+
+msgid ""
+"WARNING: the alias \"%s\" could not be validated via an additional security "
+"check, DNSSEC, and thus may not be correct."
+msgstr ""
+"AVERTISMENT: alias-urile \"%s\" nu au putut fi validate via unui sistem "
+"suplimentar de verificare, DNSSEC, si prin urmare s-ar putea să nu fie "
+"corecte."
+
+msgid "Waiting for fee estimates..."
+msgstr "Se așteaptă comisioanele estimative..."
+
+msgid "Wallet"
+msgstr "Portofel"
+
+msgid "Wallet backup created"
+msgstr "Copia de rezervă a portofelului a fost creată"
+
+msgid "Wallet change address"
+msgstr "Portofel cu adresă schimbătoare"
+
+msgid "Wallet receive address"
+msgstr "Porofel care primește adresa"
+
+msgid "Warning"
+msgstr "Atenție"
+
+msgid ""
+"Warning: The next address will not be recovered automatically if you restore "
+"your wallet from seed; you may need to add it manually.\n"
+"\n"
+"This occurs because you have too many unused addresses in your wallet. To "
+"avoid this situation, use the existing addresses first.\n"
+"\n"
+"Create anyway?"
+msgstr ""
+"Avertisment: următoarea adresă nu va fi recuperată automat dacă restaurați "
+"portofelul din secrete; este posibil să fie nevoie să îl adăugați manual.\n"
+"\n"
+"Acest lucru apare deoarece aveți prea multe adrese neutilizate în portofel. "
+"Pentru a evita această situație, utilizați mai întâi adresele existente.\n"
+"\n"
+"Creați oricum?"
+
+msgid ""
+"We do not guarantee that BIP39 imports will always be supported in Electrum."
+msgstr ""
+"Nu putem granta că importurile BIP39 vor fi suportate întotdeauna de "
+"Electrum."
+
+msgid "Wrong signature"
+msgstr "Semnătură greșită"
+
+msgid "You are following branch"
+msgstr "Urmăriți branch"
+
+msgid ""
+"You are using Electrum in offline mode; restart Electrum if you want to get "
+"connected"
+msgstr ""
+"Folosiți Electrum în modul offline; reporniți Electrum dacă vreți să vă "
+"conectați"
+
+msgid ""
+"You are using a non-deterministic wallet, which cannot create new addresses."
+msgstr "Folosiți un portofel non-deterministic, care nu poate crea noi adrese."
+
+msgid ""
+"You may enter a Bitcoin address, a label from your list of contacts (a list "
+"of completions will be proposed), or an alias (email-like address that "
+"forwards to a Bitcoin address)"
+msgstr ""
+"Puteți introduce o adresă Bitcoin, o etichetă din lista dumneavoastră de "
+"contacte (o listă de completări va fi propusă) sau un alias (o adresă de tip "
+"e-mail care trimite într-o adresă Bitcoin)"
+
+msgid "You may load a CSV file using the file icon."
+msgstr "Puteți încărca un fișier CSV folosind iconița fișier."
+
+msgid "Your accounts have been moved to"
+msgstr "Conturile dumneavoastră au fost mutate la"
+
+msgid ""
+"Your bitcoins are password protected. However, your wallet file is not "
+"encrypted."
+msgstr ""
+"Monedele tale Bitcoin sunt protejate de parolă. Însă, fișierul portofelului "
+"tău nu este criptat."
+
+msgid "Your labels have been synchronised."
+msgstr "Etichetele tale au fost sincronizate."
+
+msgid "Your labels were exported to"
+msgstr "Etichetele tale sunt exportate la"
+
+msgid "Your labels were imported from"
+msgstr "Etichetele tale au fost importate din"
+
+msgid "Your seed extension is"
+msgstr "Extensia secretului este"
+
+msgid "Your seed is important!"
+msgstr "Cuvintele secrete sunt importante!"
+
+msgid "Your server is on branch"
+msgstr "Severul tău este pe branch"
+
+msgid "Your wallet generation seed is:"
+msgstr "Cuvintele secrete pentru portofelul tău sunt:"
+
+msgid "Your wallet history has been successfully exported."
+msgstr "Istoricul portofelului tău a fost exportat cu succes."
+
+msgid "Your wallet is not protected."
+msgstr "Portofelul dumneavoastră nu este protejat."
+
+msgid "Your wallet is password protected and encrypted."
+msgstr "Parola portofelului este protejată și criptată."
+
+msgid "Your wallet was upgraded successfully"
+msgstr "Portofelul dumneavoastră a fost actualizat cu succes"
+
+msgid "Zeros after decimal point"
+msgstr "Zerouri după virgulă"
+
+msgid ""
+"and you will have the possiblity, while it is unconfirmed, to replace it "
+"with a transaction that pays a higher fee."
+msgstr ""
+"și veți avea posiblilitatea, atât timp cât este neconfirmată, să o înlocuiți "
+"cu o tranzacție cu un comision mai mare."
+
+msgid "are frozen"
+msgstr "sunt înghețate"
+
+msgid "blocks"
+msgstr "blocuri"
+
+msgid "cosigner"
+msgstr "cosemnatar"
+
+msgid "from your wallet?"
+msgstr "din portofelul tău?"
+
+msgid "json"
+msgstr "json"
+
+msgid "low fee"
+msgstr "comision mic"
+
+msgid "please wait..."
+msgstr "te rugăm să aștepți..."
+
+msgid "unconfirmed"
+msgstr "neconfirmat"
+
+msgid "unknown"
+msgstr "necunoscut"
+
+msgid "unknown (low fee)"
+msgstr "necunoscut (comision mic)"
+
+msgid "unverified"
+msgstr "neverificat"
+
+msgid "watching only"
+msgstr "doar de văzut"

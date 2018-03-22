@@ -1,0 +1,750 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2018-03-11 23:03-0400\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Vietnamese\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: vi\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr " Những cài đặt này ảnh hưởng các trường trong thẻ Gửi"
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr ""
+"Đã nhận %(txs)s giao dịch mới. Tổng số tiền nhận được trong các giao dịch "
+"mới là %(amount)s"
+
+msgid "&About"
+msgstr "&Giới thiệu"
+
+msgid "&Addresses"
+msgstr "&Địa chỉ"
+
+msgid "&Documentation"
+msgstr "&Tài liệu hướng dẫn"
+
+msgid "&Donate to server"
+msgstr "&Quyên góp cho máy chủ"
+
+msgid "&Encrypt/decrypt message"
+msgstr "&Mã hóa/giải mã tin nhắn"
+
+msgid "&Export"
+msgstr "&Xuất ra"
+
+msgid "&File"
+msgstr "&Tập tin"
+
+msgid "&From QR code"
+msgstr "&Từ mã QR"
+
+msgid "&From file"
+msgstr "&Từ tập tin"
+
+msgid "&From text"
+msgstr "&Từ văn bản"
+
+msgid "&From the blockchain"
+msgstr "&Từ chuỗi khối"
+
+msgid "&Help"
+msgstr "&Trợ giúp"
+
+msgid "&History"
+msgstr "&Lịch sử"
+
+msgid "&Import"
+msgstr "&Nhập vào"
+
+msgid "&Labels"
+msgstr "&Nhãn"
+
+msgid "&Load transaction"
+msgstr "Loading transaction"
+
+msgid "&Master Public Keys"
+msgstr "&Các khóa công chủ"
+
+msgid "&Network"
+msgstr "&Mạng"
+
+msgid "&New"
+msgstr "&Mới"
+
+msgid "&New/Restore"
+msgstr "&Mới/Khôi phục"
+
+msgid "&Official website"
+msgstr "&Trang mạng chính thức"
+
+msgid "&Open"
+msgstr "&Mở"
+
+msgid "&Password"
+msgstr "&Mật khẩu"
+
+msgid "&Pay to many"
+msgstr "&Trả đến nhiều người"
+
+msgid "&Plugins"
+msgstr "&Phần bổ trợ"
+
+msgid "&Private keys"
+msgstr "&Các khóa riêng"
+
+msgid "&Quit"
+msgstr "&Thoát"
+
+msgid "&Recently open"
+msgstr "&Đã mở gần đây"
+
+msgid "&Report Bug"
+msgstr "&Báo cáo lỗi"
+
+msgid "&Save Copy"
+msgstr "&Lưu Bản sao"
+
+msgid "&Seed"
+msgstr "&Hạt giống"
+
+msgid "&Sign/verify message"
+msgstr "&Kí/xác minh tin nhắn"
+
+msgid "&Sweep"
+msgstr "&Quét"
+
+msgid "&Tools"
+msgstr "&Công cụ"
+
+msgid "&View"
+msgstr "&Xem"
+
+msgid "&Wallet"
+msgstr "Ví Điện Tử"
+
+msgid "+"
+msgstr "0"
+
+msgid "1 day"
+msgstr "1 chuyến đi"
+
+msgid "1 hour"
+msgstr "1 tiếng"
+
+msgid "1 week"
+msgstr "1 tuần"
+
+msgid "A copy of your wallet file was created in"
+msgstr "Một bản sao của tập tin ví của bạn đã được tạo trong"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"Eine empfohlene Gebühr wird diesem Feld automatisch hinzugefügt, kann aber "
+"überschrieben werden. Die empfohlene Gebühr Steigt mit der Größe der "
+"Transaction."
+
+msgid "Add Cosigner"
+msgstr "Thêm người cùng kí"
+
+msgid "Additional fees"
+msgstr "Các khoản phí khác"
+
+msgid "Address"
+msgstr "Địa chỉ"
+
+msgid "Address:"
+msgstr "Địa chỉ:"
+
+msgid "Always"
+msgstr "Luôn luôn"
+
+msgid "Amount"
+msgstr "số tiền"
+
+msgid "Amount received:"
+msgstr "Betrag erhalten:"
+
+msgid "Amount sent:"
+msgstr "Khoản đã gửi:"
+
+msgid "Amount to be sent"
+msgstr "10000000000"
+
+msgid "Amount to be sent."
+msgstr "10000000000"
+
+msgid "Appearance"
+msgstr "Export"
+
+msgid "Auto connect"
+msgstr "Tự động kết nối"
+
+msgid "BIP39 seed"
+msgstr "Hạt giống BIP39"
+
+msgid ""
+"BIP39 seeds can be imported in Electrum so that users can access funds "
+"locked in other wallets."
+msgstr ""
+"Các hạt giống BIP39 có thể được nhập vào Electrum, từ đó người dùng có thể "
+"truy cập các khoản tiền của họ vốn bị kẹt ở trong các ví khác."
+
+msgid "Back"
+msgstr "Trở lại"
+
+msgid "Balance"
+msgstr "Tình trạng"
+
+msgid "Base unit"
+msgstr "Đơn vị tính"
+
+msgid "Base unit of your wallet."
+msgstr "Đơn vị tính cho ví của bạn."
+
+msgid ""
+"Before reporting a bug, upgrade to the most recent version of Electrum "
+"(latest release or git HEAD), and include the version number in your report."
+msgstr ""
+"Trước khi báo cáo một lỗi, vui lòng nâng cấp lên phiên bản mới nhất của "
+"Electrum (bản ra mới nhất hoặc git HEAD), và ghi kèm số phiên bản trong bản "
+"báo cáo."
+
+msgid "Bitcoin Address is None"
+msgstr "Chưa có địa chỉ Bitcoin"
+
+msgid ""
+"Bitcoin address where the payment should be received. Note that each payment "
+"request uses a different Bitcoin address."
+msgstr ""
+"Adresses Bitcoin où vous devrez faire vos paiements. Notez que vous devriez "
+"utiliser une nouvelle adresse pour chaque transaction."
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"Les giao dịch Bitcoin ne sont généralement pas gratuites. L'expéditeur paye "
+"des frais de ธุรกรรม aux mineurs."
+
+msgid "Blockchain"
+msgstr "Blockchain"
+
+msgid "Broadcast"
+msgstr "Phát sóng"
+
+msgid "Broadcasting transaction..."
+msgstr "Đang phát sóng giao dịch..."
+
+msgid "Bump Fee"
+msgstr "Tăng phí GD"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Huỷ bỏ"
+
+msgid "Cannot broadcast transaction"
+msgstr "Không thể phát sóng giao dịch"
+
+msgid "Cannot read file"
+msgstr "Không thể đọc tệp"
+
+msgid "Chain split detected at block %d"
+msgstr "Việc tách chuỗi khối đã được phát hiện tại khối %d"
+
+msgid "Change Password"
+msgstr "Đổi mật khẩu"
+
+msgid "Changing PIN code."
+msgstr "Đang đổi mã PIN."
+
+msgid "Child Pays for Parent"
+msgstr "Child Pays for Parent"
+
+msgid "Child pays for parent"
+msgstr "GD con trả cho GD mẹ (CPFP)"
+
+msgid "Choose a password to encrypt your wallet keys."
+msgstr "Chọn một mật khẩu để mã hoá các khoá của ví bạn."
+
+msgid "Choose a server"
+msgstr "Chọn một máy chủ"
+
+msgid ""
+"Choose coin (UTXO) selection method.  The following are available:\n"
+"\n"
+msgstr ""
+"Chọn một phương pháp chọn coin (UTXO). Có những phương pháp khả dụng sau:\n"
+"\n"
+
+msgid "Choose the number of signatures needed to unlock funds in your wallet:"
+msgstr "Chọn số lượng chữ kí cần thiết để mở khoá các khoản trong ví của bạn:"
+
+msgid ""
+"Choose which online block explorer to use for functions that open a web "
+"browser"
+msgstr ""
+"Chọn một dịch vụ truy xuất khối trực tuyến để dùng cho các thao tác mở trình "
+"duyệt"
+
+msgid "Choose your chain"
+msgstr "Chọn chuỗi khối của bạn"
+
+msgid "Choose..."
+msgstr "Chọn..."
+
+msgid "Clear"
+msgstr "Xoá"
+
+msgid "Close"
+msgstr "Đóng"
+
+msgid "Co&ins"
+msgstr "Monnaie"
+
+msgid "Coin selection"
+msgstr "Lựa chọn coin"
+
+msgid "Con&sole"
+msgstr "Dòng &lệnh"
+
+msgid "Con&tacts"
+msgstr "Danh &bạ"
+
+msgid "Confirm Passphrase:"
+msgstr "Nhập lại mật khẩu:"
+
+msgid "Confirm Password:"
+msgstr "Nhập lại mật khẩu:"
+
+msgid "Confirm Seed"
+msgstr "Xác nhận hạt giống"
+
+msgid "Confirm new PIN"
+msgstr "Nhập lại mã PIN mới"
+
+msgid "Connected to %d nodes."
+msgstr "Đã kết nối tới %d nút."
+
+msgid "Contacts"
+msgstr "Danh bạ"
+
+msgid "Copy"
+msgstr "Sao chép"
+
+msgid "Copy %s"
+msgstr "Sao chép %s"
+
+msgid "Copy URI"
+msgstr "Sao chép URI"
+
+msgid "Copy and Close"
+msgstr "Sao chép và đóng"
+
+msgid "Copy to clipboard"
+msgstr "Sao chép vào bộ nhớ tạm"
+
+msgid "Could not start Barcode Scanner."
+msgstr "Không thể khởi chạy Trình quét mã vạch."
+
+msgid "Critical Error"
+msgstr "Lỗi nghiêm trọng"
+
+msgid "Current Password:"
+msgstr "Mật khẩu hiện tại:"
+
+msgid "Current fee"
+msgstr "Phí giao dịch hiện tại"
+
+msgid "Dark/Light"
+msgstr "Tối/Sáng"
+
+msgid "Date"
+msgstr "Ngày"
+
+msgid "Date: %s"
+msgstr "Ngày: %s"
+
+msgid "Decrypt"
+msgstr "Giải mã"
+
+msgid "Default Servers"
+msgstr "Các máy chủ mặc định"
+
+msgid "Delete"
+msgstr "Xoá"
+
+msgid "Delete invoice?"
+msgstr "Xoá hoá đơn?"
+
+msgid "Delete wallet?"
+msgstr "Xoá ví?"
+
+msgid "Denomination"
+msgstr "Đơn vị"
+
+msgid "Description"
+msgstr "Mô tả"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "Mô tả giao dịch này (không bắt buộc)."
+
+msgid "Details"
+msgstr "Chi tiết"
+
+msgid "Disconnected"
+msgstr "Đã ngắt kết nối"
+
+msgid "Display the details of your transactions before signing it."
+msgstr "Hiển thị các chi tiết của giao dịch của bạn trước khi kí nó."
+
+msgid "Do not store it electronically."
+msgstr "Không lưu trữ nó trong các thiết bị điện tử."
+
+msgid "Do you want to delete '%s'?"
+msgstr "Bạn có muốn xóa '%s'?"
+
+msgid "Do you want to delete the old file"
+msgstr "Bạn có muốn xóa tập tin cũ không"
+
+msgid "Do you want to remove"
+msgstr "Bạn có muốn xóa"
+
+msgid "Do you wish to continue?"
+msgstr "Bạn có muốn tiếp tục không?"
+
+msgid "Edit %s"
+msgstr "Sửa %s"
+
+msgid "Edit fees manually"
+msgstr "Chỉnh sửa các khoản phí một cách thủ công"
+
+msgid "Electrum App"
+msgstr "Ứng dụng Electrum"
+
+msgid "Electrum Plugins"
+msgstr "Các phần bổ trợ cho Electrum"
+
+msgid ""
+"Electrum communicates with remote servers to get information about your "
+"transactions and addresses. The servers all fulfil the same purpose only "
+"differing in hardware. In most cases you simply want to let Electrum pick "
+"one at random.  However if you prefer feel free to select a server manually."
+msgstr ""
+"Electrum liên lạc với các máy chủ từ xa để lấy thông tin về các giao dịch và "
+"địa chỉ của bạn. Những máy chủ đó đều phục vụ một mục đích duy nhất giống "
+"nhau, chúng chỉ khác nhau về mặt phần cứng. Trong đa số trường hợp bạn chỉ "
+"cần để Electrum chọn ngẫu nhiên một máy chủ bất kì. Tuy nhiên, nếu bạn muốn "
+"thì vẫn có thể chọn một máy chủ theo ý mình."
+
+msgid ""
+"Electrum connects to several nodes in order to download block headers and "
+"find out the longest blockchain."
+msgstr ""
+"Electrum kết nối tới một vài nút để tải các đầu khối về và tìm chuỗi khối "
+"dài nhất."
+
+msgid "Electrum is generating your addresses, please wait..."
+msgstr "Electrum đang tạo địa chỉ của bạn, vui lòng chờ..."
+
+msgid "Electrum preferences"
+msgstr "Thiết đặt Electrum"
+
+msgid ""
+"Electrum sends your wallet addresses to a single server, in order to receive "
+"your transaction history."
+msgstr ""
+"Electrum gửi địa chỉ ví của bạn tới một máy chủ để lấy về lịch sử giao dịch."
+
+msgid "Electrum wallet"
+msgstr "Ví Electrum"
+
+msgid "Electrum was unable to copy your wallet file to the specified location."
+msgstr "Electrum không thể sao chép tệp ví của bạn tới vị trí đã chỉ định."
+
+msgid "Electrum was unable to export your labels."
+msgstr "Electrum không thể xuất các nhãn của bạn."
+
+msgid "Electrum was unable to import your labels."
+msgstr "Electrum không thể nhập các nhãn của bạn."
+
+msgid "Electrum was unable to open your transaction file"
+msgstr "Electrum không thể mở tệp giao dịch của bạn"
+
+msgid "Electrum was unable to parse your transaction"
+msgstr "Electrum không thể phân tích giao dịch của bạn"
+
+msgid "Electrum was unable to produce a private key-export."
+msgstr "Electrum không thể xuất được khoá riêng."
+
+msgid "Electrum was unable to produce a transaction export."
+msgstr "Electrum không thể xuất giao dịch."
+
+msgid ""
+"Electrum's focus is speed, with low resource usage and simplifying Bitcoin. "
+"You do not need to perform regular backups, because your wallet can be "
+"recovered from a secret phrase that you can memorize or write on paper. "
+"Startup times are instant because it operates in conjunction with high-"
+"performance servers that handle the most complicated parts of the Bitcoin "
+"system.\n"
+"\n"
+msgstr ""
+"Tầm nhìn của Electrum là tốc độ nhanh, sử dụng ít tài nguyên và đơn giản hoá "
+"Bitcoin. Bạn không cần phải thực hiện sao lưu thường xuyên, bởi vì ví của "
+"bạn có thể được khôi phục chỉ từ một dãy từ khoá mà bạn có thể nhớ hoặc ghi "
+"lên giấy. Thời gian khởi động của ứng dụng khá là nhanh, sở dĩ Electrum hoạt "
+"động với các máy chủ tốc độ cao bên ngoài có nhiệm vụ xử lý những thủ tục "
+"phức tạp nhất của hệ thống Bitcoin.\n"
+"\n"
+
+msgid "Encrypt"
+msgstr "Mã hoá"
+
+msgid "Encrypt wallet file"
+msgstr "Mã hoá tệp ví"
+
+msgid "Encrypt/decrypt Message"
+msgstr "Mã hóa/giải mã tin nhắn"
+
+msgid "Encrypted"
+msgstr "Đã được mã hoá"
+
+msgid "Enter Passphrase"
+msgstr "Nhập mật khẩu"
+
+msgid "Enter Password"
+msgstr "Nhập mật khẩu"
+
+msgid "Enter Seed"
+msgstr "Nhập hạt giống"
+
+msgid "Enter a filename for the copy of your wallet"
+msgstr "Nhập tên của tệp bản sao của ví bạn"
+
+msgid "Enter a list of outputs in the 'Pay to' field."
+msgstr "Nhập danh sách các người nhận trong trường 'Gửi tới'."
+
+msgid "Enter addresses"
+msgstr "Nhập vào các địa chỉ"
+
+msgid "Enter description"
+msgstr "Nhập mô tả"
+
+msgid "Enter new PIN"
+msgstr "Nhập mã PIN mới"
+
+msgid "Enter private keys"
+msgstr "Nhập vào các khoá riêng"
+
+msgid "Enter private keys:"
+msgstr "Nhập các khoá riêng:"
+
+msgid ""
+"Enter their master private key (xprv) if you want to be able to sign for "
+"them."
+msgstr "Nhập khoá riêng chủ (xprv) nếu bạn muốn kí cho chúng."
+
+msgid "Enter wallet name"
+msgstr "Nhập tên ví"
+
+msgid "Enter your PIN code in order to decrypt your seed"
+msgstr "Nhập mã PIN của bạn để giải mã hạt giống"
+
+msgid "Enter your PIN code to confirm deletion of %s"
+msgstr "Nhập mã PIN của bạn để xoá %s"
+
+msgid "Enter your current PIN:"
+msgstr "Nhập mã PIN hiện tại của bạn:"
+
+msgid "Enter your password or choose another file."
+msgstr "Nhập mật khẩu của bạn hoặc chọn tệp khác."
+
+msgid "Enter your password to proceed"
+msgstr "Nhập mật khẩu của bạn để tiếp tục"
+
+msgid "Error"
+msgstr "Lỗi"
+
+msgid "Exit Electrum"
+msgstr "Thoát Electrum"
+
+msgid "Expected confirmation time"
+msgstr "Thời gian chờ dự kiến"
+
+msgid "Expiration date of your request."
+msgstr "Thời hạn của yêu cầu của bạn."
+
+msgid "Expired"
+msgstr "Đã hết hạn"
+
+msgid ""
+"Expired requests have to be deleted manually from your list, in order to "
+"free the corresponding Bitcoin addresses."
+msgstr ""
+"Các yêu cầu đã hết hạn cần được xoá một cách thủ công khỏi danh sách của "
+"bạn, nhằm giải phóng các địa chỉ Bitcoin tương ứng."
+
+msgid "Fee"
+msgstr "Phí"
+
+msgid "Hello World"
+msgstr "Xin chào"
+
+msgid "History"
+msgstr "Lịch sử"
+
+msgid ""
+"If you forget your PIN or lose your device, your seed phrase will be the "
+"only way to recover your funds."
+msgstr ""
+"Nếu bạn quên mã PIN hoặc mất thiết bị, chuỗi hạt giống của bạn sẽ là phương "
+"thức duy nhất giúp bạn phục hồi khoản tiền của mình."
+
+msgid "Input amount"
+msgstr "Import input 100000000000000000"
+
+msgid "Invalid Address"
+msgstr "Địa chỉ không hợp lệ."
+
+msgid "Invalid Amount"
+msgstr "Số tiền không hợp lệ"
+
+msgid "Invalid Bitcoin Address"
+msgstr "Địa chỉ Bitcoin không hợp lệ."
+
+msgid "Invalid PIN"
+msgstr "PIN không hợp lệ"
+
+msgid "Invoice"
+msgstr "Bill"
+
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+msgid "Master Public Key"
+msgstr "Khoá công chủ"
+
+msgid "Message"
+msgstr "Tin nhắn."
+
+msgid "New Contact"
+msgstr "Liên lạc mới."
+
+msgid "No Wallet"
+msgstr "Không có ví nào"
+
+msgid "No transactions found for this seed"
+msgstr "không tìm thấy giao dịch với hạt giống này."
+
+msgid "None"
+msgstr "Không có gì"
+
+msgid "Not connected"
+msgstr "Chưa kết nối."
+
+msgid "Not enough funds"
+msgstr "Không đủ kinh phí"
+
+msgid "Nothing set !"
+msgstr "Không có gì được đặt !"
+
+msgid ""
+"Number of zeros displayed after the decimal point. For example, if this is "
+"set to 2, \"1.\" will be displayed as \"1.00\""
+msgstr "Số không hiển thị sau dấu thập phân."
+
+msgid "OK"
+msgstr "Đồng ý."
+
+msgid "Offline"
+msgstr "Ngoại tuyến"
+
+msgid "PIN mismatch"
+msgstr "PIN không khớp"
+
+msgid "Passphrase"
+msgstr "Mật khẩu"
+
+msgid "Password"
+msgstr "Mật khẩu."
+
+msgid "Pay to"
+msgstr "Trả cho."
+
+msgid "Payment request has expired"
+msgstr "Yêu cầu thanh toán đã hết hạn"
+
+msgid "Payment sent."
+msgstr "Đã gửi tiền."
+
+msgid "Please enter your password"
+msgstr "Vui lòng điền mật khẩu"
+
+msgid "Please install the Barcode Scanner app from ZXing"
+msgstr "Vui lòng cài đặt ứng dụng Trình quét mã vạch của ZXing"
+
+msgid ""
+"Please paste your cosigners master public key, or scan it using the camera "
+"button."
+msgstr ""
+"Vui lòng điền khoá công chủ của người cùng kí với bạn, hoặc quét nó bằng "
+"cách bấm nút máy ảnh."
+
+msgid "Please retype your seed phrase, to confirm that you properly saved it"
+msgstr ""
+"Vui lòng nhập lại hạt giống của bạn, để chúng tôi biết rằng bạn đã lưu lại "
+"nó cẩn thận"
+
+msgid "Please type your seed phrase using the virtual keyboard."
+msgstr "Vui lòng nhập hạt giống, sử dụng bàn phím ảo."
+
+msgid "Press again to exit"
+msgstr "Nhấn lần nữa để thoát"
+
+msgid "Receive"
+msgstr "Nhận"
+
+msgid "Save"
+msgstr "Lưu"
+
+msgid "Seed"
+msgstr "Hạt giống"
+
+msgid "Send"
+msgstr "Gửi"
+
+msgid "Sending"
+msgstr "Đang gửi"
+
+msgid "Server lagging (%d blocks)"
+msgstr "Máy chủ đang quá tải (%d khối)"
+
+msgid "Synchronizing..."
+msgstr "Đang đồng bộ..."
+
+msgid ""
+"Text copied to clipboard.\n"
+"Tap again to display it as QR code."
+msgstr ""
+"Văn bản đã được sao vào bộ nhớ đệm.\n"
+"Nhấn lần nữa để hiển thị dưới dạng mã QR."
+
+msgid "Use the camera button to scan a QR code."
+msgstr "Sử dụng nút máy ảnh để quét mã QR."
+
+msgid "low fee"
+msgstr "phí thấp"

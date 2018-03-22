@@ -1,0 +1,93 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2017-08-25 05:30-0400\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Esperanto\n"
+"Language: eo_UY\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: eo\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid "1 day"
+msgstr "1 tago"
+
+msgid "1 hour"
+msgstr "1 horo"
+
+msgid "1 week"
+msgstr "1 semajno"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"Sugestita honorario aldoniĝis aŭtomate al tiu kampo. Vi povas transpasi ĝin. "
+"La sugestita honorario pligrandiĝas kun la grando de la transakcio."
+
+msgid "Address"
+msgstr "Adreso"
+
+msgid "Amount"
+msgstr "Sumo"
+
+msgid "Amount to be sent."
+msgstr "Sumo sendiĝota."
+
+msgid "Balance"
+msgstr "Bilanco"
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"Bitmonaj transakcioj ne estas senkosta ĝenerale. Sendanto pagis la "
+"transakcian honorarion por la kasoj."
+
+msgid "Cancel"
+msgstr "Nuligi"
+
+msgid "Clear"
+msgstr "Vakigi"
+
+msgid "Close"
+msgstr "Fermi"
+
+msgid "Contacts"
+msgstr "Kontaktoj"
+
+msgid "Date"
+msgstr "Dato"
+
+msgid "Default Servers"
+msgstr "Defaŭltaj serviloj"
+
+msgid "Delete"
+msgstr "Forigi"
+
+msgid "Description"
+msgstr "Priskribo"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "Priskribo de la transakcio (ne nepra)."
+
+msgid "Details"
+msgstr "Detalo"
+
+msgid "Encrypt"
+msgstr "Ĉifri"
+
+msgid "Encrypt/decrypt Message"
+msgstr "Ĉifri/malĉifri Mesaĝo"
+
+msgid "Encrypted"
+msgstr "Ĉifrita"
+
+msgid "Error"
+msgstr "Eraro"

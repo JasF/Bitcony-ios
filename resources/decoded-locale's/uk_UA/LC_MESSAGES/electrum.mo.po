@@ -1,0 +1,1770 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: electrum\n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: 2018-03-11 23:03-0400\n"
+"Last-Translator: rdymac <rdy@aol.es>\n"
+"Language-Team: Ukrainian\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=((n%10==1 && n%100!=11) ? 0 : ((n%10 >= 2 "
+"&& n%10 <=4 && (n%100 < 12 || n%100 > 14)) ? 1 : ((n%10 == 0 || (n%10 >= 5 "
+"&& n%10 <=9)) || (n%100 >= 11 && n%100 <= 14)) ? 2 : 3));\n"
+"X-Generator: crowdin.com\n"
+"X-Crowdin-Project: electrum\n"
+"X-Crowdin-Language: uk\n"
+"X-Crowdin-File: /electrum-client/messages.pot\n"
+
+msgid " These settings affects the fields in the Send tab"
+msgstr " Ці налаштування впливають на поля у вкладці Відправлення"
+
+msgid ""
+"%(txs)s new transactions received. Total amount received in the new "
+"transactions %(amount)s"
+msgstr ""
+"Отримано %(txs)s нових транзакцій. Загальна сума транзакцій: %(amount)s"
+
+msgid "&About"
+msgstr "&Про програму"
+
+msgid "&Addresses"
+msgstr "&Адреси"
+
+msgid "&Documentation"
+msgstr "&Документація"
+
+msgid "&Donate to server"
+msgstr "&Пожертвувати на сервер"
+
+msgid "&Encrypt/decrypt message"
+msgstr "&Зашифрувати/розшифрувати повідомлення"
+
+msgid "&Export"
+msgstr "&Експорт"
+
+msgid "&File"
+msgstr "&Файл"
+
+msgid "&From QR code"
+msgstr "&З QR-коду"
+
+msgid "&From file"
+msgstr "&З файлу"
+
+msgid "&From text"
+msgstr "&З тексту"
+
+msgid "&From the blockchain"
+msgstr "&З ланцюжка блоків"
+
+msgid "&Help"
+msgstr "&Допомога"
+
+msgid "&History"
+msgstr "&Історія"
+
+msgid "&Import"
+msgstr "&Імпорт"
+
+msgid "&Labels"
+msgstr "&Мітки"
+
+msgid "&Load transaction"
+msgstr "&Завантажити транзакцію"
+
+msgid "&Master Public Keys"
+msgstr "&Відкриті майстер-ключі"
+
+msgid "&Network"
+msgstr "&Мережа"
+
+msgid "&New"
+msgstr "&Створити"
+
+msgid "&New/Restore"
+msgstr "&Створити/Відновити"
+
+msgid "&Official website"
+msgstr "&Офіційний сайт"
+
+msgid "&Open"
+msgstr "&Відкрити"
+
+msgid "&Password"
+msgstr "&Пароль"
+
+msgid "&Pay to many"
+msgstr "&Оплатити більше"
+
+msgid "&Plugins"
+msgstr "&Розширення"
+
+msgid "&Private keys"
+msgstr "&Приватні ключі"
+
+msgid "&Quit"
+msgstr "&Вихід"
+
+msgid "&Recently open"
+msgstr "&Нещодавно відкриті"
+
+msgid "&Report Bug"
+msgstr "Повідомити про &проблему"
+
+msgid "&Save Copy"
+msgstr "&Створити копію"
+
+msgid "&Seed"
+msgstr "&Seed"
+
+msgid "&Sign/verify message"
+msgstr "&Підписати/перевірити повідомлення"
+
+msgid "&Sweep"
+msgstr "&Розгортка"
+
+msgid "&Tools"
+msgstr "&Інструменти"
+
+msgid "&View"
+msgstr "&Перегляд"
+
+msgid "&Wallet"
+msgstr "&Гаманець"
+
+msgid "+"
+msgstr "+"
+
+msgid "1 day"
+msgstr "1 день"
+
+msgid "1 hour"
+msgstr "1 година"
+
+msgid "1 week"
+msgstr "1 тиждень"
+
+msgid "A copy of your wallet file was created in"
+msgstr "Копія вашого гаманця була створена в"
+
+msgid ""
+"A suggested fee is automatically added to this field. You may override it. "
+"The suggested fee increases with the size of the transaction."
+msgstr ""
+"Пропонований розмір комісії автоматично додається в це поле. Ви можете "
+"перевизначити її. Вона збільшується разом з розміром транзакції."
+
+msgid "Add Cosigner"
+msgstr "Додати поручителя"
+
+msgid "Additional fees"
+msgstr "Додаткові сплати"
+
+msgid "Address"
+msgstr "Адреса"
+
+msgid "Address:"
+msgstr "Адреса:"
+
+msgid "Always"
+msgstr "Завжди"
+
+msgid "Amount"
+msgstr "Сума"
+
+msgid "Amount received:"
+msgstr "Отримана сума:"
+
+msgid "Amount sent:"
+msgstr "Витрачена сума:"
+
+msgid "Amount to be sent"
+msgstr "Сума для відправлення"
+
+msgid "Amount to be sent."
+msgstr "Сума для відправлення."
+
+msgid "Appearance"
+msgstr "Основні"
+
+msgid "Auto connect"
+msgstr "Автоматичне підключення"
+
+msgid "BIP39 seed"
+msgstr "BIP39 seed"
+
+msgid ""
+"BIP39 seeds can be imported in Electrum so that users can access funds "
+"locked in other wallets."
+msgstr ""
+"BIP39 зерна можна імпортувати в Electrum для доступу до заблокованих в інших "
+"гаманцях коштів."
+
+msgid "Back"
+msgstr "Назад"
+
+msgid "Balance"
+msgstr "Рахунок"
+
+msgid "Base unit"
+msgstr "Валюта"
+
+msgid "Base unit of your wallet."
+msgstr "Валюта вашого гаманця."
+
+msgid ""
+"Before reporting a bug, upgrade to the most recent version of Electrum "
+"(latest release or git HEAD), and include the version number in your report."
+msgstr ""
+"Перед повідомленням про помилку, оновіться до останньої версії Electrum "
+"(останній реліз чи git HEAD). Також додайте номер версії у звіті."
+
+msgid "Bitcoin Address is None"
+msgstr "Bitcoin-адреса не визначена"
+
+msgid ""
+"Bitcoin address where the payment should be received. Note that each payment "
+"request uses a different Bitcoin address."
+msgstr ""
+"Адреса Bitcoin, на який повинен бути отриманий платіж. Зверніть увагу, що "
+"кожен запит платежу використовує іншу Bitcoin адресу."
+
+msgid ""
+"Bitcoin transactions are in general not free. A transaction fee is paid by "
+"the sender of the funds."
+msgstr ""
+"Транзакції Bitcoin зазвичай не безкоштовні. Комісія за транзакцію "
+"оплачується тим, хто пересилає кошти."
+
+msgid "Blockchain"
+msgstr "Блокчейн"
+
+msgid "Broadcast"
+msgstr "Трансляція"
+
+msgid "Broadcasting transaction..."
+msgstr "Трансляція транзакції..."
+
+msgid "Bump Fee"
+msgstr "Комісія колізії"
+
+msgid "CSV"
+msgstr "CSV"
+
+msgid "Cancel"
+msgstr "Скасувати"
+
+msgid "Cannot broadcast transaction"
+msgstr "Неможливо транслювати транзакцію"
+
+msgid "Cannot read file"
+msgstr "Не вдається прочитати файл"
+
+msgid "Chain split detected at block %d"
+msgstr "Розщеплення ланцюжка виявлено в блоці %d"
+
+msgid "Change Password"
+msgstr "Змінити Пароль"
+
+msgid "Changing PIN code."
+msgstr "Зміна PIN-коду."
+
+msgid "Child Pays for Parent"
+msgstr "Нащадок Платить за Батька"
+
+msgid "Child pays for parent"
+msgstr "Нащадок платить за батька"
+
+msgid "Choose a password to encrypt your wallet keys."
+msgstr "Виберіть пароль для шифрування ключів вашого гаманця."
+
+msgid "Choose a server"
+msgstr "Вибери сервер"
+
+msgid ""
+"Choose coin (UTXO) selection method.  The following are available:\n"
+"\n"
+msgstr ""
+"Оберіть спосіб підбору монет (UTXO). Доступно наступне:\n"
+"\n"
+
+msgid "Choose the number of signatures needed to unlock funds in your wallet:"
+msgstr ""
+"Виберіть номер підпису, необхідного для розблокування коштів на вашому "
+"гаманці:"
+
+msgid ""
+"Choose which online block explorer to use for functions that open a web "
+"browser"
+msgstr ""
+"Виберіть, який онлайн блок досліджувати для використання функцій, які "
+"відкривають веб-браузер"
+
+msgid "Choose your chain"
+msgstr "Оберіть ваш ланцюжок"
+
+msgid "Choose..."
+msgstr "Обрати..."
+
+msgid "Clear"
+msgstr "Очистити"
+
+msgid "Close"
+msgstr "Закрити"
+
+msgid "Co&ins"
+msgstr "Монети"
+
+msgid "Coin selection"
+msgstr "Оберіть валюту"
+
+msgid "Con&sole"
+msgstr "Консоль"
+
+msgid "Con&tacts"
+msgstr "Контакти"
+
+msgid "Confirm Passphrase:"
+msgstr "Підтвердження кодової фрази:"
+
+msgid "Confirm Password:"
+msgstr "Підтвердження пароля:"
+
+msgid "Confirm Seed"
+msgstr "Підтвердження Seed"
+
+msgid "Confirm new PIN"
+msgstr "Підтвердження нового PIN-кода"
+
+msgid "Connected to %d nodes."
+msgstr "Підключись до %d вузлів."
+
+msgid "Contacts"
+msgstr "Контакти"
+
+msgid "Copy"
+msgstr "Копіювати"
+
+msgid "Copy %s"
+msgstr "Копіювати %s"
+
+msgid "Copy URI"
+msgstr "Копіювати URI"
+
+msgid "Copy and Close"
+msgstr "Копіювати та Закрити"
+
+msgid "Copy to clipboard"
+msgstr "Скопіювати в буфер обміну"
+
+msgid "Could not start Barcode Scanner."
+msgstr "Не вдалося запустити сканер."
+
+msgid "Critical Error"
+msgstr "Критична Помилка"
+
+msgid "Current Password:"
+msgstr "Поточний пароль:"
+
+msgid "Current fee"
+msgstr "Поточна комісія"
+
+msgid "Dark/Light"
+msgstr "Темна/Світла"
+
+msgid "Date"
+msgstr "Дата"
+
+msgid "Date: %s"
+msgstr "Дата: %s"
+
+msgid "Decrypt"
+msgstr "Розшифрувати"
+
+msgid "Default Servers"
+msgstr "Сервери за замовчуванням"
+
+msgid "Delete"
+msgstr "Видалити"
+
+msgid "Delete invoice?"
+msgstr "Видалити рахунок-фактуру?"
+
+msgid "Delete wallet?"
+msgstr "Видалити гаманець?"
+
+msgid "Denomination"
+msgstr "Деномінація"
+
+msgid "Description"
+msgstr "Опис"
+
+msgid "Description of the transaction (not mandatory)."
+msgstr "Опис транзакції (не обов'язково)."
+
+msgid "Details"
+msgstr "Подробиці"
+
+msgid "Disconnected"
+msgstr "Роз'єднано"
+
+msgid "Display the details of your transactions before signing it."
+msgstr "Відображення докладних відомостей про угоду до того, як її підписати."
+
+msgid "Do not store it electronically."
+msgstr "Не зберігайте в електронному вигляді."
+
+msgid "Do you want to delete '%s'?"
+msgstr "Ви дійсно хочете видалити \"%s\"?"
+
+msgid "Do you want to delete the old file"
+msgstr "Ви дійсно хочете видалити старий файл"
+
+msgid "Do you want to remove"
+msgstr "Ви хочете видалити"
+
+msgid "Do you wish to continue?"
+msgstr "Ви хочете продовжити?"
+
+msgid "Edit %s"
+msgstr "Редагувати %s"
+
+msgid "Edit fees manually"
+msgstr "Редагувати комісії вручну"
+
+msgid "Electrum App"
+msgstr "Додаток Electrum"
+
+msgid "Electrum Plugins"
+msgstr "Розширення Electrum"
+
+msgid ""
+"Electrum communicates with remote servers to get information about your "
+"transactions and addresses. The servers all fulfil the same purpose only "
+"differing in hardware. In most cases you simply want to let Electrum pick "
+"one at random.  However if you prefer feel free to select a server manually."
+msgstr ""
+"Electrum взаємодіє з віддаленими серверами, щоб отримати інформацію про Ваші "
+"транзакції та адреси. Всі сервери служать одній меті, але розрізняються в "
+"апаратній частині. Зазвичай Electrum просто обирає випадковий сервер, але "
+"якщо Ви віддаєте перевагу певному серверу, не соромтесь обрати його."
+
+msgid ""
+"Electrum connects to several nodes in order to download block headers and "
+"find out the longest blockchain."
+msgstr ""
+"Electrum підключається до декількох нод задля отримання заголовків блоків та "
+"пошуку найдовшого ланцюжка блоків."
+
+msgid "Electrum is generating your addresses, please wait..."
+msgstr "Electrum зараз генерує ваші адреси, будь ласка, зачекайте..."
+
+msgid "Electrum preferences"
+msgstr "Налаштування Electrum"
+
+msgid ""
+"Electrum sends your wallet addresses to a single server, in order to receive "
+"your transaction history."
+msgstr ""
+"Electrum відправляє адресу Вашого гаманця на один з серверів, щоб отримати "
+"історію транзакцій."
+
+msgid "Electrum wallet"
+msgstr "Electrum гаманець"
+
+msgid "Electrum was unable to copy your wallet file to the specified location."
+msgstr ""
+"Electrum не вдалося скопіювати файл вашого гаманця у вказане розташування."
+
+msgid "Electrum was unable to export your labels."
+msgstr "Electrum не вдалося експортувати ваші мітки."
+
+msgid "Electrum was unable to import your labels."
+msgstr "Electrum не вдалося імпортувати Ваші мітки."
+
+msgid "Electrum was unable to open your transaction file"
+msgstr "Electrum не вдалося відкрити файл ваших транзакцій"
+
+msgid "Electrum was unable to parse your transaction"
+msgstr "Electrum не вдалося обробити вашу трансакцію"
+
+msgid "Electrum was unable to produce a private key-export."
+msgstr "Electrum не вдалося експортувати ваш особистий ключ."
+
+msgid "Electrum was unable to produce a transaction export."
+msgstr "Electrum не вдалося експортувати транзакцію."
+
+msgid ""
+"Electrum's focus is speed, with low resource usage and simplifying Bitcoin. "
+"You do not need to perform regular backups, because your wallet can be "
+"recovered from a secret phrase that you can memorize or write on paper. "
+"Startup times are instant because it operates in conjunction with high-"
+"performance servers that handle the most complicated parts of the Bitcoin "
+"system.\n"
+"\n"
+msgstr ""
+"Мета Electrum - швидкість, використання малої кількості ресурсів та "
+"спрощення Bitcoin. Вам не потрібно створювати регулярні архіви тому що Ваш "
+"гаманець можна відновити з секретної фрази, яку можна запам'ятати або "
+"записати на папері. Запуск миттєвий, оскільки він працює у поєднанні з "
+"високопродуктивними серверами, які обробляють найбільш складні частини "
+"системи Bitcoin.\n"
+"\n"
+
+msgid "Encrypt"
+msgstr "Зашифрувати"
+
+msgid "Encrypt wallet file"
+msgstr "Зашифрований файл гаманця"
+
+msgid "Encrypt/decrypt Message"
+msgstr "Зашифрувати/розшифрувати Повідомлення"
+
+msgid "Encrypted"
+msgstr "Зашифрований"
+
+msgid "Enter Passphrase"
+msgstr "Введіть кодову фразу"
+
+msgid "Enter Password"
+msgstr "Введіть пароль"
+
+msgid "Enter Seed"
+msgstr "Введіть Seed"
+
+msgid "Enter a filename for the copy of your wallet"
+msgstr "Введіть ім'я файлу для копії вашого гаманця"
+
+msgid "Enter a list of outputs in the 'Pay to' field."
+msgstr "Введіть список виходів у поле \"Одержувач\"."
+
+msgid "Enter addresses"
+msgstr "Введіть адреси"
+
+msgid "Enter description"
+msgstr "Введіть опис"
+
+msgid "Enter new PIN"
+msgstr "Введіть новий PIN-код"
+
+msgid "Enter private keys"
+msgstr "Введіть особисті ключі"
+
+msgid "Enter private keys:"
+msgstr "Введіть приватні ключі:"
+
+msgid ""
+"Enter their master private key (xprv) if you want to be able to sign for "
+"them."
+msgstr ""
+"Введіть свій головний секретний ключ (xprv), якщо ви хочете мати можливість "
+"підписати їх."
+
+msgid "Enter wallet name"
+msgstr "Введіть назву гаманця"
+
+msgid "Enter your PIN code in order to decrypt your seed"
+msgstr "Введіть PIN-код, щоб розшифрувати свій seed"
+
+msgid "Enter your PIN code to confirm deletion of %s"
+msgstr "Введіть свій PIN-код для підтвердження видалення %s"
+
+msgid "Enter your current PIN:"
+msgstr "Введіть свій PIN-код:"
+
+msgid "Enter your password or choose another file."
+msgstr "Введіть свій пароль або виберіть інший файл."
+
+msgid "Enter your password to proceed"
+msgstr "Введіть свій пароль для продовження"
+
+msgid "Error"
+msgstr "Помилка"
+
+msgid "Exit Electrum"
+msgstr "Закрити Electrum"
+
+msgid "Expected confirmation time"
+msgstr "Очікуваний час підтвердження"
+
+msgid "Expiration date of your request."
+msgstr "Дата закінчення терміну дії вашого запиту."
+
+msgid "Expired"
+msgstr "Термін дії закінчився"
+
+msgid ""
+"Expired requests have to be deleted manually from your list, in order to "
+"free the corresponding Bitcoin addresses."
+msgstr ""
+"Минулі запити повинні бути видалені вручну з вашого списку, щоб звільнити "
+"відповідні адреси Bitcoin."
+
+msgid "Expires"
+msgstr "Завершується"
+
+msgid "Export"
+msgstr "Експортувати"
+
+msgid "Export History"
+msgstr "Експортувати Історію"
+
+msgid "Exposing a single private key can compromise your entire wallet!"
+msgstr "Розкриття особистого ключа може скомпрометувати весь ваш гаманець!"
+
+msgid "Extend this seed with custom words"
+msgstr "Розширити цей seed за допомогою користувацьких слів"
+
+msgid "Failed to update password"
+msgstr "Не вдалося оновити пароль"
+
+msgid "Fee"
+msgstr "Комісія"
+
+msgid "Fee:"
+msgstr "Комісія:"
+
+msgid "Fees"
+msgstr "Комісії"
+
+msgid "Fiat"
+msgstr "Класичні гроші"
+
+msgid "Fiat currency"
+msgstr "Валюта класичних грошей"
+
+msgid "File"
+msgstr "Файл"
+
+msgid "Final"
+msgstr "Завершення"
+
+msgid "Find"
+msgstr "Знайти"
+
+msgid "Follow this branch"
+msgstr "Дотримуйтесь цієї лінії"
+
+msgid "Format"
+msgstr "Формат"
+
+msgid "Format: address, amount"
+msgstr "Формат: адреса, сума"
+
+msgid "From"
+msgstr "Від"
+
+msgid "From %d cosigners"
+msgstr "Від %d друзів"
+
+msgid "Height"
+msgstr "Висота"
+
+msgid "Hello World"
+msgstr "Привіт, Україно"
+
+msgid "Here is your master public key."
+msgstr "Ваш головний відкритий ключ."
+
+msgid "Hide"
+msgstr "Приховати"
+
+msgid "History"
+msgstr "Історія"
+
+msgid "Host"
+msgstr "Хост"
+
+msgid "How do you want to connect to a server? "
+msgstr "Як ви хочете отримати доступ до сервера? "
+
+msgid ""
+"However, BIP39 seeds do not include a version number, which compromises "
+"compatibility with future wallet software."
+msgstr ""
+"Однак зерно BIP39 не включає номер версії, що погіршує сумісність із "
+"майбутнім програмним забезпеченням гаманця."
+
+msgid "Identity"
+msgstr "Ідентифікація"
+
+msgid ""
+"If auto-connect is enabled, Electrum will always use a server that is on the "
+"longest blockchain."
+msgstr ""
+"Якщо включено автоматичне підключення, Electrum буде завжди використовувати "
+"сервер з найдовшим ланцюжком блоків."
+
+msgid ""
+"If it is disabled, you have to choose a server you want to use. Electrum "
+"will warn you if your server is lagging."
+msgstr ""
+"Якщо він неактивний, оберіть сервер для використання. Electrum попереджатиме "
+"Вас щодо затримок серверу."
+
+msgid "If the fee is low"
+msgstr "Якщо комісія маленька"
+
+msgid "If you check this box, your transaction will be marked as non-final,"
+msgstr ""
+"Якщо цей прапорець встановлений, ваша транзакція буде позначена як "
+"незакінчена,"
+
+msgid ""
+"If you forget your PIN or lose your device, your seed phrase will be the "
+"only way to recover your funds."
+msgstr ""
+"Якщо ви забудете PIN-код або втратите пристрій, seed буде єдиним способом "
+"відновити доступ до ваших коштів."
+
+msgid "If you lose your seed, your money will be permanently lost."
+msgstr "Якщо ви забудете seed, ваші гроші будуть втрачені назавжди."
+
+msgid ""
+"If you want to create new addresses, use a deterministic wallet instead."
+msgstr ""
+"Якщо ви хочете створити нові адреси, використовуйте детермінований гаманець."
+
+msgid "Import"
+msgstr "Імпортувати"
+
+msgid "Import addresses"
+msgstr "Імпорт адрес"
+
+msgid "Import file"
+msgstr "Імпорт файлу"
+
+msgid "Import private keys"
+msgstr "Імпортувати особисті ключі"
+
+msgid ""
+"In addition, Electrum does not verify the checksum of BIP39 seeds; make sure "
+"you type your seed correctly."
+msgstr ""
+"На додаток, Electrum не перевіряє контрольну суму зерен BIP39; впевніться у "
+"правильному наборі вашого зерна BIP39."
+
+msgid ""
+"In particular, DO NOT use 'redeem private key' services proposed by third "
+"parties."
+msgstr ""
+"Зокрема, НЕ ВИКОРИСТОВУЙТЕ служби третіх сторін, які пропонують \"отримати "
+"особистий ключ\"."
+
+msgid ""
+"In some cases, use up to 3 change addresses in order to break up large coin "
+"amounts and obfuscate the recipient address."
+msgstr ""
+"У деяких випадках використовується до трьох змін адреси, щоб розбити велику "
+"кількість монет і запитати адресу одержувача."
+
+msgid "Increase fee"
+msgstr "Збільшити комісію"
+
+msgid "Information"
+msgstr "Інформація"
+
+msgid "Input amount"
+msgstr "Введіть кількість"
+
+msgid "Input raw transaction"
+msgstr "Ввести raw-транзакцію"
+
+msgid "Inputs"
+msgstr "Вхід"
+
+msgid "Install Wizard"
+msgstr "Майстер Налаштувань"
+
+msgid "Install the zbar package to enable this."
+msgstr "Встановіть zbar-пакет, щоб використовувати це."
+
+msgid "Insufficient funds"
+msgstr "Недостатньо коштів"
+
+msgid "Invalid Address"
+msgstr "Невірна адреса"
+
+msgid "Invalid Amount"
+msgstr "Невірна сума"
+
+msgid "Invalid Bitcoin Address"
+msgstr "Невірна адреса Bitcoin"
+
+msgid "Invalid Lines found:"
+msgstr "Знайдено Недійсні Рядки:"
+
+msgid "Invalid PIN"
+msgstr "Неправильний PIN-код"
+
+msgid "Invalid bitcoin URI:"
+msgstr "Невірний Bitcoin URI:"
+
+msgid "Invoice"
+msgstr "Рахунок"
+
+msgid "Invoice saved as "
+msgstr "Рахунок записано як "
+
+msgid "Invoices"
+msgstr "Рахунок фактури"
+
+msgid "Keyboard shortcut: type \"!\" to send all your coins."
+msgstr "Гаряча клавіша: введіть \"!\" щоб відправити всі Ваші гроші."
+
+msgid "Label Settings"
+msgstr "Налаштунки Міток"
+
+msgid "Language"
+msgstr "Мова"
+
+msgid "Leave this field empty if you want to disable encryption."
+msgstr "Залиште ці поля порожніми, якщо ви хочете відключити шифрування."
+
+msgid "Line #"
+msgstr "Рядок #"
+
+msgid "Load transaction"
+msgstr "Завантажити транзакцію"
+
+msgid "Lookup transaction"
+msgstr "Пошук транзакції"
+
+msgid ""
+"Make sure you own the seed phrase or the private keys, before you request "
+"Bitcoins to be sent to this wallet."
+msgstr ""
+"Переконайтеся, що у вас є кодова фраза чи закритий ключ, перш ніж запитувати "
+"Bitcoin для відправлення в цей гаманець."
+
+msgid "Master Public Key"
+msgstr "Публічний майстер-ключ"
+
+msgid "Master Public Keys"
+msgstr "Публічні майстер-ключі"
+
+msgid "Max"
+msgstr "Максимально"
+
+msgid "Max fee exceeded"
+msgstr "Перевищено максимальну комісію"
+
+msgid "Max static fee"
+msgstr "Максимальна фіксована комісія"
+
+msgid "Max value of the static fee slider"
+msgstr "Максимальне значення при виборі фіксованої комісії"
+
+msgid "Memo"
+msgstr "Замітка"
+
+msgid "Message"
+msgstr "Повідомлення"
+
+msgid "Mining fee"
+msgstr "Комісія майнера"
+
+msgid "Multi-Signature Wallet"
+msgstr "Гаманець з мультипідписом"
+
+msgid "Name"
+msgstr "Ім'я"
+
+msgid "Network"
+msgstr "Мережа"
+
+msgid "Never"
+msgstr "Ніколи"
+
+msgid "Never disclose your seed."
+msgstr "Тримайте свій seed в таємниці."
+
+msgid "Never type it on a website."
+msgstr "Ніколи не вводьте його на веб-сайтах."
+
+msgid "New"
+msgstr "Новий"
+
+msgid "New Contact"
+msgstr "Новий Контакт"
+
+msgid "New Password:"
+msgstr "Новий Пароль:"
+
+msgid "New contact"
+msgstr "Новий контакт"
+
+msgid "New fee:"
+msgstr "Нова комісія:"
+
+msgid "New transaction received. %(amount)s"
+msgstr "Отримана нова транзакція. %(amount)s"
+
+msgid "Next"
+msgstr "Далі"
+
+msgid "No Wallet"
+msgstr "Немає Гаманців"
+
+msgid "No donation address for this server"
+msgstr "Немає пожертвувальної адреси для цього сервера"
+
+msgid "No message or amount"
+msgstr "Немає повідомлень чи суми"
+
+msgid "No more addresses in your wallet."
+msgstr "У вашому гаманці немає більше адрес."
+
+msgid "No outputs"
+msgstr "Немає результатів"
+
+msgid "No transactions found for this seed"
+msgstr "Для цього seed не виявлені транзакції"
+
+msgid "Node"
+msgstr "Нода"
+
+msgid "None"
+msgstr "Порожньо"
+
+msgid "Not connected"
+msgstr "Не підключено"
+
+msgid "Not enough funds"
+msgstr "Недостатньо коштів"
+
+msgid ""
+"Note that if you have frozen some of your addresses, the available funds "
+"will be lower than your total balance."
+msgstr ""
+"Зверніть увагу, що якщо ви заморозили деякі з ваших адрес, наявні кошти "
+"будуть менші, ніж ваш загальний баланс."
+
+msgid ""
+"Note that some merchants do not accept non-final transactions until they are "
+"confirmed."
+msgstr ""
+"Зверніть увагу, що деякі торговці не приймають незакінчені транзакції, поки "
+"вони не будуть підтверджені."
+
+msgid "Nothing set !"
+msgstr "Нічого не вибрано!"
+
+msgid ""
+"Number of zeros displayed after the decimal point. For example, if this is "
+"set to 2, \"1.\" will be displayed as \"1.00\""
+msgstr ""
+"Кількість десяткових нулів, що відображаються після коми. Наприклад, якщо "
+"вказано значення 2, то \"1.\" буде відображатися як \"1.00\""
+
+msgid "OK"
+msgstr "ОК"
+
+msgid "Offline"
+msgstr "Не в мережі"
+
+msgid "One output per line."
+msgstr "Один вихід на рядок."
+
+msgid "Online Block Explorer"
+msgstr "Онлайновий провідник по блокам"
+
+msgid "Open labels file"
+msgstr "Відкрити файл міток"
+
+msgid "OpenAlias"
+msgstr "OpenAlias"
+
+msgid "OpenAlias record, used to receive coins and to sign payment requests."
+msgstr ""
+"Запис OpenAlias, який використовується для отримання монет і підписування "
+"платіжних запитів."
+
+msgid "Options"
+msgstr "Опції"
+
+msgid "Output amount"
+msgstr "Вихідна кількість"
+
+msgid "Outputs"
+msgstr "Вихідні"
+
+msgid "Overview"
+msgstr "Огляд"
+
+msgid "PIN mismatch"
+msgstr "PIN не співпадають"
+
+msgid "Paid"
+msgstr "Сплачено"
+
+msgid "Passphrase"
+msgstr "Кодова фраза"
+
+msgid "Passphrase:"
+msgstr "Кодова фраза:"
+
+msgid "Password"
+msgstr "Пароль"
+
+msgid "Password Strength"
+msgstr "Надійність пароля"
+
+msgid "Password is disabled, this wallet is not protected"
+msgstr "Пароль відключений, даний гаманець не захищений"
+
+msgid "Password was updated successfully"
+msgstr "Пароль успішно змінено"
+
+msgid "Password:"
+msgstr "Пароль:"
+
+msgid "Pay Now"
+msgstr "Оплатити зараз"
+
+msgid "Pay to"
+msgstr "Одержувач"
+
+msgid "Pay to many"
+msgstr "Оплатити більше"
+
+msgid "Payment Request"
+msgstr "Запит Платежу"
+
+msgid "Payment request has expired"
+msgstr "Запит оплати закінчився"
+
+msgid "Payment sent."
+msgstr "Платіж відправлений."
+
+msgid "Pending"
+msgstr "В очікуванні"
+
+msgid "Please enter a seed phrase or a master key (xpub or xprv):"
+msgstr "Будь ласка, введіть кодову фразу чи майстер-ключ (xpub або xprv):"
+
+msgid ""
+"Please enter a seed phrase, a master key, a list of Bitcoin addresses, or a "
+"list of private keys"
+msgstr ""
+"Будь ласка, введіть кодову фразу, майстер-ключ, список Bitcoin-адрес або "
+"список приватних ключів"
+
+msgid "Please enter the master public key (xpub) of your cosigner."
+msgstr "Будь ласка, введіть відкритий ключ (xpub) вашого поручителя."
+
+msgid "Please enter the master public key of cosigner #%d:"
+msgstr "Будь ласка, введіть відкритий майстер ключа поручителя #%d:"
+
+msgid "Please enter your password"
+msgstr "Будь ласка, введіть ваш пароль"
+
+msgid ""
+"Please enter your seed derivation passphrase. Note: this is NOT your "
+"encryption password. Leave this field empty if you did not use one or are "
+"unsure."
+msgstr ""
+"Будь ласка, введіть seed. Примітка: це не ваш пароль шифрування. Залиште це "
+"поле порожнім, якщо ви не використовуєте це або не впевнені."
+
+msgid "Please enter your seed phrase in order to restore your wallet."
+msgstr "Будь ласка, ведіть Ваш seed для того, щоб відновити гаманець."
+
+msgid "Please install the Barcode Scanner app from ZXing"
+msgstr "Будь ласка, встановіть додаток штрих-сканера \"ZXing\""
+
+msgid ""
+"Please paste your cosigners master public key, or scan it using the camera "
+"button."
+msgstr ""
+"Будь ласка, вставте відкритий майстер-ключ ваших підписантів або відскануйте "
+"його з допомогою кнопки камери."
+
+msgid "Please report any bugs as issues on github:<br/>"
+msgstr "Будь ласка, повідомляйте про будь-які помилки на GitHub:<br/>"
+
+msgid "Please restart Electrum to activate the new GUI settings"
+msgstr ""
+"Будь ласка, перезапустіть Electrum для активації нових налаштувань інтерфейсу"
+
+msgid "Please retype your seed phrase, to confirm that you properly saved it"
+msgstr ""
+"Будь ласка, повторно введіть кодову фразу, щоб переконатися, що вона "
+"збережена вірно"
+
+msgid "Please save these %d words on paper (order is important). "
+msgstr "Будь ласка, збережіть ці %d слів на папері (порядок важливий). "
+
+msgid "Please share it with your cosigners."
+msgstr "Будь ласка, поділіться зі своїми підписантами."
+
+msgid "Please type your seed phrase using the virtual keyboard."
+msgstr ""
+"Будь ласка, введіть кодову фразу, використовуючи віртуальну клавіатуру."
+
+msgid "Please wait"
+msgstr "Будь ласка, зачекайте"
+
+msgid "Please wait..."
+msgstr "Будь ласка, зачекайте..."
+
+msgid "Port"
+msgstr "Порт"
+
+msgid "Preferences"
+msgstr "Налаштування"
+
+msgid "Press 'Next' to create this wallet, or choose another file."
+msgstr "Натисніть 'Далі' для створення цього гаманця або оберіть інший файл."
+
+msgid "Press 'Next' to open this wallet."
+msgstr "Натисніть \"Далі\", щоб відкрити цей гаманець."
+
+msgid "Press again to exit"
+msgstr "Натисніть ще раз, щоб закрити"
+
+msgid "Preview"
+msgstr "Попередній перегляд"
+
+msgid "Private key"
+msgstr "Особистий ключ"
+
+msgid "Private keys"
+msgstr "Приватні ключі"
+
+msgid "Private keys exported."
+msgstr "Особисті ключі експортовані."
+
+msgid "Proceed?"
+msgstr "Продовжити?"
+
+msgid "Propose Replace-By-Fee"
+msgstr "Запропонувати змінити комісію"
+
+msgid "Proxy"
+msgstr "Проксі"
+
+msgid "Proxy user"
+msgstr "Логін проксі"
+
+msgid "Public key"
+msgstr "Відкритий ключ"
+
+msgid "Public keys"
+msgstr "Публічні ключі"
+
+msgid "QR code"
+msgstr "QR-код"
+
+msgid "QR code copied to clipboard"
+msgstr "QR-код скопійований в буфер обміну"
+
+msgid "QR code saved to file"
+msgstr "QR-код збережений у файл"
+
+msgid "Read QR code"
+msgstr "Сканувати QR-код"
+
+msgid "Read file"
+msgstr "Відкрити файл"
+
+msgid "Receive"
+msgstr "Отримання"
+
+msgid "Receiving address"
+msgstr "Адреса отримання"
+
+msgid "Recipient of the funds."
+msgstr "Одержувач коштів."
+
+msgid "Recovery successful"
+msgstr "Успішне відновлення"
+
+msgid "Redeem Script"
+msgstr "Скрипт відновлення"
+
+msgid "Remove"
+msgstr "Видалити"
+
+msgid "Remove %s from your list of contacts?"
+msgstr "Видалити %s зі списку ваших контактів?"
+
+msgid "Replaceable"
+msgstr "Можна замінити"
+
+msgid "Reporting Bugs"
+msgstr "Повідомлення про Проблеми"
+
+msgid "Request expires"
+msgstr "Запит протермінований"
+
+msgid "Request saved successfully"
+msgstr "Запит успішно збережений"
+
+msgid "Requested amount"
+msgstr "Запитувана сума"
+
+msgid "Requestor"
+msgstr "Запитувач"
+
+msgid "Requests"
+msgstr "Запити"
+
+msgid "Require %d signatures"
+msgstr "Вимагається %d підписів"
+
+msgid "Requires"
+msgstr "Потрібно"
+
+msgid "SSL certificate"
+msgstr "SSL-сертифікат"
+
+msgid "SSL certificate used to sign payment requests."
+msgstr "SSL-сертифікат використовується для підпису виставлених рахунків."
+
+msgid "Save"
+msgstr "Зберегти"
+
+msgid "Save as BIP70 file"
+msgstr "Зберегти як BIP70-файл"
+
+msgid "Save invoice to file"
+msgstr "Зберігти рахунок в файл"
+
+msgid "Seed"
+msgstr "Seed"
+
+msgid "Seed Type"
+msgstr "Тип seed"
+
+msgid "Select file to export your private keys to"
+msgstr "Виберіть файл для експорту ваших особистих ключів"
+
+msgid "Select file to export your wallet transactions to"
+msgstr "Виберіть файл, в який слід експортувати ваші транзакції"
+
+msgid "Select file to save your labels"
+msgstr "Виберіть файл для збереження ваших міток"
+
+msgid "Select server automatically"
+msgstr "Вибрати сервер автоматично"
+
+msgid "Select server manually"
+msgstr "Вибрати сервер вручну"
+
+msgid "Select where to save your payment request"
+msgstr "Виберіть місце для збереження запиту платежу"
+
+msgid "Select where to save your signed transaction"
+msgstr "Виберіть, куди зберегти вашу підписану транзакцію"
+
+msgid "Select which language is used in the GUI (after restart)."
+msgstr "Виберіть, яку мову використовувати в інтерфейсі (після перезапуску)."
+
+msgid "Select your transaction file"
+msgstr "Виберіть ваш файл транзакції"
+
+msgid "Send"
+msgstr "Відправити"
+
+msgid "Sending"
+msgstr "Відправлення"
+
+msgid "Server"
+msgstr "Сервер"
+
+msgid "Server is lagging (%d blocks)"
+msgstr "Сервер відстає (%d блоків)"
+
+msgid "Server lagging (%d blocks)"
+msgstr "Затримка сервера (%d блоків)"
+
+msgid "Server peers"
+msgstr "Серверні піри"
+
+msgid "Settings"
+msgstr "Налаштування"
+
+msgid "Show"
+msgstr "Показати"
+
+msgid "Show QR Code"
+msgstr "Показати QR-код"
+
+msgid "Show as QR code"
+msgstr "Показати як QR-код"
+
+msgid "Show fee edit box in send tab."
+msgstr "Показувати поле коригування комісії при відправленні."
+
+msgid "Show history rates"
+msgstr "Показати історію"
+
+msgid "Show/Hide"
+msgstr "Показати/Приховати"
+
+msgid "Sign"
+msgstr "Підписати"
+
+msgid "Sign/verify Message"
+msgstr "Підписати/верифікувати повідомлення"
+
+msgid "Signature"
+msgstr "Підпис"
+
+msgid "Signature verified"
+msgstr "Підпис звірена"
+
+msgid "Signing transaction..."
+msgstr "Транзакція підписується..."
+
+msgid "Size:"
+msgstr "Розмір:"
+
+msgid "Source"
+msgstr "Джерело"
+
+msgid "Spend only confirmed coins"
+msgstr "Витрачайте тільки підтверджені монети"
+
+msgid "Spend only confirmed inputs."
+msgstr "Витрачайте тільки підтверджені кошти."
+
+msgid "Status"
+msgstr "Статус"
+
+msgid "Status:"
+msgstr "Статус:"
+
+msgid "Success"
+msgstr "Успішно"
+
+msgid "Sweep"
+msgstr "Замести"
+
+msgid "Sweep private keys"
+msgstr "Замести закриті ключі"
+
+msgid "Synchronizing..."
+msgstr "Синхронізація..."
+
+msgid ""
+"Text copied to clipboard.\n"
+"Tap again to display it as QR code."
+msgstr ""
+"Текст скопійовано в буфер обміну.\n"
+"Натисніть ще раз, щоб показати його у вигляді QR-коду."
+
+msgid ""
+"The amount of fee can be decided freely by the sender. However, transactions "
+"with low fees take more time to be processed."
+msgstr ""
+"Розмір комісії може вільно бути визначений відправником. Але важливо "
+"розуміти, транзакції з низькою комісією можуть потребувати більше часу на "
+"обробку."
+
+msgid ""
+"The amount will be displayed in red if you do not have enough funds in your "
+"wallet."
+msgstr ""
+"Сума буде відображатися червоним кольором, якщо у вас недостатньо коштів у "
+"вашому гаманці."
+
+msgid ""
+"The bitcoin address never expires and will always be part of this electrum "
+"wallet."
+msgstr ""
+"Термін дії адреси Bitcoin ніколи не закінчиться, і завжди буде частиною "
+"цього Electrum-гаманця."
+
+msgid ""
+"The description is not sent to the recipient of the funds. It is stored in "
+"your wallet file, and displayed in the 'History' tab."
+msgstr ""
+"Опис не буде відправлено одержувачу, але буде збережено в файлі вашого "
+"гаманця і відображено на вкладці \"Історія\"."
+
+msgid "The fee for this transaction seems unusually high."
+msgstr "Комісія за цю угоду задана занадто високою."
+
+msgid ""
+"The file '%s' contains an incompletely created wallet.\n"
+"Do you want to complete its creation now?"
+msgstr ""
+"Файл \"%s\" містить повністю створений гаманець.\n"
+"Ви хочете завершити його створення зараз?"
+
+msgid "The file was removed"
+msgstr "Файл був видалений"
+
+msgid "The following addresses were added"
+msgstr "Наступні адреси були додані"
+
+msgid "The following alias providers are available:"
+msgstr "Наступні постачальники псевдонімів доступні:"
+
+msgid "The following inputs could not be imported"
+msgstr "Наступне не вдалося імпортувати"
+
+msgid ""
+"The format of your wallet '%s' must be upgraded for Electrum. This change "
+"will not be backward compatible"
+msgstr ""
+"Формат вашого гаманця \"%s\" має бути оновлений для Electrum. Це зміна не "
+"має зворотної сумісності"
+
+msgid ""
+"The wallet '%s' contains multiple accounts, which are no longer supported in "
+"Electrum 2.7.\n"
+"\n"
+"Do you want to split your wallet into multiple files?"
+msgstr ""
+"Гаманець \"%s\" містить кілька облікових записів, які більше не "
+"підтримуються в Електрум 2,7.\n"
+"\n"
+"Ви хочете розділити ваш гаманець на кілька файлів?"
+
+msgid ""
+"This blockchain is used to verify the transactions sent by your transaction "
+"server."
+msgstr ""
+"Цей ланцюжок блоків використаний для перевірки трансакцій, надісланих Вашим "
+"трансакційним сервером."
+
+msgid "This file does not exist."
+msgstr "Цей файл не існує."
+
+msgid "This file is encrypted."
+msgstr "Цей файл зашифрований."
+
+msgid ""
+"This information is seen by the recipient if you send them a signed payment "
+"request."
+msgstr ""
+"Ця інформація відображається одержувачам, якщо ви посилаєте їм запит на "
+"підписання оплат."
+
+msgid "This is a watching-only wallet"
+msgstr "Цей гаманець тільки для спостереження"
+
+msgid "This is the height of your local copy of the blockchain."
+msgstr "Це довжина Вашої копії ланцюжка блоків."
+
+msgid "This may result in higher transactions fees."
+msgstr "Це може привести до збільшення комісії за транзакції."
+
+msgid "This means you will not be able to spend Bitcoins with it."
+msgstr "Це означає, що ви не зможете провести Bitcoins з цим."
+
+msgid "This payment request will be signed."
+msgstr "Цей запит платежу був підписаний."
+
+msgid ""
+"This seed will allow you to recover your wallet in case of computer failure."
+msgstr ""
+"Цей seed допоможе вам відновити гаманець в разі проблем з комп'ютером у "
+"майбутньому."
+
+msgid "This transaction is not saved. Close anyway?"
+msgstr "Ця операція не збережена. Закрити все одно?"
+
+msgid ""
+"This transaction requires a higher fee, or it will not be propagated by the "
+"network"
+msgstr ""
+"Ця транзакція вимагає більш високу комісію, інакше вона не буде поширена в "
+"мережі"
+
+msgid "This wallet has no seed"
+msgstr "Цей гаманець без seed"
+
+msgid "This wallet is watching-only."
+msgstr "Цей гаманець доступний тільки для перегляду."
+
+msgid ""
+"This wallet was restored offline. It may contain more addresses than "
+"displayed."
+msgstr ""
+"Цей гаманець був відновлений оффлайн. Він може включати більше адрес, ніж "
+"показано."
+
+msgid ""
+"To make sure that you have properly saved your seed, please retype it here."
+msgstr ""
+"Щоб переконатися, що Ви як слід зберегли Ваш seed, будь ласка, введіть його."
+
+msgid "Total size"
+msgstr "Повний розмір"
+
+msgid "Transaction"
+msgstr "Транзакція"
+
+msgid "Transaction ID"
+msgstr "ID транзакції"
+
+msgid "Transaction ID:"
+msgstr "Ідентифікатор транзакції:"
+
+msgid "Transaction saved successfully"
+msgstr "Транзакція успішно збережена"
+
+msgid "Transaction unrelated to your wallet"
+msgstr "Транзакція не пов'язана з Вашим гаманцем"
+
+msgid "Transaction:"
+msgstr "Транзакція:"
+
+msgid "Transactions"
+msgstr "Транзакції"
+
+msgid "Try to explain not only what the bug is, but how it occurs."
+msgstr ""
+"Постарайтеся розповісти не тільки про помилку, а й про те, що до неї "
+"призвело."
+
+msgid "Unable to create backup"
+msgstr "Неможливо створити резервну копію"
+
+msgid "Unable to create csv"
+msgstr "Не вдалося створити csv"
+
+msgid "Unable to export history"
+msgstr "Неможливо експортувати історію"
+
+msgid "Unable to read file or no transaction found"
+msgstr "Не вдалося прочитати файл або не було виявлено транзакції"
+
+msgid "Unknown"
+msgstr "Невизначено"
+
+msgid "Use SSL"
+msgstr "Використовувати SSL"
+
+msgid "Use Tor Proxy"
+msgstr "Використовувати Tor-проксі"
+
+msgid "Use as server"
+msgstr "Використовувати як сервер"
+
+msgid "Use change addresses"
+msgstr "Використовувати адреси для здачі"
+
+msgid "Use dynamic fees"
+msgstr "Використовувати динамічну комісію"
+
+msgid "Use fees recommended by the server."
+msgstr "Використовувати комісію, що рекомендована сервером."
+
+msgid "Use multiple change addresses"
+msgstr "Використовувати адреси, що змінюються"
+
+msgid "Use setconfig to set ssl_chain and ssl_privkey."
+msgstr "Використовувати setconfig для встановлення ssl_chain та ssl_privkey."
+
+msgid "Use the camera button to scan a QR code."
+msgstr "Використовуйте кнопку \"камера\" для сканування QR-коду."
+
+msgid "Use this dialog to add a password to your wallet."
+msgstr "Використовуйте цей діалог для встановлення пароля до вашого гаманця."
+
+msgid "Use this dialog to change your password."
+msgstr "Використовуйте це діалогове вікно щоб змінити свій пароль."
+
+msgid "Uses icons from the Icons8 icon pack (icons8.com)."
+msgstr "Використовує мініатюри з пакунку мініатюр Icons8 (icons8.com)."
+
+msgid ""
+"Using change addresses makes it more difficult for other people to track "
+"your transactions."
+msgstr ""
+"Використання адрес для здачі ускладнює іншим людям можливість відстежувати "
+"ваші транзакції."
+
+msgid "Verify"
+msgstr "Перевірити"
+
+msgid "Version"
+msgstr "Версія"
+
+msgid "Video Device"
+msgstr "Відео Пристрій"
+
+msgid "View invoice"
+msgstr "Переглянути рахунок"
+
+msgid "View on block explorer"
+msgstr "Подивитися на блок-навігаторі"
+
+msgid "WARNING"
+msgstr "УВАГА"
+
+msgid "WARNING: ALL your private keys are secret."
+msgstr "УВАГА: ВСІ ваші особисті ключі є секретними."
+
+msgid ""
+"WARNING: the alias \"%s\" could not be validated via an additional security "
+"check, DNSSEC, and thus may not be correct."
+msgstr ""
+"ПОПЕРЕДЖЕННЯ: псевдонім \"%s\" не може бути підтверджено за допомогою "
+"додаткової перевірки безпеки, DNSSEC, і, отже, не може бути правильним."
+
+msgid "Waiting for fee estimates..."
+msgstr "Зачекайте, обраховується сума комісії..."
+
+msgid "Wallet"
+msgstr "Гаманець"
+
+msgid "Wallet backup created"
+msgstr "Резервна копія гаманця створена"
+
+msgid "Wallet change address"
+msgstr "Зміна адреси гаманця"
+
+msgid "Wallet receive address"
+msgstr "Отримати адресу гаманця"
+
+msgid "Warning"
+msgstr "Увага"
+
+msgid ""
+"Warning: The next address will not be recovered automatically if you restore "
+"your wallet from seed; you may need to add it manually.\n"
+"\n"
+"This occurs because you have too many unused addresses in your wallet. To "
+"avoid this situation, use the existing addresses first.\n"
+"\n"
+"Create anyway?"
+msgstr ""
+"Увага: наступна адреса, не буде відновлена автоматично, якщо ви відновите "
+"ваш гаманець з seed; Ви можете додати його вручну.\n"
+"\n"
+"Це відбувається тому, що у вас занадто багато невикористаних адрес у вашому "
+"гаманці. Щоб уникнути цієї ситуації, використовуйте існуючі адреси в першу "
+"чергу.\n"
+"\n"
+"Створити в будь-якому випадку?"
+
+msgid ""
+"We do not guarantee that BIP39 imports will always be supported in Electrum."
+msgstr ""
+"Ми не гарантуємо, що імпорт BIP39 підтримуватиметься в Electrum завжди."
+
+msgid "Wrong signature"
+msgstr "Пошкоджена сигнатура"
+
+msgid "You are following branch"
+msgstr "Ви слідуєте лінії"
+
+msgid ""
+"You are using Electrum in offline mode; restart Electrum if you want to get "
+"connected"
+msgstr ""
+"Ви використовуєте Electrum в автономному режимі.\n"
+"Перезапустіть Electrum, якщо ви хочете підключитися."
+
+msgid ""
+"You are using a non-deterministic wallet, which cannot create new addresses."
+msgstr ""
+"Ви використовуєте недетермінований гаманець, для нього не можна створювати "
+"нові адреси."
+
+msgid ""
+"You may enter a Bitcoin address, a label from your list of contacts (a list "
+"of completions will be proposed), or an alias (email-like address that "
+"forwards to a Bitcoin address)"
+msgstr ""
+"Ви можете вказати Bitcoin-адреса, мітку з вашої адресної книги (буде "
+"показаний список з автодоповненням) або псевдонім (адреси, схожі на e-mail, "
+"пов'язану з адресою Bitcoin)"
+
+msgid "You may load a CSV file using the file icon."
+msgstr "Ви можете завантажити файл CSV використовуючи значок файлу."
+
+msgid "Your accounts have been moved to"
+msgstr "Ваші облікові записи були переміщені в"
+
+msgid ""
+"Your bitcoins are password protected. However, your wallet file is not "
+"encrypted."
+msgstr "Ваші біткойни захищені паролем, але ваш гаманець не зашифрований."
+
+msgid "Your labels have been synchronised."
+msgstr "Ваші мітки були синхронізовані."
+
+msgid "Your labels were exported to"
+msgstr "Ваші мітки були експортовані в"
+
+msgid "Your labels were imported from"
+msgstr "Ваші мітки були імпортовані з"
+
+msgid "Your seed extension is"
+msgstr "Ваш розширений seed є"
+
+msgid "Your seed is important!"
+msgstr "Ваш seed - це важливо!"
+
+msgid "Your server is on branch"
+msgstr "Ваш сервер на лінії"
+
+msgid "Your wallet generation seed is:"
+msgstr "Seed вашого гаманця:"
+
+msgid "Your wallet history has been successfully exported."
+msgstr "Історія вашого гаманця успішно експортована."
+
+msgid "Your wallet is not protected."
+msgstr "Ваш гаманець не захищений."
+
+msgid "Your wallet is password protected and encrypted."
+msgstr "Ваш гаманець захищений паролем і зашифрований."
+
+msgid "Your wallet was upgraded successfully"
+msgstr "Ваш гаманець успішно оновлений"
+
+msgid "Zeros after decimal point"
+msgstr "Нуль після десяткової крапки"
+
+msgid ""
+"and you will have the possiblity, while it is unconfirmed, to replace it "
+"with a transaction that pays a higher fee."
+msgstr ""
+"і поки транзакція не підтверджена у вас буде можливість замінити її "
+"транзакцією з більш високою комісією."
+
+msgid "are frozen"
+msgstr "заморожені"
+
+msgid "blocks"
+msgstr "блоки"
+
+msgid "cosigner"
+msgstr "поручитель"
+
+msgid "from your wallet?"
+msgstr "з вашого гаманця?"
+
+msgid "json"
+msgstr "json"
+
+msgid "low fee"
+msgstr "маленька комісія"
+
+msgid "please wait..."
+msgstr "будь ласка, зачекайте..."
+
+msgid "unconfirmed"
+msgstr "не підтверджено"
+
+msgid "unknown"
+msgstr "невизначено"
+
+msgid "unknown (low fee)"
+msgstr "невизначено (маленька комісія)"
+
+msgid "unverified"
+msgstr "не перевірено"
+
+msgid "watching only"
+msgstr "тільки для спостереження"
