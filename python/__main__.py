@@ -23,6 +23,7 @@
 # SOFTWARE.
 import os
 import sys
+from rubicon.objc import ObjCClass
 
 # from https://gist.github.com/tito/09c42fb4767721dc323d
 import threading
@@ -391,8 +392,9 @@ if __name__ == '__main__':
     if is_bundle and os.path.exists(os.path.join(sys._MEIPASS, 'is_portable')):
         config_options['portable'] = True
 
-    if config_options.get('portable'):
-        config_options['electrum_path'] = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'electrum_data')
+#if config_options.get('portable'):
+    Managers = ObjCClass("Managers")
+    config_options['electrum_path'] = os.path.join(Managers.shared().documentsDirectory(), 'electrum_data')
 
     # kivy sometimes freezes when we write to sys.stderr
     set_verbosity(config_options.get('verbose') and config_options.get('gui')!='kivy')

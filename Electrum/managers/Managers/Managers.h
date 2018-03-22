@@ -12,4 +12,5 @@
 @interface Managers : NSObject
 + (instancetype)shared;
 - (id<ScreensManager>)screensManager;
+- (NSString *)documentsDirectory;
 @end

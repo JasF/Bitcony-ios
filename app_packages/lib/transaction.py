@@ -35,6 +35,7 @@ import struct
 import traceback
 import sys
 
+from rubicon.objc import ObjCClass
 #
 # Workalike python implementation of Bitcoin's CDataStream class.
 #
