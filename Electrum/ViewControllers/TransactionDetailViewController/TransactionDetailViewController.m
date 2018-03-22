@@ -8,7 +8,17 @@
 
 #import "TransactionDetailViewController.h"
 
-@interface TransactionDetailViewController ()
+typedef NS_ENUM(NSInteger, Rows) {
+    TransactionIDRow,
+    TransactionIDRowValue,
+    StatusRow,
+    DateRow,
+    RowsCount
+};
+
+static CGFloat const kRowHeight = 44.f;
+
+@interface TransactionDetailViewController () <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
@@ -17,6 +27,7 @@
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
     [super viewDidLoad];
+    [self.tableView registerNib:[UINib nibWithNibName:@"SimpleCell" bundle:nil] forCellReuseIdentifier:@"SimpleCell"];
     // Do any additional setup after loading the view.
 }
 
@@ -25,6 +36,49 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - UITableViewDataSource
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleCell"];
+    switch (indexPath.row) {
+        case TransactionIDRow:
+            cell.textLabel.text = L(@"Transaction ID:");
+            break;
+        case TransactionIDRowValue: {
+            NSString *value = nil;
+            if ([_handler respondsToSelector:@selector(transactionID:)]) {
+                value = [_handler transactionID:nil];
+            }
+            cell.textLabel.text = value.length ? value : L(@"Unknown");
+            break;
+        }
+        case StatusRow: {
+            NSString *value = nil;
+            if ([_handler respondsToSelector:@selector(status:)]) {
+                value = [_handler status:nil];
+            }
+            cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", L(@"Status:"), value];
+            break;
+        }
+        case DateRow: {
+            NSString *value = nil;
+            if ([_handler respondsToSelector:@selector(date:)]) {
+                value = [_handler date:nil];
+            }
+            cell.textLabel.text = [NSString stringWithFormat:L(@"Date: %@"), value];
+            break;
+        }
+    }
+    return cell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return RowsCount;
+}
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return kRowHeight;
+}
 /*
 #pragma mark - Navigation
 

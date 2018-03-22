@@ -38,7 +38,7 @@ static CGFloat const kSeparatorAlpha = 0.25f;
     [super viewDidLoad];
     self.tableView.separatorColor = [[UIColor whiteColor] colorWithAlphaComponent:kSeparatorAlpha];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(menuDidHide:) name:LGSideMenuDidHideLeftViewNotification object:nil];
-    [self.tableView registerNib:[UINib nibWithNibName:@"MenuCell" bundle:nil] forCellReuseIdentifier:@"MenuCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"SimpleCell" bundle:nil] forCellReuseIdentifier:@"SimpleCell"];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -65,7 +65,7 @@ static CGFloat const kSeparatorAlpha = 0.25f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuCell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleCell"];
     cell.textLabel.textColor = [UIColor whiteColor];
     switch (indexPath.row) {
         case HistoryRow: cell.textLabel.text = L(@"wallet"); break;

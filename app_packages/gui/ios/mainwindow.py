@@ -9,13 +9,9 @@ from electrum import Wallet, WalletStorage
 from electrum.util import UserCancelled, InvalidPassword
 from electrum.base_wizard import BaseWizard, HWD_SETUP_DECRYPT_WALLET
 from electrum.i18n import _
+from .transaction_dialog import show_transaction
     
 from .history_list import HistoryList
-
-class TransactionDetailHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
 
 class WalletHandler(NSObject):
     @objc_method
@@ -39,11 +35,9 @@ class WalletHandler(NSObject):
 
     @objc_method
     def transactionTapped_(self, txHash):
-        print('txHash: ' + txHash)
-        handler = TransactionDetailHandler.alloc().init()
-        handler.electrumWindow = self.electrumWindow
-        handler.txHash = txHash
-        self.electrumWindow.screensManager.showTransactionDetailViewController(handler)
+        tx = self.electrumWindow.wallet.transactions.get(txHash)
+        print('txHash: ' + txHash + '; tx: ' + str(tx))
+        show_transaction(tx, self.electrumWindow, None)
 
 class ReceiveHandler(NSObject):
     @objc_method

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @protocol TransactionDetailHandlerProtocol <NSObject>
+- (NSString *)transactionID:(id)object;
+- (NSString *)status:(id)object;
+- (NSString *)date:(id)object;
 @end
 
 @interface TransactionDetailViewController : UITableViewController

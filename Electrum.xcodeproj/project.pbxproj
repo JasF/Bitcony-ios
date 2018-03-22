@@ -75,7 +75,7 @@
 		C39FEE6E20626CAA00756807 /* TransactionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FEE6C20626CAA00756807 /* TransactionCell.xib */; };
 		C39FEE7020626F7D00756807 /* EasyMapping.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FEE6F20626F7D00756807 /* EasyMapping.framework */; };
 		C39FEE7520626FA200756807 /* Transaction.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FEE7420626FA200756807 /* Transaction.m */; };
-		C3B75F4120636A140030BC81 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F4020636A140030BC81 /* MenuCell.xib */; };
+		C3B75F4120636A140030BC81 /* SimpleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F4020636A140030BC81 /* SimpleCell.xib */; };
 		C3B75F4920636D700030BC81 /* ReceiveViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F4820636D700030BC81 /* ReceiveViewController.storyboard */; };
 		C3B75F4E20636D810030BC81 /* SendViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F4D20636D810030BC81 /* SendViewController.storyboard */; };
 		C3B75F5120636DA50030BC81 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F5020636DA50030BC81 /* SettingsViewController.m */; };
@@ -1006,7 +1006,7 @@
 		C39FEE7420626FA200756807 /* Transaction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Transaction.m; sourceTree = "<group>"; };
 		C39FEE79206276F600756807 /* seed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = seed.h; path = ../../../../Desktop/seed.h; sourceTree = "<group>"; };
 		C39FEE7A206276FA00756807 /* seed.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = seed.h; sourceTree = "<group>"; };
-		C3B75F4020636A140030BC81 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		C3B75F4020636A140030BC81 /* SimpleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SimpleCell.xib; sourceTree = "<group>"; };
 		C3B75F4820636D700030BC81 /* ReceiveViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReceiveViewController.storyboard; sourceTree = "<group>"; };
 		C3B75F4D20636D810030BC81 /* SendViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SendViewController.storyboard; sourceTree = "<group>"; };
 		C3B75F4F20636DA50030BC81 /* SettingsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
@@ -1019,6 +1019,7 @@
 		C3B75F5B206376650030BC81 /* TransactionDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionDetailViewController.h; sourceTree = "<group>"; };
 		C3B75F5C206376650030BC81 /* TransactionDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionDetailViewController.m; sourceTree = "<group>"; };
 		C3B75F5E2063766D0030BC81 /* TransactionDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TransactionDetailViewController.storyboard; sourceTree = "<group>"; };
+		C3B75F62206389990030BC81 /* transaction_dialog.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = transaction_dialog.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1113,7 +1114,7 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				C3B75F3F20636A050030BC81 /* MenuCell */,
+				C3B75F3F20636A050030BC81 /* SimpleCell */,
 				C39FEE6920626C8600756807 /* TransactionCell */,
 				C39FE9472060FFD700756807 /* RunLoop */,
 				C39FDFEA205FBE4800756807 /* Logs */,
@@ -3349,6 +3350,7 @@
 				C39FE9462060E5A800756807 /* installwizard.py */,
 				C39FE9452060E58400756807 /* __init__.py */,
 				C39FEE2E20622F0400756807 /* mainwindow.py */,
+				C3B75F62206389990030BC81 /* transaction_dialog.py */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -3535,12 +3537,12 @@
 			path = Transation;
 			sourceTree = "<group>";
 		};
-		C3B75F3F20636A050030BC81 /* MenuCell */ = {
+		C3B75F3F20636A050030BC81 /* SimpleCell */ = {
 			isa = PBXGroup;
 			children = (
-				C3B75F4020636A140030BC81 /* MenuCell.xib */,
+				C3B75F4020636A140030BC81 /* SimpleCell.xib */,
 			);
-			path = MenuCell;
+			path = SimpleCell;
 			sourceTree = "<group>";
 		};
 		C3B75F4220636D470030BC81 /* ReceiveViewController */ = {
@@ -3644,7 +3646,7 @@
 				C3B75F4E20636D810030BC81 /* SendViewController.storyboard in Resources */,
 				C39FE47B205FE98200756807 /* EnterOrCreateWalletViewController.storyboard in Resources */,
 				C3B75F4920636D700030BC81 /* ReceiveViewController.storyboard in Resources */,
-				C3B75F4120636A140030BC81 /* MenuCell.xib in Resources */,
+				C3B75F4120636A140030BC81 /* SimpleCell.xib in Resources */,
 				C3B75F5F2063766D0030BC81 /* TransactionDetailViewController.storyboard in Resources */,
 				C39FEE6E20626CAA00756807 /* TransactionCell.xib in Resources */,
 				C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */,
