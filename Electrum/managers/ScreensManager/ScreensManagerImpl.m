@@ -31,8 +31,8 @@ static NSString *kStoryboardName = @"Main";
 @property (nonatomic, strong) BaseNavigationController *navigationController;
 @property (strong, nonatomic) MainViewController *mainViewController;
 @property (nonatomic, strong) UIStoryboard *storyboard;
-
 @property (strong, nonatomic) WalletViewController *walletViewController;
+@property (strong, nonatomic) id<AlertManager> alertManager;
 @end
 
 @implementation ScreensManagerImpl {
@@ -42,6 +42,12 @@ static NSString *kStoryboardName = @"Main";
 @synthesize window;
 
 #pragma mark - Initialization
+- (id)initWithAlertManager:(id<AlertManager>)alertManager {
+    if (self = [super init]) {
+        self.alertManager = alertManager;
+    }
+    return self;
+}
 
 #pragma mark - Overriden Methods - ScreensManager
 - (void)showCreateWalletViewController:(id)handler {
@@ -134,6 +140,7 @@ static NSString *kStoryboardName = @"Main";
                                                                  bundle:nil];
             viewController = (WalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
             viewController.handler = (id<WalletHandlerProtocol>)handler;
+            viewController.alertManager = self.alertManager;
             viewController.screensManager = self;
             _walletViewController = viewController;
         }
@@ -167,6 +174,7 @@ static NSString *kStoryboardName = @"Main";
         SendViewController *viewController = (SendViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
         viewController.handler = (id<SendHandlerProtocol>)handler;
         viewController.screensManager = self;
+        viewController.alertManager = self.alertManager;
         [self pushViewController:viewController];
     });
 }

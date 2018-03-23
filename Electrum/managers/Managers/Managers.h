@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "ScreensManager.h"
+#import "AlertManager.h"
 
 @interface Managers : NSObject
 + (instancetype)shared;
 - (id<ScreensManager>)screensManager;
+- (id<AlertManager>)alertManager;
 - (NSString *)documentsDirectory;
 @end

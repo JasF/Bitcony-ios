@@ -63,7 +63,7 @@ class MenuHandler(NSObject):
     @objc_method
     def init_(self):
         return self
-
+    
     @objc_method
     def walletTapped_(self):
         self.electrumWindow.showWalletViewController()
@@ -239,6 +239,14 @@ class ElectrumWindow:
         if self.fx.history_used_spot:
         self.history_list.update()
             '''
+    
+    def show_message(self, message):
+        self.handler.viewController.showMessage(message)
+        pass
+    
+    def show_error(self, message):
+        self.handler.viewController.showError(message)
+        pass
 
     def format_amount(self, x, is_diff=False, whitespaces=False):
         return util.format_satoshis(x, is_diff, self.num_zeros, self.decimal_point, whitespaces)
@@ -253,3 +261,208 @@ class ElectrumWindow:
     def format_fee_rate(self, fee_rate):
         return util.format_satoshis(fee_rate/1000, False, self.num_zeros, 0, False)  + ' sat/byte'
 
+    def do_preview(self):
+        self.do_send(preview = True)
+
+    def do_send(self, preview = False):
+        print('$$$ PREPARE FOR DO_SEND $$$')
+        if run_hook('abort_send', self):
+            return
+        r = self.read_send_tab()
+        if not r:
+            return
+        outputs, fee_estimator, tx_desc, coins = r
+        print('do_send outputs: ' + str(outputs) + '; fee_estimator: ' + str(fee_estimator) + '; tx_desc: ' + str(tx_desc) + '; coins: ' + str(coins))
+        try:
+            is_sweep = bool(self.tx_external_keypairs)
+            tx = self.wallet.make_unsigned_transaction(
+                coins, outputs, self.config, fixed_fee=fee_estimator,
+                is_sweep=is_sweep)
+        except NotEnoughFunds:
+            self.show_message(_("Insufficient funds"))
+            return
+        except BaseException as e:
+            traceback.print_exc(file=sys.stdout)
+            self.show_message(str(e))
+            return
+
+        amount = tx.output_value() if self.is_max else sum(map(lambda x:x[2], outputs))
+        fee = tx.get_fee()
+
+        use_rbf = self.config.get('use_rbf', True)
+        if use_rbf:
+            tx.set_rbf(True)
+        print('amount: ' + str(amount) + '; fee: ' + str(fee) + '; use_rbf: ' + str(use_rbf))
+
+        if fee < self.wallet.relayfee() * tx.estimated_size() / 1000:
+            self.show_error('\n'.join([
+                _("This transaction requires a higher fee, or it will not be propagated by your current server"),
+                _("Try to raise your transaction fee, or use a server with a lower relay fee.")
+            ]))
+            return
+
+        if preview:
+            self.show_transaction(tx, tx_desc)
+            return
+
+        if not self.network:
+            self.show_error(_("You can't broadcast a transaction without a live network connection."))
+            return
+
+        # confirmation dialog
+        msg = [
+            _("Amount to be sent") + ": " + self.format_amount_and_units(amount),
+            _("Mining fee") + ": " + self.format_amount_and_units(fee),
+        ]
+
+        x_fee = run_hook('get_tx_extra_fee', self.wallet, tx)
+        if x_fee:
+            x_fee_address, x_fee_amount = x_fee
+            msg.append( _("Additional fees") + ": " + self.format_amount_and_units(x_fee_amount) )
+
+        confirm_rate = simple_config.FEERATE_WARNING_HIGH_FEE
+        if fee > confirm_rate * tx.estimated_size() / 1000:
+            msg.append(_('Warning') + ': ' + _("The fee for this transaction seems unusually high."))
+
+        if self.wallet.has_keystore_encryption():
+            msg.append("")
+            msg.append(_("Enter your password to proceed"))
+            password = self.password_dialog('\n'.join(msg))
+            if not password:
+                return
+        else:
+            msg.append(_('Proceed?'))
+            password = None
+            if not self.question('\n'.join(msg)):
+                return
+
+        def sign_done(success):
+            if success:
+                if not tx.is_complete():
+                    self.show_transaction(tx)
+                    self.do_clear()
+                else:
+                    self.broadcast_transaction(tx, tx_desc)
+        self.sign_tx_with_password(tx, sign_done, password)
+
+
+'''
+    def do_send(self, preview = False):
+        if run_hook('abort_send', self):
+            return
+        r = self.read_send_tab()
+        if not r:
+            return
+        outputs, fee_estimator, tx_desc, coins = r
+        print('do_send outputs: ' + str(outputs) + '; fee_estimator: ' + str(fee_estimator) + '; tx_desc: ' + str(tx_desc) + '; coins: ' + str(coins))
+        try:
+            is_sweep = bool(self.tx_external_keypairs)
+            tx = self.wallet.make_unsigned_transaction(
+                coins, outputs, self.config, fixed_fee=fee_estimator,
+                is_sweep=is_sweep)
+        except NotEnoughFunds:
+            self.show_message(_("Insufficient funds"))
+            return
+        except BaseException as e:
+            traceback.print_exc(file=sys.stdout)
+            self.show_message(str(e))
+            return
+
+        amount = tx.output_value() if self.is_max else sum(map(lambda x:x[2], outputs))
+        fee = tx.get_fee()
+
+        use_rbf = self.config.get('use_rbf', True)
+        if use_rbf:
+            tx.set_rbf(True)
+
+        if fee < self.wallet.relayfee() * tx.estimated_size() / 1000:
+            self.show_error('\n'.join([
+                _("This transaction requires a higher fee, or it will not be propagated by your current server"),
+                _("Try to raise your transaction fee, or use a server with a lower relay fee.")
+            ]))
+            return
+
+        if preview:
+            self.show_transaction(tx, tx_desc)
+            return
+
+        if not self.network:
+            self.show_error(_("You can't broadcast a transaction without a live network connection."))
+            return
+
+        # confirmation dialog
+        msg = [
+            _("Amount to be sent") + ": " + self.format_amount_and_units(amount),
+            _("Mining fee") + ": " + self.format_amount_and_units(fee),
+        ]
+
+        x_fee = run_hook('get_tx_extra_fee', self.wallet, tx)
+        if x_fee:
+            x_fee_address, x_fee_amount = x_fee
+            msg.append( _("Additional fees") + ": " + self.format_amount_and_units(x_fee_amount) )
+
+        confirm_rate = simple_config.FEERATE_WARNING_HIGH_FEE
+        if fee > confirm_rate * tx.estimated_size() / 1000:
+            msg.append(_('Warning') + ': ' + _("The fee for this transaction seems unusually high."))
+
+        if self.wallet.has_keystore_encryption():
+            msg.append("")
+            msg.append(_("Enter your password to proceed"))
+            password = self.password_dialog('\n'.join(msg))
+            if not password:
+                return
+        else:
+            msg.append(_('Proceed?'))
+            password = None
+            if not self.question('\n'.join(msg)):
+                return
+
+        def sign_done(success):
+            if success:
+                if not tx.is_complete():
+                    self.show_transaction(tx)
+                    self.do_clear()
+                else:
+                    self.broadcast_transaction(tx, tx_desc)
+        self.sign_tx_with_password(tx, sign_done, password)
+
+    if not self.network:
+        self.show_error(_("You can't broadcast a transaction without a live network connection."))
+        return
+        
+        # confirmation dialog
+        msg = [
+               _("Amount to be sent") + ": " + self.format_amount_and_units(amount),
+               _("Mining fee") + ": " + self.format_amount_and_units(fee),
+               ]
+               
+               x_fee = run_hook('get_tx_extra_fee', self.wallet, tx)
+               if x_fee:
+                   x_fee_address, x_fee_amount = x_fee
+                       msg.append( _("Additional fees") + ": " + self.format_amount_and_units(x_fee_amount) )
+                   
+    confirm_rate = simple_config.FEERATE_WARNING_HIGH_FEE
+    if fee > confirm_rate * tx.estimated_size() / 1000:
+        msg.append(_('Warning') + ': ' + _("The fee for this transaction seems unusually high."))
+        
+        if self.wallet.has_keystore_encryption():
+            msg.append("")
+            msg.append(_("Enter your password to proceed"))
+            password = self.password_dialog('\n'.join(msg))
+            if not password:
+                return
+        else:
+            msg.append(_('Proceed?'))
+            password = None
+            if not self.question('\n'.join(msg)):
+                return
+    
+    def sign_done(success):
+        if success:
+            if not tx.is_complete():
+                self.show_transaction(tx)
+                self.do_clear()
+                else:
+                    self.broadcast_transaction(tx, tx_desc)
+        self.sign_tx_with_password(tx, sign_done, password)
+        '''

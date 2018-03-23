@@ -21,9 +21,6 @@
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8p-hT-BwW">
                         <rect key="frame" x="0.0" y="0.0" width="304" height="43.5"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="43.5" id="3ic-4k-7Rg"/>
-                        </constraints>
                         <nil key="textColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits"/>
@@ -47,7 +44,6 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
-                <outlet property="heightConstraint" destination="3ic-4k-7Rg" id="jGq-7j-L6f"/>
                 <outlet property="rightLabel" destination="gq8-7Y-Vjw" id="ziL-dP-jqO"/>
                 <outlet property="textField" destination="L8p-hT-BwW" id="zp8-AW-rsE"/>
             </connections>

@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "ScreensManager.h"
+#import "AlertManager.h"
 #import "RunLoop.h"
 
 @interface ScreensManagerImpl : NSObject <ScreensManager>
-+ (id)new NS_UNAVAILABLE;
+- (id)initWithAlertManager:(id<AlertManager>)alertManager;
 @end

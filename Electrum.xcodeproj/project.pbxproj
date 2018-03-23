@@ -11,6 +11,7 @@
 		60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE719190F4100A9926B /* CoreGraphics.framework */; };
 		60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE919190F4100A9926B /* UIKit.framework */; };
 		60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F38191CDBBA00A9926B /* CoreFoundation.framework */; };
+		C360F95E2064E8EE00F90ADD /* AlertManagerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F95D2064E8EE00F90ADD /* AlertManagerImpl.m */; };
 		C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB4205F9E9600756807 /* InfoPlist.strings */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
@@ -99,6 +100,9 @@
 		60796EE719190F4100A9926B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		60796EE919190F4100A9926B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		60796F38191CDBBA00A9926B /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		C360F95C2064E8EE00F90ADD /* AlertManagerImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertManagerImpl.h; sourceTree = "<group>"; };
+		C360F95D2064E8EE00F90ADD /* AlertManagerImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertManagerImpl.m; sourceTree = "<group>"; };
+		C360F95F2064E8F600F90ADD /* AlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertManager.h; sourceTree = "<group>"; };
 		C39FDFB5205F9E9600756807 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1103,6 +1107,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C360F95B2064E8CB00F90ADD /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				C360F95C2064E8EE00F90ADD /* AlertManagerImpl.h */,
+				C360F95D2064E8EE00F90ADD /* AlertManagerImpl.m */,
+				C360F95F2064E8F600F90ADD /* AlertManager.h */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
 		C39FDFB3205F9E9600756807 /* Electrum */ = {
 			isa = PBXGroup;
 			children = (
@@ -1227,6 +1241,7 @@
 		C39FE463205FE73500756807 /* managers */ = {
 			isa = PBXGroup;
 			children = (
+				C360F95B2064E8CB00F90ADD /* Alert */,
 				C39FE46B205FE79200756807 /* ScreensManager */,
 				C39FE464205FE73C00756807 /* Managers */,
 			);
@@ -3808,6 +3823,7 @@
 				C39FEE4F2062361D00756807 /* UIViewController+LGSideMenuController.m in Sources */,
 				C39FE964206103C400756807 /* EXTSelectorChecking.m in Sources */,
 				C39FE46F205FE7DC00756807 /* ScreensManagerImpl.m in Sources */,
+				C360F95E2064E8EE00F90ADD /* AlertManagerImpl.m in Sources */,
 				C39FDFC5205F9E9600756807 /* main.m in Sources */,
 				C39FE46A205FE76000756807 /* Managers.m in Sources */,
 			);

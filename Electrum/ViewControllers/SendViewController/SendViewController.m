@@ -30,15 +30,22 @@ typedef NS_ENUM(NSInteger, Rows) {
 static CGFloat const kRowHeight = 44.f;
 static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
 
-@interface SendViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface SendViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 @property (strong, nonatomic) FeeCell *feeCell;
 @end
 
 @implementation SendViewController {
     NSString *_feeDescription;
+    NSString *_sendAddress;
+    NSString *_sendDescriptionString;
+    NSString *_amountString;
+    UITextField *_payToTextField;
+    UITextField *_descriptionTextField;
+    UITextField *_amountTextField;
 }
 
 - (void)viewDidLoad {
+    NSCParameterAssert(_alertManager);
     NSCParameterAssert(_handler);
     NSCParameterAssert(_screensManager);
     [super viewDidLoad];
@@ -46,6 +53,9 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
     [self.tableView registerNib:[UINib nibWithNibName:@"TextFieldCell" bundle:nil] forCellReuseIdentifier:@"TextFieldCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"TableButtonCell" bundle:nil] forCellReuseIdentifier:@"TableButtonCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"FeeCell" bundle:nil] forCellReuseIdentifier:@"FeeCell"];
+#ifdef DEBUG
+    _sendAddress = @"39S2Vp1vcDpDDgvRgF77YtgrQeMgRgJy3v";
+#endif
     // Do any additional setup after loading the view.
 }
 
@@ -80,6 +90,7 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
         textFieldCell = [tableView dequeueReusableCellWithIdentifier:@"TextFieldCell"];
         [textFieldCell setRightLabelText:nil];
         cell = textFieldCell;
+        textFieldCell.textField.delegate = self;
     }
     else if ([buttonCells containsObject:@(indexPath.row)]) {
         buttonCell = [tableView dequeueReusableCellWithIdentifier:@"TableButtonCell"];
@@ -92,6 +103,8 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
             break;
         }
         case PayToValueRow: {
+            _payToTextField = textFieldCell.textField;
+            _payToTextField.text = _sendAddress;
             break;
         }
         case DescriptionRow: {
@@ -99,6 +112,8 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
             break;
         }
         case DescriptionValueRow: {
+            _descriptionTextField = textFieldCell.textField;
+            _descriptionTextField.text = _sendDescriptionString;
             break;
         }
         case AmountRow: {
@@ -106,6 +121,9 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
             break;
         }
         case AmountValueRow: {
+            _amountTextField = textFieldCell.textField;
+            [textFieldCell setRightLabelText:L(@"BTC")];
+            _amountTextField.text = _amountString;
             break;
         }
         case FeeRow: {
@@ -145,9 +163,14 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     switch (indexPath.row) {
         case ClearRow: {
+            _sendAddress = nil;
+            _sendDescriptionString = nil;
+            _amountString = nil;
+            [self reloadData];
             break;
         }
         case PreviewRow: {
+            [self.alertManager show:@"Hello first alert" viewController:self];
             break;
         }
         case SendRow: {
@@ -179,6 +202,10 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
          forControlEvents:UIControlEventTouchUpOutside];
     }
     return _feeCell;
+}
+
+- (void)reloadData {
+    [self.tableView reloadData];
 }
 
 #pragma mark - Observers
@@ -218,6 +245,23 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
         [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:FeeDescriptionRow inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
         [self.tableView endUpdates];
     }
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *updatedString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    if ([textField isEqual:_payToTextField]) {
+        _sendAddress = updatedString;
+    }
+    else if ([textField isEqual:_descriptionTextField]) {
+        _sendDescriptionString = updatedString;
+    }
+    else if ([textField isEqual:_amountTextField]) {
+        _amountString = updatedString;
+    }
+    
+    NSLog(@"updatedString: %@", updatedString);
+    return YES;
 }
 
 @end

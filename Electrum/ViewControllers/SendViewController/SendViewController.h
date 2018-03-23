@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ScreensManager.h"
+#import "AlertManager.h"
 
 @protocol SendHandlerProtocol <NSObject>
 @end
@@ -15,4 +16,5 @@
 @interface SendViewController : UITableViewController
 @property (strong, nonatomic) id<SendHandlerProtocol> handler;
 @property (strong, nonatomic) id<ScreensManager> screensManager;
+@property (strong, nonatomic) id<AlertManager> alertManager;
 @end

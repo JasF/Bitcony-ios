@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "ScreensManager.h"
+#import "AlertManager.h"
 
 @class WalletViewController;
 
@@ -20,9 +21,12 @@
 
 @protocol WalletHandlerProtocolDelegate <NSObject>
 - (void)updateAndReloadData;
+- (void)showMessage:(NSString *)message;
+- (void)showError:(NSString *)message;
 @end
 
 @interface WalletViewController : UITableViewController <WalletHandlerProtocolDelegate>
 @property (strong, nonatomic) id<ScreensManager> screensManager;
 @property (strong, nonatomic) id<WalletHandlerProtocol> handler;
+@property (strong, nonatomic) id<AlertManager> alertManager;
 @end

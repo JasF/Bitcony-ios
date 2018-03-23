@@ -23,6 +23,7 @@ static NSTimeInterval kActionTimeInterval = 0.8f;
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
     NSCParameterAssert(_screensManager);
+    NSCParameterAssert(_alertManager);
     [super viewDidLoad];
     if ([_handler respondsToSelector:@selector(viewDidLoad:)]) {
         [_handler viewDidLoad:self];
@@ -95,6 +96,18 @@ static NSTimeInterval kActionTimeInterval = 0.8f;
             self.transactions = transactions;
             [self.tableView reloadData];
         });
+    });
+}
+
+- (void)showMessage:(NSString *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.alertManager show:message viewController:self];
+    });
+}
+
+- (void)showError:(NSString *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.alertManager show:message viewController:self];
     });
 }
 

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TextFieldCell : UITableViewCell
+@property (readonly, nonatomic) UITextField *textField;
 - (void)setAttributedString:(NSAttributedString *)string;
 - (void)setString:(NSString *)string;
 - (void)setRightLabelText:(NSString *)text;

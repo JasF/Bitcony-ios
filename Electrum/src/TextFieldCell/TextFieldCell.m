@@ -9,8 +9,7 @@
 #import "TextFieldCell.h"
 
 @interface TextFieldCell ()
-@property (weak, nonatomic) IBOutlet UITextField *textField;
-@property (weak, nonatomic) IBOutlet NSLayoutConstraint *heightConstraint;
+@property (strong, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UILabel *rightLabel;
 @end
 
@@ -42,13 +41,6 @@
 
 - (void)setRightLabelText:(NSString *)text {
     _rightLabel.text = text;
-}
-
-#pragma mark - Layouting
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    [_textField sizeToFit];
-    _heightConstraint.constant = _textField.height;
 }
 
 @end

@@ -19,14 +19,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="UCB-hT-L6V">
-                        <rect key="frame" x="30" y="7" width="260" height="30"/>
+                        <rect key="frame" x="36" y="7" width="248" height="30"/>
                     </slider>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="UCB-hT-L6V" secondAttribute="bottom" constant="7.5" id="4yo-y0-ogh"/>
-                    <constraint firstItem="UCB-hT-L6V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="5BD-8p-dtJ"/>
-                    <constraint firstAttribute="trailing" secondItem="UCB-hT-L6V" secondAttribute="trailing" constant="32" id="B0x-lY-ijb"/>
+                    <constraint firstItem="UCB-hT-L6V" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="38" id="5BD-8p-dtJ"/>
+                    <constraint firstAttribute="trailing" secondItem="UCB-hT-L6V" secondAttribute="trailing" constant="38" id="B0x-lY-ijb"/>
                     <constraint firstItem="UCB-hT-L6V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="KcC-h3-apc"/>
                 </constraints>
             </tableViewCellContentView>

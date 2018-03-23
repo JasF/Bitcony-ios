@@ -8,6 +8,7 @@
 
 #import "Managers.h"
 #import "ScreensManagerImpl.h"
+#import "AlertManagerImpl.h"
 
 @implementation Managers
 
@@ -26,7 +27,16 @@
     static ScreensManagerImpl *shared = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        shared = [[ScreensManagerImpl alloc] init];
+        shared = [[ScreensManagerImpl alloc] initWithAlertManager:self.alertManager];
+    });
+    return shared;
+}
+
+- (id<AlertManager>)alertManager {
+    static AlertManagerImpl *shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[AlertManagerImpl alloc] init];
     });
     return shared;
 }
