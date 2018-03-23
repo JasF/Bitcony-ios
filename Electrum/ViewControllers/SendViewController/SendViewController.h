@@ -13,6 +13,7 @@
 @protocol SendHandlerProtocol <NSObject>
 - (void)viewDidLoad:(id)object;
 - (void)previewTapped:(id)object;
+- (void)feePosChanged:(NSNumber *)newPosition;
 @end
 
 @protocol SendHandlerProtocolDelegate <NSObject>

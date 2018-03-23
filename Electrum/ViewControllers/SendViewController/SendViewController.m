@@ -247,6 +247,9 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
     NSString *secondLine = [NSString stringWithFormat:@"%@ sat/byte", satDictionary[@(value)]];
     NSString *newLine = [NSString stringWithFormat:@"%@, %@", firstLine, secondLine];
     if (![newLine isEqualToString:_feeDescription]) {
+        if ([_handler respondsToSelector:@selector(feePosChanged:)]) {
+            [_handler feePosChanged:@(value)];
+        }
         _feeDescription = newLine;
         [self.tableView beginUpdates];
         [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:FeeDescriptionRow inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];

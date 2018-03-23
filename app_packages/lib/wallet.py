@@ -1202,18 +1202,23 @@ class Abstract_Wallet(PrintError):
 
         # Fee estimator
         if fixed_fee is None:
+            print('FIXED_FEE')
             fee_estimator = config.estimate_fee
         elif isinstance(fixed_fee, Number):
+            print('fee_estimator SECOND')
             fee_estimator = lambda size: fixed_fee
         elif callable(fixed_fee):
+            print('fee_estimator THREE')
             fee_estimator = fixed_fee
         else:
             raise BaseException('Invalid argument fixed_fee: %s' % fixed_fee)
 
         if i_max is None:
+            print('i_max is none!');
             # Let the coin chooser select the coins to spend
             max_change = self.max_change_outputs if self.multiple_change else 1
             coin_chooser = coinchooser.get_coin_chooser(config)
+            print('preCOINCHOOSER inputs: ' + str(inputs) + '; outputs: ' + str(outputs) + 'change_addrs[:max_change]: ' + str(change_addrs[:max_change]) + 'self.dust_threshold(): ' + str(self.dust_threshold()) + 'max_change: ' + str(max_change))
             tx = coin_chooser.make_tx(inputs, outputs, change_addrs[:max_change],
                                       fee_estimator, self.dust_threshold())
         else:
@@ -1221,9 +1226,11 @@ class Abstract_Wallet(PrintError):
             sendable = sum(map(lambda x:x['value'], inputs))
             _type, data, value = outputs[i_max]
             outputs[i_max] = (_type, data, 0)
+            print('tx inputs: ' + str(inputs) + '; outputs[:]: ' + str(outputs[:]) + '; i_max: ' + str(i_max))
             tx = Transaction.from_io(inputs, outputs[:])
             fee = fee_estimator(tx.estimated_size())
             amount = max(0, sendable - tx.output_value() - fee)
+            print( '; estimated_size: ' + str(tx.estimated_size()) + '; fee: ' + str(fee) + '; amount: ' + str(amount))
             outputs[i_max] = (_type, data, amount)
             tx = Transaction.from_io(inputs, outputs[:])
 

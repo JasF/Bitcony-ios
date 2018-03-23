@@ -3,6 +3,7 @@ import sys
 import threading
 import traceback
 from rubicon.objc import ObjCClass, NSObject, objc_method
+from decimal import Decimal
 
 from electrum import keystore, simple_config
 from electrum.bitcoin import COIN, is_address, TYPE_ADDRESS
@@ -19,6 +20,9 @@ from electrum import paymentrequest
 from electrum.wallet import Multisig_Wallet, AddTransactionException
 from .transaction_dialog import show_transaction
     
+from .paytoedit import PayToEdit
+from .amountedit import BTCAmountEdit
+
 from .history_list import HistoryList
 
 class WalletHandler(NSObject):
@@ -70,6 +74,10 @@ class SendHandler(NSObject):
     def previewTapped_(self):
         self.electrumWindow.do_preview()
 
+    @objc_method
+    def feePosChanged_(self, pos):
+        self.electrumWindow.feeSliderMoved(pos)
+
 class SettingsHandler(NSObject):
     @objc_method
     def init_(self):
@@ -100,6 +108,7 @@ class MenuHandler(NSObject):
         handler.electrumWindow = self.electrumWindow
         self.electrumWindow.sendHandler = handler
         self.electrumWindow.screensManager.showSendViewController(handler)
+        self.electrumWindow.feeSliderMoved(0)
         pass
 
     @objc_method
@@ -295,6 +304,9 @@ class ElectrumWindow:
         r = self.read_send_tab()
         if not r:
             return
+        
+        self.do_update_fee()
+        
         outputs, fee_estimator, tx_desc, coins = r
         print('do_send outputs: ' + str(outputs) + '; fee_estimator: ' + str(fee_estimator) + '; tx_desc: ' + str(tx_desc) + '; coins: ' + str(coins))
         try:
@@ -382,9 +394,6 @@ class ElectrumWindow:
         payToText = self.sendHandler.viewController.payToText()
         amountText = self.sendHandler.viewController.amountText()
 
-        from .paytoedit import PayToEdit
-        from .amountedit import BTCAmountEdit
-        
         self.amount_e = BTCAmountEdit(self.get_decimal_point, text=amountText)
         self.payto_e = PayToEdit(self, payToText)
         
@@ -444,3 +453,154 @@ class ElectrumWindow:
         '''tx_desc is set only for txs created in the Send tab'''
         print('tx_desc: ' + tx_desc)
         show_transaction(tx, self, tx_desc)
+
+    def fee_cb(self, dyn, pos, fee_rate):
+        pos = int(pos)
+        print('fee_cb: dyn: ' + str(dyn) + '; pos: ' + str(pos) + '; fee_rate: ' + str(fee_rate) )
+        if dyn:
+            if self.config.use_mempool_fees():
+                print('ifif')
+                self.config.set_key('depth_level', pos, False)
+            else:
+                print('ifelse')
+                self.config.set_key('fee_level', pos, False)
+        else:
+            print('else')
+            self.config.set_key('fee_per_kb', fee_rate, False)
+
+        if fee_rate:
+            self.feeAmount = fee_rate // 1000
+        else:
+            self.feeAmount = None
+
+    def get_send_fee_estimator(self):
+        return None
+    
+    def feeSliderMoved(self, pos):
+        self.dyn = True
+        if self.dyn:
+            fee_rate = self.config.depth_to_fee(pos) if self.config.use_mempool_fees() else self.config.eta_to_fee(int(pos))
+        else:
+            fee_rate = self.config.static_fee(pos)
+        self.fee_rate = fee_rate
+        self.fee_cb(True, pos, fee_rate)
+        self.do_update_fee()
+
+
+    def is_send_fee_frozen(self):
+        return False#self.fee_e.isVisible() and self.fee_e.isModified() and (self.fee_e.text() or self.fee_e.hasFocus())
+    
+    def is_send_feerate_frozen(self):
+        return False#self.feerate_e.isVisible() and self.feerate_e.isModified() and (self.feerate_e.text() or self.feerate_e.hasFocus())
+
+
+    def get_payto_or_dummy(self):
+        #r = self.payto_e.get_recipient()
+        #if r:
+        #    return r
+        return (TYPE_ADDRESS, self.wallet.dummy_address())
+
+    def do_update_fee(self):
+        print('$$$$$ DO_UPDATE_FEE')
+        '''Recalculate the fee.  If the fee was manually input, retain it, but
+        still build the TX to see if there are enough funds.
+        '''
+        freeze_fee = self.is_send_fee_frozen()
+        freeze_feerate = self.is_send_feerate_frozen()
+        
+        
+        amountText = self.sendHandler.viewController.amountText()
+        self.amount_e = BTCAmountEdit(self.get_decimal_point, text=amountText)
+        amnt = self.amount_e.get_amount()
+        print('amnt: ' + str(amnt) + '; amountText: ' + amountText)
+        payToText = self.sendHandler.viewController.payToText()
+        self.payto_e = PayToEdit(self, payToText)
+        
+        amount = '!' if self.is_max else self.amount_e.get_amount()
+        if amount is None:
+            #if not freeze_fee:
+            #    self.fee_e.setAmount(None)
+            self.not_enough_funds = False
+            self.statusBar().showMessage('')
+        else:
+            fee_estimator = self.get_send_fee_estimator()
+            print('fee_est: ' + str(fee_estimator))
+            outputs = self.payto_e.get_outputs(self.is_max)
+            if not outputs:
+                print('no outputs')
+                _type, addr = self.get_payto_or_dummy()
+                outputs = [(_type, addr, amount)]
+            is_sweep = bool(self.tx_external_keypairs)
+            
+            print('maing usingned tx coins: ' + str(self.get_coins()) + '; outputs: ' + str(outputs) + 'is_sweep:' + str(is_sweep))
+            make_tx = lambda fee_est: \
+                self.wallet.make_unsigned_transaction(
+                    self.get_coins(), outputs, self.config,
+                    fixed_fee=fee_est, is_sweep=is_sweep)
+            try:
+                print('make_tx try')
+                tx = make_tx(fee_estimator)
+                self.not_enough_funds = False
+            except (NotEnoughFunds, NoDynamicFeeEstimates) as e:
+                if not freeze_fee:
+                    self.fee_e.setAmount(None)
+                if not freeze_feerate:
+                    self.feerate_e.setAmount(None)
+                #self.feerounding_icon.setVisible(False)
+
+                if isinstance(e, NotEnoughFunds):
+                    self.not_enough_funds = True
+                elif isinstance(e, NoDynamicFeeEstimates):
+                    try:
+                        tx = make_tx(0)
+                        size = tx.estimated_size()
+                    except BaseException:
+                        pass
+                print('return one')
+                return
+            except BaseException:
+                traceback.print_exc(file=sys.stderr)
+                print('return two')
+                return
+
+            size = tx.estimated_size()
+
+            fee = tx.get_fee()
+            print('fee1 is: ' + str(fee))
+            fee = None if self.not_enough_funds else fee
+
+            # Displayed fee/fee_rate values are set according to user input.
+            # Due to rounding or dropping dust in CoinChooser,
+            # actual fees often differ somewhat.
+            if freeze_feerate:
+                displayed_feerate = self.fee_rate
+                if displayed_feerate:
+                    displayed_feerate = displayed_feerate // 1000
+                else:
+                    # fallback to actual fee
+                    displayed_feerate = fee // size if fee is not None else None
+                    #self.feerate_e.setAmount(displayed_feerate)
+                displayed_fee = displayed_feerate * size if displayed_feerate is not None else None
+                print('displayed_fee: ' + displayed_fee)
+                    #self.fee_e.setAmount(displayed_fee)
+            else:
+                if freeze_fee:
+                    displayed_fee = 0#self.fee_e.get_amount()
+                else:
+                    # fallback to actual fee if nothing is frozen
+                    displayed_fee = fee
+                    #self.fee_e.setAmount(displayed_fee)
+                displayed_fee = displayed_fee if displayed_fee else 0
+                displayed_feerate = displayed_fee // size if displayed_fee is not None else None
+                #self.feerate_e.setAmount(displayed_feerate)
+
+            # show/hide fee rounding icon
+            feerounding = (fee - displayed_fee) if fee else 0
+
+            if self.is_max:
+                amount = tx.output_value()
+
+        print('fee is: ' + str(fee))
+        print('amount is: ' + str(amount))
+#self.amount_e.setAmount(amount)
+

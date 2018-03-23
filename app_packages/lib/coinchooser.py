@@ -124,7 +124,10 @@ class CoinChooserBase(PrintError):
         # Use N change outputs
         for n in range(1, count + 1):
             # How much is left if we add this many change outputs?
-            change_amount = max(0, tx.get_fee() - fee_estimator(n))
+            gfr = tx.get_fee()
+            fer = fee_estimator(n)
+            print('gfr: ' + str(gfr) + '; fer: ' + str(fer) + '; count: ' + str(count) + '; max_change: ' + str(max_change))
+            change_amount = max(0, gfr - fer)
             if change_amount // n <= max_change:
                 break
 
@@ -249,7 +252,9 @@ class CoinChooserBase(PrintError):
 
         # This takes a count of change outputs and returns a tx fee
         output_weight = 4 * Transaction.estimated_output_size(change_addrs[0])
+        print('output_weight: ' + str(output_weight) + '; tx_weight: ' + str(tx_weight))
         fee = lambda count: fee_estimator_w(tx_weight + count * output_weight)
+        print('change_outputs change_addrs: ' + str(change_addrs) + '; fee: ' + str(fee) + '; dust_threshold: ' + str(dust_threshold))
         change = self.change_outputs(tx, change_addrs, fee, dust_threshold)
         tx.add_outputs(change)
 
