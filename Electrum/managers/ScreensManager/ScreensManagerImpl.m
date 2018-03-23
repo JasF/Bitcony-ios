@@ -210,6 +210,10 @@ static NSString *kStoryboardName = @"Main";
     [self.mainViewController showLeftViewAnimated:YES completionHandler:^{}];
 }
 
+- (UIViewController *)topViewController {
+    return self.navigationController.topViewController;
+}
+
 #pragma mark - Private Methods
 - (BOOL)canIgnorePushingViewController:(Class)cls {
     if ([[self.navigationController.topViewController class] isEqual:cls]) {

@@ -23,6 +23,7 @@
 - (void)updateAndReloadData;
 - (void)showMessage:(NSString *)message;
 - (void)showError:(NSString *)message;
+- (void)showWarning:(NSString *)message;
 @end
 
 @interface WalletViewController : UITableViewController <WalletHandlerProtocolDelegate>

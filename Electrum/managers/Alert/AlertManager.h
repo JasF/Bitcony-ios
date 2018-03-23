@@ -9,5 +9,5 @@
 #import <CoreFoundation/CoreFoundation.h>
 
 @protocol AlertManager <NSObject>
-- (void)show:(NSString *)message viewController:(UIViewController *)viewController;
+- (void)show:(NSString *)message;
 @end

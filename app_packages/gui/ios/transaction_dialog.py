@@ -24,13 +24,19 @@ class TransactionDetailHandler(NSObject):
         return self.tx_hash
     
     @objc_method
+    def descriptionString_(self):
+        return self.desc
+    
+    @objc_method
     def status_(self):
         return self.status
     
     @objc_method
     def date_(self):
-        time_str = datetime.datetime.fromtimestamp(self.timestamp).isoformat(' ')[:-3]
-        return time_str
+        if self.timestamp:
+            time_str = datetime.datetime.fromtimestamp(self.timestamp).isoformat(' ')[:-3]
+            return time_str
+        return ''
     
     @objc_method
     def amount_(self):
@@ -138,6 +144,7 @@ class TxDialog:
         
         tx_hash, status, label, can_broadcast, can_rbf, amount, fee, height, conf, timestamp, exp_n = self.wallet.get_tx_info(self.tx)
         handler.tx_hash = tx_hash
+        handler.desc = self.desc
         handler.status = status
         handler.label = label
         handler.can_broadcast = can_broadcast

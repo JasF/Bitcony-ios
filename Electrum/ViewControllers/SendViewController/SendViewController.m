@@ -53,8 +53,13 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
     [self.tableView registerNib:[UINib nibWithNibName:@"TextFieldCell" bundle:nil] forCellReuseIdentifier:@"TextFieldCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"TableButtonCell" bundle:nil] forCellReuseIdentifier:@"TableButtonCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"FeeCell" bundle:nil] forCellReuseIdentifier:@"FeeCell"];
+    if ([_handler respondsToSelector:@selector(viewDidLoad:)]) {
+        [_handler viewDidLoad:self];
+    }
 #ifdef DEBUG
     _sendAddress = @"39S2Vp1vcDpDDgvRgF77YtgrQeMgRgJy3v";
+    _amountString = @"0.000001";
+    _sendDescriptionString = @"Hi description";
 #endif
     // Do any additional setup after loading the view.
 }
@@ -170,7 +175,9 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
             break;
         }
         case PreviewRow: {
-            [self.alertManager show:@"Hello first alert" viewController:self];
+            if ([_handler respondsToSelector:@selector(previewTapped:)]) {
+                [_handler previewTapped:nil];
+            }
             break;
         }
         case SendRow: {
@@ -259,9 +266,20 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
     else if ([textField isEqual:_amountTextField]) {
         _amountString = updatedString;
     }
-    
-    NSLog(@"updatedString: %@", updatedString);
     return YES;
+}
+
+#pragma mark - SendHandlerProtocolDelegate
+- (NSString *)payToText {
+    return _sendAddress;
+}
+
+- (NSString *)descriptionText {
+    return _sendDescriptionString;
+}
+
+- (NSString *)amountText {
+    return _amountString;
 }
 
 @end

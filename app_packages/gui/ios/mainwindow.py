@@ -4,11 +4,19 @@ import threading
 import traceback
 from rubicon.objc import ObjCClass, NSObject, objc_method
 
-from electrum import util, bitcoin, commands, coinchooser
-from electrum import Wallet, WalletStorage
-from electrum.util import UserCancelled, InvalidPassword
-from electrum.base_wizard import BaseWizard, HWD_SETUP_DECRYPT_WALLET
+from electrum import keystore, simple_config
+from electrum.bitcoin import COIN, is_address, TYPE_ADDRESS
+from electrum import constants
+from electrum.plugins import run_hook
 from electrum.i18n import _
+from electrum.util import (format_time, format_satoshis, PrintError,
+                           format_satoshis_plain, NotEnoughFunds,
+                           UserCancelled, NoDynamicFeeEstimates, profiler,
+                           export_meta, import_meta, bh2u, bfh)
+from electrum import Transaction
+from electrum import util, bitcoin, commands, coinchooser
+from electrum import paymentrequest
+from electrum.wallet import Multisig_Wallet, AddTransactionException
 from .transaction_dialog import show_transaction
     
 from .history_list import HistoryList
@@ -54,6 +62,14 @@ class SendHandler(NSObject):
     def init_(self):
         return self
 
+    @objc_method
+    def viewDidLoad_(self, viewController):
+        self.viewController = viewController
+
+    @objc_method
+    def previewTapped_(self):
+        self.electrumWindow.do_preview()
+
 class SettingsHandler(NSObject):
     @objc_method
     def init_(self):
@@ -82,6 +98,7 @@ class MenuHandler(NSObject):
     def sendTapped_(self):
         handler = SendHandler.alloc().init()
         handler.electrumWindow = self.electrumWindow
+        self.electrumWindow.sendHandler = handler
         self.electrumWindow.screensManager.showSendViewController(handler)
         pass
 
@@ -94,8 +111,13 @@ class MenuHandler(NSObject):
 
 class ElectrumWindow:
     def __init__(self, gui_object, wallet):
+        self.tx_external_keypairs = {}
+        self.is_max = False
+        self.pay_from = False
+        self.payment_request = None
         self.num_zeros = 2
-        self.decimal_point = 8
+        self.config = config = gui_object.config
+        self.decimal_point = config.get('decimal_point', 8)
         self.wallet = wallet
         self.historyList = HistoryList(self)
         self.network = gui_object.daemon.network
@@ -247,6 +269,9 @@ class ElectrumWindow:
     def show_error(self, message):
         self.handler.viewController.showError(message)
         pass
+    
+    def show_warning(self, message):
+        self.handler.viewController.showWarning(message)
 
     def format_amount(self, x, is_diff=False, whitespaces=False):
         return util.format_satoshis(x, is_diff, self.num_zeros, self.decimal_point, whitespaces)
@@ -263,11 +288,10 @@ class ElectrumWindow:
 
     def do_preview(self):
         self.do_send(preview = True)
+    
 
     def do_send(self, preview = False):
         print('$$$ PREPARE FOR DO_SEND $$$')
-        if run_hook('abort_send', self):
-            return
         r = self.read_send_tab()
         if not r:
             return
@@ -343,126 +367,80 @@ class ElectrumWindow:
                     self.do_clear()
                 else:
                     self.broadcast_transaction(tx, tx_desc)
-        self.sign_tx_with_password(tx, sign_done, password)
-
-
-'''
-    def do_send(self, preview = False):
-        if run_hook('abort_send', self):
-            return
-        r = self.read_send_tab()
-        if not r:
-            return
-        outputs, fee_estimator, tx_desc, coins = r
-        print('do_send outputs: ' + str(outputs) + '; fee_estimator: ' + str(fee_estimator) + '; tx_desc: ' + str(tx_desc) + '; coins: ' + str(coins))
-        try:
-            is_sweep = bool(self.tx_external_keypairs)
-            tx = self.wallet.make_unsigned_transaction(
-                coins, outputs, self.config, fixed_fee=fee_estimator,
-                is_sweep=is_sweep)
-        except NotEnoughFunds:
-            self.show_message(_("Insufficient funds"))
-            return
-        except BaseException as e:
-            traceback.print_exc(file=sys.stdout)
-            self.show_message(str(e))
-            return
-
-        amount = tx.output_value() if self.is_max else sum(map(lambda x:x[2], outputs))
-        fee = tx.get_fee()
-
-        use_rbf = self.config.get('use_rbf', True)
-        if use_rbf:
-            tx.set_rbf(True)
-
-        if fee < self.wallet.relayfee() * tx.estimated_size() / 1000:
-            self.show_error('\n'.join([
-                _("This transaction requires a higher fee, or it will not be propagated by your current server"),
-                _("Try to raise your transaction fee, or use a server with a lower relay fee.")
-            ]))
-            return
-
-        if preview:
-            self.show_transaction(tx, tx_desc)
-            return
-
-        if not self.network:
-            self.show_error(_("You can't broadcast a transaction without a live network connection."))
-            return
-
-        # confirmation dialog
-        msg = [
-            _("Amount to be sent") + ": " + self.format_amount_and_units(amount),
-            _("Mining fee") + ": " + self.format_amount_and_units(fee),
-        ]
-
-        x_fee = run_hook('get_tx_extra_fee', self.wallet, tx)
-        if x_fee:
-            x_fee_address, x_fee_amount = x_fee
-            msg.append( _("Additional fees") + ": " + self.format_amount_and_units(x_fee_amount) )
-
-        confirm_rate = simple_config.FEERATE_WARNING_HIGH_FEE
-        if fee > confirm_rate * tx.estimated_size() / 1000:
-            msg.append(_('Warning') + ': ' + _("The fee for this transaction seems unusually high."))
-
-        if self.wallet.has_keystore_encryption():
-            msg.append("")
-            msg.append(_("Enter your password to proceed"))
-            password = self.password_dialog('\n'.join(msg))
-            if not password:
-                return
-        else:
-            msg.append(_('Proceed?'))
-            password = None
-            if not self.question('\n'.join(msg)):
-                return
-
-        def sign_done(success):
-            if success:
-                if not tx.is_complete():
-                    self.show_transaction(tx)
-                    self.do_clear()
-                else:
-                    self.broadcast_transaction(tx, tx_desc)
-        self.sign_tx_with_password(tx, sign_done, password)
-
-    if not self.network:
-        self.show_error(_("You can't broadcast a transaction without a live network connection."))
+        print('Almost ready for send!')
         return
-        
-        # confirmation dialog
-        msg = [
-               _("Amount to be sent") + ": " + self.format_amount_and_units(amount),
-               _("Mining fee") + ": " + self.format_amount_and_units(fee),
-               ]
-               
-               x_fee = run_hook('get_tx_extra_fee', self.wallet, tx)
-               if x_fee:
-                   x_fee_address, x_fee_amount = x_fee
-                       msg.append( _("Additional fees") + ": " + self.format_amount_and_units(x_fee_amount) )
-                   
-    confirm_rate = simple_config.FEERATE_WARNING_HIGH_FEE
-    if fee > confirm_rate * tx.estimated_size() / 1000:
-        msg.append(_('Warning') + ': ' + _("The fee for this transaction seems unusually high."))
-        
-        if self.wallet.has_keystore_encryption():
-            msg.append("")
-            msg.append(_("Enter your password to proceed"))
-            password = self.password_dialog('\n'.join(msg))
-            if not password:
-                return
-        else:
-            msg.append(_('Proceed?'))
-            password = None
-            if not self.question('\n'.join(msg)):
-                return
-    
-    def sign_done(success):
-        if success:
-            if not tx.is_complete():
-                self.show_transaction(tx)
-                self.do_clear()
-                else:
-                    self.broadcast_transaction(tx, tx_desc)
         self.sign_tx_with_password(tx, sign_done, password)
-        '''
+
+    def get_decimal_point(self):
+        return self.decimal_point
+
+    def read_send_tab(self):
+        if self.payment_request and self.payment_request.has_expired():
+            self.show_error(_('Payment request has expired'))
+            return
+        label = self.sendHandler.viewController.descriptionText()
+        payToText = self.sendHandler.viewController.payToText()
+        amountText = self.sendHandler.viewController.amountText()
+
+        from .paytoedit import PayToEdit
+        from .amountedit import BTCAmountEdit
+        
+        self.amount_e = BTCAmountEdit(self.get_decimal_point, text=amountText)
+        self.payto_e = PayToEdit(self, payToText)
+        
+        if self.payment_request:
+            print('IS payment request')
+            outputs = self.payment_request.get_outputs()
+        else:
+            print ('is NOT payment request')
+            errors = self.payto_e.get_errors()
+            if errors:
+                self.show_warning(_("Invalid Lines found:") + "\n\n" + '\n'.join([ _("Line #") + str(x[0]+1) + ": " + x[1] for x in errors]))
+                return
+            outputs = self.payto_e.get_outputs(self.is_max)
+
+            if self.payto_e.is_alias and self.payto_e.validated is False:
+                alias = self.payto_e.toPlainText()
+                msg = _('WARNING: the alias "{}" could not be validated via an additional '
+                        'security check, DNSSEC, and thus may not be correct.').format(alias) + '\n'
+                msg += _('Do you wish to continue?')
+                if not self.question(msg):
+                    return
+
+        if not outputs:
+            self.show_error(_('No outputs'))
+            return
+
+        for _type, addr, amount in outputs:
+            if addr is None:
+                self.show_error(_('Bitcoin Address is None'))
+                return
+            if _type == TYPE_ADDRESS and not bitcoin.is_address(addr):
+                self.show_error(_('Invalid Bitcoin Address'))
+                return
+            if amount is None:
+                self.show_error(_('Invalid Amount'))
+                return
+
+        fee_estimator = None#self.get_send_fee_estimator()
+        coins = self.get_coins()
+        return outputs, fee_estimator, label, coins
+
+
+    def get_coins(self):
+        if self.pay_from:
+            return self.pay_from
+        else:
+            return self.wallet.get_spendable_coins(None, self.config)
+
+    def pay_to_URI(self, URI):
+        print('Unimplemented feature')
+        pass
+
+    def lock_amount(self, b):
+        pass
+
+    def show_transaction(self, tx, tx_desc = None):
+        '''tx_desc is set only for txs created in the Send tab'''
+        print('tx_desc: ' + tx_desc)
+        show_transaction(tx, self, tx_desc)

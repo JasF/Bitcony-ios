@@ -11,9 +11,17 @@
 #import "AlertManager.h"
 
 @protocol SendHandlerProtocol <NSObject>
+- (void)viewDidLoad:(id)object;
+- (void)previewTapped:(id)object;
 @end
 
-@interface SendViewController : UITableViewController
+@protocol SendHandlerProtocolDelegate <NSObject>
+- (NSString *)payToText;
+- (NSString *)descriptionText;
+- (NSString *)amountText;
+@end
+
+@interface SendViewController : UITableViewController <SendHandlerProtocolDelegate>
 @property (strong, nonatomic) id<SendHandlerProtocol> handler;
 @property (strong, nonatomic) id<ScreensManager> screensManager;
 @property (strong, nonatomic) id<AlertManager> alertManager;

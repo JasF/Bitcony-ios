@@ -10,6 +10,7 @@
 
 @protocol ScreensManager <NSObject>
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIViewController *topViewController;
 - (void)showCreateWalletViewController:(id)handler;
 - (void)showEnterOrCreateWalletViewController:(id)handler;
 - (void)showCreateNewSeedViewController:(id)handler;

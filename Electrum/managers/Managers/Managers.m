@@ -28,6 +28,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         shared = [[ScreensManagerImpl alloc] initWithAlertManager:self.alertManager];
+        ((AlertManagerImpl *)self.alertManager).screensManager = shared;
     });
     return shared;
 }

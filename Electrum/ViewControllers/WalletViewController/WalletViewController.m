@@ -101,13 +101,19 @@ static NSTimeInterval kActionTimeInterval = 0.8f;
 
 - (void)showMessage:(NSString *)message {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.alertManager show:message viewController:self];
+        [self.alertManager show:message];
     });
 }
 
 - (void)showError:(NSString *)message {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.alertManager show:message viewController:self];
+        [self.alertManager show:message];
+    });
+}
+
+- (void)showWarning:(NSString *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.alertManager show:message];
     });
 }
 

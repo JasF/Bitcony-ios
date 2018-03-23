@@ -12,6 +12,7 @@
 		60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796EE919190F4100A9926B /* UIKit.framework */; };
 		60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F38191CDBBA00A9926B /* CoreFoundation.framework */; };
 		C360F95E2064E8EE00F90ADD /* AlertManagerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F95D2064E8EE00F90ADD /* AlertManagerImpl.m */; };
+		C360F9642064F8DC00F90ADD /* NSString+rubicon.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F9632064F8DC00F90ADD /* NSString+rubicon.m */; };
 		C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB4205F9E9600756807 /* InfoPlist.strings */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
@@ -103,6 +104,10 @@
 		C360F95C2064E8EE00F90ADD /* AlertManagerImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertManagerImpl.h; sourceTree = "<group>"; };
 		C360F95D2064E8EE00F90ADD /* AlertManagerImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertManagerImpl.m; sourceTree = "<group>"; };
 		C360F95F2064E8F600F90ADD /* AlertManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertManager.h; sourceTree = "<group>"; };
+		C360F9602064EEEE00F90ADD /* paytoedit.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = paytoedit.py; sourceTree = "<group>"; };
+		C360F9612064F67300F90ADD /* amountedit.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = amountedit.py; sourceTree = "<group>"; };
+		C360F9622064F8DC00F90ADD /* NSString+rubicon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+rubicon.h"; sourceTree = "<group>"; };
+		C360F9632064F8DC00F90ADD /* NSString+rubicon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+rubicon.m"; sourceTree = "<group>"; };
 		C39FDFB5205F9E9600756807 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -3388,6 +3393,8 @@
 				C39FE9452060E58400756807 /* __init__.py */,
 				C39FEE2E20622F0400756807 /* mainwindow.py */,
 				C3B75F62206389990030BC81 /* transaction_dialog.py */,
+				C360F9602064EEEE00F90ADD /* paytoedit.py */,
+				C360F9612064F67300F90ADD /* amountedit.py */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -3636,6 +3643,8 @@
 			isa = PBXGroup;
 			children = (
 				C3B75F912063A2730030BC81 /* UIView+TKGeometry */,
+				C360F9622064F8DC00F90ADD /* NSString+rubicon.h */,
+				C360F9632064F8DC00F90ADD /* NSString+rubicon.m */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -3781,6 +3790,7 @@
 			files = (
 				C39FEE5A206238A800756807 /* ViewController.m in Sources */,
 				C39FE966206103C400756807 /* EXTScope.m in Sources */,
+				C360F9642064F8DC00F90ADD /* NSString+rubicon.m in Sources */,
 				C39FEE38206235AA00756807 /* MainViewController.mm in Sources */,
 				C39FE967206103C400756807 /* EXTRuntimeExtensions.m in Sources */,
 				C39FE479205FE97100756807 /* EnterOrCreateWalletViewController.m in Sources */,

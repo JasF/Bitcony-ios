@@ -19,6 +19,8 @@ typedef NS_ENUM(NSInteger, Sections) {
 typedef NS_ENUM(NSInteger, Rows) {
     TransactionIDRow,
     TransactionIDRowValue,
+    DescriptionRow,
+    DescriptionRowValue,
     StatusRow,
     DateRow,
     AmountRow,
@@ -81,7 +83,7 @@ static CGFloat const kRowHeight = 44.f;
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleCell"];
     switch (indexPath.row) {
         case TransactionIDRow:
-            cell.textLabel.text = L(@"Transaction ID:");
+            cell.textLabel.text = [NSString stringWithFormat:@"%@:", L(@"Transaction ID")];
             break;
         case TransactionIDRowValue: {
             NSString *value = nil;
@@ -91,12 +93,24 @@ static CGFloat const kRowHeight = 44.f;
             cell.textLabel.text = value.length ? value : L(@"Unknown");
             break;
         }
+        case DescriptionRow: {
+            cell.textLabel.text = [NSString stringWithFormat:@"%@:", L(@"Description")];
+            break;
+        }
+        case DescriptionRowValue: {
+            NSString *value = nil;
+            if ([_handler respondsToSelector:@selector(descriptionString:)]) {
+                value = [_handler descriptionString:nil];
+            }
+            cell.textLabel.text = value;
+            break;
+        }
         case StatusRow: {
             NSString *value = nil;
             if ([_handler respondsToSelector:@selector(status:)]) {
                 value = [_handler status:nil];
             }
-            cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", L(@"Status:"), value];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", L(@"Status"), value];
             break;
         }
         case DateRow: {

@@ -10,6 +10,7 @@
 
 @protocol TransactionDetailHandlerProtocol <NSObject>
 - (NSString *)transactionID:(id)object;
+- (NSString *)descriptionString:(id)object;
 - (NSString *)status:(id)object;
 - (NSString *)date:(id)object;
 - (NSNumber *)amount:(id)object;

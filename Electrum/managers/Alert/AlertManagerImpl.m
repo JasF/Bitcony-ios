@@ -13,10 +13,10 @@
 
 @implementation AlertManagerImpl
 
-#pragma mark - Initialization
-
 #pragma mark - Overriden Methods - AlertManager
-- (void)show:(NSString *)message viewController:(UIViewController *)viewController {
+- (void)show:(NSString *)message {
+    NSCParameterAssert(_screensManager);
+    UIViewController *viewController = self.screensManager.topViewController;
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
                                                                    message:message
                                                             preferredStyle:UIAlertControllerStyleAlert];

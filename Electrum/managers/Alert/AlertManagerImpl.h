@@ -7,6 +7,8 @@
 //
 
 #import "AlertManager.h"
+#import "ScreensManager.h"
 
 @interface AlertManagerImpl : NSObject <AlertManager>
+@property (strong, nonatomic) id<ScreensManager> screensManager;
 @end
