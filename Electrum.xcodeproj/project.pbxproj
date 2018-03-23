@@ -13,6 +13,8 @@
 		60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60796F38191CDBBA00A9926B /* CoreFoundation.framework */; };
 		C360F95E2064E8EE00F90ADD /* AlertManagerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F95D2064E8EE00F90ADD /* AlertManagerImpl.m */; };
 		C360F9642064F8DC00F90ADD /* NSString+rubicon.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F9632064F8DC00F90ADD /* NSString+rubicon.m */; };
+		C360F96620652D6E00F90ADD /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C360F96520652D6E00F90ADD /* JGProgressHUD.framework */; };
+		C360F96A20652DB400F90ADD /* WaitDialogImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F96920652DB400F90ADD /* WaitDialogImpl.m */; };
 		C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB4205F9E9600756807 /* InfoPlist.strings */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
@@ -108,6 +110,11 @@
 		C360F9612064F67300F90ADD /* amountedit.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = amountedit.py; sourceTree = "<group>"; };
 		C360F9622064F8DC00F90ADD /* NSString+rubicon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+rubicon.h"; sourceTree = "<group>"; };
 		C360F9632064F8DC00F90ADD /* NSString+rubicon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+rubicon.m"; sourceTree = "<group>"; };
+		C360F96520652D6E00F90ADD /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = Frameworks/JGProgressHUD.framework; sourceTree = "<group>"; };
+		C360F96820652DB400F90ADD /* WaitDialogImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitDialogImpl.h; sourceTree = "<group>"; };
+		C360F96920652DB400F90ADD /* WaitDialogImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaitDialogImpl.m; sourceTree = "<group>"; };
+		C360F96B20652DBE00F90ADD /* WaitDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitDialog.h; sourceTree = "<group>"; };
+		C360F96C2065306700F90ADD /* waitingdialog.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = waitingdialog.py; sourceTree = "<group>"; };
 		C39FDFB5205F9E9600756807 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1059,6 +1066,7 @@
 				C39FDFD2205F9ED100756807 /* Python.framework in Frameworks */,
 				C39FEE7020626F7D00756807 /* EasyMapping.framework in Frameworks */,
 				C39FDFD1205F9ED100756807 /* XZ.framework in Frameworks */,
+				C360F96620652D6E00F90ADD /* JGProgressHUD.framework in Frameworks */,
 				60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */,
 				C39FDFE0205FA0D300756807 /* CocoaLumberjack.framework in Frameworks */,
 				60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */,
@@ -1095,6 +1103,7 @@
 		60796EE419190F4100A9926B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C360F96520652D6E00F90ADD /* JGProgressHUD.framework */,
 				C39FEE6F20626F7D00756807 /* EasyMapping.framework */,
 				C39FE94B206103C400756807 /* extobjc */,
 				C39FDFDF205FA0D200756807 /* CocoaLumberjack.framework */,
@@ -1120,6 +1129,16 @@
 				C360F95F2064E8F600F90ADD /* AlertManager.h */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		C360F96720652D8C00F90ADD /* WaitDialog */ = {
+			isa = PBXGroup;
+			children = (
+				C360F96820652DB400F90ADD /* WaitDialogImpl.h */,
+				C360F96920652DB400F90ADD /* WaitDialogImpl.m */,
+				C360F96B20652DBE00F90ADD /* WaitDialog.h */,
+			);
+			path = WaitDialog;
 			sourceTree = "<group>";
 		};
 		C39FDFB3205F9E9600756807 /* Electrum */ = {
@@ -1223,6 +1242,7 @@
 		C39FE462205FE72F00756807 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C360F96720652D8C00F90ADD /* WaitDialog */,
 				C3B75F5A206376540030BC81 /* TransactionDetailViewController */,
 				C3B75F4420636D530030BC81 /* SettingsViewController */,
 				C3B75F4320636D4E0030BC81 /* SendViewController */,
@@ -3395,6 +3415,7 @@
 				C3B75F62206389990030BC81 /* transaction_dialog.py */,
 				C360F9602064EEEE00F90ADD /* paytoedit.py */,
 				C360F9612064F67300F90ADD /* amountedit.py */,
+				C360F96C2065306700F90ADD /* waitingdialog.py */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -3832,6 +3853,7 @@
 				C39FDFE7205FA8EE00756807 /* HelloRubicon.m in Sources */,
 				C39FEE4F2062361D00756807 /* UIViewController+LGSideMenuController.m in Sources */,
 				C39FE964206103C400756807 /* EXTSelectorChecking.m in Sources */,
+				C360F96A20652DB400F90ADD /* WaitDialogImpl.m in Sources */,
 				C39FE46F205FE7DC00756807 /* ScreensManagerImpl.m in Sources */,
 				C360F95E2064E8EE00F90ADD /* AlertManagerImpl.m in Sources */,
 				C39FDFC5205F9E9600756807 /* main.m in Sources */,

@@ -14,6 +14,7 @@
 - (void)viewDidLoad:(id)object;
 - (void)previewTapped:(id)object;
 - (void)feePosChanged:(NSNumber *)newPosition;
+- (void)sendTapped:(id)object;
 @end
 
 @protocol SendHandlerProtocolDelegate <NSObject>

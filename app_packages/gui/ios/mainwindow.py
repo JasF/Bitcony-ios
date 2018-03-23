@@ -73,6 +73,10 @@ class SendHandler(NSObject):
     @objc_method
     def previewTapped_(self):
         self.electrumWindow.do_preview()
+    
+    @objc_method
+    def sendTapped_(self):
+        self.electrumWindow.do_send(preview = True)
 
     @objc_method
     def feePosChanged_(self, pos):
@@ -363,7 +367,7 @@ class ElectrumWindow:
         if self.wallet.has_keystore_encryption():
             msg.append("")
             msg.append(_("Enter your password to proceed"))
-            password = self.password_dialog('\n'.join(msg))
+            password = '1'#self.password_dialog('\n'.join(msg))
             if not password:
                 return
         else:
@@ -376,15 +380,53 @@ class ElectrumWindow:
             if success:
                 if not tx.is_complete():
                     self.show_transaction(tx)
-                    self.do_clear()
+                    #self.do_clear()
                 else:
                     self.broadcast_transaction(tx, tx_desc)
+
         print('Almost ready for send!')
         return
-        self.sign_tx_with_password(tx, sign_done, password)
+        #self.sign_tx_with_password(tx, sign_done, password)
+
+    def broadcast_transaction(self, tx, tx_desc):
+        pass
 
     def get_decimal_point(self):
         return self.decimal_point
+        '''
+        def broadcast_thread():
+            # non-GUI thread
+            pr = self.payment_request
+            if pr and pr.has_expired():
+                self.payment_request = None
+                return False, _("Payment request has expired")
+            status, msg =  self.network.broadcast(tx)
+            if pr and status is True:
+                self.invoices.set_paid(pr, tx.txid())
+                self.invoices.save()
+                self.payment_request = None
+                refund_address = self.wallet.get_receiving_addresses()[0]
+                ack_status, ack_msg = pr.send_ack(str(tx), refund_address)
+                if ack_status:
+                    msg = ack_msg
+            return status, msg
+
+        # Capture current TL window; override might be removed on return
+        parent = self.top_level_window()
+
+        def broadcast_done(result):
+            # GUI thread
+            if result:
+                status, msg = result
+                if status:
+                    if tx_desc is not None and tx.is_complete():
+                        self.wallet.set_label(tx.txid(), tx_desc)
+                    parent.show_message(_('Payment sent.') + '\n' + msg)
+                    self.invoice_list.update()
+                    self.do_clear()
+                else:
+                    parent.show_error(msg)
+                '''
 
     def read_send_tab(self):
         if self.payment_request and self.payment_request.has_expired():
@@ -567,6 +609,12 @@ class ElectrumWindow:
 
             fee = tx.get_fee()
             print('fee1 is: ' + str(fee))
+            
+
+    def on_error(self, exc_info):
+        if not isinstance(exc_info[1], UserCancelled):
+            traceback.print_exception(*exc_info)
+            self.show_error(str(exc_info[1]))
             fee = None if self.not_enough_funds else fee
 
             # Displayed fee/fee_rate values are set according to user input.

@@ -7,6 +7,7 @@
 //
 
 #import "SendViewController.h"
+#import "WaitDialogImpl.h"
 #import "TextFieldCell.h"
 #import "ButtonCell.h"
 #import "FeeCell.h"
@@ -181,6 +182,16 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
             break;
         }
         case SendRow: {
+            WaitDialogImpl *dialog = [WaitDialogImpl new];
+            [dialog showInView:self.view withMessage:@"Hi message"];
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [dialog close];
+            });
+            /*
+            if ([_handler respondsToSelector:@selector(sendTapped:)]) {
+                [_handler sendTapped:nil];
+            }
+             */
             break;
         }
         default:
