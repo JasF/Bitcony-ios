@@ -10,6 +10,6 @@
 
 @implementation Localizer
 + (NSString *)localize:(NSString *)string {
-    return L(string);
+    return NSLocalizedString(string, nil);
 }
 @end

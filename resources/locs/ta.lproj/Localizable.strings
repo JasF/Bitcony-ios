@@ -1,0 +1,17 @@
+"A suggested fee is automatically added to this field. You may override it. The suggested fee increases with the size of the transaction."="இவ்விடத்தில் ஒரு பரிவர்த்தனை கட்டணம் பரிந்துரைக்கப்படும். வேண்டுமெனில் நீங்கள் அதை மாற்றிகொள்ளலாம். பரிந்துரைக்கபட்ட கட்டணம் பரிவர்த்தனையின் வேகத்தை அதிகரிக்கிறது.";
+"Address"="முகவரி";
+"Amount"="தொகை";
+"Amount to be sent."="அனுப்பப்பட வேண்டிய தொகை.";
+"Balance"="இருப்பு தொகை";
+"Bitcoin transactions are in general not free. A transaction fee is paid by the sender of the funds."="Bitcoin பரிவர்த்தனைகள் பொதுவாக இலவசமானவை அல்ல. ஒரு பரிவர்த்தனை கட்டணம் நிதி அனுப்புநர் மூலம் வழங்கப்படவேண்டும்.";
+"Cancel"="ரத்து";
+"Clear"="அழி";
+"Close"="மூடல்";
+"Contacts"="தொடர்புகள்";
+"Copy to clipboard"="இடைநிலை பலகையில் நகலெடுக்க";
+"Date"="தேதி";
+"Default Servers"="முன்னிருப்பு சேவையகங்கள்";
+"Delete"="நீக்கு";
+"Description"="விளக்கம்";
+"Description of the transaction (not mandatory)."="இந்த பரிவர்த்தனையின் விளக்கம் (கட்டாயமானது அல்ல).";
+"Details"="விவரங்கள்";

@@ -6,6 +6,7 @@
 
 #import <Availability.h>
 #import <CocoaLumberjack/CocoaLumberjack.h>
+#import "Localizer.h"
 #import "Logs.h"
 
 #ifndef __IPHONE_3_0
@@ -18,7 +19,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 static const DDLogLevel ddLogLevel = DDLogLevelWarning;
 #endif
 
-#define L(a) a
+#define L(a) [Localizer localize:a]
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
