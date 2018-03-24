@@ -14,7 +14,9 @@
 		C360F95E2064E8EE00F90ADD /* AlertManagerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F95D2064E8EE00F90ADD /* AlertManagerImpl.m */; };
 		C360F9642064F8DC00F90ADD /* NSString+rubicon.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F9632064F8DC00F90ADD /* NSString+rubicon.m */; };
 		C360F96620652D6E00F90ADD /* JGProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C360F96520652D6E00F90ADD /* JGProgressHUD.framework */; };
-		C360F96A20652DB400F90ADD /* WaitDialogImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F96920652DB400F90ADD /* WaitDialogImpl.m */; };
+		C360F96A20652DB400F90ADD /* WaitingDialogImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F96920652DB400F90ADD /* WaitingDialogImpl.m */; };
+		C360F973206620F900F90ADD /* PasswordDialogImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F972206620F900F90ADD /* PasswordDialogImpl.m */; };
+		C360F9782066286800F90ADD /* Localizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F9772066286800F90ADD /* Localizer.m */; };
 		C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB4205F9E9600756807 /* InfoPlist.strings */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
@@ -111,10 +113,16 @@
 		C360F9622064F8DC00F90ADD /* NSString+rubicon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+rubicon.h"; sourceTree = "<group>"; };
 		C360F9632064F8DC00F90ADD /* NSString+rubicon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+rubicon.m"; sourceTree = "<group>"; };
 		C360F96520652D6E00F90ADD /* JGProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JGProgressHUD.framework; path = Frameworks/JGProgressHUD.framework; sourceTree = "<group>"; };
-		C360F96820652DB400F90ADD /* WaitDialogImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitDialogImpl.h; sourceTree = "<group>"; };
-		C360F96920652DB400F90ADD /* WaitDialogImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaitDialogImpl.m; sourceTree = "<group>"; };
-		C360F96B20652DBE00F90ADD /* WaitDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitDialog.h; sourceTree = "<group>"; };
+		C360F96820652DB400F90ADD /* WaitingDialogImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitingDialogImpl.h; sourceTree = "<group>"; };
+		C360F96920652DB400F90ADD /* WaitingDialogImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WaitingDialogImpl.m; sourceTree = "<group>"; };
+		C360F96B20652DBE00F90ADD /* WaitingDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WaitingDialog.h; sourceTree = "<group>"; };
 		C360F96C2065306700F90ADD /* waitingdialog.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = waitingdialog.py; sourceTree = "<group>"; };
+		C360F96F20661F6000F90ADD /* passworddialog.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = passworddialog.py; sourceTree = "<group>"; };
+		C360F971206620F900F90ADD /* PasswordDialogImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordDialogImpl.h; sourceTree = "<group>"; };
+		C360F972206620F900F90ADD /* PasswordDialogImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordDialogImpl.m; sourceTree = "<group>"; };
+		C360F9742066210200F90ADD /* PasswordDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordDialog.h; sourceTree = "<group>"; };
+		C360F9762066286800F90ADD /* Localizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Localizer.h; sourceTree = "<group>"; };
+		C360F9772066286800F90ADD /* Localizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Localizer.m; sourceTree = "<group>"; };
 		C39FDFB5205F9E9600756807 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1131,14 +1139,33 @@
 			path = Alert;
 			sourceTree = "<group>";
 		};
-		C360F96720652D8C00F90ADD /* WaitDialog */ = {
+		C360F96720652D8C00F90ADD /* WaitingDialog */ = {
 			isa = PBXGroup;
 			children = (
-				C360F96820652DB400F90ADD /* WaitDialogImpl.h */,
-				C360F96920652DB400F90ADD /* WaitDialogImpl.m */,
-				C360F96B20652DBE00F90ADD /* WaitDialog.h */,
+				C360F96820652DB400F90ADD /* WaitingDialogImpl.h */,
+				C360F96920652DB400F90ADD /* WaitingDialogImpl.m */,
+				C360F96B20652DBE00F90ADD /* WaitingDialog.h */,
 			);
-			path = WaitDialog;
+			path = WaitingDialog;
+			sourceTree = "<group>";
+		};
+		C360F970206620DA00F90ADD /* PasswordDialog */ = {
+			isa = PBXGroup;
+			children = (
+				C360F971206620F900F90ADD /* PasswordDialogImpl.h */,
+				C360F972206620F900F90ADD /* PasswordDialogImpl.m */,
+				C360F9742066210200F90ADD /* PasswordDialog.h */,
+			);
+			path = PasswordDialog;
+			sourceTree = "<group>";
+		};
+		C360F9752066284F00F90ADD /* Localizer */ = {
+			isa = PBXGroup;
+			children = (
+				C360F9762066286800F90ADD /* Localizer.h */,
+				C360F9772066286800F90ADD /* Localizer.m */,
+			);
+			path = Localizer;
 			sourceTree = "<group>";
 		};
 		C39FDFB3205F9E9600756807 /* Electrum */ = {
@@ -1171,6 +1198,7 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C360F9752066284F00F90ADD /* Localizer */,
 				C3B75F9C2063D60F0030BC81 /* FeeCell */,
 				C3B75F962063D5370030BC81 /* ButtonCell */,
 				C3B75F8A2063A1450030BC81 /* TextFieldCell */,
@@ -1242,7 +1270,8 @@
 		C39FE462205FE72F00756807 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				C360F96720652D8C00F90ADD /* WaitDialog */,
+				C360F970206620DA00F90ADD /* PasswordDialog */,
+				C360F96720652D8C00F90ADD /* WaitingDialog */,
 				C3B75F5A206376540030BC81 /* TransactionDetailViewController */,
 				C3B75F4420636D530030BC81 /* SettingsViewController */,
 				C3B75F4320636D4E0030BC81 /* SendViewController */,
@@ -3416,6 +3445,7 @@
 				C360F9602064EEEE00F90ADD /* paytoedit.py */,
 				C360F9612064F67300F90ADD /* amountedit.py */,
 				C360F96C2065306700F90ADD /* waitingdialog.py */,
+				C360F96F20661F6000F90ADD /* passworddialog.py */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -3815,6 +3845,7 @@
 				C39FEE38206235AA00756807 /* MainViewController.mm in Sources */,
 				C39FE967206103C400756807 /* EXTRuntimeExtensions.m in Sources */,
 				C39FE479205FE97100756807 /* EnterOrCreateWalletViewController.m in Sources */,
+				C360F973206620F900F90ADD /* PasswordDialogImpl.m in Sources */,
 				C39FEE37206235AA00756807 /* LeftViewCell.m in Sources */,
 				C3B75FA02063D6240030BC81 /* FeeCell.m in Sources */,
 				C39FE94A2060FFEB00756807 /* RunLoop.m in Sources */,
@@ -3829,6 +3860,7 @@
 				C3B75F5920636DCA0030BC81 /* ReceiveViewController.m in Sources */,
 				C39FEE6D20626CAA00756807 /* TransactionCell.m in Sources */,
 				C39FE968206103C400756807 /* EXTADT.m in Sources */,
+				C360F9782066286800F90ADD /* Localizer.m in Sources */,
 				C39FE971206115A700756807 /* CreateNewSeedViewController.m in Sources */,
 				C3B75F5620636DBA0030BC81 /* SendViewController.m in Sources */,
 				C39FE97C206117A100756807 /* ConfirmSeedViewController.m in Sources */,
@@ -3853,7 +3885,7 @@
 				C39FDFE7205FA8EE00756807 /* HelloRubicon.m in Sources */,
 				C39FEE4F2062361D00756807 /* UIViewController+LGSideMenuController.m in Sources */,
 				C39FE964206103C400756807 /* EXTSelectorChecking.m in Sources */,
-				C360F96A20652DB400F90ADD /* WaitDialogImpl.m in Sources */,
+				C360F96A20652DB400F90ADD /* WaitingDialogImpl.m in Sources */,
 				C39FE46F205FE7DC00756807 /* ScreensManagerImpl.m in Sources */,
 				C360F95E2064E8EE00F90ADD /* AlertManagerImpl.m in Sources */,
 				C39FDFC5205F9E9600756807 /* main.m in Sources */,

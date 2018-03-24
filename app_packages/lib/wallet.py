@@ -1218,7 +1218,6 @@ class Abstract_Wallet(PrintError):
             # Let the coin chooser select the coins to spend
             max_change = self.max_change_outputs if self.multiple_change else 1
             coin_chooser = coinchooser.get_coin_chooser(config)
-            print('preCOINCHOOSER inputs: ' + str(inputs) + '; outputs: ' + str(outputs) + 'change_addrs[:max_change]: ' + str(change_addrs[:max_change]) + 'self.dust_threshold(): ' + str(self.dust_threshold()) + 'max_change: ' + str(max_change))
             tx = coin_chooser.make_tx(inputs, outputs, change_addrs[:max_change],
                                       fee_estimator, self.dust_threshold())
         else:
@@ -1685,6 +1684,7 @@ class Abstract_Wallet(PrintError):
         If True, e.g. signing a transaction will require a password.
         """
         if self.can_have_keystore_encryption():
+            print('can have keystore enc YES')
             return self.storage.get('use_encryption', False)
         return False
 

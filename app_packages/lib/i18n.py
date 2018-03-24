@@ -23,13 +23,15 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 import gettext, os
+from rubicon.objc import ObjCClass
 
 LOCALE_DIR = os.path.join(os.path.dirname(__file__), 'locale')
 language = gettext.translation('electrum', LOCALE_DIR, fallback = True)
 
 def _(x):
     global language
-    return language.gettext(x)
+    Localizer = ObjCClass("Localizer")
+    return Localizer.localize(x)
 
 def set_language(x):
     global language

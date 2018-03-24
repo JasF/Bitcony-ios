@@ -56,8 +56,8 @@
     @synchronized(self) {
         NSCAssert(_groups.count, @"object in _groups must be exists");
         [_resultCodes addObject:@(resultCode)];
-        value = _groups.firstObject;
-        [_groups removeObjectAtIndex:0];
+        value = _groups.lastObject;
+        [_groups removeLastObject];
     }
     dispatch_group_t group = (dispatch_group_t)value.nonretainedObjectValue;
     dispatch_group_leave(group);

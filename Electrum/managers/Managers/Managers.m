@@ -8,6 +8,8 @@
 
 #import "Managers.h"
 #import "ScreensManagerImpl.h"
+#import "PasswordDialogImpl.h"
+#import "WaitingDialogImpl.h"
 #import "AlertManagerImpl.h"
 
 @implementation Managers
@@ -40,6 +42,16 @@
         shared = [[AlertManagerImpl alloc] init];
     });
     return shared;
+}
+
+- (id<WaitingDialog>)createWaitingDialog {
+    WaitingDialogImpl *dialog = [[WaitingDialogImpl alloc] initWithScreensManager:self.screensManager];
+    return dialog;
+}
+
+- (id<PasswordDialog>)createPasswordDialog {
+    PasswordDialogImpl *dialog = [[PasswordDialogImpl alloc] initWithScreensManager:self.screensManager];
+    return dialog;
 }
 
 - (NSString *)documentsDirectory {

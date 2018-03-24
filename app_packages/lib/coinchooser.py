@@ -252,9 +252,7 @@ class CoinChooserBase(PrintError):
 
         # This takes a count of change outputs and returns a tx fee
         output_weight = 4 * Transaction.estimated_output_size(change_addrs[0])
-        print('output_weight: ' + str(output_weight) + '; tx_weight: ' + str(tx_weight))
         fee = lambda count: fee_estimator_w(tx_weight + count * output_weight)
-        print('change_outputs change_addrs: ' + str(change_addrs) + '; fee: ' + str(fee) + '; dust_threshold: ' + str(dust_threshold))
         change = self.change_outputs(tx, change_addrs, fee, dust_threshold)
         tx.add_outputs(change)
 

@@ -7,12 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PasswordDialog.h"
 #import "ScreensManager.h"
+#import "WaitingDialog.h"
 #import "AlertManager.h"
 
 @interface Managers : NSObject
 + (instancetype)shared;
 - (id<ScreensManager>)screensManager;
 - (id<AlertManager>)alertManager;
+- (id<WaitingDialog>)createWaitingDialog;
+- (id<PasswordDialog>)createPasswordDialog;
 - (NSString *)documentsDirectory;
 @end

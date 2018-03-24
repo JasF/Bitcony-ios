@@ -926,7 +926,6 @@ class Transaction:
 
     def add_outputs(self, outputs):
         self._outputs.extend(outputs)
-        print('add_outputs: ' + str(outputs))
         self.raw = None
 
     def input_value(self):
@@ -936,7 +935,6 @@ class Transaction:
         return sum(val for tp, addr, val in self.outputs())
 
     def get_fee(self):
-        print('tx_iv: ' + str(self.input_value()) + '; tx_ov: ' + str(self.output_value()))
         return self.input_value() - self.output_value()
 
     def is_final(self):

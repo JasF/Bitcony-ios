@@ -13,12 +13,15 @@ from electrum.i18n import _
 from electrum.util import (format_time, format_satoshis, PrintError,
                            format_satoshis_plain, NotEnoughFunds,
                            UserCancelled, NoDynamicFeeEstimates, profiler,
-                           export_meta, import_meta, bh2u, bfh)
+                           export_meta, import_meta, bh2u, bfh, InvalidPassword)
 from electrum import Transaction
 from electrum import util, bitcoin, commands, coinchooser
 from electrum import paymentrequest
 from electrum.wallet import Multisig_Wallet, AddTransactionException
 from .transaction_dialog import show_transaction
+from .waitingdialog import WaitingDialog
+from .passworddialog import PasswordDialog
+from functools import partial
     
 from .paytoedit import PayToEdit
 from .amountedit import BTCAmountEdit
@@ -60,7 +63,6 @@ class ReceiveHandler(NSObject):
     def receivingAddress_(self):
         return self.addr
 
-
 class SendHandler(NSObject):
     @objc_method
     def init_(self):
@@ -76,7 +78,7 @@ class SendHandler(NSObject):
     
     @objc_method
     def sendTapped_(self):
-        self.electrumWindow.do_send(preview = True)
+        self.electrumWindow.do_send(preview = False)
 
     @objc_method
     def feePosChanged_(self, pos):
@@ -304,7 +306,7 @@ class ElectrumWindow:
     
 
     def do_send(self, preview = False):
-        print('$$$ PREPARE FOR DO_SEND $$$')
+        print('$$$ PREPARE FOR DO_SEND $$$, preview: ' + str(preview))
         r = self.read_send_tab()
         if not r:
             return
@@ -312,7 +314,6 @@ class ElectrumWindow:
         self.do_update_fee()
         
         outputs, fee_estimator, tx_desc, coins = r
-        print('do_send outputs: ' + str(outputs) + '; fee_estimator: ' + str(fee_estimator) + '; tx_desc: ' + str(tx_desc) + '; coins: ' + str(coins))
         try:
             is_sweep = bool(self.tx_external_keypairs)
             tx = self.wallet.make_unsigned_transaction(
@@ -342,6 +343,7 @@ class ElectrumWindow:
             return
 
         if preview:
+            print('preview')
             self.show_transaction(tx, tx_desc)
             return
 
@@ -364,17 +366,19 @@ class ElectrumWindow:
         if fee > confirm_rate * tx.estimated_size() / 1000:
             msg.append(_('Warning') + ': ' + _("The fee for this transaction seems unusually high."))
 
+        print('keystore_encrypted: ' + str(self.wallet.has_keystore_encryption()))
+        print('storage_encrypted: ' + str(self.wallet.has_storage_encryption()))
         if self.wallet.has_keystore_encryption():
             msg.append("")
             msg.append(_("Enter your password to proceed"))
-            password = '1'#self.password_dialog('\n'.join(msg))
+            password = self.password_dialog('\n'.join(msg))
             if not password:
                 return
         else:
             msg.append(_('Proceed?'))
             password = None
-            if not self.question('\n'.join(msg)):
-                return
+            #if not self.question('\n'.join(msg)):
+            #return
 
         def sign_done(success):
             if success:
@@ -382,11 +386,10 @@ class ElectrumWindow:
                     self.show_transaction(tx)
                     #self.do_clear()
                 else:
-                    self.broadcast_transaction(tx, tx_desc)
+                    pass#self.broadcast_transaction(tx, tx_desc)
 
         print('Almost ready for send!')
-        return
-        #self.sign_tx_with_password(tx, sign_done, password)
+        self.sign_tx_with_password(tx, sign_done, password)
 
     def broadcast_transaction(self, tx, tx_desc):
         pass
@@ -440,10 +443,8 @@ class ElectrumWindow:
         self.payto_e = PayToEdit(self, payToText)
         
         if self.payment_request:
-            print('IS payment request')
             outputs = self.payment_request.get_outputs()
         else:
-            print ('is NOT payment request')
             errors = self.payto_e.get_errors()
             if errors:
                 self.show_warning(_("Invalid Lines found:") + "\n\n" + '\n'.join([ _("Line #") + str(x[0]+1) + ": " + x[1] for x in errors]))
@@ -493,21 +494,16 @@ class ElectrumWindow:
 
     def show_transaction(self, tx, tx_desc = None):
         '''tx_desc is set only for txs created in the Send tab'''
-        print('tx_desc: ' + tx_desc)
         show_transaction(tx, self, tx_desc)
 
     def fee_cb(self, dyn, pos, fee_rate):
         pos = int(pos)
-        print('fee_cb: dyn: ' + str(dyn) + '; pos: ' + str(pos) + '; fee_rate: ' + str(fee_rate) )
         if dyn:
             if self.config.use_mempool_fees():
-                print('ifif')
                 self.config.set_key('depth_level', pos, False)
             else:
-                print('ifelse')
                 self.config.set_key('fee_level', pos, False)
         else:
-            print('else')
             self.config.set_key('fee_per_kb', fee_rate, False)
 
         if fee_rate:
@@ -554,7 +550,6 @@ class ElectrumWindow:
         amountText = self.sendHandler.viewController.amountText()
         self.amount_e = BTCAmountEdit(self.get_decimal_point, text=amountText)
         amnt = self.amount_e.get_amount()
-        print('amnt: ' + str(amnt) + '; amountText: ' + amountText)
         payToText = self.sendHandler.viewController.payToText()
         self.payto_e = PayToEdit(self, payToText)
         
@@ -566,21 +561,17 @@ class ElectrumWindow:
             self.statusBar().showMessage('')
         else:
             fee_estimator = self.get_send_fee_estimator()
-            print('fee_est: ' + str(fee_estimator))
             outputs = self.payto_e.get_outputs(self.is_max)
             if not outputs:
-                print('no outputs')
                 _type, addr = self.get_payto_or_dummy()
                 outputs = [(_type, addr, amount)]
             is_sweep = bool(self.tx_external_keypairs)
             
-            print('maing usingned tx coins: ' + str(self.get_coins()) + '; outputs: ' + str(outputs) + 'is_sweep:' + str(is_sweep))
             make_tx = lambda fee_est: \
                 self.wallet.make_unsigned_transaction(
                     self.get_coins(), outputs, self.config,
                     fixed_fee=fee_est, is_sweep=is_sweep)
             try:
-                print('make_tx try')
                 tx = make_tx(fee_estimator)
                 self.not_enough_funds = False
             except (NotEnoughFunds, NoDynamicFeeEstimates) as e:
@@ -598,20 +589,18 @@ class ElectrumWindow:
                         size = tx.estimated_size()
                     except BaseException:
                         pass
-                print('return one')
                 return
             except BaseException:
                 traceback.print_exc(file=sys.stderr)
-                print('return two')
                 return
-
             size = tx.estimated_size()
-
             fee = tx.get_fee()
-            print('fee1 is: ' + str(fee))
-            
 
     def on_error(self, exc_info):
+        print('exc_info: ' + str(type(exc_info)));
+        if isinstance(exc_info, InvalidPassword):
+            self.show_message(_('Invalid password'))
+            return
         if not isinstance(exc_info[1], UserCancelled):
             traceback.print_exception(*exc_info)
             self.show_error(str(exc_info[1]))
@@ -629,7 +618,6 @@ class ElectrumWindow:
                     displayed_feerate = fee // size if fee is not None else None
                     #self.feerate_e.setAmount(displayed_feerate)
                 displayed_fee = displayed_feerate * size if displayed_feerate is not None else None
-                print('displayed_fee: ' + displayed_fee)
                     #self.fee_e.setAmount(displayed_fee)
             else:
                 if freeze_fee:
@@ -648,7 +636,33 @@ class ElectrumWindow:
             if self.is_max:
                 amount = tx.output_value()
 
-        print('fee is: ' + str(fee))
-        print('amount is: ' + str(amount))
+    def sign_tx_with_password(self, tx, callback, password):
+        '''Sign the transaction in a separate thread.  When done, calls
+        the callback with a success code of True or False.
+        '''
+
+        def on_signed(result):
+            print('on_signed!')
+            callback(True)
+        def on_failed(exc_info):
+            print('on_failed!')
+            self.on_error(exc_info)
+            callback(False)
+
+        if self.tx_external_keypairs:
+            # can sign directly
+            task = partial(Transaction.sign, tx, self.tx_external_keypairs)
+        else:
+            # call hook to see if plugin needs gui interaction
+            run_hook('sign_tx', self, tx)
+            task = partial(self.wallet.sign_transaction, tx, password)
+        WaitingDialog(self, _('Signing transaction...'), task,
+                      on_signed, on_failed)
+
+    def password_dialog(self, msg):
+        dialog = PasswordDialog(self, msg)
+        password = dialog.show()
+        print('entered password is: ' + password)
+        return password
 #self.amount_e.setAmount(amount)
 

@@ -246,6 +246,7 @@ class Daemon(DaemonThread):
         wallet = Wallet(storage)
         wallet.start_threads(self.network)
         self.wallets[path] = wallet
+        storage.put('use_encryption', bool(password))
         return wallet
 
     def add_wallet(self, wallet):

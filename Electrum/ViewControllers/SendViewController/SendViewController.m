@@ -7,9 +7,10 @@
 //
 
 #import "SendViewController.h"
-#import "WaitDialogImpl.h"
+#import "WaitingDialogImpl.h"
 #import "TextFieldCell.h"
 #import "ButtonCell.h"
+#import "Managers.h"
 #import "FeeCell.h"
 
 typedef NS_ENUM(NSInteger, Rows) {
@@ -176,22 +177,19 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
             break;
         }
         case PreviewRow: {
-            if ([_handler respondsToSelector:@selector(previewTapped:)]) {
-                [_handler previewTapped:nil];
-            }
+            dispatch_async(dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+                if ([_handler respondsToSelector:@selector(previewTapped:)]) {
+                    [_handler previewTapped:nil];
+                }
+            });
             break;
         }
         case SendRow: {
-            WaitDialogImpl *dialog = [WaitDialogImpl new];
-            [dialog showInView:self.view withMessage:@"Hi message"];
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.f * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [dialog close];
+            dispatch_async(dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+                if ([_handler respondsToSelector:@selector(sendTapped:)]) {
+                    [_handler sendTapped:nil];
+                }
             });
-            /*
-            if ([_handler respondsToSelector:@selector(sendTapped:)]) {
-                [_handler sendTapped:nil];
-            }
-             */
             break;
         }
         default:
