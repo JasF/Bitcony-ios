@@ -13,14 +13,14 @@ class WaitingDialog:
         
         def __task():
             try:
-                task()
+                r = task()
                 if on_success:
                     self.dialog.close()
-                    on_success('success')
+                    on_success(r)
             except Exception as e:
                 if on_error:
                     self.dialog.close()
-                    on_error(e)
+                    on_error([False, e])
 
         t = threading.Thread(target = __task)
         t.start()

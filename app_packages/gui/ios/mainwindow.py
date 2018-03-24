@@ -21,6 +21,7 @@ from electrum.wallet import Multisig_Wallet, AddTransactionException
 from .transaction_dialog import show_transaction
 from .waitingdialog import WaitingDialog
 from .passworddialog import PasswordDialog
+from .yesnodialog import YesNoDialog
 from functools import partial
     
 from .paytoedit import PayToEdit
@@ -134,6 +135,8 @@ class ElectrumWindow:
         self.config = config = gui_object.config
         self.decimal_point = config.get('decimal_point', 8)
         self.wallet = wallet
+        self.invoices = wallet.invoices
+        self.contacts = wallet.contacts
         self.historyList = HistoryList(self)
         self.network = gui_object.daemon.network
         self.fx = gui_object.daemon.fx
@@ -377,8 +380,8 @@ class ElectrumWindow:
         else:
             msg.append(_('Proceed?'))
             password = None
-            #if not self.question('\n'.join(msg)):
-            #return
+            if not self.question('\n'.join(msg)):
+                return
 
         def sign_done(success):
             if success:
@@ -386,13 +389,51 @@ class ElectrumWindow:
                     self.show_transaction(tx)
                     #self.do_clear()
                 else:
-                    pass#self.broadcast_transaction(tx, tx_desc)
+                    self.broadcast_transaction(tx, tx_desc)
 
-        print('Almost ready for send!')
+        print('signing...');
         self.sign_tx_with_password(tx, sign_done, password)
 
+
     def broadcast_transaction(self, tx, tx_desc):
-        pass
+
+        def broadcast_thread():
+            # non-GUI thread
+            print('entering broadcast thread')
+            pr = self.payment_request
+            if pr and pr.has_expired():
+                self.payment_request = None
+                return False, _("Payment request has expired")
+            status, msg =  self.network.broadcast(tx)
+            print('broadcast status: ' + str(status))
+            if pr and status is True:
+                self.invoices.set_paid(pr, tx.txid())
+                self.invoices.save()
+                self.payment_request = None
+                refund_address = self.wallet.get_receiving_addresses()[0]
+                ack_status, ack_msg = pr.send_ack(str(tx), refund_address)
+                if ack_status:
+                    msg = ack_msg
+            print('broadcast msg: ' + str(msg))
+            return status, msg
+
+        # Capture current TL window; override might be removed on return
+
+        def broadcast_done(result):
+            # GUI thread
+            if result:
+                status, msg = result
+                if status:
+                    if tx_desc is not None and tx.is_complete():
+                        self.wallet.set_label(tx.txid(), tx_desc)
+                    self.show_message(_('Payment sent.') + '\n' + msg)
+                    #self.invoice_list.update()
+                    self.do_clear()
+                else:
+                    self.show_error(msg)
+
+        WaitingDialog(self, _('Broadcasting transaction...'),
+                      broadcast_thread, broadcast_done, self.on_error)
 
     def get_decimal_point(self):
         return self.decimal_point
@@ -598,43 +639,8 @@ class ElectrumWindow:
 
     def on_error(self, exc_info):
         print('exc_info: ' + str(type(exc_info)));
-        if isinstance(exc_info, InvalidPassword):
-            self.show_message(_('Invalid password'))
-            return
         if not isinstance(exc_info[1], UserCancelled):
-            traceback.print_exception(*exc_info)
             self.show_error(str(exc_info[1]))
-            fee = None if self.not_enough_funds else fee
-
-            # Displayed fee/fee_rate values are set according to user input.
-            # Due to rounding or dropping dust in CoinChooser,
-            # actual fees often differ somewhat.
-            if freeze_feerate:
-                displayed_feerate = self.fee_rate
-                if displayed_feerate:
-                    displayed_feerate = displayed_feerate // 1000
-                else:
-                    # fallback to actual fee
-                    displayed_feerate = fee // size if fee is not None else None
-                    #self.feerate_e.setAmount(displayed_feerate)
-                displayed_fee = displayed_feerate * size if displayed_feerate is not None else None
-                    #self.fee_e.setAmount(displayed_fee)
-            else:
-                if freeze_fee:
-                    displayed_fee = 0#self.fee_e.get_amount()
-                else:
-                    # fallback to actual fee if nothing is frozen
-                    displayed_fee = fee
-                    #self.fee_e.setAmount(displayed_fee)
-                displayed_fee = displayed_fee if displayed_fee else 0
-                displayed_feerate = displayed_fee // size if displayed_fee is not None else None
-                #self.feerate_e.setAmount(displayed_feerate)
-
-            # show/hide fee rounding icon
-            feerounding = (fee - displayed_fee) if fee else 0
-
-            if self.is_max:
-                amount = tx.output_value()
 
     def sign_tx_with_password(self, tx, callback, password):
         '''Sign the transaction in a separate thread.  When done, calls
@@ -662,7 +668,11 @@ class ElectrumWindow:
     def password_dialog(self, msg):
         dialog = PasswordDialog(self, msg)
         password = dialog.show()
-        print('entered password is: ' + password)
         return password
+
+    def question(self, msg):
+        dialog = YesNoDialog(self, msg)
+        result = dialog.show()
+        return result
 #self.amount_e.setAmount(amount)
 

@@ -11,6 +11,7 @@
 #import "ScreensManager.h"
 #import "WaitingDialog.h"
 #import "AlertManager.h"
+#import "YesNoDialog.h"
 
 @interface Managers : NSObject
 + (instancetype)shared;
@@ -18,5 +19,6 @@
 - (id<AlertManager>)alertManager;
 - (id<WaitingDialog>)createWaitingDialog;
 - (id<PasswordDialog>)createPasswordDialog;
+- (id<YesNoDialog>)createYesNoDialog;
 - (NSString *)documentsDirectory;
 @end

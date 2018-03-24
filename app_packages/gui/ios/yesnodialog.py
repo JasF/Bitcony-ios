@@ -4,32 +4,34 @@ import threading
 import traceback
 from rubicon.objc import ObjCClass, NSObject, objc_method
 
-class PasswordDialogHandler(NSObject):
+class YesNoHandler(NSObject):
     @objc_method
     def init_(self):
         return self
     
     @objc_method
-    def done_(self, password):
-        self.dialog.done(password)
+    def done_(self, result):
+        self.dialog.done(result)
 
-class PasswordDialog:
+class YesNoDialog:
     def __init__(self, parent, msg):
         self.parent = parent
         self.msg = msg
-        handler = PasswordDialogHandler.alloc().init()
+        handler = YesNoHandler.alloc().init()
         handler.dialog = self
         Managers = ObjCClass("Managers")
-        self.dialog = Managers.shared().createPasswordDialog()
+        self.dialog = Managers.shared().createYesNoDialog()
         self.dialog.handler = handler
         self.runLoop = ObjCClass("RunLoop").shared();
     
     def show(self):
         self.dialog.showWithMessage(self.msg)
         self.runLoop.exec()
-        return self.password
-
-    def done(self, password):
-        self.password = password
+        return self.result
+    
+    def done(self, result):
+        print('result: ' + str(result))
+        self.result = result
         self.runLoop.exit(0)
+
 

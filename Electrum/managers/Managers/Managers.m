@@ -11,6 +11,7 @@
 #import "PasswordDialogImpl.h"
 #import "WaitingDialogImpl.h"
 #import "AlertManagerImpl.h"
+#import "YesNoDialogImpl.h"
 
 @implementation Managers
 
@@ -51,6 +52,11 @@
 
 - (id<PasswordDialog>)createPasswordDialog {
     PasswordDialogImpl *dialog = [[PasswordDialogImpl alloc] initWithScreensManager:self.screensManager];
+    return dialog;
+}
+
+- (id<YesNoDialog>)createYesNoDialog {
+    YesNoDialogImpl *dialog = [[YesNoDialogImpl alloc] initWithScreensManager:self.screensManager];
     return dialog;
 }
 

@@ -17,6 +17,7 @@
 		C360F96A20652DB400F90ADD /* WaitingDialogImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F96920652DB400F90ADD /* WaitingDialogImpl.m */; };
 		C360F973206620F900F90ADD /* PasswordDialogImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F972206620F900F90ADD /* PasswordDialogImpl.m */; };
 		C360F9782066286800F90ADD /* Localizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F9772066286800F90ADD /* Localizer.m */; };
+		C360F97D206630F500F90ADD /* YesNoDialogImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C360F97C206630F500F90ADD /* YesNoDialogImpl.m */; };
 		C39FDFC1205F9E9600756807 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB4205F9E9600756807 /* InfoPlist.strings */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
@@ -123,6 +124,10 @@
 		C360F9742066210200F90ADD /* PasswordDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordDialog.h; sourceTree = "<group>"; };
 		C360F9762066286800F90ADD /* Localizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Localizer.h; sourceTree = "<group>"; };
 		C360F9772066286800F90ADD /* Localizer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Localizer.m; sourceTree = "<group>"; };
+		C360F97A206630E200F90ADD /* YesNoDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YesNoDialog.h; sourceTree = "<group>"; };
+		C360F97B206630F500F90ADD /* YesNoDialogImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YesNoDialogImpl.h; sourceTree = "<group>"; };
+		C360F97C206630F500F90ADD /* YesNoDialogImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YesNoDialogImpl.m; sourceTree = "<group>"; };
+		C360F97E206631F600F90ADD /* yesnodialog.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = yesnodialog.py; sourceTree = "<group>"; };
 		C39FDFB5205F9E9600756807 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1168,6 +1173,16 @@
 			path = Localizer;
 			sourceTree = "<group>";
 		};
+		C360F979206630D300F90ADD /* YesNoDialog */ = {
+			isa = PBXGroup;
+			children = (
+				C360F97A206630E200F90ADD /* YesNoDialog.h */,
+				C360F97B206630F500F90ADD /* YesNoDialogImpl.h */,
+				C360F97C206630F500F90ADD /* YesNoDialogImpl.m */,
+			);
+			path = YesNoDialog;
+			sourceTree = "<group>";
+		};
 		C39FDFB3205F9E9600756807 /* Electrum */ = {
 			isa = PBXGroup;
 			children = (
@@ -1270,6 +1285,7 @@
 		C39FE462205FE72F00756807 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C360F979206630D300F90ADD /* YesNoDialog */,
 				C360F970206620DA00F90ADD /* PasswordDialog */,
 				C360F96720652D8C00F90ADD /* WaitingDialog */,
 				C3B75F5A206376540030BC81 /* TransactionDetailViewController */,
@@ -3446,6 +3462,7 @@
 				C360F9612064F67300F90ADD /* amountedit.py */,
 				C360F96C2065306700F90ADD /* waitingdialog.py */,
 				C360F96F20661F6000F90ADD /* passworddialog.py */,
+				C360F97E206631F600F90ADD /* yesnodialog.py */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -3867,6 +3884,7 @@
 				C39FEE562062375800756807 /* MenuViewController.mm in Sources */,
 				C3B75F942063A2820030BC81 /* UIView+TKGeometry.m in Sources */,
 				C39FE969206103C400756807 /* NSInvocation+EXT.m in Sources */,
+				C360F97D206630F500F90ADD /* YesNoDialogImpl.m in Sources */,
 				C39FE96B206103C400756807 /* NSMethodSignature+EXT.m in Sources */,
 				C39FEE4E2062361D00756807 /* LGSideMenuGesturesHandler.m in Sources */,
 				C39FEE4B2062361D00756807 /* LGSideMenuView.m in Sources */,
