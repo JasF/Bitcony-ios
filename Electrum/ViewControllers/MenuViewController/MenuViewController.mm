@@ -71,7 +71,7 @@ static CGFloat const kSeparatorAlpha = 0.25f;
         case HistoryRow: cell.textLabel.text = L(@"History"); break;
         case ReceiveRow: cell.textLabel.text = L(@"Receive"); break;
         case SendRow: cell.textLabel.text = L(@"Send"); break;
-        case SettingsRow: cell.textLabel.text = L(@"settings"); break;
+        case SettingsRow: cell.textLabel.text = L(@"Settings"); break;
     }
     return cell;
     /*
