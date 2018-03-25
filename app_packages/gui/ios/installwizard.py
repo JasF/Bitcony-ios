@@ -3,12 +3,17 @@ import os
 import sys
 import threading
 import traceback
+from os import listdir
+from os.path import isfile, join
+
 from rubicon.objc import ObjCClass, NSObject, objc_method
 
 from electrum import Wallet, WalletStorage
 from electrum.util import UserCancelled, InvalidPassword
 from electrum.base_wizard import BaseWizard, HWD_SETUP_DECRYPT_WALLET
 from electrum.i18n import _
+from .textfielddialog import TextFieldDialog
+from .passworddialog import PasswordDialog
 
 '''
 from .seed_dialog import SeedLayout, KeysLayout
@@ -110,9 +115,16 @@ class EnterOrCreateWalletHandler(NSObject):
     
     @objc_method
     def createWalletTapped_(self):
-        handler = CreateWalletHandler.alloc().init()
-        handler.installWizard = self.installWizard
-        self.installWizard.screensManager.showCreateWalletViewController(handler)
+        self.installWizard.beginCreateNewWallet()
+
+    @objc_method
+    def openWalletTapped_(self, walletName):
+        self.installWizard.openWalletWithName(walletName)
+
+    @objc_method
+    def walletsNames_(self):
+        namesList = self.installWizard.walletsNames()
+        return namesList
 
 
 class GoBack(Exception):
@@ -120,15 +132,17 @@ class GoBack(Exception):
 
 class InstallWizard(BaseWizard):
     pass
-    def __init__(self, config, plugins, storage):
+    def __init__(self, config, plugins, storage, daemon):
         BaseWizard.__init__(self, config, storage)
         print('Hello InstallWizard')
+        self.daemon = daemon
         Managers = ObjCClass("Managers")
         self.runLoop = ObjCClass("RunLoop").shared();
         self.screensManager = Managers.shared().screensManager()
         self.config = config
         self.plugins = plugins
         self.storage = storage
+        print('InstallWizard storage: ' + str(storage))
     
     def request_password(self):
         handler = EnterWalletPasswordHandler.alloc().init()
@@ -155,3 +169,108 @@ class InstallWizard(BaseWizard):
         t.start()
         t.join()
 
+    def openWalletWithName(self, walletName):
+        path = self.config.walletsPath()
+        path += '/' + walletName
+        try:
+            print('trying: ' + path)
+            self.storage = WalletStorage(path, manual_upgrades=True)
+        except BaseException:
+            traceback.print_exc(file=sys.stderr)
+            self.storage = None
+    
+
+        if self.storage:
+            if not self.storage.file_exists():
+                '''
+                msg =_("This file does not exist.") + '\n' \
+                      + _("Press 'Next' to create this wallet, or choose another file.")
+                '''
+                pw = False
+            else:
+                if self.storage.is_encrypted_with_user_pw():
+                    '''
+                    msg = _("This file is encrypted with a password.") + '\n' \
+                          + _('Enter your password or choose another file.')
+                          '''
+                    print('needs enter password for wallet')
+                    pw = True
+                else:
+                    '''
+                    msg = _("Press 'Next' to open this wallet.")
+                    '''
+                    print('can open file without password')
+                    pw = False
+        else:
+            msg = _('Cannot read file')
+            pw = False
+
+        if pw == False:
+            try:
+                self.wallet = self.daemon.load_wallet(path, None)
+            except:
+                self.wallet = None
+            if self.wallet:
+                print('Successfully opened wallet without password')
+                self.runLoop.exit(0)
+        else:
+            while True:
+                dialog = PasswordDialog('Enter password for wallet: ' + walletName)
+                password = dialog.show()
+                if len(password) == 0:
+                    break
+                try:
+                    self.wallet = self.daemon.load_wallet(path, password)
+                except:
+                    self.wallet = None
+                if self.wallet:
+                    print('Successfully opened wallet with password')
+                    self.runLoop.exit(0)
+                    return
+                
+
+    def beginCreateNewWallet(self):
+        walletName = "Default_wallet"
+        names = self.walletsNames()
+        walletIndex = 1
+        while True:
+            if walletName not in names:
+                break
+            newName = walletName + str(walletsIndex)
+            if newName not in names:
+                walletName = newName
+                break
+            walletsIndex = walletsIndex + 1
+
+        newName = walletName
+        while True:
+            dialog = TextFieldDialog("Enter wallet name", newName);
+            newName = dialog.show()
+            if len(newName) == 0:
+                return
+            if newName not in names:
+                walletName = newName
+                break
+
+        print('walletName is: ' + walletName)
+        
+        path = self.config.walletsPath()
+        path += '/' + walletName
+        
+        try:
+            print('trying: ' + path)
+            self.storage = WalletStorage(path, manual_upgrades=True)
+        except BaseException:
+            traceback.print_exc(file=sys.stderr)
+            self.storage = None
+            return
+                
+        handler = CreateWalletHandler.alloc().init()
+        handler.installWizard = self
+        self.screensManager.showCreateWalletViewController(handler)
+
+    def walletsNames(self):
+        path = self.config.walletsPath()
+        onlyfiles = [f for f in listdir(path) if isfile(join(path, f))]
+        print('path: ' + path + '; onlyfiles: ' + str(onlyfiles))
+        return onlyfiles

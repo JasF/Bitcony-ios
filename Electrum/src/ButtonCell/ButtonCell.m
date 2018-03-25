@@ -9,7 +9,6 @@
 #import "ButtonCell.h"
 
 @interface ButtonCell ()
-@property (strong, nonatomic) IBOutlet UIButton *button;
 @end
 
 @implementation ButtonCell
@@ -28,6 +27,10 @@
 #pragma mark - Public Methods
 - (void)setTitle:(NSString *)title {
     [_button setTitle:title forState:UIControlStateNormal];
+}
+
+- (void)setButtonImage:(UIImage *)image {
+    [_button setImage:image forState:UIControlStateNormal];
 }
 
 #pragma mark - Private Methods

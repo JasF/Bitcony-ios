@@ -10,7 +10,9 @@
 #import "RunLoop.h"
 
 @protocol EnterOrCreateWalletHandlerProtocol <NSObject>
-- (void)createWalletTapped:(id)aSelf;
+- (void)createWalletTapped:(id)object;
+- (void)openWalletTapped:(id)object;
+- (NSArray *)walletsNames:(id)object;
 @end
 
 @interface EnterOrCreateWalletViewController : UITableViewController

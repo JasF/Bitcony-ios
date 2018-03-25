@@ -215,6 +215,10 @@ class SimpleConfig(PrintError):
             f.write(s)
         os.chmod(path, stat.S_IREAD | stat.S_IWRITE)
 
+    def walletsPath(self):
+        dirpath = os.path.join(self.path, "wallets")
+        return dirpath
+
     def get_wallet_path(self):
         """Set the path of the wallet."""
 
@@ -228,7 +232,7 @@ class SimpleConfig(PrintError):
             return path
 
         # default path
-        dirpath = os.path.join(self.path, "wallets")
+        dirpath = self.walletsPath()
         if not os.path.exists(dirpath):
             if os.path.islink(dirpath):
                 raise BaseException('Dangling link: ' + dirpath)

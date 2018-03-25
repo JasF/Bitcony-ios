@@ -38,8 +38,6 @@
 		C39FE475205FE8CA00756807 /* CreateWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FE474205FE8CA00756807 /* CreateWalletViewController.storyboard */; };
 		C39FE479205FE97100756807 /* EnterOrCreateWalletViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE478205FE97100756807 /* EnterOrCreateWalletViewController.m */; };
 		C39FE47B205FE98200756807 /* EnterOrCreateWalletViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C39FE47A205FE98200756807 /* EnterOrCreateWalletViewController.storyboard */; };
-		C39FE481205FEC1D00756807 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE47F205FEC1D00756807 /* ButtonCell.m */; };
-		C39FE482205FEC1D00756807 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C39FE480205FEC1D00756807 /* ButtonCell.xib */; };
 		C39FE4932060E03B00756807 /* __main__.py in Resources */ = {isa = PBXBuildFile; fileRef = C39FE4922060DDBF00756807 /* __main__.py */; };
 		C39FE94A2060FFEB00756807 /* RunLoop.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE9492060FFEB00756807 /* RunLoop.m */; };
 		C39FE964206103C400756807 /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FE94F206103C400756807 /* EXTSelectorChecking.m */; };
@@ -99,6 +97,18 @@
 		C3B75FA02063D6240030BC81 /* FeeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F9E2063D6240030BC81 /* FeeCell.m */; };
 		C3B75FA12063D6240030BC81 /* FeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F9F2063D6240030BC81 /* FeeCell.xib */; };
 		C3EA246D2067776C00146917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EA246C2067776C00146917 /* LaunchScreen.storyboard */; };
+		C3EA2473206787BA00146917 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EA2470206787BA00146917 /* ButtonCell.xib */; };
+		C3EA2474206787BA00146917 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA2471206787BA00146917 /* ButtonCell.m */; };
+		C3EA2478206788E200146917 /* CustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA2477206788E200146917 /* CustomButton.m */; };
+		C3EA247D2067903200146917 /* CreateWalletCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA247B2067903200146917 /* CreateWalletCell.m */; };
+		C3EA247E2067903200146917 /* CreateWalletCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EA247C2067903200146917 /* CreateWalletCell.xib */; };
+		C3EA24832067A73700146917 /* TextFieldDialogImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA24822067A73700146917 /* TextFieldDialogImpl.m */; };
+		C3EA24882067AA1D00146917 /* Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA24872067AA1D00146917 /* Functions.m */; };
+		C3EA248E2067B60B00146917 /* LabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA248C2067B60B00146917 /* LabelCell.m */; };
+		C3EA248F2067B60B00146917 /* LabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EA248D2067B60B00146917 /* LabelCell.xib */; };
+		C3EA24932067B8B500146917 /* InitialNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA24922067B8B500146917 /* InitialNavigationController.m */; };
+		C3EA24982067BB6000146917 /* TextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA24962067BB6000146917 /* TextViewCell.m */; };
+		C3EA24992067BB6000146917 /* TextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EA24972067BB6000146917 /* TextViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,9 +197,6 @@
 		C39FE477205FE97100756807 /* EnterOrCreateWalletViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterOrCreateWalletViewController.h; sourceTree = "<group>"; };
 		C39FE478205FE97100756807 /* EnterOrCreateWalletViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterOrCreateWalletViewController.m; sourceTree = "<group>"; };
 		C39FE47A205FE98200756807 /* EnterOrCreateWalletViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EnterOrCreateWalletViewController.storyboard; sourceTree = "<group>"; };
-		C39FE47E205FEC1D00756807 /* ButtonCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
-		C39FE47F205FEC1D00756807 /* ButtonCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
-		C39FE480205FEC1D00756807 /* ButtonCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		C39FE4922060DDBF00756807 /* __main__.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = __main__.py; sourceTree = "<group>"; };
 		C39FE52C2060E3D900756807 /* mecard.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = mecard.py; sourceTree = "<group>"; };
 		C39FE52D2060E3D900756807 /* util.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = util.py; sourceTree = "<group>"; };
@@ -1098,6 +1105,29 @@
 		C3B75F9E2063D6240030BC81 /* FeeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeeCell.m; sourceTree = "<group>"; };
 		C3B75F9F2063D6240030BC81 /* FeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeCell.xib; sourceTree = "<group>"; };
 		C3EA246C2067776C00146917 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C3EA2470206787BA00146917 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
+		C3EA2471206787BA00146917 /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
+		C3EA2472206787BA00146917 /* ButtonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonCell.h; sourceTree = "<group>"; };
+		C3EA2476206788E200146917 /* CustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomButton.h; sourceTree = "<group>"; };
+		C3EA2477206788E200146917 /* CustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomButton.m; sourceTree = "<group>"; };
+		C3EA247A2067903200146917 /* CreateWalletCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateWalletCell.h; sourceTree = "<group>"; };
+		C3EA247B2067903200146917 /* CreateWalletCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateWalletCell.m; sourceTree = "<group>"; };
+		C3EA247C2067903200146917 /* CreateWalletCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateWalletCell.xib; sourceTree = "<group>"; };
+		C3EA24802067A72500146917 /* TextFieldDialog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFieldDialog.h; sourceTree = "<group>"; };
+		C3EA24812067A73700146917 /* TextFieldDialogImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextFieldDialogImpl.h; sourceTree = "<group>"; };
+		C3EA24822067A73700146917 /* TextFieldDialogImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextFieldDialogImpl.m; sourceTree = "<group>"; };
+		C3EA24842067A84300146917 /* textfielddialog.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = textfielddialog.py; sourceTree = "<group>"; };
+		C3EA24862067AA1D00146917 /* Functions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Functions.h; sourceTree = "<group>"; };
+		C3EA24872067AA1D00146917 /* Functions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Functions.m; sourceTree = "<group>"; };
+		C3EA24892067B53300146917 /* unlocalized.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = unlocalized.h; sourceTree = "<group>"; };
+		C3EA248B2067B60B00146917 /* LabelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LabelCell.h; sourceTree = "<group>"; };
+		C3EA248C2067B60B00146917 /* LabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LabelCell.m; sourceTree = "<group>"; };
+		C3EA248D2067B60B00146917 /* LabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LabelCell.xib; sourceTree = "<group>"; };
+		C3EA24912067B8B500146917 /* InitialNavigationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InitialNavigationController.h; sourceTree = "<group>"; };
+		C3EA24922067B8B500146917 /* InitialNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InitialNavigationController.m; sourceTree = "<group>"; };
+		C3EA24952067BB6000146917 /* TextViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TextViewCell.h; sourceTree = "<group>"; };
+		C3EA24962067BB6000146917 /* TextViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TextViewCell.m; sourceTree = "<group>"; };
+		C3EA24972067BB6000146917 /* TextViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1127,6 +1157,7 @@
 		60796ED919190F4100A9926B = {
 			isa = PBXGroup;
 			children = (
+				C3EA24892067B53300146917 /* unlocalized.h */,
 				C360F98120665D5300F90ADD /* electrum.mo.po */,
 				C360F97F20665B7000F90ADD /* conv.py */,
 				C39FEE7A206276FA00756807 /* seed.h */,
@@ -1255,9 +1286,16 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C3EA24942067BB2C00146917 /* TextViewCell */,
+				C3EA24902067B8A100146917 /* InitialNavigationController */,
+				C3EA248A2067B5F600146917 /* LabelCell */,
+				C3EA24852067AA1100146917 /* Functions */,
+				C3EA24792067901900146917 /* CreateWalletCell */,
+				C3EA24752067889500146917 /* CustomButton */,
+				C3EA246F206787BA00146917 /* ButtonCell */,
 				C360F9752066284F00F90ADD /* Localizer */,
 				C3B75F9C2063D60F0030BC81 /* FeeCell */,
-				C3B75F962063D5370030BC81 /* ButtonCell */,
+				C3B75F962063D5370030BC81 /* TableButtonCell */,
 				C3B75F8A2063A1450030BC81 /* TextFieldCell */,
 				C3B75F3F20636A050030BC81 /* SimpleCell */,
 				C39FEE6920626C8600756807 /* TransactionCell */,
@@ -1327,6 +1365,7 @@
 		C39FE462205FE72F00756807 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3EA247F2067A71300146917 /* TextFieldDialog */,
 				C360F979206630D300F90ADD /* YesNoDialog */,
 				C360F970206620DA00F90ADD /* PasswordDialog */,
 				C360F96720652D8C00F90ADD /* WaitingDialog */,
@@ -1392,22 +1431,11 @@
 		C39FE476205FE95800756807 /* EnterOrCreateWalletViewController */ = {
 			isa = PBXGroup;
 			children = (
-				C39FE47D205FEC0100756807 /* ButtonCell */,
 				C39FE477205FE97100756807 /* EnterOrCreateWalletViewController.h */,
 				C39FE478205FE97100756807 /* EnterOrCreateWalletViewController.m */,
 				C39FE47A205FE98200756807 /* EnterOrCreateWalletViewController.storyboard */,
 			);
 			path = EnterOrCreateWalletViewController;
-			sourceTree = "<group>";
-		};
-		C39FE47D205FEC0100756807 /* ButtonCell */ = {
-			isa = PBXGroup;
-			children = (
-				C39FE47E205FEC1D00756807 /* ButtonCell.h */,
-				C39FE47F205FEC1D00756807 /* ButtonCell.m */,
-				C39FE480205FEC1D00756807 /* ButtonCell.xib */,
-			);
-			path = ButtonCell;
 			sourceTree = "<group>";
 		};
 		C39FE52B2060E3D900756807 /* qrcode */ = {
@@ -3505,6 +3533,7 @@
 				C360F96C2065306700F90ADD /* waitingdialog.py */,
 				C360F96F20661F6000F90ADD /* passworddialog.py */,
 				C360F97E206631F600F90ADD /* yesnodialog.py */,
+				C3EA24842067A84300146917 /* textfielddialog.py */,
 			);
 			path = ios;
 			sourceTree = "<group>";
@@ -3768,14 +3797,14 @@
 			path = "UIView+TKGeometry";
 			sourceTree = "<group>";
 		};
-		C3B75F962063D5370030BC81 /* ButtonCell */ = {
+		C3B75F962063D5370030BC81 /* TableButtonCell */ = {
 			isa = PBXGroup;
 			children = (
 				C3B75F972063D5460030BC81 /* TableButtonCell.xib */,
 				C3B75F992063D5630030BC81 /* TableButtonCell.h */,
 				C3B75F9A2063D5630030BC81 /* TableButtonCell.m */,
 			);
-			path = ButtonCell;
+			path = TableButtonCell;
 			sourceTree = "<group>";
 		};
 		C3B75F9C2063D60F0030BC81 /* FeeCell */ = {
@@ -3786,6 +3815,83 @@
 				C3B75F9F2063D6240030BC81 /* FeeCell.xib */,
 			);
 			path = FeeCell;
+			sourceTree = "<group>";
+		};
+		C3EA246F206787BA00146917 /* ButtonCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA2470206787BA00146917 /* ButtonCell.xib */,
+				C3EA2471206787BA00146917 /* ButtonCell.m */,
+				C3EA2472206787BA00146917 /* ButtonCell.h */,
+			);
+			path = ButtonCell;
+			sourceTree = "<group>";
+		};
+		C3EA24752067889500146917 /* CustomButton */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA2476206788E200146917 /* CustomButton.h */,
+				C3EA2477206788E200146917 /* CustomButton.m */,
+			);
+			path = CustomButton;
+			sourceTree = "<group>";
+		};
+		C3EA24792067901900146917 /* CreateWalletCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA247A2067903200146917 /* CreateWalletCell.h */,
+				C3EA247B2067903200146917 /* CreateWalletCell.m */,
+				C3EA247C2067903200146917 /* CreateWalletCell.xib */,
+			);
+			path = CreateWalletCell;
+			sourceTree = "<group>";
+		};
+		C3EA247F2067A71300146917 /* TextFieldDialog */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA24802067A72500146917 /* TextFieldDialog.h */,
+				C3EA24812067A73700146917 /* TextFieldDialogImpl.h */,
+				C3EA24822067A73700146917 /* TextFieldDialogImpl.m */,
+			);
+			path = TextFieldDialog;
+			sourceTree = "<group>";
+		};
+		C3EA24852067AA1100146917 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA24862067AA1D00146917 /* Functions.h */,
+				C3EA24872067AA1D00146917 /* Functions.m */,
+			);
+			path = Functions;
+			sourceTree = "<group>";
+		};
+		C3EA248A2067B5F600146917 /* LabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA248B2067B60B00146917 /* LabelCell.h */,
+				C3EA248C2067B60B00146917 /* LabelCell.m */,
+				C3EA248D2067B60B00146917 /* LabelCell.xib */,
+			);
+			path = LabelCell;
+			sourceTree = "<group>";
+		};
+		C3EA24902067B8A100146917 /* InitialNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA24912067B8B500146917 /* InitialNavigationController.h */,
+				C3EA24922067B8B500146917 /* InitialNavigationController.m */,
+			);
+			path = InitialNavigationController;
+			sourceTree = "<group>";
+		};
+		C3EA24942067BB2C00146917 /* TextViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3EA24952067BB6000146917 /* TextViewCell.h */,
+				C3EA24962067BB6000146917 /* TextViewCell.m */,
+				C3EA24972067BB6000146917 /* TextViewCell.xib */,
+			);
+			path = TextViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -3883,22 +3989,25 @@
 				C39FEE6E20626CAA00756807 /* TransactionCell.xib in Resources */,
 				C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */,
 				C39FEE66206247FF00756807 /* Common.xcassets in Resources */,
+				C3EA24992067BB6000146917 /* TextViewCell.xib in Resources */,
 				C39FEE6820625DC400756807 /* history_list.py in Resources */,
 				C3B75F8F2063A15B0030BC81 /* TextFieldCell.xib in Resources */,
 				C3B75FA12063D6240030BC81 /* FeeCell.xib in Resources */,
+				C3EA247E2067903200146917 /* CreateWalletCell.xib in Resources */,
 				C39FE4932060E03B00756807 /* __main__.py in Resources */,
+				C3EA2473206787BA00146917 /* ButtonCell.xib in Resources */,
 				C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */,
 				C3B75F5320636DB00030BC81 /* SettingsViewController.storyboard in Resources */,
 				C39FE978206115CF00756807 /* CreateNewSeedViewController.storyboard in Resources */,
 				C39FEE39206235AA00756807 /* Main.storyboard in Resources */,
 				C39FEE552062375800756807 /* MenuViewController.storyboard in Resources */,
 				C39FEE64206244F700756807 /* WalletViewController.storyboard in Resources */,
-				C39FE482205FEC1D00756807 /* ButtonCell.xib in Resources */,
 				C39FE475205FE8CA00756807 /* CreateWalletViewController.storyboard in Resources */,
 				C39FE97E206117B100756807 /* ConfirmSeedViewController.storyboard in Resources */,
 				C3B75F982063D5460030BC81 /* TableButtonCell.xib in Resources */,
 				C39FDFD9205F9FF300756807 /* __main__-.py in Resources */,
 				C39FE976206115C500756807 /* HaveASeedViewController.storyboard in Resources */,
+				C3EA248F2067B60B00146917 /* LabelCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3928,13 +4037,16 @@
 			files = (
 				C39FEE5A206238A800756807 /* ViewController.m in Sources */,
 				C39FE966206103C400756807 /* EXTScope.m in Sources */,
+				C3EA24932067B8B500146917 /* InitialNavigationController.m in Sources */,
 				C360F9642064F8DC00F90ADD /* NSString+rubicon.m in Sources */,
 				C39FEE38206235AA00756807 /* MainViewController.mm in Sources */,
 				C39FE967206103C400756807 /* EXTRuntimeExtensions.m in Sources */,
 				C39FE479205FE97100756807 /* EnterOrCreateWalletViewController.m in Sources */,
 				C360F973206620F900F90ADD /* PasswordDialogImpl.m in Sources */,
+				C3EA2474206787BA00146917 /* ButtonCell.m in Sources */,
 				C39FEE37206235AA00756807 /* LeftViewCell.m in Sources */,
 				C3B75FA02063D6240030BC81 /* FeeCell.m in Sources */,
+				C3EA2478206788E200146917 /* CustomButton.m in Sources */,
 				C39FE94A2060FFEB00756807 /* RunLoop.m in Sources */,
 				C39FEE5E2062444C00756807 /* BaseNavigationController.mm in Sources */,
 				C39FEE4C2062361D00756807 /* LGSideMenuSegue.m in Sources */,
@@ -3944,6 +4056,7 @@
 				C39FE473205FE8A700756807 /* CreateWalletViewController.m in Sources */,
 				C3B75F5120636DA50030BC81 /* SettingsViewController.m in Sources */,
 				C3B75F8E2063A15B0030BC81 /* TextFieldCell.m in Sources */,
+				C3EA247D2067903200146917 /* CreateWalletCell.m in Sources */,
 				C3B75F5920636DCA0030BC81 /* ReceiveViewController.m in Sources */,
 				C39FEE6D20626CAA00756807 /* TransactionCell.m in Sources */,
 				C39FE968206103C400756807 /* EXTADT.m in Sources */,
@@ -3962,7 +4075,6 @@
 				C39FEE62206244EE00756807 /* WalletViewController.m in Sources */,
 				C39FEE4A2062361D00756807 /* LGSideMenuHelper.m in Sources */,
 				C39FEE7520626FA200756807 /* Transaction.m in Sources */,
-				C39FE481205FEC1D00756807 /* ButtonCell.m in Sources */,
 				C39FE96C206103C400756807 /* EXTNil.m in Sources */,
 				C39FEE3A206235AA00756807 /* LeftViewController.m in Sources */,
 				C39FE974206115B000756807 /* HaveASeedViewController.m in Sources */,
@@ -3972,12 +4084,16 @@
 				C39FE96A206103C400756807 /* EXTSafeCategory.m in Sources */,
 				C39FDFE7205FA8EE00756807 /* HelloRubicon.m in Sources */,
 				C39FEE4F2062361D00756807 /* UIViewController+LGSideMenuController.m in Sources */,
+				C3EA24982067BB6000146917 /* TextViewCell.m in Sources */,
 				C39FE964206103C400756807 /* EXTSelectorChecking.m in Sources */,
 				C360F96A20652DB400F90ADD /* WaitingDialogImpl.m in Sources */,
 				C39FE46F205FE7DC00756807 /* ScreensManagerImpl.m in Sources */,
 				C360F95E2064E8EE00F90ADD /* AlertManagerImpl.m in Sources */,
 				C39FDFC5205F9E9600756807 /* main.m in Sources */,
+				C3EA248E2067B60B00146917 /* LabelCell.m in Sources */,
 				C39FE46A205FE76000756807 /* Managers.m in Sources */,
+				C3EA24832067A73700146917 /* TextFieldDialogImpl.m in Sources */,
+				C3EA24882067AA1D00146917 /* Functions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

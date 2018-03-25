@@ -7,8 +7,19 @@
 //
 
 #import "CreateWalletViewController.h"
+#import "ButtonCell.h"
+#import "LabelCell.h"
 
-@interface CreateWalletViewController ()
+typedef NS_ENUM(NSInteger, Rows) {
+    DescriptionRow,
+    CreateSeedRow,
+    ExistedSeedRow,
+    RowsCount
+};
+
+static CGFloat const kEstimatedRowHeight = 50.f;
+
+@interface CreateWalletViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (strong, nonatomic) IBOutlet UIButton *createNewSeedButton;
 @property (strong, nonatomic) IBOutlet UIButton *haveASeedButton;
 @property (strong, nonatomic) IBOutlet UILabel *descriptionLabel;
@@ -19,6 +30,11 @@
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
     [super viewDidLoad];
+    self.view.backgroundColor = self.navigationController.view.backgroundColor;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = kEstimatedRowHeight;
+    [self.tableView registerNib:[UINib nibWithNibName:@"ButtonCell" bundle:nil] forCellReuseIdentifier:@"ButtonCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"LabelCell" bundle:nil] forCellReuseIdentifier:@"LabelCell"];
     // Do any additional setup after loading the view.
 }
 
@@ -48,14 +64,64 @@
 
 - (IBAction)createNewSeedTapped:(id)sender {
     if ([_handler respondsToSelector:@selector(createNewSeedTapped:)]) {
-        [_handler createNewSeedTapped:_handler];
+        [_handler createNewSeedTapped:nil];
     }
 }
 
 - (IBAction)haveASeedTapped:(id)sender {
     if ([_handler respondsToSelector:@selector(haveASeedTapped:)]) {
-        [_handler haveASeedTapped:_handler];
+        [_handler haveASeedTapped:nil];
     }
+}
+
+#pragma mark - UITableViewDataSource
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *resultCell = nil;
+    switch (indexPath.row) {
+        case DescriptionRow: {
+            LabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LabelCell"];
+            [cell setTitle:L(@"Do you want to create a new seed, or to restore a wallet using an existing seed?")];
+            resultCell = cell;
+            break;
+        }
+        case CreateSeedRow: {
+            ButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
+            [cell setTitle:L(@"Create a new seed")];
+            @weakify(self);
+            cell.tappedHandler = ^{
+                @strongify(self);
+                [self createNewSeedTapped:nil];
+            };
+            resultCell = cell;
+            break;
+        }
+        case ExistedSeedRow: {
+            ButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
+            [cell setTitle:L(@"I already have a seed")];
+            @weakify(self);
+            cell.tappedHandler = ^{
+                @strongify(self);
+                [self haveASeedTapped:nil];
+            };
+            resultCell = cell;
+            break;
+        }
+    }
+    resultCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return resultCell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return RowsCount;
+}
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
 }
 
 @end

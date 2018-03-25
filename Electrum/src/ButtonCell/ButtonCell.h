@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomButton.h"
 
 @interface ButtonCell : UITableViewCell
+@property (strong, nonatomic) IBOutlet CustomButton *button;
 @property (copy, nonatomic) dispatch_block_t tappedHandler;
 - (void)setTitle:(NSString *)title;
+- (void)setButtonImage:(UIImage *)image;
 @end

@@ -46,7 +46,7 @@ class ElectrumGui:
     def init_network(self):
         if self.daemon.network:
             if self.config.get('auto_connect') is None:
-                wizard = InstallWizard(self.config, self.plugins, None)
+                wizard = InstallWizard(self.config, self.plugins, None, self.daemon)
                 wizard.init_network(self.daemon.network)
                 wizard.terminate()
 
@@ -58,16 +58,14 @@ class ElectrumGui:
     def start_new_window(self, path, uri):
         traceback.print_stack()
         try:
-            wallet = self.daemon.load_wallet(path, "1")#"om universe bodhisattva")
-            print('wallet is: ')
-            print(wallet)
+            wallet = None#self.daemon.load_wallet(path, None)
         except BaseException as e:
             traceback.print_exc(file=sys.stdout)
             print('Cannot load wallet: ' + str(e))
             return
         if not wallet:
             storage = WalletStorage(path, manual_upgrades=True)
-            wizard = InstallWizard(self.config, self.plugins, storage)
+            wizard = InstallWizard(self.config, self.plugins, storage, self.daemon)
             try:
                 wallet = wizard.run_and_get_wallet()
             except UserCancelled:

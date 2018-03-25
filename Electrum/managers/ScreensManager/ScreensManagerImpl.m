@@ -211,7 +211,11 @@ static NSString *kStoryboardName = @"Main";
 }
 
 - (UIViewController *)topViewController {
-    return self.navigationController.topViewController;
+    UIViewController *result = self.navigationController.topViewController;
+    if (!result) {
+        result = self.window.rootViewController;
+    }
+    return result;
 }
 
 #pragma mark - Private Methods

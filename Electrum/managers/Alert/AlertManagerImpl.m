@@ -16,6 +16,17 @@
 #pragma mark - Overriden Methods - AlertManager
 - (void)show:(NSString *)message {
     NSCParameterAssert(_screensManager);
+    if ([NSThread isMainThread]) {
+        [self doShow:message];
+    }
+    else {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self doShow:message];
+        });
+    }
+}
+
+- (void)doShow:(NSString *)message {
     UIViewController *viewController = self.screensManager.topViewController;
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
                                                                    message:message

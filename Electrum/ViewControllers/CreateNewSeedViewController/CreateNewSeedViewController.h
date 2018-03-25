@@ -13,6 +13,6 @@
 - (NSString *)generatedSeed:(id)aSelf;
 @end
 
-@interface CreateNewSeedViewController : UIViewController
+@interface CreateNewSeedViewController : UITableViewController
 @property (strong, nonatomic) id<CreateNewSeedHandlerProtocol> handler;
 @end

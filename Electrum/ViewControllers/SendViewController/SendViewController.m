@@ -177,7 +177,7 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
             break;
         }
         case PreviewRow: {
-            dispatch_async(dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+            dispatch_python(^{
                 if ([_handler respondsToSelector:@selector(previewTapped:)]) {
                     [_handler previewTapped:nil];
                 }
@@ -185,7 +185,7 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
             break;
         }
         case SendRow: {
-            dispatch_async(dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+            dispatch_python(^{
                 if ([_handler respondsToSelector:@selector(sendTapped:)]) {
                     [_handler sendTapped:nil];
                 }

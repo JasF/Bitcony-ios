@@ -13,6 +13,6 @@
 - (void)haveASeedTapped:(id)aSelf;
 @end
 
-@interface CreateWalletViewController : UIViewController
+@interface CreateWalletViewController : UITableViewController
 @property (strong, nonatomic) id<CreateWalletHandlerProtocol> handler;
 @end

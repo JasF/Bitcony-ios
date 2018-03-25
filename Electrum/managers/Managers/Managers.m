@@ -7,6 +7,7 @@
 //
 
 #import "Managers.h"
+#import "TextFieldDialogImpl.h"
 #import "ScreensManagerImpl.h"
 #import "PasswordDialogImpl.h"
 #import "WaitingDialogImpl.h"
@@ -57,6 +58,11 @@
 
 - (id<YesNoDialog>)createYesNoDialog {
     YesNoDialogImpl *dialog = [[YesNoDialogImpl alloc] initWithScreensManager:self.screensManager];
+    return dialog;
+}
+
+- (id<TextFieldDialog>)createTextFieldDialog {
+    TextFieldDialogImpl *dialog = [[TextFieldDialogImpl alloc] initWithScreensManager:self.screensManager];
     return dialog;
 }
 

@@ -666,7 +666,7 @@ class ElectrumWindow:
                       on_signed, on_failed)
 
     def password_dialog(self, msg):
-        dialog = PasswordDialog(self, msg)
+        dialog = PasswordDialog(msg)
         password = dialog.show()
         return password
 
