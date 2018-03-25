@@ -13,6 +13,6 @@
 - (void)continueTapped:(id)object;
 @end
 
-@interface ConfirmSeedViewController : UIViewController
+@interface ConfirmSeedViewController : UITableViewController
 @property (strong, nonatomic) id<ConfirmSeedHandlerProtocol> handler;
 @end

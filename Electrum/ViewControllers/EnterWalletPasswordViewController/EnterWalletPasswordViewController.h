@@ -12,6 +12,6 @@
 - (void)continueTapped:(NSString *)password;
 @end
 
-@interface EnterWalletPasswordViewController : UIViewController
+@interface EnterWalletPasswordViewController : UITableViewController
 @property (strong, nonatomic) id<EnterWalletPasswordHandlerProtocol> handler;
 @end

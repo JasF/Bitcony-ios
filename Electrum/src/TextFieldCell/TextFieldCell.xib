@@ -20,9 +20,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L8p-hT-BwW">
-                        <rect key="frame" x="0.0" y="0.0" width="304" height="43.5"/>
+                        <rect key="frame" x="16" y="0.0" width="288" height="43.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43.5" id="UUZ-vP-ESN"/>
+                        </constraints>
                         <nil key="textColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                         <textInputTraits key="textInputTraits"/>
                     </textField>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gq8-7Y-Vjw">
@@ -32,16 +35,18 @@
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="L8p-hT-BwW" secondAttribute="bottom" id="2M9-b0-IUH"/>
                     <constraint firstItem="gq8-7Y-Vjw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KG2-AI-oQB"/>
-                    <constraint firstAttribute="trailing" secondItem="gq8-7Y-Vjw" secondAttribute="trailing" constant="8" id="iMe-UK-kGS"/>
-                    <constraint firstAttribute="bottom" secondItem="gq8-7Y-Vjw" secondAttribute="bottom" id="ixF-Ug-aHs"/>
+                    <constraint firstAttribute="height" secondItem="L8p-hT-BwW" secondAttribute="height" id="Vyc-YO-DMW"/>
+                    <constraint firstItem="gq8-7Y-Vjw" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-8" id="iMe-UK-kGS"/>
+                    <constraint firstItem="gq8-7Y-Vjw" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" id="ixF-Ug-aHs"/>
                     <constraint firstItem="L8p-hT-BwW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mg1-d0-HhN"/>
-                    <constraint firstItem="L8p-hT-BwW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="zSq-zG-5im"/>
+                    <constraint firstItem="L8p-hT-BwW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="zSq-zG-5im"/>
                     <constraint firstItem="L8p-hT-BwW" firstAttribute="trailing" secondItem="gq8-7Y-Vjw" secondAttribute="leading" constant="-8" id="zuh-fA-3Wm"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="rightLabel" destination="gq8-7Y-Vjw" id="ziL-dP-jqO"/>

@@ -14,4 +14,5 @@
 - (void)setStyleWithTransparentBackground:(BOOL)yes;
 - (void)setAttributedString:(NSAttributedString *)attributedString;
 - (CGFloat)desiredHeight:(CGFloat)width;
+- (NSString *)enteredText;
 @end

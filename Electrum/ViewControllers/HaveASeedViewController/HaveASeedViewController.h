@@ -11,6 +11,6 @@
 - (void)continueTapped:(NSString *)seed;
 @end
 
-@interface HaveASeedViewController : UIViewController
+@interface HaveASeedViewController : UITableViewController
 @property (strong, nonatomic) id<HaveASeedHandlerProtocol> handler;
 @end

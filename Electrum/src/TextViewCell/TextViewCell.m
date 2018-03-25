@@ -51,4 +51,8 @@ static CGFloat const kHorizontalMargin = 16.f;
     return height;
 }
 
+- (NSString *)enteredText {
+    return _textView.text;
+}
+
 @end

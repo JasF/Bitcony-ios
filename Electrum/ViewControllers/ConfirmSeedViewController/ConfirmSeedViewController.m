@@ -7,25 +7,39 @@
 //
 
 #import "ConfirmSeedViewController.h"
+#import "TextViewCell.h"
+#import "ButtonCell.h"
+#import "LabelCell.h"
 
-@interface ConfirmSeedViewController ()
-@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
-@property (weak, nonatomic) IBOutlet UITextView *textView;
-@property (weak, nonatomic) IBOutlet UIButton *continueButton;
+typedef NS_ENUM(NSInteger, Rows) {
+    DescriptionRow,
+    TextViewRow,
+    ContinueRow,
+    RowsCount
+};
+
+@interface ConfirmSeedViewController () <UITableViewDelegate, UITableViewDataSource>
 @end
 
-@implementation ConfirmSeedViewController
+@implementation ConfirmSeedViewController {
+#ifdef DEBUG
+    NSString *_seed;
+#endif
+}
 
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
     [super viewDidLoad];
-    _descriptionLabel.text = L(_descriptionLabel.text);
+    self.view.backgroundColor = self.navigationController.view.backgroundColor;
 #ifdef DEBUG
-    NSString *seed = [_handler generatedSeed:_handler];
-    _textView.text = seed;
+    _seed = [_handler generatedSeed:_handler];
 #endif
-    [_continueButton setTitle:L([_continueButton titleForState:UIControlStateNormal])
-                     forState:UIControlStateNormal];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ButtonCell" bundle:nil] forCellReuseIdentifier:@"ButtonCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"LabelCell" bundle:nil] forCellReuseIdentifier:@"LabelCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TextViewCell" bundle:nil] forCellReuseIdentifier:@"TextViewCell"];
+    self.title = L(@"Confirm Seed");
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 50.f;
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -40,19 +54,61 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 - (IBAction)continueTapped:(id)sender {
     if ([_handler respondsToSelector:@selector(continueTapped:)]) {
         [_handler continueTapped:nil];
     }
+}
+
+#pragma mark - UITableViewDataSource
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *resultCell = nil;
+    switch (indexPath.row) {
+        case DescriptionRow: {
+            LabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LabelCell"];
+            NSString *text = [NSString stringWithFormat:@"%@ %@ %@",
+                              L(@"Your seed is important!"),
+                              L(@"If you lose your seed, your money will be permanently lost."),
+                              L(@"To make sure that you have properly saved your seed, please retype it here.")];
+            [cell setTitle:text];
+            resultCell = cell;
+            break;
+        }
+        case TextViewRow: {
+            TextViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextViewCell"];
+#ifdef DEBUG
+            [cell setTextViewText:_seed];
+#endif
+            resultCell = cell;
+            break;
+        }
+        case ContinueRow: {
+            ButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
+            [cell setTitle:L(@"Continue")];
+            @weakify(self);
+            cell.tappedHandler = ^{
+                @strongify(self);
+                [self continueTapped:nil];
+            };
+            resultCell = cell;
+            break;
+        }
+    }
+    resultCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return resultCell;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return RowsCount;
+}
+
+#pragma mark - UITableViewDelegate
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
 }
 
 @end
