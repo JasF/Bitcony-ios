@@ -585,10 +585,10 @@ html \uc0\u1084 \u1086 \u1078 \u1085 \u1086  \u1088 \u1072 \u1089 \u1087 \u1072 
 \f0 \cf0 \
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 
-\f1 \cf3 \cb14     \cf16 \cb14 def\cf3 \cb14  do_preview(self):
-\f0 \cf0 \cb14 \
+\f1 \cf3 \cb14     \cf16 def\cf3  do_preview(self):
+\f0 \cf0 \
 
-\f1 \cf3 \cb14         self.do_send(preview = True)\
+\f1 \cf3         self.do_send(preview = True)\
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 \cf3 \cb7 \
    \cf16 def\cf3  do_send(self, preview = False):
@@ -932,7 +932,7 @@ rbf = Repleacable\
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 
 \f1 \cf3 \cb18                     self.show_transaction(tx) <---- \uc0\u1077 \u1089 \u1083 \u1080  \u1087 \u1086 \u1076 \u1087 \u1080 \u1089 \u1100  \u1085 \u1077  \u1091 \u1076 \u1072 \u1083 \u1072 \u1089 \u1100 , \u1087 \u1088 \u1086 \u1089 \u1090 \u1086  \u1086 \u1090 \u1086 \u1073 \u1088 \u1072 \u1078 \u1072 \u1077 \u1084 
-\f0 \cf0 \cb18 \
+\f0 \cf0 \
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 
 \f1 \cf3 \cb7                     self.do_clear()
@@ -943,7 +943,7 @@ rbf = Repleacable\
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 
 \f1 \cf3 \cb2                     self.broadcast_transaction(tx, tx_desc) <---- \uc0\u1077 \u1089 \u1083 \u1080  \u1087 \u1086 \u1076 \u1087 \u1080 \u1089 \u1100  \u1091 \u1076 \u1072 \u1083 \u1072 \u1089 \u1100 , \u1088 \u1072 \u1089 \u1089 \u1099 \u1083 \u1072 \u1077 \u1084 
-\f0 \cf0 \cb2 \
+\f0 \cf0 \
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 
 \f1 \cf3 \cb27         self.sign_tx_with_password(tx, sign_done, password) <---- \uc0\u1074 \u1085 \u1072 \u1095 \u1072 \u1083 \u1077  \u1087 \u1086 \u1076 \u1087 \u1080 \u1089 \u1099 \u1074 \u1072 \u1077 \u1084 \
@@ -955,25 +955,25 @@ rbf = Repleacable\
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 
 \f1 \cf3 \cb2         \cf16 def\cf3  broadcast_done(result):
-\f0 \cf0 \cb2 \
-
-\f1 \cf3 \cb2             \cf22 \cb2 # GUI thread
 \f0 \cf0 \
 
-\f1 \cf3 \cb2             \cf16 if\cf3  result:
-\f0 \cf0 \cb2 \
+\f1 \cf3             \cf22 # GUI thread
+\f0 \cf0 \
 
-\f1 \cf3 \cb2                 status, msg = result
-\f0 \cf0 \cb2 \
+\f1 \cf3             \cf16 if\cf3  result:
+\f0 \cf0 \
 
-\f1 \cf3 \cb2                 \cf16 if\cf3  status:
-\f0 \cf0 \cb2 \
+\f1 \cf3                 status, msg = result
+\f0 \cf0 \
 
-\f1 \cf3 \cb2                     \cf16 if\cf3  tx_desc \cf16 is\cf3  \cf16 not\cf3  \cf16 None\cf3  \cf16 and\cf3  tx.is_complete():
-\f0 \cf0 \cb2 \
+\f1 \cf3                 \cf16 if\cf3  status:
+\f0 \cf0 \
 
-\f1 \cf3 \cb2                         self.wallet.set_label(tx.txid(), tx_desc)
-\f0 \cf0 \cb2 \
+\f1 \cf3                     \cf16 if\cf3  tx_desc \cf16 is\cf3  \cf16 not\cf3  \cf16 None\cf3  \cf16 and\cf3  tx.is_complete():
+\f0 \cf0 \
+
+\f1 \cf3                         self.wallet.set_label(tx.txid(), tx_desc)
+\f0 \cf0 \
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 
 \f1 \cf3 \cb30                     parent.show_message(_(\cf6 'Payment sent.'\cf3 ) + \cf6 '\\n'\cf3  + msg)
@@ -981,15 +981,15 @@ rbf = Repleacable\
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 
 \f1 \cf3 \cb2                     self.invoice_list.update()
-\f0 \cf0 \cb2 \
+\f0 \cf0 \
 
-\f1 \cf3 \cb2                     self.do_clear()
-\f0 \cf0 \cb2 \
+\f1 \cf3                     self.do_clear()
+\f0 \cf0 \
 
-\f1 \cf3 \cb2                 \cf16 else\cf3 :
-\f0 \cf0 \cb2 \
+\f1 \cf3                 \cf16 else\cf3 :
+\f0 \cf0 \
 
-\f1 \cf3 \cb2                     parent.show_error(msg)\
+\f1 \cf3                     parent.show_error(msg)\
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 \cf3 \cb7 \
 \
@@ -998,56 +998,56 @@ rbf = Repleacable\
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 
 \f0 \cf0 \cb17 	
-\f1 \cf16 def\cf3 \cb17  do_clear(self):
-\f0 \cf0 \cb17 \
+\f1 \cf16 def\cf3  do_clear(self):
+\f0 \cf0 \
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 
-\f1 \cf3 \cb17         self.is_max = False
-\f0 \cf0 \cb17 \
-
-\f1 \cf3 \cb17         self.not_enough_funds = False
-\f0 \cf0 \cb17 \
-
-\f1 \cf3 \cb17         self.payment_request = \cf16 \cb17 None
+\f1 \cf3         self.is_max = False
 \f0 \cf0 \
 
-\f1 \cf3 \cb17         self.payto_e.is_pr = False
-\f0 \cf0 \cb17 \
+\f1 \cf3         self.not_enough_funds = False
+\f0 \cf0 \
 
-\f1 \cf3 \cb17         \cf16 \cb17 for\cf3 \cb17  e \cf16 \cb17 in\cf3 \cb17  [self.payto_e, self.message_e, self.amount_e, self.fiat_send_e,
-\f0 \cf0 \cb17 \
+\f1 \cf3         self.payment_request = \cf16 None
+\f0 \cf0 \
 
-\f1 \cf3 \cb17                   self.fee_e, self.feerate_e]:
-\f0 \cf0 \cb17 \
+\f1 \cf3         self.payto_e.is_pr = False
+\f0 \cf0 \
 
-\f1 \cf3 \cb17             e.setText(\cf6 \cb17 ''\cf3 \cb17 )
-\f0 \cf0 \cb17 \
+\f1 \cf3         \cf16 for\cf3  e \cf16 in\cf3  [self.payto_e, self.message_e, self.amount_e, self.fiat_send_e,
+\f0 \cf0 \
 
-\f1 \cf3 \cb17             e.setFrozen(False)
-\f0 \cf0 \cb17 \
+\f1 \cf3                   self.fee_e, self.feerate_e]:
+\f0 \cf0 \
 
-\f1 \cf3 \cb17         self.fee_slider.activate()
-\f0 \cf0 \cb17 \
+\f1 \cf3             e.setText(\cf6 ''\cf3 )
+\f0 \cf0 \
 
-\f1 \cf3 \cb17         self.feerate_e.setAmount(self.config.fee_per_byte())
-\f0 \cf0 \cb17 \
+\f1 \cf3             e.setFrozen(False)
+\f0 \cf0 \
 
-\f1 \cf3 \cb17         self.size_e.setAmount(\cf6 \cb17 0\cf3 \cb17 )
-\f0 \cf0 \cb17 \
+\f1 \cf3         self.fee_slider.activate()
+\f0 \cf0 \
 
-\f1 \cf3 \cb17         self.feerounding_icon.setVisible(False)
-\f0 \cf0 \cb17 \
+\f1 \cf3         self.feerate_e.setAmount(self.config.fee_per_byte())
+\f0 \cf0 \
 
-\f1 \cf3 \cb17         self.set_pay_from([])
-\f0 \cf0 \cb17 \
+\f1 \cf3         self.size_e.setAmount(\cf6 0\cf3 )
+\f0 \cf0 \
 
-\f1 \cf3 \cb17         self.tx_external_keypairs = \{\}
-\f0 \cf0 \cb17 \
+\f1 \cf3         self.feerounding_icon.setVisible(False)
+\f0 \cf0 \
 
-\f1 \cf3 \cb17         self.update_status()
-\f0 \cf0 \cb17 \
+\f1 \cf3         self.set_pay_from([])
+\f0 \cf0 \
 
-\f1 \cf3 \cb17         run_hook(\cf6 \cb17 'do_clear'\cf3 \cb17 , self)\
+\f1 \cf3         self.tx_external_keypairs = \{\}
+\f0 \cf0 \
+
+\f1 \cf3         self.update_status()
+\f0 \cf0 \
+
+\f1 \cf3         run_hook(\cf6 'do_clear'\cf3 , self)\
 \
 \pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
 
@@ -1105,4 +1105,24 @@ PayToEdit.py \uc0\u1093 \u1086 \u1095 \u1077 \u1090  \u1076 \u1086 \u1089 \u1090
 \f1\b0 \cf3 \cb7 \CocoaLigature1 storage.put(\cf6 'use_encryption'\cf3 , bool(password))\
 Enter Password Dialog\
 \
-OK Dialog}
+OK Dialog\
+\
+Electrum wallet\
+\
+1. This file is encrypted - \uc0\u1087 \u1086 \u1089 \u1084 \u1086 \u1090 \u1088 \u1077 \u1090 \u1100  \u1082 \u1072 \u1082  \u1088 \u1077 \u1072 \u1083 \u1080 \u1079 \u1091 \u1077 \u1090 \u1103  \u1086 \u1087 \u1088 \u1077 \u1076 \u1077 \u1083 \u1077 \u1085 \u1080 \u1077 , encrypted-\u1083 \u1080  Wallet.\
+\
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+\cf6 Your seed is important!
+\f0 \cf0 \
+
+\f1 \cf6 If you lose your seed, your money will be permanently lost.\
+To make sure that you have properly saved your seed, please retype it here.\
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+\cf19 hoose a password to encrypt your wallet keys.==
+\f0 \cf0 \
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1 \cf3 L\cf19 eave this field empty if you want to disable encryption.\cf6 \
+}
