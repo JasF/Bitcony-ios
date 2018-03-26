@@ -107,6 +107,11 @@
 		C3DAD65C206907300061294B /* MaskingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD65B206907300061294B /* MaskingView.m */; };
 		C3DAD66120691C660061294B /* EditingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD65F20691C660061294B /* EditingCell.m */; };
 		C3DAD66220691C660061294B /* EditingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DAD66020691C660061294B /* EditingCell.xib */; };
+		C3DAD66420692E8A0061294B /* ZXingObjC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3DAD66320692E890061294B /* ZXingObjC.framework */; };
+		C3DAD66920692EC50061294B /* ImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD66720692EC50061294B /* ImageCell.m */; };
+		C3DAD66A20692EC50061294B /* ImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DAD66820692EC50061294B /* ImageCell.xib */; };
+		C3DAD66F206937EA0061294B /* ButtonsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD66D206937EA0061294B /* ButtonsCell.m */; };
+		C3DAD670206937EA0061294B /* ButtonsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DAD66E206937EA0061294B /* ButtonsCell.xib */; };
 		C3EA246D2067776C00146917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EA246C2067776C00146917 /* LaunchScreen.storyboard */; };
 		C3EA2473206787BA00146917 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EA2470206787BA00146917 /* ButtonCell.xib */; };
 		C3EA2474206787BA00146917 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA2471206787BA00146917 /* ButtonCell.m */; };
@@ -1134,6 +1139,13 @@
 		C3DAD65E20691C660061294B /* EditingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditingCell.h; sourceTree = "<group>"; };
 		C3DAD65F20691C660061294B /* EditingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditingCell.m; sourceTree = "<group>"; };
 		C3DAD66020691C660061294B /* EditingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditingCell.xib; sourceTree = "<group>"; };
+		C3DAD66320692E890061294B /* ZXingObjC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZXingObjC.framework; path = Frameworks/ZXingObjC.framework; sourceTree = "<group>"; };
+		C3DAD66620692EC50061294B /* ImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageCell.h; sourceTree = "<group>"; };
+		C3DAD66720692EC50061294B /* ImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCell.m; sourceTree = "<group>"; };
+		C3DAD66820692EC50061294B /* ImageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCell.xib; sourceTree = "<group>"; };
+		C3DAD66C206937EA0061294B /* ButtonsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtonsCell.h; sourceTree = "<group>"; };
+		C3DAD66D206937EA0061294B /* ButtonsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtonsCell.m; sourceTree = "<group>"; };
+		C3DAD66E206937EA0061294B /* ButtonsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsCell.xib; sourceTree = "<group>"; };
 		C3EA246C2067776C00146917 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3EA2470206787BA00146917 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		C3EA2471206787BA00146917 /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
@@ -1174,6 +1186,7 @@
 				60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */,
 				C39FDFE0205FA0D300756807 /* CocoaLumberjack.framework in Frameworks */,
 				60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */,
+				C3DAD66420692E8A0061294B /* ZXingObjC.framework in Frameworks */,
 				C39FDFCF205F9ED100756807 /* BZip2.framework in Frameworks */,
 				60796EE619190F4100A9926B /* Foundation.framework in Frameworks */,
 				60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */,
@@ -1210,6 +1223,7 @@
 		60796EE419190F4100A9926B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3DAD66320692E890061294B /* ZXingObjC.framework */,
 				C360F96520652D6E00F90ADD /* JGProgressHUD.framework */,
 				C39FEE6F20626F7D00756807 /* EasyMapping.framework */,
 				C39FE94B206103C400756807 /* extobjc */,
@@ -1317,6 +1331,8 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C3DAD66B206937B20061294B /* ButtonsCell */,
+				C3DAD66520692EA70061294B /* ImageCell */,
 				C3DAD65D20691C1E0061294B /* EditingCell */,
 				C3DAD659206907300061294B /* MaskingView */,
 				C3DAD6552068F1C60061294B /* TransactionCellButton */,
@@ -3922,6 +3938,26 @@
 			path = EditingCell;
 			sourceTree = "<group>";
 		};
+		C3DAD66520692EA70061294B /* ImageCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3DAD66620692EC50061294B /* ImageCell.h */,
+				C3DAD66720692EC50061294B /* ImageCell.m */,
+				C3DAD66820692EC50061294B /* ImageCell.xib */,
+			);
+			path = ImageCell;
+			sourceTree = "<group>";
+		};
+		C3DAD66B206937B20061294B /* ButtonsCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3DAD66C206937EA0061294B /* ButtonsCell.h */,
+				C3DAD66D206937EA0061294B /* ButtonsCell.m */,
+				C3DAD66E206937EA0061294B /* ButtonsCell.xib */,
+			);
+			path = ButtonsCell;
+			sourceTree = "<group>";
+		};
 		C3EA246F206787BA00146917 /* ButtonCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -4094,12 +4130,14 @@
 				C39FEE6E20626CAA00756807 /* TransactionCell.xib in Resources */,
 				C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */,
 				C39FEE66206247FF00756807 /* Common.xcassets in Resources */,
+				C3DAD670206937EA0061294B /* ButtonsCell.xib in Resources */,
 				C3EA24992067BB6000146917 /* TextViewCell.xib in Resources */,
 				C39FEE6820625DC400756807 /* history_list.py in Resources */,
 				C3B75F8F2063A15B0030BC81 /* TextFieldCell.xib in Resources */,
 				C3B75FA12063D6240030BC81 /* FeeCell.xib in Resources */,
 				C3EA247E2067903200146917 /* CreateWalletCell.xib in Resources */,
 				C3DAD64B2068CEC90061294B /* HistoryViewController.storyboard in Resources */,
+				C3DAD66A20692EC50061294B /* ImageCell.xib in Resources */,
 				C39FE4932060E03B00756807 /* __main__.py in Resources */,
 				C3EA2473206787BA00146917 /* ButtonCell.xib in Resources */,
 				C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */,
@@ -4170,6 +4208,7 @@
 				C3EA247D2067903200146917 /* CreateWalletCell.m in Sources */,
 				C3B75F5920636DCA0030BC81 /* ReceiveViewController.m in Sources */,
 				C39FEE6D20626CAA00756807 /* TransactionCell.m in Sources */,
+				C3DAD66F206937EA0061294B /* ButtonsCell.m in Sources */,
 				C39FE968206103C400756807 /* EXTADT.m in Sources */,
 				C360F9782066286800F90ADD /* Localizer.m in Sources */,
 				C3DAD66120691C660061294B /* EditingCell.m in Sources */,
@@ -4204,6 +4243,7 @@
 				C39FE46F205FE7DC00756807 /* ScreensManagerImpl.m in Sources */,
 				C360F95E2064E8EE00F90ADD /* AlertManagerImpl.m in Sources */,
 				C3DAD64F2068D46F0061294B /* UIView+Utils.m in Sources */,
+				C3DAD66920692EC50061294B /* ImageCell.m in Sources */,
 				C39FDFC5205F9E9600756807 /* main.m in Sources */,
 				C3EA248E2067B60B00146917 /* LabelCell.m in Sources */,
 				C39FE46A205FE76000756807 /* Managers.m in Sources */,

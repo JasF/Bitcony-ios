@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface EditingCell : UITableViewCell
-
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+- (void)setImage:(UIImage *)image
+           title:(NSString *)title
+     editingText:(NSString *)editingText
+bottomDelimeterVisible:(BOOL)bottomDelimeterVisible;
 @end

@@ -31,6 +31,7 @@ typedef NS_ENUM(NSInteger, Rows) {
 
 static CGFloat const kRowHeight = 44.f;
 static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
+static CGFloat const kTopInset = 8.f;
 
 @interface SendViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 @property (strong, nonatomic) FeeCell *feeCell;
@@ -58,6 +59,7 @@ static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
     if ([_handler respondsToSelector:@selector(viewDidLoad:)]) {
         [_handler viewDidLoad:self];
     }
+    self.tableView.contentInset = UIEdgeInsetsMake(kTopInset, 0, 0, 0);
 #ifdef DEBUG
     _sendAddress = @"39S2Vp1vcDpDDgvRgF77YtgrQeMgRgJy3v";
     _amountString = @"0.000001";

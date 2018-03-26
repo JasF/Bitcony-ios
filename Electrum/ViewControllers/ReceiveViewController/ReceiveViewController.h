@@ -13,7 +13,7 @@
 - (NSString *)receivingAddress:(id)object;
 @end
 
-@interface ReceiveViewController : UITableViewController
+@interface ReceiveViewController : UIViewController
 @property (strong, nonatomic) id<ReceiveHandlerProtocol> handler;
 @property (strong, nonatomic) id<ScreensManager> screensManager;
 @end
