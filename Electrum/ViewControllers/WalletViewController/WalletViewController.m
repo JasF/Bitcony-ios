@@ -9,11 +9,20 @@
 #import "WalletViewController.h"
 #import "TransactionCell.h"
 #import "Transaction.h"
+#import "Tabs.h"
+
+typedef NS_ENUM(NSInteger, TabsDefinitions) {
+    TabSend,
+    TabHistory,
+    TabReceive,
+    TabsCount
+};
 
 static NSTimeInterval kActionTimeInterval = 0.8f;
 
 @interface WalletViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) NSArray *transactions;
+@property (weak, nonatomic) IBOutlet Tabs *tabs;
 @end
 
 @implementation WalletViewController {
@@ -24,15 +33,24 @@ static NSTimeInterval kActionTimeInterval = 0.8f;
     NSCParameterAssert(_handler);
     NSCParameterAssert(_screensManager);
     NSCParameterAssert(_alertManager);
+    NSCParameterAssert(_pageViewController);
     [super viewDidLoad];
     if ([_handler respondsToSelector:@selector(viewDidLoad:)]) {
         [_handler viewDidLoad:self];
     }
     
+    @weakify(self);
+    _tabs.tabsItemViewSelected = ^(NSInteger previousIndex, NSInteger currentIndex) {
+        @strongify(self);
+        DDLogInfo(@"prev: %@; cur: %@", @(previousIndex), @(currentIndex));
+    };
+    _tabs.titles = @[L(@"Send"), L(@"History"), L(@"Receive")];
+    [self.tabs setItemSelected:TabHistory
+                     animation:TabsAnimationNone
+                    withNotify:NO];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 50.f;
     
-    @weakify(self);
     _timer = [NSTimer scheduledTimerWithTimeInterval:kActionTimeInterval repeats:YES block:^(NSTimer * _Nonnull timer) {
         @strongify(self);
         if ([self.handler respondsToSelector:@selector(timerAction:)]) {

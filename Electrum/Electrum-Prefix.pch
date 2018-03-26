@@ -29,6 +29,11 @@ static const DDLogLevel ddLogLevel = DDLogLevelWarning;
     #import "UIView+TKGeometry.h"
     #import "Functions.h"
 
+    typedef NS_ENUM(NSInteger, Direction) {
+        DirectionBackToRight,
+        DirectionForwardToLeft
+    };
+
     CF_INLINE bool IsEqualFloat(float a, float b) { return ABS(a - b) < pow(10, -10); }
     CF_INLINE bool IsFloatEqual(float a, float b) { return IsEqualFloat(a,b);}
 #endif

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="7t6-qS-xCk" customClass="TabsItemView">
+            <rect key="frame" x="0.0" y="0.0" width="313" height="247"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKY-Vh-cbE">
+                    <rect key="frame" x="0.0" y="0.0" width="313" height="247"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yye-ay-nbX">
+                    <rect key="frame" x="0.0" y="0.0" width="313" height="247"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Yye-ay-nbX" firstAttribute="height" secondItem="7t6-qS-xCk" secondAttribute="height" id="3iO-Ha-Ts7"/>
+                <constraint firstItem="Yye-ay-nbX" firstAttribute="centerX" secondItem="7t6-qS-xCk" secondAttribute="centerX" id="6ZZ-bT-NC9"/>
+                <constraint firstItem="IKY-Vh-cbE" firstAttribute="top" secondItem="7t6-qS-xCk" secondAttribute="top" id="AXj-Vx-s6j"/>
+                <constraint firstAttribute="width" secondItem="IKY-Vh-cbE" secondAttribute="width" id="DPy-j9-c0d"/>
+                <constraint firstItem="Yye-ay-nbX" firstAttribute="width" secondItem="7t6-qS-xCk" secondAttribute="width" id="HiO-KA-Qpd"/>
+                <constraint firstItem="IKY-Vh-cbE" firstAttribute="height" secondItem="7t6-qS-xCk" secondAttribute="height" id="ItN-Tq-w8K"/>
+                <constraint firstItem="IKY-Vh-cbE" firstAttribute="leading" secondItem="7t6-qS-xCk" secondAttribute="leading" id="jXJ-px-qVv"/>
+                <constraint firstItem="Yye-ay-nbX" firstAttribute="centerY" secondItem="7t6-qS-xCk" secondAttribute="centerY" id="oDu-L8-QUt"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="labelFirst" destination="IKY-Vh-cbE" id="Ev3-7G-Ojc"/>
+                <outlet property="labelSecond" destination="Yye-ay-nbX" id="uOy-Vv-caD"/>
+                <outletCollection property="gestureRecognizers" destination="5rj-Bo-uYD" appends="YES" id="wiT-Dw-zMV"/>
+            </connections>
+            <point key="canvasLocation" x="6.5" y="108.5"/>
+        </view>
+        <tapGestureRecognizer id="5rj-Bo-uYD">
+            <connections>
+                <action selector="tapped:" destination="7t6-qS-xCk" id="EGh-qy-nYb"/>
+                <outlet property="delegate" destination="7t6-qS-xCk" id="fYt-gJ-hC2"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>

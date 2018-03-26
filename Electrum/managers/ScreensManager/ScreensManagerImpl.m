@@ -139,6 +139,7 @@ static NSString *kStoryboardName = @"Main";
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"WalletViewController"
                                                                  bundle:nil];
             viewController = (WalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+            viewController.pageViewController = [storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
             viewController.handler = (id<WalletHandlerProtocol>)handler;
             viewController.alertManager = self.alertManager;
             viewController.screensManager = self;

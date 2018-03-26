@@ -27,6 +27,7 @@
 @end
 
 @interface WalletViewController : UITableViewController <WalletHandlerProtocolDelegate>
+@property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) id<ScreensManager> screensManager;
 @property (strong, nonatomic) id<WalletHandlerProtocol> handler;
 @property (strong, nonatomic) id<AlertManager> alertManager;

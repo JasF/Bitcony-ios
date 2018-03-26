@@ -96,6 +96,11 @@
 		C3B75F9B2063D5630030BC81 /* TableButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F9A2063D5630030BC81 /* TableButtonCell.m */; };
 		C3B75FA02063D6240030BC81 /* FeeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3B75F9E2063D6240030BC81 /* FeeCell.m */; };
 		C3B75FA12063D6240030BC81 /* FeeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3B75F9F2063D6240030BC81 /* FeeCell.xib */; };
+		C3DAD6432068C7AD0061294B /* Tabs.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD63D2068C7AC0061294B /* Tabs.m */; };
+		C3DAD6442068C7AD0061294B /* TabsItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD6402068C7AC0061294B /* TabsItemView.m */; };
+		C3DAD6452068C7AD0061294B /* TabsItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DAD6412068C7AC0061294B /* TabsItemView.xib */; };
+		C3DAD6492068CEAD0061294B /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD6482068CEAD0061294B /* HistoryViewController.m */; };
+		C3DAD64B2068CEC90061294B /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DAD64A2068CEC90061294B /* HistoryViewController.storyboard */; };
 		C3EA246D2067776C00146917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EA246C2067776C00146917 /* LaunchScreen.storyboard */; };
 		C3EA2473206787BA00146917 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EA2470206787BA00146917 /* ButtonCell.xib */; };
 		C3EA2474206787BA00146917 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA2471206787BA00146917 /* ButtonCell.m */; };
@@ -1104,6 +1109,14 @@
 		C3B75F9D2063D6240030BC81 /* FeeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeeCell.h; sourceTree = "<group>"; };
 		C3B75F9E2063D6240030BC81 /* FeeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeeCell.m; sourceTree = "<group>"; };
 		C3B75F9F2063D6240030BC81 /* FeeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeeCell.xib; sourceTree = "<group>"; };
+		C3DAD63D2068C7AC0061294B /* Tabs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tabs.m; sourceTree = "<group>"; };
+		C3DAD63E2068C7AC0061294B /* Tabs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tabs.h; sourceTree = "<group>"; };
+		C3DAD6402068C7AC0061294B /* TabsItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabsItemView.m; sourceTree = "<group>"; };
+		C3DAD6412068C7AC0061294B /* TabsItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabsItemView.xib; sourceTree = "<group>"; };
+		C3DAD6422068C7AC0061294B /* TabsItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabsItemView.h; sourceTree = "<group>"; };
+		C3DAD6472068CEAD0061294B /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
+		C3DAD6482068CEAD0061294B /* HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
+		C3DAD64A2068CEC90061294B /* HistoryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
 		C3EA246C2067776C00146917 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3EA2470206787BA00146917 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		C3EA2471206787BA00146917 /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
@@ -1286,6 +1299,8 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C3DAD63C2068C7AC0061294B /* Tabs */,
+				C3DAD63F2068C7AC0061294B /* TabsItemView */,
 				C3EA24942067BB2C00146917 /* TextViewCell */,
 				C3EA24902067B8A100146917 /* InitialNavigationController */,
 				C3EA248A2067B5F600146917 /* LabelCell */,
@@ -1365,6 +1380,7 @@
 		C39FE462205FE72F00756807 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3DAD6462068CE2C0061294B /* HistoryViewController */,
 				C3EA247F2067A71300146917 /* TextFieldDialog */,
 				C360F979206630D300F90ADD /* YesNoDialog */,
 				C360F970206620DA00F90ADD /* PasswordDialog */,
@@ -3817,6 +3833,35 @@
 			path = FeeCell;
 			sourceTree = "<group>";
 		};
+		C3DAD63C2068C7AC0061294B /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				C3DAD63D2068C7AC0061294B /* Tabs.m */,
+				C3DAD63E2068C7AC0061294B /* Tabs.h */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		C3DAD63F2068C7AC0061294B /* TabsItemView */ = {
+			isa = PBXGroup;
+			children = (
+				C3DAD6402068C7AC0061294B /* TabsItemView.m */,
+				C3DAD6412068C7AC0061294B /* TabsItemView.xib */,
+				C3DAD6422068C7AC0061294B /* TabsItemView.h */,
+			);
+			path = TabsItemView;
+			sourceTree = "<group>";
+		};
+		C3DAD6462068CE2C0061294B /* HistoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3DAD6472068CEAD0061294B /* HistoryViewController.h */,
+				C3DAD6482068CEAD0061294B /* HistoryViewController.m */,
+				C3DAD64A2068CEC90061294B /* HistoryViewController.storyboard */,
+			);
+			path = HistoryViewController;
+			sourceTree = "<group>";
+		};
 		C3EA246F206787BA00146917 /* ButtonCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -3994,9 +4039,11 @@
 				C3B75F8F2063A15B0030BC81 /* TextFieldCell.xib in Resources */,
 				C3B75FA12063D6240030BC81 /* FeeCell.xib in Resources */,
 				C3EA247E2067903200146917 /* CreateWalletCell.xib in Resources */,
+				C3DAD64B2068CEC90061294B /* HistoryViewController.storyboard in Resources */,
 				C39FE4932060E03B00756807 /* __main__.py in Resources */,
 				C3EA2473206787BA00146917 /* ButtonCell.xib in Resources */,
 				C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */,
+				C3DAD6452068C7AD0061294B /* TabsItemView.xib in Resources */,
 				C3B75F5320636DB00030BC81 /* SettingsViewController.storyboard in Resources */,
 				C39FE978206115CF00756807 /* CreateNewSeedViewController.storyboard in Resources */,
 				C39FEE39206235AA00756807 /* Main.storyboard in Resources */,
@@ -4050,6 +4097,7 @@
 				C39FE94A2060FFEB00756807 /* RunLoop.m in Sources */,
 				C39FEE5E2062444C00756807 /* BaseNavigationController.mm in Sources */,
 				C39FEE4C2062361D00756807 /* LGSideMenuSegue.m in Sources */,
+				C3DAD6432068C7AD0061294B /* Tabs.m in Sources */,
 				C39FDFDE205FA06300756807 /* AppDelegate.m in Sources */,
 				C3B75F9B2063D5630030BC81 /* TableButtonCell.m in Sources */,
 				C39FE965206103C400756807 /* EXTConcreteProtocol.m in Sources */,
@@ -4063,6 +4111,7 @@
 				C360F9782066286800F90ADD /* Localizer.m in Sources */,
 				C39FE971206115A700756807 /* CreateNewSeedViewController.m in Sources */,
 				C3B75F5620636DBA0030BC81 /* SendViewController.m in Sources */,
+				C3DAD6442068C7AD0061294B /* TabsItemView.m in Sources */,
 				C39FE97C206117A100756807 /* ConfirmSeedViewController.m in Sources */,
 				C39FEE562062375800756807 /* MenuViewController.mm in Sources */,
 				C3B75F942063A2820030BC81 /* UIView+TKGeometry.m in Sources */,
@@ -4080,6 +4129,7 @@
 				C39FE974206115B000756807 /* HaveASeedViewController.m in Sources */,
 				C39FEE502062361D00756807 /* LGSideMenuBorderView.m in Sources */,
 				C39FE982206125DB00756807 /* EnterWalletPasswordViewController.m in Sources */,
+				C3DAD6492068CEAD0061294B /* HistoryViewController.m in Sources */,
 				C3B75F5D206376650030BC81 /* TransactionDetailViewController.m in Sources */,
 				C39FE96A206103C400756807 /* EXTSafeCategory.m in Sources */,
 				C39FDFE7205FA8EE00756807 /* HelloRubicon.m in Sources */,

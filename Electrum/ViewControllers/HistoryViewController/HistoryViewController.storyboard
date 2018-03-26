@@ -12,19 +12,14 @@
         <!--Root View Controller-->
         <scene sceneID="1Re-G5-Lqe">
             <objects>
-                <tableViewController storyboardIdentifier="ViewController" id="IXv-cR-LK6" customClass="WalletViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ViewController" id="IXv-cR-LK6" customClass="HistoryViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pP7-IE-iGp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
-                        <view key="tableHeaderView" contentMode="scaleToFill" id="fca-z8-G4A" customClass="Tabs">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.29411764705882354" green="0.29411764705882354" blue="0.29411764705882354" alpha="1" colorSpace="calibratedRGB"/>
-                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="btD-35-1CD">
-                                <rect key="frame" x="0.0" y="83" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="btD-35-1CD" id="jqp-XI-wVx">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
@@ -49,9 +44,6 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
-                    <connections>
-                        <outlet property="tabs" destination="fca-z8-G4A" id="W4h-4x-UOQ"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="71z-E8-cT2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -72,14 +64,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sa6-hM-nuq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-868" y="163"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="cTY-uC-Gcq">
-            <objects>
-                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="G6v-8C-hzB" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5TI-KL-vf6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1062" y="162"/>
         </scene>
     </scenes>
     <resources>
