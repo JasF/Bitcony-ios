@@ -126,7 +126,7 @@ static NSString *kStoryboardName = @"Main";
     });
 }
 
-- (HistoryViewController *)createHistoryViewController:(id)handler {
+- (UIViewController *)createHistoryViewController:(id)handler {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"HistoryViewController"
                                                          bundle:nil];
     HistoryViewController *viewController = (HistoryViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
@@ -136,7 +136,28 @@ static NSString *kStoryboardName = @"Main";
     return viewController;
 }
 
-- (void)showWalletViewController:(id)handler {
+- (UIViewController *)createReceiveViewController:(id)handler {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReceiveViewController"
+                                                         bundle:nil];
+    ReceiveViewController *viewController = (ReceiveViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    viewController.handler = (id<ReceiveHandlerProtocol>)handler;
+    viewController.screensManager = self;
+    return viewController;
+}
+
+- (UIViewController *)createSendViewController:(id)handler {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SendViewController"
+                                                         bundle:nil];
+    SendViewController *viewController = (SendViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    viewController.handler = (id<SendHandlerProtocol>)handler;
+    viewController.screensManager = self;
+    viewController.alertManager = self.alertManager;
+    return viewController;
+}
+
+- (void)showWalletViewController:(id)historyHandler
+                  receiveHandler:(id)receiveHandler
+                     sendHandler:(id)sendHandler {
     dispatch_async(dispatch_get_main_queue(), ^{
         NSCAssert([self.window.rootViewController isEqual:[self mainViewController]], @"Excpected mainViewController as rootViewController");
         if (![self.window.rootViewController isEqual:_mainViewController]) {
@@ -153,7 +174,9 @@ static NSString *kStoryboardName = @"Main";
             viewController = (WalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
             viewController.pageViewController = [storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
             viewController.screensManager = self;
-            viewController.historyViewController = [self createHistoryViewController:handler];
+            viewController.historyHandler = historyHandler;
+            viewController.receiveHandler = receiveHandler;
+            viewController.sendHandler = sendHandler;
             _walletViewController = viewController;
         }
         [self pushViewController:viewController];
@@ -166,11 +189,7 @@ static NSString *kStoryboardName = @"Main";
         if ([self canIgnorePushingViewController:[ReceiveViewController class]]) {
             return;
         }
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ReceiveViewController"
-                                                             bundle:nil];
-        ReceiveViewController *viewController = (ReceiveViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        viewController.handler = (id<ReceiveHandlerProtocol>)handler;
-        viewController.screensManager = self;
+        ReceiveViewController *viewController =(ReceiveViewController *)[self createReceiveViewController:handler];
         [self pushViewController:viewController];
     });
 }
@@ -181,12 +200,7 @@ static NSString *kStoryboardName = @"Main";
         if ([self canIgnorePushingViewController:[SendViewController class]]) {
             return;
         }
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SendViewController"
-                                                             bundle:nil];
-        SendViewController *viewController = (SendViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        viewController.handler = (id<SendHandlerProtocol>)handler;
-        viewController.screensManager = self;
-        viewController.alertManager = self.alertManager;
+        SendViewController *viewController =(SendViewController *)[self createSendViewController:handler];
         [self pushViewController:viewController];
     });
 }

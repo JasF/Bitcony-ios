@@ -37,7 +37,9 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
 - (void)viewDidLoad {
     NSCParameterAssert(_screensManager);
     NSCParameterAssert(_pageViewController);
-    NSCParameterAssert(_historyViewController);
+    NSCParameterAssert(_historyHandler);
+    NSCParameterAssert(_receiveHandler);
+    NSCParameterAssert(_sendHandler);
     [super viewDidLoad];
     _viewControllers = [NSMutableDictionary new];
     self.allowCustomAnimationWithTabs = YES;
@@ -153,15 +155,15 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
     UIViewController *viewController = nil;
     switch (index) {
         case TabSend: {
-            viewController = [UIViewController new];
+            viewController = [_screensManager createSendViewController:_sendHandler];
             break;
         }
         case TabHistory: {
-            viewController = _historyViewController;
+            viewController = [_screensManager createHistoryViewController:_historyHandler];
             break;
         }
         case TabReceive: {
-            viewController = [UIViewController new];
+            viewController = [_screensManager createReceiveViewController:_receiveHandler];
             break;
         }
         default: {

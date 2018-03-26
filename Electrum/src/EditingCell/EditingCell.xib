@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="EditingCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRC-Lu-GGT">
+                        <rect key="frame" x="0.0" y="-1" width="30" height="44"/>
+                    </button>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MQH-4S-FrJ">
+                        <rect key="frame" x="-25" y="-1" width="25" height="44"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="laK-6S-hKe">
+                        <rect key="frame" x="15" y="84" width="290" height="1"/>
+                        <color key="backgroundColor" red="0.81176470588235294" green="0.93725490196078431" blue="0.99607843137254903" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="VED-wN-YEd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.23921568627450979" green="0.54509803921568623" blue="0.76470588235294112" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="MQH-4S-FrJ" firstAttribute="trailing" secondItem="JRC-Lu-GGT" secondAttribute="leading" id="4Dk-Vb-Kmt"/>
+                    <constraint firstItem="MQH-4S-FrJ" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="EdS-Pn-HJm"/>
+                    <constraint firstItem="laK-6S-hKe" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-30" id="P4v-8r-JBe"/>
+                    <constraint firstItem="MQH-4S-FrJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="QVn-GZ-N4J"/>
+                    <constraint firstItem="JRC-Lu-GGT" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" id="Unm-gb-Jvo"/>
+                    <constraint firstItem="JRC-Lu-GGT" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="bke-Jl-Gnd"/>
+                    <constraint firstItem="JRC-Lu-GGT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jHe-aY-Ycg"/>
+                    <constraint firstItem="laK-6S-hKe" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" constant="41.5" id="uS2-kB-eCy"/>
+                    <constraint firstItem="laK-6S-hKe" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="z44-4D-kqR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="button" destination="JRC-Lu-GGT" id="6gL-VS-VNS"/>
+                <outlet property="textField" destination="MQH-4S-FrJ" id="hYh-Hl-qsl"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

@@ -18,11 +18,16 @@
 - (void)showConfirmSeedViewController:(id)handler;
 - (void)showEnterWalletPasswordViewController:(id)handler;
 - (void)showMainViewController:(id)handler;
-- (void)showWalletViewController:(id)handler;
+- (void)showWalletViewController:(id)historyHandler
+                  receiveHandler:(id)receiveHandler
+                     sendHandler:(id)sendHandler;
 - (void)showReceiveViewController:(id)handler;
 - (void)showSendViewController:(id)handler;
 - (void)showSettingsViewController:(id)handler;
 - (void)showTransactionDetailViewController:(id)handler;
 - (void)showMenuViewController;
 - (void)createWindowIfNeeded;
+- (UIViewController *)createHistoryViewController:(id)handler;
+- (UIViewController *)createReceiveViewController:(id)handler;
+- (UIViewController *)createSendViewController:(id)handler;
 @end

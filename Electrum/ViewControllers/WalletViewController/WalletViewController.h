@@ -10,6 +10,8 @@
 #import "HistoryViewController.h"
 #import "ScreensManager.h"
 #import "AlertManager.h"
+#import "ReceiveViewController.h"
+#import "SendViewController.h"
 
 @class WalletViewController;
 
@@ -28,7 +30,10 @@
 @end
 
 @interface WalletViewController : UIViewController
+@property (strong, nonatomic) id<WalletHandlerProtocol> historyHandler;
+@property (strong, nonatomic) id<ReceiveHandlerProtocol> receiveHandler;
+@property (strong, nonatomic) id<SendHandlerProtocol> sendHandler;
+
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) id<ScreensManager> screensManager;
-@property (strong, nonatomic) HistoryViewController *historyViewController;
 @end

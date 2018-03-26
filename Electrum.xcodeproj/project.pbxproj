@@ -105,6 +105,8 @@
 		C3DAD6522068EA510061294B /* UIViewController+Electrum.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD6512068EA510061294B /* UIViewController+Electrum.m */; };
 		C3DAD6582068F1D50061294B /* TransactionCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD6572068F1D50061294B /* TransactionCellButton.m */; };
 		C3DAD65C206907300061294B /* MaskingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD65B206907300061294B /* MaskingView.m */; };
+		C3DAD66120691C660061294B /* EditingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD65F20691C660061294B /* EditingCell.m */; };
+		C3DAD66220691C660061294B /* EditingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DAD66020691C660061294B /* EditingCell.xib */; };
 		C3EA246D2067776C00146917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EA246C2067776C00146917 /* LaunchScreen.storyboard */; };
 		C3EA2473206787BA00146917 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EA2470206787BA00146917 /* ButtonCell.xib */; };
 		C3EA2474206787BA00146917 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA2471206787BA00146917 /* ButtonCell.m */; };
@@ -1129,6 +1131,9 @@
 		C3DAD6572068F1D50061294B /* TransactionCellButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionCellButton.m; sourceTree = "<group>"; };
 		C3DAD65A206907300061294B /* MaskingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MaskingView.h; sourceTree = "<group>"; };
 		C3DAD65B206907300061294B /* MaskingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MaskingView.m; sourceTree = "<group>"; };
+		C3DAD65E20691C660061294B /* EditingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditingCell.h; sourceTree = "<group>"; };
+		C3DAD65F20691C660061294B /* EditingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditingCell.m; sourceTree = "<group>"; };
+		C3DAD66020691C660061294B /* EditingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditingCell.xib; sourceTree = "<group>"; };
 		C3EA246C2067776C00146917 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3EA2470206787BA00146917 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		C3EA2471206787BA00146917 /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
@@ -1312,6 +1317,7 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C3DAD65D20691C1E0061294B /* EditingCell */,
 				C3DAD659206907300061294B /* MaskingView */,
 				C3DAD6552068F1C60061294B /* TransactionCellButton */,
 				C3DAD63C2068C7AC0061294B /* Tabs */,
@@ -3906,6 +3912,16 @@
 			path = MaskingView;
 			sourceTree = "<group>";
 		};
+		C3DAD65D20691C1E0061294B /* EditingCell */ = {
+			isa = PBXGroup;
+			children = (
+				C3DAD65E20691C660061294B /* EditingCell.h */,
+				C3DAD65F20691C660061294B /* EditingCell.m */,
+				C3DAD66020691C660061294B /* EditingCell.xib */,
+			);
+			path = EditingCell;
+			sourceTree = "<group>";
+		};
 		C3EA246F206787BA00146917 /* ButtonCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -4095,6 +4111,7 @@
 				C39FEE64206244F700756807 /* WalletViewController.storyboard in Resources */,
 				C39FE475205FE8CA00756807 /* CreateWalletViewController.storyboard in Resources */,
 				C39FE97E206117B100756807 /* ConfirmSeedViewController.storyboard in Resources */,
+				C3DAD66220691C660061294B /* EditingCell.xib in Resources */,
 				C3B75F982063D5460030BC81 /* TableButtonCell.xib in Resources */,
 				C39FDFD9205F9FF300756807 /* __main__-.py in Resources */,
 				C39FE976206115C500756807 /* HaveASeedViewController.storyboard in Resources */,
@@ -4155,6 +4172,7 @@
 				C39FEE6D20626CAA00756807 /* TransactionCell.m in Sources */,
 				C39FE968206103C400756807 /* EXTADT.m in Sources */,
 				C360F9782066286800F90ADD /* Localizer.m in Sources */,
+				C3DAD66120691C660061294B /* EditingCell.m in Sources */,
 				C39FE971206115A700756807 /* CreateNewSeedViewController.m in Sources */,
 				C3B75F5620636DBA0030BC81 /* SendViewController.m in Sources */,
 				C3DAD6442068C7AD0061294B /* TabsItemView.m in Sources */,

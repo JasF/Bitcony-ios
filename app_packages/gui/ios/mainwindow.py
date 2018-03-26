@@ -62,6 +62,8 @@ class ReceiveHandler(NSObject):
 
     @objc_method
     def receivingAddress_(self):
+        if not hasattr(self, 'addr'):
+            self.addr = self.electrumWindow.wallet.get_unused_address()
         return self.addr
 
 class SendHandler(NSObject):
@@ -102,11 +104,13 @@ class MenuHandler(NSObject):
 
     @objc_method
     def receiveTapped_(self):
+        '''
         addr = self.electrumWindow.wallet.get_unused_address()
-        handler = ReceiveHandler.alloc().init()
         handler.addr = addr
+        handler = ReceiveHandler.alloc().init()
         handler.electrumWindow = self.electrumWindow
         self.electrumWindow.screensManager.showReceiveViewController(handler)
+        '''
         pass
 
     @objc_method
@@ -165,9 +169,18 @@ class ElectrumWindow:
         self.runLoop.exec()
     
     def showWalletViewController(self):
-        self.handler = WalletHandler.alloc().init();
-        self.handler.electrumWindow = self
-        self.screensManager.showWalletViewController(self.handler)
+        self.historyHandler = WalletHandler.alloc().init();
+        self.historyHandler.electrumWindow = self
+        
+        receiveHandler = ReceiveHandler.alloc().init()
+        receiveHandler.electrumWindow = self
+        
+        sendHandler = SendHandler.alloc().init()
+        sendHandler.electrumWindow = self
+        
+        self.screensManager.showWalletViewController(self.historyHandler,
+                                                     receiveHandler=receiveHandler,
+                                                     sendHandler=sendHandler)
 
     def on_network(self, event, *args):
         if event == 'updated':
@@ -239,7 +252,7 @@ class ElectrumWindow:
     
     def update_tabs(self):
         print('broadcast to gui update_tabs [reload_data]')
-        self.handler.viewController.updateAndReloadData()
+        self.historyHandler.viewController.updateAndReloadData()
         '''
         self.history_list.update()
         self.request_list.update()
@@ -281,15 +294,15 @@ class ElectrumWindow:
             '''
     
     def show_message(self, message):
-        self.handler.viewController.showMessage(message)
+        self.historyHandler.viewController.showMessage(message)
         pass
     
     def show_error(self, message):
-        self.handler.viewController.showError(message)
+        self.historyHandler.viewController.showError(message)
         pass
     
     def show_warning(self, message):
-        self.handler.viewController.showWarning(message)
+        self.historyHandler.viewController.showWarning(message)
 
     def format_amount(self, x, is_diff=False, whitespaces=False):
         return util.format_satoshis(x, is_diff, self.num_zeros, self.decimal_point, whitespaces)
