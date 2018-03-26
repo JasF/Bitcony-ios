@@ -28,6 +28,7 @@ static const DDLogLevel ddLogLevel = DDLogLevelWarning;
     #import "EXTScope.h"
     #import "UIView+TKGeometry.h"
     #import "Functions.h"
+    #import "UIView+Utils.h"
 
     typedef NS_ENUM(NSInteger, Direction) {
         DirectionBackToRight,

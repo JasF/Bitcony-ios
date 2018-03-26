@@ -101,6 +101,7 @@
 		C3DAD6452068C7AD0061294B /* TabsItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DAD6412068C7AC0061294B /* TabsItemView.xib */; };
 		C3DAD6492068CEAD0061294B /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD6482068CEAD0061294B /* HistoryViewController.m */; };
 		C3DAD64B2068CEC90061294B /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DAD64A2068CEC90061294B /* HistoryViewController.storyboard */; };
+		C3DAD64F2068D46F0061294B /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD64E2068D46F0061294B /* UIView+Utils.m */; };
 		C3EA246D2067776C00146917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EA246C2067776C00146917 /* LaunchScreen.storyboard */; };
 		C3EA2473206787BA00146917 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EA2470206787BA00146917 /* ButtonCell.xib */; };
 		C3EA2474206787BA00146917 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA2471206787BA00146917 /* ButtonCell.m */; };
@@ -1117,6 +1118,8 @@
 		C3DAD6472068CEAD0061294B /* HistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryViewController.h; sourceTree = "<group>"; };
 		C3DAD6482068CEAD0061294B /* HistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryViewController.m; sourceTree = "<group>"; };
 		C3DAD64A2068CEC90061294B /* HistoryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
+		C3DAD64D2068D46F0061294B /* UIView+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		C3DAD64E2068D46F0061294B /* UIView+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		C3EA246C2067776C00146917 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3EA2470206787BA00146917 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		C3EA2471206787BA00146917 /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
@@ -1271,6 +1274,7 @@
 		C39FDFB3205F9E9600756807 /* Electrum */ = {
 			isa = PBXGroup;
 			children = (
+				C3DAD64C2068D4520061294B /* Categories */,
 				C360F9822066653200F90ADD /* texts */,
 				C3B75F902063A26F0030BC81 /* Components */,
 				C39FEE7120626F8A00756807 /* models */,
@@ -3862,6 +3866,15 @@
 			path = HistoryViewController;
 			sourceTree = "<group>";
 		};
+		C3DAD64C2068D4520061294B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C3DAD64D2068D46F0061294B /* UIView+Utils.h */,
+				C3DAD64E2068D46F0061294B /* UIView+Utils.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 		C3EA246F206787BA00146917 /* ButtonCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -4139,6 +4152,7 @@
 				C360F96A20652DB400F90ADD /* WaitingDialogImpl.m in Sources */,
 				C39FE46F205FE7DC00756807 /* ScreensManagerImpl.m in Sources */,
 				C360F95E2064E8EE00F90ADD /* AlertManagerImpl.m in Sources */,
+				C3DAD64F2068D46F0061294B /* UIView+Utils.m in Sources */,
 				C39FDFC5205F9E9600756807 /* main.m in Sources */,
 				C3EA248E2067B60B00146917 /* LabelCell.m in Sources */,
 				C39FE46A205FE76000756807 /* Managers.m in Sources */,

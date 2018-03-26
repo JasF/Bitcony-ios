@@ -16,6 +16,7 @@
 #import "HaveASeedViewController.h"
 #import "SettingsViewController.h"
 #import "ReceiveViewController.h"
+#import "HistoryViewController.h"
 #import "WalletViewController.h"
 #import "MenuViewController.h"
 #import "SendViewController.h"
@@ -32,6 +33,7 @@ static NSString *kStoryboardName = @"Main";
 @property (strong, nonatomic) MainViewController *mainViewController;
 @property (nonatomic, strong) UIStoryboard *storyboard;
 @property (strong, nonatomic) WalletViewController *walletViewController;
+@property (strong, nonatomic) HistoryViewController *historyViewController;
 @property (strong, nonatomic) id<AlertManager> alertManager;
 @end
 
@@ -124,6 +126,16 @@ static NSString *kStoryboardName = @"Main";
     });
 }
 
+- (HistoryViewController *)createHistoryViewController:(id)handler {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"HistoryViewController"
+                                                         bundle:nil];
+    HistoryViewController *viewController = (HistoryViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+    viewController.handler = (id<WalletHandlerProtocol>)handler;
+    viewController.alertManager = self.alertManager;
+    viewController.screensManager = self;
+    return viewController;
+}
+
 - (void)showWalletViewController:(id)handler {
     dispatch_async(dispatch_get_main_queue(), ^{
         NSCAssert([self.window.rootViewController isEqual:[self mainViewController]], @"Excpected mainViewController as rootViewController");
@@ -140,9 +152,8 @@ static NSString *kStoryboardName = @"Main";
                                                                  bundle:nil];
             viewController = (WalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
             viewController.pageViewController = [storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
-            viewController.handler = (id<WalletHandlerProtocol>)handler;
-            viewController.alertManager = self.alertManager;
             viewController.screensManager = self;
+            viewController.historyViewController = [self createHistoryViewController:handler];
             _walletViewController = viewController;
         }
         [self pushViewController:viewController];

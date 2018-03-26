@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ScreensManager.h"
+#import "AlertManager.h"
+
+@protocol WalletHandlerProtocol;
 
 @interface HistoryViewController : UITableViewController
-
+@property (strong, nonatomic) id<ScreensManager> screensManager;
+@property (strong, nonatomic) id<WalletHandlerProtocol> handler;
+@property (strong, nonatomic) id<AlertManager> alertManager;
 @end
+

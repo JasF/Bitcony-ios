@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HistoryViewController.h"
 #import "ScreensManager.h"
 #import "AlertManager.h"
 
 @class WalletViewController;
 
 @protocol WalletHandlerProtocol <NSObject>
-- (void)viewDidLoad:(WalletViewController *)viewController;
+- (void)viewDidLoad:(UIViewController *)viewController;
 - (void)timerAction:(id)object;
 - (NSString *)transactionsData:(id)object;
 - (void)transactionTapped:(NSString *)txHash;
@@ -26,9 +27,8 @@
 - (void)showWarning:(NSString *)message;
 @end
 
-@interface WalletViewController : UITableViewController <WalletHandlerProtocolDelegate>
+@interface WalletViewController : UIViewController
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) id<ScreensManager> screensManager;
-@property (strong, nonatomic) id<WalletHandlerProtocol> handler;
-@property (strong, nonatomic) id<AlertManager> alertManager;
+@property (strong, nonatomic) HistoryViewController *historyViewController;
 @end

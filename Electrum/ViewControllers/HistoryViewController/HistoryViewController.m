@@ -7,21 +7,41 @@
 //
 
 #import "HistoryViewController.h"
+#import "WalletViewController.h"
+#import "TransactionCell.h"
+#import "Transaction.h"
 
-@interface HistoryViewController ()
+static NSTimeInterval kActionTimeInterval = 0.8f;
 
+@interface HistoryViewController () <UITableViewDataSource, UITableViewDelegate, WalletHandlerProtocolDelegate>
+@property (strong, nonatomic) NSArray *transactions;
 @end
 
-@implementation HistoryViewController
+@implementation HistoryViewController {
+    NSTimer *_timer;
+}
 
 - (void)viewDidLoad {
+    NSCParameterAssert(_handler);
+    NSCParameterAssert(_screensManager);
+    NSCParameterAssert(_alertManager);
     [super viewDidLoad];
+    if ([_handler respondsToSelector:@selector(viewDidLoad:)]) {
+        [_handler viewDidLoad:self];
+    }
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 50.f;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    @weakify(self);
+    _timer = [NSTimer scheduledTimerWithTimeInterval:kActionTimeInterval repeats:YES block:^(NSTimer * _Nonnull timer) {
+        @strongify(self);
+        if ([self.handler respondsToSelector:@selector(timerAction:)]) {
+            [self.handler timerAction:nil];
+        }
+    }];
+    
+    [self.tableView registerNib:[UINib nibWithNibName:@"TransactionCell" bundle:nil] forCellReuseIdentifier:@"TransactionCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,70 +49,74 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
+#pragma mark - UITableViewDataSource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _transactions.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    NSCAssert(indexPath.row < _transactions.count, @"indexPath.row must be less than number of transactions in array");
+    Transaction *transaction = _transactions[indexPath.row];
+    TransactionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TransactionCell"];
+    [cell setStatusImage:nil date:transaction.dateString amount:transaction.amount balance:transaction.balance];
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return UITableViewAutomaticDimension;
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSCAssert(indexPath.row < _transactions.count, @"indexPath.row must be less than number of transactions in array");
+    Transaction *transaction = _transactions[indexPath.row];
+    if ([_handler respondsToSelector:@selector(transactionTapped:)]) {
+        [_handler transactionTapped:transaction.txHash];
+    }
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+#pragma mark - Observers
+- (IBAction)menuTapped:(id)sender {
+    [_screensManager showMenuViewController];
 }
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
+#pragma mark - HistoryHandlerProtocolDelegate
+- (void)updateAndReloadData {
+    dispatch_async(dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+        NSString *dataString = nil;
+        if ([_handler respondsToSelector:@selector(transactionsData:)]) {
+            dataString = [_handler transactionsData:nil];
+        }
+        dataString = [dataString stringByReplacingOccurrencesOfString:@"'" withString:@"\""];
+        NSData *data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
+        NSArray *transactionsRepresentation = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        NSArray *transactions = [EKMapper arrayOfObjectsFromExternalRepresentation:transactionsRepresentation
+                                                                       withMapping:[Transaction objectMapping]];
+        transactions = [transactions sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]]];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.transactions = transactions;
+            [self.tableView reloadData];
+        });
+    });
 }
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)showMessage:(NSString *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.alertManager show:message];
+    });
 }
-*/
+
+- (void)showError:(NSString *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.alertManager show:message];
+    });
+}
+
+- (void)showWarning:(NSString *)message {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self.alertManager show:message];
+    });
+}
 
 @end
+
