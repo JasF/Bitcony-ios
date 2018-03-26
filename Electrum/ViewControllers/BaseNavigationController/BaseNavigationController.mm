@@ -15,8 +15,7 @@
 @implementation BaseNavigationController
 
 - (void)viewDidLoad {
-    self.view.backgroundColor = [UIColor greenColor];
-    
+    self.view.backgroundColor = RGB(24, 24, 24);
     [super viewDidLoad];
     self.delegate = self;
     self.navigationBar.translucent = YES;

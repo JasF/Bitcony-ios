@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface CustomButton : UIButton
-
+- (void)setNormalBackground:(BOOL)animated;
+- (void)setHighlightedBackground:(BOOL)animated;
+- (void)setBackgroundColor:(UIColor *)backgroundColor animated:(BOOL)animated;
 @end

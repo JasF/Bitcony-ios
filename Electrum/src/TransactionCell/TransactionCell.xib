@@ -19,10 +19,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="112.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1hU-SS-1HH" customClass="TransactionCellButton">
+                        <rect key="frame" x="137" y="41" width="46" height="30"/>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="isW-r0-ZjL">
                         <rect key="frame" x="65" y="11" width="34.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tYh-jE-yvB">
@@ -35,50 +38,57 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Amount value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GB0-kU-UZ9">
                         <rect key="frame" x="160" y="48" width="120" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.96512440913865549" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="cell_amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6O-DK-7m0">
                         <rect key="frame" x="16" y="48" width="91.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.96358981092436979" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="cell_balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDv-58-lr8">
                         <rect key="frame" x="16" y="81" width="102" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.96554293592436979" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FVK-Ag-lNc">
                         <rect key="frame" x="160" y="81" width="105.5" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="GB0-kU-UZ9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="48" id="53n-q1-v1R"/>
+                    <constraint firstItem="1hU-SS-1HH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8Pz-3V-9kj"/>
                     <constraint firstAttribute="bottom" secondItem="FVK-Ag-lNc" secondAttribute="bottom" constant="10.5" id="AT4-ds-Arx"/>
                     <constraint firstItem="QDv-58-lr8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="Erh-6J-Hah"/>
                     <constraint firstItem="isW-r0-ZjL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="GAk-EV-hg1"/>
                     <constraint firstItem="Q6O-DK-7m0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="48" id="HWw-Lu-OFf"/>
                     <constraint firstItem="tYh-jE-yvB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KKC-Pz-tdC"/>
+                    <constraint firstItem="1hU-SS-1HH" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" constant="-3" id="Ksr-ac-11A"/>
                     <constraint firstItem="isW-r0-ZjL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="65" id="POe-RH-8SO"/>
                     <constraint firstItem="QDv-58-lr8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="81" id="Qvr-MK-Vmu"/>
                     <constraint firstItem="FVK-Ag-lNc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="160" id="RX7-KC-ure"/>
+                    <constraint firstItem="1hU-SS-1HH" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-16" id="Tgu-Yf-jbA"/>
                     <constraint firstItem="FVK-Ag-lNc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="81" id="duI-MH-NpI"/>
+                    <constraint firstItem="1hU-SS-1HH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="jNK-qt-Syo"/>
                     <constraint firstItem="tYh-jE-yvB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="mZM-7w-sCv"/>
                     <constraint firstItem="GB0-kU-UZ9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="160" id="nim-Ht-jW4"/>
                     <constraint firstItem="Q6O-DK-7m0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="rCu-1f-2kz"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
                 <outlet property="amountLabel" destination="Q6O-DK-7m0" id="xU5-i1-v4V"/>
                 <outlet property="amountValueLabel" destination="GB0-kU-UZ9" id="ko8-gx-Rrb"/>
                 <outlet property="balanceLabel" destination="QDv-58-lr8" id="Qkk-QF-FvG"/>
                 <outlet property="balanceValueLabel" destination="FVK-Ag-lNc" id="pql-aJ-rmu"/>
+                <outlet property="button" destination="1hU-SS-1HH" id="PDA-VG-GJv"/>
                 <outlet property="dateLabel" destination="isW-r0-ZjL" id="AhS-VJ-XYs"/>
                 <outlet property="statusImageView" destination="tYh-jE-yvB" id="Zth-jq-OrP"/>
             </connections>

@@ -102,6 +102,8 @@
 		C3DAD6492068CEAD0061294B /* HistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD6482068CEAD0061294B /* HistoryViewController.m */; };
 		C3DAD64B2068CEC90061294B /* HistoryViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3DAD64A2068CEC90061294B /* HistoryViewController.storyboard */; };
 		C3DAD64F2068D46F0061294B /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD64E2068D46F0061294B /* UIView+Utils.m */; };
+		C3DAD6522068EA510061294B /* UIViewController+Electrum.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD6512068EA510061294B /* UIViewController+Electrum.m */; };
+		C3DAD6582068F1D50061294B /* TransactionCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C3DAD6572068F1D50061294B /* TransactionCellButton.m */; };
 		C3EA246D2067776C00146917 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3EA246C2067776C00146917 /* LaunchScreen.storyboard */; };
 		C3EA2473206787BA00146917 /* ButtonCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3EA2470206787BA00146917 /* ButtonCell.xib */; };
 		C3EA2474206787BA00146917 /* ButtonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EA2471206787BA00146917 /* ButtonCell.m */; };
@@ -1120,6 +1122,10 @@
 		C3DAD64A2068CEC90061294B /* HistoryViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HistoryViewController.storyboard; sourceTree = "<group>"; };
 		C3DAD64D2068D46F0061294B /* UIView+Utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		C3DAD64E2068D46F0061294B /* UIView+Utils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		C3DAD6502068EA510061294B /* UIViewController+Electrum.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Electrum.h"; sourceTree = "<group>"; };
+		C3DAD6512068EA510061294B /* UIViewController+Electrum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Electrum.m"; sourceTree = "<group>"; };
+		C3DAD6562068F1D50061294B /* TransactionCellButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransactionCellButton.h; sourceTree = "<group>"; };
+		C3DAD6572068F1D50061294B /* TransactionCellButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransactionCellButton.m; sourceTree = "<group>"; };
 		C3EA246C2067776C00146917 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C3EA2470206787BA00146917 /* ButtonCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ButtonCell.xib; sourceTree = "<group>"; };
 		C3EA2471206787BA00146917 /* ButtonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonCell.m; sourceTree = "<group>"; };
@@ -1303,6 +1309,7 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C3DAD6552068F1C60061294B /* TransactionCellButton */,
 				C3DAD63C2068C7AC0061294B /* Tabs */,
 				C3DAD63F2068C7AC0061294B /* TabsItemView */,
 				C3EA24942067BB2C00146917 /* TextViewCell */,
@@ -3871,8 +3878,19 @@
 			children = (
 				C3DAD64D2068D46F0061294B /* UIView+Utils.h */,
 				C3DAD64E2068D46F0061294B /* UIView+Utils.m */,
+				C3DAD6502068EA510061294B /* UIViewController+Electrum.h */,
+				C3DAD6512068EA510061294B /* UIViewController+Electrum.m */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		C3DAD6552068F1C60061294B /* TransactionCellButton */ = {
+			isa = PBXGroup;
+			children = (
+				C3DAD6562068F1D50061294B /* TransactionCellButton.h */,
+				C3DAD6572068F1D50061294B /* TransactionCellButton.m */,
+			);
+			path = TransactionCellButton;
 			sourceTree = "<group>";
 		};
 		C3EA246F206787BA00146917 /* ButtonCell */ = {
@@ -4100,6 +4118,7 @@
 				C3EA24932067B8B500146917 /* InitialNavigationController.m in Sources */,
 				C360F9642064F8DC00F90ADD /* NSString+rubicon.m in Sources */,
 				C39FEE38206235AA00756807 /* MainViewController.mm in Sources */,
+				C3DAD6582068F1D50061294B /* TransactionCellButton.m in Sources */,
 				C39FE967206103C400756807 /* EXTRuntimeExtensions.m in Sources */,
 				C39FE479205FE97100756807 /* EnterOrCreateWalletViewController.m in Sources */,
 				C360F973206620F900F90ADD /* PasswordDialogImpl.m in Sources */,
@@ -4158,6 +4177,7 @@
 				C39FE46A205FE76000756807 /* Managers.m in Sources */,
 				C3EA24832067A73700146917 /* TextFieldDialogImpl.m in Sources */,
 				C3EA24882067AA1D00146917 /* Functions.m in Sources */,
+				C3DAD6522068EA510061294B /* UIViewController+Electrum.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,6 +12,7 @@
 #import "Transaction.h"
 
 static NSTimeInterval kActionTimeInterval = 0.8f;
+static CGFloat const kTopInset = 8.f;
 
 @interface HistoryViewController () <UITableViewDataSource, UITableViewDelegate, WalletHandlerProtocolDelegate>
 @property (strong, nonatomic) NSArray *transactions;
@@ -32,6 +33,7 @@ static NSTimeInterval kActionTimeInterval = 0.8f;
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 50.f;
+    self.tableView.contentInset = UIEdgeInsetsMake(kTopInset, 0.f, 0.f, 0.f);
     
     @weakify(self);
     _timer = [NSTimer scheduledTimerWithTimeInterval:kActionTimeInterval repeats:YES block:^(NSTimer * _Nonnull timer) {
