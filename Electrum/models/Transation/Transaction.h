@@ -17,4 +17,5 @@
 @property (nonatomic, strong) NSString *dateString;
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSString *txHash;
+- (NSString *)statusImageName;
 @end

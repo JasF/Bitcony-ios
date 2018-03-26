@@ -12,7 +12,7 @@
 
 @protocol WalletHandlerProtocol;
 
-@interface HistoryViewController : UITableViewController
+@interface HistoryViewController : UIViewController
 @property (strong, nonatomic) id<ScreensManager> screensManager;
 @property (strong, nonatomic) id<WalletHandlerProtocol> handler;
 @property (strong, nonatomic) id<AlertManager> alertManager;

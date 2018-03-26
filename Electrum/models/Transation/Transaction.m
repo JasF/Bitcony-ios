@@ -30,7 +30,7 @@
      "clock3.png",
      "clock4.png",
      "clock5.png",
-     "confirmed.p   ng",
+     "confirmed.png",
      ]
      
      */
@@ -49,6 +49,13 @@
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd' 'HH':'mm'"];
     self.date = [dateFormatter dateFromString:_dateString];
+}
+
+- (NSString *)statusImageName {
+    NSDictionary *names = @{@(0):@"unconfirmed.png", @(1):@"warning.png", @(2):@"unconfirmed.png", @(3):@"offline_tx.png", @(4):@"clock.png", @(5):@"clock.png", @(6):@"clock.png", @(7):@"clock.png", @(8):@"clock.png", @(9):@"confirmed.png"};
+    NSString *imageName = names[@(self.status)];
+    NSCAssert(imageName, @"Unknown status: %@", @(_status));
+    return imageName;
 }
 
 @end

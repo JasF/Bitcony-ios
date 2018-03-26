@@ -49,5 +49,10 @@
     }
     _balanceValueLabel.text = balance;
 }
+- (IBAction)tapped:(id)sender {
+    if (_tapped) {
+        _tapped();
+    }
+}
 
 @end

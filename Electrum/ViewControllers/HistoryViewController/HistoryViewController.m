@@ -16,6 +16,7 @@ static CGFloat const kTopInset = 8.f;
 
 @interface HistoryViewController () <UITableViewDataSource, UITableViewDelegate, WalletHandlerProtocolDelegate>
 @property (strong, nonatomic) NSArray *transactions;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation HistoryViewController {
@@ -60,7 +61,15 @@ static CGFloat const kTopInset = 8.f;
     NSCAssert(indexPath.row < _transactions.count, @"indexPath.row must be less than number of transactions in array");
     Transaction *transaction = _transactions[indexPath.row];
     TransactionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TransactionCell"];
-    [cell setStatusImage:nil date:transaction.dateString amount:transaction.amount balance:transaction.balance];
+    UIImage *image = [UIImage imageNamed:transaction.statusImageName];
+    [cell setStatusImage:image date:transaction.dateString amount:transaction.amount balance:transaction.balance];
+    @weakify(self);
+    cell.tapped = ^{
+        @strongify(self);
+        if ([self.handler respondsToSelector:@selector(transactionTapped:)]) {
+            [self.handler transactionTapped:transaction.txHash];
+        }
+    };
     return cell;
 }
 
