@@ -23,7 +23,7 @@
 - (NSString *)amountText;
 @end
 
-@interface SendViewController : UITableViewController <SendHandlerProtocolDelegate>
+@interface SendViewController : UIViewController <SendHandlerProtocolDelegate>
 @property (strong, nonatomic) id<SendHandlerProtocol> handler;
 @property (strong, nonatomic) id<ScreensManager> screensManager;
 @property (strong, nonatomic) id<AlertManager> alertManager;

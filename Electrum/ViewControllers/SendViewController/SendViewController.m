@@ -9,24 +9,34 @@
 #import "SendViewController.h"
 #import "WaitingDialogImpl.h"
 #import "TextFieldCell.h"
+#import "TwoLabelCell.h"
+#import "EditingCell.h"
+#import "ButtonsCell.h"
 #import "ButtonCell.h"
 #import "Managers.h"
 #import "FeeCell.h"
 
 typedef NS_ENUM(NSInteger, Rows) {
-    PayToRow,
-    PayToValueRow,
+    SendAddressRow,
+    RequestedAmountRow,
     DescriptionRow,
-    DescriptionValueRow,
-    AmountRow,
-    AmountValueRow,
     FeeRow,
     FeeSliderRow,
-    FeeDescriptionRow,
-    ClearRow,
-    PreviewRow,
-    SendRow,
+    ButtonsRow,
+    PreviewSendRow,
     RowsCount
+};
+
+typedef NS_ENUM(NSInteger, Buttons) {
+    PhotoButton,
+    PasteButton,
+    ClearButton
+};
+
+typedef NS_ENUM(NSInteger, PreviewSendButtons) {
+    EmptyButton,
+    PreviewButton,
+    SendButton
 };
 
 static CGFloat const kRowHeight = 44.f;
@@ -35,6 +45,7 @@ static CGFloat const kTopInset = 8.f;
 
 @interface SendViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 @property (strong, nonatomic) FeeCell *feeCell;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation SendViewController {
@@ -52,6 +63,11 @@ static CGFloat const kTopInset = 8.f;
     NSCParameterAssert(_handler);
     NSCParameterAssert(_screensManager);
     [super viewDidLoad];
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = kRowHeight;
+    [self.tableView registerNib:[UINib nibWithNibName:@"EditingCell" bundle:nil] forCellReuseIdentifier:@"EditingCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TwoLabelCell" bundle:nil] forCellReuseIdentifier:@"TwoLabelCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"ButtonsCell" bundle:nil] forCellReuseIdentifier:@"ButtonsCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"SimpleCell" bundle:nil] forCellReuseIdentifier:@"SimpleCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"TextFieldCell" bundle:nil] forCellReuseIdentifier:@"TextFieldCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"TableButtonCell" bundle:nil] forCellReuseIdentifier:@"TableButtonCell"];
@@ -62,9 +78,10 @@ static CGFloat const kTopInset = 8.f;
     self.tableView.contentInset = UIEdgeInsetsMake(kTopInset, 0, 0, 0);
 #ifdef DEBUG
     _sendAddress = @"39S2Vp1vcDpDDgvRgF77YtgrQeMgRgJy3v";
-    _amountString = @"0.000001";
+    _amountString = @"0.00001";
     _sendDescriptionString = @"Hi description";
 #endif
+    [self updateFeeDescription];
     // Do any additional setup after loading the view.
 }
 
@@ -84,6 +101,7 @@ static CGFloat const kTopInset = 8.f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    /*
     NSArray *simpleCells = @[@(PayToRow), @(DescriptionRow), @(FeeDescriptionRow), @(AmountRow), @(FeeRow)];
     NSArray *textFieldCells = @[@(PayToValueRow), @(DescriptionValueRow), @(AmountValueRow)];
     NSArray *buttonCells = @[@(ClearRow), @(PreviewRow), @(SendRow)];
@@ -105,8 +123,79 @@ static CGFloat const kTopInset = 8.f;
         buttonCell = [tableView dequeueReusableCellWithIdentifier:@"TableButtonCell"];
         cell = buttonCell;
     }
-    
+    */
+    UITableViewCell *resultCell = nil;
     switch (indexPath.row) {
+        case SendAddressRow: {
+            EditingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditingCell"];
+            [cell setImage:[UIImage imageNamed:@"earth.png"]
+                     title:L(@"Pay to")
+               editingText:_sendAddress
+            bottomDelimeterVisible:YES];
+            resultCell = cell;
+            _payToTextField = cell.textField;
+            _payToTextField.text = _sendAddress;
+            _payToTextField.delegate = self;
+            break;
+        }
+        case RequestedAmountRow: {
+            EditingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditingCell"];
+            [cell setImage:[UIImage imageNamed:@"calc.png"]
+                     title:L(@"Amount")
+               editingText:_amountString
+    bottomDelimeterVisible:YES];
+            resultCell = cell;
+            _amountTextField = cell.textField;
+            _amountTextField.text = _amountString;
+            _amountTextField.delegate = self;
+            _amountTextField.keyboardType = UIKeyboardTypeDecimalPad;
+            break;
+        }
+        case DescriptionRow: {
+            EditingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditingCell"];
+            [cell setImage:[UIImage imageNamed:@"pen.png"]
+                     title:L(@"Description")
+               editingText:_sendDescriptionString
+    bottomDelimeterVisible:NO];
+            resultCell = cell;
+            _descriptionTextField = cell.textField;
+            _descriptionTextField.text = _sendDescriptionString;
+            _descriptionTextField.delegate = self;
+            _descriptionTextField.keyboardType = UIKeyboardTypeDefault;
+            break;
+        }
+        case FeeRow: {
+            TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
+            [cell setLeftLabel:L(@"Fee") rightLabel:_feeDescription];
+            resultCell = cell;
+            break;
+        }
+        case FeeSliderRow: {
+            return self.feeCell;
+        }
+        case ButtonsRow: {
+            ButtonsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonsCell"];
+            [cell setTitles:@[[UIImage imageNamed:@"photo.png"], L(@"Paste"), L(@"Clear"), L(@"Preview")]];
+            resultCell = cell;
+            @weakify(self);
+            cell.tapped = ^(NSInteger index) {
+                @strongify(self);
+                [self tappedOnButtonAtIndex:index];
+            };
+            break;
+        }
+        case PreviewSendRow: {
+            ButtonsCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonsCell"];
+            [cell setTitles:@[@"", L(@"Preview"), L(@"Send")]];
+            resultCell = cell;
+            @weakify(self);
+            cell.tapped = ^(NSInteger index) {
+                @strongify(self);
+                [self tappedOnPreviewSendButtonAtIndex:index];
+            };
+            break;
+        }
+            /*
         case PayToRow: {
             cell.textLabel.text = L(@"Pay to");
             break;
@@ -135,17 +224,6 @@ static CGFloat const kTopInset = 8.f;
             _amountTextField.text = _amountString;
             break;
         }
-        case FeeRow: {
-            cell.textLabel.text = L(@"Fee");
-            break;
-        }
-        case FeeSliderRow: {
-            return self.feeCell;
-        }
-        case FeeDescriptionRow: {
-            cell.textLabel.text = _feeDescription;
-            break;
-        }
         case ClearRow: {
             cell.textLabel.text = L(@"Clear");
             break;
@@ -158,27 +236,40 @@ static CGFloat const kTopInset = 8.f;
             cell.textLabel.text = L(@"Send");
             break;
         }
+             */
     }
     
-    NSCAssert(cell, @"Undefined cell not allowed");
-    return cell;
+    NSCAssert(resultCell, @"Undefined cell not allowed");
+    if (!resultCell) {
+        resultCell = [UITableViewCell new];
+    }
+    resultCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return resultCell;
 }
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return kRowHeight;
+    if (indexPath.row == FeeRow) {
+        return kRowHeight;
+    }
+    return UITableViewAutomaticDimension;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    switch (indexPath.row) {
-        case ClearRow: {
+- (void)tappedOnButtonAtIndex:(NSInteger)index {
+    switch (index) {
+        case ClearButton: {
             _sendAddress = nil;
             _sendDescriptionString = nil;
             _amountString = nil;
             [self reloadData];
             break;
         }
-        case PreviewRow: {
+    }
+}
+
+- (void)tappedOnPreviewSendButtonAtIndex:(NSInteger)index {
+    switch (index) {
+        case PreviewButton: {
             dispatch_python(^{
                 if ([_handler respondsToSelector:@selector(previewTapped:)]) {
                     [_handler previewTapped:nil];
@@ -186,7 +277,7 @@ static CGFloat const kTopInset = 8.f;
             });
             break;
         }
-        case SendRow: {
+        case SendButton: {
             dispatch_python(^{
                 if ([_handler respondsToSelector:@selector(sendTapped:)]) {
                     [_handler sendTapped:nil];
@@ -194,8 +285,6 @@ static CGFloat const kTopInset = 8.f;
             });
             break;
         }
-        default:
-            break;
     }
 }
 
@@ -263,7 +352,8 @@ static CGFloat const kTopInset = 8.f;
         }
         _feeDescription = newLine;
         [self.tableView beginUpdates];
-        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:FeeDescriptionRow inSection:0]] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [self.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:FeeRow inSection:0]]
+                              withRowAnimation:UITableViewRowAnimationAutomatic];
         [self.tableView endUpdates];
     }
 }

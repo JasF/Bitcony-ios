@@ -126,7 +126,6 @@ class CoinChooserBase(PrintError):
             # How much is left if we add this many change outputs?
             gfr = tx.get_fee()
             fer = fee_estimator(n)
-            print('gfr: ' + str(gfr) + '; fer: ' + str(fer) + '; count: ' + str(count) + '; max_change: ' + str(max_change))
             change_amount = max(0, gfr - fer)
             if change_amount // n <= max_change:
                 break

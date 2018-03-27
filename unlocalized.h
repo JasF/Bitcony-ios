@@ -2,4 +2,4 @@
 'Enter wallet name'
 'Continue'
 'Share'
-
+'Paste'

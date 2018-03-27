@@ -35,15 +35,25 @@ static CGFloat const kCornerRadius = 2.f;
 - (void)setTitles:(NSArray *)titles {
     NSMutableArray *mutableTitles = [titles mutableCopy];
     for (UIButton *button in [self buttons]) {
-        NSString *title = mutableTitles.firstObject;
-        if (title.length) {
-            button.hidden = NO;
-            [mutableTitles removeObjectAtIndex:0];
-            [button setTitle:title forState:UIControlStateNormal];
+        button.tintColor = [UIColor whiteColor];
+        id object = mutableTitles.firstObject;
+        if ([object isKindOfClass:[NSString class]]) {
+            NSString *title = (NSString *)object;
+            if (title.length) {
+                button.hidden = NO;
+                [button setTitle:title forState:UIControlStateNormal];
+            }
+            else {
+                button.hidden = YES;
+            }
         }
-        else {
-            button.hidden = YES;
+        else if ([object isKindOfClass:[UIImage class]]) {
+            UIImage *image = (UIImage *)object;
+            [button setImage:image forState:UIControlStateNormal];
+            button.adjustsImageWhenHighlighted = NO;
+            button.adjustsImageWhenDisabled = NO;
         }
+        [mutableTitles removeObjectAtIndex:0];
         button.layer.cornerRadius = kCornerRadius;
     }
 }

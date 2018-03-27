@@ -42,6 +42,7 @@ static CGFloat const kTopInset = 8.f;
 
 @implementation TransactionDetailViewController {
     NSString *_descriptionString;
+    NSString *_dateString;
 }
 
 - (void)viewDidLoad {
@@ -56,6 +57,9 @@ static CGFloat const kTopInset = 8.f;
     [self updateInputsOutputs];
     if ([_handler respondsToSelector:@selector(descriptionString:)]) {
         _descriptionString = [_handler descriptionString:nil];
+    }
+    if ([_handler respondsToSelector:@selector(date:)]) {
+        _dateString = [_handler date:nil];
     }
     // Do any additional setup after loading the view.
 }
@@ -76,6 +80,7 @@ static CGFloat const kTopInset = 8.f;
             NSInteger count = (indexPath.section == InputsSection) ? _inputs.count : _outputs.count;
             cell.textLabel.textColor = [UIColor whiteColor];
             cell.textLabel.text = (indexPath.section == TransactionIDSection) ? L(@"Transaction ID") : [NSString stringWithFormat:@"%@ (%@)",  (indexPath.section == InputsSection) ? L(@"Inputs") : L(@"Outputs"), @(count)];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
         NSInteger index = indexPath.row-1;
@@ -121,11 +126,7 @@ static CGFloat const kTopInset = 8.f;
         }
         case DateRow: {
             TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
-            NSString *value = nil;
-            if ([_handler respondsToSelector:@selector(date:)]) {
-                value = [_handler date:nil];
-            }
-            [cell setLeftLabel:L(@"Date") rightLabel:value];
+            [cell setLeftLabel:_dateString.length ? L(@"Date") : @"" rightLabel:_dateString];
             resultCell = cell;
             break;
         }
@@ -211,7 +212,7 @@ static CGFloat const kTopInset = 8.f;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return SectionsCount;
+    return SectionsCount - (([self transactionIDAttributedString].string.length) ? 0 : 1);
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -231,7 +232,8 @@ static CGFloat const kTopInset = 8.f;
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return (indexPath.section == InformationSection && indexPath.row == DescriptionRow && !_descriptionString) ? 0.f : kRowHeight;
+    return (indexPath.section == InformationSection && ((indexPath.row == DescriptionRow && !_descriptionString.length) ||
+                                                        (indexPath.row == DateRow && !_dateString.length))) ? 0.f : kRowHeight;
 }
 
 #pragma mark - Private Methods

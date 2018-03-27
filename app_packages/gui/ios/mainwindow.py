@@ -172,15 +172,15 @@ class ElectrumWindow:
         self.historyHandler = WalletHandler.alloc().init();
         self.historyHandler.electrumWindow = self
         
-        receiveHandler = ReceiveHandler.alloc().init()
-        receiveHandler.electrumWindow = self
+        self.receiveHandler = ReceiveHandler.alloc().init()
+        self.receiveHandler.electrumWindow = self
         
-        sendHandler = SendHandler.alloc().init()
-        sendHandler.electrumWindow = self
+        self.sendHandler = SendHandler.alloc().init()
+        self.sendHandler.electrumWindow = self
         
         self.screensManager.showWalletViewController(self.historyHandler,
-                                                     receiveHandler=receiveHandler,
-                                                     sendHandler=sendHandler)
+                                                     receiveHandler=self.receiveHandler,
+                                                     sendHandler=self.sendHandler)
 
     def on_network(self, event, *args):
         if event == 'updated':
