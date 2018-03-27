@@ -83,6 +83,7 @@ static CGFloat const kSpaceRowHeight = 22.f;
         }
         case PasswordValueRow: {
             TextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextFieldCell"];
+            _passwordCell = cell;
             resultCell = cell;
 #ifdef DEBUG
             [cell setString:@"1"];

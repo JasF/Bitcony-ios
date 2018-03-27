@@ -232,7 +232,7 @@ class InstallWizard(BaseWizard):
     def beginCreateNewWallet(self):
         walletName = "Default_wallet"
         names = self.walletsNames()
-        walletIndex = 1
+        walletsIndex = 1
         while True:
             if walletName not in names:
                 break

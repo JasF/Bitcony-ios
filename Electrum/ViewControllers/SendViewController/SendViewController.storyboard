@@ -38,7 +38,7 @@
                                 <rect key="frame" x="-0.5" y="32" width="375" height="667"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q9q-ZS-Lg3">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="8" y="0.0" width="359" height="667"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="dataSource" destination="J7S-Gj-s4a" id="GsM-JU-gag"/>
@@ -50,7 +50,7 @@
                                 <constraints>
                                     <constraint firstItem="q9q-ZS-Lg3" firstAttribute="height" secondItem="jGa-dW-YdX" secondAttribute="height" id="b3P-Ka-cfB"/>
                                     <constraint firstItem="q9q-ZS-Lg3" firstAttribute="centerY" secondItem="jGa-dW-YdX" secondAttribute="centerY" id="bOT-Ex-k6Y"/>
-                                    <constraint firstItem="q9q-ZS-Lg3" firstAttribute="width" secondItem="jGa-dW-YdX" secondAttribute="width" id="cYK-ki-ox8"/>
+                                    <constraint firstItem="q9q-ZS-Lg3" firstAttribute="width" secondItem="jGa-dW-YdX" secondAttribute="width" constant="-16" id="cYK-ki-ox8"/>
                                     <constraint firstItem="q9q-ZS-Lg3" firstAttribute="centerX" secondItem="jGa-dW-YdX" secondAttribute="centerX" id="oMc-kb-n7Q"/>
                                 </constraints>
                             </view>
