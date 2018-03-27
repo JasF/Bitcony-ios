@@ -58,9 +58,11 @@ typedef NS_ENUM(NSInteger, Rows) {
 }
 
 - (IBAction)continueTapped:(id)sender {
-    if ([_handler respondsToSelector:@selector(continueTapped:)]) {
-        [_handler continueTapped:nil];
-    }
+    dispatch_python(^{
+        if ([_handler respondsToSelector:@selector(continueTapped:)]) {
+            [_handler continueTapped:nil];
+        }
+    });
 }
 
 #pragma mark - UITableViewDataSource

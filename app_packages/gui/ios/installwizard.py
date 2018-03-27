@@ -15,13 +15,8 @@ from electrum.base_wizard import BaseWizard, HWD_SETUP_DECRYPT_WALLET
 from electrum.i18n import _
 from .textfielddialog import TextFieldDialog
 from .passworddialog import PasswordDialog
-
-'''
-from .seed_dialog import SeedLayout, KeysLayout
-from .network_dialog import NetworkChoiceLayout
-from .util import *
-from .password_dialog import PasswordLayout, PasswordLayoutForHW, PW_NEW
-'''
+from .waitingdialog import WaitingDialog
+from functools import partial
 
 class EnterWalletPasswordHandler(NSObject):
     @objc_method
@@ -31,18 +26,6 @@ class EnterWalletPasswordHandler(NSObject):
     @objc_method
     def continueTapped_(self, password):
         self.installWizard.processPassword(password)
-'''
-    
-        if self.installWizard.haveASeed == True:
-            self.installWizard.password = password;
-            seed = self.installWizard.seedText
-            print('seed: ' + seed + '; pass: ' + password)
-            self.installWizard.wallet_type = 'standard'
-            self.installWizard.create_keystore(seed, password)
-        else:
-            self.installWizard.processPassword(password)
-
-    '''
 
 class ConfirmSeedHandler(NSObject):
     @objc_method
@@ -170,9 +153,10 @@ class InstallWizard(BaseWizard):
         pass
 
     def waiting_dialog(self, task, msg):
-        t = threading.Thread(target = task)
-        t.start()
-        t.join()
+        def empty(self):
+            pass
+        dialog = WaitingDialog(self, msg, task, empty, empty)
+        dialog.show()
 
     def openWalletWithName(self, walletName):
         path = self.config.walletsPath()

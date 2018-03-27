@@ -63,9 +63,12 @@ static CGFloat const kSpaceRowHeight = 22.f;
 }
 */
 - (IBAction)continueTapped:(id)sender {
-    if ([_handler respondsToSelector:@selector(continueTapped:)]) {
-        [_handler continueTapped:_passwordTextField.text];
-    }
+    NSString *text = _passwordTextField.text;
+    dispatch_python(^{
+        if ([_handler respondsToSelector:@selector(continueTapped:)]) {
+            [_handler continueTapped:text];
+        }
+    });
 }
 
 #pragma mark - UITableViewDataSource
