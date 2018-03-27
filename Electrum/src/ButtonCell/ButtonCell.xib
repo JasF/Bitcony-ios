@@ -34,7 +34,7 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nib-Wx-7WL">
-                        <rect key="frame" x="0.0" y="62.5" width="320" height="1"/>
+                        <rect key="frame" x="16" y="62.5" width="288" height="1"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="1" id="Rr6-4W-qYB"/>
@@ -44,15 +44,16 @@
                 <constraints>
                     <constraint firstItem="YZF-mK-CqB" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="2uQ-2A-KY5"/>
                     <constraint firstItem="Nib-Wx-7WL" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" id="FGB-3e-iSz"/>
-                    <constraint firstItem="Nib-Wx-7WL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="WQf-d7-eal"/>
+                    <constraint firstItem="Nib-Wx-7WL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="WQf-d7-eal"/>
                     <constraint firstAttribute="height" secondItem="YZF-mK-CqB" secondAttribute="height" id="cVB-2L-A6v"/>
-                    <constraint firstItem="Nib-Wx-7WL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" id="csi-5g-aZT"/>
+                    <constraint firstItem="Nib-Wx-7WL" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-16" id="csi-5g-aZT"/>
                     <constraint firstItem="YZF-mK-CqB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ekA-sN-L7v"/>
                     <constraint firstItem="YZF-mK-CqB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="so9-Yg-cYd"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="button" destination="YZF-mK-CqB" id="y6t-78-hco"/>
+                <outlet property="delimeterView" destination="Nib-Wx-7WL" id="yl2-8i-St5"/>
             </connections>
             <point key="canvasLocation" x="26" y="62"/>
         </tableViewCell>

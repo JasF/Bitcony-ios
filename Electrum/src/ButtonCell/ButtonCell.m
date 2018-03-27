@@ -9,6 +9,7 @@
 #import "ButtonCell.h"
 
 @interface ButtonCell ()
+@property (weak, nonatomic) IBOutlet UIView *delimeterView;
 @end
 
 @implementation ButtonCell
@@ -31,6 +32,14 @@
 
 - (void)setButtonImage:(UIImage *)image {
     [_button setImage:image forState:UIControlStateNormal];
+}
+
+- (void)setDelimeterVisible:(BOOL)delimeterVisible {
+    _delimeterView.hidden = !delimeterVisible;
+}
+
+- (void)setButtonEnabled:(BOOL)enabled {
+    _button.enabled = enabled;
 }
 
 #pragma mark - Private Methods

@@ -14,4 +14,6 @@
 @property (copy, nonatomic) dispatch_block_t tappedHandler;
 - (void)setTitle:(NSString *)title;
 - (void)setButtonImage:(UIImage *)image;
+- (void)setDelimeterVisible:(BOOL)delimeterVisible;
+- (void)setButtonEnabled:(BOOL)enabled;
 @end

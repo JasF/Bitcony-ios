@@ -18,21 +18,24 @@ typedef NS_ENUM(NSInteger, Rows) {
     RowsCount
 };
 
-@interface ConfirmSeedViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface ConfirmSeedViewController () <UITableViewDelegate, UITableViewDataSource, UITextViewDelegate>
 @end
 
 @implementation ConfirmSeedViewController {
 #ifdef DEBUG
     NSString *_seed;
 #endif
+    NSString *_originalSeed;
+    ButtonCell *_continueCell;
 }
 
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
     [super viewDidLoad];
     self.view.backgroundColor = self.navigationController.view.backgroundColor;
+    _originalSeed = [_handler generatedSeed:nil];
 #ifdef DEBUG
-    _seed = [_handler generatedSeed:_handler];
+    _seed = _originalSeed;
 #endif
     [self.tableView registerNib:[UINib nibWithNibName:@"ButtonCell" bundle:nil] forCellReuseIdentifier:@"ButtonCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"LabelCell" bundle:nil] forCellReuseIdentifier:@"LabelCell"];
@@ -76,6 +79,8 @@ typedef NS_ENUM(NSInteger, Rows) {
         }
         case TextViewRow: {
             TextViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextViewCell"];
+            cell.textView.delegate = self;
+            cell.textView.keyboardType = UIKeyboardTypeASCIICapable;
 #ifdef DEBUG
             [cell setTextViewText:_seed];
 #endif
@@ -84,7 +89,10 @@ typedef NS_ENUM(NSInteger, Rows) {
         }
         case ContinueRow: {
             ButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
+            _continueCell = cell;
+            [cell setButtonEnabled:[self checkSeed]];
             [cell setTitle:L(@"Continue")];
+            [cell setDelimeterVisible:NO];
             @weakify(self);
             cell.tappedHandler = ^{
                 @strongify(self);
@@ -109,6 +117,26 @@ typedef NS_ENUM(NSInteger, Rows) {
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
+}
+
+#pragma mark - Private Methods
+- (BOOL)checkSeed {
+    return [_originalSeed isEqualToString:_seed];
+}
+
+#pragma mark - UITextViewDelegate
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:textView action:@selector(resignFirstResponder)];
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 44)];
+    toolbar.items = [NSArray arrayWithObject:barButton];
+    textView.inputAccessoryView = toolbar;
+    return YES;
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    _seed = [textView.text stringByReplacingCharactersInRange:range withString:text];
+    [_continueCell setButtonEnabled:[self checkSeed]];
+    return YES;
 }
 
 @end

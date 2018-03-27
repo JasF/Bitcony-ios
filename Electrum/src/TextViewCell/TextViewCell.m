@@ -11,7 +11,6 @@
 static CGFloat const kRoundedCornerRadius = 8.f;
 static CGFloat const kHorizontalMargin = 16.f;
 @interface TextViewCell ()
-@property (weak, nonatomic) IBOutlet UITextView *textView;
 @end
 
 @implementation TextViewCell

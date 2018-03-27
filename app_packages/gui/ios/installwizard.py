@@ -8,6 +8,7 @@ from os.path import isfile, join
 
 from rubicon.objc import ObjCClass, NSObject, objc_method
 
+from lib import bitcoin
 from electrum import Wallet, WalletStorage
 from electrum.util import UserCancelled, InvalidPassword
 from electrum.base_wizard import BaseWizard, HWD_SETUP_DECRYPT_WALLET
@@ -68,6 +69,10 @@ class HaveASeedHandler(NSObject):
         self.installWizard.haveASeed = True
         self.installWizard.processSeed(seed)
         pass
+
+    @objc_method
+    def seedType_(self, seed):
+        return bitcoin.seed_type(seed)
 
 class CreateNewSeedHandler(NSObject):
     @objc_method

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface TextViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 - (void)setTextViewText:(NSString *)text;
 - (void)setEditingAllowed:(BOOL)allowed;
 - (void)setStyleWithTransparentBackground:(BOOL)yes;

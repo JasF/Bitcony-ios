@@ -3,3 +3,8 @@
 'Continue'
 'Share'
 'Paste'
+'Create a new seed'
+'Create Wallet'
+'Enter wallet name'
+'Do you want to create a new seed, or to restore a wallet using an existing seed?'
+'I already have a seed'

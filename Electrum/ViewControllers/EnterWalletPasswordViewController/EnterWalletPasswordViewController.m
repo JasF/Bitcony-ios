@@ -24,11 +24,15 @@ typedef NS_ENUM(NSInteger, Rows) {
 
 static CGFloat const kSpaceRowHeight = 22.f;
 
-@interface EnterWalletPasswordViewController ()
+@interface EnterWalletPasswordViewController () <UITextFieldDelegate>
 @end
 
 @implementation EnterWalletPasswordViewController {
-    TextFieldCell *_passwordCell;
+    UITextField *_passwordTextField;
+    UITextField *_repeatPasswordTextField;
+    NSString *_password;
+    NSString *_repeatPassword;
+    ButtonCell *_continueCell;
 }
 
 - (void)viewDidLoad {
@@ -60,7 +64,7 @@ static CGFloat const kSpaceRowHeight = 22.f;
 */
 - (IBAction)continueTapped:(id)sender {
     if ([_handler respondsToSelector:@selector(continueTapped:)]) {
-        [_handler continueTapped:_passwordCell.string];
+        [_handler continueTapped:_passwordTextField.text];
     }
 }
 
@@ -83,7 +87,8 @@ static CGFloat const kSpaceRowHeight = 22.f;
         }
         case PasswordValueRow: {
             TextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextFieldCell"];
-            _passwordCell = cell;
+            _passwordTextField = cell.textField;
+            cell.textField.delegate = self;
             resultCell = cell;
 #ifdef DEBUG
             [cell setString:@"1"];
@@ -98,6 +103,8 @@ static CGFloat const kSpaceRowHeight = 22.f;
         }
         case RepeatPasswordValueRow: {
             TextFieldCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextFieldCell"];
+            _repeatPasswordTextField = cell.textField;
+            cell.textField.delegate = self;
             resultCell = cell;
 #ifdef DEBUG
             [cell setString:@"1"];
@@ -112,7 +119,10 @@ static CGFloat const kSpaceRowHeight = 22.f;
         }
         case ContinueRow: {
             ButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
+            _continueCell = cell;
+            [cell setButtonEnabled:[self passwordsEquals]];
             [cell setTitle:L(@"Continue")];
+            [cell setDelimeterVisible:NO];
             @weakify(self);
             cell.tappedHandler = ^{
                 @strongify(self);
@@ -140,6 +150,32 @@ static CGFloat const kSpaceRowHeight = 22.f;
         return kSpaceRowHeight;
     }
     return UITableViewAutomaticDimension;
+}
+
+#pragma mark - Private Methods
+- (BOOL)passwordsEquals {
+    return ((!_password.length && !_repeatPassword.length) || [_password isEqualToString:_repeatPassword]);
+}
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:textField action:@selector(resignFirstResponder)];
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 44)];
+    toolbar.items = [NSArray arrayWithObject:barButton];
+    textField.inputAccessoryView = toolbar;
+    return YES;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    NSString *updatedString = [textField.text stringByReplacingCharactersInRange:range withString:string];
+    if ([textField isEqual:_passwordTextField]) {
+        _password = updatedString;
+    }
+    else if ([textField isEqual:_repeatPasswordTextField]) {
+        _repeatPassword = updatedString;
+    }
+    [_continueCell setButtonEnabled:[self passwordsEquals]];
+    return YES;
 }
 
 @end

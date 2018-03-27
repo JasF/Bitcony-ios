@@ -34,6 +34,7 @@ static CGFloat const kAnimationDuration = 0.2f;
 - (void)initialize {
     [self setNormalBackground:NO];
     [self setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [self setTitleColor:[[UIColor whiteColor] colorWithAlphaComponent:0.4f] forState:UIControlStateDisabled];
     self.adjustsImageWhenHighlighted = NO;
     
     

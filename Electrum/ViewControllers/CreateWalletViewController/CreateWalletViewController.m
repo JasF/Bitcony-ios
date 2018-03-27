@@ -92,6 +92,7 @@ static CGFloat const kEstimatedRowHeight = 50.f;
                 @strongify(self);
                 [self createNewSeedTapped:nil];
             };
+            [cell setDelimeterVisible:YES];
             resultCell = cell;
             break;
         }
@@ -103,6 +104,7 @@ static CGFloat const kEstimatedRowHeight = 50.f;
                 @strongify(self);
                 [self haveASeedTapped:nil];
             };
+            [cell setDelimeterVisible:NO];
             resultCell = cell;
             break;
         }

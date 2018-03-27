@@ -18,14 +18,15 @@ typedef NS_ENUM(NSInteger, Rows) {
     RowsCount
 };
 
-@interface HaveASeedViewController ()
+@interface HaveASeedViewController () <UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *continueButton;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
 @implementation HaveASeedViewController {
-    TextViewCell *_textViewCell;
+    NSString *_seed;
+    ButtonCell *_continueCell;
 }
 
 - (void)viewDidLoad {
@@ -39,6 +40,9 @@ typedef NS_ENUM(NSInteger, Rows) {
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 50.f;
     self.title = L(@"Enter seed");
+#ifdef DEBUG
+    _seed = [[NSString alloc] initWithData:[NSData dataWithContentsOfFile:@"/Users/jasf/Desktop/seed.h"] encoding:NSUTF8StringEncoding];
+#endif
     // Do any additional setup after loading the view.
 }
 
@@ -58,7 +62,7 @@ typedef NS_ENUM(NSInteger, Rows) {
 */
 - (IBAction)continueButtonTapped:(id)sender {
     if ([_handler respondsToSelector:@selector(continueTapped:)]) {
-        [_handler continueTapped:_textViewCell.enteredText];
+        [_handler continueTapped:_seed];
     }
 }
 
@@ -75,18 +79,17 @@ typedef NS_ENUM(NSInteger, Rows) {
         }
         case TextViewRow: {
             TextViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextViewCell"];
-#ifdef DEBUG
-            NSData *data = [NSData dataWithContentsOfFile:@"/Users/jasf/Desktop/seed.h"];
-            NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            [cell setTextViewText:string];
-#endif
-            _textViewCell = cell;
+            cell.textView.delegate = self;
+            [cell setTextViewText:_seed];
             resultCell = cell;
             break;
         }
         case ContinueRow: {
             ButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
+            _continueCell = cell;
             [cell setTitle:L(@"Continue")];
+            [cell setDelimeterVisible:NO];
+            [cell setButtonEnabled:[self isSupportedSeed:_seed]];
             @weakify(self);
             cell.tappedHandler = ^{
                 @strongify(self);
@@ -111,6 +114,22 @@ typedef NS_ENUM(NSInteger, Rows) {
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return UITableViewAutomaticDimension;
+}
+
+#pragma mark - UITextViewDelegate
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
+    _seed = [textView.text stringByReplacingCharactersInRange:range withString:text];
+    [_continueCell setButtonEnabled:[self isSupportedSeed:_seed]];
+    return YES;
+}
+
+#pragma mark - Private Methods
+- (BOOL)isSupportedSeed:(NSString *)seed {
+    NSString *seedType = nil;
+    if ([_handler respondsToSelector:@selector(seedType:)]) {
+        seedType = [_handler seedType:_seed.length ? _seed : @""];
+    }
+    return [seedType isEqualToString:@"standard"];
 }
 
 @end

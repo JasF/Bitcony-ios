@@ -54,7 +54,7 @@ typedef NS_ENUM(NSInteger, Rows) {
                                  "<li>%@</li>"\
                                  "</ul></font>",
                                  [NSString stringWithFormat:L(@"Please save these %d words on paper (order is important). "), 12],
-                                 L(@"This seed will allow you to recover your wallet in case "),
+                                 L(@"This seed will allow you to recover your wallet in case of computer failure."),
                                  L(@"WARNING"),
                                  L(@"Never disclose your seed."),
                                  L(@"Never type it on a website."),
@@ -107,6 +107,7 @@ typedef NS_ENUM(NSInteger, Rows) {
         case ContinueRow: {
             ButtonCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
             [cell setTitle:L(@"Create a new seed")];
+            [cell setDelimeterVisible:NO];
             @weakify(self);
             cell.tappedHandler = ^{
                 @strongify(self);

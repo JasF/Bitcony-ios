@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 @protocol HaveASeedHandlerProtocol <NSObject>
 - (void)continueTapped:(NSString *)seed;
+- (NSString *)seedType:(NSString *)seed;
 @end
 
 @interface HaveASeedViewController : UITableViewController

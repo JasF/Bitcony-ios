@@ -67,6 +67,7 @@ typedef NS_ENUM(NSInteger, Rows) {
         NSString *walletName = _walletsNames[indexPath.row];
         ButtonCell *buttonCell = [tableView dequeueReusableCellWithIdentifier:@"ButtonCell"];
         cell = buttonCell;
+        [buttonCell setDelimeterVisible:(indexPath.row + 1 < _walletsNames.count)];
         @weakify(self);
         buttonCell.tappedHandler = ^{
             @strongify(self);
