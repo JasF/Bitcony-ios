@@ -7,34 +7,43 @@
 //
 
 #import "ReceiveViewController.h"
+#import "ReceiveSharingObject.h"
+#import "SharingManager.h"
 #import "TextFieldCell.h"
 #import "EditingCell.h"
 #import "ButtonsCell.h"
 #import "ImageCell.h"
-
-@import ZXingObjC;
+#import "UIImage+MDQRCode.h"
 
 typedef NS_ENUM(NSInteger, Rows) {
     QRCodeRow,
     ReceivingAddressRow,
-    DescriptionRow,
     RequestedAmountRow,
+    DescriptionRow,
     ButtonsRow,
     RowsCount
 };
 
-static CGFloat const kSpaceRowHeight = 8.f;
+typedef NS_ENUM(NSInteger, Buttons) {
+    CopyButton,
+    ShareButton,
+    NewButton,
+    ButtonsCount
+};
+
 static CGFloat const kTopInset = 8.f;
 static CGFloat const kRowHeight = 44.f;
 
 @interface ReceiveViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) SharingManager *sharingManager;
 @end
 
 @implementation ReceiveViewController {
     NSString *_receivingAddress;
     NSString *_amountString;
     NSString *_descriptionString;
+    NSString *_encodedString;
     ImageCell *_imageCell;
     UIImage *_qrcodeImage;
     UITextField *_addressTextField;
@@ -112,30 +121,30 @@ static CGFloat const kRowHeight = 44.f;
             _addressTextField.delegate = self;
             break;
         }
-        case DescriptionRow: {
+        case RequestedAmountRow: {
             EditingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditingCell"];
             [cell setImage:[UIImage imageNamed:@"calc.png"]
                      title:L(@"Amount")
                editingText:nil
     bottomDelimeterVisible:YES];
             resultCell = cell;
-            _descriptionTextField = cell.textField;
-            _descriptionTextField.text = _descriptionString;
-            _descriptionTextField.delegate = self;
-            _descriptionTextField.keyboardType = UIKeyboardTypeDecimalPad;
+            _amountTextField = cell.textField;
+            _amountTextField.text = _amountString;
+            _amountTextField.delegate = self;
+            _amountTextField.keyboardType = UIKeyboardTypeDecimalPad;
             break;
         }
-        case RequestedAmountRow: {
+        case DescriptionRow: {
             EditingCell *cell = [tableView dequeueReusableCellWithIdentifier:@"EditingCell"];
             [cell setImage:[UIImage imageNamed:@"pen.png"]
                      title:L(@"Description")
                editingText:nil
     bottomDelimeterVisible:NO];
             resultCell = cell;
-            _amountTextField = cell.textField;
-            _amountTextField.text = _amountString;
-            _amountTextField.delegate = self;
-            _amountTextField.keyboardType = UIKeyboardTypeDefault;
+            _descriptionTextField = cell.textField;
+            _descriptionTextField.text = _descriptionString;
+            _descriptionTextField.delegate = self;
+            _descriptionTextField.keyboardType = UIKeyboardTypeDefault;
             break;
         }
         case ButtonsRow: {
@@ -170,36 +179,76 @@ static CGFloat const kRowHeight = 44.f;
 
 #pragma mark - Private Methods
 - (void)updateQRCode {
+    NSString *stringForEncode = [self stringForEncode];
+    if ([stringForEncode isEqualToString:_encodedString]) {
+        return;
+    }
+    
     CGFloat width = self.view.width - [ImageCell sideMargin] * 2;
     dispatch_async(dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
-        NSError *error = nil;
-        ZXMultiFormatWriter *writer = [ZXMultiFormatWriter writer];
-        ZXBitMatrix* result = [writer encode:[self stringForEncode]
-                                      format:kBarcodeFormatQRCode
-                                       width:width
-                                      height:width
-                                       error:&error];
-        if (result) {
-            CGImageRef cgimage = [[ZXImage imageWithMatrix:result] cgimage];
-            UIImage *image = [[UIImage alloc] initWithCGImage:cgimage];
+        UIImage *image = [UIImage mdQRCodeForString:stringForEncode
+                                               size:width
+                                          fillColor:[UIColor blackColor]];
+        
+        if (image) {
+            _encodedString = stringForEncode;
             dispatch_async(dispatch_get_main_queue(), ^{
                 _qrcodeImage = image;
                 [_imageCell setMainImage:image];
             });
-            // This CGImageRef image can be placed in a UIImage, NSImage, or written to a file.
-        } else {
-            NSString *errorMessage = [error localizedDescription];
-            DDLogError(@"%@", errorMessage);
         }
     });
 }
 
+- (NSString *)pathedAmountString {
+    return [_amountString stringByReplacingOccurrencesOfString:@"," withString:@"."];
+}
+
 - (NSString *)stringForEncode {
+    if (_amountString.length || _descriptionString.length) {
+        NSString *amountString = [self pathedAmountString];
+        NSString *result = [NSString stringWithFormat:@"bitcoin:%@", _receivingAddress];
+        if (amountString.length) {
+            result = [result stringByAppendingFormat:@"?amount=%@", amountString];
+            if (_descriptionString.length) {
+                result = [result stringByAppendingFormat:@"&message=%@", _descriptionString];
+            }
+        }
+        else {
+            result = [result stringByAppendingFormat:@"?message=%@", _descriptionString];
+        }
+        return result;
+    }
     return _receivingAddress;
 }
 
 - (void)tappedOnButtonAtIndex:(NSInteger)index {
-    
+    switch (index) {
+        case CopyButton: {
+            [UIPasteboard generalPasteboard].string = [self stringForEncode];
+            break;
+        }
+        case ShareButton: {
+            ReceiveSharingObject *objectForSharing = [[ReceiveSharingObject alloc] initWithMessage:[self stringForEncode]
+                                                                                             image:_qrcodeImage];
+            @weakify(self);
+            self.sharingManager = [[SharingManager alloc] initWithSharingObject:objectForSharing
+                                                                 viewController:self
+                                                                     completion:^{
+                                                                         @strongify(self);
+                                                                         self.sharingManager = nil;
+                                                                     }];
+            [_sharingManager start];
+            break;
+        }
+        case NewButton: {
+            _amountString = nil;
+            _descriptionString = nil;
+            [self updateQRCode];
+            [self.tableView reloadData];
+            break;
+        }
+    }
 }
 
 #pragma mark - UITextFieldDelegate
@@ -211,6 +260,7 @@ static CGFloat const kRowHeight = 44.f;
     else if ([textField isEqual:_descriptionTextField]) {
         _descriptionString = updatedString;
     }
+    [self updateQRCode];
     return YES;
     
 }

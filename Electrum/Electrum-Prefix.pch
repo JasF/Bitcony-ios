@@ -4,24 +4,6 @@
 //  The contents of this file are implicitly included at the beginning of every source file.
 //
 
-#import <Availability.h>
-#import <CocoaLumberjack/CocoaLumberjack.h>
-#import "Localizer.h"
-#import "Logs.h"
-
-#ifndef __IPHONE_3_0
-#warning "This project uses features only available in iOS SDK 3.0 and later."
-#endif
-
-#if DEBUG
-static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
-#else
-static const DDLogLevel ddLogLevel = DDLogLevelWarning;
-#endif
-
-#define RGB(r,g,b) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:1.f]
-
-#define L(a) [Localizer localize:a]
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
@@ -30,6 +12,20 @@ static const DDLogLevel ddLogLevel = DDLogLevelWarning;
     #import "Functions.h"
     #import "UIView+Utils.h"
     #import "UIViewController+Electrum.h"
+    #import <Availability.h>
+    #import <CocoaLumberjack/CocoaLumberjack.h>
+    #import "Localizer.h"
+    #import "Logs.h"
+
+    #if DEBUG
+    static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+    #else
+    static const DDLogLevel ddLogLevel = DDLogLevelWarning;
+    #endif
+
+    #define RGB(r,g,b) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:1.f]
+
+    #define L(a) [Localizer localize:a]
 
     typedef NS_ENUM(NSInteger, Direction) {
         DirectionBackToRight,

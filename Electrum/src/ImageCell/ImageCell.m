@@ -8,7 +8,7 @@
 
 #import "ImageCell.h"
 
-static CGFloat const kSideMargin = 30.f;
+static CGFloat const kSideMargin = 60.f;
 
 @interface ImageCell ()
 @property (strong, nonatomic) IBOutlet UIImageView *mainImageView;
