@@ -196,19 +196,6 @@ static CGFloat const kBlurMaximumFraction = 0.4f;
 
 - (void)setLeftViewController:(UIViewController *)leftViewController {
     [super setLeftViewController:leftViewController];
-    
-    /*
-     0.8 ... 1
-     0.1 ..... x
-     
-     x = 0.1 * 1 / 0.8
-     
-     x =  0.1 * 0.8 = 0.08
-     
-     x =
-     
-     */
-    
     @weakify(self);
     
     self.intCallback = ^(CGFloat percentage, BOOL animated) {
@@ -223,7 +210,6 @@ static CGFloat const kBlurMaximumFraction = 0.4f;
                 [self showAnimation];
             }
         }
-        DDLogInfo(@"ppperc:%f, anim: %@", percentage, @(animated));
     };
     self.leftViewPercentageChanged = ^(CGFloat percentage, BOOL animated) {
         @strongify(self);
@@ -247,10 +233,7 @@ static CGFloat const kBlurMaximumFraction = 0.4f;
             CGFloat newPercentage = percentage - kStartDelay;
             newAlpha = newPercentage/(1-kStartDelay);
         }
-        DDLogInfo(@"perc: %@; alpha: %@", @(percentage), @(newAlpha));
-        //menuViewController.backgroundEffectView.alpha = newAlpha;
     };
-    // self.accessoryView = menuViewController.backgroundEffectView;
 }
 
 - (void)setupWithType:(NSUInteger)type {
