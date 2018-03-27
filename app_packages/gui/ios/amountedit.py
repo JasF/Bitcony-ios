@@ -25,6 +25,9 @@ class BTCAmountEdit:
         p = pow(10, self.decimal_point())
         return int( p * x )
     
+    def setText(self, text):
+        pass
+    
     def setAmount(self, amount):
         if amount is None:
             self.setText(" ") # Space forces repaint in case units changed

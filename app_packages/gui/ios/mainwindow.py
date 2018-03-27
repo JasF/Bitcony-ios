@@ -630,9 +630,9 @@ class ElectrumWindow:
                 self.not_enough_funds = False
             except (NotEnoughFunds, NoDynamicFeeEstimates) as e:
                 if not freeze_fee:
-                    self.fee_e.setAmount(None)
+                    pass#self.fee_e.setAmount(None)
                 if not freeze_feerate:
-                    self.feerate_e.setAmount(None)
+                    pass#self.feerate_e.setAmount(None)
                 #self.feerounding_icon.setVisible(False)
 
                 if isinstance(e, NotEnoughFunds):
@@ -651,7 +651,7 @@ class ElectrumWindow:
             fee = tx.get_fee()
 
     def on_error(self, exc_info):
-        print('exc_info: ' + str(type(exc_info)));
+        print('exc_info: ' + str(type(exc_info[0])) + '; exc_info[1]: ' + str(type(exc_info[1])));
         if not isinstance(exc_info[1], UserCancelled):
             self.show_error(str(exc_info[1]))
 

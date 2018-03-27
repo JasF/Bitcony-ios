@@ -31,6 +31,11 @@
 		C36B5C2E206A21DB006F52F6 /* UIImage+MDQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C26206A21DA006F52F6 /* UIImage+MDQRCode.m */; };
 		C36B5C33206A2B5B006F52F6 /* TwoLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C31206A2B5B006F52F6 /* TwoLabelCell.m */; };
 		C36B5C34206A2B5B006F52F6 /* TwoLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C32206A2B5B006F52F6 /* TwoLabelCell.xib */; };
+		C36B5C41206A505F006F52F6 /* QRToggleTorchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C37206A505F006F52F6 /* QRToggleTorchButton.m */; };
+		C36B5C42206A505F006F52F6 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C39206A505F006F52F6 /* QRCameraSwitchButton.m */; };
+		C36B5C43206A505F006F52F6 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C3B206A505F006F52F6 /* QRCodeReaderViewController.m */; };
+		C36B5C44206A505F006F52F6 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C3C206A505F006F52F6 /* QRCodeReaderView.m */; };
+		C36B5C45206A505F006F52F6 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C40206A505F006F52F6 /* QRCodeReader.m */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
 		C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFBA205F9E9600756807 /* Images.xcassets */; };
@@ -220,6 +225,17 @@
 		C36B5C30206A2B5B006F52F6 /* TwoLabelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoLabelCell.h; sourceTree = "<group>"; };
 		C36B5C31206A2B5B006F52F6 /* TwoLabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoLabelCell.m; sourceTree = "<group>"; };
 		C36B5C32206A2B5B006F52F6 /* TwoLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoLabelCell.xib; sourceTree = "<group>"; };
+		C36B5C36206A505F006F52F6 /* QRCodeReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderView.h; sourceTree = "<group>"; };
+		C36B5C37206A505F006F52F6 /* QRToggleTorchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRToggleTorchButton.m; sourceTree = "<group>"; };
+		C36B5C38206A505F006F52F6 /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderDelegate.h; sourceTree = "<group>"; };
+		C36B5C39206A505F006F52F6 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCameraSwitchButton.m; sourceTree = "<group>"; };
+		C36B5C3A206A505F006F52F6 /* QRCodeReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReader.h; sourceTree = "<group>"; };
+		C36B5C3B206A505F006F52F6 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderViewController.m; sourceTree = "<group>"; };
+		C36B5C3C206A505F006F52F6 /* QRCodeReaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReaderView.m; sourceTree = "<group>"; };
+		C36B5C3D206A505F006F52F6 /* QRToggleTorchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRToggleTorchButton.h; sourceTree = "<group>"; };
+		C36B5C3E206A505F006F52F6 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
+		C36B5C3F206A505F006F52F6 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
+		C36B5C40206A505F006F52F6 /* QRCodeReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReader.m; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C39FDFBA205F9E9600756807 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1396,6 +1412,24 @@
 				C36B5C32206A2B5B006F52F6 /* TwoLabelCell.xib */,
 			);
 			path = TwoLabelCell;
+			sourceTree = "<group>";
+		};
+		C36B5C35206A505F006F52F6 /* QRCodeReaderViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C36B5C36206A505F006F52F6 /* QRCodeReaderView.h */,
+				C36B5C37206A505F006F52F6 /* QRToggleTorchButton.m */,
+				C36B5C38206A505F006F52F6 /* QRCodeReaderDelegate.h */,
+				C36B5C39206A505F006F52F6 /* QRCameraSwitchButton.m */,
+				C36B5C3A206A505F006F52F6 /* QRCodeReader.h */,
+				C36B5C3B206A505F006F52F6 /* QRCodeReaderViewController.m */,
+				C36B5C3C206A505F006F52F6 /* QRCodeReaderView.m */,
+				C36B5C3D206A505F006F52F6 /* QRToggleTorchButton.h */,
+				C36B5C3E206A505F006F52F6 /* QRCameraSwitchButton.h */,
+				C36B5C3F206A505F006F52F6 /* QRCodeReaderViewController.h */,
+				C36B5C40206A505F006F52F6 /* QRCodeReader.m */,
+			);
+			path = QRCodeReaderViewController;
 			sourceTree = "<group>";
 		};
 		C39FDFB3205F9E9600756807 /* Electrum */ = {
@@ -3937,6 +3971,7 @@
 		C3B75F902063A26F0030BC81 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				C36B5C35206A505F006F52F6 /* QRCodeReaderViewController */,
 				C36B5C15206A21DA006F52F6 /* QR */,
 				C3B75F912063A2730030BC81 /* UIView+TKGeometry */,
 				C360F9622064F8DC00F90ADD /* NSString+rubicon.h */,
@@ -4307,6 +4342,7 @@
 				C39FE94A2060FFEB00756807 /* RunLoop.m in Sources */,
 				C39FEE5E2062444C00756807 /* BaseNavigationController.mm in Sources */,
 				C39FEE4C2062361D00756807 /* LGSideMenuSegue.m in Sources */,
+				C36B5C43206A505F006F52F6 /* QRCodeReaderViewController.m in Sources */,
 				C3DAD6432068C7AD0061294B /* Tabs.m in Sources */,
 				C39FDFDE205FA06300756807 /* AppDelegate.m in Sources */,
 				C36B5C12206A1B84006F52F6 /* SharingManager.m in Sources */,
@@ -4320,6 +4356,7 @@
 				C3B75F5920636DCA0030BC81 /* ReceiveViewController.m in Sources */,
 				C39FEE6D20626CAA00756807 /* TransactionCell.m in Sources */,
 				C3DAD66F206937EA0061294B /* ButtonsCell.m in Sources */,
+				C36B5C41206A505F006F52F6 /* QRToggleTorchButton.m in Sources */,
 				C39FE968206103C400756807 /* EXTADT.m in Sources */,
 				C360F9782066286800F90ADD /* Localizer.m in Sources */,
 				C3DAD66120691C660061294B /* EditingCell.m in Sources */,
@@ -4341,6 +4378,7 @@
 				C39FEE62206244EE00756807 /* WalletViewController.m in Sources */,
 				C39FEE4A2062361D00756807 /* LGSideMenuHelper.m in Sources */,
 				C39FEE7520626FA200756807 /* Transaction.m in Sources */,
+				C36B5C44206A505F006F52F6 /* QRCodeReaderView.m in Sources */,
 				C39FE96C206103C400756807 /* EXTNil.m in Sources */,
 				C39FEE3A206235AA00756807 /* LeftViewController.m in Sources */,
 				C39FE974206115B000756807 /* HaveASeedViewController.m in Sources */,
@@ -4356,8 +4394,10 @@
 				C39FE964206103C400756807 /* EXTSelectorChecking.m in Sources */,
 				C36B5C2E206A21DB006F52F6 /* UIImage+MDQRCode.m in Sources */,
 				C360F96A20652DB400F90ADD /* WaitingDialogImpl.m in Sources */,
+				C36B5C42206A505F006F52F6 /* QRCameraSwitchButton.m in Sources */,
 				C39FE46F205FE7DC00756807 /* ScreensManagerImpl.m in Sources */,
 				C360F95E2064E8EE00F90ADD /* AlertManagerImpl.m in Sources */,
+				C36B5C45206A505F006F52F6 /* QRCodeReader.m in Sources */,
 				C3DAD64F2068D46F0061294B /* UIView+Utils.m in Sources */,
 				C3DAD66920692EC50061294B /* ImageCell.m in Sources */,
 				C39FDFC5205F9E9600756807 /* main.m in Sources */,

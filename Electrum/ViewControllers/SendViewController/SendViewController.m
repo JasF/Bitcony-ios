@@ -6,9 +6,11 @@
 //  Copyright © 2018 Freedom. All rights reserved.
 //
 
+#import "QRCodeReaderViewController.h"
 #import "SendViewController.h"
 #import "WaitingDialogImpl.h"
 #import "TextFieldCell.h"
+#import "QRCodeReader.h"
 #import "TwoLabelCell.h"
 #import "EditingCell.h"
 #import "ButtonsCell.h"
@@ -28,7 +30,7 @@ typedef NS_ENUM(NSInteger, Rows) {
 };
 
 typedef NS_ENUM(NSInteger, Buttons) {
-    PhotoButton,
+    ScanButton,
     PasteButton,
     ClearButton
 };
@@ -43,7 +45,7 @@ static CGFloat const kRowHeight = 44.f;
 static CGFloat const kNumberOfSliderSteps = 5.f - 1.f;
 static CGFloat const kTopInset = 8.f;
 
-@interface SendViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
+@interface SendViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate, QRCodeReaderDelegate>
 @property (strong, nonatomic) FeeCell *feeCell;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end
@@ -82,12 +84,6 @@ static CGFloat const kTopInset = 8.f;
     _sendDescriptionString = @"Hi description";
 #endif
     [self updateFeeDescription];
-    // Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Observers
@@ -101,29 +97,6 @@ static CGFloat const kTopInset = 8.f;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    /*
-    NSArray *simpleCells = @[@(PayToRow), @(DescriptionRow), @(FeeDescriptionRow), @(AmountRow), @(FeeRow)];
-    NSArray *textFieldCells = @[@(PayToValueRow), @(DescriptionValueRow), @(AmountValueRow)];
-    NSArray *buttonCells = @[@(ClearRow), @(PreviewRow), @(SendRow)];
-    
-    UITableViewCell *cell = nil;
-    TextFieldCell *textFieldCell = nil;
-    ButtonCell *buttonCell = nil;
-    
-    if ([simpleCells containsObject:@(indexPath.row)]) {
-        cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleCell"];
-    }
-    else if ([textFieldCells containsObject:@(indexPath.row)]) {
-        textFieldCell = [tableView dequeueReusableCellWithIdentifier:@"TextFieldCell"];
-        [textFieldCell setRightLabelText:nil];
-        cell = textFieldCell;
-        textFieldCell.textField.delegate = self;
-    }
-    else if ([buttonCells containsObject:@(indexPath.row)]) {
-        buttonCell = [tableView dequeueReusableCellWithIdentifier:@"TableButtonCell"];
-        cell = buttonCell;
-    }
-    */
     UITableViewCell *resultCell = nil;
     switch (indexPath.row) {
         case SendAddressRow: {
@@ -195,48 +168,6 @@ static CGFloat const kTopInset = 8.f;
             };
             break;
         }
-            /*
-        case PayToRow: {
-            cell.textLabel.text = L(@"Pay to");
-            break;
-        }
-        case PayToValueRow: {
-            _payToTextField = textFieldCell.textField;
-            _payToTextField.text = _sendAddress;
-            break;
-        }
-        case DescriptionRow: {
-            cell.textLabel.text = L(@"Description");
-            break;
-        }
-        case DescriptionValueRow: {
-            _descriptionTextField = textFieldCell.textField;
-            _descriptionTextField.text = _sendDescriptionString;
-            break;
-        }
-        case AmountRow: {
-            cell.textLabel.text = L(@"Amount");
-            break;
-        }
-        case AmountValueRow: {
-            _amountTextField = textFieldCell.textField;
-            [textFieldCell setRightLabelText:L(@"BTC")];
-            _amountTextField.text = _amountString;
-            break;
-        }
-        case ClearRow: {
-            cell.textLabel.text = L(@"Clear");
-            break;
-        }
-        case PreviewRow: {
-            cell.textLabel.text = L(@"Preview");
-            break;
-        }
-        case SendRow: {
-            cell.textLabel.text = L(@"Send");
-            break;
-        }
-             */
     }
     
     NSCAssert(resultCell, @"Undefined cell not allowed");
@@ -257,6 +188,18 @@ static CGFloat const kTopInset = 8.f;
 
 - (void)tappedOnButtonAtIndex:(NSInteger)index {
     switch (index) {
+        case ScanButton: {
+            [self scanAction];
+            break;
+        }
+        case PasteButton: {
+            NSString *string = [UIPasteboard generalPasteboard].string;
+#ifdef DEBUG
+            string = @"1PsagHwPWGdCGvZ9rDDnRUhrxC3jZJkBj7";
+#endif
+            [self handleString:string];
+            break;
+        }
         case ClearButton: {
             _sendAddress = nil;
             _sendDescriptionString = nil;
@@ -331,6 +274,10 @@ static CGFloat const kTopInset = 8.f;
 }
 
 #pragma mark - Private Methods
+- (void)setAmountString:(NSString *)string {
+    _amountString = [string stringByReplacingOccurrencesOfString:@"," withString:@"."];
+}
+
 - (void)sliderModifyFinished:(UISlider *)slider {
     NSInteger filledSteps = [self sliderFilledSteps];
     CGFloat stepLength = 1.f/kNumberOfSliderSteps;
@@ -358,7 +305,53 @@ static CGFloat const kTopInset = 8.f;
     }
 }
 
+- (void)scanAction {
+    if ([QRCodeReader supportsMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]]) {
+        static QRCodeReaderViewController *vc = nil;
+        static dispatch_once_t onceToken;
+        dispatch_once(&onceToken, ^{
+            QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+            vc                   = [QRCodeReaderViewController readerWithCancelButtonTitle:L(@"Cancel")
+                                                                                codeReader:reader
+                                                                       startScanningAtLoad:YES
+                                                                    showSwitchCameraButton:YES
+                                                                           showTorchButton:YES];
+            vc.modalPresentationStyle = UIModalPresentationFormSheet;
+        });
+        vc.delegate = self;
+        [vc setCompletionWithBlock:^(NSString *resultAsString) {
+            [self handleString:resultAsString];
+        }];
+        
+        [self presentViewController:vc animated:YES completion:NULL];
+    }
+}
+
+- (void)handleString:(NSString *)string {
+    NSURLComponents *components = [[NSURLComponents alloc] initWithString:string];
+    _sendAddress = components.path;
+    if ([components.scheme isEqualToString:@"bitcoin"]) {
+        for (NSURLQueryItem *item in components.queryItems) {
+            if ([item.name isEqualToString:@"amount"]) {
+                _amountString = item.value;
+            }
+            else if ([item.name isEqualToString:@"message"]) {
+                _sendDescriptionString = item.value;
+            }
+        }
+    }
+    [self reloadData];
+}
+
 #pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:textField action:@selector(resignFirstResponder)];
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 44)];
+    toolbar.items = [NSArray arrayWithObject:barButton];
+    textField.inputAccessoryView = toolbar;
+    return YES;
+}
+
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     NSString *updatedString = [textField.text stringByReplacingCharactersInRange:range withString:string];
     if ([textField isEqual:_payToTextField]) {
@@ -383,7 +376,20 @@ static CGFloat const kTopInset = 8.f;
 }
 
 - (NSString *)amountText {
-    return _amountString;
+    return [_amountString stringByReplacingOccurrencesOfString:@"," withString:@"."];
 }
+
+#pragma mark - QRCodeReaderDelegate
+- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result
+{
+    [reader stopScanning];
+    [self dismissViewControllerAnimated:YES completion:^{}];
+}
+
+- (void)readerDidCancel:(QRCodeReaderViewController *)reader
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
+}
+
 
 @end
