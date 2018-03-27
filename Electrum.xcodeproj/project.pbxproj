@@ -29,6 +29,8 @@
 		C36B5C2C206A21DB006F52F6 /* qrspec.c in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C22206A21DA006F52F6 /* qrspec.c */; };
 		C36B5C2D206A21DB006F52F6 /* rscode.c in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C25206A21DA006F52F6 /* rscode.c */; };
 		C36B5C2E206A21DB006F52F6 /* UIImage+MDQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C26206A21DA006F52F6 /* UIImage+MDQRCode.m */; };
+		C36B5C33206A2B5B006F52F6 /* TwoLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C31206A2B5B006F52F6 /* TwoLabelCell.m */; };
+		C36B5C34206A2B5B006F52F6 /* TwoLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C32206A2B5B006F52F6 /* TwoLabelCell.xib */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
 		C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFBA205F9E9600756807 /* Images.xcassets */; };
@@ -215,6 +217,9 @@
 		C36B5C24206A21DA006F52F6 /* split.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = split.h; sourceTree = "<group>"; };
 		C36B5C25206A21DA006F52F6 /* rscode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = rscode.c; sourceTree = "<group>"; };
 		C36B5C26206A21DA006F52F6 /* UIImage+MDQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+MDQRCode.m"; sourceTree = "<group>"; };
+		C36B5C30206A2B5B006F52F6 /* TwoLabelCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TwoLabelCell.h; sourceTree = "<group>"; };
+		C36B5C31206A2B5B006F52F6 /* TwoLabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TwoLabelCell.m; sourceTree = "<group>"; };
+		C36B5C32206A2B5B006F52F6 /* TwoLabelCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TwoLabelCell.xib; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C39FDFBA205F9E9600756807 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1383,6 +1388,16 @@
 			path = libqrencode;
 			sourceTree = "<group>";
 		};
+		C36B5C2F206A2B32006F52F6 /* TwoLabelCell */ = {
+			isa = PBXGroup;
+			children = (
+				C36B5C30206A2B5B006F52F6 /* TwoLabelCell.h */,
+				C36B5C31206A2B5B006F52F6 /* TwoLabelCell.m */,
+				C36B5C32206A2B5B006F52F6 /* TwoLabelCell.xib */,
+			);
+			path = TwoLabelCell;
+			sourceTree = "<group>";
+		};
 		C39FDFB3205F9E9600756807 /* Electrum */ = {
 			isa = PBXGroup;
 			children = (
@@ -1415,6 +1430,7 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C36B5C2F206A2B32006F52F6 /* TwoLabelCell */,
 				C36B5C13206A1C02006F52F6 /* SharingObject */,
 				C36B5C0C206A1B77006F52F6 /* ReceiveSharingObject */,
 				C36B5C0B206A1B36006F52F6 /* SharingManager */,
@@ -4238,6 +4254,7 @@
 				C39FE475205FE8CA00756807 /* CreateWalletViewController.storyboard in Resources */,
 				C39FE97E206117B100756807 /* ConfirmSeedViewController.storyboard in Resources */,
 				C3DAD66220691C660061294B /* EditingCell.xib in Resources */,
+				C36B5C34206A2B5B006F52F6 /* TwoLabelCell.xib in Resources */,
 				C3B75F982063D5460030BC81 /* TableButtonCell.xib in Resources */,
 				C39FDFD9205F9FF300756807 /* __main__-.py in Resources */,
 				C39FE976206115C500756807 /* HaveASeedViewController.storyboard in Resources */,
@@ -4272,6 +4289,7 @@
 				C39FEE5A206238A800756807 /* ViewController.m in Sources */,
 				C36B5C2D206A21DB006F52F6 /* rscode.c in Sources */,
 				C39FE966206103C400756807 /* EXTScope.m in Sources */,
+				C36B5C33206A2B5B006F52F6 /* TwoLabelCell.m in Sources */,
 				C3EA24932067B8B500146917 /* InitialNavigationController.m in Sources */,
 				C3DAD65C206907300061294B /* MaskingView.m in Sources */,
 				C36B5C2C206A21DB006F52F6 /* qrspec.c in Sources */,

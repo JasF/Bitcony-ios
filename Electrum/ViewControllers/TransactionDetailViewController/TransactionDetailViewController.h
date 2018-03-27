@@ -24,6 +24,6 @@
 - (NSNumber *)lockTime:(id)object;
 @end
 
-@interface TransactionDetailViewController : UITableViewController
+@interface TransactionDetailViewController : UIViewController
 @property (strong, nonatomic) id<TransactionDetailHandlerProtocol> handler;
 @end

@@ -8,19 +8,20 @@
 
 #import "TransactionDetailViewController.h"
 #import "TextFieldCell.h"
+#import "TwoLabelCell.h"
 
 typedef NS_ENUM(NSInteger, Sections) {
     InformationSection,
     InputsSection,
     OutputsSection,
+    TransactionIDSection,
     SectionsCount
 };
 
 typedef NS_ENUM(NSInteger, Rows) {
-    TransactionIDRow,
-    TransactionIDRowValue,
+    //TransactionIDRow,
+    //TransactionIDRowValue,
     DescriptionRow,
-    DescriptionRowValue,
     StatusRow,
     DateRow,
     AmountRow,
@@ -31,22 +32,31 @@ typedef NS_ENUM(NSInteger, Rows) {
 };
 
 static CGFloat const kRowHeight = 44.f;
+static CGFloat const kTopInset = 8.f;
 
-@interface TransactionDetailViewController () <UITableViewDelegate, UITableViewDataSource>
+@interface TransactionDetailViewController () <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
 @property (strong, nonatomic) NSArray *inputs;
 @property (strong, nonatomic) NSArray *outputs;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end
 
-@implementation TransactionDetailViewController
+@implementation TransactionDetailViewController {
+    NSString *_descriptionString;
+}
 
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
     [super viewDidLoad];
+    self.tableView.contentInset = UIEdgeInsetsMake(kTopInset, 0, 0, 0);
     [self.tableView registerNib:[UINib nibWithNibName:@"SimpleCell" bundle:nil] forCellReuseIdentifier:@"SimpleCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"TextFieldCell" bundle:nil] forCellReuseIdentifier:@"TextFieldCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"TwoLabelCell" bundle:nil] forCellReuseIdentifier:@"TwoLabelCell"];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = kRowHeight;
     [self updateInputsOutputs];
+    if ([_handler respondsToSelector:@selector(descriptionString:)]) {
+        _descriptionString = [_handler descriptionString:nil];
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -60,68 +70,67 @@ static CGFloat const kRowHeight = 44.f;
     if (indexPath.section == InformationSection) {
         return [self tableView:tableView informationCellForRowAtIndexPath:indexPath];
     }
-    else if (indexPath.section == InputsSection || indexPath.section == OutputsSection) {
+    else if (indexPath.section == InputsSection || indexPath.section == OutputsSection || indexPath.section == TransactionIDSection) {
         if (!indexPath.row) {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleCell"];
             NSInteger count = (indexPath.section == InputsSection) ? _inputs.count : _outputs.count;
-            cell.textLabel.text = [NSString stringWithFormat:@"%@ (%@)", (indexPath.section == InputsSection) ? L(@"Inputs") : L(@"Outputs"), @(count)];
+            cell.textLabel.textColor = [UIColor whiteColor];
+            cell.textLabel.text = (indexPath.section == TransactionIDSection) ? L(@"Transaction ID") : [NSString stringWithFormat:@"%@ (%@)",  (indexPath.section == InputsSection) ? L(@"Inputs") : L(@"Outputs"), @(count)];
             return cell;
         }
         NSInteger index = indexPath.row-1;
-        NSArray *stringsArray = (indexPath.section == InputsSection) ? _inputs : _outputs;
+        NSArray *stringsArray = (indexPath.section == TransactionIDSection) ? @[[self transactionIDAttributedString]] : (indexPath.section == InputsSection) ? _inputs : _outputs;
         NSCAssert(stringsArray.count > index, @"index %@ out of bounds in %@", @(index), stringsArray);
         NSAttributedString *string = stringsArray[index];
         TextFieldCell *cell =(TextFieldCell *)[tableView dequeueReusableCellWithIdentifier:@"TextFieldCell"];
         [cell setAttributedString:string];
+        cell.textField.delegate = self;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
     NSCAssert(false, @"Unknown section");
     return [UITableViewCell new];
 }
 
+- (NSAttributedString *)transactionIDAttributedString {
+    NSString *value = nil;
+    if ([_handler respondsToSelector:@selector(transactionID:)]) {
+        value = [_handler transactionID:nil];
+    }
+    return [[NSAttributedString alloc] initWithString:(value.length) ? value : @""];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView informationCellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleCell"];
+    UITableViewCell *resultCell = nil;
     switch (indexPath.row) {
-        case TransactionIDRow:
-            cell.textLabel.text = [NSString stringWithFormat:@"%@:", L(@"Transaction ID")];
-            break;
-        case TransactionIDRowValue: {
-            NSString *value = nil;
-            if ([_handler respondsToSelector:@selector(transactionID:)]) {
-                value = [_handler transactionID:nil];
-            }
-            cell.textLabel.text = value.length ? value : L(@"Unknown");
-            break;
-        }
         case DescriptionRow: {
-            cell.textLabel.text = [NSString stringWithFormat:@"%@:", L(@"Description")];
-            break;
-        }
-        case DescriptionRowValue: {
-            NSString *value = nil;
-            if ([_handler respondsToSelector:@selector(descriptionString:)]) {
-                value = [_handler descriptionString:nil];
-            }
-            cell.textLabel.text = value;
+            TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
+            [cell setLeftLabel:(_descriptionString.length) ? L(@"Description") : @"" rightLabel:_descriptionString];
+            resultCell = cell;
             break;
         }
         case StatusRow: {
+            TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
             NSString *value = nil;
             if ([_handler respondsToSelector:@selector(status:)]) {
                 value = [_handler status:nil];
             }
-            cell.textLabel.text = [NSString stringWithFormat:@"%@: %@", L(@"Status"), value];
+            [cell setLeftLabel:L(@"Status") rightLabel:value];
+            resultCell = cell;
             break;
         }
         case DateRow: {
+            TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
             NSString *value = nil;
             if ([_handler respondsToSelector:@selector(date:)]) {
                 value = [_handler date:nil];
             }
-            cell.textLabel.text = [NSString stringWithFormat:L(@"Date: %@"), value];
+            [cell setLeftLabel:L(@"Date") rightLabel:value];
+            resultCell = cell;
             break;
         }
         case AmountRow: {
+            TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
             NSNumber *amount = 0;
             if ([_handler respondsToSelector:@selector(amount:)]) {
                 amount = [_handler amount:nil];
@@ -138,27 +147,34 @@ static CGFloat const kRowHeight = 44.f;
             }
             
             NSString *text = nil;
+            NSString *rightText = nil;
             if (amount.integerValue == 0) {
                 text = L(@"Transaction unrelated to your wallet");
             }
             else if (amount.integerValue > 0.f) {
-                text = [NSString stringWithFormat:@"%@ %@ %@", L(@"Amount received:"), formattedAmount, baseUnit];
+                text = L(@"Amount received:");
+                rightText = [NSString stringWithFormat:@"%@ %@", formattedAmount, baseUnit];
             }
             else {
-                text = [NSString stringWithFormat:@"%@ %@ %@", L(@"Amount sent:"), formattedAmount, baseUnit];
+                text = L(@"Amount sent:");
+                rightText = [NSString stringWithFormat:@"%@ %@", formattedAmount, baseUnit];
             }
-            cell.textLabel.text = text;
+            [cell setLeftLabel:text rightLabel:rightText];
+            resultCell = cell;
             break;
         }
         case SizeRow: {
+            TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
             NSNumber *size = 0;
             if ([_handler respondsToSelector:@selector(size:)]) {
                 size = [_handler size:nil];
             }
-            cell.textLabel.text = [NSString stringWithFormat:L(@"%@ %@ bytes"), L(@"Size:"), size];
+            [cell setLeftLabel:L(@"Size:") rightLabel:[NSString stringWithFormat:L(@"%@ bytes"), size]];
+            resultCell = cell;
             break;
         }
         case FeeRow: {
+            TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
             NSNumber *fee = 0;
             if ([_handler respondsToSelector:@selector(fee:)]) {
                 fee = [_handler fee:nil];
@@ -167,22 +183,31 @@ static CGFloat const kRowHeight = 44.f;
             if ([_handler respondsToSelector:@selector(formattedFee:)]) {
                 formattedFee = [_handler formattedFee:nil];
             }
-            NSString *text = [NSString stringWithFormat:@"%@: %@", L(@"Fee"), (fee.integerValue == 0) ? L(@"unknown") : formattedFee];
-            cell.textLabel.text = text;
+            [cell setLeftLabel:L(@"Fee")
+                    rightLabel:[NSString stringWithFormat:@"%@", (fee.integerValue == 0) ? L(@"unknown") : formattedFee]];
+            resultCell = cell;
             break;
         }
         case LockTimeRow: {
+            TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
             NSNumber *lockTime = nil;
             if ([_handler respondsToSelector:@selector(lockTime:)]) {
                 lockTime = [_handler lockTime:nil];
             }
-            NSString *text = [NSString stringWithFormat:@"%@: %@", L(@"LockTime"), lockTime];
-            cell.textLabel.text = text;
+            [cell setLeftLabel:L(@"LockTime")
+                    rightLabel:[NSString stringWithFormat:@"%@", lockTime]];
+            resultCell = cell;
+            break;
         }
         default:
             break;
     }
-    return cell;
+    NSCAssert(resultCell, @"Unknown cell row: %@", indexPath);
+    if (!resultCell) {
+        resultCell = [UITableViewCell new];
+    }
+    resultCell.selectionStyle = UITableViewCellSelectionStyleNone;
+    return resultCell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -197,6 +222,8 @@ static CGFloat const kRowHeight = 44.f;
             return _inputs.count + 1;
         case OutputsSection:
             return _outputs.count + 1;
+        case TransactionIDSection:
+            return 2;
         default:
             return 0;
     }
@@ -204,7 +231,7 @@ static CGFloat const kRowHeight = 44.f;
 
 #pragma mark - UITableViewDelegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return kRowHeight;
+    return (indexPath.section == InformationSection && indexPath.row == DescriptionRow && !_descriptionString) ? 0.f : kRowHeight;
 }
 
 #pragma mark - Private Methods
@@ -274,5 +301,14 @@ static CGFloat const kRowHeight = 44.f;
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - UITextFieldDelegate
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    return YES;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    return NO;
+}
 
 @end

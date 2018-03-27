@@ -70,6 +70,7 @@ static CGFloat const kTopInset = 8.f;
             [self.handler transactionTapped:transaction.txHash];
         }
     };
+    cell.selectionStyle = UITableViewCellSeparatorStyleNone;
     return cell;
 }
 
@@ -84,6 +85,10 @@ static CGFloat const kTopInset = 8.f;
     if ([_handler respondsToSelector:@selector(transactionTapped:)]) {
         [_handler transactionTapped:transaction.txHash];
     }
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
 }
 
 #pragma mark - Observers
