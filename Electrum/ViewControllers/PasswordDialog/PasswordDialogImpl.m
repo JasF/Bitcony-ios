@@ -36,9 +36,9 @@
                                                               handler:^(UIAlertAction * _Nonnull action) {
                                                                   @strongify(self);
                                                                   NSString *password = [[alertController textFields][0] text];
-                                                                  dispatch_async(dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+                                                                  dispatch_python(^{
                                                                       if ([self.handler respondsToSelector:@selector(done:)]) {
-                                                                          [self.handler done:password];
+                                                                          [self.handler done:password.length ? password : @""];
                                                                       }
                                                                   });
                                                               }];
@@ -47,9 +47,9 @@
                                                                 style:UIAlertActionStyleDefault
                                                               handler:^(UIAlertAction * _Nonnull action) {
                                                                   @strongify(self);
-                                                                  dispatch_async(dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
+                                                                  dispatch_python(^{
                                                                       if ([self.handler respondsToSelector:@selector(done:)]) {
-                                                                          [self.handler done:nil];
+                                                                          [self.handler done:@""];
                                                                       }
                                                                   });
                                                               }];

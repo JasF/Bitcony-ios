@@ -45,6 +45,7 @@ static CGFloat const kSpaceRowHeight = 22.f;
     [self.tableView registerNib:[UINib nibWithNibName:@"TextFieldCell" bundle:nil] forCellReuseIdentifier:@"TextFieldCell"];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 50.f;
+    self.tableView.editing = YES;
     // Do any additional setup after loading the view.
 }
 
@@ -72,6 +73,17 @@ static CGFloat const kSpaceRowHeight = 22.f;
 }
 
 #pragma mark - UITableViewDataSource
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    // Return YES if you want the specified item to be editable.
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        DDLogInfo(@"Deleting: indexPath: %@", indexPath);
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *resultCell = nil;
     switch (indexPath.row) {
