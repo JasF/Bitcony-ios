@@ -31,6 +31,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="UFo-eK-6ce"/>
                     </view>
                     <navigationItem key="navigationItem" id="OHg-9l-77M"/>
@@ -43,7 +44,7 @@
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="image" keyPath="leftViewBackgroundImage" value="Stars.png"/>
                         <userDefinedRuntimeAttribute type="color" keyPath="leftViewBackgroundColor">
-                            <color key="value" red="0.10435388855870287" green="0.16881045267105246" blue="0.647025465965271" alpha="0.94999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="value" red="0.35911432783290842" green="0.65966662996423819" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </userDefinedRuntimeAttribute>
                         <userDefinedRuntimeAttribute type="color" keyPath="rootViewCoverColorForLeftView">
                             <color key="value" red="0.070075893140767051" green="0.69926805710603579" blue="0.96156410757124111" alpha="0.14769476232394366" colorSpace="custom" customColorSpace="sRGB"/>

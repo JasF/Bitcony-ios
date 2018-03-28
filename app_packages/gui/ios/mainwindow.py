@@ -112,28 +112,6 @@ class MenuHandler(NSObject):
         pass
 
     @objc_method
-    def receiveTapped_(self):
-        '''
-        addr = self.electrumWindow.wallet.get_unused_address()
-        handler.addr = addr
-        handler = ReceiveHandler.alloc().init()
-        handler.electrumWindow = self.electrumWindow
-        self.electrumWindow.screensManager.showReceiveViewController(handler)
-        '''
-        pass
-
-    @objc_method
-    def sendTapped_(self):
-        '''
-        handler = SendHandler.alloc().init()
-        handler.electrumWindow = self.electrumWindow
-        self.electrumWindow.sendHandler = handler
-        self.electrumWindow.screensManager.showSendViewController(handler)
-        self.electrumWindow.feeSliderMoved(0)
-        '''
-        pass
-
-    @objc_method
     def settingsTapped_(self):
         handler = SettingsHandler.alloc().init()
         handler.electrumWindow = self.electrumWindow

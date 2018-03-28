@@ -11,8 +11,6 @@
 
 typedef NS_ENUM(NSInteger, MenuRows) {
     HistoryRow,
-    ReceiveRow,
-    SendRow,
     SettingsRow,
     RowsCount
 };
@@ -69,49 +67,9 @@ static CGFloat const kSeparatorAlpha = 0.25f;
     cell.textLabel.textColor = [UIColor whiteColor];
     switch (indexPath.row) {
         case HistoryRow: cell.textLabel.text = L(@"History"); break;
-        case ReceiveRow: cell.textLabel.text = L(@"Receive"); break;
-        case SendRow: cell.textLabel.text = L(@"Send"); break;
         case SettingsRow: cell.textLabel.text = L(@"Settings"); break;
     }
     return cell;
-    /*
-    MenuSimpleCell *cell = nil;
-    cell.delegate = self;
-    if (indexPath.row == ZodiacsRow) {
-        ZodiacsCell *zodiacsCell = [tableView dequeueReusableCellWithIdentifier:kZodiacsCell];
-        [zodiacsCell setZodiacsLayoutController:_zodiacsLayoutController];
-        auto zodiacs = _viewModel->zodiacsTitlesAndImageNames();
-        NSMutableArray *zodiacsArray = [NSMutableArray new];
-        for (dictionary dict : zodiacs) {
-            NSDictionary *dictionary = [NSDictionary horo_dictionaryFromJsonValue:dict];
-            [zodiacsArray addObject:dictionary];
-        }
-        [zodiacsCell setItems:[zodiacsArray copy]];
-        return zodiacsCell;
-    }
-    else {
-        cell =(MenuSimpleCell *)[tableView dequeueReusableCellWithIdentifier:kMenuSimpleCell];
-        NSCParameterAssert(cell);
-        NSDictionary *titles = @{@(PredictionRow):@"menu_cell_prediction",
-                                 @(FriendsRow):@"menu_cell_friends",
-                                 @(AccountRow):@"menu_cell_account",
-                                 @(NotifcationsRow):@"menu_cell_notifications",
-                                 @(FeedbackRow):@"menu_cell_feedback",
-                                 @(PromoRow):@"menu_cell_promo",
-                                 };
-        NSString *title = L(titles[@(indexPath.row)]);
-        NSCParameterAssert(title.length);
-        [cell setText:title];
-        if (indexPath.row == PromoRow) {
-            [cell setImage:[UIImage imageNamed:@"redpill"]];
-        }
-    }
-    NSDictionary *bottomOffsets = @{@(PredictionRow) : @(kHoroscopeCellBottomOffset)};
-    NSNumber *value = bottomOffsets[@(indexPath.row)];
-    CGFloat offset = (value) ? value.floatValue : kGenericOffset;
-    [cell setOffset:offset];
-    return cell;
-    */
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -131,18 +89,6 @@ static CGFloat const kSeparatorAlpha = 0.25f;
         case HistoryRow: {
             if ([_handler respondsToSelector:@selector(walletTapped:)]) {
                 [_handler walletTapped:nil];
-            }
-            break;
-        }
-        case ReceiveRow: {
-            if ([_handler respondsToSelector:@selector(receiveTapped:)]) {
-                [_handler receiveTapped:nil];
-            }
-            break;
-        }
-        case SendRow: {
-            if ([_handler respondsToSelector:@selector(sendTapped:)]) {
-                [_handler sendTapped:nil];
             }
             break;
         }
