@@ -214,7 +214,7 @@ class InstallWizard(BaseWizard):
                 self.runLoop.exit(0)
         else:
             while True:
-                dialog = PasswordDialog(_('Enter password for wallet: ') + walletName)
+                dialog = PasswordDialog(_('Enter password for wallet:') + ' ' + walletName)
                 password = dialog.show()
                 if len(password) == 0:
                     break

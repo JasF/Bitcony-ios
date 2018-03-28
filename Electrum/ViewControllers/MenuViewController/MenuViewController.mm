@@ -12,6 +12,7 @@
 typedef NS_ENUM(NSInteger, MenuRows) {
     HistoryRow,
     SettingsRow,
+    FeedbackRow,
     RowsCount
 };
 
@@ -68,6 +69,7 @@ static CGFloat const kSeparatorAlpha = 0.25f;
     switch (indexPath.row) {
         case HistoryRow: cell.textLabel.text = L(@"History"); break;
         case SettingsRow: cell.textLabel.text = L(@"Settings"); break;
+        case FeedbackRow: cell.textLabel.text = L(@"Feedback"); break;
     }
     return cell;
 }

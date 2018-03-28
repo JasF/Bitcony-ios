@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "TextFieldDialog.h"
+#import "FeedbackManager.h"
 #import "PasswordDialog.h"
 #import "ScreensManager.h"
 #import "WaitingDialog.h"
@@ -22,5 +23,6 @@
 - (id<PasswordDialog>)createPasswordDialog;
 - (id<YesNoDialog>)createYesNoDialog;
 - (id<TextFieldDialog>)createTextFieldDialog;
+- (id<FeedbackManager>)feedbackManager;
 - (NSString *)documentsDirectory;
 @end

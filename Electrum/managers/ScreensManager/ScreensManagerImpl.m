@@ -35,6 +35,7 @@ static NSString *kStoryboardName = @"Main";
 @property (strong, nonatomic) WalletViewController *walletViewController;
 @property (strong, nonatomic) HistoryViewController *historyViewController;
 @property (strong, nonatomic) id<AlertManager> alertManager;
+@property (strong, nonatomic) id<FeedbackManager> feedbackManager;
 @end
 
 @implementation ScreensManagerImpl {
@@ -45,9 +46,11 @@ static NSString *kStoryboardName = @"Main";
 @synthesize window;
 
 #pragma mark - Initialization
-- (id)initWithAlertManager:(id<AlertManager>)alertManager {
+- (id)initWithAlertManager:(id<AlertManager>)alertManager
+           feedbackManager:(id<FeedbackManager>)feedbackManager {
     if (self = [super init]) {
-        self.alertManager = alertManager;
+        _alertManager = alertManager;
+        _feedbackManager = feedbackManager;
     }
     return self;
 }

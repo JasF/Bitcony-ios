@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FeedbackManager.h"
 #import "ScreensManager.h"
 #import "AlertManager.h"
 #import "RunLoop.h"
 
 @interface ScreensManagerImpl : NSObject <ScreensManager>
-- (id)initWithAlertManager:(id<AlertManager>)alertManager;
+- (id)initWithAlertManager:(id<AlertManager>)alertManager
+           feedbackManager:(id<FeedbackManager>)feedbackManager;
 @end

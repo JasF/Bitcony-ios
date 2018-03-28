@@ -7,6 +7,7 @@
 //
 
 #import "Managers.h"
+#import "FeedbackManagerImpl.h"
 #import "TextFieldDialogImpl.h"
 #import "ScreensManagerImpl.h"
 #import "PasswordDialogImpl.h"
@@ -31,7 +32,8 @@
     static ScreensManagerImpl *shared = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        shared = [[ScreensManagerImpl alloc] initWithAlertManager:self.alertManager];
+        shared = [[ScreensManagerImpl alloc] initWithAlertManager:self.alertManager
+                                                  feedbackManager:self.feedbackManager];
         ((AlertManagerImpl *)self.alertManager).screensManager = shared;
     });
     return shared;
@@ -70,6 +72,15 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *basePath = paths.firstObject;
     return basePath;
+}
+
+- (id<FeedbackManager>)feedbackManager {
+    static FeedbackManagerImpl *shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [FeedbackManagerImpl new];
+    });
+    return shared;
 }
 
 @end

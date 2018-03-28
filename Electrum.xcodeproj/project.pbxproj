@@ -42,6 +42,7 @@
 		C36B5C53206B9657006F52F6 /* SegmentedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C51206B9657006F52F6 /* SegmentedCell.xib */; };
 		C36B5C55206B999B006F52F6 /* LabelCellSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C54206B999B006F52F6 /* LabelCellSmall.xib */; };
 		C36B5C59206BBFA4006F52F6 /* mergelocs.py in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C58206BBFA4006F52F6 /* mergelocs.py */; };
+		C36B5C5D206BD032006F52F6 /* FeedbackManagerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C5C206BD032006F52F6 /* FeedbackManagerImpl.m */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
 		C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFBA205F9E9600756807 /* Images.xcassets */; };
@@ -250,6 +251,9 @@
 		C36B5C56206BB3F4006F52F6 /* trans.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; name = trans.py; path = scripts/trans.py; sourceTree = "<group>"; };
 		C36B5C57206BBD3E006F52F6 /* nn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nn; path = nn.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C36B5C58206BBFA4006F52F6 /* mergelocs.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = mergelocs.py; path = scripts/mergelocs.py; sourceTree = "<group>"; };
+		C36B5C5B206BD032006F52F6 /* FeedbackManagerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackManagerImpl.h; sourceTree = "<group>"; };
+		C36B5C5C206BD032006F52F6 /* FeedbackManagerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackManagerImpl.m; sourceTree = "<group>"; };
+		C36B5C5E206BD063006F52F6 /* FeedbackManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackManager.h; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C39FDFBA205F9E9600756807 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1468,6 +1472,16 @@
 			path = SegmentedCell;
 			sourceTree = "<group>";
 		};
+		C36B5C5A206BD032006F52F6 /* FeedbackManager */ = {
+			isa = PBXGroup;
+			children = (
+				C36B5C5B206BD032006F52F6 /* FeedbackManagerImpl.h */,
+				C36B5C5C206BD032006F52F6 /* FeedbackManagerImpl.m */,
+				C36B5C5E206BD063006F52F6 /* FeedbackManager.h */,
+			);
+			path = FeedbackManager;
+			sourceTree = "<group>";
+		};
 		C39FDFB3205F9E9600756807 /* Electrum */ = {
 			isa = PBXGroup;
 			children = (
@@ -1620,6 +1634,7 @@
 		C39FE463205FE73500756807 /* managers */ = {
 			isa = PBXGroup;
 			children = (
+				C36B5C5A206BD032006F52F6 /* FeedbackManager */,
 				C360F95B2064E8CB00F90ADD /* Alert */,
 				C39FE46B205FE79200756807 /* ScreensManager */,
 				C39FE464205FE73C00756807 /* Managers */,
@@ -4381,6 +4396,7 @@
 				C39FEE37206235AA00756807 /* LeftViewCell.m in Sources */,
 				C3B75FA02063D6240030BC81 /* FeeCell.m in Sources */,
 				C3EA2478206788E200146917 /* CustomButton.m in Sources */,
+				C36B5C5D206BD032006F52F6 /* FeedbackManagerImpl.m in Sources */,
 				C39FE94A2060FFEB00756807 /* RunLoop.m in Sources */,
 				C39FEE5E2062444C00756807 /* BaseNavigationController.mm in Sources */,
 				C39FEE4C2062361D00756807 /* LGSideMenuSegue.m in Sources */,
