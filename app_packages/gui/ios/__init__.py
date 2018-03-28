@@ -58,7 +58,7 @@ class ElectrumGui:
     def start_new_window(self, path, uri):
         traceback.print_stack()
         try:
-            wallet = self.daemon.load_wallet(path, '1')
+            wallet = None#self.daemon.load_wallet(path, '1')
         except BaseException as e:
             traceback.print_exc(file=sys.stdout)
             print('Cannot load wallet: ' + str(e))
