@@ -17,10 +17,11 @@
 - (void)showHaveASeedViewController:(id)handler;
 - (void)showConfirmSeedViewController:(id)handler;
 - (void)showEnterWalletPasswordViewController:(id)handler;
-- (void)showMainViewController:(id)menuHandler mainHandler:(id)mainHandler;
 - (void)showWalletViewController:(id)historyHandler
                   receiveHandler:(id)receiveHandler
-                     sendHandler:(id)sendHandler;
+                     sendHandler:(id)sendHandler
+                     menuHandler:(id)menuHandler
+                     mainHandler:(id)mainHandler;
 - (void)showReceiveViewController:(id)handler;
 - (void)showSendViewController:(id)handler;
 - (void)showSettingsViewController:(id)handler;

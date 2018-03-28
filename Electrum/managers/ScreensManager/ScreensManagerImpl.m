@@ -66,7 +66,6 @@ static NSString *kStoryboardName = @"Main";
 
 - (void)showEnterOrCreateWalletViewController:(id)handler {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self createWindowIfNeeded];
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"EnterOrCreateWalletViewController"
                                                              bundle:nil];
         UINavigationController *navigationController = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
@@ -120,14 +119,6 @@ static NSString *kStoryboardName = @"Main";
     });
 }
 
-- (void)showMainViewController:(id)menuHandler mainHandler:(id)mainHandler {
-    _menuHandler = menuHandler;
-    _mainHandler = mainHandler;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        self.window.rootViewController = [self mainViewController];
-    });
-}
-
 - (UIViewController *)createHistoryViewController:(id)handler {
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"HistoryViewController"
                                                          bundle:nil];
@@ -159,8 +150,13 @@ static NSString *kStoryboardName = @"Main";
 
 - (void)showWalletViewController:(id)historyHandler
                   receiveHandler:(id)receiveHandler
-                     sendHandler:(id)sendHandler {
+                     sendHandler:(id)sendHandler
+                     menuHandler:(id)menuHandler
+                     mainHandler:(id)mainHandler {
+    _menuHandler = menuHandler;
+    _mainHandler = mainHandler;
     dispatch_async(dispatch_get_main_queue(), ^{
+        self.window.rootViewController = [self mainViewController];
         NSCAssert([self.window.rootViewController isEqual:[self mainViewController]], @"Excpected mainViewController as rootViewController");
         if (![self.window.rootViewController isEqual:_mainViewController]) {
             return;
@@ -314,7 +310,8 @@ static NSString *kStoryboardName = @"Main";
     }
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = [UIViewController new];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LaunchScreen" bundle:nil];
+    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
     [self.window makeKeyAndVisible];
 }
 

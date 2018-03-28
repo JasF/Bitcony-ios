@@ -173,15 +173,18 @@ class ElectrumWindow:
         self.need_update = threading.Event()
 
     def exec(self):
-        self.menuHandler = MenuHandler.alloc().init()
-        self.menuHandler.electrumWindow = self
-        self.mainHandler = MainWindowHandler.alloc().init()
-        self.mainHandler.electrumWindow = self
-        self.screensManager.showMainViewController(self.menuHandler, mainHandler=self.mainHandler)
         self.showWalletViewController()
         self.runLoop.exec()
     
     def showWalletViewController(self):
+        self.menuHandler = MenuHandler.alloc().init()
+        self.menuHandler.electrumWindow = self
+        self.menuHandler.electrumWindow = self
+        
+        self.mainHandler = MainWindowHandler.alloc().init()
+        self.mainHandler.electrumWindow = self
+        self.mainHandler.electrumWindow = self
+        
         self.historyHandler = WalletHandler.alloc().init();
         self.historyHandler.electrumWindow = self
         
@@ -193,7 +196,9 @@ class ElectrumWindow:
         
         self.screensManager.showWalletViewController(self.historyHandler,
                                                      receiveHandler=self.receiveHandler,
-                                                     sendHandler=self.sendHandler)
+                                                     sendHandler=self.sendHandler,
+                                                     menuHandler=self.menuHandler,
+                                                     mainHandler=self.mainHandler)
 
     def on_network(self, event, *args):
         if event == 'updated':

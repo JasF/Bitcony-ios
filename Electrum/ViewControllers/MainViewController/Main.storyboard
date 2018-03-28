@@ -58,58 +58,17 @@
             </objects>
             <point key="canvasLocation" x="-750" y="573"/>
         </scene>
-        <!--LGSideMenuController-->
+        <!--View Controller-->
         <scene sceneID="hhe-Pe-TGY">
             <objects>
                 <viewController storyboardIdentifier="ViewController" extendedLayoutIncludesOpaqueBars="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wBU-AO-3fi" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nuG-fh-uKV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageRoot.png" translatesAutoresizingMaskIntoConstraints="NO" id="GoA-rv-Fkj">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2q-EA-ea6">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="968-GI-bjh"/>
-                                </constraints>
-                                <state key="normal" title="Show Choose Controller">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" red="0.0" green="0.5" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="showChooseController:" destination="wBU-AO-3fi" eventType="touchUpInside" id="iEg-YF-B7r"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="GoA-rv-Fkj" firstAttribute="leading" secondItem="gGu-rp-UCD" secondAttribute="leading" id="0Hi-Tq-rfz"/>
-                            <constraint firstItem="gGu-rp-UCD" firstAttribute="bottom" secondItem="Z2q-EA-ea6" secondAttribute="bottom" id="1aL-jB-bGt"/>
-                            <constraint firstItem="GoA-rv-Fkj" firstAttribute="top" secondItem="nuG-fh-uKV" secondAttribute="top" id="Ojd-G2-dRN"/>
-                            <constraint firstItem="gGu-rp-UCD" firstAttribute="trailing" secondItem="GoA-rv-Fkj" secondAttribute="trailing" id="WS9-Vd-ysY"/>
-                            <constraint firstAttribute="bottom" secondItem="GoA-rv-Fkj" secondAttribute="bottom" id="dfv-4R-zh6"/>
-                            <constraint firstItem="Z2q-EA-ea6" firstAttribute="leading" secondItem="gGu-rp-UCD" secondAttribute="leading" id="fHF-rh-Hn3"/>
-                            <constraint firstItem="gGu-rp-UCD" firstAttribute="trailing" secondItem="Z2q-EA-ea6" secondAttribute="trailing" id="oYa-P0-reY"/>
-                        </constraints>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gGu-rp-UCD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="LGSideMenuController" id="jua-jC-TbI">
-                        <barButtonItem key="leftBarButtonItem" title="Left" id="OF7-o4-Bd7">
-                            <connections>
-                                <action selector="showLeftViewAnimated:" destination="wBU-AO-3fi" id="fnf-2e-Znm"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Right" id="Muv-7A-abZ">
-                            <connections>
-                                <action selector="showRightViewAnimated:" destination="wBU-AO-3fi" id="e9b-tt-n1W"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="jua-jC-TbI"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WeL-Fy-HB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,6 +202,5 @@
     </scenes>
     <resources>
         <image name="Stars.png" width="16" height="16"/>
-        <image name="imageRoot.png" width="1024" height="1024"/>
     </resources>
 </document>

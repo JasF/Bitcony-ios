@@ -22,9 +22,7 @@ typedef NS_ENUM(NSInteger, Rows) {
 @end
 
 @implementation ConfirmSeedViewController {
-#ifdef DEBUG
     NSString *_seed;
-#endif
     NSString *_originalSeed;
     ButtonCell *_continueCell;
 }
@@ -83,9 +81,7 @@ typedef NS_ENUM(NSInteger, Rows) {
             TextViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TextViewCell"];
             cell.textView.delegate = self;
             cell.textView.keyboardType = UIKeyboardTypeASCIICapable;
-#ifdef DEBUG
             [cell setTextViewText:_seed];
-#endif
             resultCell = cell;
             break;
         }

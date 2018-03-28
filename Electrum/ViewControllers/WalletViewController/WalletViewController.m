@@ -282,7 +282,8 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
         titleView.font = [UIFont systemFontOfSize:fontSize];
         titleView.text = balanceString;
         [self.rightNavigationItemButton setImage:[UIImage imageNamed:iconName] forState:UIControlStateNormal];
-        self.rightNavigationItemButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        self.rightNavigationItemButton.imageView.contentMode = UIViewContentModeCenter;
+        self.rightNavigationItemButton.imageView.transform = CGAffineTransformMakeScale(.75f, .75f);
     });
 }
 
