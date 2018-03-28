@@ -31,11 +31,5 @@ static CGFloat const kRoundedCornerRadius = 8.f;
     self.button.layer.cornerRadius = kRoundedCornerRadius;
 }
 
-- (void)layoutSubviews {
-    [super layoutSubviews];
-    CGFloat inset = self.button.titleLabel.xOrigin/2 - self.button.imageView.width/2;
-    self.button.imageEdgeInsets = UIEdgeInsetsMake(0, -inset, 0, 0);
-}
-
 @end
 

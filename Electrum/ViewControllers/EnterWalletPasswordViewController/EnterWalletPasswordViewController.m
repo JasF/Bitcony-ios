@@ -95,6 +95,7 @@ static CGFloat const kSpaceRowHeight = 22.f;
             resultCell = cell;
 #ifdef DEBUG
             [cell setString:@"1"];
+            _password = cell.string;
 #endif
             break;
         }
@@ -111,6 +112,7 @@ static CGFloat const kSpaceRowHeight = 22.f;
             resultCell = cell;
 #ifdef DEBUG
             [cell setString:@"1"];
+            _repeatPassword = cell.string;
 #endif
             break;
         }

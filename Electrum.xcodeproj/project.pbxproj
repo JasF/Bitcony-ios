@@ -36,6 +36,8 @@
 		C36B5C43206A505F006F52F6 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C3B206A505F006F52F6 /* QRCodeReaderViewController.m */; };
 		C36B5C44206A505F006F52F6 /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C3C206A505F006F52F6 /* QRCodeReaderView.m */; };
 		C36B5C45206A505F006F52F6 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C40206A505F006F52F6 /* QRCodeReader.m */; };
+		C36B5C4B206B7103006F52F6 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C4A206B7103006F52F6 /* TitleView.m */; };
+		C36B5C4D206B710A006F52F6 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C4C206B710A006F52F6 /* TitleView.xib */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
 		C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFBA205F9E9600756807 /* Images.xcassets */; };
@@ -236,6 +238,9 @@
 		C36B5C3E206A505F006F52F6 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCameraSwitchButton.h; sourceTree = "<group>"; };
 		C36B5C3F206A505F006F52F6 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeReaderViewController.h; sourceTree = "<group>"; };
 		C36B5C40206A505F006F52F6 /* QRCodeReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeReader.m; sourceTree = "<group>"; };
+		C36B5C49206B7103006F52F6 /* TitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleView.h; sourceTree = "<group>"; };
+		C36B5C4A206B7103006F52F6 /* TitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleView.m; sourceTree = "<group>"; };
+		C36B5C4C206B710A006F52F6 /* TitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C39FDFBA205F9E9600756807 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1432,6 +1437,16 @@
 			path = QRCodeReaderViewController;
 			sourceTree = "<group>";
 		};
+		C36B5C48206B70EE006F52F6 /* TitleView */ = {
+			isa = PBXGroup;
+			children = (
+				C36B5C49206B7103006F52F6 /* TitleView.h */,
+				C36B5C4A206B7103006F52F6 /* TitleView.m */,
+				C36B5C4C206B710A006F52F6 /* TitleView.xib */,
+			);
+			path = TitleView;
+			sourceTree = "<group>";
+		};
 		C39FDFB3205F9E9600756807 /* Electrum */ = {
 			isa = PBXGroup;
 			children = (
@@ -1464,6 +1479,7 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C36B5C48206B70EE006F52F6 /* TitleView */,
 				C36B5C2F206A2B32006F52F6 /* TwoLabelCell */,
 				C36B5C13206A1C02006F52F6 /* SharingObject */,
 				C36B5C0C206A1B77006F52F6 /* ReceiveSharingObject */,
@@ -4258,6 +4274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C36B5C4D206B710A006F52F6 /* TitleView.xib in Resources */,
 				C3EA246D2067776C00146917 /* LaunchScreen.storyboard in Resources */,
 				C39FE984206125E400756807 /* EnterWalletPasswordViewController.storyboard in Resources */,
 				C3B75F4E20636D810030BC81 /* SendViewController.storyboard in Resources */,
@@ -4372,6 +4389,7 @@
 				C360F97D206630F500F90ADD /* YesNoDialogImpl.m in Sources */,
 				C39FE96B206103C400756807 /* NSMethodSignature+EXT.m in Sources */,
 				C39FEE4E2062361D00756807 /* LGSideMenuGesturesHandler.m in Sources */,
+				C36B5C4B206B7103006F52F6 /* TitleView.m in Sources */,
 				C39FEE4B2062361D00756807 /* LGSideMenuView.m in Sources */,
 				C39FEE4D2062361D00756807 /* LGSideMenuController.m in Sources */,
 				C36B5C2A206A21DB006F52F6 /* qrinput.c in Sources */,

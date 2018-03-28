@@ -19,11 +19,12 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xde-gB-gxb" customClass="CustomButton">
-                        <rect key="frame" x="30" y="20.5" width="260" height="48"/>
+                        <rect key="frame" x="30" y="21" width="260" height="44"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="63.5" id="RmS-8w-yEN"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
                         <state key="normal">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>

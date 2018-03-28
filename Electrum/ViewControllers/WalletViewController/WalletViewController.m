@@ -7,6 +7,7 @@
 //
 
 #import "WalletViewController.h"
+#import "TitleView.h"
 #import "Tabs.h"
 
 typedef NS_ENUM(NSInteger, TabsDefinitions) {
@@ -16,7 +17,10 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
     TabsCount
 };
 
-@interface WalletViewController () <UIPageViewControllerDelegate, UIPageViewControllerDataSource, UIScrollViewDelegate>
+@interface WalletViewController () <UIPageViewControllerDelegate,
+                                    UIPageViewControllerDataSource,
+                                    UIScrollViewDelegate,
+                                    MainHandlerProtocolDelegate>
 @property (weak, nonatomic) IBOutlet Tabs *tabs;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) NSMutableDictionary *viewControllers;
@@ -40,7 +44,11 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
     NSCParameterAssert(_historyHandler);
     NSCParameterAssert(_receiveHandler);
     NSCParameterAssert(_sendHandler);
+    NSCParameterAssert(_mainHandler);
     [super viewDidLoad];
+    if ([_mainHandler respondsToSelector:@selector(viewDidLoad:)]) {
+        [_mainHandler viewDidLoad:self];
+    }
     _viewControllers = [NSMutableDictionary new];
     self.allowCustomAnimationWithTabs = YES;
     [self initializePageViewController];
@@ -50,6 +58,13 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
     [self addChildViewController:_pageViewController];
     [self.contentView utils_addFillingSubview:_pageViewController.view];
     [_pageViewController didMoveToParentViewController:self];
+    [self initializeTitleView];
+}
+
+- (void)initializeTitleView {
+    self.navigationItem.titleView = [[NSBundle mainBundle] loadNibNamed:@"TitleView"
+                                                                  owner:nil
+                                                                options:nil].firstObject;
 }
 
 - (void)initializePageViewController {
@@ -250,6 +265,21 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
                                          completion();
                                      }
                                  }];
+}
+
+#pragma mark - MainHandlerProtocolDelegate
+- (void)updateBalance:(NSString *)balanceString
+             iconName:(NSString *)iconName {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        TitleView *titleView = (TitleView *)self.navigationItem.titleView;
+        NSDictionary *sizes = @{@(3):@(12.f), @(2):@(14.f), @(1):@(19.f)};
+        CGFloat fontSize = [sizes[@([balanceString componentsSeparatedByString:@"\n"].count)] floatValue];
+        if (IsEqualFloat(fontSize, 0.f)) {
+            fontSize = 12.f;
+        }
+        titleView.font = [UIFont systemFontOfSize:fontSize];
+        titleView.text = balanceString;
+    });
 }
 
 @end

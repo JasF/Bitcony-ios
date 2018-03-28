@@ -29,10 +29,20 @@
 - (void)showWarning:(NSString *)message;
 @end
 
+@protocol MainHandlerProtocol <NSObject>
+- (void)viewDidLoad:(id)delegate;
+@end
+
+@protocol MainHandlerProtocolDelegate <NSObject>
+- (void)updateBalance:(NSString *)balanceString
+             iconName:(NSString *)iconName;
+@end
+
 @interface WalletViewController : UIViewController
 @property (strong, nonatomic) id<WalletHandlerProtocol> historyHandler;
 @property (strong, nonatomic) id<ReceiveHandlerProtocol> receiveHandler;
 @property (strong, nonatomic) id<SendHandlerProtocol> sendHandler;
+@property (strong, nonatomic) id<MainHandlerProtocol> mainHandler;
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) id<ScreensManager> screensManager;

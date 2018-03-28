@@ -39,6 +39,7 @@ static NSString *kStoryboardName = @"Main";
 
 @implementation ScreensManagerImpl {
     id _menuHandler;
+    id _mainHandler;
 }
 
 @synthesize window;
@@ -119,8 +120,9 @@ static NSString *kStoryboardName = @"Main";
     });
 }
 
-- (void)showMainViewController:(id)handler {
-    _menuHandler = handler;
+- (void)showMainViewController:(id)menuHandler mainHandler:(id)mainHandler {
+    _menuHandler = menuHandler;
+    _mainHandler = mainHandler;
     dispatch_async(dispatch_get_main_queue(), ^{
         self.window.rootViewController = [self mainViewController];
     });
@@ -177,6 +179,7 @@ static NSString *kStoryboardName = @"Main";
             viewController.historyHandler = historyHandler;
             viewController.receiveHandler = receiveHandler;
             viewController.sendHandler = sendHandler;
+            viewController.mainHandler = _mainHandler;
             _walletViewController = viewController;
         }
         [self pushViewController:viewController];

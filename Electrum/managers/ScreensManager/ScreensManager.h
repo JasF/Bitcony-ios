@@ -17,7 +17,7 @@
 - (void)showHaveASeedViewController:(id)handler;
 - (void)showConfirmSeedViewController:(id)handler;
 - (void)showEnterWalletPasswordViewController:(id)handler;
-- (void)showMainViewController:(id)handler;
+- (void)showMainViewController:(id)menuHandler mainHandler:(id)mainHandler;
 - (void)showWalletViewController:(id)historyHandler
                   receiveHandler:(id)receiveHandler
                      sendHandler:(id)sendHandler;

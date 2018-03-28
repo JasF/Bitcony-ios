@@ -92,6 +92,15 @@ class SettingsHandler(NSObject):
     def init_(self):
         return self
 
+class MainWindowHandler(NSObject):
+    @objc_method
+    def init_(self):
+        return self
+
+    @objc_method
+    def viewDidLoad_(self, delegate):
+        self.delegate = delegate
+
 class MenuHandler(NSObject):
     @objc_method
     def init_(self):
@@ -115,11 +124,13 @@ class MenuHandler(NSObject):
 
     @objc_method
     def sendTapped_(self):
+        '''
         handler = SendHandler.alloc().init()
         handler.electrumWindow = self.electrumWindow
         self.electrumWindow.sendHandler = handler
         self.electrumWindow.screensManager.showSendViewController(handler)
         self.electrumWindow.feeSliderMoved(0)
+        '''
         pass
 
     @objc_method
@@ -162,9 +173,11 @@ class ElectrumWindow:
         self.need_update = threading.Event()
 
     def exec(self):
-        handler = MenuHandler.alloc().init()
-        handler.electrumWindow = self
-        self.screensManager.showMainViewController(handler)
+        self.menuHandler = MenuHandler.alloc().init()
+        self.menuHandler.electrumWindow = self
+        self.mainHandler = MainWindowHandler.alloc().init()
+        self.mainHandler.electrumWindow = self
+        self.screensManager.showMainViewController(self.menuHandler, mainHandler=self.mainHandler)
         self.showWalletViewController()
         self.runLoop.exec()
     
@@ -204,14 +217,13 @@ class ElectrumWindow:
 
     def update_status(self):
         print('broadcast to gui network status! [connected, connecting, disconnected, uninitialized]')
-        '''
         if not self.wallet:
             return
 
+        iconName = ''
         if self.network is None or not self.network.is_running():
-            text = _("Offline")
-            icon = QIcon(":icons/status_disconnected.png")
-
+            text = _('Offline')
+            iconName = 'status_disconnected.png'
         elif self.network.is_connected():
             server_height = self.network.get_server_height()
             server_lag = self.network.get_local_height() - server_height
@@ -219,35 +231,35 @@ class ElectrumWindow:
             # until we get a headers subscription request response.
             # Display the synchronizing message in that case.
             if not self.wallet.up_to_date or server_height == 0:
-                text = _("Synchronizing...")
-                icon = QIcon(":icons/status_waiting.png")
+                text = _('Synchronizing...')
+                #icon = QIcon(":icons/status_waiting.png")
             elif server_lag > 1:
-                text = _("Server is lagging ({} blocks)").format(server_lag)
-                icon = QIcon(":icons/status_lagging.png")
+                text = _('Server is lagging ({} blocks)').format(server_lag)
+                #icon = QIcon(":icons/status_lagging.png")
             else:
                 c, u, x = self.wallet.get_balance()
-                text =  _("Balance" ) + ": %s "%(self.format_amount_and_units(c))
+                text = self.format_amount_and_units(c) #_("Balance" ) + ": %s "%(self.format_amount_and_units(c))
                 if u:
-                    text +=  " [%s unconfirmed]"%(self.format_amount(u, True).strip())
+                    text +=  "\n[%s unconfirmed]"%(self.format_amount(u, True).strip())
                 if x:
-                    text +=  " [%s unmatured]"%(self.format_amount(x, True).strip())
-
+                    text +=  "\n[%s unmatured]"%(self.format_amount(x, True).strip())
+                
                 # append fiat balance and price
                 if self.fx.is_enabled():
                     text += self.fx.get_fiat_status_text(c + u + x,
                         self.base_unit(), self.get_decimal_point()) or ''
                 if not self.network.proxy:
-                    icon = QIcon(":icons/status_connected.png")
+                    iconName = 'status_connected.png'
                 else:
-                    icon = QIcon(":icons/status_connected_proxy.png")
+                    iconName = 'status_connected_proxy.png'
         else:
-            text = _("Not connected")
-            icon = QIcon(":icons/status_disconnected.png")
+            text = _('Not connected')
+            iconName = 'status_disconnected.png'
 
-        self.tray.setToolTip("%s (%s)" % (text, self.wallet.basename()))
-        self.balance_label.setText(text)
-        self.status_button.setIcon( icon )
-'''
+
+        #self.tray.setToolTip("%s (%s)" % (text, self.wallet.basename()))
+        self.mainHandler.delegate.updateBalance(text, iconName=iconName)
+        #self.status_button.setIcon( icon )
     
     
     def update_tabs(self):
