@@ -31,6 +31,7 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
 @property (copy, nonatomic, nullable) dispatch_block_t didEndDeceleratingBlock;
 @property (copy, nonatomic, nullable) dispatch_block_t didEndScrollingAnimationBlock;
 @property (assign, nonatomic) BOOL allowCustomAnimationWithTabs;
+@property (weak, nonatomic) IBOutlet UIButton *rightNavigationItemButton;
 
 @end
 
@@ -59,6 +60,7 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
     [self.contentView utils_addFillingSubview:_pageViewController.view];
     [_pageViewController didMoveToParentViewController:self];
     [self initializeTitleView];
+    self.rightNavigationItemButton.userInteractionEnabled = NO;
 }
 
 - (void)initializeTitleView {
@@ -279,6 +281,8 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
         }
         titleView.font = [UIFont systemFontOfSize:fontSize];
         titleView.text = balanceString;
+        [self.rightNavigationItemButton setImage:[UIImage imageNamed:iconName] forState:UIControlStateNormal];
+        self.rightNavigationItemButton.imageView.contentMode = UIViewContentModeScaleAspectFit;
     });
 }
 

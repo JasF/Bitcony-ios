@@ -216,7 +216,7 @@ class ElectrumWindow:
         raise Exception('Unknown base unit')
 
     def update_status(self):
-        print('broadcast to gui network status! [connected, connecting, disconnected, uninitialized]')
+        print('broadcast to gui network status')
         if not self.wallet:
             return
 
@@ -232,10 +232,10 @@ class ElectrumWindow:
             # Display the synchronizing message in that case.
             if not self.wallet.up_to_date or server_height == 0:
                 text = _('Synchronizing...')
-                #icon = QIcon(":icons/status_waiting.png")
+                iconName = 'status_waiting.png'
             elif server_lag > 1:
-                text = _('Server is lagging ({} blocks)').format(server_lag)
-                #icon = QIcon(":icons/status_lagging.png")
+                text = _('Server is lagging\n({} blocks)').format(server_lag)
+                iconName = 'status_lagging.png'
             else:
                 c, u, x = self.wallet.get_balance()
                 text = self.format_amount_and_units(c) #_("Balance" ) + ": %s "%(self.format_amount_and_units(c))
