@@ -507,3 +507,4 @@
 "Enter wallet name"="Введите имя кошелька";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="Вы хотите создать новый seed или восстановить кошелек с использованием существующего seed?";
 "I already have a seed"="У меня уже есть seed";
+"Feedback"="Обратная связь";

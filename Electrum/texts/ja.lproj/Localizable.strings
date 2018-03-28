@@ -510,3 +510,4 @@
 "Enter wallet name"="ウォレット名を入力してください";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="新しいシードを作成するか、既存のシードを使用してウォレットを復元しますか？";
 "I already have a seed"="私はすでに種を持っている";
+"Feedback"="フィードバック";

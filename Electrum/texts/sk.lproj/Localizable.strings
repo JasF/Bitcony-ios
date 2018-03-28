@@ -219,3 +219,4 @@
 "Enter wallet name"="Zadajte názov peňaľenky";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="Chcete vytvoriť nové osivo alebo obnoviť peňaženku pomocou existujúceho osiva?";
 "I already have a seed"="Mám už osivo";
+"Feedback"="spätná väzba";

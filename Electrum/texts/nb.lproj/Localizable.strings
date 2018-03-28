@@ -317,3 +317,4 @@
 "Enter wallet name"="Skriv inn lommeboknavn";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="Vil du opprette et nytt frø, eller å gjenopprette en lommebok med et eksisterende frø?";
 "I already have a seed"="Jeg har allerede et frø";
+"Feedback"="Tilbakemelding";

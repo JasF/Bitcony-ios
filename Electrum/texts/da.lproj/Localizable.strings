@@ -299,3 +299,4 @@
 "Enter wallet name"="Indtast tegnebogens navn";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="Vil du oprette et nyt frø, eller at gendanne en tegnebog ved hjælp af et eksisterende frø?";
 "I already have a seed"="Jeg har allerede et frø";
+"Feedback"="Feedback";

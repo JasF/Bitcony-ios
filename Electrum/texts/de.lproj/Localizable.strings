@@ -510,3 +510,4 @@
 "Enter wallet name"="Geben Sie den Namen der Brieftasche ein";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="Möchten Sie einen neuen Seed erstellen oder eine Wallet mithilfe eines vorhandenen Seeds wiederherstellen?";
 "I already have a seed"="Ich habe bereits einen Samen";
+"Feedback"="Feedback";

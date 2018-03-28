@@ -314,3 +314,4 @@
 "Enter wallet name"="Въведете името на портфейла";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="Искате ли да създадете ново семе или да възстановите портфейл с помощта на съществуващо семе?";
 "I already have a seed"="Вече имам семе";
+"Feedback"="Обратна връзка";

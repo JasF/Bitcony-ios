@@ -510,3 +510,4 @@
 "Enter wallet name"="输入钱包名称";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="你想创建一个新的种子，还是使用现有的种子来恢复钱包？";
 "I already have a seed"="我已经有种子了";
+"Feedback"="反馈";

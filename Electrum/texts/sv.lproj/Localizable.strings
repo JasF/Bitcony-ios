@@ -200,3 +200,4 @@
 "Enter wallet name"="Ange namn på plånboken";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="Vill du skapa ett nytt frö, eller att återställa en plånbok med ett befintligt frö?";
 "I already have a seed"="Jag har redan ett frö";
+"Feedback"="Återkoppling";

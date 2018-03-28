@@ -169,3 +169,4 @@
 "Enter wallet name"="Adja meg a pénztárca nevét";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="Szeretnél új magot létrehozni, vagy vissza szeretné állítani a tárcát egy meglévő vetőmag segítségével?";
 "I already have a seed"="Már van magam";
+"Feedback"="Visszacsatolás";

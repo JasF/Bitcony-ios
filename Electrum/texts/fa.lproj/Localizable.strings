@@ -9,3 +9,4 @@
 "Enter wallet name"="نام کیف پول را وارد کنید";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="آیا می خواهید یک دانه جدید ایجاد کنید یا برای بازگرداندن کیف پول با استفاده از دانه های موجود؟";
 "I already have a seed"="من قبلا یک بذر دارم";
+"Feedback"="بازخورد";

@@ -453,3 +453,4 @@
 "Enter wallet name"="지갑 이름 입력";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="새 시드를 만들거나 기존 시드를 사용하여 지갑을 복원 하시겠습니까?";
 "I already have a seed"="나는 이미 씨앗이있다.";
+"Feedback"="피드백";

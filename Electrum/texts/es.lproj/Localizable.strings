@@ -510,3 +510,4 @@
 "Enter wallet name"="Ingrese el nombre de la billetera";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="¿Desea crear una nueva semilla o restaurar una billetera usando una semilla existente?";
 "I already have a seed"="Ya tengo una semilla";
+"Feedback"="Realimentación";

@@ -510,3 +510,4 @@
 "Enter wallet name"="M-cüzdan adını girin";
 "Do you want to create a new seed, or to restore a wallet using an existing seed?"="Yeni bir tohum oluşturmak mı yoksa mevcut bir tohum kullanarak cüzdanı geri yüklemek mi istiyorsunuz?";
 "I already have a seed"="Zaten bir tohumum var";
+"Feedback"="geri bildirim";
