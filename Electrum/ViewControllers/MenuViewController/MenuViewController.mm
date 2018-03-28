@@ -8,6 +8,7 @@
 
 #import "LGSideMenuController.h"
 #import "MenuViewController.h"
+#import "Managers.h"
 
 typedef NS_ENUM(NSInteger, MenuRows) {
     HistoryRow,
@@ -98,6 +99,10 @@ static CGFloat const kSeparatorAlpha = 0.25f;
             if ([_handler respondsToSelector:@selector(settingsTapped:)]) {
                 [_handler settingsTapped:nil];
             }
+            break;
+        }
+        case FeedbackRow: {
+            [[Managers shared].feedbackManager showFeedbackController:self];
             break;
         }
     }

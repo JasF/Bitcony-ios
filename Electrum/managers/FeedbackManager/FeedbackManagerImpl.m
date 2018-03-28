@@ -26,6 +26,8 @@
 }
 @end
 
+static NSString *const kFeedbackText = @"\n\n\n\n----------------------------------------------------\nPlease do not delete this information.\nVersion: %@ (%@)\nOS: %.1f";
+static NSString *const kElectrumFeedbackCaption = @"Electrum iOS Feedback";
 
 @interface FeedbackManagerImpl () <MFMailComposeViewControllerDelegate>
 @property (strong, nonatomic) UIViewController *parentViewController;
@@ -44,8 +46,8 @@
     }
     else {
         NSString *path = [NSString
-                          stringWithFormat:@"/&subject=%@&body=%@", L(@"lucky_utilsscope_feedback"), [self getDefaultFeedbackTextBody]];
-        NSURL *mailUrl = [[NSURL alloc] initWithScheme:@"mailto" host:@"beluckyutilsscopes@gmail.com?" path:path];
+                          stringWithFormat:@"/&subject=%@&body=%@", kElectrumFeedbackCaption, [self getDefaultFeedbackTextBody]];
+        NSURL *mailUrl = [[NSURL alloc] initWithScheme:@"mailto" host:@"electrumios@gmail.com?" path:path];
         [[UIApplication sharedApplication] openURL:mailUrl];
     }
     return;
@@ -59,8 +61,8 @@
         return nil;
     }
     [controller setMailComposeDelegate:self];
-    [controller setToRecipients:[NSArray arrayWithObject:@"luckyutilsscopes@gmail.com"]];
-    [controller setSubject:L(@"lucky_utilsscope_feedback")];
+    [controller setToRecipients:[NSArray arrayWithObject:@"electrumios@gmail.com"]];
+    [controller setSubject:kElectrumFeedbackCaption];
     [controller setMessageBody:str isHTML:NO];
     controller.modalPresentationStyle = UIModalPresentationFormSheet;
     return controller;
@@ -68,11 +70,10 @@
 
 - (NSString *)getDefaultFeedbackTextBody {
     NSString *token = @"";
-    NSString *formatString = L(@"feedback_text");
-    formatString = [formatString stringByReplacingOccurrencesOfString:@"$^" withString:@"%@"];
+    NSString *formatString = kFeedbackText;
     NSString * version = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
     NSString * build = [[NSBundle mainBundle] objectForInfoDictionaryKey: (NSString *)kCFBundleVersionKey];
-    NSMutableString *result = [[NSString stringWithFormat:formatString, version, build, [UIDevice utils_systemVersion], token] mutableCopy];
+    NSMutableString *result = [[NSString stringWithFormat:formatString, version, build, [UIDevice utils_systemVersion]] mutableCopy];
     NSString *logs = @"";
     [result appendFormat:@"\n\n%@", logs];
     return result;
