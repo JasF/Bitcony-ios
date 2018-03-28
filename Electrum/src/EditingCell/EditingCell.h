@@ -14,4 +14,5 @@
            title:(NSString *)title
      editingText:(NSString *)editingText
 bottomDelimeterVisible:(BOOL)bottomDelimeterVisible;
+- (void)setRightText:(NSString *)text;
 @end

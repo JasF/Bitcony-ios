@@ -38,6 +38,9 @@
 		C36B5C45206A505F006F52F6 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C40206A505F006F52F6 /* QRCodeReader.m */; };
 		C36B5C4B206B7103006F52F6 /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C4A206B7103006F52F6 /* TitleView.m */; };
 		C36B5C4D206B710A006F52F6 /* TitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C4C206B710A006F52F6 /* TitleView.xib */; };
+		C36B5C52206B9657006F52F6 /* SegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C50206B9657006F52F6 /* SegmentedCell.m */; };
+		C36B5C53206B9657006F52F6 /* SegmentedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C51206B9657006F52F6 /* SegmentedCell.xib */; };
+		C36B5C55206B999B006F52F6 /* LabelCellSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C54206B999B006F52F6 /* LabelCellSmall.xib */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
 		C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFBA205F9E9600756807 /* Images.xcassets */; };
@@ -241,6 +244,10 @@
 		C36B5C49206B7103006F52F6 /* TitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleView.h; sourceTree = "<group>"; };
 		C36B5C4A206B7103006F52F6 /* TitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleView.m; sourceTree = "<group>"; };
 		C36B5C4C206B710A006F52F6 /* TitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleView.xib; sourceTree = "<group>"; };
+		C36B5C4F206B9657006F52F6 /* SegmentedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SegmentedCell.h; sourceTree = "<group>"; };
+		C36B5C50206B9657006F52F6 /* SegmentedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentedCell.m; sourceTree = "<group>"; };
+		C36B5C51206B9657006F52F6 /* SegmentedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedCell.xib; sourceTree = "<group>"; };
+		C36B5C54206B999B006F52F6 /* LabelCellSmall.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelCellSmall.xib; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C39FDFBA205F9E9600756807 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1447,6 +1454,16 @@
 			path = TitleView;
 			sourceTree = "<group>";
 		};
+		C36B5C4E206B9643006F52F6 /* SegmentedCell */ = {
+			isa = PBXGroup;
+			children = (
+				C36B5C4F206B9657006F52F6 /* SegmentedCell.h */,
+				C36B5C50206B9657006F52F6 /* SegmentedCell.m */,
+				C36B5C51206B9657006F52F6 /* SegmentedCell.xib */,
+			);
+			path = SegmentedCell;
+			sourceTree = "<group>";
+		};
 		C39FDFB3205F9E9600756807 /* Electrum */ = {
 			isa = PBXGroup;
 			children = (
@@ -1479,6 +1496,7 @@
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				C36B5C4E206B9643006F52F6 /* SegmentedCell */,
 				C36B5C48206B70EE006F52F6 /* TitleView */,
 				C36B5C2F206A2B32006F52F6 /* TwoLabelCell */,
 				C36B5C13206A1C02006F52F6 /* SharingObject */,
@@ -4166,6 +4184,7 @@
 			children = (
 				C3EA248B2067B60B00146917 /* LabelCell.h */,
 				C3EA248C2067B60B00146917 /* LabelCell.m */,
+				C36B5C54206B999B006F52F6 /* LabelCellSmall.xib */,
 				C3EA248D2067B60B00146917 /* LabelCell.xib */,
 			);
 			path = LabelCell;
@@ -4293,6 +4312,7 @@
 				C3B75FA12063D6240030BC81 /* FeeCell.xib in Resources */,
 				C3EA247E2067903200146917 /* CreateWalletCell.xib in Resources */,
 				C3DAD64B2068CEC90061294B /* HistoryViewController.storyboard in Resources */,
+				C36B5C55206B999B006F52F6 /* LabelCellSmall.xib in Resources */,
 				C3DAD66A20692EC50061294B /* ImageCell.xib in Resources */,
 				C39FE4932060E03B00756807 /* __main__.py in Resources */,
 				C3EA2473206787BA00146917 /* ButtonCell.xib in Resources */,
@@ -4302,6 +4322,7 @@
 				C39FE978206115CF00756807 /* CreateNewSeedViewController.storyboard in Resources */,
 				C39FEE39206235AA00756807 /* Main.storyboard in Resources */,
 				C39FEE552062375800756807 /* MenuViewController.storyboard in Resources */,
+				C36B5C53206B9657006F52F6 /* SegmentedCell.xib in Resources */,
 				C39FEE64206244F700756807 /* WalletViewController.storyboard in Resources */,
 				C39FE475205FE8CA00756807 /* CreateWalletViewController.storyboard in Resources */,
 				C39FE97E206117B100756807 /* ConfirmSeedViewController.storyboard in Resources */,
@@ -4424,6 +4445,7 @@
 				C3EA24832067A73700146917 /* TextFieldDialogImpl.m in Sources */,
 				C3EA24882067AA1D00146917 /* Functions.m in Sources */,
 				C3DAD6522068EA510061294B /* UIViewController+Electrum.m in Sources */,
+				C36B5C52206B9657006F52F6 /* SegmentedCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

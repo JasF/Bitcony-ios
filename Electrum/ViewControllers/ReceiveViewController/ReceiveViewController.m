@@ -50,6 +50,7 @@ static CGFloat const kRowHeight = 44.f;
     UITextField *_descriptionTextField;
     UITextField *_amountTextField;
     CGFloat _keyboardHeight;
+    NSString *_baseUnit;
 }
 
 - (void)viewDidLoad {
@@ -76,6 +77,25 @@ static CGFloat const kRowHeight = 44.f;
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self updateIfNeeded];
+}
+
+- (void)updateIfNeeded {
+    NSString *baseUnit = nil;
+    if ([_handler respondsToSelector:@selector(baseUnit:)]) {
+        baseUnit = [_handler baseUnit:nil];
+    }
+    if (!_baseUnit) {
+        _baseUnit = baseUnit;
+    }
+    else if (![_baseUnit isEqualToString:baseUnit]) {
+        _baseUnit = baseUnit;
+        [self.tableView reloadData];
+    }
 }
 
 - (void)keyboardWillShow:(NSNotification*)notification {
@@ -128,6 +148,7 @@ static CGFloat const kRowHeight = 44.f;
                editingText:nil
     bottomDelimeterVisible:YES];
             resultCell = cell;
+            [cell setRightText:_baseUnit];
             _amountTextField = cell.textField;
             _amountTextField.text = _amountString;
             _amountTextField.delegate = self;

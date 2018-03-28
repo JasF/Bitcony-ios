@@ -21,6 +21,7 @@ static CGFloat const kTopInset = 8.f;
 
 @implementation HistoryViewController {
     NSTimer *_timer;
+    NSString *_baseUnit;
 }
 
 - (void)viewDidLoad {
@@ -45,6 +46,26 @@ static CGFloat const kTopInset = 8.f;
     }];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"TransactionCell" bundle:nil] forCellReuseIdentifier:@"TransactionCell"];
+    [self updateIfNeeded];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self updateIfNeeded];
+}
+
+- (void)updateIfNeeded {
+    NSString *baseUnit = nil;
+    if ([_handler respondsToSelector:@selector(baseUnit:)]) {
+        baseUnit = [_handler baseUnit:nil];
+    }
+    if (!_baseUnit) {
+        _baseUnit = baseUnit;
+    }
+    else if (![_baseUnit isEqualToString:baseUnit]) {
+        _baseUnit = baseUnit;
+        [self updateAndReloadData];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,12 +8,14 @@
 
 #import "EditingCell.h"
 
-static CGFloat const kTextFieldLeading = 8.f;
+static CGFloat const kTextFieldConstraint = 8.f;
 @interface EditingCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *mainImageView;
 @property (weak, nonatomic) IBOutlet UILabel *label;
+@property (weak, nonatomic) IBOutlet UILabel *rightLabel;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *textFieldLeading;
 @property (weak, nonatomic) IBOutlet UIView *bottomDelimeterView;
+@property (strong, nonatomic) IBOutlet NSLayoutConstraint *textFieldTrailing;
 
 @end
 
@@ -22,6 +24,12 @@ static CGFloat const kTextFieldLeading = 8.f;
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+
+- (void)prepareForReuse {
+    [super prepareForReuse];
+    _rightLabel.text = nil;
+    _textFieldTrailing.constant = 0.f;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -41,10 +49,15 @@ bottomDelimeterVisible:(BOOL)bottomDelimeterVisible; {
     [self setNeedsLayout];
 }
 
+- (void)setRightText:(NSString *)text {
+    _rightLabel.text = text;
+    _textFieldTrailing.constant = (text.length) ? -kTextFieldConstraint : 0.f;
+}
+
 - (void)layoutSubviews {
     [super layoutSubviews];
     dispatch_async(dispatch_get_main_queue(), ^{
-        _textFieldLeading.constant = self.label.xOrigin + self.label.width + ((self.label.text.length) ? kTextFieldLeading : 0.f);
+        _textFieldLeading.constant = self.label.xOrigin + self.label.width + ((self.label.text.length) ? kTextFieldConstraint : 0.f);
     });
 }
 

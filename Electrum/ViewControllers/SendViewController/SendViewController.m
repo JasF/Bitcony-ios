@@ -58,6 +58,7 @@ static CGFloat const kTopInset = 8.f;
     UITextField *_payToTextField;
     UITextField *_descriptionTextField;
     UITextField *_amountTextField;
+    NSString *_baseUnit;
 }
 
 - (void)viewDidLoad {
@@ -84,6 +85,25 @@ static CGFloat const kTopInset = 8.f;
     _sendDescriptionString = @"Hi description";
 #endif
     [self updateFeeDescription];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self updateIfNeeded];
+}
+
+- (void)updateIfNeeded {
+    NSString *baseUnit = nil;
+    if ([_handler respondsToSelector:@selector(baseUnit:)]) {
+        baseUnit = [_handler baseUnit:nil];
+    }
+    if (!_baseUnit) {
+        _baseUnit = baseUnit;
+    }
+    else if (![_baseUnit isEqualToString:baseUnit]) {
+        _baseUnit = baseUnit;
+        [self reloadData];
+    }
 }
 
 #pragma mark - Observers
@@ -118,6 +138,7 @@ static CGFloat const kTopInset = 8.f;
                editingText:_amountString
     bottomDelimeterVisible:YES];
             resultCell = cell;
+            [cell setRightText:_baseUnit];
             _amountTextField = cell.textField;
             _amountTextField.text = _amountString;
             _amountTextField.delegate = self;

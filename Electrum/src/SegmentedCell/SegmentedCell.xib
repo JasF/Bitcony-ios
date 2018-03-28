@@ -12,32 +12,39 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LabelCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SegmentedCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QO-83-9gu">
-                        <rect key="frame" x="16" y="16" width="288" height="11.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Dk7-K7-oVh">
+                        <rect key="frame" x="0.0" y="7" width="320" height="29"/>
+                        <color key="backgroundColor" red="0.23921568630000001" green="0.5450980392" blue="0.76470588240000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <segments>
+                            <segment title="BTC"/>
+                            <segment title="mBTC"/>
+                            <segment title="bitc"/>
+                        </segments>
+                        <color key="tintColor" red="0.96512440909999997" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <action selector="selectedIndexChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="fqv-N7-Tek"/>
+                        </connections>
+                    </segmentedControl>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="4QO-83-9gu" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-32" id="ZQT-MS-OKG"/>
-                    <constraint firstAttribute="height" secondItem="4QO-83-9gu" secondAttribute="height" constant="32" id="Zc2-fh-nKd"/>
-                    <constraint firstItem="4QO-83-9gu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="mdt-qe-cvL"/>
-                    <constraint firstItem="4QO-83-9gu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="uav-TW-p4c"/>
+                    <constraint firstItem="Dk7-K7-oVh" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-28" id="cx6-5Z-UHw"/>
+                    <constraint firstItem="Dk7-K7-oVh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sPp-1v-P3N"/>
+                    <constraint firstItem="Dk7-K7-oVh" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" constant="-16" id="xwc-VT-sB0"/>
+                    <constraint firstItem="Dk7-K7-oVh" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="yh2-M4-PoN"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
-                <outlet property="label" destination="4QO-83-9gu" id="Lx2-ed-LVO"/>
+                <outlet property="segmentedControl" destination="Dk7-K7-oVh" id="zYy-2b-p6K"/>
             </connections>
         </tableViewCell>
     </objects>

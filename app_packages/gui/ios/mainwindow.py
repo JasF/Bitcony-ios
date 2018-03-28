@@ -55,11 +55,19 @@ class WalletHandler(NSObject):
         print('txHash: ' + txHash + '; tx: ' + str(tx))
         show_transaction(tx, self.electrumWindow, None)
 
+    @objc_method
+    def baseUnit_(self):
+        return self.electrumWindow.base_unit()
+
 class ReceiveHandler(NSObject):
     @objc_method
     def init_(self):
         return self
-
+    
+    @objc_method
+    def baseUnit_(self):
+        return self.electrumWindow.base_unit()
+    
     @objc_method
     def receivingAddress_(self):
         if not hasattr(self, 'addr'):
@@ -71,6 +79,10 @@ class SendHandler(NSObject):
     def init_(self):
         return self
 
+    @objc_method
+    def baseUnit_(self):
+        return self.electrumWindow.base_unit()
+    
     @objc_method
     def viewDidLoad_(self, viewController):
         self.viewController = viewController
@@ -92,6 +104,19 @@ class SettingsHandler(NSObject):
     def init_(self):
         return self
 
+    @objc_method
+    def baseUnitIndex_(self):
+        units = self.electrumWindow.units()
+        return units.index(self.electrumWindow.base_unit())
+
+    @objc_method
+    def setBaseUnitIndex_(self, index):
+        print('index base_unit for set: ' + str(index))
+        values = [8, 5, 2]
+        self.electrumWindow.decimal_point = values[index]
+        self.electrumWindow.config.set_key('decimal_point', self.electrumWindow.decimal_point, True)
+        pass
+
 class MainWindowHandler(NSObject):
     @objc_method
     def init_(self):
@@ -100,6 +125,14 @@ class MainWindowHandler(NSObject):
     @objc_method
     def viewDidLoad_(self, delegate):
         self.delegate = delegate
+    
+    @objc_method
+    def baseUnit_(self):
+        return self.electrumWindow.base_unit()
+
+    @objc_method
+    def updateStatus_(self):
+        self.electrumWindow.update_status()
 
 class MenuHandler(NSObject):
     @objc_method
@@ -120,13 +153,14 @@ class MenuHandler(NSObject):
 
 class ElectrumWindow:
     def __init__(self, gui_object, wallet):
+        self.initializeHandlers()
         self.tx_external_keypairs = {}
         self.is_max = False
         self.pay_from = False
         self.payment_request = None
         self.num_zeros = 2
         self.config = config = gui_object.config
-        self.decimal_point = config.get('decimal_point', 8)
+        self.decimal_point = config.get('decimal_point', 5)
         self.wallet = wallet
         self.invoices = wallet.invoices
         self.contacts = wallet.contacts
@@ -150,17 +184,11 @@ class ElectrumWindow:
         self.tx_notifications = []
         self.need_update = threading.Event()
 
-    def exec(self):
-        self.showWalletViewController()
-        self.runLoop.exec()
-    
-    def showWalletViewController(self):
+    def initializeHandlers(self):
         self.menuHandler = MenuHandler.alloc().init()
-        self.menuHandler.electrumWindow = self
         self.menuHandler.electrumWindow = self
         
         self.mainHandler = MainWindowHandler.alloc().init()
-        self.mainHandler.electrumWindow = self
         self.mainHandler.electrumWindow = self
         
         self.historyHandler = WalletHandler.alloc().init();
@@ -171,7 +199,28 @@ class ElectrumWindow:
         
         self.sendHandler = SendHandler.alloc().init()
         self.sendHandler.electrumWindow = self
-        
+    
+    def exec(self):
+        self.showWalletViewController()
+        self.runLoop.exec()
+    
+    def get_decimal_point(self):
+        return self.decimal_point
+
+    def base_unit(self):
+        assert self.decimal_point in [2, 5, 8]
+        if self.decimal_point == 2:
+            return 'bits'
+        if self.decimal_point == 5:
+            return 'mBTC'
+        if self.decimal_point == 8:
+            return 'BTC'
+        raise Exception('Unknown base unit')
+
+    def units(self):
+        return ['BTC', 'mBTC', 'bits']
+
+    def showWalletViewController(self):
         self.screensManager.showWalletViewController(self.historyHandler,
                                                      receiveHandler=self.receiveHandler,
                                                      sendHandler=self.sendHandler,
@@ -187,16 +236,6 @@ class ElectrumWindow:
             pass # Handle in GUI thread
         else:
             self.print_error("unexpected network message:", event, args)
-
-    def base_unit(self):
-        assert self.decimal_point in [2, 5, 8]
-        if self.decimal_point == 2:
-            return 'bits'
-        if self.decimal_point == 5:
-            return 'mBTC'
-        if self.decimal_point == 8:
-            return 'BTC'
-        raise Exception('Unknown base unit')
 
     def update_status(self):
         print('broadcast to gui network status')

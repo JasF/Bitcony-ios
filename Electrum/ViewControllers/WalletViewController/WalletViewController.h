@@ -20,6 +20,7 @@
 - (void)timerAction:(id)object;
 - (NSString *)transactionsData:(id)object;
 - (void)transactionTapped:(NSString *)txHash;
+- (NSString *)baseUnit:(id)object;
 @end
 
 @protocol WalletHandlerProtocolDelegate <NSObject>
@@ -31,6 +32,8 @@
 
 @protocol MainHandlerProtocol <NSObject>
 - (void)viewDidLoad:(id)delegate;
+- (NSString *)baseUnit:(id)object;
+- (void)updateStatus:(id)object;
 @end
 
 @protocol MainHandlerProtocolDelegate <NSObject>

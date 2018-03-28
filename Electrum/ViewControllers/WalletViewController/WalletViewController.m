@@ -37,6 +37,7 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
 
 @implementation WalletViewController {
     NSTimer *_timer;
+    NSString *_baseUnit;
 }
 
 - (void)viewDidLoad {
@@ -61,6 +62,30 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
     [_pageViewController didMoveToParentViewController:self];
     [self initializeTitleView];
     self.rightNavigationItemButton.userInteractionEnabled = NO;
+    [self updateIfNeeded];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self updateIfNeeded];
+}
+
+- (void)updateIfNeeded {
+    NSString *baseUnit = nil;
+    if ([_mainHandler respondsToSelector:@selector(baseUnit:)]) {
+        baseUnit = [_mainHandler baseUnit:nil];
+    }
+    if (!_baseUnit) {
+        _baseUnit = baseUnit;
+    }
+    else if (![_baseUnit isEqualToString:baseUnit]) {
+        _baseUnit = baseUnit;
+        dispatch_python(^{
+            if ([_mainHandler respondsToSelector:@selector(updateStatus:)]) {
+                [_mainHandler updateStatus:nil];
+            }
+        });
+    }
 }
 
 - (void)initializeTitleView {

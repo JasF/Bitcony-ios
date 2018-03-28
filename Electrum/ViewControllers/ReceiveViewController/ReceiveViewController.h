@@ -11,6 +11,7 @@
 
 @protocol ReceiveHandlerProtocol <NSObject>
 - (NSString *)receivingAddress:(id)object;
+- (NSString *)baseUnit:(id)object;
 @end
 
 @interface ReceiveViewController : UIViewController
