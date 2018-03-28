@@ -500,3 +500,13 @@
 "unknown (low fee)"="невизначено (маленька комісія)";
 "unverified"="не перевірено";
 "watching only"="тільки для спостереження";
+"Enter password for wallet: "="Введіть пароль для кошелька:";
+"Enter wallet name"="Введіть ім&#39;я кошика";
+"Continue"="Продовжуй";
+"Share"="Поділитися";
+"Paste"="Вставити";
+"Create a new seed"="Створіть нове насіння";
+"Create Wallet"="Створити гаманець";
+"Enter wallet name"="Введіть ім&#39;я кошика";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Ви хочете створити нове насіння або відновити кошик, використовуючи наявне насіння?";
+"I already have a seed"="У мене вже є насіння";

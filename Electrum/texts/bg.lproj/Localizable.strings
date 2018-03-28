@@ -304,3 +304,13 @@
 "please wait..."="моля изчакайте...";
 "unknown"="неизвестен";
 "watching only"="само за наблюдение";
+"Enter password for wallet: "="Въведете парола за портфейла:";
+"Enter wallet name"="Въведете името на портфейла";
+"Continue"="продължи";
+"Share"="Дял";
+"Paste"="паста";
+"Create a new seed"="Създайте ново семе";
+"Create Wallet"="Създаване на Wallet";
+"Enter wallet name"="Въведете името на портфейла";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Искате ли да създадете ново семе или да възстановите портфейл с помощта на съществуващо семе?";
+"I already have a seed"="Вече имам семе";

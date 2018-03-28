@@ -500,3 +500,13 @@
 "unknown (low fee)"="Belirsiz. (Düşük ücret )";
 "unverified"="Doğrulanmadı";
 "watching only"="görüntüle";
+"Enter password for wallet: "="M-cüzdan için şifre girin:";
+"Enter wallet name"="M-cüzdan adını girin";
+"Continue"="Devam et";
+"Share"="Pay";
+"Paste"="Yapıştırmak";
+"Create a new seed"="Yeni bir tohum oluştur";
+"Create Wallet"="Cüzdan oluştur";
+"Enter wallet name"="M-cüzdan adını girin";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Yeni bir tohum oluşturmak mı yoksa mevcut bir tohum kullanarak cüzdanı geri yüklemek mi istiyorsunuz?";
+"I already have a seed"="Zaten bir tohumum var";

@@ -500,3 +500,13 @@
 "unknown (low fee)"="necunoscut (comision mic)";
 "unverified"="neverificat";
 "watching only"="doar de văzut";
+"Enter password for wallet: "="Introduceți parola pentru portofel:";
+"Enter wallet name"="Introduceți numele portofelului";
+"Continue"="Continua";
+"Share"="Acțiune";
+"Paste"="Pastă";
+"Create a new seed"="Creați o nouă semințe";
+"Create Wallet"="Creați Wallet";
+"Enter wallet name"="Introduceți numele portofelului";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Doriți să creați o nouă semință sau să restaurați un portofel folosind o semințe existentă?";
+"I already have a seed"="Am deja o sămânță";

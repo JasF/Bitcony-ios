@@ -500,3 +500,13 @@
 "unknown (low fee)"="不明 ( 低 手数料 )";
 "unverified"="未認証";
 "watching only"="読み取り専用";
+"Enter password for wallet: "="ウォレットのパスワードを入力：";
+"Enter wallet name"="ウォレット名を入力してください";
+"Continue"="持続する";
+"Share"="シェア";
+"Paste"="ペースト";
+"Create a new seed"="新しいシードを作成する";
+"Create Wallet"="ウォレットを作成";
+"Enter wallet name"="ウォレット名を入力してください";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="新しいシードを作成するか、既存のシードを使用してウォレットを復元しますか？";
+"I already have a seed"="私はすでに種を持っている";

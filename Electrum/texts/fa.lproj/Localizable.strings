@@ -1,1 +1,11 @@
 " These settings affects the fields in the Send tab"=" این تنظیمات گزینه‌های تب ارسال را تحت تاثیر قرار می‌دهد";
+"Enter password for wallet: "="رمز عبور برای کیف پول را وارد کنید:";
+"Enter wallet name"="نام کیف پول را وارد کنید";
+"Continue"="ادامه هید";
+"Share"="اشتراک گذاری";
+"Paste"="چسباندن";
+"Create a new seed"="بذر جدید ایجاد کنید";
+"Create Wallet"="ایجاد کیف پول";
+"Enter wallet name"="نام کیف پول را وارد کنید";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="آیا می خواهید یک دانه جدید ایجاد کنید یا برای بازگرداندن کیف پول با استفاده از دانه های موجود؟";
+"I already have a seed"="من قبلا یک بذر دارم";

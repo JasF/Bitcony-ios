@@ -21,3 +21,13 @@
 "Encrypt/decrypt Message"="Ĉifri/malĉifri Mesaĝo";
 "Encrypted"="Ĉifrita";
 "Error"="Eraro";
+"Enter password for wallet: "="Eniri pasvorton por monujo:";
+"Enter wallet name"="Enmetu monujan nomon";
+"Continue"="Daŭrigu";
+"Share"="Kunhavigi";
+"Paste"="Bati";
+"Create a new seed"="Krei novan semon";
+"Create Wallet"="Krei monujon";
+"Enter wallet name"="Enmetu monujan nomon";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Ĉu vi volas krei novan semon aŭ restarigi monujon per ekzistanta semo?";
+"I already have a seed"="Mi jam havas semon";

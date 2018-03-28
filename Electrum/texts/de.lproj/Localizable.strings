@@ -500,3 +500,13 @@
 "unknown (low fee)"="Unbekannt (niedrige Gebühr)";
 "unverified"="unbestätigt";
 "watching only"="nur lesen";
+"Enter password for wallet: "="Passwort für Brieftasche eingeben:";
+"Enter wallet name"="Geben Sie den Namen der Brieftasche ein";
+"Continue"="Fortsetzen";
+"Share"="Aktie";
+"Paste"="Einfügen";
+"Create a new seed"="Erstelle einen neuen Samen";
+"Create Wallet"="Brieftasche erstellen";
+"Enter wallet name"="Geben Sie den Namen der Brieftasche ein";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Möchten Sie einen neuen Seed erstellen oder eine Wallet mithilfe eines vorhandenen Seeds wiederherstellen?";
+"I already have a seed"="Ich habe bereits einen Samen";

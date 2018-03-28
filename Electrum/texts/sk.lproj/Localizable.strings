@@ -209,3 +209,13 @@
 "please wait..."="Počkajte prosím...";
 "unknown"="neznámy";
 "watching only"="len";
+"Enter password for wallet: "="Zadajte heslo pre peňaľenku:";
+"Enter wallet name"="Zadajte názov peňaľenky";
+"Continue"="ďalej";
+"Share"="zdieľam";
+"Paste"="pasta";
+"Create a new seed"="Vytvorte nové osivo";
+"Create Wallet"="Vytvorte Peňaženku";
+"Enter wallet name"="Zadajte názov peňaľenky";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Chcete vytvoriť nové osivo alebo obnoviť peňaženku pomocou existujúceho osiva?";
+"I already have a seed"="Mám už osivo";

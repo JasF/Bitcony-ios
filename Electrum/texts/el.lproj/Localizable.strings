@@ -232,3 +232,13 @@
 "please wait..."="Παρακαλώ περιμένετε...";
 "unknown"="άγνωστο";
 "watching only"="παρακολούθηση μονο";
+"Enter password for wallet: "="Εισαγάγετε τον κωδικό πρόσβασης για το πορτοφόλι:";
+"Enter wallet name"="Εισαγάγετε το όνομα του πορτοφολιού";
+"Continue"="Να συνεχίσει";
+"Share"="Μερίδιο";
+"Paste"="Επικόλληση";
+"Create a new seed"="Δημιουργήστε έναν νέο σπόρο";
+"Create Wallet"="Δημιουργία Πορτοφολιού";
+"Enter wallet name"="Εισαγάγετε το όνομα του πορτοφολιού";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Θέλετε να δημιουργήσετε νέο σπόρο ή να επαναφέρετε ένα πορτοφόλι χρησιμοποιώντας έναν υπάρχοντα σπόρο;";
+"I already have a seed"="Έχω ήδη έναν σπόρο";

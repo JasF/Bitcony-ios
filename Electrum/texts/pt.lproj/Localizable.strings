@@ -500,3 +500,13 @@
 "unknown (low fee)"="não confirmado (taxa baixa)";
 "unverified"="não verificado";
 "watching only"="apenas visualização";
+"Enter password for wallet: "="Digite a senha da carteira:";
+"Enter wallet name"="Digite o nome da carteira";
+"Continue"="Continuar";
+"Share"="Compartilhar";
+"Paste"="Colar";
+"Create a new seed"="Crie uma nova semente";
+"Create Wallet"="Criar carteira";
+"Enter wallet name"="Digite o nome da carteira";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Você quer criar uma nova semente ou restaurar uma carteira usando uma semente existente?";
+"I already have a seed"="Eu já tenho uma semente";

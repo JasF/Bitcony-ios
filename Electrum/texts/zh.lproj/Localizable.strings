@@ -500,3 +500,13 @@
 "unknown (low fee)"="未知(低手续费)";
 "unverified"="未认证";
 "watching only"="只看";
+"Enter password for wallet: "="输入钱包的密码：";
+"Enter wallet name"="输入钱包名称";
+"Continue"="继续";
+"Share"="分享";
+"Paste"="糊";
+"Create a new seed"="创建一个新的种子";
+"Create Wallet"="创建钱包";
+"Enter wallet name"="输入钱包名称";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="你想创建一个新的种子，还是使用现有的种子来恢复钱包？";
+"I already have a seed"="我已经有种子了";

@@ -289,3 +289,13 @@
 "unconfirmed"="ubekræftet";
 "unknown"="ukendt";
 "watching only"="kun kigge";
+"Enter password for wallet: "="Indtast adgangskode til tegnebog:";
+"Enter wallet name"="Indtast tegnebogens navn";
+"Continue"="Blive ved";
+"Share"="Del";
+"Paste"="sæt ind";
+"Create a new seed"="Opret et nyt frø";
+"Create Wallet"="Opret tegnebog";
+"Enter wallet name"="Indtast tegnebogens navn";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Vil du oprette et nyt frø, eller at gendanne en tegnebog ved hjælp af et eksisterende frø?";
+"I already have a seed"="Jeg har allerede et frø";

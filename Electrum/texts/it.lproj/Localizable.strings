@@ -483,3 +483,13 @@
 "unknown (low fee)"="sconosciuta (commissione bassa)";
 "unverified"="non verificato";
 "watching only"="sola consultazione";
+"Enter password for wallet: "="Inserisci la password per il portafoglio:";
+"Enter wallet name"="Inserisci il nome del portafoglio";
+"Continue"="Continua";
+"Share"="Condividere";
+"Paste"="Incolla";
+"Create a new seed"="Crea un nuovo seme";
+"Create Wallet"="Crea portafoglio";
+"Enter wallet name"="Inserisci il nome del portafoglio";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Vuoi creare un nuovo seme o ripristinare un portafoglio utilizzando un seme esistente?";
+"I already have a seed"="Ho già un seme";

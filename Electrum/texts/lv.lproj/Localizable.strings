@@ -500,3 +500,13 @@
 "unknown (low fee)"="nezināms (zema komisijas maksa)";
 "unverified"="nepārbaudīts";
 "watching only"="tikai skatīšanai";
+"Enter password for wallet: "="Ievadiet seifa paroli:";
+"Enter wallet name"="Ievadiet seifa nosaukumu";
+"Continue"="Turpināt";
+"Share"="Kopīgot";
+"Paste"="Ielīmēt";
+"Create a new seed"="Izveidojiet jaunu sēklu";
+"Create Wallet"="Izveidojiet maku";
+"Enter wallet name"="Ievadiet seifa nosaukumu";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Vai vēlaties izveidot jaunu sēklu vai atjaunot seifu, izmantojot esošās sēklas?";
+"I already have a seed"="Man jau ir sēklas";

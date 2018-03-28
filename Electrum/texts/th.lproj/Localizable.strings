@@ -22,3 +22,13 @@
 "Password"="Snu all";
 "Pay to many"="Pay";
 "Plugins"="Piu";
+"Enter password for wallet: "="ใส่รหัสผ่านสำหรับกระเป๋าสตางค์:";
+"Enter wallet name"="ป้อนชื่อกระเป๋าสตางค์";
+"Continue"="ต่อ";
+"Share"="หุ้น";
+"Paste"="แปะ";
+"Create a new seed"="สร้างเมล็ดพันธุ์ใหม่";
+"Create Wallet"="สร้าง Wallet";
+"Enter wallet name"="ป้อนชื่อกระเป๋าสตางค์";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="คุณต้องการสร้างเมล็ดพันธุ์ใหม่หรือเรียกคืนกระเป๋าสตางค์โดยใช้เมล็ดพันธุ์ที่มีอยู่หรือไม่?";
+"I already have a seed"="ฉันมีเมล็ดแล้ว";

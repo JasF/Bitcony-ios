@@ -500,3 +500,13 @@
 "unknown (low fee)"="onbekend (lage transactiekosten)";
 "unverified"="niet geverifieerd";
 "watching only"="alleen-kijken";
+"Enter password for wallet: "="Voer het wachtwoord in voor de portemonnee:";
+"Enter wallet name"="Voer de naam van de portefeuille in";
+"Continue"="Doorgaan met";
+"Share"="Delen";
+"Paste"="Plakken";
+"Create a new seed"="Maak een nieuw zaad";
+"Create Wallet"="Portefeuille maken";
+"Enter wallet name"="Voer de naam van de portefeuille in";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Wil je een nieuw zaadje maken of een portefeuille herstellen met een bestaand zaadje?";
+"I already have a seed"="Ik heb al een zaadje";

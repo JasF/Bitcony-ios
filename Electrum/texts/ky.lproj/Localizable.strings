@@ -87,3 +87,13 @@
 "json"="json";
 "please wait..."="күтө туруңуз...";
 "unverified"="текшериле элек";
+"Enter password for wallet: "="капчыкты сырсөзүн кириш:";
+"Enter wallet name"="капчык атын";
+"Continue"="улантуу";
+"Share"="Бөлүшүү";
+"Paste"="Paste";
+"Create a new seed"="бир жаңы тукумун түзүү";
+"Create Wallet"="түзүү Капчыкты";
+"Enter wallet name"="капчык атын";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Сиз жаңы тукумун түзүү же иштеп жаткан үрөн менен капчыгы калыбына келеби?";
+"I already have a seed"="Мен буга чейин бир үрөн бар";

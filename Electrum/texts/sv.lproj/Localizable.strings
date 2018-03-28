@@ -190,3 +190,13 @@
 "Use Tor Proxy"="Använd Tor-proxy";
 "Verify"="Verifiera";
 "Warning"="Varning";
+"Enter password for wallet: "="Ange lösenord för plånbok:";
+"Enter wallet name"="Ange namn på plånboken";
+"Continue"="Fortsätta";
+"Share"="Dela med sig";
+"Paste"="Klistra";
+"Create a new seed"="Skapa ett nytt frö";
+"Create Wallet"="Skapa Wallet";
+"Enter wallet name"="Ange namn på plånboken";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Vill du skapa ett nytt frö, eller att återställa en plånbok med ett befintligt frö?";
+"I already have a seed"="Jag har redan ett frö";

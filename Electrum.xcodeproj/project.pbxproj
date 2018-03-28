@@ -41,6 +41,7 @@
 		C36B5C52206B9657006F52F6 /* SegmentedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C50206B9657006F52F6 /* SegmentedCell.m */; };
 		C36B5C53206B9657006F52F6 /* SegmentedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C51206B9657006F52F6 /* SegmentedCell.xib */; };
 		C36B5C55206B999B006F52F6 /* LabelCellSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C54206B999B006F52F6 /* LabelCellSmall.xib */; };
+		C36B5C59206BBFA4006F52F6 /* mergelocs.py in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C58206BBFA4006F52F6 /* mergelocs.py */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
 		C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFBA205F9E9600756807 /* Images.xcassets */; };
@@ -195,8 +196,6 @@
 		C360F9B020666BAE00F90ADD /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C360F9B220666BBB00F90ADD /* ky */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ky; path = ky.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C360F9B420666BC900F90ADD /* lv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = lv; path = lv.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C360F9B620666BDA00F90ADD /* nl-NL */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nl-NL"; path = "nl-NL.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		C360F9B820666BF900F90ADD /* nn-NO */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "nn-NO"; path = "nn-NO.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C360F9BA20666CC200F90ADD /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C360F9BC20666CFD00F90ADD /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = pt.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C360F9BE20666D9400F90ADD /* ro */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ro; path = ro.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -248,6 +247,9 @@
 		C36B5C50206B9657006F52F6 /* SegmentedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SegmentedCell.m; sourceTree = "<group>"; };
 		C36B5C51206B9657006F52F6 /* SegmentedCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentedCell.xib; sourceTree = "<group>"; };
 		C36B5C54206B999B006F52F6 /* LabelCellSmall.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelCellSmall.xib; sourceTree = "<group>"; };
+		C36B5C56206BB3F4006F52F6 /* trans.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; name = trans.py; path = scripts/trans.py; sourceTree = "<group>"; };
+		C36B5C57206BBD3E006F52F6 /* nn */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nn; path = nn.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C36B5C58206BBFA4006F52F6 /* mergelocs.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = mergelocs.py; path = scripts/mergelocs.py; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C39FDFBA205F9E9600756807 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1261,6 +1263,8 @@
 		60796ED919190F4100A9926B = {
 			isa = PBXGroup;
 			children = (
+				C36B5C58206BBFA4006F52F6 /* mergelocs.py */,
+				C36B5C56206BB3F4006F52F6 /* trans.py */,
 				C3EA24892067B53300146917 /* unlocalized.h */,
 				C360F98120665D5300F90ADD /* electrum.mo.po */,
 				C360F97F20665B7000F90ADD /* conv.py */,
@@ -4266,8 +4270,6 @@
 				ja,
 				ky,
 				lv,
-				"nl-NL",
-				"nn-NO",
 				pl,
 				pt,
 				ro,
@@ -4277,6 +4279,7 @@
 				th,
 				vi,
 				zh,
+				nn,
 			);
 			mainGroup = 60796ED919190F4100A9926B;
 			productRefGroup = 60796EE319190F4100A9926B /* Products */;
@@ -4297,6 +4300,7 @@
 				C3EA246D2067776C00146917 /* LaunchScreen.storyboard in Resources */,
 				C39FE984206125E400756807 /* EnterWalletPasswordViewController.storyboard in Resources */,
 				C3B75F4E20636D810030BC81 /* SendViewController.storyboard in Resources */,
+				C36B5C59206BBFA4006F52F6 /* mergelocs.py in Resources */,
 				C39FE47B205FE98200756807 /* EnterOrCreateWalletViewController.storyboard in Resources */,
 				C360F994206666C500F90ADD /* Localizable.strings in Resources */,
 				C3B75F4920636D700030BC81 /* ReceiveViewController.storyboard in Resources */,
@@ -4472,8 +4476,6 @@
 				C360F9B020666BAE00F90ADD /* ja */,
 				C360F9B220666BBB00F90ADD /* ky */,
 				C360F9B420666BC900F90ADD /* lv */,
-				C360F9B620666BDA00F90ADD /* nl-NL */,
-				C360F9B820666BF900F90ADD /* nn-NO */,
 				C360F9BA20666CC200F90ADD /* pl */,
 				C360F9BC20666CFD00F90ADD /* pt */,
 				C360F9BE20666D9400F90ADD /* ro */,
@@ -4483,6 +4485,7 @@
 				C360F9C620666DD700F90ADD /* th */,
 				C360F9C820666DDC00F90ADD /* vi */,
 				C360F9CA20666DED00F90ADD /* zh */,
+				C36B5C57206BBD3E006F52F6 /* nn */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

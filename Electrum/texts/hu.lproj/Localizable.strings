@@ -159,3 +159,13 @@
 "Your labels were imported from"="A címkéid importálva innen";
 "from your wallet?"="a tárcádból?";
 "unknown"="ismeretlen";
+"Enter password for wallet: "="Adja meg a mobiltárca jelszavát:";
+"Enter wallet name"="Adja meg a pénztárca nevét";
+"Continue"="Folytatni";
+"Share"="Ossza meg";
+"Paste"="Paszta";
+"Create a new seed"="Hozzon létre egy új magot";
+"Create Wallet"="Wallet létrehozása";
+"Enter wallet name"="Adja meg a pénztárca nevét";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Szeretnél új magot létrehozni, vagy vissza szeretné állítani a tárcát egy meglévő vetőmag segítségével?";
+"I already have a seed"="Már van magam";

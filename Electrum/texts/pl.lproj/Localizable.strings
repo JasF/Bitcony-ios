@@ -500,3 +500,13 @@
 "unknown (low fee)"="nieznany (niska prowizja)";
 "unverified"="niezweryfikowana";
 "watching only"="tylko obserwowana";
+"Enter password for wallet: "="Wprowadź hasło do portfela:";
+"Enter wallet name"="Wpisz nazwę portfela";
+"Continue"="dalej";
+"Share"="Dzielić";
+"Paste"="Pasta";
+"Create a new seed"="Utwórz nowy materiał siewny";
+"Create Wallet"="Utwórz portfel";
+"Enter wallet name"="Wpisz nazwę portfela";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Czy chcesz utworzyć nowy materiał siewny, czy też przywrócić portfel przy użyciu istniejącego materiału siewnego?";
+"I already have a seed"="Mam już ziarno";

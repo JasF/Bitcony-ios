@@ -443,3 +443,13 @@
 "unknown (low fee)"="알 수 없는 (낮은 비용)";
 "unverified"="확인 되지 않은";
 "watching only"="만보고";
+"Enter password for wallet: "="지갑 비밀번호 입력 :";
+"Enter wallet name"="지갑 이름 입력";
+"Continue"="잇다";
+"Share"="몫";
+"Paste"="풀";
+"Create a new seed"="새 시드 만들기";
+"Create Wallet"="지갑 만들기";
+"Enter wallet name"="지갑 이름 입력";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="새 시드를 만들거나 기존 시드를 사용하여 지갑을 복원 하시겠습니까?";
+"I already have a seed"="나는 이미 씨앗이있다.";

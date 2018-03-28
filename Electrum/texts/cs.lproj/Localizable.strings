@@ -500,3 +500,13 @@
 "unknown (low fee)"="neznámé (nízký poplatek)";
 "unverified"="neověřeno";
 "watching only"="jen pro prohlížení";
+"Enter password for wallet: "="Zadejte heslo pro peněženku:";
+"Enter wallet name"="Zadejte název peněľenky";
+"Continue"="Pokračovat";
+"Share"="Podíl";
+"Paste"="Vložit";
+"Create a new seed"="Vytvořte nové osivo";
+"Create Wallet"="Vytvořte službu Peněženka";
+"Enter wallet name"="Zadejte název peněľenky";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Chcete vytvořit nové osivo nebo obnovit peněženku pomocí existujícího osiva?";
+"I already have a seed"="Už mám semínko";

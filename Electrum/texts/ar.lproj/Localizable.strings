@@ -302,3 +302,13 @@
 "unknown (low fee)"="غير معلوم";
 "unverified"="لم يتم التحقق منه";
 "watching only"="مشاهدة فقط";
+"Enter password for wallet: "="أدخل كلمة المرور للمحفظة:";
+"Enter wallet name"="أدخل اسم المحفظة";
+"Continue"="استمر";
+"Share"="شارك";
+"Paste"="معجون";
+"Create a new seed"="قم بإنشاء بذرة جديدة";
+"Create Wallet"="إنشاء محفظة";
+"Enter wallet name"="أدخل اسم المحفظة";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="هل ترغب في إنشاء بذرة جديدة ، أو استعادة محفظة باستخدام بذور موجودة بالفعل؟";
+"I already have a seed"="لدي بالفعل بذرة";

@@ -500,3 +500,13 @@
 "unknown (low fee)"="desconocido (comisión baja)";
 "unverified"="no verificado";
 "watching only"="sólo lectura";
+"Enter password for wallet: "="Ingrese la contraseña para la billetera:";
+"Enter wallet name"="Ingrese el nombre de la billetera";
+"Continue"="Continuar";
+"Share"="Compartir";
+"Paste"="Pegar";
+"Create a new seed"="Crea una nueva semilla";
+"Create Wallet"="Crear billetera";
+"Enter wallet name"="Ingrese el nombre de la billetera";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="¿Desea crear una nueva semilla o restaurar una billetera usando una semilla existente?";
+"I already have a seed"="Ya tengo una semilla";

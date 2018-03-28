@@ -15,3 +15,13 @@
 "Description"="விளக்கம்";
 "Description of the transaction (not mandatory)."="இந்த பரிவர்த்தனையின் விளக்கம் (கட்டாயமானது அல்ல).";
 "Details"="விவரங்கள்";
+"Enter password for wallet: "="பணப்பைக்கு கடவுச்சொல்லை உள்ளிடவும்:";
+"Enter wallet name"="பணப்பை பெயரை உள்ளிடவும்";
+"Continue"="தொடர்ந்து";
+"Share"="பகிர்";
+"Paste"="ஒட்டு";
+"Create a new seed"="ஒரு புதிய விதை உருவாக்கவும்";
+"Create Wallet"="Wallet ஐ உருவாக்கவும்";
+"Enter wallet name"="பணப்பை பெயரை உள்ளிடவும்";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="நீங்கள் ஒரு புதிய விதை உருவாக்க விரும்புகிறீர்களா, அல்லது தற்போதுள்ள விதை பயன்படுத்தி ஒரு பணப்பை மீட்க விரும்புகிறீர்களா?";
+"I already have a seed"="எனக்கு ஏற்கனவே விதை உண்டு";

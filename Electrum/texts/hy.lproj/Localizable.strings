@@ -234,3 +234,13 @@
 "unknown (low fee)"="անհայտ (ցածր վճար)";
 "unverified"="չճշտված";
 "watching only"="միայն դիտել";
+"Enter password for wallet: "="Մուտքագրեք դրամապանակի գաղտնաբառը:";
+"Enter wallet name"="Մուտքագրեք դրամապանակի անունը";
+"Continue"="Շարունակել";
+"Share"="Բաժնետոմս";
+"Paste"="Կպցնել";
+"Create a new seed"="Ստեղծել նոր սերմ";
+"Create Wallet"="Ստեղծեք դրամապանակ";
+"Enter wallet name"="Մուտքագրեք դրամապանակի անունը";
+"Do you want to create a new seed, or to restore a wallet using an existing seed?"="Ցանկանում եք ստեղծել նոր սերմ, կամ վերականգնել դրամապանակ `օգտագործելով գոյություն ունեցող սերմը:";
+"I already have a seed"="Ես արդեն սերունդ ունեմ";
