@@ -111,8 +111,18 @@ class EnterOrCreateWalletHandler(NSObject):
 
     @objc_method
     def walletsNames_(self):
-        namesList = self.installWizard.walletsNames()
-        return namesList
+        self.namesList = self.installWizard.walletsNames()
+        return self.namesList
+
+    @objc_method
+    def deleteWalletAtIndex_(self, index):
+        try:
+            walletName = self.namesList[index]
+            self.installWizard.deleteWalletWithName(walletName)
+        except:
+            print('exc!');
+            pass
+
 
 
 class GoBack(Exception):
@@ -263,3 +273,8 @@ class InstallWizard(BaseWizard):
         onlyfiles = [f for f in listdir(path) if isfile(join(path, f))]
         print('path: ' + path + '; onlyfiles: ' + str(onlyfiles))
         return onlyfiles
+
+    def deleteWalletWithName(self, walletName):
+        path = self.config.walletsPath()
+        path = path + '/' + walletName
+        os.remove(path)

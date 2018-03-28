@@ -13,6 +13,7 @@
 - (void)createWalletTapped:(id)object;
 - (void)openWalletTapped:(id)object;
 - (NSArray *)walletsNames:(id)object;
+- (void)deleteWalletAtIndex:(NSNumber *)index;
 @end
 
 @interface EnterOrCreateWalletViewController : UITableViewController

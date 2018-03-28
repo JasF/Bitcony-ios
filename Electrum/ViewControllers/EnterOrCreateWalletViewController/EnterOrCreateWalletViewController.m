@@ -52,6 +52,29 @@ typedef NS_ENUM(NSInteger, Rows) {
 }
 
 #pragma mark - UITableViewDelegate
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return (indexPath.row < _walletsNames.count);
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSCAssert(indexPath.row < _walletsNames.count, @"trying delete unknown cell at indexPath: %@", indexPath);
+        if (indexPath.row >= _walletsNames.count) {
+            return;
+        }
+        if ([_handler respondsToSelector:@selector(deleteWalletAtIndex:)]) {
+            [_handler deleteWalletAtIndex:@(indexPath.row)];
+        }
+        if ([_handler respondsToSelector:@selector(walletsNames:)]) {
+            _walletsNames = [_handler walletsNames:nil];
+        }
+        [tableView beginUpdates];
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        [tableView endUpdates];
+        self.navigationItem.rightBarButtonItem = (_walletsNames.count) ? self.editButtonItem : nil;
+    }
+}
+
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     return nil;
 }
@@ -121,6 +144,7 @@ typedef NS_ENUM(NSInteger, Rows) {
         _walletsNames = [_handler walletsNames:nil];
     }
     if (_walletsNames.count) {
+        self.navigationItem.rightBarButtonItem = self.editButtonItem;
         [self.tableView reloadData];
         return;
     }

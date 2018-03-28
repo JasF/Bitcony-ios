@@ -41,6 +41,7 @@
                         </constraints>
                     </view>
                 </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="YZF-mK-CqB" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" id="2uQ-2A-KY5"/>
                     <constraint firstItem="Nib-Wx-7WL" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottom" id="FGB-3e-iSz"/>
@@ -51,6 +52,7 @@
                     <constraint firstItem="YZF-mK-CqB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="so9-Yg-cYd"/>
                 </constraints>
             </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="button" destination="YZF-mK-CqB" id="y6t-78-hco"/>
                 <outlet property="delimeterView" destination="Nib-Wx-7WL" id="yl2-8i-St5"/>
