@@ -99,7 +99,7 @@ static CGFloat const kTopInset = 8.f;
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleCell"];
             NSInteger count = (indexPath.section == InputsSection) ? _inputs.count : _outputs.count;
             cell.textLabel.textColor = [UIColor whiteColor];
-            cell.textLabel.text = (indexPath.section == TransactionIDSection) ? L(@"Transaction ID") : [NSString stringWithFormat:@"%@ (%@)",  (indexPath.section == InputsSection) ? L(@"Inputs") : L(@"Outputs"), @(count)];
+            cell.textLabel.text = (indexPath.section == TransactionIDSection) ? [NSString stringWithFormat:@"%@:", L(@"Transaction ID")] : [NSString stringWithFormat:@"%@ (%@):",  (indexPath.section == InputsSection) ? L(@"Inputs") : L(@"Outputs"), @(count)];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
@@ -140,13 +140,13 @@ static CGFloat const kTopInset = 8.f;
             if ([_handler respondsToSelector:@selector(status:)]) {
                 value = [_handler status:nil];
             }
-            [cell setLeftLabel:L(@"Status") rightLabel:value];
+            [cell setLeftLabel:[NSString stringWithFormat:@"%@:", L(@"Status")] rightLabel:value];
             resultCell = cell;
             break;
         }
         case DateRow: {
             TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
-            [cell setLeftLabel:_dateString.length ? L(@"Date") : @"" rightLabel:_dateString];
+            [cell setLeftLabel:_dateString.length ? [NSString stringWithFormat:@"%@:", L(@"Date")] : @"" rightLabel:_dateString];
             resultCell = cell;
             break;
         }
@@ -204,7 +204,7 @@ static CGFloat const kTopInset = 8.f;
             if ([_handler respondsToSelector:@selector(formattedFee:)]) {
                 formattedFee = [_handler formattedFee:nil];
             }
-            [cell setLeftLabel:L(@"Fee")
+            [cell setLeftLabel:[NSString stringWithFormat:@"%@:", L(@"Fee")]
                     rightLabel:[NSString stringWithFormat:@"%@", (fee.integerValue == 0) ? L(@"unknown") : formattedFee]];
             resultCell = cell;
             break;
@@ -215,7 +215,7 @@ static CGFloat const kTopInset = 8.f;
             if ([_handler respondsToSelector:@selector(lockTime:)]) {
                 lockTime = [_handler lockTime:nil];
             }
-            [cell setLeftLabel:L(@"LockTime")
+            [cell setLeftLabel:[NSString stringWithFormat:@"%@:", L(@"LockTime")]
                     rightLabel:[NSString stringWithFormat:@"%@", lockTime]];
             resultCell = cell;
             break;
