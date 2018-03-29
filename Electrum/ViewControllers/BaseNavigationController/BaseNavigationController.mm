@@ -19,6 +19,7 @@
     [super viewDidLoad];
     self.delegate = self;
     self.navigationBar.translucent = YES;
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 - (void)didReceiveMemoryWarning {
