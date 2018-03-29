@@ -211,7 +211,7 @@ class Abstract_Wallet(PrintError):
 
         # Verified transactions.  Each value is a (height, timestamp, block_pos) tuple.  Access with self.lock.
         self.verified_tx = storage.get('verified_tx3', {})
-
+        print('verified_tx: ' + str(self.verified_tx))
         # there is a difference between wallet.up_to_date and interface.is_up_to_date()
         # interface.is_up_to_date() returns true when all requests have been answered and processed
         # wallet.up_to_date is true when the wallet is synchronized (stronger requirement)
@@ -439,6 +439,7 @@ class Abstract_Wallet(PrintError):
         with self.lock:
             self.verified_tx[tx_hash] = info  # (tx_height, timestamp, pos)
         height, conf, timestamp = self.get_tx_height(tx_hash)
+        print('print verified')
         self.network.trigger_callback('verified', tx_hash, height, conf, timestamp)
 
     def get_unverified_txs(self):
@@ -1292,6 +1293,13 @@ class Abstract_Wallet(PrintError):
         self.storage.put('verified_tx3', self.verified_tx)
         self.storage.write()
 
+    def save_verified(self):
+        print('onWallet: save_verified: ' + str(self.verified_tx))
+        self.storage.put('stored_height', self.get_local_height())
+        self.save_transactions()
+        self.storage.put('verified_tx3', self.verified_tx)
+        self.storage.write()
+    
     def wait_until_synchronized(self, callback=None):
         def wait_for_wallet():
             self.set_up_to_date(False)

@@ -8,4 +8,5 @@
 
 #import <Foundation/Foundation.h>
 
+dispatch_queue_t dispatch_queue_python();
 void dispatch_python(dispatch_block_t _Nonnull block);

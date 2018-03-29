@@ -13,6 +13,7 @@
 
 static NSTimeInterval kActionTimeInterval = 0.8f;
 static CGFloat const kTopInset = 8.f;
+static NSTimeInterval kVerifiedActionDelay = 5.f;
 
 @interface HistoryViewController () <UITableViewDataSource, UITableViewDelegate, WalletHandlerProtocolDelegate>
 @property (strong, nonatomic) NSArray *transactions;
@@ -29,9 +30,6 @@ static CGFloat const kTopInset = 8.f;
     NSCParameterAssert(_screensManager);
     NSCParameterAssert(_alertManager);
     [super viewDidLoad];
-    if ([_handler respondsToSelector:@selector(viewDidLoad:)]) {
-        [_handler viewDidLoad:self];
-    }
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 50.f;
@@ -47,6 +45,11 @@ static CGFloat const kTopInset = 8.f;
     
     [self.tableView registerNib:[UINib nibWithNibName:@"TransactionCell" bundle:nil] forCellReuseIdentifier:@"TransactionCell"];
     [self updateIfNeeded];
+    dispatch_python(^{
+        if ([_handler respondsToSelector:@selector(viewDidLoad:)]) {
+            [_handler viewDidLoad:self];
+        }
+    });
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -152,6 +155,21 @@ static CGFloat const kTopInset = 8.f;
 - (void)showWarning:(NSString *)message {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.alertManager show:message];
+    });
+}
+
+- (void)onVerified {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(verifiedAction) object:nil];
+        [self performSelector:@selector(verifiedAction) withObject:nil afterDelay:kVerifiedActionDelay];
+    });
+}
+
+- (void)verifiedAction {
+    dispatch_python(^{
+        if ([_handler respondsToSelector:@selector(saveVerified:)]) {
+            [_handler saveVerified:nil];
+        }
     });
 }
 

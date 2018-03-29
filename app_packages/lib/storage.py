@@ -240,13 +240,16 @@ class WalletStorage(PrintError):
     @profiler
     def write(self):
         with self.lock:
+            print('do write')
             self._write()
 
     def _write(self):
-        if threading.currentThread().isDaemon():
-            self.print_error('warning: daemon thread cannot write wallet')
-            return
+        #if threading.currentThread().isDaemon():
+        #    print('warning: daemon thread cannot write wallet')
+        #    self.print_error('warning: daemon thread cannot write wallet')
+        #    return
         if not self.modified:
+            print('not modified')
             return
         s = json.dumps(self.data, indent=4, sort_keys=True)
         if self.pubkey:

@@ -17,6 +17,7 @@
 
 @protocol WalletHandlerProtocol <NSObject>
 - (void)viewDidLoad:(UIViewController *)viewController;
+- (void)saveVerified:(id)object;
 - (void)timerAction:(id)object;
 - (NSString *)transactionsData:(id)object;
 - (void)transactionTapped:(NSString *)txHash;
@@ -28,6 +29,7 @@
 - (void)showMessage:(NSString *)message;
 - (void)showError:(NSString *)message;
 - (void)showWarning:(NSString *)message;
+- (void)onVerified;
 @end
 
 @protocol MainHandlerProtocol <NSObject>

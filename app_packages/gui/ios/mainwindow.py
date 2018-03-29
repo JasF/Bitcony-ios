@@ -37,6 +37,7 @@ class WalletHandler(NSObject):
     @objc_method
     def viewDidLoad_(self, viewController):
         self.viewController = viewController
+        self.electrumWindow.update_tabs()
     
     @objc_method
     def timerAction_(self):
@@ -58,6 +59,10 @@ class WalletHandler(NSObject):
     @objc_method
     def baseUnit_(self):
         return self.electrumWindow.base_unit()
+
+    @objc_method
+    def saveVerified_(self):
+        return self.electrumWindow.save_verified()
 
 class ReceiveHandler(NSObject):
     @objc_method
@@ -171,7 +176,6 @@ class ElectrumWindow:
         self.runLoop = ObjCClass("RunLoop").shared();
         self.screensManager = Managers.shared().screensManager()
     
-    
         interests = ['updated', 'new_transaction', 'status', 'banner', 'verified', 'fee']
         # To avoid leaking references to "self" that prevent the
         # window from being GC-ed when closed, callbacks should be
@@ -184,6 +188,9 @@ class ElectrumWindow:
         self.tx_notifications = []
         self.need_update = threading.Event()
 
+    def save_verified(self):
+        self.wallet.save_verified()
+    
     def initializeHandlers(self):
         self.menuHandler = MenuHandler.alloc().init()
         self.menuHandler.electrumWindow = self
@@ -233,6 +240,10 @@ class ElectrumWindow:
         elif event == 'new_transaction':
             self.tx_notifications.append(args[0])
         elif event in ['status', 'banner', 'verified', 'fee']:
+            print('event: ' + str(event))
+            if event == 'verified':
+                self.historyHandler.viewController.onVerified()
+                print('_trigger_verified')
             pass # Handle in GUI thread
         else:
             self.print_error("unexpected network message:", event, args)

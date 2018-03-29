@@ -229,7 +229,7 @@ class InstallWizard(BaseWizard):
                 
 
     def beginCreateNewWallet(self):
-        walletName = "Default_wallet"
+        walletName = "default_wallet"
         names = self.walletsNames()
         walletsIndex = 1
         while True:
