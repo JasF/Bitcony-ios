@@ -119,6 +119,14 @@ typedef NS_ENUM(NSInteger, Rows) {
 }
 
 #pragma mark - UITextViewDelegate
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {    
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:textView action:@selector(resignFirstResponder)];
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 44)];
+    toolbar.items = [NSArray arrayWithObject:barButton];
+    textView.inputAccessoryView = toolbar;
+    return YES;
+}
+
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     _seed = [textView.text stringByReplacingCharactersInRange:range withString:text];
     [_continueCell setButtonEnabled:[self isSupportedSeed:_seed]];
