@@ -12,6 +12,7 @@
 @protocol SettingsHandlerProtocol <NSObject>
 - (NSNumber *)baseUnitIndex:(id)object;
 - (void)setBaseUnitIndex:(NSNumber *)index;
+- (void)seedTapped:(id)object;
 @end
 
 @interface SettingsViewController : UITableViewController

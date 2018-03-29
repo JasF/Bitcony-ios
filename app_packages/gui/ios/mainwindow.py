@@ -115,6 +115,12 @@ class SettingsHandler(NSObject):
         return units.index(self.electrumWindow.base_unit())
 
     @objc_method
+    def seedTapped_(self):
+        password = self.electrumWindow.password_dialog(_('Please enter your password'))
+        self.electrumWindow.show_seed_dialog(password)
+        pass
+
+    @objc_method
     def setBaseUnitIndex_(self, index):
         print('index base_unit for set: ' + str(index))
         values = [8, 5, 2]
@@ -240,10 +246,8 @@ class ElectrumWindow:
         elif event == 'new_transaction':
             self.tx_notifications.append(args[0])
         elif event in ['status', 'banner', 'verified', 'fee']:
-            print('event: ' + str(event))
             if event == 'verified':
                 self.historyHandler.viewController.onVerified()
-                print('_trigger_verified')
             pass # Handle in GUI thread
         else:
             self.print_error("unexpected network message:", event, args)
@@ -733,5 +737,16 @@ class ElectrumWindow:
         dialog = YesNoDialog(self, msg)
         result = dialog.show()
         return result
-#self.amount_e.setAmount(amount)
 
+    def show_seed_dialog(self, password):
+        if not self.wallet.has_seed():
+            self.show_message(_('This wallet has no seed'))
+            return
+        keystore = self.wallet.get_keystore()
+        try:
+            seed = keystore.get_seed(password)
+            passphrase = keystore.get_passphrase(password)
+        except BaseException as e:
+            self.show_error(str(e))
+            return
+        self.show_message(seed)

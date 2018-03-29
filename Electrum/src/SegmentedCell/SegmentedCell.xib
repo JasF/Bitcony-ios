@@ -35,7 +35,7 @@
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="Dk7-K7-oVh" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-28" id="cx6-5Z-UHw"/>
+                    <constraint firstItem="Dk7-K7-oVh" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-16" id="cx6-5Z-UHw"/>
                     <constraint firstItem="Dk7-K7-oVh" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sPp-1v-P3N"/>
                     <constraint firstItem="Dk7-K7-oVh" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" constant="-16" id="xwc-VT-sB0"/>
                     <constraint firstItem="Dk7-K7-oVh" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="yh2-M4-PoN"/>

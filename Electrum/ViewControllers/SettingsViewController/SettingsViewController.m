@@ -13,6 +13,7 @@
 typedef NS_ENUM(NSInteger, Rows) {
     BaseUnitRow,
     BaseUnitValueRow,
+    SeedRow,
     RowsCount
 };
 
@@ -75,6 +76,11 @@ static CGFloat const kTopContentInset = 8.f;
             resultCell = cell;
             break;
         }
+        case SeedRow: {
+            LabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LabelCellSmall"];
+            [cell setTitle:L(@"Seed")];
+            return cell;
+        }
     }
     
     NSCAssert(resultCell, @"unknown cell: %@", indexPath);
@@ -91,7 +97,21 @@ static CGFloat const kTopContentInset = 8.f;
 
 #pragma mark - UITableViewDelegate
 - (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
+    return (indexPath.row == SeedRow) ? indexPath : nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (indexPath.row) {
+        case SeedRow: {
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
+            dispatch_python(^{
+                if ([_handler respondsToSelector:@selector(seedTapped:)]) {
+                    [_handler seedTapped:nil];
+                }
+            });
+            break;
+        }
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
