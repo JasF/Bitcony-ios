@@ -61,7 +61,27 @@ static CGFloat const kTopInset = 8.f;
     if ([_handler respondsToSelector:@selector(date:)]) {
         _dateString = [_handler date:nil];
     }
-    // Do any additional setup after loading the view.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+}
+
+- (void)keyboardWillShow:(NSNotification*)notification {
+    NSDictionary *info = [notification userInfo];
+    CGSize kbSize = [[info objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue].size;
+    CGFloat deltaHeight = kbSize.height + 64.f;
+    self.tableView.height = self.view.height - deltaHeight;
+}
+
+- (void)keyboardWillHide:(NSNotification*)notification {
+    self.tableView.height = self.view.height;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -306,6 +326,10 @@ static CGFloat const kTopInset = 8.f;
 
 #pragma mark - UITextFieldDelegate
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
+    UIBarButtonItem *barButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:textField action:@selector(resignFirstResponder)];
+    UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:CGRectMake(0, 0, self.view.width, 44)];
+    toolbar.items = [NSArray arrayWithObject:barButton];
+    textField.inputAccessoryView = toolbar;
     return YES;
 }
 
