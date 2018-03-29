@@ -619,6 +619,7 @@ class ElectrumWindow:
             fee_rate = self.config.depth_to_fee(pos) if self.config.use_mempool_fees() else self.config.eta_to_fee(int(pos))
         else:
             fee_rate = self.config.static_fee(pos)
+        print('fee pos: ' + str(pos) + '; rate: ' + str(fee_rate))
         self.fee_rate = fee_rate
         self.fee_cb(True, pos, fee_rate)
         self.do_update_fee()
