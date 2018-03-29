@@ -15,7 +15,7 @@
 \cssrgb\c69337\c86836\c54718;\cssrgb\c0\c0\c0;\csgenericrgb\c0\c45600\c0;\cssrgb\c82956\c88909\c99731;\cssrgb\c79369\c94291\c99728;
 \cssrgb\c100000\c70952\c68453;\cssrgb\c80097\c91038\c70905;\cssrgb\c99682\c99006\c86634;\cssrgb\c84913\c79069\c99741;\csgray\c37475;
 \cssrgb\c58755\c82661\c37297;\csgenericrgb\c35900\c14900\c60100;\cssrgb\c20000\c20000\c20000;\cssrgb\c100000\c100000\c100000;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww18480\viewh10660\viewkind0
+\paperw11900\paperh16840\margl1440\margr1440\vieww27080\viewh10660\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\fs24 \cf0 electrum -> lib/daemon.py -> \
@@ -1190,12 +1190,12 @@ def get_tx_height \uc0\u1074 \u1086 \u1079 \u1074 \u1088 \u1072 \u1097 \u1077 \u
 \f0 \cf0 \
 \pard\tx593\pardeftab593\pardirnatural\partightenfactor0
 
-\f1 \cf3 - (\cf16 BOOL\cf3 )textView:(\cf31 \cb7 UITextView\cf3 \cb7  *)textView shouldChangeTextInRange:(\cf31 \cb7 NSRange\cf3 \cb7 )range replacementText:(\cf31 \cb7 NSString\cf3 \cb7  *)text \{\
+\f1 \cf3 - (\cf16 BOOL\cf3 )textView:(\cf31 UITextView\cf3  *)textView shouldChangeTextInRange:(\cf31 NSRange\cf3 )range replacementText:(\cf31 NSString\cf3  *)text \{\
 \
 \pard\pardeftab720\sl320\partightenfactor0
 
 \f4\fs28 \cf32 \cb33 \expnd0\expndtw0\kerning0
-\outl0\strokewidth0 \strokec32 Electrum Bitcoin wallet for iOS.\'a0\
+Electrum Bitcoin wallet for iOS.\'a0\
 \
 This is unofficial release Electrum App on iOS platform\
 \'95 Website: https://electrum.org\'a0\
@@ -1215,4 +1215,32 @@ Python -> /Users/jasf/Electrum-ios/Frameworks/Python.framework/Versions/3.4/Pyth
 Headers -> /Users/jasf/Electrum-ios/Frameworks/Python.framework/Versions/3.4/Headers\
 Resources -> /Users/jasf/Electrum-ios/Frameworks/Python.framework/Versions/3.4/Resources\
 Current -> /Users/jasf/Electrum-ios/Frameworks/Python.framework/Versions/3.4\
+\
+\pard\tx593\pardeftab593\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf3 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 mkdir -p \cf19 "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python"\cf3 \
+mkdir -p \cf19 "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum"\cf3 \
+rsync -pvtrL --exclude .hg --exclude .svn --exclude .git \cf19 "$PROJECT_DIR/Frameworks/Python.framework"\cf3  \cf19 "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library"\cf3 \
+rm \cf19 "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Versions/3.4/Python"\cf3 \
+rm \cf19 "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Versions/Current/Python"\cf3 \
+rm \cf19 "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Python"\cf3 \
+rsync -pvtrL --exclude .hg --exclude .svn --exclude .git \cf19 "$PROJECT_DIR/app"\cf3  \cf19 "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum"\cf3 \
+rsync -pvtrL --exclude .hg --exclude .svn --exclude .git \cf19 "$PROJECT_DIR/app_packages"\cf3  \cf19 "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum"\cf3 \
+rsync -pvtrL --exclude .hg --exclude .svn --exclude .git \cf19 "$PROJECT_DIR/python/lib"\cf3  \cf19 "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum"\cf3 \
+rsync -pvtrL --exclude .hg --exclude .svn --exclude .git \cf19 "$PROJECT_DIR/python/gui"\cf3  \cf19 "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum"\cf3 \
+rsync -pvtrL --exclude .hg --exclude .svn --exclude .git \cf19 "$PROJECT_DIR/python"\cf3  \cf19 "$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum"\cf3 \
+\
+\uc0\u1085 \u1091 \u1078 \u1085 \u1086  \u1079 \u1072 \u1087 \u1072 \u1082 \u1086 \u1074 \u1072 \u1090 \u1100  \u1080  \u1086 \u1073 \u1088 \u1072 \u1090 \u1085 \u1086  \u1088 \u1072 \u1089 \u1087 \u1072 \u1082 \u1086 \u1074 \u1072 \u1090 \u1100  Python.framework \u1074  Document-\u1076 \u1080 \u1088 \u1077 \u1082 \u1090 \u1086 \u1088 \u1080 \u1102 .\
+\uc0\u1044 \u1083 \u1103  \u1085 \u1072 \u1095 \u1072 \u1083 \u1072  \u1087 \u1088 \u1086 \u1089 \u1090 \u1086  \u1087 \u1072 \u1082 \u1091 \u1077 \u1084  Python.framework \u1074  Python.framework.zip\
+
+\fs48 \
+\uc0\u1042 \u1089 \u1077  \u1080 \u1089 \u1093 \u1086 \u1076 \u1085 \u1080 \u1082 \u1080  \u1074  \u1087 \u1072 \u1087 \u1082 \u1091  \u1080  \u1086 \u1073 \u1088 \u1072 \u1090 \u1085 \u1086 , \u1074  \u1079 \u1080 \u1087  \u1080  \u1086 \u1073 \u1088 \u1072 \u1090 \u1085 \u1086  \u1074  Documents!\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\li240\fi-240\pardirnatural\partightenfactor0
+
+\f3\b\fs22 \cf0 \CocoaLigature1 \
+Showing All Issues\
+
+\f1\b0 zip error: Nothing to do! (try: zip -r /Users/jasf/Electrum-ios/app_packages . -i /Users/jasf/Electrum-ios/app_packages.zip)\
+\
+\
 }

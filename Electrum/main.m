@@ -7,7 +7,9 @@
 #import <UIKit/UIKit.h>
 #include <Python/Python.h>
 #include <dlfcn.h>
+#import "Managers.h"
 
+@import SSZipArchive;
 
 int initializePython(int argc, char *argv[]);
 int main(int argc, char *argv[]) {
@@ -26,6 +28,58 @@ int main(int argc, char *argv[]) {
     return ret;
 }
 
+void extractResourcesIfNeeded() {
+    
+    NSString *documentsDirectory = [[Managers shared] documentsDirectory];
+    NSLog(@"%@", documentsDirectory);
+    NSString *libraryPath = [documentsDirectory stringByAppendingString:@"/Library"];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:libraryPath isDirectory:nil]) {
+        return;
+    }
+    
+    NSError *error = nil;
+    NSString *destination = libraryPath;
+    if (![[NSFileManager defaultManager] createDirectoryAtPath:destination
+                                   withIntermediateDirectories:YES
+                                                    attributes:nil
+                                                         error:&error]) {
+        NSLog(@"create directory error is: %@", error);
+        return;
+    }
+    
+    NSString *packagesDestinationPath = [documentsDirectory stringByAppendingString:@"/sources"];
+    [[NSFileManager defaultManager] createDirectoryAtPath:[documentsDirectory stringByAppendingString:@"/tmp"]
+                              withIntermediateDirectories:YES
+                                               attributes:nil
+                                                    error:&error];
+    [[NSFileManager defaultManager] createDirectoryAtPath:[documentsDirectory stringByAppendingString:@"/sources/app"]
+                              withIntermediateDirectories:YES
+                                               attributes:nil
+                                                    error:&error];
+    [[NSFileManager defaultManager] createDirectoryAtPath:packagesDestinationPath
+                              withIntermediateDirectories:YES
+                                               attributes:nil
+                                                    error:&error];
+    
+    NSString * frameworkZipPath = [[NSBundle mainBundle] pathForResource:@"PythonFramework"
+                                                                  ofType:@"zip"];
+    
+    if (![SSZipArchive unzipFileAtPath:frameworkZipPath toDestination:destination]) {
+        NSLog(@"unarchive python failed");
+        return;
+    }
+    NSString *sourcesZipPath = [[NSBundle mainBundle] pathForResource:@"app_packages"
+                                                               ofType:@"zip"];
+    if (![SSZipArchive unzipFileAtPath:sourcesZipPath toDestination:packagesDestinationPath]) {
+        NSLog(@"unarchive sources failed");
+        return;
+    }
+    /*
+    [zipArchive UnzipOpenFile:filepath Password:@""];
+    [zipArchive UnzipFileTo:{pathToDirectory} overWrite:YES];
+     */
+}
+
 int initializePython(int argc, char *argv[]) {
     int ret = 0;
     unsigned int i;
@@ -37,27 +91,26 @@ int initializePython(int argc, char *argv[]) {
     wchar_t** python_argv;
     
     @autoreleasepool {
-        
-        NSString * resourcePath = [[NSBundle mainBundle] resourcePath];
-        
+        NSString *documentsDirectory = [[Managers shared] documentsDirectory];
+        extractResourcesIfNeeded();
         // Special environment to prefer .pyo; also, don't write bytecode
         // because the process will not have write permissions on the device.
         putenv("PYTHONOPTIMIZE=1");
         putenv("PYTHONDONTWRITEBYTECODE=1");
         
         // Set the home for the Python interpreter
-        python_home = [NSString stringWithFormat:@"%@/Library/Python.framework/Resources", resourcePath, nil];
+        python_home = [NSString stringWithFormat:@"%@/Library/Python.framework/Resources", documentsDirectory, nil];
         NSLog(@"PythonHome is: %@", python_home);
         wpython_home = _Py_char2wchar([python_home UTF8String], NULL);
         Py_SetPythonHome(wpython_home);
         
         // Set the PYTHONPATH
-        python_path = [NSString stringWithFormat:@"PYTHONPATH=%@/Library/Application Support/by.bitcoin.electrum/app:%@/Library/Application Support/by.bitcoin.electrum/app_packages", resourcePath, resourcePath, nil];
+        python_path = [NSString stringWithFormat:@"PYTHONPATH=%@/sources/app:%@/sources/app_packages", documentsDirectory, documentsDirectory, nil];
         NSLog(@"PYTHONPATH is: %@", python_path);
         putenv((char *)[python_path UTF8String]);
         
         // iOS provides a specific directory for temp files.
-        tmp_path = [NSString stringWithFormat:@"TMP=%@/tmp", resourcePath, nil];
+        tmp_path = [NSString stringWithFormat:@"TMP=%@/tmp", documentsDirectory, nil];
         putenv((char *)[tmp_path UTF8String]);
         
         NSLog(@"Initializing Python runtime");

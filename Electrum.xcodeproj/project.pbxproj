@@ -43,16 +43,19 @@
 		C36B5C55206B999B006F52F6 /* LabelCellSmall.xib in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C54206B999B006F52F6 /* LabelCellSmall.xib */; };
 		C36B5C59206BBFA4006F52F6 /* mergelocs.py in Resources */ = {isa = PBXBuildFile; fileRef = C36B5C58206BBFA4006F52F6 /* mergelocs.py */; };
 		C36B5C5D206BD032006F52F6 /* FeedbackManagerImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = C36B5C5C206BD032006F52F6 /* FeedbackManagerImpl.m */; };
+		C38323C7206CD25000F34E50 /* PythonFramework.zip in Resources */ = {isa = PBXBuildFile; fileRef = C38323C6206CD25000F34E50 /* PythonFramework.zip */; };
+		C38323C8206CD26D00F34E50 /* XZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFCD205F9ED000756807 /* XZ.framework */; };
+		C38323C9206CD26F00F34E50 /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFCC205F9ED000756807 /* OpenSSL.framework */; };
+		C38323CA206CD27100F34E50 /* BZip2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFCB205F9ED000756807 /* BZip2.framework */; };
+		C38323CC206CD36700F34E50 /* SSZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38323CB206CD36700F34E50 /* SSZipArchive.framework */; };
+		C38323CD206CDCE900F34E50 /* langhungarianmodel.py in Resources */ = {isa = PBXBuildFile; fileRef = C39FE7D82060E3DA00756807 /* langhungarianmodel.py */; };
+		C38323CF206CDE6200F34E50 /* app_packages.zip in Resources */ = {isa = PBXBuildFile; fileRef = C38323CE206CDE6100F34E50 /* app_packages.zip */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
 		C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFBA205F9E9600756807 /* Images.xcassets */; };
-		C39FDFCF205F9ED100756807 /* BZip2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFCB205F9ED000756807 /* BZip2.framework */; };
-		C39FDFD0205F9ED100756807 /* OpenSSL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFCC205F9ED000756807 /* OpenSSL.framework */; };
-		C39FDFD1205F9ED100756807 /* XZ.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFCD205F9ED000756807 /* XZ.framework */; };
 		C39FDFD2205F9ED100756807 /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFCE205F9ED000756807 /* Python.framework */; };
 		C39FDFD4205F9F3400756807 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFD3205F9F3300756807 /* libsqlite3.tbd */; };
 		C39FDFD6205F9F5C00756807 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFD5205F9F5C00756807 /* libz.tbd */; };
-		C39FDFD9205F9FF300756807 /* __main__-.py in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFD8205F9FCB00756807 /* __main__-.py */; };
 		C39FDFDE205FA06300756807 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFDD205FA06300756807 /* AppDelegate.m */; };
 		C39FDFE0205FA0D300756807 /* CocoaLumberjack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39FDFDF205FA0D200756807 /* CocoaLumberjack.framework */; };
 		C39FDFE7205FA8EE00756807 /* HelloRubicon.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFE6205FA8EE00756807 /* HelloRubicon.m */; };
@@ -254,6 +257,9 @@
 		C36B5C5B206BD032006F52F6 /* FeedbackManagerImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackManagerImpl.h; sourceTree = "<group>"; };
 		C36B5C5C206BD032006F52F6 /* FeedbackManagerImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackManagerImpl.m; sourceTree = "<group>"; };
 		C36B5C5E206BD063006F52F6 /* FeedbackManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackManager.h; sourceTree = "<group>"; };
+		C38323C6206CD25000F34E50 /* PythonFramework.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = PythonFramework.zip; path = Frameworks/PythonFramework.zip; sourceTree = "<group>"; };
+		C38323CB206CD36700F34E50 /* SSZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SSZipArchive.framework; path = Frameworks/SSZipArchive.framework; sourceTree = "<group>"; };
+		C38323CE206CDE6100F34E50 /* app_packages.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = app_packages.zip; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C39FDFBA205F9E9600756807 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -264,7 +270,6 @@
 		C39FDFCE205F9ED000756807 /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = Frameworks/Python.framework; sourceTree = "<group>"; };
 		C39FDFD3205F9F3300756807 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		C39FDFD5205F9F5C00756807 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		C39FDFD8205F9FCB00756807 /* __main__-.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = "__main__-.py"; sourceTree = "<group>"; };
 		C39FDFDC205FA06300756807 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C39FDFDD205FA06300756807 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C39FDFDF205FA0D200756807 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaLumberjack.framework; path = Frameworks/CocoaLumberjack.framework; sourceTree = "<group>"; };
@@ -1246,18 +1251,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C39FDFD6205F9F5C00756807 /* libz.tbd in Frameworks */,
+				C38323CC206CD36700F34E50 /* SSZipArchive.framework in Frameworks */,
+				C38323CA206CD27100F34E50 /* BZip2.framework in Frameworks */,
 				C39FDFD4205F9F3400756807 /* libsqlite3.tbd in Frameworks */,
+				C38323C8206CD26D00F34E50 /* XZ.framework in Frameworks */,
 				C39FDFD2205F9ED100756807 /* Python.framework in Frameworks */,
 				C39FEE7020626F7D00756807 /* EasyMapping.framework in Frameworks */,
-				C39FDFD1205F9ED100756807 /* XZ.framework in Frameworks */,
 				C360F96620652D6E00F90ADD /* JGProgressHUD.framework in Frameworks */,
 				60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */,
 				C39FDFE0205FA0D300756807 /* CocoaLumberjack.framework in Frameworks */,
 				60796EE819190F4100A9926B /* CoreGraphics.framework in Frameworks */,
-				C39FDFCF205F9ED100756807 /* BZip2.framework in Frameworks */,
+				C38323C9206CD26F00F34E50 /* OpenSSL.framework in Frameworks */,
 				60796EE619190F4100A9926B /* Foundation.framework in Frameworks */,
 				60796EEA19190F4100A9926B /* UIKit.framework in Frameworks */,
-				C39FDFD0205F9ED100756807 /* OpenSSL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1273,8 +1279,8 @@
 				C360F98120665D5300F90ADD /* electrum.mo.po */,
 				C360F97F20665B7000F90ADD /* conv.py */,
 				C39FEE7A206276FA00756807 /* seed.h */,
+				C38323CE206CDE6100F34E50 /* app_packages.zip */,
 				C39FDFE1205FA86800756807 /* app_packages */,
-				C39FDFD7205F9FB700756807 /* python */,
 				C39FDFB3205F9E9600756807 /* Electrum */,
 				60796EE419190F4100A9926B /* Frameworks */,
 				60796EE319190F4100A9926B /* Products */,
@@ -1292,6 +1298,8 @@
 		60796EE419190F4100A9926B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C38323CB206CD36700F34E50 /* SSZipArchive.framework */,
+				C38323C6206CD25000F34E50 /* PythonFramework.zip */,
 				C360F96520652D6E00F90ADD /* JGProgressHUD.framework */,
 				C39FEE6F20626F7D00756807 /* EasyMapping.framework */,
 				C39FE94B206103C400756807 /* extobjc */,
@@ -1502,15 +1510,6 @@
 			path = Electrum;
 			sourceTree = "<group>";
 		};
-		C39FDFD7205F9FB700756807 /* python */ = {
-			isa = PBXGroup;
-			children = (
-				C39FE4922060DDBF00756807 /* __main__.py */,
-				C39FDFD8205F9FCB00756807 /* __main__-.py */,
-			);
-			path = python;
-			sourceTree = "<group>";
-		};
 		C39FDFDA205FA03000756807 /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -1560,6 +1559,7 @@
 		C39FDFE1205FA86800756807 /* app_packages */ = {
 			isa = PBXGroup;
 			children = (
+				C39FE4922060DDBF00756807 /* __main__.py */,
 				C39FE9192060E3DB00756807 /* certifi */,
 				C39FE7D62060E3DA00756807 /* chardet */,
 				C39FE61B2060E3DA00756807 /* dns */,
@@ -4311,6 +4311,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C38323CD206CDCE900F34E50 /* langhungarianmodel.py in Resources */,
 				C36B5C4D206B710A006F52F6 /* TitleView.xib in Resources */,
 				C3EA246D2067776C00146917 /* LaunchScreen.storyboard in Resources */,
 				C39FE984206125E400756807 /* EnterWalletPasswordViewController.storyboard in Resources */,
@@ -4328,6 +4329,7 @@
 				C3EA24992067BB6000146917 /* TextViewCell.xib in Resources */,
 				C39FEE6820625DC400756807 /* history_list.py in Resources */,
 				C3B75F8F2063A15B0030BC81 /* TextFieldCell.xib in Resources */,
+				C38323CF206CDE6200F34E50 /* app_packages.zip in Resources */,
 				C3B75FA12063D6240030BC81 /* FeeCell.xib in Resources */,
 				C3EA247E2067903200146917 /* CreateWalletCell.xib in Resources */,
 				C3DAD64B2068CEC90061294B /* HistoryViewController.storyboard in Resources */,
@@ -4339,6 +4341,7 @@
 				C3DAD6452068C7AD0061294B /* TabsItemView.xib in Resources */,
 				C3B75F5320636DB00030BC81 /* SettingsViewController.storyboard in Resources */,
 				C39FE978206115CF00756807 /* CreateNewSeedViewController.storyboard in Resources */,
+				C38323C7206CD25000F34E50 /* PythonFramework.zip in Resources */,
 				C39FEE39206235AA00756807 /* Main.storyboard in Resources */,
 				C39FEE552062375800756807 /* MenuViewController.storyboard in Resources */,
 				C36B5C53206B9657006F52F6 /* SegmentedCell.xib in Resources */,
@@ -4348,7 +4351,6 @@
 				C3DAD66220691C660061294B /* EditingCell.xib in Resources */,
 				C36B5C34206A2B5B006F52F6 /* TwoLabelCell.xib in Resources */,
 				C3B75F982063D5460030BC81 /* TableButtonCell.xib in Resources */,
-				C39FDFD9205F9FF300756807 /* __main__-.py in Resources */,
 				C39FE976206115C500756807 /* HaveASeedViewController.storyboard in Resources */,
 				C3EA248F2067B60B00146917 /* LabelCell.xib in Resources */,
 			);
@@ -4368,8 +4370,8 @@
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "mkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python\"\nmkdir -p \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/Frameworks/Python.framework\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library\"\nrm \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Versions/3.4/Python\"\nrm \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Versions/Current/Python\"\nrm \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Python.framework/Python\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/app_packages\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/python/lib\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/python/gui\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\nrsync -pvtrL --exclude .hg --exclude .svn --exclude .git \"$PROJECT_DIR/python\" \"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Library/Application Support/by.bitcoin.electrum\"\n";
+			shellPath = /bin/bash;
+			shellScript = "[ -f \"$PROJECT_DIR/app_packages.zip\" ] && rm \"$PROJECT_DIR/app_packages.zip\" || echo \"app_packages.zip missing\" \nzip -r app_packages.zip app_packages\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
