@@ -349,6 +349,9 @@ static CGFloat const kTopInset = 8.f;
 }
 
 - (void)handleString:(NSString *)string {
+    if (!string.length) {
+        return;
+    }
     NSURLComponents *components = [[NSURLComponents alloc] initWithString:string];
     _sendAddress = components.path;
     if ([components.scheme isEqualToString:@"bitcoin"]) {

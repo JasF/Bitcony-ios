@@ -129,8 +129,7 @@ static CGFloat const kTopInset = 8.f;
         NSArray *transactionsRepresentation = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         NSArray *transactions = [EKMapper arrayOfObjectsFromExternalRepresentation:transactionsRepresentation
                                                                        withMapping:[Transaction objectMapping]];
-        
-        transactions = [transactions sortedArrayUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"date" ascending:NO]]];
+        transactions = transactions.reverseObjectEnumerator.allObjects;
         dispatch_async(dispatch_get_main_queue(), ^{
             self.transactions = transactions;
             [self.tableView reloadData];
