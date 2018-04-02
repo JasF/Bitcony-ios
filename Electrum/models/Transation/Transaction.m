@@ -28,7 +28,7 @@
 }
 
 - (void)setDateString:(NSString *)dateString {
-    _dateString = dateString;
+    _dateString = SL(dateString);
     NSDateFormatter *dateFormatter = [NSDateFormatter new];
     [dateFormatter setDateFormat:@"yyyy'-'MM'-'dd' 'HH':'mm'"];
     self.date = [dateFormatter dateFromString:_dateString];

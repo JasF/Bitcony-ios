@@ -420,11 +420,7 @@ class ElectrumWindow:
         print('keystore_encrypted: ' + str(self.wallet.has_keystore_encryption()))
         print('storage_encrypted: ' + str(self.wallet.has_storage_encryption()))
         
-        def passwordCallback(password):
-            if not password:
-                print('password is not')
-                return
-            
+        def continueSend(password):
             def sign_done(success):
                 if success:
                     if not tx.is_complete():
@@ -436,6 +432,12 @@ class ElectrumWindow:
             print('signing...');
             self.sign_tx_with_password(tx, sign_done, password)
         
+        def passwordCallback(password):
+            if not password:
+                print('password is not')
+                return
+            continueSend(password)
+        
         if self.wallet.has_keystore_encryption():
             msg.append("")
             msg.append(_("Enter your password to proceed"))
@@ -446,7 +448,7 @@ class ElectrumWindow:
             def questionCallback(result):
                 if not result or result == False:
                     return
-                passwordCallback('')
+                continueSend(None)
             msg.append(_('Proceed?'))
             password = None
             self.question('\n'.join(msg), questionCallback)
@@ -711,6 +713,7 @@ class ElectrumWindow:
             callback(True)
         def on_failed(exc_info):
             print('on_failed!')
+            traceback.print_stack()
             self.on_error(exc_info)
             callback(False)
 

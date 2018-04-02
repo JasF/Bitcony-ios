@@ -458,6 +458,7 @@ class BaseWizard(object):
             self.wallet = Imported_Wallet(self.storage)
             self.wallet.storage.write()
             self.terminate()
+        self.storage.put('use_encryption', bool(password))
 
     def show_xpub_and_add_cosigners(self, xpub):
         self.show_xpub_dialog(xpub=xpub, run_next=lambda x: self.run('choose_keystore'))

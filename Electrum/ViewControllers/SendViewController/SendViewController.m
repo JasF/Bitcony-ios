@@ -81,8 +81,8 @@ static CGFloat const kTopInset = 8.f;
     self.tableView.contentInset = UIEdgeInsetsMake(kTopInset, 0, 0, 0);
 #ifdef DEBUG
     _sendAddress = @"39S2Vp1vcDpDDgvRgF77YtgrQeMgRgJy3v";
-    _amountString = @"0.00001";
-    _sendDescriptionString = @"Hi description";
+    _amountString = @"10";
+    _sendDescriptionString = @"Description";
 #endif
     [self updateFeeDescription];
 }
