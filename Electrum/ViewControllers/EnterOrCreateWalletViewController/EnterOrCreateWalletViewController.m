@@ -37,9 +37,6 @@ typedef NS_ENUM(NSInteger, Rows) {
     if (components.count > 1) {
         locale = components[0];
     }
-    if ([_handler respondsToSelector:@selector(setPreferredLocale:)]) {
-        [_handler setPreferredLocale:locale];
-    }
     // Do any additional setup after loading the view.
 }
 

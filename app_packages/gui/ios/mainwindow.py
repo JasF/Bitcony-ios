@@ -1,6 +1,6 @@
 import os
 import sys
-import threading
+import time, threading
 import traceback
 from decimal import Decimal
 
@@ -33,11 +33,6 @@ from .history_list import HistoryList
 class HistoryHandlerProtocol():
     def viewDidLoad(self):
         self.electrumWindow.update_tabs()
-
-    def timerAction(self):
-        if self.electrumWindow.need_update.is_set():
-            self.electrumWindow.need_update.clear()
-            self.electrumWindow.update_wallet()
 
     def transactionsData(self):
         listOfItems = self.electrumWindow.historyList.on_update()
@@ -176,6 +171,13 @@ class ElectrumWindow:
         self.tx_notifications = []
         self.need_update = threading.Event()
 
+        def timerAction():
+            if self.need_update.is_set():
+                self.need_update.clear()
+                self.update_wallet()
+            threading.Timer(1, timerAction).start()
+        timerAction()
+    
     def save_verified(self):
         self.wallet.save_verified()
     

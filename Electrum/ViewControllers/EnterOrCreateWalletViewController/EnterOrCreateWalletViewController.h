@@ -14,7 +14,6 @@
 - (void)openWalletTapped:(id)object;
 - (NSArray *)walletsNames;
 - (void)deleteWalletAtIndex:(NSNumber *)index;
-- (void)setPreferredLocale:(NSString *)locale;
 @end
 
 @interface EnterOrCreateWalletViewController : UITableViewController

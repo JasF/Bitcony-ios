@@ -11,7 +11,6 @@
 #import "TransactionCell.h"
 #import "Transaction.h"
 
-static NSTimeInterval kActionTimeInterval = 0.8f;
 static CGFloat const kTopInset = 8.f;
 static NSTimeInterval kVerifiedActionDelay = 5.f;
 
@@ -21,8 +20,8 @@ static NSTimeInterval kVerifiedActionDelay = 5.f;
 @end
 
 @implementation HistoryViewController {
-    NSTimer *_timer;
     NSString *_baseUnit;
+    NSString *_dataString;
 }
 
 - (void)viewDidLoad {
@@ -42,14 +41,6 @@ static NSTimeInterval kVerifiedActionDelay = 5.f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 50.f;
     self.tableView.contentInset = UIEdgeInsetsMake(kTopInset, 0.f, 0.f, 0.f);
-    
-    @weakify(self);
-    _timer = [NSTimer scheduledTimerWithTimeInterval:kActionTimeInterval repeats:YES block:^(NSTimer * _Nonnull timer) {
-        @strongify(self);
-        if ([self.handler respondsToSelector:@selector(timerAction)]) {
-            [self.handler timerAction];
-        }
-    }];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"TransactionCell" bundle:nil] forCellReuseIdentifier:@"TransactionCell"];
     [self updateIfNeeded];
@@ -130,6 +121,10 @@ static NSTimeInterval kVerifiedActionDelay = 5.f;
         if ([_handler respondsToSelector:@selector(transactionsData)]) {
             dataString = [_handler transactionsData];
         }
+        if (dataString && [dataString isEqualToString:_dataString]) {
+            return;
+        }
+        _dataString = dataString;
         dataString = [dataString stringByReplacingOccurrencesOfString:@"'" withString:@"\""];
         NSData *data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
         NSArray *transactionsRepresentation = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];

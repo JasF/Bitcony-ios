@@ -34,6 +34,8 @@ void extractResourcesIfNeeded() {
     NSLog(@"%@", documentsDirectory);
     documentsDirectory = [documentsDirectory stringByAppendingString:@"/Library"];
     
+    [[NSFileManager defaultManager] removeItemAtPath:documentsDirectory error:nil];
+    
     if ([[NSFileManager defaultManager] fileExistsAtPath:documentsDirectory isDirectory:nil]) {
         return;
     }
