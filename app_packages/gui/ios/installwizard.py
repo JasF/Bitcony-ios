@@ -75,9 +75,6 @@ class CreateWalletHandlerProtocol():
         print("have a seed handled in python")
 
 class EnterOrCreateWalletHandlerProtocol():
-    def setPreferredLocale(self, locale):
-        i18n.setPreferredLocale(locale)
-    
     def createWalletTapped(self):
         self.installWizard.beginCreateNewWallet()
 

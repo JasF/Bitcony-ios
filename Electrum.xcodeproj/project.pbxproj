@@ -50,6 +50,7 @@
 		C39E04A62072011C00506315 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39E04A52072011C00506315 /* FBSDKCoreKit.framework */; };
 		C39E04AA207201DE00506315 /* Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = C39E04A9207201DE00506315 /* Analytics.m */; };
 		C39E04AD207203DE00506315 /* libPython.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C39E04AC207203DE00506315 /* libPython.a */; };
+		C39E04B92072400800506315 /* GCDWebServer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39E04B82072400800506315 /* GCDWebServer.framework */; };
 		C39FDFC2205F9E9600756807 /* Electrum-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFB6205F9E9600756807 /* Electrum-Info.plist */; };
 		C39FDFC5205F9E9600756807 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C39FDFB9205F9E9600756807 /* main.m */; };
 		C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39FDFBA205F9E9600756807 /* Images.xcassets */; };
@@ -270,6 +271,7 @@
 		C39E04A8207201DE00506315 /* Analytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Analytics.h; sourceTree = "<group>"; };
 		C39E04A9207201DE00506315 /* Analytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Analytics.m; sourceTree = "<group>"; };
 		C39E04AC207203DE00506315 /* libPython.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libPython.a; sourceTree = "<group>"; };
+		C39E04B82072400800506315 /* GCDWebServer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GCDWebServer.framework; path = Frameworks/GCDWebServer.framework; sourceTree = "<group>"; };
 		C39FDFB6205F9E9600756807 /* Electrum-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Electrum-Info.plist"; sourceTree = "<group>"; };
 		C39FDFB9205F9E9600756807 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C39FDFBA205F9E9600756807 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -1418,6 +1420,7 @@
 				C39FDFD4205F9F3400756807 /* libsqlite3.tbd in Frameworks */,
 				C3C2260E206F80A7006F79AF /* libOpenSSL.a in Frameworks */,
 				C39FEE7020626F7D00756807 /* EasyMapping.framework in Frameworks */,
+				C39E04B92072400800506315 /* GCDWebServer.framework in Frameworks */,
 				C3C22610206F80A7006F79AF /* libbz2.a in Frameworks */,
 				C360F96620652D6E00F90ADD /* JGProgressHUD.framework in Frameworks */,
 				60796F39191CDBBA00A9926B /* CoreFoundation.framework in Frameworks */,
@@ -1460,6 +1463,7 @@
 		60796EE419190F4100A9926B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C39E04B82072400800506315 /* GCDWebServer.framework */,
 				C39E04AB207203D700506315 /* python */,
 				C39E04A52072011C00506315 /* FBSDKCoreKit.framework */,
 				C3C22719206F95F8006F79AF /* libicucore.tbd */,

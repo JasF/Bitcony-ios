@@ -9,8 +9,10 @@
 #import "PythonBridgeImpl.h"
 #import "PythonBridgeHandler.h"
 #import <objc/runtime.h>
+#import <GCDWebServer/GCDWebServerDataResponse.h>
+#import <GCDWebServer/GCDWebServerDataRequest.h>
 
-@import SocketRocket;
+@import GCDWebServer;
 
 NSString * const PXProtocolMethodListMethodNameKey = @"methodName";
 NSString * const PXProtocolMethodListArgumentTypesKey = @"types";
@@ -18,14 +20,18 @@ NSString * const PXProtocolMethodListArgumentTypesKey = @"types";
 static NSTimeInterval kReconnectionDelay = 0.5f;
 static NSString * const kHostAddress = @"ws://127.0.0.1:8765";
 
-@interface PythonBridgeImpl () <SRWebSocketDelegate>
+@interface PythonBridgeImpl ()
 @property (strong, nonatomic) NSMutableDictionary *handlers;
 @property (strong, nonatomic) dispatch_queue_t queue;
+@property (strong, nonatomic) GCDWebServer *webServer;
+@property (strong, nonatomic) NSMutableArray *sendArray;
 @end
 
 @implementation PythonBridgeImpl {
-    SRWebSocket *_webSocket;
     ResultBlock _resultBlock;
+    BOOL _sessionStartedSended;
+    dispatch_group_t _group;
+    BOOL _groupWaiting;
 }
 
 + (instancetype)shared {
@@ -41,30 +47,66 @@ static NSString * const kHostAddress = @"ws://127.0.0.1:8765";
     if (self = [super init]) {
         _handlers = [NSMutableDictionary new];
         _queue = dispatch_queue_create("python.bridge.queue.serial", DISPATCH_QUEUE_SERIAL);
+        _sendArray = [NSMutableArray new];
+        _group = dispatch_group_create();
     }
     return self;
 }
 
 - (void)send:(NSDictionary *)object {
-    NSData *data = [NSJSONSerialization dataWithJSONObject:object options:0 error:nil];
-    dispatch_async(_queue, ^{
-        [_webSocket send:data];
-    });
+    @synchronized (self) {
+        [_sendArray addObject:object];
+        if (_groupWaiting) {
+            _groupWaiting = NO;
+            dispatch_group_leave(_group);
+        }
+    }
 }
 
 - (void)connect {
-    dispatch_async(_queue, ^{
-        _webSocket = [[SRWebSocket alloc] initWithURL:[NSURL URLWithString:kHostAddress]];
-        [_webSocket setDelegateDispatchQueue:self.queue];
-        _webSocket.delegate = self;
-        [_webSocket open];
-    });
+    _webServer = [[GCDWebServer alloc] init];
+    [_webServer addDefaultHandlerForMethod:@"GET"
+                              requestClass:[GCDWebServerRequest class]
+                              processBlock:^GCDWebServerResponse *(GCDWebServerRequest* request) {
+                                  NSDictionary *dictionary = @{};
+                                  if ([request.path isEqualToString:@"/grep"]) {
+                                      dictionary = [self handleGrepRequest:request];
+                                  }
+                                  NSData *data = [NSJSONSerialization dataWithJSONObject:dictionary options:0 error:nil];
+                                  return [GCDWebServerDataResponse responseWithData:data contentType:@"application/json"];
+                              }];
+    
+    @weakify(self);
+    [_webServer addDefaultHandlerForMethod:@"POST"
+                              requestClass:[GCDWebServerDataRequest class]
+                              processBlock:^GCDWebServerResponse *(GCDWebServerDataRequest* request) {
+                                  @strongify(self);
+                                  if ([request.path isEqualToString:@"/post"]) {
+                                      [self handleIncomingPostData:request.data];
+                                  }
+                                  return nil;
+                              }];
+    [_webServer startWithPort:8765 bonjourName:nil];
 }
 
-- (void)reconnect {
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kReconnectionDelay * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self connect];
-    });
+- (NSDictionary *)handleGrepRequest:(GCDWebServerRequest *)request {
+    if (!_sessionStartedSended) {
+        _sessionStartedSended = YES;
+        return @{@"command":@"startSession"};
+    }
+    
+    while (YES) {
+        @synchronized (self) {
+            if (_sendArray.count) {
+                NSDictionary *object = _sendArray.firstObject;
+                [_sendArray removeObjectAtIndex:0];
+                return object;
+            }
+            _groupWaiting = YES;
+        }
+        dispatch_group_enter(_group);
+        dispatch_group_wait(_group, DISPATCH_TIME_FOREVER);
+    }
 }
 
 - (id)handlerWithActions:(NSDictionary *)actions
@@ -123,8 +165,7 @@ NSArray *px_allProtocolMethods(Protocol *protocol)
     return [self handlerWithActions:[actions copy] name:NSStringFromProtocol(protocol)];
 }
 
-#pragma mark - SRWebSocketDelegate
-- (void)webSocket:(SRWebSocket *)webSocket didReceiveMessage:(id)message {
+- (void)handleIncomingPostData:(id)message {
     if ([message isKindOfClass:[NSString class]]) {
         message = [message dataUsingEncoding:NSUTF8StringEncoding];
     }
@@ -154,36 +195,6 @@ NSArray *px_allProtocolMethods(Protocol *protocol)
             NSLog(@"unknown command. data: %@", object);
         }
     }
-}
-
-- (void)webSocketDidOpen:(SRWebSocket *)webSocket {
-    NSLog(@"webSocketDidOpen");
-    [self send:@{@"command":@"startSession"}];
-    //[self cycle];
-}
-
-- (void)cycle {
-    //[self send];
-    //[self performSelector:@selector(cycle) withObject:nil afterDelay:2];
-}
-
-- (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error {
-    NSLog(@"didFailWithError: %@", error);
-    [self reconnect];
-}
-
-- (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean {
-    NSLog(@"didCloseWithCode: %@, reason: %@", @(code), reason);
-    [self reconnect];
-}
-
-- (void)webSocket:(SRWebSocket *)webSocket didReceivePong:(NSData *)pongPayload {
-    NSLog(@"webSocket:didReceivePong: %@", pongPayload);
-}
-
-// Return YES to convert messages sent as Text to an NSString. Return NO to skip NSData -> NSString conversion for Text messages. Defaults to YES.
-- (BOOL)webSocketShouldConvertTextFrameToString:(SRWebSocket *)webSocket; {
-    return YES;
 }
 
 #pragma mark - Private

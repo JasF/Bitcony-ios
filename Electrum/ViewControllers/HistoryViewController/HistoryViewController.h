@@ -17,7 +17,6 @@
 @protocol HistoryHandlerProtocol <NSObject>
 - (void)viewDidLoad;
 - (void)saveVerified;
-- (void)timerAction;
 - (NSString *)transactionsData;
 - (void)transactionTapped:(NSString *)txHash;
 - (NSString *)baseUnit;
