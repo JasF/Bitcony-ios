@@ -34,7 +34,7 @@ from electrum.util import UserCancelled, print_error
 
 from .installwizard import InstallWizard, GoBack
 from .mainwindow import ElectrumWindow
-from rubicon.objc import ObjCClass, NSObject, objc_method
+from objc import runloop
 
 class ElectrumGui:
     def __init__(self, config, daemon, plugins):
@@ -50,13 +50,12 @@ class ElectrumGui:
                 wizard.init_network(self.daemon.network)
                 wizard.terminate()
 
-    def create_window_for_wallet(self, wallet):
+    def create_window_for_wallet(self, wallet, callback):
         self.wallet = wallet
-        electrumWindow = ElectrumWindow(self, self.wallet)
+        electrumWindow = ElectrumWindow(self, self.wallet, callback)
         electrumWindow.exec()
 
     def start_new_window(self, path, uri):
-        traceback.print_stack()
         try:
             wallet = None#self.daemon.load_wallet(path, '1')
         except BaseException as e:
@@ -66,27 +65,35 @@ class ElectrumGui:
         if not wallet:
             storage = WalletStorage(path, manual_upgrades=True)
             wizard = InstallWizard(self.config, self.plugins, storage, self.daemon)
+            
+            def getWalletCallback(wallet):
+                wizard.terminate()
+                if not wallet:
+                    print('wallet not created. return ')
+                    return
+                wallet.start_threads(self.daemon.network)
+                print('adding wallet: ' + str(wallet))
+                self.daemon.add_wallet(wallet)
+                
+                def electrumWindowCallback():
+                    print('electrumWindowCallback called')
+                    pass
+                try:
+                    w = self.create_window_for_wallet(wallet, electrumWindowCallback)
+                except BaseException as e:
+                    traceback.print_exc(file=sys.stdout)
+                    print('Cannot create window for wallet: ' + str(e))
+            
             try:
-                wallet = wizard.run_and_get_wallet()
+                wallet = wizard.run_and_get_wallet(getWalletCallback)
             except UserCancelled:
                 pass
             except GoBack as e:
                 print_error('[start_new_window] Exception caught (GoBack)', e)
-            wizard.terminate()
-            if not wallet:
-                print('wallet not created. return ')
-                return
-            wallet.start_threads(self.daemon.network)
-            self.daemon.add_wallet(wallet)
-        try:
-            w = self.create_window_for_wallet(wallet)
-        except BaseException as e:
-            traceback.print_exc(file=sys.stdout)
-            print('Cannot create window for wallet:' + str(e))
-            return
 
     def main(self):
         try:
+            print('initializing network')
             self.init_network()
         except UserCancelled:
             return
@@ -97,7 +104,9 @@ class ElectrumGui:
             return
         self.config.open_last_wallet()
         path = self.config.get_wallet_path()
-        if not self.start_new_window(path, self.config.get('url')):
-            return
-
+        self.start_new_window(path, self.config.get('url'))
+        print('exiting from gui')
+        runloop.exec()
+        print('do exiting from gui')
+        traceback.print_stack()
 

@@ -11,8 +11,10 @@
 #import "TextFieldDialogImpl.h"
 #import "ScreensManagerImpl.h"
 #import "PasswordDialogImpl.h"
+#import "DialogsManagerImpl.h"
 #import "WaitingDialogImpl.h"
 #import "AlertManagerImpl.h"
+#import "PythonBridgeImpl.h"
 #import "YesNoDialogImpl.h"
 
 @implementation Managers
@@ -23,6 +25,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         shared = [Managers new];
+        [shared dialogsManager];
     });
     return shared;
 }
@@ -33,7 +36,8 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         shared = [[ScreensManagerImpl alloc] initWithAlertManager:self.alertManager
-                                                  feedbackManager:self.feedbackManager];
+                                                  feedbackManager:self.feedbackManager
+                                                     pythonBridge:self.pythonBridge];
         ((AlertManagerImpl *)self.alertManager).screensManager = shared;
     });
     return shared;
@@ -55,16 +59,19 @@
 
 - (id<PasswordDialog>)createPasswordDialog {
     PasswordDialogImpl *dialog = [[PasswordDialogImpl alloc] initWithScreensManager:self.screensManager];
+    dialog.handler = [self.pythonBridge handlerWithProtocol:@protocol(PasswordDialogHandlerProtocol)];
     return dialog;
 }
 
 - (id<YesNoDialog>)createYesNoDialog {
     YesNoDialogImpl *dialog = [[YesNoDialogImpl alloc] initWithScreensManager:self.screensManager];
+    dialog.handler = [self.pythonBridge handlerWithProtocol:@protocol(YesNoDialogHandlerProtocol)];
     return dialog;
 }
 
 - (id<TextFieldDialog>)createTextFieldDialog {
     TextFieldDialogImpl *dialog = [[TextFieldDialogImpl alloc] initWithScreensManager:self.screensManager];
+    dialog.handler = [self.pythonBridge handlerWithProtocol:@protocol(TextFieldDialogHandler)];
     return dialog;
 }
 
@@ -79,6 +86,28 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         shared = [FeedbackManagerImpl new];
+    });
+    return shared;
+}
+
+- (id<PythonBridge>)pythonBridge {
+    static PythonBridgeImpl *shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [PythonBridgeImpl new];
+    });
+    return shared;
+}
+
+- (id<DialogsManager>)dialogsManager {
+    static DialogsManagerImpl *shared = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        shared = [[DialogsManagerImpl alloc] initWithPythonBridge:self.pythonBridge
+                                                  textFieldDialog:self.createTextFieldDialog
+                                                    waitingDialog:self.createWaitingDialog
+                                                   passwordDialog:self.createPasswordDialog
+                                                      yesNoDialog:self.createYesNoDialog];
     });
     return shared;
 }

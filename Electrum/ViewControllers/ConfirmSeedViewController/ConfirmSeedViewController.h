@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @protocol ConfirmSeedHandlerProtocol <NSObject>
-- (NSString *)generatedSeed:(id)aSelf;
+- (NSString *)generatedSeed;
 - (void)continueTapped:(id)object;
 @end
 

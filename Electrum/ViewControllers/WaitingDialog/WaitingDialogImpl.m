@@ -27,17 +27,17 @@
 }
 
 #pragma mark - overriden methods - WaitingDialog
-- (void)showWithMessage:(NSString *)message {
+- (void)showWaitingDialogWithMessage:(NSString *)message {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self close];
+        [self waitingDialogClose];
         _hud = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
-        _hud.textLabel.text = message;
+        _hud.textLabel.text = SL(message);
         _hud.indicatorView = [[JGProgressHUDIndeterminateIndicatorView alloc] init];
         [_hud showInView:_screensManager.topViewController.view];
     });
 }
 
-- (void)close {
+- (void)waitingDialogClose {
     dispatch_block_t block = ^{
         [_hud dismissAnimated:YES];
         _hud = nil;

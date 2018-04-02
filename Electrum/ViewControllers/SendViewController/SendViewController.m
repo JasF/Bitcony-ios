@@ -65,7 +65,10 @@ static CGFloat const kTopInset = 8.f;
     NSCParameterAssert(_alertManager);
     NSCParameterAssert(_handler);
     NSCParameterAssert(_screensManager);
+    NSCParameterAssert(_pythonBridge);
     [super viewDidLoad];
+    [Analytics logEvent:@"SendScreenDidLoad"];
+    [_pythonBridge setClassHandler:self name:@"SendHandlerProtocolDelegate"];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = kRowHeight;
     [self.tableView registerNib:[UINib nibWithNibName:@"EditingCell" bundle:nil] forCellReuseIdentifier:@"EditingCell"];
@@ -75,9 +78,6 @@ static CGFloat const kTopInset = 8.f;
     [self.tableView registerNib:[UINib nibWithNibName:@"TextFieldCell" bundle:nil] forCellReuseIdentifier:@"TextFieldCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"TableButtonCell" bundle:nil] forCellReuseIdentifier:@"TableButtonCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"FeeCell" bundle:nil] forCellReuseIdentifier:@"FeeCell"];
-    if ([_handler respondsToSelector:@selector(viewDidLoad:)]) {
-        [_handler viewDidLoad:self];
-    }
     self.tableView.contentInset = UIEdgeInsetsMake(kTopInset, 0, 0, 0);
 #ifdef DEBUG
     _sendAddress = @"39S2Vp1vcDpDDgvRgF77YtgrQeMgRgJy3v";
@@ -401,6 +401,12 @@ static CGFloat const kTopInset = 8.f;
 
 - (NSString *)amountText {
     return [_amountString stringByReplacingOccurrencesOfString:@"," withString:@"."];
+}
+
+- (void)requestInputFieldsTexts {
+    if ([_handler respondsToSelector:@selector(inputFieldsTexts:)]) {
+        [_handler inputFieldsTexts:@[self.payToText?:@"", self.descriptionText?:@"", self.amountText?:@""]];
+    }
 }
 
 #pragma mark - QRCodeReaderDelegate

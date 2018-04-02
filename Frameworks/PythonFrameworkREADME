@@ -1,2 +1,4 @@
-You can download Python.framework from:
-https://github.com/pybee/Python-Apple-support/releases/download/3.4-b1/Python-3.4-iOS-support.b1.tar.gz
+You can download project for build libPython.a from:
+https://github.com/pybee/Python-Apple-support/archive/3.6-b6.zip
+- then perform 'make iOS' command in terminal for build needed library.
+

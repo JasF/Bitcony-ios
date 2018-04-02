@@ -12,42 +12,26 @@
 #import "AlertManager.h"
 #import "ReceiveViewController.h"
 #import "SendViewController.h"
+#import "PythonBridge.h"
 
 @class WalletViewController;
 
-@protocol WalletHandlerProtocol <NSObject>
-- (void)viewDidLoad:(UIViewController *)viewController;
-- (void)saveVerified:(id)object;
-- (void)timerAction:(id)object;
-- (NSString *)transactionsData:(id)object;
-- (void)transactionTapped:(NSString *)txHash;
-- (NSString *)baseUnit:(id)object;
-@end
-
-@protocol WalletHandlerProtocolDelegate <NSObject>
-- (void)updateAndReloadData;
-- (void)showMessage:(NSString *)message;
-- (void)showError:(NSString *)message;
-- (void)showWarning:(NSString *)message;
-- (void)onVerified;
-@end
-
-@protocol MainHandlerProtocol <NSObject>
-- (void)viewDidLoad:(id)delegate;
+@protocol MainWindowHandlerProtocol <NSObject>
 - (NSString *)baseUnit:(id)object;
 - (void)updateStatus:(id)object;
 @end
 
-@protocol MainHandlerProtocolDelegate <NSObject>
+@protocol MainWindowHandlerProtocolDelegate <NSObject>
 - (void)updateBalance:(NSString *)balanceString
              iconName:(NSString *)iconName;
 @end
 
 @interface WalletViewController : UIViewController
-@property (strong, nonatomic) id<WalletHandlerProtocol> historyHandler;
+@property (strong, nonatomic) id<HistoryHandlerProtocol> historyHandler;
 @property (strong, nonatomic) id<ReceiveHandlerProtocol> receiveHandler;
 @property (strong, nonatomic) id<SendHandlerProtocol> sendHandler;
-@property (strong, nonatomic) id<MainHandlerProtocol> mainHandler;
+@property (strong, nonatomic) id<MainWindowHandlerProtocol> mainHandler;
+@property (strong, nonatomic) id<PythonBridge> pythonBridge;
 
 @property (strong, nonatomic) UIPageViewController *pageViewController;
 @property (strong, nonatomic) id<ScreensManager> screensManager;

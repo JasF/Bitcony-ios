@@ -24,13 +24,22 @@ typedef NS_ENUM(NSInteger, Rows) {
 }
 
 - (void)viewDidLoad {
-    NSCParameterAssert(_handler);
+    //NSCParameterAssert(_handler);
     [super viewDidLoad];
+    [Analytics logEvent:@"EnterOrCreateWalletScreenDidLoad"];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 100.f;
     [self.tableView registerNib:[UINib nibWithNibName:@"ButtonCell" bundle:nil] forCellReuseIdentifier:@"ButtonCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"CreateWalletCell" bundle:nil] forCellReuseIdentifier:@"CreateWalletCell"];
     self.tableView.separatorColor = [UIColor clearColor];
+    NSString *locale = [NSLocale preferredLanguages].firstObject;
+    NSArray *components = [locale componentsSeparatedByString:@"-"];
+    if (components.count > 1) {
+        locale = components[0];
+    }
+    if ([_handler respondsToSelector:@selector(setPreferredLocale:)]) {
+        [_handler setPreferredLocale:locale];
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -65,8 +74,8 @@ typedef NS_ENUM(NSInteger, Rows) {
         if ([_handler respondsToSelector:@selector(deleteWalletAtIndex:)]) {
             [_handler deleteWalletAtIndex:@(indexPath.row)];
         }
-        if ([_handler respondsToSelector:@selector(walletsNames:)]) {
-            _walletsNames = [_handler walletsNames:nil];
+        if ([_handler respondsToSelector:@selector(walletsNames)]) {
+            _walletsNames = [_handler walletsNames];
         }
         [tableView beginUpdates];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -133,15 +142,15 @@ typedef NS_ENUM(NSInteger, Rows) {
 
 - (void)createNewWalletTapped {
     dispatch_python(^{
-        if ([_handler respondsToSelector:@selector(createWalletTapped:)]) {
-            [_handler createWalletTapped:nil];
+        if ([_handler respondsToSelector:@selector(createWalletTapped)]) {
+            [_handler createWalletTapped];
         }
     });
 }
 
 - (void)updateUIAndReloadData {
-    if ([_handler respondsToSelector:@selector(walletsNames:)]) {
-        _walletsNames = [_handler walletsNames:nil];
+    if ([_handler respondsToSelector:@selector(walletsNames)]) {
+        _walletsNames = [_handler walletsNames];
     }
     if (_walletsNames.count) {
         self.navigationItem.rightBarButtonItem = self.editButtonItem;

@@ -500,7 +500,7 @@
 "unknown (low fee)"="desconocido (comisión baja)";
 "unverified"="no verificado";
 "watching only"="sólo lectura";
-"Enter password for wallet: "="Ingrese la contraseña para la billetera:";
+"Enter password for wallet:"="Ingrese la contraseña para la billetera:";
 "Enter wallet name"="Ingrese el nombre de la billetera";
 "Continue"="Continuar";
 "Share"="Compartir";

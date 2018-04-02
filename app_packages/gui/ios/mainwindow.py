@@ -2,7 +2,6 @@ import os
 import sys
 import threading
 import traceback
-from rubicon.objc import ObjCClass, NSObject, objc_method
 from decimal import Decimal
 
 from electrum import keystore, simple_config
@@ -26,144 +25,129 @@ from functools import partial
     
 from .paytoedit import PayToEdit
 from .amountedit import BTCAmountEdit
+from objc import managers as Managers
+import objcbridge
 
 from .history_list import HistoryList
 
-class WalletHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
-    
-    @objc_method
-    def viewDidLoad_(self, viewController):
-        self.viewController = viewController
+class HistoryHandlerProtocol():
+    def viewDidLoad(self):
         self.electrumWindow.update_tabs()
-    
-    @objc_method
-    def timerAction_(self):
+
+    def timerAction(self):
         if self.electrumWindow.need_update.is_set():
             self.electrumWindow.need_update.clear()
             self.electrumWindow.update_wallet()
 
-    @objc_method
-    def transactionsData_(self):
+    def transactionsData(self):
         listOfItems = self.electrumWindow.historyList.on_update()
         return str(listOfItems)
 
-    @objc_method
-    def transactionTapped_(self, txHash):
+    def transactionTapped(self, txHash):
         tx = self.electrumWindow.wallet.transactions.get(txHash)
         print('txHash: ' + txHash + '; tx: ' + str(tx))
         show_transaction(tx, self.electrumWindow, None)
 
-    @objc_method
-    def baseUnit_(self):
+    def baseUnit(self):
         return self.electrumWindow.base_unit()
 
-    @objc_method
-    def saveVerified_(self):
+    def saveVerified(self):
         return self.electrumWindow.save_verified()
+    
+    # Delegate calls
+    def updateAndReloadData(self):
+        objcbridge.sendCommandWithHandler('HistoryHandlerProtocolDelegate', 'updateAndReloadData', None)
 
-class ReceiveHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
+    def showMessage(self, message):
+        objcbridge.sendCommandWithHandler('HistoryHandlerProtocolDelegate', 'showMessage:', None, args=[message])
+
+    def showError(self, message):
+        objcbridge.sendCommandWithHandler('HistoryHandlerProtocolDelegate', 'showError:', None, args=[message])
     
-    @objc_method
-    def baseUnit_(self):
+    def showWarning(self, message):
+        objcbridge.sendCommandWithHandler('HistoryHandlerProtocolDelegate', 'showWarning:', None, args=[message])
+    
+    def onVerified(self):
+        objcbridge.sendCommandWithHandler('HistoryHandlerProtocolDelegate', 'onVerified', None)
+
+class ReceiveHandlerProtocol():
+    def baseUnit(self):
         return self.electrumWindow.base_unit()
-    
-    @objc_method
-    def receivingAddress_(self):
+
+    def receivingAddress(self):
         if not hasattr(self, 'addr'):
             self.addr = self.electrumWindow.wallet.get_unused_address()
         return self.addr
 
-class SendHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
+class SendHandlerProtocol():
+    def __init__(self):
+        self.textsCallback = None
 
-    @objc_method
-    def baseUnit_(self):
+    def baseUnit(self):
         return self.electrumWindow.base_unit()
-    
-    @objc_method
-    def viewDidLoad_(self, viewController):
-        self.viewController = viewController
 
-    @objc_method
-    def previewTapped_(self):
+    def previewTapped(self):
         self.electrumWindow.do_preview()
-    
-    @objc_method
-    def sendTapped_(self):
+
+    def sendTapped(self):
         self.electrumWindow.do_send(preview = False)
 
-    @objc_method
-    def feePosChanged_(self, pos):
+    def feePosChanged(self, pos):
         self.electrumWindow.feeSliderMoved(pos)
 
-class SettingsHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
+    def inputFieldsTexts(self, args):
+        payText, descriptionText, amountText = args
+        print('pay: ' + payText + '; desc: ' + descriptionText + '; am: ' + amountText)
+        if self.textsCallback:
+            self.textsCallback(descriptionText, payText, amountText)
+            self.textsCallback = None
+    
+    def requestInputFieldsTexts(self, textsCallback):
+        self.textsCallback = textsCallback
+        objcbridge.sendCommandWithHandler('SendHandlerProtocolDelegate', 'requestInputFieldsTexts', None)
 
-    @objc_method
-    def baseUnitIndex_(self):
+class SettingsHandlerProtocol():
+    def baseUnitIndex(self):
         units = self.electrumWindow.units()
         return units.index(self.electrumWindow.base_unit())
 
-    @objc_method
-    def seedTapped_(self):
-        password = self.electrumWindow.password_dialog(_('Please enter your password'))
-        self.electrumWindow.show_seed_dialog(password)
-        pass
+    def seedTapped(self):
+        def passwordCallback(password):
+            self.electrumWindow.show_seed_dialog(password)
+        self.electrumWindow.password_dialog(_('Please enter your password'), passwordCallback)
 
-    @objc_method
-    def setBaseUnitIndex_(self, index):
+    def setBaseUnitIndex(self, index):
         print('index base_unit for set: ' + str(index))
         values = [8, 5, 2]
         self.electrumWindow.decimal_point = values[index]
         self.electrumWindow.config.set_key('decimal_point', self.electrumWindow.decimal_point, True)
         pass
 
-class MainWindowHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
-
-    @objc_method
-    def viewDidLoad_(self, delegate):
-        self.delegate = delegate
-    
-    @objc_method
-    def baseUnit_(self):
+class MainWindowHandlerProtocol():
+    def baseUnit(self):
         return self.electrumWindow.base_unit()
 
-    @objc_method
-    def updateStatus_(self):
+    def updateStatus(self):
         self.electrumWindow.update_status()
 
-class MenuHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
-    
-    @objc_method
-    def walletTapped_(self):
+    def updateBalance(self, text, iconName):
+        objcbridge.sendCommandWithHandler('MainWindowHandlerProtocolDelegate', 'updateBalance:iconName:', None, args=[text, iconName])
+
+
+class MenuHandlerProtocol():
+    def walletTapped(self):
         self.electrumWindow.showWalletViewController()
         pass
 
-    @objc_method
-    def settingsTapped_(self):
-        handler = SettingsHandler.alloc().init()
+    def settingsTapped(self):
+        handler = SettingsHandlerProtocol()
         handler.electrumWindow = self.electrumWindow
         self.electrumWindow.screensManager.showSettingsViewController(handler)
         pass
 
 class ElectrumWindow:
-    def __init__(self, gui_object, wallet):
+    def __init__(self, gui_object, wallet, callback):
+        self.callback = callback
         self.initializeHandlers()
         self.tx_external_keypairs = {}
         self.is_max = False
@@ -178,8 +162,6 @@ class ElectrumWindow:
         self.historyList = HistoryList(self)
         self.network = gui_object.daemon.network
         self.fx = gui_object.daemon.fx
-        Managers = ObjCClass("Managers")
-        self.runLoop = ObjCClass("RunLoop").shared();
         self.screensManager = Managers.shared().screensManager()
     
         interests = ['updated', 'new_transaction', 'status', 'banner', 'verified', 'fee']
@@ -198,24 +180,23 @@ class ElectrumWindow:
         self.wallet.save_verified()
     
     def initializeHandlers(self):
-        self.menuHandler = MenuHandler.alloc().init()
+        self.menuHandler = MenuHandlerProtocol()
         self.menuHandler.electrumWindow = self
         
-        self.mainHandler = MainWindowHandler.alloc().init()
+        self.mainHandler = MainWindowHandlerProtocol()
         self.mainHandler.electrumWindow = self
         
-        self.historyHandler = WalletHandler.alloc().init();
+        self.historyHandler = HistoryHandlerProtocol();
         self.historyHandler.electrumWindow = self
         
-        self.receiveHandler = ReceiveHandler.alloc().init()
+        self.receiveHandler = ReceiveHandlerProtocol()
         self.receiveHandler.electrumWindow = self
         
-        self.sendHandler = SendHandler.alloc().init()
+        self.sendHandler = SendHandlerProtocol()
         self.sendHandler.electrumWindow = self
     
     def exec(self):
         self.showWalletViewController()
-        self.runLoop.exec()
     
     def get_decimal_point(self):
         return self.decimal_point
@@ -247,7 +228,7 @@ class ElectrumWindow:
             self.tx_notifications.append(args[0])
         elif event in ['status', 'banner', 'verified', 'fee']:
             if event == 'verified':
-                self.historyHandler.viewController.onVerified()
+                self.historyHandler.onVerified()
             pass # Handle in GUI thread
         else:
             self.print_error("unexpected network message:", event, args)
@@ -295,13 +276,13 @@ class ElectrumWindow:
 
 
         #self.tray.setToolTip("%s (%s)" % (text, self.wallet.basename()))
-        self.mainHandler.delegate.updateBalance(text, iconName=iconName)
+        self.mainHandler.updateBalance(text, iconName=iconName)
         #self.status_button.setIcon( icon )
     
     
     def update_tabs(self):
         print('broadcast to gui update_tabs [reload_data]')
-        self.historyHandler.viewController.updateAndReloadData()
+        self.historyHandler.updateAndReloadData()
         '''
         self.history_list.update()
         self.request_list.update()
@@ -343,15 +324,15 @@ class ElectrumWindow:
             '''
     
     def show_message(self, message):
-        self.historyHandler.viewController.showMessage(message)
+        self.historyHandler.showMessage(message)
         pass
     
     def show_error(self, message):
-        self.historyHandler.viewController.showError(message)
+        self.historyHandler.showError(message)
         pass
     
     def show_warning(self, message):
-        self.historyHandler.viewController.showWarning(message)
+        self.historyHandler.showWarning(message)
 
     def format_amount(self, x, is_diff=False, whitespaces=False):
         return util.format_satoshis(x, is_diff, self.num_zeros, self.decimal_point, whitespaces)
@@ -371,14 +352,19 @@ class ElectrumWindow:
     
 
     def do_send(self, preview = False):
+        def textFieldsCallback(label, payToText, amountText):
+            self._do_send(label, payToText, amountText, preview)
+        self.sendHandler.requestInputFieldsTexts(textFieldsCallback)
+    
+    def _do_send(self, label, payToText, amountText, preview = False):
         print('$$$ PREPARE FOR DO_SEND $$$, preview: ' + str(preview))
-        r = self.read_send_tab()
+        r = self.read_send_tab(label, payToText, amountText)
         if not r:
             return
         
-        self.do_update_fee()
-        
+        self.do_update_fee(payToText, amountText)
         outputs, fee_estimator, tx_desc, coins = r
+        
         try:
             is_sweep = bool(self.tx_external_keypairs)
             tx = self.wallet.make_unsigned_transaction(
@@ -433,30 +419,39 @@ class ElectrumWindow:
 
         print('keystore_encrypted: ' + str(self.wallet.has_keystore_encryption()))
         print('storage_encrypted: ' + str(self.wallet.has_storage_encryption()))
+        
+        def passwordCallback(password):
+            if not password:
+                print('password is not')
+                return
+            
+            def sign_done(success):
+                if success:
+                    if not tx.is_complete():
+                        self.show_transaction(tx)
+                        #self.do_clear()
+                    else:
+                        self.broadcast_transaction(tx, tx_desc)
+
+            print('signing...');
+            self.sign_tx_with_password(tx, sign_done, password)
+        
         if self.wallet.has_keystore_encryption():
             msg.append("")
             msg.append(_("Enter your password to proceed"))
-            password = self.password_dialog('\n'.join(msg))
+            password = self.password_dialog('\n'.join(msg), passwordCallback)
             if not password:
                 return
         else:
+            def questionCallback(result):
+                if not result or result == False:
+                    return
+                passwordCallback('')
             msg.append(_('Proceed?'))
             password = None
-            if not self.question('\n'.join(msg)):
-                return
-
-        def sign_done(success):
-            if success:
-                if not tx.is_complete():
-                    self.show_transaction(tx)
-                    #self.do_clear()
-                else:
-                    self.broadcast_transaction(tx, tx_desc)
-
-        print('signing...');
-        self.sign_tx_with_password(tx, sign_done, password)
-
-
+            self.question('\n'.join(msg), questionCallback)
+    
+            
     def broadcast_transaction(self, tx, tx_desc):
 
         def broadcast_thread():
@@ -534,13 +529,11 @@ class ElectrumWindow:
                     parent.show_error(msg)
                 '''
 
-    def read_send_tab(self):
+    def read_send_tab(self, label, payToText, amountText):
         if self.payment_request and self.payment_request.has_expired():
             self.show_error(_('Payment request has expired'))
             return
-        label = self.sendHandler.viewController.descriptionText()
-        payToText = self.sendHandler.viewController.payToText()
-        amountText = self.sendHandler.viewController.amountText()
+        
 
         self.amount_e = BTCAmountEdit(self.get_decimal_point, text=amountText)
         self.payto_e = PayToEdit(self, payToText)
@@ -555,12 +548,15 @@ class ElectrumWindow:
             outputs = self.payto_e.get_outputs(self.is_max)
 
             if self.payto_e.is_alias and self.payto_e.validated is False:
+                print('Unimplemented')
+                '''
                 alias = self.payto_e.toPlainText()
                 msg = _('WARNING: the alias "{}" could not be validated via an additional '
                         'security check, DNSSEC, and thus may not be correct.').format(alias) + '\n'
                 msg += _('Do you wish to continue?')
                 if not self.question(msg):
-                    return
+                '''
+                return
 
         if not outputs:
             self.show_error(_('No outputs'))
@@ -580,7 +576,6 @@ class ElectrumWindow:
         fee_estimator = None#self.get_send_fee_estimator()
         coins = self.get_coins()
         return outputs, fee_estimator, label, coins
-
 
     def get_coins(self):
         if self.pay_from:
@@ -626,7 +621,10 @@ class ElectrumWindow:
         print('fee pos: ' + str(pos) + '; rate: ' + str(fee_rate))
         self.fee_rate = fee_rate
         self.fee_cb(True, pos, fee_rate)
-        self.do_update_fee()
+        def textFieldsCallback(label, payToText, amountText):
+            self.do_update_fee(payToText, amountText)
+        self.sendHandler.requestInputFieldsTexts(textFieldsCallback)
+
 
 
     def is_send_fee_frozen(self):
@@ -642,7 +640,7 @@ class ElectrumWindow:
         #    return r
         return (TYPE_ADDRESS, self.wallet.dummy_address())
 
-    def do_update_fee(self):
+    def do_update_fee(self, payToText, amountText):
         print('$$$$$ DO_UPDATE_FEE')
         '''Recalculate the fee.  If the fee was manually input, retain it, but
         still build the TX to see if there are enough funds.
@@ -651,10 +649,8 @@ class ElectrumWindow:
         freeze_feerate = self.is_send_feerate_frozen()
         
         
-        amountText = self.sendHandler.viewController.amountText()
         self.amount_e = BTCAmountEdit(self.get_decimal_point, text=amountText)
         amnt = self.amount_e.get_amount()
-        payToText = self.sendHandler.viewController.payToText()
         self.payto_e = PayToEdit(self, payToText)
         
         amount = '!' if self.is_max else self.amount_e.get_amount()
@@ -728,15 +724,13 @@ class ElectrumWindow:
         WaitingDialog(self, _('Signing transaction...'), task,
                       on_signed, on_failed)
 
-    def password_dialog(self, msg):
-        dialog = PasswordDialog(msg)
-        password = dialog.show()
-        return password
+    def password_dialog(self, msg, callback):
+        dialog = PasswordDialog(msg, callback)
+        dialog.show()
 
-    def question(self, msg):
-        dialog = YesNoDialog(self, msg)
-        result = dialog.show()
-        return result
+    def question(self, msg, callback):
+        dialog = YesNoDialog(self, msg, callback)
+        dialog.show()
 
     def show_seed_dialog(self, password):
         if not self.wallet.has_seed():

@@ -29,6 +29,7 @@ static CGFloat const kEstimatedRowHeight = 50.f;
 
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
+    [Analytics logEvent:@"CreateWalletScreenDidLoad"];
     [super viewDidLoad];
     self.view.backgroundColor = self.navigationController.view.backgroundColor;
     self.tableView.rowHeight = UITableViewAutomaticDimension;

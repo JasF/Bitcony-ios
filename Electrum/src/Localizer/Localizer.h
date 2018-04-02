@@ -10,4 +10,5 @@
 
 @interface Localizer : NSObject
 + (NSString *)localize:(NSString *)string;
++ (NSString *)specialLocalize:(NSString *)string;
 @end

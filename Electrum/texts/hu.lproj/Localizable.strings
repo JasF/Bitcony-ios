@@ -159,7 +159,7 @@
 "Your labels were imported from"="A címkéid importálva innen";
 "from your wallet?"="a tárcádból?";
 "unknown"="ismeretlen";
-"Enter password for wallet: "="Adja meg a mobiltárca jelszavát:";
+"Enter password for wallet:"="Adja meg a mobiltárca jelszavát:";
 "Enter wallet name"="Adja meg a pénztárca nevét";
 "Continue"="Folytatni";
 "Share"="Ossza meg";

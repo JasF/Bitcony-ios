@@ -2,6 +2,6 @@
 #import <CoreFoundation/CoreFoundation.h>
 
 @protocol WaitingDialog <NSObject>
-- (void)showWithMessage:(NSString *)message;
-- (void)close;
+- (void)showWaitingDialogWithMessage:(NSString *)message;
+- (void)waitingDialogClose;
 @end

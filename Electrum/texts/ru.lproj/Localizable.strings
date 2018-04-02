@@ -497,7 +497,7 @@
 "unknown (low fee)"="неизвестно (маленькая комиссия)";
 "unverified"="не подтверждено";
 "watching only"="только для просмотра";
-"Enter password for wallet: "="Введите пароль для кошелька:";
+"Enter password for wallet:"="Введите пароль для кошелька:";
 "Enter wallet name"="Введите имя кошелька";
 "Continue"="Продолжать";
 "Share"="Поделиться";

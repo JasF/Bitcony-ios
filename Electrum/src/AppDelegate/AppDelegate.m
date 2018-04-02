@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "Managers.h"
+#import "PythonBridge.h"
+
+@import FBSDKCoreKit;
 
 @implementation AppDelegate
 
@@ -20,6 +23,8 @@
     [DDLog addLogger:fileLogger];
     
     [[Managers shared].screensManager createWindowIfNeeded];
+    [[Managers shared].pythonBridge connect];
+    [FBSDKAppEvents activateApp];
     
     return YES;
 }

@@ -10,22 +10,16 @@
 
 @protocol ScreensManager <NSObject>
 @property (strong, nonatomic) UIWindow *window;
-@property (strong, nonatomic) UIViewController *topViewController;
-- (void)showCreateWalletViewController:(id)handler;
-- (void)showEnterOrCreateWalletViewController:(id)handler;
-- (void)showCreateNewSeedViewController:(id)handler;
-- (void)showHaveASeedViewController:(id)handler;
-- (void)showConfirmSeedViewController:(id)handler;
-- (void)showEnterWalletPasswordViewController:(id)handler;
-- (void)showWalletViewController:(id)historyHandler
-                  receiveHandler:(id)receiveHandler
-                     sendHandler:(id)sendHandler
-                     menuHandler:(id)menuHandler
-                     mainHandler:(id)mainHandler;
-- (void)showReceiveViewController:(id)handler;
-- (void)showSendViewController:(id)handler;
-- (void)showSettingsViewController:(id)handler;
-- (void)showTransactionDetailViewController:(id)handler;
+- (UIViewController *)topViewController;
+- (void)showCreateWalletViewController;
+- (void)showEnterOrCreateWalletViewController;
+- (void)showCreateNewSeedViewController;
+- (void)showHaveASeedViewController;
+- (void)showConfirmSeedViewController;
+- (void)showEnterWalletPasswordViewController;
+- (void)showWalletViewController;
+- (void)showSettingsViewController;
+- (void)showTransactionDetailViewController;
 - (void)showMenuViewController;
 - (void)createWindowIfNeeded;
 - (UIViewController *)createHistoryViewController:(id)handler;

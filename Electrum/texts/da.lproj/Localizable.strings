@@ -289,7 +289,7 @@
 "unconfirmed"="ubekræftet";
 "unknown"="ukendt";
 "watching only"="kun kigge";
-"Enter password for wallet: "="Indtast adgangskode til tegnebog:";
+"Enter password for wallet:"="Indtast adgangskode til tegnebog:";
 "Enter wallet name"="Indtast tegnebogens navn";
 "Continue"="Blive ved";
 "Share"="Del";

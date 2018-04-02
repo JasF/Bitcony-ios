@@ -9,5 +9,6 @@
 #import <CoreFoundation/CoreFoundation.h>
 
 @protocol TextFieldDialog <NSObject>
-- (void)showWithMessage:(NSString *)message placeholder:(NSString *)placeholder;
+- (void)showTextFieldDialogWithMessage:(NSString *)message
+                           placeholder:(NSString *)placeholder;
 @end

@@ -16,6 +16,7 @@
     #import <CocoaLumberjack/CocoaLumberjack.h>
     #import "Localizer.h"
     #import "Logs.h"
+    #import "Analytics.h"
 
     #if DEBUG
     static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
@@ -26,6 +27,7 @@
     #define RGB(r,g,b) [UIColor colorWithRed:r/255.f green:g/255.f blue:b/255.f alpha:1.f]
 
     #define L(a) [Localizer localize:a]
+    #define SL(a) [Localizer specialLocalize:a]
 
     typedef NS_ENUM(NSInteger, Direction) {
         DirectionBackToRight,

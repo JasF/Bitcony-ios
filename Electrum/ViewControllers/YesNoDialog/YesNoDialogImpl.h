@@ -10,11 +10,11 @@
 #import "YesNoDialog.h"
 #import "ScreensManager.h"
 
-@protocol YesNoDialogHandler <NSObject>
-- (void)done:(NSNumber *)result;
+@protocol YesNoDialogHandlerProtocol <NSObject>
+- (void)yesNoDialogDone:(NSNumber *)result;
 @end
 
 @interface YesNoDialogImpl : NSObject <YesNoDialog>
-@property (strong, nonatomic) id<YesNoDialogHandler> handler;
+@property (strong, nonatomic) id<YesNoDialogHandlerProtocol> handler;
 - (id)initWithScreensManager:(id<ScreensManager>)screensManager;
 @end

@@ -2,24 +2,24 @@ import os
 import sys
 import threading
 import traceback
-from rubicon.objc import ObjCClass, NSObject, objc_method
+from objc import managers
+from objc import runloop
 
 class WaitingDialog:
     def __init__(self, parent, message, task, on_success=None, on_error=None):
         assert parent
-        Managers = ObjCClass("Managers")
-        self.dialog = Managers.shared().createWaitingDialog()
-        self.dialog.showWithMessage(message)
+        self.dialog = managers.shared().createWaitingDialog()
+        self.dialog.showWaitingDialogWithMessage(message)
         
         def __task():
             try:
                 r = task()
                 if on_success:
-                    self.dialog.close()
+                    self.dialog.waitingDialogClose()
                     on_success(r)
             except Exception as e:
                 if on_error:
-                    self.dialog.close()
+                    self.dialog.waitingDialogClose()
                     on_error([False, e])
 
         t = threading.Thread(target = __task)

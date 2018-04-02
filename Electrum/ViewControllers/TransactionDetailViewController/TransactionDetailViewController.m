@@ -43,10 +43,12 @@ static CGFloat const kTopInset = 8.f;
 @implementation TransactionDetailViewController {
     NSString *_descriptionString;
     NSString *_dateString;
+    NSString *_baseUnit;
 }
 
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
+    [Analytics logEvent:@"TransactionDetailScreenDidLoad"];
     [super viewDidLoad];
     self.tableView.contentInset = UIEdgeInsetsMake(kTopInset, 0, 0, 0);
     [self.tableView registerNib:[UINib nibWithNibName:@"SimpleCell" bundle:nil] forCellReuseIdentifier:@"SimpleCell"];
@@ -55,11 +57,14 @@ static CGFloat const kTopInset = 8.f;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = kRowHeight;
     [self updateInputsOutputs];
-    if ([_handler respondsToSelector:@selector(descriptionString:)]) {
-        _descriptionString = [_handler descriptionString:nil];
+    if ([_handler respondsToSelector:@selector(baseUnit)]) {
+        _baseUnit = [_handler baseUnit];
     }
-    if ([_handler respondsToSelector:@selector(date:)]) {
-        _dateString = [_handler date:nil];
+    if ([_handler respondsToSelector:@selector(descriptionString)]) {
+        _descriptionString = [_handler descriptionString];
+    }
+    if ([_handler respondsToSelector:@selector(date)]) {
+        _dateString = [_handler date];
     }
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -119,8 +124,8 @@ static CGFloat const kTopInset = 8.f;
 
 - (NSAttributedString *)transactionIDAttributedString {
     NSString *value = nil;
-    if ([_handler respondsToSelector:@selector(transactionID:)]) {
-        value = [_handler transactionID:nil];
+    if ([_handler respondsToSelector:@selector(transactionID)]) {
+        value = [_handler transactionID];
     }
     return [[NSAttributedString alloc] initWithString:(value.length) ? value : @""];
 }
@@ -137,10 +142,10 @@ static CGFloat const kTopInset = 8.f;
         case StatusRow: {
             TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
             NSString *value = nil;
-            if ([_handler respondsToSelector:@selector(status:)]) {
-                value = [_handler status:nil];
+            if ([_handler respondsToSelector:@selector(status)]) {
+                value = [_handler status];
             }
-            [cell setLeftLabel:[NSString stringWithFormat:@"%@:", L(@"Status")] rightLabel:value];
+            [cell setLeftLabel:[NSString stringWithFormat:@"%@:", L(@"Status")] rightLabel:SL(value)];
             resultCell = cell;
             break;
         }
@@ -153,32 +158,29 @@ static CGFloat const kTopInset = 8.f;
         case AmountRow: {
             TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
             NSNumber *amount = 0;
-            if ([_handler respondsToSelector:@selector(amount:)]) {
-                amount = [_handler amount:nil];
+            if ([_handler respondsToSelector:@selector(amount)]) {
+                amount = [_handler amount];
             }
             NSString *formattedAmount = nil;
-            if ([_handler respondsToSelector:@selector(formattedAmount:)]) {
-                formattedAmount = [_handler formattedAmount:nil];
+            if ([_handler respondsToSelector:@selector(formattedAmount)]) {
+                formattedAmount = [_handler formattedAmount];
             }
             formattedAmount = [formattedAmount stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
-            
-            NSString *baseUnit = nil;
-            if ([_handler respondsToSelector:@selector(baseUnit:)]) {
-                baseUnit = [_handler baseUnit:nil];
-            }
             
             NSString *text = nil;
             NSString *rightText = nil;
             if (amount.integerValue == 0) {
                 text = L(@"Transaction unrelated to your wallet");
+                formattedAmount = nil;
             }
             else if (amount.integerValue > 0.f) {
                 text = L(@"Amount received:");
-                rightText = [NSString stringWithFormat:@"%@ %@", formattedAmount, baseUnit];
             }
             else {
                 text = L(@"Amount sent:");
-                rightText = [NSString stringWithFormat:@"%@ %@", formattedAmount, baseUnit];
+            }
+            if (formattedAmount) {
+                rightText = [NSString stringWithFormat:@"%@ %@", formattedAmount, _baseUnit];
             }
             [cell setLeftLabel:text rightLabel:rightText];
             resultCell = cell;
@@ -187,8 +189,8 @@ static CGFloat const kTopInset = 8.f;
         case SizeRow: {
             TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
             NSNumber *size = 0;
-            if ([_handler respondsToSelector:@selector(size:)]) {
-                size = [_handler size:nil];
+            if ([_handler respondsToSelector:@selector(size)]) {
+                size = [_handler size];
             }
             [cell setLeftLabel:L(@"Size:") rightLabel:[NSString stringWithFormat:L(@"%@ bytes"), size]];
             resultCell = cell;
@@ -197,23 +199,23 @@ static CGFloat const kTopInset = 8.f;
         case FeeRow: {
             TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
             NSNumber *fee = 0;
-            if ([_handler respondsToSelector:@selector(fee:)]) {
-                fee = [_handler fee:nil];
+            if ([_handler respondsToSelector:@selector(fee)]) {
+                fee = [_handler fee];
             }
             NSString *formattedFee = nil;
-            if ([_handler respondsToSelector:@selector(formattedFee:)]) {
-                formattedFee = [_handler formattedFee:nil];
+            if ([_handler respondsToSelector:@selector(formattedFee)]) {
+                formattedFee = [_handler formattedFee];
             }
             [cell setLeftLabel:[NSString stringWithFormat:@"%@:", L(@"Fee")]
-                    rightLabel:[NSString stringWithFormat:@"%@", (fee.integerValue == 0) ? L(@"unknown") : formattedFee]];
+                    rightLabel:[NSString stringWithFormat:@"%@ %@", (fee.integerValue == 0) ? L(@"unknown") : formattedFee, _baseUnit]];
             resultCell = cell;
             break;
         }
         case LockTimeRow: {
             TwoLabelCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TwoLabelCell"];
             NSNumber *lockTime = nil;
-            if ([_handler respondsToSelector:@selector(lockTime:)]) {
-                lockTime = [_handler lockTime:nil];
+            if ([_handler respondsToSelector:@selector(lockTime)]) {
+                lockTime = [_handler lockTime];
             }
             [cell setLeftLabel:[NSString stringWithFormat:@"%@:", L(@"LockTime")]
                     rightLabel:[NSString stringWithFormat:@"%@", lockTime]];
@@ -260,12 +262,12 @@ static CGFloat const kTopInset = 8.f;
 - (void)updateInputsOutputs {
     NSString *inputsString = nil;
     NSString *outputsString = nil;
-    if ([_handler respondsToSelector:@selector(inputsJson:)]) {
-        inputsString = [_handler inputsJson:nil];
+    if ([_handler respondsToSelector:@selector(inputsJson)]) {
+        inputsString = [_handler inputsJson];
     }
     inputsString = [inputsString stringByReplacingOccurrencesOfString:@"'" withString:@"\""];
-    if ([_handler respondsToSelector:@selector(outputsJson:)]) {
-        outputsString = [_handler outputsJson:nil];
+    if ([_handler respondsToSelector:@selector(outputsJson)]) {
+        outputsString = [_handler outputsJson];
     }
     outputsString = [outputsString stringByReplacingOccurrencesOfString:@"'" withString:@"\""];
     

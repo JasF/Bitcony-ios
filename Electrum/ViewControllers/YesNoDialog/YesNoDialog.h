@@ -9,5 +9,5 @@
 #import <CoreFoundation/CoreFoundation.h>
 
 @protocol YesNoDialog <NSObject>
-- (void)showWithMessage:(NSString *)message;
+- (void)showYesNoDialogWithMessage:(NSString *)message;
 @end

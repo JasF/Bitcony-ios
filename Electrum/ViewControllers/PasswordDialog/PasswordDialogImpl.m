@@ -20,12 +20,12 @@
 }
 
 #pragma mark - Overriden Methods - PasswordDialog
-- (void)showWithMessage:(NSString *)message {
+- (void)showPasswordDialogWithMessage:(NSString *)message {
     NSCParameterAssert(_handler);
     dispatch_async(dispatch_get_main_queue(), ^{
         UIViewController *viewController = _screensManager.topViewController;
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@""
-                                                                                 message:message
+                                                                                 message:SL(message)
                                                                           preferredStyle:UIAlertControllerStyleAlert];
         [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
             textField.secureTextEntry = YES;
@@ -37,8 +37,8 @@
                                                                   @strongify(self);
                                                                   NSString *password = [[alertController textFields][0] text];
                                                                   dispatch_python(^{
-                                                                      if ([self.handler respondsToSelector:@selector(done:)]) {
-                                                                          [self.handler done:password.length ? password : @""];
+                                                                      if ([self.handler respondsToSelector:@selector(passwordDialogDone:)]) {
+                                                                          [self.handler passwordDialogDone:password.length ? password : @""];
                                                                       }
                                                                   });
                                                               }];
@@ -48,8 +48,8 @@
                                                               handler:^(UIAlertAction * _Nonnull action) {
                                                                   @strongify(self);
                                                                   dispatch_python(^{
-                                                                      if ([self.handler respondsToSelector:@selector(done:)]) {
-                                                                          [self.handler done:@""];
+                                                                      if ([self.handler respondsToSelector:@selector(passwordDialogDone:)]) {
+                                                                          [self.handler passwordDialogDone:@""];
                                                                       }
                                                                   });
                                                               }];

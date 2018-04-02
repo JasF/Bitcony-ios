@@ -23,55 +23,52 @@
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 import gettext, os
-from rubicon.objc import ObjCClass
 
 LOCALE_DIR = os.path.join(os.path.dirname(__file__), 'locale')
 language = gettext.translation('electrum', LOCALE_DIR, fallback = True)
 
 def _(x):
     global language
-    Localizer = ObjCClass("Localizer")
-    return Localizer.localize(x)
+    return '|>' + x + '<|'
 
-'''
-def _(x):
-    global language
-    return language.gettext(x)
-'''
+def setPreferredLocale(locale):
+    code = languages.get(locale)
+    if len(code):
+        set_language(code)
+
 
 def set_language(x):
     global language
     if x: language = gettext.translation('electrum', LOCALE_DIR, fallback = True, languages=[x])
 
 languages = {
-    '':_('Default'),
-    'ar_SA':_('Arabic'),
-    'cs_CZ':_('Czech'),
-    'da_DK':_('Danish'),
-    'de_DE':_('German'),
-    'eo_UY':_('Esperanto'),
-    'el_GR':_('Greek'),
-    'en_UK':_('English'),
-    'es_ES':_('Spanish'),
-    'fr_FR':_('French'),
-    'hu_HU':_('Hungarian'),
-    'hy_AM':_('Armenian'),
-    'id_ID':_('Indonesian'),
-    'it_IT':_('Italian'),
-    'ja_JP':_('Japanese'),
-    'ky_KG':_('Kyrgyz'),
-    'lv_LV':_('Latvian'),
-    'nl_NL':_('Dutch'),
-    'no_NO':_('Norwegian'),
-    'pl_PL':_('Polish'),
-    'pt_BR':_('Brasilian'),
-    'pt_PT':_('Portuguese'),
-    'ro_RO':_('Romanian'),
-    'ru_RU':_('Russian'),
-    'sk_SK':_('Slovak'),
-    'sl_SI':_('Slovenian'),
-    'ta_IN':_('Tamil'),
-    'th_TH':_('Thai'),
-    'vi_VN':_('Vietnamese'),
-    'zh_CN':_('Chinese')
-    }
+    'ar':_('ar_SA'),
+    'cs':_('cs_CZ'),
+    'da':_('da_DK'),
+    'de':_('de_DE'),
+    'eo':_('eo_UY'),
+    'el':_('el_GR'),
+    'en':_('en_UK'),
+    'es':_('es_ES'),
+    'fr':_('fr_FR'),
+    'hu':_('hu_HU'),
+    'hy':_('hy_AM'),
+    'id':_('id_ID'),
+    'it':_('it_IT'),
+    'ja':_('ja_JP'),
+    'ky':_('ky_KG'),
+    'lv':_('lv_LV'),
+    'nl':_('nl_NL'),
+    'no':_('no_NO'),
+    'pl':_('pl_PL'),
+    'br':_('pt_BR'),
+    'pt':_('pt_PT'),
+    'ro':_('ro_RO'),
+    'ru':_('ru_RU'),
+    'sk':_('sk_SK'),
+    'sl':_('sl_SI'),
+    'ta':_('ta_IN'),
+    'th':_('th_TH'),
+    'vi':_('vi_VN'),
+    'zh':_('zh_CN')
+}
