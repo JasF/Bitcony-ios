@@ -34,8 +34,6 @@ void extractResourcesIfNeeded() {
     NSLog(@"%@", documentsDirectory);
     documentsDirectory = [documentsDirectory stringByAppendingString:@"/Library"];
     
-    [[NSFileManager defaultManager] removeItemAtPath:documentsDirectory error:nil];
-    
     if ([[NSFileManager defaultManager] fileExistsAtPath:documentsDirectory isDirectory:nil]) {
         return;
     }
@@ -77,10 +75,6 @@ void extractResourcesIfNeeded() {
         NSLog(@"unarchive sources failed");
         return;
     }
-    /*
-    [zipArchive UnzipOpenFile:filepath Password:@""];
-    [zipArchive UnzipFileTo:{pathToDirectory} overWrite:YES];
-     */
 }
 
 int initializePython(int argc, char *argv[]) {
