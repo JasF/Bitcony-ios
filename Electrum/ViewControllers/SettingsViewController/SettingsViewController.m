@@ -29,6 +29,7 @@ static CGFloat const kTopContentInset = 8.f;
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
     NSCParameterAssert(_screensManager);
+    [Analytics logEvent:@"SettingsScreenDidLoad"];
     [super viewDidLoad];
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = kRowHeight;
@@ -62,8 +63,8 @@ static CGFloat const kTopContentInset = 8.f;
         case BaseUnitValueRow: {
             SegmentedCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SegmentedCell"];
             NSInteger index = 0;
-            if ([_handler respondsToSelector:@selector(baseUnitIndex:)]) {
-                index = [[_handler baseUnitIndex:nil] integerValue];
+            if ([_handler respondsToSelector:@selector(baseUnitIndex)]) {
+                index = [[_handler baseUnitIndex] integerValue];
             }
             [cell setSelectedIndex:index];
             @weakify(self);
@@ -105,8 +106,8 @@ static CGFloat const kTopContentInset = 8.f;
         case SeedRow: {
             [tableView deselectRowAtIndexPath:indexPath animated:YES];
             dispatch_python(^{
-                if ([_handler respondsToSelector:@selector(seedTapped:)]) {
-                    [_handler seedTapped:nil];
+                if ([_handler respondsToSelector:@selector(seedTapped)]) {
+                    [_handler seedTapped];
                 }
             });
             break;

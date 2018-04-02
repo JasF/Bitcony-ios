@@ -36,6 +36,7 @@ static NSString *kStoryboardName = @"Main";
 @property (strong, nonatomic) HistoryViewController *historyViewController;
 @property (strong, nonatomic) id<AlertManager> alertManager;
 @property (strong, nonatomic) id<FeedbackManager> feedbackManager;
+@property (strong, nonatomic) id<PythonBridge> pythonBridge;
 @end
 
 @implementation ScreensManagerImpl {
@@ -47,77 +48,83 @@ static NSString *kStoryboardName = @"Main";
 
 #pragma mark - Initialization
 - (id)initWithAlertManager:(id<AlertManager>)alertManager
-           feedbackManager:(id<FeedbackManager>)feedbackManager {
+           feedbackManager:(id<FeedbackManager>)feedbackManager
+              pythonBridge:(id<PythonBridge>)pythonBridge {
+    NSCParameterAssert(alertManager);
+    NSCParameterAssert(feedbackManager);
+    NSCParameterAssert(pythonBridge);
     if (self = [super init]) {
         _alertManager = alertManager;
         _feedbackManager = feedbackManager;
+        _pythonBridge = pythonBridge;
+        [_pythonBridge setClassHandler:self name:@"ScreensManager"];
     }
     return self;
 }
 
 #pragma mark - Overriden Methods - ScreensManager
-- (void)showCreateWalletViewController:(id)handler {
+- (void)showCreateWalletViewController {
     dispatch_async(dispatch_get_main_queue(), ^{
         UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CreateWalletViewController"
                                                              bundle:nil];
         CreateWalletViewController *viewController = (CreateWalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        viewController.handler = (id<CreateWalletHandlerProtocol>)handler;
+        viewController.handler = [self.pythonBridge handlerWithProtocol:@protocol(CreateWalletHandlerProtocol)];
         [navigationController pushViewController:viewController animated:YES];
     });
 }
 
-- (void)showEnterOrCreateWalletViewController:(id)handler {
+- (void)showEnterOrCreateWalletViewController {
     dispatch_async(dispatch_get_main_queue(), ^{
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"EnterOrCreateWalletViewController"
                                                              bundle:nil];
         UINavigationController *navigationController = (UINavigationController *)[storyboard instantiateViewControllerWithIdentifier:@"NavigationController"];
         EnterOrCreateWalletViewController *viewController = (EnterOrCreateWalletViewController *)navigationController.topViewController;
-        viewController.handler = (id<EnterOrCreateWalletHandlerProtocol>)handler;
+        viewController.handler = [self.pythonBridge handlerWithProtocol:@protocol(EnterOrCreateWalletHandlerProtocol)];
         self.window.rootViewController = navigationController;
     });
 }
 
-- (void)showCreateNewSeedViewController:(id)handler {
+- (void)showCreateNewSeedViewController {
     dispatch_async(dispatch_get_main_queue(), ^{
         UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"CreateNewSeedViewController"
                                                              bundle:nil];
         CreateNewSeedViewController *viewController = (CreateNewSeedViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        viewController.handler = (id<CreateNewSeedHandlerProtocol>)handler;
+        viewController.handler = [self.pythonBridge handlerWithProtocol:@protocol(CreateNewSeedHandlerProtocol)];
         [navigationController pushViewController:viewController animated:YES];
     });
 }
 
-- (void)showHaveASeedViewController:(id)handler {
+- (void)showHaveASeedViewController {
     dispatch_async(dispatch_get_main_queue(), ^{
         UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"HaveASeedViewController"
                                                              bundle:nil];
         HaveASeedViewController *viewController = (HaveASeedViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        viewController.handler = (id<HaveASeedHandlerProtocol>)handler;
+        viewController.handler = [self.pythonBridge handlerWithProtocol:@protocol(HaveASeedHandlerProtocol)];
         [navigationController pushViewController:viewController animated:YES];
     });
 }
 
-- (void)showConfirmSeedViewController:(id)handler {
+- (void)showConfirmSeedViewController {
     dispatch_async(dispatch_get_main_queue(), ^{
         UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ConfirmSeedViewController"
                                                              bundle:nil];
         ConfirmSeedViewController *viewController = (ConfirmSeedViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        viewController.handler = (id<ConfirmSeedHandlerProtocol>)handler;
+        viewController.handler = [self.pythonBridge handlerWithProtocol:@protocol(ConfirmSeedHandlerProtocol)];
         [navigationController pushViewController:viewController animated:YES];
     });
 }
 
-- (void)showEnterWalletPasswordViewController:(id)handler {
+- (void)showEnterWalletPasswordViewController {
     dispatch_async(dispatch_get_main_queue(), ^{
         UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"EnterWalletPasswordViewController"
                                                              bundle:nil];
         EnterWalletPasswordViewController *viewController = (EnterWalletPasswordViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        viewController.handler = (id<EnterWalletPasswordHandlerProtocol>)handler;
+        viewController.handler = [self.pythonBridge handlerWithProtocol:@protocol(EnterWalletPasswordHandlerProtocol)];
         [navigationController pushViewController:viewController animated:YES];
     });
 }
@@ -126,7 +133,8 @@ static NSString *kStoryboardName = @"Main";
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"HistoryViewController"
                                                          bundle:nil];
     HistoryViewController *viewController = (HistoryViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-    viewController.handler = (id<WalletHandlerProtocol>)handler;
+    viewController.handler = (id<HistoryHandlerProtocol>)handler;
+    viewController.pythonBridge = self.pythonBridge;
     viewController.alertManager = self.alertManager;
     viewController.screensManager = self;
     return viewController;
@@ -147,17 +155,14 @@ static NSString *kStoryboardName = @"Main";
     SendViewController *viewController = (SendViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
     viewController.handler = (id<SendHandlerProtocol>)handler;
     viewController.screensManager = self;
+    viewController.pythonBridge = self.pythonBridge;
     viewController.alertManager = self.alertManager;
     return viewController;
 }
 
-- (void)showWalletViewController:(id)historyHandler
-                  receiveHandler:(id)receiveHandler
-                     sendHandler:(id)sendHandler
-                     menuHandler:(id)menuHandler
-                     mainHandler:(id)mainHandler {
-    _menuHandler = menuHandler;
-    _mainHandler = mainHandler;
+- (void)showWalletViewController {
+    _menuHandler = [self.pythonBridge handlerWithProtocol:@protocol(MenuHandlerProtocol)];
+    _mainHandler = [self.pythonBridge handlerWithProtocol:@protocol(MainWindowHandlerProtocol)];
     dispatch_async(dispatch_get_main_queue(), ^{
         self.window.rootViewController = [self mainViewController];
         NSCAssert([self.window.rootViewController isEqual:[self mainViewController]], @"Excpected mainViewController as rootViewController");
@@ -175,9 +180,10 @@ static NSString *kStoryboardName = @"Main";
             viewController = (WalletViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
             viewController.pageViewController = [storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
             viewController.screensManager = self;
-            viewController.historyHandler = historyHandler;
-            viewController.receiveHandler = receiveHandler;
-            viewController.sendHandler = sendHandler;
+            viewController.pythonBridge = self.pythonBridge;
+            viewController.historyHandler = [self.pythonBridge handlerWithProtocol:@protocol(HistoryHandlerProtocol)];
+            viewController.receiveHandler = [self.pythonBridge handlerWithProtocol:@protocol(ReceiveHandlerProtocol)];
+            viewController.sendHandler = [self.pythonBridge handlerWithProtocol:@protocol(SendHandlerProtocol)];
             viewController.mainHandler = _mainHandler;
             _walletViewController = viewController;
         }
@@ -185,29 +191,7 @@ static NSString *kStoryboardName = @"Main";
     });
 }
 
-- (void)showReceiveViewController:(id)handler {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self closeMenu];
-        if ([self canIgnorePushingViewController:[ReceiveViewController class]]) {
-            return;
-        }
-        ReceiveViewController *viewController =(ReceiveViewController *)[self createReceiveViewController:handler];
-        [self pushViewController:viewController];
-    });
-}
-
-- (void)showSendViewController:(id)handler {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self closeMenu];
-        if ([self canIgnorePushingViewController:[SendViewController class]]) {
-            return;
-        }
-        SendViewController *viewController =(SendViewController *)[self createSendViewController:handler];
-        [self pushViewController:viewController];
-    });
-}
-
-- (void)showSettingsViewController:(id)handler {
+- (void)showSettingsViewController {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self closeMenu];
         if ([self canIgnorePushingViewController:[SettingsViewController class]]) {
@@ -216,23 +200,24 @@ static NSString *kStoryboardName = @"Main";
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"SettingsViewController"
                                                              bundle:nil];
         SettingsViewController *viewController = (SettingsViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        viewController.handler = (id<SettingsHandlerProtocol>)handler;
+        viewController.handler = [self.pythonBridge handlerWithProtocol:@protocol(SettingsHandlerProtocol)];
         viewController.screensManager = self;
         [self pushViewController:viewController];
     });
 }
 
-- (void)showTransactionDetailViewController:(id)handler {
+- (void)showTransactionDetailViewController {
     dispatch_async(dispatch_get_main_queue(), ^{
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"TransactionDetailViewController"
                                                              bundle:nil];
         TransactionDetailViewController *viewController = (TransactionDetailViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
-        viewController.handler = (id<TransactionDetailHandlerProtocol>)handler;
+        viewController.handler = [self.pythonBridge handlerWithProtocol:@protocol(TransactionDetailHandlerProtocol)];
         [self pushViewController:viewController clean:NO];
     });
 }
 
 - (void)showMenuViewController {
+    [Analytics logEvent:@"MenuDidOpen"];
     MenuViewController *viewController = (MenuViewController *)self.mainViewController.leftViewController;
     viewController.handler = _menuHandler;
     [self.mainViewController showLeftViewAnimated:YES completionHandler:^{}];

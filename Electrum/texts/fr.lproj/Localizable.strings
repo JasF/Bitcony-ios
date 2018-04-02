@@ -486,7 +486,7 @@
 "unknown (low fee)"="inconnu (frais bas)";
 "unverified"="non vérifié";
 "watching only"="spectateur";
-"Enter password for wallet: "="Entrez le mot de passe pour le portefeuille:";
+"Enter password for wallet:"="Entrez le mot de passe pour le portefeuille:";
 "Enter wallet name"="Entrez le nom du portefeuille";
 "Continue"="Continuer";
 "Share"="Partager";

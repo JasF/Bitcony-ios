@@ -9,5 +9,5 @@
 #import <CoreFoundation/CoreFoundation.h>
 
 @protocol PasswordDialog <NSObject>
-- (void)showWithMessage:(NSString *)message;
+- (void)showPasswordDialogWithMessage:(NSString *)message;
 @end

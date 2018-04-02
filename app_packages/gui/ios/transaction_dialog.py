@@ -3,7 +3,6 @@ import copy
 import datetime
 import json
 import traceback
-from rubicon.objc import ObjCClass, NSObject, objc_method
 
 from electrum.bitcoin import base_encode
 from electrum.i18n import _
@@ -14,61 +13,46 @@ from electrum.util import bfh
 from electrum.wallet import AddTransactionException
 from electrum.transaction import SerializationError
 
-class TransactionDetailHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
-
-    @objc_method
-    def transactionID_(self):
+class TransactionDetailHandlerProtocol():
+    def transactionID(self):
         return self.tx_hash
-    
-    @objc_method
-    def descriptionString_(self):
+
+    def descriptionString(self):
         return self.desc
-    
-    @objc_method
-    def status_(self):
-        return self.status
-    
-    @objc_method
-    def date_(self):
+
+    def status(self):
+        return self.statusString
+
+    def date(self):
         if self.timestamp:
             time_str = datetime.datetime.fromtimestamp(self.timestamp).isoformat(' ')[:-3]
             return time_str
         return ''
-    
-    @objc_method
-    def amount_(self):
-        return self.amount
 
-    @objc_method
-    def formattedAmount_(self):
-        if self.amount > 0:
-            return self.electrumWindow.format_amount(self.amount, whitespaces = True)
+    def amount(self):
+        return self.amountValue
+
+    def formattedAmount(self):
+        if self.amount() > 0:
+            return self.electrumWindow.format_amount(self.amount(), whitespaces = True)
         else:
-            return self.electrumWindow.format_amount(-self.amount, whitespaces = True)
+            return self.electrumWindow.format_amount(-self.amount(), whitespaces = True)
 
-    @objc_method
-    def baseUnit_(self):
+    def baseUnit(self):
         return self.electrumWindow.base_unit()
-    
-    @objc_method
-    def size_(self):
+
+    def size(self):
         size = self.dialog.tx.estimated_size()
         print('size is ' + str(size))
         return size
 
-    @objc_method
-    def fee_(self):
-        return self.fee
-    
-    @objc_method
-    def formattedFee_(self):
-        return self.electrumWindow.format_amount(self.fee, whitespaces = True)
+    def fee(self):
+        return self.feeValue
 
-    @objc_method
-    def inputsJson_(self):
+    def formattedFee(self):
+        return self.electrumWindow.format_amount(self.fee(), whitespaces = True)
+
+    def inputsJson(self):
         list = []
         for x in self.dialog.tx.inputs():
             dict = {}
@@ -93,9 +77,8 @@ class TransactionDetailHandler(NSObject):
                     dict['value'] = self.dialog.format_amount(x['value'])
             list.append(dict)
         return str(list)
-    
-    @objc_method
-    def outputsJson_(self):
+
+    def outputsJson(self):
         list = []
         for addr, v in self.dialog.tx.get_outputs():
             dict = {}
@@ -106,8 +89,7 @@ class TransactionDetailHandler(NSObject):
             list.append(dict)
         return str(list)
 
-    @objc_method
-    def lockTime_(self):
+    def lockTime(self):
         return self.dialog.tx.locktime
 
 
@@ -138,19 +120,19 @@ class TxDialog:
         self.desc = desc
 
     def show(self):
-        handler = TransactionDetailHandler.alloc().init()
+        handler = TransactionDetailHandlerProtocol()
         handler.electrumWindow = self.main_window
         handler.dialog = self
         
         tx_hash, status, label, can_broadcast, can_rbf, amount, fee, height, conf, timestamp, exp_n = self.wallet.get_tx_info(self.tx)
         handler.tx_hash = tx_hash
         handler.desc = self.desc
-        handler.status = status
+        handler.statusString = status
         handler.label = label
         handler.can_broadcast = can_broadcast
         handler.can_rbf = can_rbf
-        handler.amount = amount
-        handler.fee = fee
+        handler.amountValue = amount
+        handler.feeValue = fee
         handler.height = height
         handler.conf = conf
         handler.timestamp = timestamp

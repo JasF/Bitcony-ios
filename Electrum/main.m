@@ -5,7 +5,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#include <Python/Python.h>
+#include "Python.h"
 #include <dlfcn.h>
 #import "Managers.h"
 
@@ -32,13 +32,16 @@ void extractResourcesIfNeeded() {
     
     NSString *documentsDirectory = [[Managers shared] documentsDirectory];
     NSLog(@"%@", documentsDirectory);
-    NSString *libraryPath = [documentsDirectory stringByAppendingString:@"/Library"];
-    if ([[NSFileManager defaultManager] fileExistsAtPath:libraryPath isDirectory:nil]) {
+    documentsDirectory = [documentsDirectory stringByAppendingString:@"/Library"];
+    
+    [[NSFileManager defaultManager] removeItemAtPath:documentsDirectory error:nil];
+    
+    if ([[NSFileManager defaultManager] fileExistsAtPath:documentsDirectory isDirectory:nil]) {
         return;
     }
     
     NSError *error = nil;
-    NSString *destination = libraryPath;
+    NSString *destination = documentsDirectory;
     if (![[NSFileManager defaultManager] createDirectoryAtPath:destination
                                    withIntermediateDirectories:YES
                                                     attributes:nil
@@ -91,7 +94,8 @@ int initializePython(int argc, char *argv[]) {
     wchar_t** python_argv;
     
     @autoreleasepool {
-        NSString *documentsDirectory = [[Managers shared] documentsDirectory];
+        NSString *pureDocumentsDirectory = [[Managers shared] documentsDirectory];
+        NSString *documentsDirectory = [pureDocumentsDirectory stringByAppendingString:@"/Library"];
         extractResourcesIfNeeded();
         // Special environment to prefer .pyo; also, don't write bytecode
         // because the process will not have write permissions on the device.
@@ -99,9 +103,9 @@ int initializePython(int argc, char *argv[]) {
         putenv("PYTHONDONTWRITEBYTECODE=1");
         
         // Set the home for the Python interpreter
-        python_home = [NSString stringWithFormat:@"%@/Library/Python.framework/Resources", documentsDirectory, nil];
+        python_home = [NSString stringWithFormat:@"%@/Python.framework/Versions/3.6/Resources", documentsDirectory, nil];
         NSLog(@"PythonHome is: %@", python_home);
-        wpython_home = _Py_char2wchar([python_home UTF8String], NULL);
+        wpython_home = Py_DecodeLocale([python_home UTF8String], NULL);
         Py_SetPythonHome(wpython_home);
         
         // Set the PYTHONPATH
@@ -118,7 +122,7 @@ int initializePython(int argc, char *argv[]) {
         
         // Set the name of the main script
         main_script = [
-                       [[NSBundle mainBundle] pathForResource:@"__main__"
+                       [[NSBundle mainBundle] pathForResource:@"launcher"
                                                        ofType:@"py"] cStringUsingEncoding:NSUTF8StringEncoding];
         
         if (main_script == NULL) {
@@ -126,15 +130,25 @@ int initializePython(int argc, char *argv[]) {
             exit(-1);
         }
         
-        // Construct argv for the interpreter
-        python_argv = PyMem_RawMalloc(sizeof(wchar_t*) * argc);
         
-        python_argv[0] = _Py_char2wchar(main_script, NULL);
+        
+        
+        int addedParamsCount = 1;
+        wchar_t *addedParams[1];
+        addedParams[0] = Py_DecodeLocale([pureDocumentsDirectory cStringUsingEncoding:NSUTF8StringEncoding], NULL);
+        // Construct argv for the interpreter
+        python_argv = PyMem_RawMalloc(sizeof(wchar_t*) * (argc + addedParamsCount));
+        python_argv[0] = Py_DecodeLocale(main_script, NULL);
         for (i = 1; i < argc; i++) {
-            python_argv[i] = _Py_char2wchar(argv[i], NULL);
+            python_argv[i] = Py_DecodeLocale(argv[i], NULL);
+        }
+        int src=0;
+        for (i = argc; i < argc + addedParamsCount; i++) {
+            python_argv[i] = addedParams[src];
+            ++src;
         }
         
-        PySys_SetArgv(argc, python_argv);
+        PySys_SetArgv(argc+addedParamsCount, python_argv);
         
         // If other modules are using threads, we need to initialize them.
         PyEval_InitThreads();

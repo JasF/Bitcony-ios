@@ -2,36 +2,28 @@ import os
 import sys
 import threading
 import traceback
-from rubicon.objc import ObjCClass, NSObject, objc_method
+from objc import managers
+from objc import runloop
 
-class YesNoHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
-    
-    @objc_method
-    def done_(self, result):
+class YesNoDialogHandlerProtocol():
+    def yesNoDialogDone(self, result):
         self.dialog.done(result)
 
 class YesNoDialog:
-    def __init__(self, parent, msg):
+    def __init__(self, parent, msg, callback):
         self.parent = parent
+        self.callback = callback
         self.msg = msg
-        handler = YesNoHandler.alloc().init()
+        handler = YesNoDialogHandlerProtocol()
         handler.dialog = self
-        Managers = ObjCClass("Managers")
-        self.dialog = Managers.shared().createYesNoDialog()
+        self.dialog = managers.shared().createYesNoDialog()
         self.dialog.handler = handler
-        self.runLoop = ObjCClass("RunLoop").shared();
+        self.runLoop = runloop.shared();
     
     def show(self):
-        self.dialog.showWithMessage(self.msg)
-        self.runLoop.exec()
-        return self.result
+        self.dialog.showYesNoDialogWithMessage(self.msg)
     
     def done(self, result):
-        print('result: ' + str(result))
-        self.result = result
-        self.runLoop.exit(0)
-
-
+        print('yesNo dialog result: ' + str(result))
+        if self.callback:
+            self.callback(result)

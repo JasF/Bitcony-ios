@@ -10,9 +10,9 @@
 #import "ScreensManager.h"
 
 @protocol SettingsHandlerProtocol <NSObject>
-- (NSNumber *)baseUnitIndex:(id)object;
+- (NSNumber *)baseUnitIndex;
 - (void)setBaseUnitIndex:(NSNumber *)index;
-- (void)seedTapped:(id)object;
+- (void)seedTapped;
 @end
 
 @interface SettingsViewController : UITableViewController

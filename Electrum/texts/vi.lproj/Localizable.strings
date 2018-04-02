@@ -213,7 +213,7 @@
 "Text copied to clipboard.\nTap again to display it as QR code."="Văn bản đã được sao vào bộ nhớ đệm.\nNhấn lần nữa để hiển thị dưới dạng mã QR.";
 "Use the camera button to scan a QR code."="Sử dụng nút máy ảnh để quét mã QR.";
 "low fee"="phí thấp";
-"Enter password for wallet: "="Nhập mật khẩu cho ví:";
+"Enter password for wallet:"="Nhập mật khẩu cho ví:";
 "Enter wallet name"="Nhập tên ví";
 "Continue"="Tiếp tục";
 "Share"="Chia sẻ";

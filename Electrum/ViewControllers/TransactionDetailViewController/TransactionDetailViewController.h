@@ -9,19 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @protocol TransactionDetailHandlerProtocol <NSObject>
-- (NSString *)transactionID:(id)object;
-- (NSString *)descriptionString:(id)object;
-- (NSString *)status:(id)object;
-- (NSString *)date:(id)object;
-- (NSNumber *)amount:(id)object;
-- (NSString *)formattedAmount:(id)object;
-- (NSString *)baseUnit:(id)object;
-- (NSNumber *)size:(id)object;
-- (NSNumber *)fee:(id)object;
-- (NSString *)formattedFee:(id)object;
-- (NSString *)inputsJson:(id)object;
-- (NSString *)outputsJson:(id)object;
-- (NSNumber *)lockTime:(id)object;
+- (NSString *)transactionID;
+- (NSString *)descriptionString;
+- (NSString *)status;
+- (NSString *)date;
+- (NSNumber *)amount;
+- (NSString *)formattedAmount;
+- (NSString *)baseUnit;
+- (NSNumber *)size;
+- (NSNumber *)fee;
+- (NSString *)formattedFee;
+- (NSString *)inputsJson;
+- (NSString *)outputsJson;
+- (NSNumber *)lockTime;
 @end
 
 @interface TransactionDetailViewController : UIViewController

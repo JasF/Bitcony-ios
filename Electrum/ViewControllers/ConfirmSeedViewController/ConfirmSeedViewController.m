@@ -29,9 +29,10 @@ typedef NS_ENUM(NSInteger, Rows) {
 
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
+    [Analytics logEvent:@"ConfirmSeedScreenDidLoad"];
     [super viewDidLoad];
     self.view.backgroundColor = self.navigationController.view.backgroundColor;
-    _originalSeed = [_handler generatedSeed:nil];
+    _originalSeed = [_handler generatedSeed];
 #ifdef DEBUG
     _seed = _originalSeed;
 #endif

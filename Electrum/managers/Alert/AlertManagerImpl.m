@@ -29,7 +29,7 @@
 - (void)doShow:(NSString *)message {
     UIViewController *viewController = self.screensManager.topViewController;
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil
-                                                                   message:message
+                                                                   message:SL(message)
                                                             preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:L(@"OK")

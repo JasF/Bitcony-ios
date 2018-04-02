@@ -56,6 +56,7 @@ static CGFloat const kRowHeight = 44.f;
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
     NSCParameterAssert(_screensManager);
+    [Analytics logEvent:@"ReceiveScreenDidLoad"];
     [super viewDidLoad];
     [self.tableView registerNib:[UINib nibWithNibName:@"EditingCell" bundle:nil] forCellReuseIdentifier:@"EditingCell"];
     [self.tableView registerNib:[UINib nibWithNibName:@"ButtonsCell" bundle:nil] forCellReuseIdentifier:@"ButtonsCell"];

@@ -21,12 +21,12 @@
 }
 
 #pragma mark - YesNoDialog
-- (void)showWithMessage:(NSString *)message {
+- (void)showYesNoDialogWithMessage:(NSString *)message {
     NSCParameterAssert(_handler);
     dispatch_async(dispatch_get_main_queue(), ^{
         UIViewController *viewController = _screensManager.topViewController;
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@""
-                                                                                 message:message
+                                                                                 message:SL(message)
                                                                           preferredStyle:UIAlertControllerStyleAlert];
         @weakify(self);
         UIAlertAction *yesAction = [UIAlertAction actionWithTitle:L(@"Yes")
@@ -34,8 +34,8 @@
                                                               handler:^(UIAlertAction * _Nonnull action) {
                                                                   @strongify(self);
                                                                   dispatch_async(dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
-                                                                      if ([self.handler respondsToSelector:@selector(done:)]) {
-                                                                          [self.handler done:@(YES)];
+                                                                      if ([self.handler respondsToSelector:@selector(yesNoDialogDone:)]) {
+                                                                          [self.handler yesNoDialogDone:@(YES)];
                                                                       }
                                                                   });
                                                               }];
@@ -44,8 +44,8 @@
                                                               handler:^(UIAlertAction * _Nonnull action) {
                                                                   @strongify(self);
                                                                   dispatch_async(dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
-                                                                      if ([self.handler respondsToSelector:@selector(done:)]) {
-                                                                          [self.handler done:@(NO)];
+                                                                      if ([self.handler respondsToSelector:@selector(yesNoDialogDone:)]) {
+                                                                          [self.handler yesNoDialogDone:@(NO)];
                                                                       }
                                                                   });
                                                               }];

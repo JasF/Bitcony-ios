@@ -20,7 +20,7 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
 @interface WalletViewController () <UIPageViewControllerDelegate,
                                     UIPageViewControllerDataSource,
                                     UIScrollViewDelegate,
-                                    MainHandlerProtocolDelegate>
+                                    MainWindowHandlerProtocolDelegate>
 @property (weak, nonatomic) IBOutlet Tabs *tabs;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
 @property (strong, nonatomic) NSMutableDictionary *viewControllers;
@@ -48,8 +48,9 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
     NSCParameterAssert(_sendHandler);
     NSCParameterAssert(_mainHandler);
     [super viewDidLoad];
-    if ([_mainHandler respondsToSelector:@selector(viewDidLoad:)]) {
-        [_mainHandler viewDidLoad:self];
+    [_pythonBridge setClassHandler:self name:@"MainWindowHandlerProtocolDelegate"];
+    if ([_historyHandler respondsToSelector:@selector(viewDidLoad)]) {
+        [_historyHandler viewDidLoad];
     }
     _viewControllers = [NSMutableDictionary new];
     self.allowCustomAnimationWithTabs = YES;
@@ -294,7 +295,7 @@ typedef NS_ENUM(NSInteger, TabsDefinitions) {
                                  }];
 }
 
-#pragma mark - MainHandlerProtocolDelegate
+#pragma mark - MainWindowHandlerProtocolDelegate
 - (void)updateBalance:(NSString *)balanceString
              iconName:(NSString *)iconName {
     dispatch_async(dispatch_get_main_queue(), ^{

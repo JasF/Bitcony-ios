@@ -264,6 +264,7 @@ class WalletStorage(PrintError):
             f.write(s)
             f.flush()
             os.fsync(f.fileno())
+        print('writted to: ' + str(temp_path))
 
         mode = os.stat(self.path).st_mode if os.path.exists(self.path) else stat.S_IREAD | stat.S_IWRITE
         # perform atomic write on POSIX systems

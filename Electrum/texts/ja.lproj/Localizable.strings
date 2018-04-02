@@ -500,7 +500,7 @@
 "unknown (low fee)"="不明 ( 低 手数料 )";
 "unverified"="未認証";
 "watching only"="読み取り専用";
-"Enter password for wallet: "="ウォレットのパスワードを入力：";
+"Enter password for wallet:"="ウォレットのパスワードを入力：";
 "Enter wallet name"="ウォレット名を入力してください";
 "Continue"="持続する";
 "Share"="シェア";

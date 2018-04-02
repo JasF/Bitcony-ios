@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @protocol CreateNewSeedHandlerProtocol <NSObject>
-- (void)continueTapped:(id)aSelf;
-- (NSString *)generatedSeed:(id)aSelf;
+- (void)continueTapped:(NSString *)newSeed;
+- (NSString *)generatedSeed;
 @end
 
 @interface CreateNewSeedViewController : UITableViewController

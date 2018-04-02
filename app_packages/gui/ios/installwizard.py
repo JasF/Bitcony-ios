@@ -6,8 +6,6 @@ import traceback
 from os import listdir
 from os.path import isfile, join
 
-from rubicon.objc import ObjCClass, NSObject, objc_method
-
 from lib import bitcoin
 from electrum import Wallet, WalletStorage
 from electrum.util import UserCancelled, InvalidPassword
@@ -17,105 +15,80 @@ from .textfielddialog import TextFieldDialog
 from .passworddialog import PasswordDialog
 from .waitingdialog import WaitingDialog
 from functools import partial
+from electrum import i18n
 
-class EnterWalletPasswordHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
+from objc import runloop as RunLoop
+from objc import managers as Managers
 
-    @objc_method
-    def continueTapped_(self, password):
+class EnterWalletPasswordHandlerProtocol():
+    def continueTapped(self, password):
         self.installWizard.processPassword(password)
 
-class ConfirmSeedHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
-
-    @objc_method
-    def continueTapped_(self):
+class ConfirmSeedHandlerProtocol():
+    def continueTapped(self):
         self.installWizard.processSeed(self.installWizard.seedText) # Next in InstallWizard.request_password
 
-    @objc_method
-    def generatedSeed_(self):
+    def generatedSeed(self):
         return self.installWizard.seedText
 
-class HaveASeedHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
-
-    @objc_method
-    def continueTapped_(self, seed):
+class HaveASeedHandlerProtocol():
+    def continueTapped(self, seed):
         self.installWizard.seedText = seed
         self.installWizard.seed_type = 'standard'
         self.installWizard.haveASeed = True
         self.installWizard.processSeed(seed)
         pass
 
-    @objc_method
-    def seedType_(self, seed):
-        return bitcoin.seed_type(seed)
+    def seedType(self, seed):
+        result = bitcoin.seed_type(seed)
+        print('seedType result is: ' + str(result))
+        return result
 
-class CreateNewSeedHandler(NSObject):
-    @objc_method
+class CreateNewSeedHandlerProtocol():
     def init_(self):
         return self
 
-    @objc_method
-    def continueTapped_(self, newSeed):
+    def continueTapped(self, newSeed):
         print('newSeed is: ' + newSeed)
-        handler = ConfirmSeedHandler.alloc().init()
+        handler = ConfirmSeedHandlerProtocol()
         handler.installWizard = self.installWizard
         self.installWizard.seedText = newSeed
         self.installWizard.screensManager.showConfirmSeedViewController(handler)
         pass
 
-    @objc_method
-    def generatedSeed_(self):
+    def generatedSeed(self):
         seed = self.installWizard.createSeed()
         return seed
 
-class CreateWalletHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
-
-    @objc_method
-    def createNewSeedTapped_(self):
+class CreateWalletHandlerProtocol():
+    def createNewSeedTapped(self):
         self.haveASeed = False
-        handler = CreateNewSeedHandler.alloc().init()
+        handler = CreateNewSeedHandlerProtocol()
         handler.installWizard = self.installWizard
         self.installWizard.screensManager.showCreateNewSeedViewController(handler)
         print("create new seed handled in python")
 
-    @objc_method
-    def haveASeedTapped_(self):
-        handler = HaveASeedHandler.alloc().init()
+    def haveASeedTapped(self):
+        handler = HaveASeedHandlerProtocol()
         handler.installWizard = self.installWizard
         self.installWizard.screensManager.showHaveASeedViewController(handler)
         print("have a seed handled in python")
 
-class EnterOrCreateWalletHandler(NSObject):
-    @objc_method
-    def init_(self):
-        return self
+class EnterOrCreateWalletHandlerProtocol():
+    def setPreferredLocale(self, locale):
+        i18n.setPreferredLocale(locale)
     
-    @objc_method
-    def createWalletTapped_(self):
+    def createWalletTapped(self):
         self.installWizard.beginCreateNewWallet()
 
-    @objc_method
-    def openWalletTapped_(self, walletName):
+    def openWalletTapped(self, walletName):
         self.installWizard.openWalletWithName(walletName)
 
-    @objc_method
-    def walletsNames_(self):
+    def walletsNames(self):
         self.namesList = self.installWizard.walletsNames()
         return self.namesList
 
-    @objc_method
-    def deleteWalletAtIndex_(self, index):
+    def deleteWalletAtIndex(self, index):
         try:
             walletName = self.namesList[index]
             self.installWizard.deleteWalletWithName(walletName)
@@ -134,8 +107,7 @@ class InstallWizard(BaseWizard):
         BaseWizard.__init__(self, config, storage)
         print('Hello InstallWizard')
         self.daemon = daemon
-        Managers = ObjCClass("Managers")
-        self.runLoop = ObjCClass("RunLoop").shared();
+        self.callback = None
         self.screensManager = Managers.shared().screensManager()
         self.config = config
         self.plugins = plugins
@@ -143,20 +115,22 @@ class InstallWizard(BaseWizard):
         print('InstallWizard storage: ' + str(storage))
     
     def request_password(self):
-        handler = EnterWalletPasswordHandler.alloc().init()
+        handler = EnterWalletPasswordHandlerProtocol()
         handler.installWizard = self
         self.screensManager.showEnterWalletPasswordViewController(handler)
     
-    def run_and_get_wallet(self):
-        handler = EnterOrCreateWalletHandler.alloc().init()
+    def run_and_get_wallet(self, callback):
+        handler = EnterOrCreateWalletHandlerProtocol()
         handler.installWizard = self
         self.screensManager.showEnterOrCreateWalletViewController(handler)
-        result = self.runLoop.exec()
-        print('Show EnterOrCreateWalletViewController result: ' + str(result));
-        return self.wallet
+        self.callback = callback
     
     def terminate(self):
-        print('InstallWizard terminate')
+        if self.callback:
+            cb = self.callback
+            self.callback = None
+            print('wallet: ' + str(self.wallet) + '; type: ' + str(type(self.wallet).__name__))
+            cb(self.wallet)
     
     def init_network(self, network):
         self.config.set_key('auto_connect', True, True)
@@ -166,7 +140,6 @@ class InstallWizard(BaseWizard):
         def empty(self):
             pass
         dialog = WaitingDialog(self, msg, task, empty, empty)
-        dialog.show()
 
     def openWalletWithName(self, walletName):
         path = self.config.walletsPath()
@@ -211,21 +184,25 @@ class InstallWizard(BaseWizard):
                 self.wallet = None
             if self.wallet:
                 print('Successfully opened wallet without password')
-                self.runLoop.exit(0)
+                self.terminate()
         else:
-            while True:
-                dialog = PasswordDialog(_('Enter password for wallet:') + ' ' + walletName)
-                password = dialog.show()
+            message = _('Enter password for wallet:') + ' ' + walletName
+            def passwordCallback(password):
                 if len(password) == 0:
-                    break
+                    return
                 try:
                     self.wallet = self.daemon.load_wallet(path, password)
                 except:
                     self.wallet = None
                 if self.wallet:
                     print('Successfully opened wallet with password')
-                    self.runLoop.exit(0)
-                    return
+                    self.terminate()
+                else:
+                    dialog = PasswordDialog(message, passwordCallback)
+                    password = dialog.show()
+        
+            dialog = PasswordDialog(message, passwordCallback)
+            password = dialog.show()
                 
 
     def beginCreateNewWallet(self):
@@ -242,14 +219,25 @@ class InstallWizard(BaseWizard):
             walletsIndex = walletsIndex + 1
 
         newName = walletName
-        while True:
-            dialog = TextFieldDialog(_("Enter wallet name"), newName);
-            newName = dialog.show()
+        
+        dialogCaption = _("Enter wallet name")
+        
+        def textFieldCallback(newName):
             if len(newName) == 0:
                 return
+        
             if newName not in names:
-                walletName = newName
-                break
+                self.processCreateNewWallet(newName)
+                return
+            
+            dialog = TextFieldDialog(dialogCaption, newName, textFieldCallback)
+            dialog.show()
+                        
+                        
+        dialog = TextFieldDialog(dialogCaption, newName, textFieldCallback)
+        dialog.show()
+                        
+    def processCreateNewWallet(self, walletName):
 
         print('walletName is: ' + walletName)
         
@@ -264,7 +252,7 @@ class InstallWizard(BaseWizard):
             self.storage = None
             return
                 
-        handler = CreateWalletHandler.alloc().init()
+        handler = CreateWalletHandlerProtocol()
         handler.installWizard = self
         self.screensManager.showCreateWalletViewController(handler)
 

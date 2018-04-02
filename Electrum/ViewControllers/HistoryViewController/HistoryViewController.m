@@ -15,7 +15,7 @@ static NSTimeInterval kActionTimeInterval = 0.8f;
 static CGFloat const kTopInset = 8.f;
 static NSTimeInterval kVerifiedActionDelay = 5.f;
 
-@interface HistoryViewController () <UITableViewDataSource, UITableViewDelegate, WalletHandlerProtocolDelegate>
+@interface HistoryViewController () <UITableViewDataSource, UITableViewDelegate, HistoryHandlerProtocolDelegate>
 @property (strong, nonatomic) NSArray *transactions;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @end
@@ -29,7 +29,15 @@ static NSTimeInterval kVerifiedActionDelay = 5.f;
     NSCParameterAssert(_handler);
     NSCParameterAssert(_screensManager);
     NSCParameterAssert(_alertManager);
+    NSCParameterAssert(_pythonBridge);
+    [Analytics logEvent:@"HistoryScreenDidLoad"];
     [super viewDidLoad];
+    [_pythonBridge setClassHandler:self name:@"HistoryHandlerProtocolDelegate"];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if ([_handler respondsToSelector:@selector(viewDidLoad)]) {
+            [_handler viewDidLoad];
+        }
+    });
     
     self.tableView.rowHeight = UITableViewAutomaticDimension;
     self.tableView.estimatedRowHeight = 50.f;
@@ -38,18 +46,13 @@ static NSTimeInterval kVerifiedActionDelay = 5.f;
     @weakify(self);
     _timer = [NSTimer scheduledTimerWithTimeInterval:kActionTimeInterval repeats:YES block:^(NSTimer * _Nonnull timer) {
         @strongify(self);
-        if ([self.handler respondsToSelector:@selector(timerAction:)]) {
-            [self.handler timerAction:nil];
+        if ([self.handler respondsToSelector:@selector(timerAction)]) {
+            [self.handler timerAction];
         }
     }];
     
     [self.tableView registerNib:[UINib nibWithNibName:@"TransactionCell" bundle:nil] forCellReuseIdentifier:@"TransactionCell"];
     [self updateIfNeeded];
-    dispatch_python(^{
-        if ([_handler respondsToSelector:@selector(viewDidLoad:)]) {
-            [_handler viewDidLoad:self];
-        }
-    });
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -59,8 +62,8 @@ static NSTimeInterval kVerifiedActionDelay = 5.f;
 
 - (void)updateIfNeeded {
     NSString *baseUnit = nil;
-    if ([_handler respondsToSelector:@selector(baseUnit:)]) {
-        baseUnit = [_handler baseUnit:nil];
+    if ([_handler respondsToSelector:@selector(baseUnit)]) {
+        baseUnit = [_handler baseUnit];
     }
     if (!_baseUnit) {
         _baseUnit = baseUnit;
@@ -124,8 +127,8 @@ static NSTimeInterval kVerifiedActionDelay = 5.f;
 - (void)updateAndReloadData {
     dispatch_async(dispatch_get_global_queue(0, DISPATCH_QUEUE_PRIORITY_DEFAULT), ^{
         NSString *dataString = nil;
-        if ([_handler respondsToSelector:@selector(transactionsData:)]) {
-            dataString = [_handler transactionsData:nil];
+        if ([_handler respondsToSelector:@selector(transactionsData)]) {
+            dataString = [_handler transactionsData];
         }
         dataString = [dataString stringByReplacingOccurrencesOfString:@"'" withString:@"\""];
         NSData *data = [dataString dataUsingEncoding:NSUTF8StringEncoding];
@@ -167,8 +170,8 @@ static NSTimeInterval kVerifiedActionDelay = 5.f;
 
 - (void)verifiedAction {
     dispatch_python(^{
-        if ([_handler respondsToSelector:@selector(saveVerified:)]) {
-            [_handler saveVerified:nil];
+        if ([_handler respondsToSelector:@selector(saveVerified)]) {
+            [_handler saveVerified];
         }
     });
 }

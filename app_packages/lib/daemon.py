@@ -314,6 +314,7 @@ class Daemon(DaemonThread):
         try:
             self.gui.main()
             print('daemon.py: exiting from gui.main')
+            traceback.print_stack()
         except BaseException as e:
             traceback.print_exc(file=sys.stdout)
             # app will exit now

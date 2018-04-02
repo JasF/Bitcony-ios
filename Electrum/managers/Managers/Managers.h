@@ -12,6 +12,7 @@
 #import "PasswordDialog.h"
 #import "ScreensManager.h"
 #import "WaitingDialog.h"
+#import "PythonBridge.h"
 #import "AlertManager.h"
 #import "YesNoDialog.h"
 
@@ -24,5 +25,6 @@
 - (id<YesNoDialog>)createYesNoDialog;
 - (id<TextFieldDialog>)createTextFieldDialog;
 - (id<FeedbackManager>)feedbackManager;
+- (id<PythonBridge>)pythonBridge;
 - (NSString *)documentsDirectory;
 @end

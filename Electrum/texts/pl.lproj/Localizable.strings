@@ -500,7 +500,7 @@
 "unknown (low fee)"="nieznany (niska prowizja)";
 "unverified"="niezweryfikowana";
 "watching only"="tylko obserwowana";
-"Enter password for wallet: "="Wprowadź hasło do portfela:";
+"Enter password for wallet:"="Wprowadź hasło do portfela:";
 "Enter wallet name"="Wpisz nazwę portfela";
 "Continue"="dalej";
 "Share"="Dzielić";

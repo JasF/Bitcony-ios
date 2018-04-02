@@ -9,11 +9,11 @@
 #import "PasswordDialog.h"
 #import "ScreensManager.h"
 
-@protocol PasswordDialogHandler <NSObject>
-- (void)done:(NSString *)password;
+@protocol PasswordDialogHandlerProtocol <NSObject>
+- (void)passwordDialogDone:(NSString *)password;
 @end
 
 @interface PasswordDialogImpl : NSObject <PasswordDialog>
-@property (strong, nonatomic) id<PasswordDialogHandler> handler;
+@property (strong, nonatomic) id<PasswordDialogHandlerProtocol> handler;
 - (id)initWithScreensManager:(id<ScreensManager>)screensManager;
 @end

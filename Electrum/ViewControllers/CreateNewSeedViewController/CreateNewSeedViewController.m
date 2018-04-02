@@ -30,11 +30,12 @@ typedef NS_ENUM(NSInteger, Rows) {
 
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
+    [Analytics logEvent:@"CreateNewSeedScreenDidLoad"];
     [super viewDidLoad];
     self.view.backgroundColor = self.navigationController.view.backgroundColor;
     
-    if ([_handler respondsToSelector:@selector(generatedSeed:)]) {
-        _seed = [_handler generatedSeed:_handler];
+    if ([_handler respondsToSelector:@selector(generatedSeed)]) {
+        _seed = [_handler generatedSeed];
     }
     NSCAssert(_seed.length, @"seed must be non-nil");
     self.tableView.rowHeight = UITableViewAutomaticDimension;

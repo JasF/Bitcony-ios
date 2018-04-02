@@ -37,6 +37,7 @@ static CGFloat const kSpaceRowHeight = 22.f;
 
 - (void)viewDidLoad {
     NSCParameterAssert(_handler);
+    [Analytics logEvent:@"EnterWalletPasswordScreenDidLoad"];
     [super viewDidLoad];
     
     self.view.backgroundColor = self.navigationController.view.backgroundColor;

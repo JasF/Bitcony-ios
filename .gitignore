@@ -1,5 +1,7 @@
 app_packages.zip
 Frameworks/Python.framework
 *xcuserstate
-*xcuserdata
+*xcuserdata*
+*xcshare*
 temp/
+Frameworks/python/libPython.a

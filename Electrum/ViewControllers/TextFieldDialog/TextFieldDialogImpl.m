@@ -22,12 +22,12 @@
 }
 
 #pragma mark - TextFieldDialog
-- (void)showWithMessage:(NSString *)message placeholder:(NSString *)placeholder {
+- (void)showTextFieldDialogWithMessage:(NSString *)message placeholder:(NSString *)placeholder {
     NSCParameterAssert(_handler);
     dispatch_async(dispatch_get_main_queue(), ^{
         UIViewController *viewController = _screensManager.topViewController;
         UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@""
-                                                                                 message:message
+                                                                                 message:SL(message)
                                                                           preferredStyle:UIAlertControllerStyleAlert];
         [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
             textField.text = placeholder;
