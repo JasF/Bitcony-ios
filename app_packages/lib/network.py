@@ -93,12 +93,6 @@ def filter_protocol(hostmap, protocol = 's'):
             eligible.append(serialize_server(host, port, protocol))
     return eligible
 
-def pick_random_server(hostmap = None, protocol = 's', exclude_set = set()):
-    if hostmap is None:
-        hostmap = constants.net.DEFAULT_SERVERS
-    eligible = list(set(filter_protocol(hostmap, protocol)) - exclude_set)
-    return random.choice(eligible) if eligible else None
-
 from .simple_config import SimpleConfig
 
 proxy_modes = ['socks4', 'socks5', 'http']
@@ -183,7 +177,7 @@ class Network(util.DaemonThread):
                 self.print_error('Warning: failed to parse server-string; falling back to random.')
                 self.default_server = None
         if not self.default_server:
-            self.default_server = pick_random_server()
+            self.default_server = self.pick_random_server()
         self.lock = threading.Lock()
         self.pending_sends = []
         self.message_id = 0
@@ -225,6 +219,28 @@ class Network(util.DaemonThread):
         self.start_network(deserialize_server(self.default_server)[2],
                            deserialize_proxy(self.config.get('proxy')))
 
+    def pick_random_server(self, hostmap = None, protocol = 's', exclude_set = set()):
+        if self.config.get('customServerActive', False):
+            result = self.customServerName()
+            if len(result):
+                return result
+                        
+        if hostmap is None:
+            hostmap = constants.net.DEFAULT_SERVERS
+        eligible = list(set(filter_protocol(hostmap, protocol)) - exclude_set)
+        return random.choice(eligible) if eligible else None
+
+    def fullHostmap(self):
+        hostmap = constants.net.DEFAULT_SERVERS
+        protocol = 's'
+        return list(set(filter_protocol(hostmap, protocol)))
+    
+    def customServerName(self):
+        return self.config.get('customServerName', '')
+    
+    def setCustomServerName(self, serverName):
+        self.config.set_key('customServerName', serverName)
+    
     def register_callback(self, callback, events):
         with self.lock:
             for event in events:
@@ -386,9 +402,10 @@ class Network(util.DaemonThread):
             self.connecting.add(server)
             c = Connection(server, self.socket_queue, self.config.path)
 
+
     def start_random_interface(self):
         exclude_set = self.disconnected_servers.union(set(self.interfaces))
-        server = pick_random_server(self.get_servers(), self.protocol, exclude_set)
+        server = self.pick_random_server(self.get_servers(), self.protocol, exclude_set)
         if server:
             self.start_interface(server)
 

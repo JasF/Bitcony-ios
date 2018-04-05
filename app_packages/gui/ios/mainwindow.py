@@ -22,6 +22,7 @@ from .waitingdialog import WaitingDialog
 from .passworddialog import PasswordDialog
 from .yesnodialog import YesNoDialog
 from functools import partial
+from .textfielddialog import TextFieldDialog
     
 from .paytoedit import PayToEdit
 from .amountedit import BTCAmountEdit
@@ -101,6 +102,32 @@ class SendHandlerProtocol():
         self.textsCallback = textsCallback
         objcbridge.sendCommandWithHandler('SendHandlerProtocolDelegate', 'requestInputFieldsTexts', None)
 
+class ServerHandlerProtocol():
+    def changeServerNameTapped(self, currentServerName):
+        self.electrumWindow.daemon.network.setCustomServerName(currentServerName)
+        dialogCaption = _("Enter server name:")
+        def textFieldCallback(address):
+            self.electrumWindow.daemon.network.setCustomServerName(address)
+            objcbridge.sendCommandWithHandler('ServerHandlerProtocolDelegate', 'customServerNameUpdated:', None, args=[address])
+        dialog = TextFieldDialog(dialogCaption, currentServerName, textFieldCallback)
+        dialog.showServerAddressInput()
+
+    def defaultServerList(self):
+        result = self.electrumWindow.daemon.network.fullHostmap()
+        return result
+
+    def customServerName(self):
+        result = self.electrumWindow.daemon.network.customServerName()
+        print('customServerName: ' + str(result))
+        return result
+
+    def customServerActive(self):
+        result = self.electrumWindow.config.get('customServerActive', False)
+        return result
+    
+    def setCustomServerActive(self, customServerActive):
+        self.electrumWindow.config.set_key('customServerActive', customServerActive)
+
 class SettingsHandlerProtocol():
     def baseUnitIndex(self):
         units = self.electrumWindow.units()
@@ -111,6 +138,12 @@ class SettingsHandlerProtocol():
             self.electrumWindow.show_seed_dialog(password)
         self.electrumWindow.password_dialog(_('Please enter your password'), passwordCallback)
 
+    def serverTapped(self):
+        handler = ServerHandlerProtocol()
+        handler.electrumWindow = self.electrumWindow
+        self.electrumWindow.screensManager.showServerViewController(handler)
+    
+    
     def setBaseUnitIndex(self, index):
         print('index base_unit for set: ' + str(index))
         values = [8, 5, 2]
@@ -143,6 +176,7 @@ class MenuHandlerProtocol():
 class ElectrumWindow:
     def __init__(self, gui_object, wallet, callback):
         self.callback = callback
+        self.daemon = gui_object.daemon
         self.initializeHandlers()
         self.tx_external_keypairs = {}
         self.is_max = False

@@ -28,6 +28,9 @@ class ScreensManager():
     def showWalletViewController(self, historyHandler, receiveHandler, sendHandler, menuHandler, mainHandler):
         objcbridge.sendCommandWithHandler('ScreensManager', 'showWalletViewController', [historyHandler, receiveHandler, sendHandler, menuHandler, mainHandler])
         pass
+    
+    def showServerViewController(self, handler):
+        objcbridge.sendCommandWithHandler('ScreensManager', 'showServerViewController', handler)
 
     def showSettingsViewController(self, handler):
         objcbridge.sendCommandWithHandler('ScreensManager', 'showSettingsViewController', handler)

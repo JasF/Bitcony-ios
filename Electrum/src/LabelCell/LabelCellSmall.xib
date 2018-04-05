@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,22 +15,32 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LabelCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4QO-83-9gu">
-                        <rect key="frame" x="8" y="4" width="304" height="35.5"/>
+                        <rect key="frame" x="8" y="0.0" width="304" height="0.0"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0tI-HO-acV">
+                        <rect key="frame" x="159.5" y="-43" width="1" height="128"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="44" id="WJh-qN-ouN"/>
+                            <constraint firstAttribute="width" constant="1" id="f6i-fq-dz8"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
+                    <constraint firstItem="4QO-83-9gu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="B8U-AX-dqj"/>
+                    <constraint firstItem="0tI-HO-acV" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="PXg-bw-67N"/>
+                    <constraint firstItem="0tI-HO-acV" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="UOg-9d-EIh"/>
+                    <constraint firstAttribute="height" secondItem="0tI-HO-acV" secondAttribute="height" id="Xq0-er-m4K"/>
                     <constraint firstItem="4QO-83-9gu" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" constant="-16" id="ZQT-MS-OKG"/>
-                    <constraint firstAttribute="height" secondItem="4QO-83-9gu" secondAttribute="height" constant="8" id="Zc2-fh-nKd"/>
-                    <constraint firstItem="4QO-83-9gu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="mdt-qe-cvL"/>
                     <constraint firstItem="4QO-83-9gu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="uav-TW-p4c"/>
                 </constraints>
             </tableViewCellContentView>

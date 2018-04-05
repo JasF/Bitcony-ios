@@ -13,6 +13,7 @@
 - (NSNumber *)baseUnitIndex;
 - (void)setBaseUnitIndex:(NSNumber *)index;
 - (void)seedTapped;
+- (void)serverTapped;
 @end
 
 @interface SettingsViewController : UITableViewController

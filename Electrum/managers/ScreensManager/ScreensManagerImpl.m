@@ -18,6 +18,7 @@
 #import "ReceiveViewController.h"
 #import "HistoryViewController.h"
 #import "WalletViewController.h"
+#import "ServerViewController.h"
 #import "MenuViewController.h"
 #import "SendViewController.h"
 #import "MainViewController.h"
@@ -45,6 +46,7 @@ static NSString *kStoryboardName = @"Main";
 }
 
 @synthesize window;
+@synthesize pushControllerCallback = _pushControllerCallback;
 
 #pragma mark - Initialization
 - (id)initWithAlertManager:(id<AlertManager>)alertManager
@@ -223,6 +225,17 @@ static NSString *kStoryboardName = @"Main";
     [self.mainViewController showLeftViewAnimated:YES completionHandler:^{}];
 }
 
+- (void)showServerViewController {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"ServerViewController"
+                                                             bundle:nil];
+        ServerViewController *viewController = (ServerViewController *)[storyboard instantiateViewControllerWithIdentifier:@"ViewController"];
+        viewController.pythonBridge = self.pythonBridge;
+        viewController.handler = [self.pythonBridge handlerWithProtocol:@protocol(ServerHandlerProtocol)];
+        [self pushViewController:viewController clean:NO];
+    });
+}
+
 - (UIViewController *)topViewController {
     UIViewController *result = self.navigationController.topViewController;
     if (!result) {
@@ -266,6 +279,10 @@ static NSString *kStoryboardName = @"Main";
     }
     else {
         [self.navigationController pushViewController:viewController animated:YES completion:^{
+            if (self.pushControllerCallback) {
+                self.pushControllerCallback();
+                self.pushControllerCallback = nil;
+            }
             if (clean && self.navigationController.viewControllers.count > 1) {
                 self.navigationController.viewControllers = @[viewController];
             }

@@ -81,14 +81,6 @@ static NSTimeInterval kVerifiedActionDelay = 5.f;
     TransactionCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TransactionCell"];
     UIImage *image = [UIImage imageNamed:transaction.statusImageName];
     [cell setStatusImage:image date:transaction.dateString amount:transaction.amount balance:transaction.balance];
-    @weakify(self);
-    cell.tapped = ^{
-        @strongify(self);
-        if ([self.handler respondsToSelector:@selector(transactionTapped:)]) {
-            [self.handler transactionTapped:transaction.txHash];
-        }
-    };
-    cell.selectionStyle = UITableViewCellSeparatorStyleNone;
     return cell;
 }
 
@@ -100,13 +92,12 @@ static NSTimeInterval kVerifiedActionDelay = 5.f;
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSCAssert(indexPath.row < _transactions.count, @"indexPath.row must be less than number of transactions in array");
     Transaction *transaction = _transactions[indexPath.row];
+    self.screensManager.pushControllerCallback = ^{
+        [tableView deselectRowAtIndexPath:indexPath animated:NO];
+    };
     if ([_handler respondsToSelector:@selector(transactionTapped:)]) {
         [_handler transactionTapped:transaction.txHash];
     }
-}
-
-- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    return nil;
 }
 
 #pragma mark - Observers

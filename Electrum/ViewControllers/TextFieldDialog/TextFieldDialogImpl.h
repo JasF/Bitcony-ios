@@ -11,6 +11,7 @@
 
 @protocol TextFieldDialogHandler <NSObject>
 - (void)done:(NSString *)enteredText;
+- (void)doneWithServerAddress:(NSArray *)addressComponents;
 @end
 
 @interface TextFieldDialogImpl : NSObject <TextFieldDialog>

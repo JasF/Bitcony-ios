@@ -10,6 +10,7 @@
 
 @protocol ScreensManager <NSObject>
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) dispatch_block_t pushControllerCallback;
 - (UIViewController *)topViewController;
 - (void)showCreateWalletViewController;
 - (void)showEnterOrCreateWalletViewController;
@@ -22,6 +23,7 @@
 - (void)showTransactionDetailViewController;
 - (void)showMenuViewController;
 - (void)createWindowIfNeeded;
+- (void)showServerViewController;
 - (UIViewController *)createHistoryViewController:(id)handler;
 - (UIViewController *)createReceiveViewController:(id)handler;
 - (UIViewController *)createSendViewController:(id)handler;

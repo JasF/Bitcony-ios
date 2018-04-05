@@ -1,1 +1,5 @@
-'Feedback'
+'Custom'
+'Add'
+'Enter server name:'
+'address'
+'port'

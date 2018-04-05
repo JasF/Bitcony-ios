@@ -9,6 +9,8 @@
 #import "TransactionCell.h"
 #import "TransactionCellButton.h"
 
+static CGFloat const kBorderWidth = 1.f;
+
 @interface TransactionCell ()
 @property (weak, nonatomic) IBOutlet UIImageView *statusImageView;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
@@ -25,12 +27,27 @@
     [super awakeFromNib];
     _amountLabel.text = L(_amountLabel.text);
     _balanceLabel.text = L(_balanceLabel.text);
+    self.selectedBackgroundView = [UIView new];
+    self.selectedBackgroundView.backgroundColor = RGB(48, 127, 189);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
-
     // Configure the view for the selected state
+}
+        
+- (void)setHighlighted:(BOOL)highlighted animated:(BOOL)animated {
+    [super setHighlighted:highlighted animated:animated];
+    if (highlighted) {
+        [self setBackgroundColor:RGB(48, 127, 189)];
+        self.layer.borderColor = [UIColor clearColor].CGColor;
+    }
+    else {
+        [self setBackgroundColor:RGB(76, 76, 76)];
+        self.layer.borderColor = [UIColor clearColor].CGColor;
+    }
+    self.contentView.layer.borderWidth = kBorderWidth;
+    self.contentView.layer.cornerRadius = kBorderWidth;
 }
 
 #pragma mark - Public Methods
@@ -48,11 +65,6 @@
         _amountValueLabel.textColor = RGB(45, 194, 53);
     }
     _balanceValueLabel.text = balance;
-}
-- (IBAction)tapped:(id)sender {
-    if (_tapped) {
-        _tapped();
-    }
 }
 
 @end

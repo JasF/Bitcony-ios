@@ -10,5 +10,6 @@
 
 @protocol TextFieldDialog <NSObject>
 - (void)showTextFieldDialogWithMessage:(NSString *)message
-                           placeholder:(NSString *)placeholder;
+                           placeholder:(NSString *)placeholder
+                         serverAddress:(NSNumber *)serverAddress;
 @end

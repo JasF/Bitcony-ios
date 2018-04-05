@@ -47,9 +47,11 @@
 
 #pragma mark - TextFieldDialog
 - (void)showTextFieldDialogWithMessage:(NSString *)message
-                           placeholder:(NSString *)placeholder {
+                           placeholder:(NSString *)placeholder
+                         serverAddress:(NSNumber *)serverAddress {
     [_textFieldDialog showTextFieldDialogWithMessage:message
-                                         placeholder:placeholder];
+                                         placeholder:placeholder
+                                       serverAddress:serverAddress];
 }
 
 #pragma mark - WaitingDialog

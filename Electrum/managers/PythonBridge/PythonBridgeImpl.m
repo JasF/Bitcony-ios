@@ -235,6 +235,12 @@ NSArray *px_allProtocolMethods(Protocol *protocol)
     else if (args.count == 2) {
         [self performSelector:selector onHandler:handler arg1:args[0] arg2:args[1]];
     }
+    else if (args.count == 3) {
+        [self performSelector:selector onHandler:handler arg1:args[0] arg2:args[1] arg3:args[2]];
+    }
+    else {
+        NSCAssert(NO, @"Unimplemented selector forwarding");
+    }
 }
 
 - (void)performSelector:(SEL)selector onHandler:(id)handler {
@@ -266,6 +272,17 @@ NSArray *px_allProtocolMethods(Protocol *protocol)
     void (*func)(id, SEL, id, id) = (void *)imp;
     func(handler, selector, arg1, arg2);
 }
+
+- (void)performSelector:(SEL)selector onHandler:(id)handler arg1:(id)arg1 arg2:(id)arg2 arg3:(id)arg3 {
+    NSCParameterAssert(handler);
+    if (!handler) {
+        return;
+    }
+    IMP imp = [handler methodForSelector:selector];
+    void (*func)(id, SEL, id, id, id) = (void *)imp;
+    func(handler, selector, arg1, arg2, arg3);
+}
+
 
 - (void)setClassHandler:(id)handler
                    name:(NSString *)className {

@@ -47,6 +47,8 @@
 		C38323CC206CD36700F34E50 /* SSZipArchive.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C38323CB206CD36700F34E50 /* SSZipArchive.framework */; };
 		C38323CD206CDCE900F34E50 /* langhungarianmodel.py in Resources */ = {isa = PBXBuildFile; fileRef = C39FE7D82060E3DA00756807 /* langhungarianmodel.py */; };
 		C38323CF206CDE6200F34E50 /* app_packages.zip in Resources */ = {isa = PBXBuildFile; fileRef = C38323CE206CDE6100F34E50 /* app_packages.zip */; };
+		C3959D3A2075E78F00F45E83 /* ServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3959D392075E78F00F45E83 /* ServerViewController.m */; };
+		C3959D3C2075E79900F45E83 /* ServerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3959D3B2075E79900F45E83 /* ServerViewController.storyboard */; };
 		C39E04A62072011C00506315 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C39E04A52072011C00506315 /* FBSDKCoreKit.framework */; };
 		C39E04AA207201DE00506315 /* Analytics.m in Sources */ = {isa = PBXBuildFile; fileRef = C39E04A9207201DE00506315 /* Analytics.m */; };
 		C39E04AD207203DE00506315 /* libPython.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C39E04AC207203DE00506315 /* libPython.a */; };
@@ -267,6 +269,9 @@
 		C38323C6206CD25000F34E50 /* PythonFramework.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = PythonFramework.zip; path = Frameworks/PythonFramework.zip; sourceTree = "<group>"; };
 		C38323CB206CD36700F34E50 /* SSZipArchive.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SSZipArchive.framework; path = Frameworks/SSZipArchive.framework; sourceTree = "<group>"; };
 		C38323CE206CDE6100F34E50 /* app_packages.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = app_packages.zip; sourceTree = "<group>"; };
+		C3959D382075E78F00F45E83 /* ServerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerViewController.h; sourceTree = "<group>"; };
+		C3959D392075E78F00F45E83 /* ServerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerViewController.m; sourceTree = "<group>"; };
+		C3959D3B2075E79900F45E83 /* ServerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ServerViewController.storyboard; sourceTree = "<group>"; };
 		C39E04A52072011C00506315 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Frameworks/FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		C39E04A8207201DE00506315 /* Analytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Analytics.h; sourceTree = "<group>"; };
 		C39E04A9207201DE00506315 /* Analytics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Analytics.m; sourceTree = "<group>"; };
@@ -1658,6 +1663,16 @@
 			path = FeedbackManager;
 			sourceTree = "<group>";
 		};
+		C3959D372075E77D00F45E83 /* ServerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C3959D382075E78F00F45E83 /* ServerViewController.h */,
+				C3959D392075E78F00F45E83 /* ServerViewController.m */,
+				C3959D3B2075E79900F45E83 /* ServerViewController.storyboard */,
+			);
+			path = ServerViewController;
+			sourceTree = "<group>";
+		};
 		C39E04A7207201C100506315 /* Analytics */ = {
 			isa = PBXGroup;
 			children = (
@@ -1797,6 +1812,7 @@
 		C39FE462205FE72F00756807 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				C3959D372075E77D00F45E83 /* ServerViewController */,
 				C3DAD6462068CE2C0061294B /* HistoryViewController */,
 				C3EA247F2067A71300146917 /* TextFieldDialog */,
 				C360F979206630D300F90ADD /* YesNoDialog */,
@@ -4733,6 +4749,7 @@
 				C3B75F4920636D700030BC81 /* ReceiveViewController.storyboard in Resources */,
 				C3B75F4120636A140030BC81 /* SimpleCell.xib in Resources */,
 				C3B75F5F2063766D0030BC81 /* TransactionDetailViewController.storyboard in Resources */,
+				C3959D3C2075E79900F45E83 /* ServerViewController.storyboard in Resources */,
 				C39FEE6E20626CAA00756807 /* TransactionCell.xib in Resources */,
 				C39FDFC6205F9E9600756807 /* Images.xcassets in Resources */,
 				C39FEE66206247FF00756807 /* Common.xcassets in Resources */,
@@ -4828,6 +4845,7 @@
 				C39FE94A2060FFEB00756807 /* RunLoop.m in Sources */,
 				C39FEE5E2062444C00756807 /* BaseNavigationController.mm in Sources */,
 				C39FEE4C2062361D00756807 /* LGSideMenuSegue.m in Sources */,
+				C3959D3A2075E78F00F45E83 /* ServerViewController.m in Sources */,
 				C36B5C43206A505F006F52F6 /* QRCodeReaderViewController.m in Sources */,
 				C3DAD6432068C7AD0061294B /* Tabs.m in Sources */,
 				C39FDFDE205FA06300756807 /* AppDelegate.m in Sources */,

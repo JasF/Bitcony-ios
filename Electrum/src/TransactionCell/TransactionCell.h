@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface TransactionCell : UITableViewCell
-@property (copy, nonatomic) dispatch_block_t tapped;
 - (void)setStatusImage:(UIImage *)image
                   date:(NSString *)date
                 amount:(NSString *)amount

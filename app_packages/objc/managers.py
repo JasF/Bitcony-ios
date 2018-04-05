@@ -10,8 +10,8 @@ class PasswordDialogView():
         objcbridge.sendCommandWithHandler('PasswordDialog', 'showPasswordDialogWithMessage:', self.handler, args=[message])
 
 class TextFieldDialogView():
-    def showWithMessage(self, message, placeholder):
-        objcbridge.sendCommandWithHandler('TextFieldDialog', 'showTextFieldDialogWithMessage:placeholder:', self.handler, args=[message, placeholder])
+    def showWithMessage(self, message, placeholder, serverAddress=False):
+        objcbridge.sendCommandWithHandler('TextFieldDialog', 'showTextFieldDialogWithMessage:placeholder:serverAddress:', self.handler, args=[message, placeholder, serverAddress])
         pass
 
 class WaitingDialogView():
