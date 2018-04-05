@@ -539,5 +539,5 @@ class BaseWizard(object):
             self.wallet.storage.write()
             self.terminate()
             self.runLoop.exit(0)
-        msg = _("Electrum is generating your addresses, please wait...")
+        msg = _("Bitcony is generating your addresses, please wait...")
         self.waiting_dialog(task, msg)

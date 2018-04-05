@@ -129,7 +129,7 @@
 "Electrum Plugins"="Plugins do Electrum";
 "Electrum communicates with remote servers to get information about your transactions and addresses. The servers all fulfil the same purpose only differing in hardware. In most cases you simply want to let Electrum pick one at random.  However if you prefer feel free to select a server manually."="O Electrum comunica com servidores remotos para receber informação sobre as suas transações e endereços. Todos os servidores cumprem o mesmo propósito, apenas diferindo no hardware. Na maioria dos casos vai desejar que o Electrum selecione um servidor aleatoriamente. No entanto pode selecionar um servidor manualmente se preferir.";
 "Electrum connects to several nodes in order to download block headers and find out the longest blockchain."="O Electrum liga-se a vários nós de forma a descarregar os cabeçalhos de blocos e descobrir qual é a blockchain mais longa.";
-"Electrum is generating your addresses, please wait..."="O Electrum está a gerar os seus endereços, aguarde por favor...";
+"Bitcony is generating your addresses, please wait..."="O Electrum está a gerar os seus endereços, aguarde por favor...";
 "Electrum preferences"="Preferências do Electrum";
 "Electrum sends your wallet addresses to a single server, in order to receive your transaction history."="O Electrum envia os endereços da sua carteira para um único servidor, de forma a receber o seu histórico de transação.";
 "Electrum wallet"="Carteira Electrum";

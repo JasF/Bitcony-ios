@@ -1,4 +1,4 @@
-"About"="Electrum тууралуу";
+"About"="Bitcony тууралуу";
 "Documentation"="Документация";
 "Export"="Экспорттоо";
 "File"="Файл";
@@ -39,7 +39,7 @@
 "Description"="Баяндамасы";
 "Enter Password"="Пароль киргизиңиз";
 "Error"="Ката";
-"Exit Electrum"="Electrum-дан чыгуу";
+"Exit Electrum"="Bitcony-дан чыгуу";
 "History"="Тарых";
 "Import"="Импорттоо";
 "Inputs"="Кириштер";

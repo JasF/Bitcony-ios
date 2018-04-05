@@ -163,7 +163,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		60796EE219190F4100A9926B /* Electrum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Electrum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		60796EE219190F4100A9926B /* Bitcony.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bitcony.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60796EE519190F4100A9926B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		60796EE719190F4100A9926B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		60796EE919190F4100A9926B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -1460,7 +1460,7 @@
 		60796EE319190F4100A9926B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				60796EE219190F4100A9926B /* Electrum.app */,
+				60796EE219190F4100A9926B /* Bitcony.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -4656,9 +4656,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		60796EE119190F4100A9926B /* Electrum */ = {
+		60796EE119190F4100A9926B /* Bitcony */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 60796F0E19190F4100A9926B /* Build configuration list for PBXNativeTarget "Electrum" */;
+			buildConfigurationList = 60796F0E19190F4100A9926B /* Build configuration list for PBXNativeTarget "Bitcony" */;
 			buildPhases = (
 				60796F2F1919C7E700A9926B /* Refresh Python source */,
 				C39E04AE207204CF00506315 /* Create python fat library */,
@@ -4670,9 +4670,9 @@
 			);
 			dependencies = (
 			);
-			name = Electrum;
+			name = Bitcony;
 			productName = Electrum;
-			productReference = 60796EE219190F4100A9926B /* Electrum.app */;
+			productReference = 60796EE219190F4100A9926B /* Bitcony.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -4727,7 +4727,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				60796EE119190F4100A9926B /* Electrum */,
+				60796EE119190F4100A9926B /* Bitcony */,
 			);
 		};
 /* End PBXProject section */
@@ -5147,7 +5147,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		60796F0E19190F4100A9926B /* Build configuration list for PBXNativeTarget "Electrum" */ = {
+		60796F0E19190F4100A9926B /* Build configuration list for PBXNativeTarget "Bitcony" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				60796F0F19190F4100A9926B /* Debug */,

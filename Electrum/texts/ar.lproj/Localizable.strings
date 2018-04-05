@@ -129,7 +129,7 @@
 "Electrum Plugins"="إضافات إلكتروم";
 "Electrum communicates with remote servers to get information about your transactions and addresses. The servers all fulfil the same purpose only differing in hardware. In most cases you simply want to let Electrum pick one at random.  However if you prefer feel free to select a server manually."="يتواصل اليكتروم مع مزودين عن بعد للحصول على معلومات عن إجراءاتك وعناوينك، ينجز جميع المزودين نفس الهدف ولكن بمعدات مختلفة، وفي معظم الحالات كل ما تحتاجه هو أن تدع اليكتروم يختار واحد من مزودينا عشوائيا، على كل حال يمكنك ان أردت أن تختار مزودك يدوياً.";
 "Electrum connects to several nodes in order to download block headers and find out the longest blockchain."="يتواصل اليكتروم مع نقاط التقاء مختلفة من أجل تحميل المواقع وايجاد السلسلة الأطول للإتصال.";
-"Electrum is generating your addresses, please wait..."="يقوم اليكتروم بانشاء عناوينك، الرجاء الإنتظار...";
+"Bitcony is generating your addresses, please wait..."="يقوم اليكتروم بانشاء عناوينك، الرجاء الإنتظار...";
 "Electrum preferences"="خيارات إلكتروم";
 "Electrum sends your wallet addresses to a single server, in order to receive your transaction history."="يقوم اليكتروم بإرسال عناوين محفظتك لخادم، من إجل استلام أرشيف إجراءاتك.";
 "Electrum wallet"="محفظة اليكتروم";

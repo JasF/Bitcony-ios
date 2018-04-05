@@ -59,8 +59,8 @@
 "Description of the transaction (not mandatory)."="Megjegyzés a tranzakcióhoz (opcionális).";
 "Details"="Részletek";
 "Do you want to remove"="El akarod távolítani";
-"Electrum Plugins"="Electrum Pluginek";
-"Electrum preferences"="Electrum beállítások";
+"Electrum Plugins"="Bitcony Pluginek";
+"Electrum preferences"="Bitcony beállítások";
 "Electrum was unable to copy your wallet file to the specified location."="Az Electrum nem tudja másolni a tárcafájlodat a választott helyre.";
 "Electrum was unable to export your labels."="Az Electrum nem tudja exportálni a címkéket.";
 "Electrum was unable to import your labels."="Az Electrum nem tudja importálni a címkéket.";

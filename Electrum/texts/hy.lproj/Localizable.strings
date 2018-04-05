@@ -109,9 +109,9 @@
 "Description"="Նկարագրություն";
 "Details"="Մանրամասներ";
 "Edit %s"="Փոփոխել %s";
-"Electrum App"="Electrum Ծրագիր";
-"Electrum Plugins"="Electrum Փլագին";
-"Electrum wallet"="Electrum դրամապանակ";
+"Electrum App"="Bitcony Ծրագիր";
+"Electrum Plugins"="Bitcony Փլագին";
+"Electrum wallet"="Bitcony դրամապանակ";
 "Encrypt"="Ծածկագրել";
 "Encrypt wallet file"="Ծածկագրել դրամապանակի ֆայլը";
 "Encrypt/decrypt Message"="Ծածկագրել/վերծանել հաղորդագրությունը";
