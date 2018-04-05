@@ -27,7 +27,7 @@
 @end
 
 static NSString *const kFeedbackText = @"\n\n\n\n----------------------------------------------------\nPlease do not delete this information.\nVersion: %@ (%@)\nOS: %.1f";
-static NSString *const kElectrumFeedbackCaption = @"Electrum iOS Feedback";
+static NSString *const kBitconyFeedbackCaption = @"Bitcony iOS Feedback";
 
 @interface FeedbackManagerImpl () <MFMailComposeViewControllerDelegate>
 @property (strong, nonatomic) UIViewController *parentViewController;
@@ -46,8 +46,8 @@ static NSString *const kElectrumFeedbackCaption = @"Electrum iOS Feedback";
     }
     else {
         NSString *path = [NSString
-                          stringWithFormat:@"/&subject=%@&body=%@", kElectrumFeedbackCaption, [self getDefaultFeedbackTextBody]];
-        NSURL *mailUrl = [[NSURL alloc] initWithScheme:@"mailto" host:@"electrumios@gmail.com?" path:path];
+                          stringWithFormat:@"/&subject=%@&body=%@", kBitconyFeedbackCaption, [self getDefaultFeedbackTextBody]];
+        NSURL *mailUrl = [[NSURL alloc] initWithScheme:@"mailto" host:@"bitconyios@gmail.com?" path:path];
         [[UIApplication sharedApplication] openURL:mailUrl];
     }
     return;
@@ -61,8 +61,8 @@ static NSString *const kElectrumFeedbackCaption = @"Electrum iOS Feedback";
         return nil;
     }
     [controller setMailComposeDelegate:self];
-    [controller setToRecipients:[NSArray arrayWithObject:@"electrumios@gmail.com"]];
-    [controller setSubject:kElectrumFeedbackCaption];
+    [controller setToRecipients:[NSArray arrayWithObject:@"bitconyios@gmail.com"]];
+    [controller setSubject:kBitconyFeedbackCaption];
     [controller setMessageBody:str isHTML:NO];
     controller.modalPresentationStyle = UIModalPresentationFormSheet;
     return controller;
@@ -87,7 +87,7 @@ static NSString *const kElectrumFeedbackCaption = @"Electrum iOS Feedback";
     [controller dismissViewControllerAnimated:YES completion:^{
         @strongify(self);
         if (result == MFMailComposeResultSent && self.parentViewController) {
-            UIAlertController *alert = [UIAlertController alertControllerWithTitle:L(@"send_feedback_thanks") message:@"" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:L(@"Thank You!") message:@"" preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *action = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
             [alert addAction:action];
             [self.parentViewController presentViewController:alert animated:YES completion:nil];
